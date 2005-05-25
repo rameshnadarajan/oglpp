@@ -1,0 +1,15 @@
+import os
+localWin32	= ['D:\\local']
+localCygwin	= ['/cygdrive/D/local']
+localLinux	= [ os.path.join( os.getenv('HOME'), 'DEV/local') ]
+localDarwin	= [ os.path.join( os.getenv('HOME'), 'DEV/local') ]
+local			= [ os.path.join( os.getenv('HOME'), 'DEV/local') ]
+config		= 'debug'
+warningLevel= 'normal'
+defines		= []
+type			= 'exec'
+posfix		= ''
+deps			= []
+uses			= []
+libs			= []
+stdlibs		= []

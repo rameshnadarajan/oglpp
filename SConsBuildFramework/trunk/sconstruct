@@ -1,0 +1,506 @@
+# GLE - Copyright (C) 2005, Nicolas Papier.
+# Distributed under the terms of the GNU General Public License (GPL)
+# as published by the Free Software Foundation.
+# Author Nicolas Papier
+
+# Installation : 
+# Python 2.3 and up
+# SCons 0.96.1 and up
+# SCONS_BUILD_FRAMEWORK environment variable must be defined and set with to the SConsBuildFramework root directory (SCONS_BUILD_FRAMEWORK=D:\SConsBuildFramework\)
+#
+# Features :
+# - targets checkVersion,
+# - and myproject, myproject_install, myproject_mrproper,
+# - and special targets all (for all myproject), install (for all myproject_install), mrproper (for all myproject_mrproper)
+# - default target = install (dependency to target all)
+# - build objects outside sources directories.
+# - projects dependencies (deps could be specified with name of project(search in ..), or absolute path or relative path).
+# - ...
+#
+# Rqs: 
+# - spaces in target name are prohibited.
+# - local*, config and warningLevel are not used in default.options (only in SConsBuildFramework.options)
+# ...
+#
+# Developper comments:
+# - MY_PROJECT for internal use only.
+
+
+
+###### ######
+import fnmatch
+import os
+import string
+import sys
+
+from SCons.Script.SConscript import SConsEnvironment
+#import DumpEnv
+
+
+
+###### Searching files in a filesystem ######
+# Prune some directories
+# Exclude/retain only a specific set of extensions for files
+def searchFiles( searchDirectory, pruneDirectories, allowedExtensions, oFiles ) :
+	for dirpath, dirnames, filenames in os.walk( searchDirectory, topdown=True ):
+		# prune directories
+		prune = []
+		for pruneDirectory in pruneDirectories :
+			prune.extend( fnmatch.filter(dirnames, pruneDirectory) )
+		for x in prune:
+			###print 'prune', x
+			dirnames.remove( x )
+
+		for file in filenames:
+			for extension in allowedExtensions :
+				if ( os.path.splitext(file)[1] == extension ) :
+					pathfilename = os.path.join(dirpath,file)
+					oFiles += [pathfilename]
+					break
+
+	###print 'oFiles=', oFiles
+
+
+###### Print action function ######
+def nopAction(target = None, source = None, env = None) :
+	return 0
+
+def printBuild( target, source, localenv ) :
+	return "----------------------- Build %s -----------------------" % localenv['MY_PROJECT']
+
+def printInstall( target, source, localenv ) :
+	return "-------------- Install %s files to %s ------------" % (localenv['MY_PROJECT'], localenv.sbf.myInstallDirectory)
+
+
+###### SConsBuildFramework class ######
+
+class SConsBuildFramework :
+
+	# global attributes from SConsBuildFramework.options
+	myLocal								= []
+	myConfig								= ''													### TODO: []
+	myWarningLevel						= ''
+
+	# globals attributes
+	myInstallDirectory				= ''
+	myRootBuildDirectory				= 'build'											### TODO: build in a repository.
+	myPlatform							= ''
+	myCC									= ''
+	myPlatform_myCC					= ''
+	myGCppPath							= []
+	myGLibPath							= []
+
+	# project local attributes from default.options
+	myDefines							= []
+	myType								= ''
+	myPostfix							= ''
+	myDeps								= []
+	myUses								= []
+	myLibs								= []
+	myStdlibs							= []
+
+	# project local attributes
+	myProjectPath						= ''
+	myProject							= ''
+	myPostfixLinkedToMyConfig		= ''
+
+	myCxxFlags							= ''
+	myCppPath							= []
+	myLinkFlags							= ''
+	myLibPath							= []
+	
+	myRootBuildDirectoryExpanded	= ''												### TODO: ...
+
+	
+	###### Constructor ######
+	def __init__(self) :
+		#
+		myOptions = self.readOptions( os.getenv('SCONS_BUILD_FRAMEWORK') + 'SConsBuildFramework.options' )
+		myOptions.Update( env )
+		Help( myOptions.GenerateHelpText(env) )
+
+		#
+		self.initializeGlobalsFromEnv( env )
+
+	###### Initialize global attributes ######
+	def initializeGlobalsFromEnv( self, lenv ) :
+																													### TODO: check exist( lenv['....'] ).
+		# update myLocal and myInstallDirectory
+		if		( sys.platform == 'win32' ) :
+			self.myLocal = lenv['localWin32']
+		elif	( sys.platform == 'cygwin' ) :
+			self.myLocal = lenv['localCygwin']
+		elif	( string.find( sys.platform, 'linux' ) != -1 ) :
+			self.myLocal = lenv['localLinux']
+		elif	( sys.platform == 'darwin' ) :
+			self.myLocal = lenv['localDarwin']
+		else :
+			self.myLocal = lenv['local']
+
+		if ( len(self.myLocal) >= 1 ) :
+			self.myInstallDirectory	= self.myLocal[0]
+		else :
+			print 'myError: empty localPLATFORM or local'
+			sys.exit()
+
+		# update myConfig and myWarning
+		self.myConfig				= lenv['config']
+		self.myWarningLevel		= lenv['warningLevel']
+
+		# myPlatform, myCC and myPlatform_myCC
+		# myPlatform = win32 | cygwin ? | posix | darwin									FIXME: posix != linux or cygwin or bsd ?, lenv['PLATFORM'] != sys.platform => TOTHINK
+		self.myPlatform			= lenv['PLATFORM']
+
+		# myCC = clX-Y | gcc | lenv['CC']
+		if		( lenv['CC'] == 'cl' ) :
+			self.myCC = 'cl' + lenv['MSVS_VERSION'].replace('.','-')
+		elif	( lenv['CC'] == 'g++') :
+			self.myCC = 'gcc'
+		else :
+			self.myCC = lenv['CC']
+
+		self.myPlatform_myCC = '_' + self.myPlatform + '_' + self.myCC
+	
+		### use myLocal to update myGCppPath ###
+		self.myGCppPath = []
+		for element in self.myLocal :
+			self.myGCppPath	+= [element + os.sep + 'include']
+			self.myGCppPath	+= [element + 'Ext' + self.myPlatform_myCC + os.sep + 'include']
+
+		### use myLocal to update myGLibPath ###
+		self.myGLibPath = []
+		for element in self.myLocal :
+			self.myGLibPath	+=	[element + os.sep + 'lib']
+			self.myGLibPath	+=	[element + 'Ext' + self.myPlatform_myCC + os.sep + 'lib']
+
+
+
+	###### Initialize project from lenv ######
+	def initializeProjectFromEnv( self, lenv ) :
+		self.myDefines			= lenv['defines']
+		self.myType				= lenv['type']
+		self.myPostfix			= lenv['postfix']
+		self.myDeps				= lenv['deps']
+		self.myUses				= lenv['uses']
+		self.myLibs				= lenv['libs']
+		self.myStdlibs			= lenv['stdlibs']
+
+
+
+	###### Initialize project ######
+	def initializeProject( self, projectPath ) :
+	
+		###
+		self.myProjectPath		= projectPath
+		self.myProject				= os.path.basename(projectPath)
+
+		if ( self.myConfig == 'debug' ) :										### TODO: not good if more than one config could be built
+			self.myPostfixLinkedToMyConfig = '_D'
+		else : 
+			self.myPostfixLinkedToMyConfig = ''
+
+		###
+		self.myCxxFlags	= ''
+		self.myCppPath		= [self.myProjectPath + os.sep + 'include'] + self.myGCppPath
+		self.myLinkFlags	= ''
+		self.myLibPath		= self.myGLibPath
+
+
+
+	###### Read a *.options file ######
+	def readOptions( self, file ) :
+		myOptions	= Options( file )
+		myOptions.AddOptions(
+			('localWin32',		'Set the list of search paths to local directories for win32 platform. The first one would be used as a destination path for target named install'),
+			('localCygwin',	'Set the list of search paths to local directories for cygwin platform. The first one would be used as a destination path for target named install'),	
+			('localLinux',		'Set the list of search paths to local directories for linux platform. The first one would be used as a destination path for target named install'),
+			('localDarwin',	'Set the list of search paths to local directories for darwin platform. The first one would be used as a destination path for target named install'),
+			('local',			'Set the list of search paths to local directories for all others platforms. The first one would be used as a destination path for target named install'),
+		
+			EnumOption(	'config', 'Select a release or debug binary.', 'release',
+							allowed_values=('debug', 'release'),
+							map={}, ignorecase=2 ),
+			EnumOption( 'warningLevel', 'Select level of warnings.', 'normal',
+							allowed_values=('normal', 'high'),
+							map={}, ignorecase=2 ),
+
+			( 'defines', 'Set the list of predefined names (as a macro)'),
+			EnumOption( 'type', 'Type of the target', 'exec',
+							allowed_values=('exec', 'static','shared'),
+							map={}, ignorecase=2 ),
+			('postfix', 'Add a postfix to the target name'),
+
+			('deps', 'Set dependencies to others projects (all dependencies are automatically built)'),
+
+			ListOption(	'uses', 'Set usage of some predefined libraries', 'none',
+							['opengl','glu','glut'] ),																	## (boost|cg|cgFX|openIL|imageMagick6|imageMagick++6|wx2-4|wxgl2-4|itk)')
+			('libs', 'Set libraries used during the link stage that have been compiled with SConsBuildFramework (this scons system)'),
+			('stdlibs', 'Set the standard libraries used during the link stage.')
+								)
+		return myOptions
+
+
+
+	###### Build a project ######
+	def buildProject( self, projectPath ) :
+
+		# configure a new environment
+		lenv = env.Copy()
+
+		# update lenv with build.options
+		myBuildOptions = self.readOptions( projectPath + os.sep + 'default.options' )
+		myBuildOptions.Update( lenv )
+
+		# construct dependencies
+		for dep in lenv['deps'] :
+			if ( len(os.path.split(dep)[0]) == 0 ) :
+				self.buildProject( os.path.abspath(os.path.join('../', dep)) )
+			else :
+				self.buildProject( os.path.abspath(dep) )
+
+		# initialize the project.
+		self.initializeProjectFromEnv( lenv )
+		self.initializeProject( projectPath )
+
+		# used by code printing messages during the different build stage.
+		lenv['MY_PROJECT'] = projectPath
+		
+		os.chdir(projectPath)
+
+		# Dumping construction environment (for debugging).																			# TODO : a method printDebugInfo()
+		#DumpEnv.DumpEnv( lenv )
+		#print 'DEBUG:cwd=', os.getcwd()
+
+		### construct project ###
+
+		### expand myRootBuildDirectory
+		self.myRootBuildDirectoryExpanded = self.myRootBuildDirectory + os.sep + self.myProject + os.sep + self.myPlatform + os.sep + self.myCC + os.sep + self.myConfig + '_' + self.myPostfix
+
+		### configure myCxxFlags with myDefines
+		for define in self.myDefines :
+			self.myCxxFlags	+=	' -D' + define + ' '
+
+		### complete myCxxFlags and myLinkFlags ###
+		if ( self.myPlatform == 'win32' ) :
+			self.myCxxFlags += ' /nologo /GR /GX -DWIN32 -D_MBCS'
+			if ( self.myConfig == 'release' ) :																### TODO: use /Zd in release mode to be able to debug a little.
+				self.myCxxFlags += ' -DNDEBUG /W3 /Zm600 /MD /O2 /TP '								### { /Gi ignored } and { /Og /Oi /Ot /Ob2 (in O2) }
+			else :
+				self.myCxxFlags += ' -D_DEBUG -DDEBUG /EHsc /MDd /Od'
+				if '7' in lenv['MSVS']['VERSION'] :
+					self.myCxxFlags += ' /Z7 '
+				else :
+					self.myCxxFlags += ' /Zi '
+			if ( self.myWarningLevel == 'normal' ) :														### TODO: it is dependant of the myConfig. Must be changed ? yes, done...
+				self.myCxxFlags += ' /W3 '
+			else :
+				self.myCxxFlags += ' /W4 '
+				if '7' in lenv['MSVS']['VERSION'] :
+					self.myCxxFlags += ' /Wp64 '
+																														##/machine:I386
+			self.myLinkFlags	+= ' /nologo /subsystem:windows /incremental:yes '					##/subsystem:console
+			self.myCxxFlags	+= ' -D_WINDOWS '
+																														## remove CONSOLE, MFC support, NOLIB
+			# process myType
+			if ( self.myType == 'exec' ) :
+				self.myCxxFlags += ' /GA '
+			else :
+				if ( self.myType == 'shared' ) :
+					self.myCxxFlags	+= ' -D_USRDLL '
+					if '7' in lenv['MSVS']['VERSION'] :
+						self.myCxxFlags += ' /G7 '
+					else :
+						self.myCxxFlags += ' /GD '																## remove Boundchecker support.
+
+		elif ( self.myPlatform == 'cygwin' or self.myPlatform == 'posix' ) :
+			lenv['CXX'] = lenv.WhereIs('g++')															### myCxxFlags += ' -pedantic'
+			if ( self.myConfig == 'release' ) :
+				self.myCxxFlags	+= ' -DNDEBUG -O3 '													### TODO: more compiler arch-dependant optimization
+			else :
+				self.myCxxFlags	+= ' -D_DEBUG -DDEBUG -UNDEBUG -g -O0 '						### profiling myCxxFlags += ' -pg', mpatrol, leaktracer
+
+			# process myWarningLevel, add always -Wall option.										### TODO: add more warnings with myWarningLevel = 'high' ?
+			self.myCxxFlags	+= ' -Wall '
+
+		else:
+			print 'myWarning: unknown platform (', self.myPlatform, ')'
+
+		# complete myCxxFlags with some defines
+		if ( self.myType != 'exec' ) :
+			self.myCxxFlags += ' -D' + self.myProject.upper() + '_EXPORTS '
+
+		if ( sys.platform == 'darwin' ) :
+			self.myCxxFlags += ' -D__MACOSX__'
+		elif ( string.find( sys.platform, 'linux' ) != -1 ) :
+			self.myCxxFlags += ' -D__linux'
+
+
+		###### configure environment ######
+		lenv['CXXFLAGS']	= self.myCxxFlags
+		lenv['CPPPATH']	= self.myCppPath
+		lenv['LINKFLAGS']	= self.myLinkFlags
+		lenv['LIBPATH']	= self.myLibPath
+
+		# configure lenv['LIBS'] with lenv['stdlibs']
+		lenv['LIBS'] = lenv['stdlibs']
+
+		# configure lenv['LIBS'] with lenv['libs']
+		for lib in lenv['libs'] :
+			libSplited	= string.split(lib, ' ')
+			libExpanded = ''
+			if ( len(libSplited) == 1 ) :
+				libExpanded += lib + self.myPlatform_myCC + self.myPostfixLinkedToMyConfig
+			elif ( len(libSplited) == 2 ) :
+				libExpanded += libSplited[0] + self.myPlatform_myCC + '_' + libSplited[1] + self.myPostfixLinkedToMyConfig
+			else:
+				print 'myWarning: skip ', lib, ' because its name contains more than two spaces'
+
+			lenv['LIBS'] += [libExpanded]
+
+		# configure lenv[*] with lenv['uses']
+		for elt in lenv['uses'] :
+			elt = string.lower( elt )
+
+			### configure OpenGL ###
+			if ( elt == 'opengl' ) :
+				if		( self.myPlatform == 'win32' ) :
+					lenv['LIBS'] += ['opengl32']
+				else :
+					lenv['LIBS'] += ['GL']
+
+			### configure glu ###
+			elif ( elt == 'glu' ) :
+				if		( self.myPlatform == 'win32' ) :
+					lenv['LIBS'] += ['glu32']
+				else :
+					lenv['LIBS'] += ['GLU']
+
+			### configure glut ###
+			elif ( elt == 'glut' ) :
+				if		( self.myPlatform == 'win32' ) :
+					lenv['LIBS'] += ['glut32']
+				else :
+					lenv['LIBS'] += ['glut']
+
+			else :
+				print "myWarning: unknown USE=[", elt, "']"
+			### TODO: others ?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+
+		###### setup 'pseudo BuildDir' (with OBJPREFIX) ######
+		###										TODO: .cpp .cxx .c => config.options global, idem for pruneDirectories, .h .... => config.options global????
+		filesFromSrc		= []
+		filesFromInclude	= []
+
+		searchFiles( 'src', ['.*', 'DEBUG_*', 'RELEASE_*'], ['.cpp'], filesFromSrc )
+		searchFiles( 'include', ['.*'], ['.hpp','.hxx'], filesFromInclude )
+
+		objFiles = []
+
+		if		( self.myType == 'exec' or self.myType == 'static' ) :
+			for srcFile in filesFromSrc :
+				objFile				=	(os.path.splitext(srcFile)[0]).replace('src', self.myProjectPath + os.sep + self.myRootBuildDirectoryExpanded )##????????
+				srcFileExpanded	=	self.myProjectPath + os.sep + srcFile
+				objFiles	+=	lenv.Object( objFile, srcFileExpanded )				# Object is a synonym for the StaticObject builder method.
+				### print objFile, ':', srcFileExpanded, '\n'
+
+		elif	( self.myType == 'shared' ) :
+			for srcFile in filesFromSrc :
+				objFile				=	(os.path.splitext(srcFile)[0]).replace('src', self.myProjectPath + os.sep + self.myRootBuildDirectoryExpanded )##???????
+				srcFileExpanded	=	self.myProjectPath + os.sep + srcFile
+				objFiles	+=	lenv.SharedObject( objFile, srcFileExpanded )
+				### print objFile, ':', srcFileExpanded, '\n'
+		else :
+			print 'myWarning: during setup of pseudo BuildDir'
+
+
+		### final result of project ###
+		objProject = self.myProjectPath + os.sep + self.myRootBuildDirectory + os.sep + self.myProject + self.myPlatform_myCC + '_' + self.myPostfix + self.myPostfixLinkedToMyConfig ##???????
+
+		# print the build message
+		if ( len(objFiles) > 0 ) :
+			lenv.AddPreAction( objFiles[0], lenv.Action(nopAction, printBuild) )
+
+		if		( self.myType == 'exec' ) :
+			projectTarget = lenv.Program(			objProject, objFiles )
+		elif	( self.myType == 'static' ) :
+			projectTarget = lenv.StaticLibrary(	objProject, objFiles )
+		elif	( self.myType == 'shared' ) :
+			projectTarget = lenv.SharedLibrary(	objProject, objFiles )
+		else :
+			print 'myWarning: during final setup of project'
+		#																																			TODO: myType == 'headers'
+
+		######	setup targets : myProject myProject_install myProject_mrproper ######
+
+		### myProject
+		env.Alias( self.myProject, projectTarget )
+		env.Clean( self.myProject, self.myProjectPath + os.sep + self.myRootBuildDirectoryExpanded )		#???
+
+		### myProject_install
+		if		( self.myType == 'exec' ) :
+			installTarget =	lenv.Install( self.myInstallDirectory + os.sep + 'bin', projectTarget )
+		elif	( self.myType == 'static' or self.myType == 'shared') :
+			installTarget =	lenv.Install( self.myInstallDirectory + os.sep + 'lib', projectTarget )
+		else :
+			print 'myWarning: unexpected value during install setup for type=', self.myType
+
+		for file in filesFromInclude :
+			installTarget +=	lenv.InstallAs( self.myInstallDirectory + os.sep + file, self.myProjectPath + os.sep + file )
+
+		# print the install message
+		if ( len(installTarget) > 0 ) :
+			lenv.AddPreAction( installTarget[0], lenv.Action(nopAction, printInstall) )
+
+		aliasProjectInstall = env.Alias( self.myProject + '_install', installTarget )
+
+		### myProject_mrproper
+		env.Alias( self.myProject + '_mrproper', aliasProjectInstall )														### TOTHINK: scons mrproper => compilation
+		env.Clean( self.myProject + '_mrproper', self.myProjectPath + os.sep + self.myRootBuildDirectory + os.sep + self.myProject )
+		aliasProjectMrproper = env.Clean( self.myProject + '_mrproper', self.myInstallDirectory + os.sep + 'include' + os.sep + self.myProject )
+
+		###### special targets: all install mrproper ######
+		env.Alias( 'all', self.myProject )
+		env.Alias( 'install', aliasProjectInstall )
+		env.Alias( 'mrproper', aliasProjectMrproper )
+
+
+
+###### Initial environment ######
+
+# create objects
+# HINTS: to propagate the entire external environment to the execution environment for commands : ENV = os.environ
+env							=	Environment()
+env['ENV']['PATH']		+=	os.environ['PATH']
+
+#Export('env') not needed.
+SConsEnvironment.sbf		= SConsBuildFramework()
+
+# Hack for 'checkVersion' target.
+if (	(len(BUILD_TARGETS) == 1) and
+		(BUILD_TARGETS[0] == 'checkVersion')
+	) :
+
+	print '----------------------- Check Python -----------------------'	
+	pythonVersionAction	= Action( 'python -V' )
+	env.Execute( pythonVersionAction )
+
+	print '----------------------- Check scons -----------------------'	
+	sconsVersionAction	= Action( 'scons -v' )
+	env.Execute( sconsVersionAction )
+	
+	print '----------------------- Check cc -----------------------'	
+	if ( env['CC'] == 'cl' ) :
+		#ccVersionAction		= Action( 'cl /help' )
+		print env['CC'], ' --version '
+		print 'cl ', env['MSVS']['VERSION']
+	else :
+		ccVersionAction		= Action( env['CC'] + ' -v' )
+		env.Execute( ccVersionAction )
+
+	env.Exit()
+
+
+# build 'caller' project (and all dependancies recursively)
+env.sbf.buildProject( os.getcwd() )
+
+env.Default( 'install' )
