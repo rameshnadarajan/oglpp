@@ -15,8 +15,8 @@
 # - default target = all
 # - build objects outside sources directories.
 # - projects dependencies (deps could be specified with name of project(search in ..), or absolute path or relative path).
-# - configuration of SBF is done by the file SConsBuildFramework.options searched (in this order) in $HOME directory and in $SCONS_BUILD_FRAMEWORK directory.
-# - cache TBT
+# - configuration of SBF is done by the file SConsBuildFramework.options. This file is first searched in $HOME directory, then in $SCONS_BUILD_FRAMEWORK directory.
+# - builded files could be shared among all the builds usings the same cache (see cachePath).
 # - ...
 #
 # Rqs: 
