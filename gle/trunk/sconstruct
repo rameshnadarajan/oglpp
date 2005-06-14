@@ -1,0 +1,3 @@
+import os
+SConscriptChdir(0)
+SConscript(os.getenv('SCONS_BUILD_FRAMEWORK')+'sconstruct')
