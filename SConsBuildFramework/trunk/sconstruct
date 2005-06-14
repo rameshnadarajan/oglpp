@@ -15,6 +15,8 @@
 # - default target = all
 # - build objects outside sources directories.
 # - projects dependencies (deps could be specified with name of project(search in ..), or absolute path or relative path).
+# - configuration of SBF is done by the file SConsBuildFramework.options searched (in this order) in $HOME directory and in $SCONS_BUILD_FRAMEWORK directory.
+# - cache TBT
 # - ...
 #
 # Rqs: 
@@ -108,6 +110,7 @@ class SConsBuildFramework :
 	# global attributes from SConsBuildFramework.options
 	myLocal								= []
 	myBuildPath							= ''
+	myCachePath							= ''
 	myConfig								= ''													### TODO: []
 	myWarningLevel						= ''
 
@@ -130,7 +133,7 @@ class SConsBuildFramework :
 
 	# project local attributes
 	myProjectPathName					= ''
-	myProjectPath						= ''	
+	myProjectPath						= ''
 	myProject							= ''
 	myProjectBuildPath				= ''
 	myPostfixLinkedToMyConfig		= ''
@@ -148,8 +151,16 @@ class SConsBuildFramework :
 
 	###### Constructor ######
 	def __init__(self) :
-		#
-		myOptions = self.readOptions( os.getenv('SCONS_BUILD_FRAMEWORK') + 'SConsBuildFramework.options' )
+
+		# read SConsBuildFramework.options from HOME or from SCONS_BUILD_FRAMEWORK.
+		homeSConsBuildFrameworkOptions = os.path.expanduser('~/SConsBuildFramework.options')
+
+		if ( os.path.isfile(homeSConsBuildFrameworkOptions) ) :
+			myOptions = self.readOptions( homeSConsBuildFrameworkOptions )
+		else :
+			myOptions = self.readOptions( os.getenv('SCONS_BUILD_FRAMEWORK') + 'SConsBuildFramework.options' )
+
+		# update env and generate help
 		myOptions.Update( env )
 		Help( myOptions.GenerateHelpText(env) )
 
@@ -192,8 +203,16 @@ class SConsBuildFramework :
 			print 'myError: empty localPLATFORM or local'
 			sys.exit()
 
-		# update myBuildPath, myConfig and myWarning
+		# update myBuildPath, myCachePath, myConfig and myWarning
 		self.myBuildPath			= lenv['buildPath']
+		
+		self.myCachePath			= lenv['cachePath']
+		if ( len( self.myCachePath ) > 0 ) :
+			env.CacheDir( self.myCachePath )
+			print 'Use cache ', self.myCachePath
+		else :
+			print 'Don\'t use cache'
+		
 		self.myConfig				= lenv['config']
 		self.myWarningLevel		= lenv['warningLevel']
 
@@ -268,7 +287,8 @@ class SConsBuildFramework :
 			('localDarwin',	'Set the list of search paths to local directories for darwin platform. The first one would be used as a destination path for target named install'),
 			('local',			'Set the list of search paths to local directories for all others platforms. The first one would be used as a destination path for target named install'),
 
-			('buildPath',		'Set the path to the directory in which to build all files (path could be absolute or relative to the project beiing build)', 'build' ),
+			('buildPath',	'Set the path to the directory in which to build all files (path could be absolute or relative to the project beiing build)', 'build' ),
+			('cachePath',	'Set the path to cache that will be shared among all the builds using the same cachePath', ''),
 
 			EnumOption(	'config', 'Select a release or debug binary.', 'release',
 							allowed_values=('debug', 'release'),
