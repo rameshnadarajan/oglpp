@@ -1,11 +1,19 @@
 TOTEST:
+-------
+
 o DEPENDENCIES and MULTI-DEPENDENCIES.
 
+
 TOFIX:
+------
+
 o pdb not generated (see env['PDB'])
 
+
 TODO:
-o CacheDir('/usr/local/build_cache')
+-----
+
+[DONE] o CacheDir('/usr/local/build_cache')
 o change local* => if platform => local = ... (idem for some others options).
 o print 'num_jobs', env.GetOption('num_jobs')
 o vgsdk configure deps in all projects.
