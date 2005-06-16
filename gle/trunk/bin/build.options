@@ -1,0 +1,3 @@
+USE		= ['opengl']
+TYPE		= 'shared'
+POSTFIX	= '_0-3'
