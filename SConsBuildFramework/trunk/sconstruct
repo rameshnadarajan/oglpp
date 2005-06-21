@@ -1,27 +1,36 @@
-# GLE - Copyright (C) 2005, Nicolas Papier.
+# SConsBuildFramework - Copyright (C) 2005, Nicolas Papier.
 # Distributed under the terms of the GNU General Public License (GPL)
 # as published by the Free Software Foundation.
 # Author Nicolas Papier
 
 # Installation : 
+# --------------
+#
 # Python 2.3 and up
 # SCons 0.96.1 and up
-# SCONS_BUILD_FRAMEWORK environment variable must be defined and set with to the SConsBuildFramework root directory (SCONS_BUILD_FRAMEWORK=D:\SConsBuildFramework\)
+#
+# SCONS_BUILD_FRAMEWORK environment variable must be set to the SConsBuildFramework root directory. It must be terminated by a '\' on windows platform and a '/' in all others one (for example: SCONS_BUILD_FRAMEWORK=D:\SConsBuildFramework\)
+#
+# The configuration of SBF is done by the file .SConsBuildFramework.options from $HOME directory. If this file is not present then configuration is done with SConsBuildFramework.options from $SCONS_BUILD_FRAMEWORK directory.
 #
 # Features :
+# ----------
+#
 # - targets checkVersion,
-# - and myproject_build, myproject_install, myproject(idem myproject_install), myproject_clean, myproject_mrproper
-# - and special targets build (for all myproject_build), install (for all myproject_install), all (for all myproject), clean (for all myproject_clean), mrproper (for all myproject_mrproper)
+#   and myproject_build, myproject_install, myproject(idem myproject_install), myproject_clean, myproject_mrproper
+#   and special targets build (for all myproject_build), install (for all myproject_install), all (for all myproject), clean (for all myproject_clean), mrproper (for all myproject_mrproper)
 # - default target = all
+# - projects dependencies (deps could be specified with name of project (search in parent directory), absolute path or relative path).
+#
 # - build objects outside sources directories.
-# - projects dependencies (deps could be specified with name of project(search in ..), or absolute path or relative path).
-# - configuration of SBF is done by the file SConsBuildFramework.options. This file is first searched in $HOME directory, then in $SCONS_BUILD_FRAMEWORK directory.
 # - builded files could be shared among all the builds usings the same cache (see cachePath).
 # - ...
 #
-# Rqs: 
+# Rqs :
+# -----
+#
 # - spaces in target name are prohibited.
-# - local*, config and warningLevel are not used in default.options (only in SConsBuildFramework.options)
+# - installPaths, config and warningLevel are not used in default.options (only in SConsBuildFramework.options)
 # ...
 #
 # Developper comments:
@@ -78,6 +87,21 @@ def checkCC(target = None, source = None, env = None) :
 		ccVersionAction		= Action( env['CC'] + ' -v' )
 		env.Execute( ccVersionAction )
 
+def checkSBF(target = None, source = None, env = None) :
+
+	print 'SConsBuildFramework 0.1'
+
+	sbf_home = os.getenv('SCONS_BUILD_FRAMEWORK')
+	print 'Environment variable SCONS_BUILD_FRAMEWORK=', sbf_home
+
+	if ( len( sbf_home ) > 0 ) :
+		if ( sbf_home[ len(sbf_home)-1 ] != os.sep ) :
+			print 'sbfError: SCONS_BUILD_FRAMEWORK must be terminated by a directory separator !!!'
+		else:
+			print 'sbfInfo: SCONS_BUILD_FRAMEWORK is well formed.'
+	else :
+		print 'sbfError: SCONS_BUILD_FRAMEWORK must be defined or non empty !!!'
+
 
 ###### Print action function ######
 def nopAction(target = None, source = None, env = None) :
@@ -107,20 +131,23 @@ class SConsBuildFramework :
 	myBuildTargets						= []
 	#myGHasCleanOption				= False
 
-	# global attributes from SConsBuildFramework.options
-	myLocal								= []
-	myBuildPath							= ''
-	myCachePath							= ''
-	myConfig								= ''													### TODO: []
-	myWarningLevel						= ''
-
 	# globals attributes
-	myInstallDirectory				= ''
 	myPlatform							= ''
 	myCC									= ''
 	myPlatform_myCC					= ''
-	myGCppPath							= []
-	myGLibPath							= []
+
+	# global attributes from sbf.options or computed ftom sbf.options
+	# from sbf.options
+	myInstallPaths						= []
+	myBuildPath							= ''
+	myCachePath							= ''
+	myConfig								= ''
+	myWarningLevel						= ''
+	# computed from sbf.options
+	myInstallExtPaths					= []
+	myInstallDirectory				= ''
+	myGlobalCppPath					= []
+	myGlobalLibPath					= []
 
 	# project local attributes from default.options
 	myDefines							= []
@@ -152,17 +179,45 @@ class SConsBuildFramework :
 	###### Constructor ######
 	def __init__(self) :
 
-		# read SConsBuildFramework.options from HOME or from SCONS_BUILD_FRAMEWORK.
-		homeSConsBuildFrameworkOptions = os.path.expanduser('~/SConsBuildFramework.options')
+		# read .SConsBuildFramework.options from HOME or SConsBuildFramework.options from SCONS_BUILD_FRAMEWORK.
+		homeSConsBuildFrameworkOptions = os.path.expanduser('~/.SConsBuildFramework.options')
 
 		if ( os.path.isfile(homeSConsBuildFrameworkOptions) ) :
 			myOptions = self.readOptions( homeSConsBuildFrameworkOptions )
 		else :
-			myOptions = self.readOptions( os.getenv('SCONS_BUILD_FRAMEWORK') + 'SConsBuildFramework.options' )
+			myOptions = self.readOptions( os.path.join( os.getenv('SCONS_BUILD_FRAMEWORK'), 'SConsBuildFramework.options' ) )
 
 		# update env and generate help
 		myOptions.Update( env )
 		Help( myOptions.GenerateHelpText(env) )
+
+		# retrives all targets
+		self.myBuildTargets = map(str, BUILD_TARGETS)
+
+		#self.myGHasCleanOption = env.GetOption('clean')
+
+		# force clean=1 option if needed.
+		if (	('clean' in self.myBuildTargets) or
+				('mrproper' in self.myBuildTargets) ) :
+			if ( len(self.myBuildTargets) != 1 ) :
+				print 'sbfError: only one target allowed when using special target clean or mrproper'
+				Exit( 1 )
+			else :
+				env.SetOption('clean', 1)
+
+		# myPlatform, myCC and myPlatform_myCC
+		# myPlatform = win32 | cygwin  | posix | darwin					FIXME: posix != linux or cygwin or bsd ?, env['PLATFORM'] != sys.platform => TOTHINK
+		self.myPlatform			= env['PLATFORM']
+
+		# myCC = clX-Y | gcc | env['CC']
+		if		( env['CC'] == 'cl' ) :
+			self.myCC = 'cl' + env['MSVS_VERSION'].replace('.','-')
+		elif	( env['CC'] == 'g++') :
+			self.myCC = 'gcc'
+		else :
+			self.myCC = env['CC']
+
+		self.myPlatform_myCC = '_' + self.myPlatform + '_' + self.myCC
 
 		#
 		self.initializeGlobalsFromEnv( env )
@@ -171,36 +226,17 @@ class SConsBuildFramework :
 	###### Initialize global attributes ######
 	def initializeGlobalsFromEnv( self, lenv ) :
 
-		###
-		self.myBuildTargets = map(str, BUILD_TARGETS)
+		# update myInstallPaths, myIntallExtPaths and myInstallDirectory
+		self.myInstallPaths = lenv['installPaths']
 
-		# force clean=1 option if needed.
-		if (	('clean' in self.myBuildTargets) or
-				('mrproper' in self.myBuildTargets) ) :
-			if ( len(self.myBuildTargets) != 1 ) :
-				print 'myError: only one target allowed when using special target clean or mrproper'
-				Exit( 1 )
-			else :
-				env.SetOption('clean', 1)
+		self.myInstallExtPaths = []
+		for element in self.myInstallPaths :
+			self.myInstallExtPaths	+= [element + 'Ext' + self.myPlatform_myCC ]
 
-		#self.myGHasCleanOption = env.GetOption('clean')
-
-		# update myLocal and myInstallDirectory
-		if		( sys.platform == 'win32' ) :
-			self.myLocal = lenv['localWin32']
-		elif	( sys.platform == 'cygwin' ) :
-			self.myLocal = lenv['localCygwin']
-		elif	( string.find( sys.platform, 'linux' ) != -1 ) :
-			self.myLocal = lenv['localLinux']
-		elif	( sys.platform == 'darwin' ) :
-			self.myLocal = lenv['localDarwin']
+		if ( len(self.myInstallPaths) >= 1 ) :
+			self.myInstallDirectory	= self.myInstallPaths[0]
 		else :
-			self.myLocal = lenv['local']
-
-		if ( len(self.myLocal) >= 1 ) :
-			self.myInstallDirectory	= self.myLocal[0]
-		else :
-			print 'myError: empty localPLATFORM or local'
+			print 'sbfError: empty installPaths'
 			sys.exit()
 
 		# update myBuildPath, myCachePath, myConfig and myWarning
@@ -209,38 +245,24 @@ class SConsBuildFramework :
 		self.myCachePath			= lenv['cachePath']
 		if ( len( self.myCachePath ) > 0 ) :
 			env.CacheDir( self.myCachePath )
-			print 'Use cache ', self.myCachePath
+			print 'sbfInfo: Use cache ', self.myCachePath
 		else :
-			print 'Don\'t use cache'
+			print 'sbfInfo: Don\'t use cache'
 		
 		self.myConfig				= lenv['config']
 		self.myWarningLevel		= lenv['warningLevel']
 
-		# myPlatform, myCC and myPlatform_myCC
-		# myPlatform = win32 | cygwin ? | posix | darwin									FIXME: posix != linux or cygwin or bsd ?, lenv['PLATFORM'] != sys.platform => TOTHINK
-		self.myPlatform			= lenv['PLATFORM']
+		### use myInstallPaths to update myGlobalCppPath ###
+		self.myGlobalCppPath = []
+		for element in self.myInstallPaths :
+			self.myGlobalCppPath	+= [element + os.sep + 'include']
+			self.myGlobalCppPath	+= [element + 'Ext' + self.myPlatform_myCC + os.sep + 'include']
 
-		# myCC = clX-Y | gcc | lenv['CC']
-		if		( lenv['CC'] == 'cl' ) :
-			self.myCC = 'cl' + lenv['MSVS_VERSION'].replace('.','-')
-		elif	( lenv['CC'] == 'g++') :
-			self.myCC = 'gcc'
-		else :
-			self.myCC = lenv['CC']
-
-		self.myPlatform_myCC = '_' + self.myPlatform + '_' + self.myCC
-
-		### use myLocal to update myGCppPath ###
-		self.myGCppPath = []
-		for element in self.myLocal :
-			self.myGCppPath	+= [element + os.sep + 'include']
-			self.myGCppPath	+= [element + 'Ext' + self.myPlatform_myCC + os.sep + 'include']
-
-		### use myLocal to update myGLibPath ###
-		self.myGLibPath = []
-		for element in self.myLocal :
-			self.myGLibPath	+=	[element + os.sep + 'lib']
-			self.myGLibPath	+=	[element + 'Ext' + self.myPlatform_myCC + os.sep + 'lib']
+		### use myInstallPaths to update myGlobalLibPath ###
+		self.myGlobalLibPath = []
+		for element in self.myInstallPaths :
+			self.myGlobalLibPath	+=	[element + os.sep + 'lib']
+			self.myGlobalLibPath	+=	[element + 'Ext' + self.myPlatform_myCC + os.sep + 'lib']
 
 
 	###### Initialize project from lenv ######
@@ -272,20 +294,16 @@ class SConsBuildFramework :
 
 		###
 		self.myCxxFlags	= ''
-		self.myCppPath		= [self.myProjectPathName + os.sep + 'include'] + self.myGCppPath
+		self.myCppPath		= [self.myProjectPathName + os.sep + 'include'] + self.myGlobalCppPath
 		self.myLinkFlags	= ''
-		self.myLibPath		= self.myGLibPath
+		self.myLibPath		= self.myGlobalLibPath
 
 
 	###### Read a *.options file ######
 	def readOptions( self, file ) :
 		myOptions	= Options( file )
 		myOptions.AddOptions(
-			('localWin32',		'Set the list of search paths to local directories for win32 platform. The first one would be used as a destination path for target named install'),
-			('localCygwin',	'Set the list of search paths to local directories for cygwin platform. The first one would be used as a destination path for target named install'),	
-			('localLinux',		'Set the list of search paths to local directories for linux platform. The first one would be used as a destination path for target named install'),
-			('localDarwin',	'Set the list of search paths to local directories for darwin platform. The first one would be used as a destination path for target named install'),
-			('local',			'Set the list of search paths to local directories for all others platforms. The first one would be used as a destination path for target named install'),
+			('installPaths', 'Set the list of search paths to \'/usr/local\' like directories. The first one would be used as a destination path for target named install'),
 
 			('buildPath',	'Set the path to the directory in which to build all files (path could be absolute or relative to the project beiing build)', 'build' ),
 			('cachePath',	'Set the path to cache that will be shared among all the builds using the same cachePath', ''),
@@ -356,7 +374,7 @@ class SConsBuildFramework :
 		if ( self.myConfig == 'release' ) :
 			self.myCxxFlags	+= ' -DNDEBUG -O3 '													### TODO: more compiler arch-dependant optimization
 		else :
-			self.myCxxFlags	+= ' -D_DEBUG -DDEBUG -UNDEBUG -g -O0 '						### profiling myCxxFlags += ' -pg', mpatrol, leaktracer
+			self.myCxxFlags	+= ' -D_DEBUG -DDEBUG -g -O0 '									### profiling myCxxFlags += ' -pg', mpatrol, leaktracer
 
 		# process myWarningLevel, add always -Wall option.										### TODO: add more warnings with myWarningLevel = 'high' ?
 		self.myCxxFlags	+= ' -Wall '
@@ -370,10 +388,10 @@ class SConsBuildFramework :
 		elif ( self.myPlatform == 'cygwin' or self.myPlatform == 'posix' ) :
 			self.configureCxxFlagsAndLinkFlagsOnPosix( lenv )
 		else:
-			print 'myWarning: unknown platform (', self.myPlatform, ')'
+			print 'sbfWarning: unknown platform (', self.myPlatform, ')'
 
 		# complete myCxxFlags with some defines
-		if ( self.myType != 'exec' ) :
+		if ( self.myType == 'shared' ) :
 			self.myCxxFlags += ' -D' + self.myProject.upper() + '_EXPORTS '
 
 		if ( sys.platform == 'darwin' ) :
@@ -384,7 +402,7 @@ class SConsBuildFramework :
 
 	###### use_package (see option named 'uses') ######
 	def use_boost( self, lenv, elt ) :
-		if		( self.myPlatform != 'win32' ) :
+		if ( self.myPlatform != 'win32' ) :
 			lenv['LIBS']	+= [	'boost_date_time-gcc-mt', 'boost_filesystem-gcc-mt', 'boost_regex-gcc-mt', 'boost_signals-gcc-mt', 'boost_thread-gcc-mt' ]
 			#						[	'boost_date_time-gcc-mt', 'boost_filesystem-gcc-mt', 'boost_prg_exec_monitor-gcc-mt', 'boost_regex-gcc-mt',
 			#							'boost_signals-gcc-mt', 'boost_test_exec_monitor-gcc-mt', 'boost_thread-gcc-mt', 'boost_unit_test_framework-gcc-mt' ]
@@ -392,19 +410,19 @@ class SConsBuildFramework :
 		# Nothing to do for win32 platform.
 
 	def use_openIL( self, lenv, elt ) :
-		if		( self.myPlatform == 'win32' ) :
-			if ( self.myConfig == 'release' ) :
-				lenv['LIBS']	+= ['DevIL']
-			else :
-				lenv['LIBS']	+= ['DevILd']
+		if ( self.myPlatform == 'win32' ) :
+			lenv['LIBS']	+= ['DevIL']
+#			if ( self.myConfig == 'release' ) :																								### FIXME
+#			else :
+#				lenv['LIBS']	+= ['DevILd']
 		else :
-			if ( self.myConfig == 'release' ) :
-				lenv['LIBS']	+= ['IL']
-			else :
-				lenv['LIBS']	+= ['ILd']
+			lenv['LIBS']	+= ['IL']
+#			if ( self.myConfig == 'release' ) :
+#			else :
+#				lenv['LIBS']	+= ['ILd']
 
 	def use_wxWidgets( self, lenv, elt ) :
-		if		( self.myPlatform == 'win32' ) :
+		if	( self.myPlatform == 'win32' ) :
 			lenv['CXXFLAGS'] += ' -DWXUSINGDLL -D__WIN95__ '
 			if ( (elt == 'wx2-4') or (elt == 'wxgl2-4') ) :
 				if ( self.myConfig == 'release' ) :
@@ -412,12 +430,13 @@ class SConsBuildFramework :
 				else:
 						lenv['LIBS'] +=	['wxmsw24d']
 			else :
-				print "myWarning: Unsupported version of wxWidgets"
+				print "sbfWarning: Unsupported version of wxWidgets"
 		else :
-			if ( re.match('^wx[\d-]*$', elt) ) :
-				lenv.ParseConfig('wx-config --cppflags --ldflags --libs')
+			lenv['CXXFLAGS'] += ' -DGTK_NO_CHECK_CASTS -D__WXGTK__ -D_FILE_OFFSET_BITS=64 -D_LARGE_FILES '					### FIXME: bug in ParseConfig() ?
+			if re.match('^wx[\d-]*$', elt ):
+				env.ParseConfig('wx-config --prefix=' + os.path.join( self.myInstallExtPaths[0], 'lib' ) + ' --cppflags --ldflags --libs')
 			else:
-				lenv.ParseConfig('wx-config --cppflags --ldflags --libs --gl-libs')
+				env.ParseConfig('wx-config --prefix=' + os.path.join( self.myInstallExtPaths[0], 'lib' ) + ' --cppflags --ldflags --libs --gl-libs')
 
 	def uses( self, lenv ) :
 	
@@ -452,13 +471,14 @@ class SConsBuildFramework :
 					lenv['LIBS'] += ['glut32']
 				else :
 					lenv['LIBS'] += ['glut']
-	
+
 			### configure wx* ###
 			elif ( re.match('^wx[\d-]*$', elt ) or re.match('^wxgl[\d-]*$', elt ) ) :
 				self.use_wxWidgets( lenv, elt )
 
+			### configure others ? ###
 			else :
-				print "myWarning: unknown uses=[", elt, "']"
+				print "sbfWarning: unknown uses=[", elt, "']"
 
 
 	###### Build a project ######
@@ -514,7 +534,7 @@ class SConsBuildFramework :
 		for define in self.myDefines :
 			self.myCxxFlags	+=	' -D' + define + ' '
 
-		###
+		### configure compiler and linker flags.
 		self.configureCxxFlagsAndLinkFlags( lenv )
 
 		###### configure environment ######
@@ -535,7 +555,7 @@ class SConsBuildFramework :
 			elif ( len(libSplited) == 2 ) :
 				libExpanded += libSplited[0] + self.myPlatform_myCC + '_' + libSplited[1] + self.myPostfixLinkedToMyConfig
 			else:
-				print 'myWarning: skip ', lib, ' because its name contains more than two spaces'
+				print 'sbfWarning: skip ', lib, ' because its name contains more than two spaces'
 
 			lenv['LIBS'] += [libExpanded]
 
@@ -566,7 +586,7 @@ class SConsBuildFramework :
 				objFiles	+=	lenv.SharedObject( objFile, srcFileExpanded )
 				### print objFile, ':', srcFileExpanded, '\n'
 		else :
-			print 'myWarning: during setup of pseudo BuildDir'
+			print 'sbfWarning: during setup of pseudo BuildDir'
 
 
 		### final result of project ###
@@ -585,7 +605,7 @@ class SConsBuildFramework :
 		elif	( self.myType == 'shared' ) :
 			projectTarget = lenv.SharedLibrary(	objProject, objFiles )
 		else :
-			print 'myWarning: during final setup of project'
+			print 'sbfWarning: during final setup of project'
 		#																																			TODO: myType == 'headers'
 
 		######	setup targets : myProject_build myProject_install myProject myProject_clean myProject_mrproper ######
@@ -605,7 +625,7 @@ class SConsBuildFramework :
 		elif	( self.myType == 'static' or self.myType == 'shared') :
 			installTarget =	lenv.Install( self.myInstallDirectory + os.sep + 'lib', projectTarget )
 		else :
-			print 'myWarning: unexpected value during install setup for type=', self.myType
+			print 'sbfWarning: unexpected value during install setup for type=', self.myType
 
 		for file in filesFromInclude :
 			installTarget +=	lenv.InstallAs( self.myInstallDirectory + os.sep + file, self.myProjectPathName + os.sep + file )
@@ -664,6 +684,8 @@ env.Alias('checkVersion', env.Command('dummyCheckVersion.out3', 'dummy.in', Acti
 env.Alias('checkVersion', env.Command('dummyCheckVersion.out4', 'dummy.in', Action( 'scons -v' ) ) )
 env.Alias('checkVersion', env.Command('dummyCheckVersion.out5', 'dummy.in', Action( printEmptyLine, nopAction ) ) )
 env.Alias('checkVersion', env.Command('dummyCheckVersion.out6', 'dummy.in', Action( checkCC, nopAction ) ) )
+env.Alias('checkVersion', env.Command('dummyCheckVersion.out7', 'dummy.in', Action( printEmptyLine, nopAction ) ) )
+env.Alias('checkVersion', env.Command('dummyCheckVersion.out8', 'dummy.in', Action( checkSBF, nopAction ) ) )
 
 # build 'caller' project (and all dependancies recursively)
 env.sbf.buildProject( os.getcwd() )

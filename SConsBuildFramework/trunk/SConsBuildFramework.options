@@ -1,15 +1,10 @@
-import os
-localWin32	= ['D:\\local']
-localCygwin	= ['/cygdrive/D/local']
-localLinux	= [ os.path.join( os.getenv('HOME'), 'DEV/local') ]
-localDarwin	= [ os.path.join( os.getenv('HOME'), 'DEV/local') ]
-local			= [ os.path.join( os.getenv('HOME'), 'DEV/local') ]
-buildPath	= 'Y:\\SBF\\build'		#'build'
-cachePath	= 'Y:\\SBF\cache'
-config		= 'release'			#debug'
+installPaths= []
+buildPath	= 'build'
+cachePath	= ''
+config		= 'debug' #release
 warningLevel= 'normal'
 defines		= []
-type			= 'exec'
+type			= 'exec'	# static, shared
 postfix		= ''
 deps			= []
 uses			= []
