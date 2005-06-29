@@ -7,7 +7,7 @@ o DEPENDENCIES and MULTI-DEPENDENCIES.
 TOFIX:
 ------
 
-o pdb not generated (see env['PDB'])
+[DONE] o pdb not generated (see env['PDB'])
 
 
 TODO:

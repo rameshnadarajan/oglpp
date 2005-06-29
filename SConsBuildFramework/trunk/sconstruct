@@ -567,10 +567,10 @@ class SConsBuildFramework :
 		filesFromSrc		= []
 		filesFromInclude	= []
 
+		objFiles = []
+		
 		searchFiles( 'src', ['.*', 'DEBUG_*', 'RELEASE_*'], ['.cpp'], filesFromSrc )
 		searchFiles( 'include', ['.*'], ['.hpp','.hxx','.h'], filesFromInclude )
-
-		objFiles = []
 
 		if		( self.myType == 'exec' or self.myType == 'static' ) :
 			for srcFile in filesFromSrc :
@@ -591,22 +591,50 @@ class SConsBuildFramework :
 
 		### final result of project ###
 		objProject = self.myProjectBuildPathExpanded + os.sep + self.myProject + self.myPlatform_myCC
-		# or objProject = self.myProjectBuildPath + os.sep + self.myProject + os.sep + self.myProject + self.myPlatform_myCC		
-
 		if ( len(self.myPostfix) > 0 ) :
 			objProject += '_' + self.myPostfix
-
 		objProject += self.myPostfixLinkedToMyConfig
 
+		#
+		#projectTarget				= []
+
+		installInBinTarget		= []
+		installInIncludeTarget	= filesFromInclude
+		installInLibTarget		= []
+
 		if		( self.myType == 'exec' ) :
-			projectTarget = lenv.Program(			objProject, objFiles )
+			projectTarget = lenv.Program( objProject, objFiles )
+			installInBinTarget += projectTarget
 		elif	( self.myType == 'static' ) :
-			projectTarget = lenv.StaticLibrary(	objProject, objFiles )
+			projectTarget = lenv.StaticLibrary( objProject, objFiles )
+			installInLibTarget += projectTarget
 		elif	( self.myType == 'shared' ) :
-			projectTarget = lenv.SharedLibrary(	objProject, objFiles )
+			projectTarget = lenv.SharedLibrary( objProject, objFiles )
+			installInLibTarget += projectTarget
 		else :
 			print 'sbfWarning: during final setup of project'
 		#																																			TODO: myType == 'headers'
+
+		# projectTarget is not deleted before it is rebuilt.
+		lenv.Precious( projectTarget )
+
+		# PDB: pdb only generate on win32 and in debug mode.
+		if (	(self.myPlatform == 'win32') and (self.myConfig == 'debug')	) :
+		
+			# PDB Generation
+			# static library don't generate pdb.
+			if		(self.myType == 'exec') or (self.myType == 'shared') :
+				lenv['PDB'] = objProject + '.pdb'
+				lenv.SideEffect(lenv['PDB'], projectTarget)
+				# it is not deleted before it is rebuilt.
+				lenv.Precious( lenv['PDB'] )
+
+			# PDB Installation
+			if		( self.myType == 'exec' ) :
+				installInBinTarget.append(	File(objProject + '.pdb')	)
+			elif	( self.myType == 'shared' ) :
+				installInLibTarget.append(	File(objProject + '.pdb')	)
+
 
 		######	setup targets : myProject_build myProject_install myProject myProject_clean myProject_mrproper ######
 
@@ -620,15 +648,13 @@ class SConsBuildFramework :
 		env.Clean( self.myProject + '_build', self.myProjectBuildPathExpanded  )
 
 		### myProject_install
-		if		( self.myType == 'exec' ) :
-			installTarget =	lenv.Install( self.myInstallDirectory + os.sep + 'bin', projectTarget )
-		elif	( self.myType == 'static' or self.myType == 'shared') :
-			installTarget =	lenv.Install( self.myInstallDirectory + os.sep + 'lib', projectTarget )
-		else :
-			print 'sbfWarning: unexpected value during install setup for type=', self.myType
 
-		for file in filesFromInclude :
+		installTarget	=	lenv.Install( self.myInstallDirectory + os.sep + 'bin',		installInBinTarget )
+		
+		for file in installInIncludeTarget :
 			installTarget +=	lenv.InstallAs( self.myInstallDirectory + os.sep + file, self.myProjectPathName + os.sep + file )
+		
+		installTarget	+=	lenv.Install( self.myInstallDirectory + os.sep + 'lib',		installInLibTarget )
 
 		env.Alias( self.myProject + '_install_print', lenv.Command('dummy_install_print' + self.myProject + 'out1', 'dummy.in', Action( nopAction, printInstall ) ) )
 		env.AlwaysBuild( self.myProject + '_install_print' )
