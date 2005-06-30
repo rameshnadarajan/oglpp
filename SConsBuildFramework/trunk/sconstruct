@@ -16,11 +16,12 @@
 # Features :
 # ----------
 #
-# - targets checkVersion,
+# - targets sbfCheck,
 #   and myproject_build, myproject_install, myproject(idem myproject_install), myproject_clean, myproject_mrproper
 #   and special targets build (for all myproject_build), install (for all myproject_install), all (for all myproject), clean (for all myproject_clean), mrproper (for all myproject_mrproper)
 # - default target = all
 # - projects dependencies (deps could be specified with name of project (search in parent directory), absolute path or relative path).
+# - skip any missing projects (i.e. skip a project specified in dependencies but that don't exist on the filesystem).
 #
 # - build objects outside sources directories.
 # - builded files could be shared among all the builds usings the same cache (see cachePath).
@@ -34,7 +35,7 @@
 # ...
 #
 # Developper comments:
-# - MY_PROJECT for internal use only.
+# - SBF_PROJECT for internal use only.
 
 
 
@@ -74,7 +75,7 @@ def searchFiles( searchDirectory, pruneDirectories, allowedExtensions, oFiles ) 
 
 
 
-###### Action function for checkVersion target #######
+###### Action function for sbfCheck target #######
 def printCheckMessage(target = None, source = None, env = None) :
 	print '----------------------- Check version -----------------------'
 
@@ -89,7 +90,7 @@ def checkCC(target = None, source = None, env = None) :
 
 def checkSBF(target = None, source = None, env = None) :
 
-	print 'SConsBuildFramework 0.1'
+	print 'SConsBuildFramework 0.2'
 
 	sbf_home = os.getenv('SCONS_BUILD_FRAMEWORK')
 	print 'Environment variable SCONS_BUILD_FRAMEWORK=', sbf_home
@@ -111,16 +112,16 @@ def printEmptyLine(target = None, source = None, env = None) :
 	print ''
 
 def printBuild( target, source, localenv ) :
-	return "----------------------- Build %s -----------------------" % localenv['MY_PROJECT']
+	return "----------------------- Build %s -----------------------" % localenv['SBF_PROJECT']
 
 def printInstall( target, source, localenv ) :
-	return "-------------- Install %s files to %s ------------" % (localenv['MY_PROJECT'], localenv.sbf.myInstallDirectory)
+	return "-------------- Install %s files to %s ------------" % (localenv['SBF_PROJECT'], localenv.sbf.myInstallDirectory)
 
 def printClean( target, source, localenv ) :
-	return "-------------- Clean %s files to %s ------------" % (localenv['MY_PROJECT'], localenv.sbf.myInstallDirectory)
+	return "-------------- Clean %s files to %s ------------" % (localenv['SBF_PROJECT'], localenv.sbf.myInstallDirectory)
 
 def printMrproper( target, source, localenv ) :
-	return "-------------- Mrproper %s files to %s ------------" % (localenv['MY_PROJECT'], localenv.sbf.myInstallDirectory)
+	return "-------------- Mrproper %s files to %s ------------" % (localenv['SBF_PROJECT'], localenv.sbf.myInstallDirectory)
 
 
 ###### SConsBuildFramework class ######
@@ -484,6 +485,12 @@ class SConsBuildFramework :
 	###### Build a project ######
 	def buildProject( self, projectPathName ) :
 
+		# check if projectPathName is valid
+		if ( os.path.isdir(projectPathName) == False ) :
+			print "sbfWarning: Unable to find directory", projectPathName + '.', "Ignore project", os.path.basename( projectPathName ) + '.'
+			# FIXME todo try a svn checkout ?
+			return
+
 		# configure a new environment
 		lenv = env.Copy()
 
@@ -514,9 +521,9 @@ class SConsBuildFramework :
 			lenv.SetOption('clean', 1)
 
 		# used by code printing messages during the different build stage.
-		lenv['MY_PROJECT'] = projectPathName
+		lenv['SBF_PROJECT'] = projectPathName
 
-		os.chdir( projectPathName )
+		os.chdir( projectPathName )																											# FIXME is chdir done at scons level ?
 
 		# Dumping construction environment (for debugging).																			# TODO : a method printDebugInfo()
 		#DumpEnv.DumpEnv( lenv )
@@ -702,16 +709,16 @@ env['ENV']['PATH']		+=	os.environ['PATH']
 #Export('env') not needed.
 SConsEnvironment.sbf		= SConsBuildFramework()
 
-# target 'checkVersion'
-Alias('checkVersion')
-env.Alias('checkVersion', env.Command('dummyCheckVersion.out1', 'dummy.in', Action( printCheckMessage, nopAction ) ) )
-env.Alias('checkVersion', env.Command('dummyCheckVersion.out2', 'dummy.in', Action( 'python -V' ) ) )
-env.Alias('checkVersion', env.Command('dummyCheckVersion.out3', 'dummy.in', Action( printEmptyLine, nopAction ) ) )
-env.Alias('checkVersion', env.Command('dummyCheckVersion.out4', 'dummy.in', Action( 'scons -v' ) ) )
-env.Alias('checkVersion', env.Command('dummyCheckVersion.out5', 'dummy.in', Action( printEmptyLine, nopAction ) ) )
-env.Alias('checkVersion', env.Command('dummyCheckVersion.out6', 'dummy.in', Action( checkCC, nopAction ) ) )
-env.Alias('checkVersion', env.Command('dummyCheckVersion.out7', 'dummy.in', Action( printEmptyLine, nopAction ) ) )
-env.Alias('checkVersion', env.Command('dummyCheckVersion.out8', 'dummy.in', Action( checkSBF, nopAction ) ) )
+# target 'sbfCheck'
+Alias('sbfCheck')
+env.Alias('sbfCheck', env.Command('dummyCheckVersion.out1', 'dummy.in', Action( printCheckMessage, nopAction ) ) )
+env.Alias('sbfCheck', env.Command('dummyCheckVersion.out2', 'dummy.in', Action( 'python -V' ) ) )
+env.Alias('sbfCheck', env.Command('dummyCheckVersion.out3', 'dummy.in', Action( printEmptyLine, nopAction ) ) )
+env.Alias('sbfCheck', env.Command('dummyCheckVersion.out4', 'dummy.in', Action( 'scons -v' ) ) )
+env.Alias('sbfCheck', env.Command('dummyCheckVersion.out5', 'dummy.in', Action( printEmptyLine, nopAction ) ) )
+env.Alias('sbfCheck', env.Command('dummyCheckVersion.out6', 'dummy.in', Action( checkCC, nopAction ) ) )
+env.Alias('sbfCheck', env.Command('dummyCheckVersion.out7', 'dummy.in', Action( printEmptyLine, nopAction ) ) )
+env.Alias('sbfCheck', env.Command('dummyCheckVersion.out8', 'dummy.in', Action( checkSBF, nopAction ) ) )
 
 # build 'caller' project (and all dependancies recursively)
 env.sbf.buildProject( os.getcwd() )
