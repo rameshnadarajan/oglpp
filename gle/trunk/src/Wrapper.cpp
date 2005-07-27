@@ -20,7 +20,5 @@ void gleSetCurrent( gle::OpenGLExtensionsGen *current )
 
 gle::OpenGLExtensionsGen *gleGetCurrent()
 {
-	assert( gle::Wrapper::m_current != 0 );
-
 	return ( gle::Wrapper::m_current );
 }
