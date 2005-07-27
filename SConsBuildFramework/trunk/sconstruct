@@ -21,6 +21,8 @@
 #   and special targets build (for all myproject_build), install (for all myproject_install), all (for all myproject), clean (for all myproject_clean), mrproper (for all myproject_mrproper)
 # - default target = all
 # - projects dependencies (deps could be specified with name of project (search in parent directory), absolute path or relative path).
+# - automatic checkout any missing projects from multiple svn repositories (i.e. when a project specified in dependencies don't exist on the filesystem, sbf try to checkout it
+#	from the first repository specified by svnUrls. If checkout fails, the next repository is used. And so on).
 # - skip any missing projects (i.e. skip a project specified in dependencies but that don't exist on the filesystem).
 #
 # - build objects outside sources directories.
@@ -137,8 +139,9 @@ class SConsBuildFramework :
 	myCC									= ''
 	myPlatform_myCC					= ''
 
-	# global attributes from sbf.options or computed ftom sbf.options
+	# global attributes from sbf.options or computed from sbf.options
 	# from sbf.options
+	mySvnUrls							= []
 	myInstallPaths						= []
 	myBuildPath							= ''
 	myCachePath							= ''
@@ -227,8 +230,10 @@ class SConsBuildFramework :
 	###### Initialize global attributes ######
 	def initializeGlobalsFromEnv( self, lenv ) :
 
-		# update myInstallPaths, myIntallExtPaths and myInstallDirectory
-		self.myInstallPaths = lenv['installPaths']
+		# update mySvnUrls, myInstallPaths, myIntallExtPaths and myInstallDirectory
+		self.mySvnUrls		= lenv['svnUrls']
+		
+		self.myInstallPaths	= lenv['installPaths']
 
 		self.myInstallExtPaths = []
 		for element in self.myInstallPaths :
@@ -282,7 +287,8 @@ class SConsBuildFramework :
 
 		self.myProjectPathName	= projectPathName
 		self.myProjectPath		= os.path.dirname( projectPathName )
-		self.myProject				= os.path.basename(projectPathName)
+		self.myProject			= os.path.basename(projectPathName)
+
 		if ( os.path.isabs(self.myBuildPath) ) :
 			self.myProjectBuildPath = os.path.abspath( self.myBuildPath )
 		else :
@@ -304,6 +310,8 @@ class SConsBuildFramework :
 	def readOptions( self, file ) :
 		myOptions	= Options( file )
 		myOptions.AddOptions(
+			('svnUrls', 'Set the list of subversion repository used in order (from first to last) until a successful checkout occurs'),
+
 			('installPaths', 'Set the list of search paths to \'/usr/local\' like directories. The first one would be used as a destination path for target named install'),
 
 			('buildPath',	'Set the path to the directory in which to build all files (path could be absolute or relative to the project beiing build)', 'build' ),
@@ -338,25 +346,25 @@ class SConsBuildFramework :
 	###### configure CxxFlags & LinkFlags ######
 	def configureCxxFlagsAndLinkFlagsOnWin32( self, lenv ) :
 	
-		self.myCxxFlags += ' /nologo /GR /GX -DWIN32 -D_MBCS'
-		if ( self.myConfig == 'release' ) :																### TODO: use /Zd in release mode to be able to debug a little.
-			self.myCxxFlags += ' -DNDEBUG /W3 /Zm600 /MD /O2 /TP '								### { /Gi ignored } and { /Og /Oi /Ot /Ob2 (in O2) }
+		self.myCxxFlags += ' /nologo /GR /GX -DWIN32 -D_MBCS'								### /W3
+		if ( self.myConfig == 'release' ) :													### TODO: use /Zd in release mode to be able to debug a little.
+			self.myCxxFlags += ' -DNDEBUG /Zm600 /MD /O2 /TP '								### { /Gi ignored } and { /Og /Oi /Ot /Ob2 (in O2) }
 		else :
 			self.myCxxFlags += ' -D_DEBUG -DDEBUG /EHsc /MDd /Od'
 			if '7' in lenv['MSVS']['VERSION'] :
 				self.myCxxFlags += ' /Z7 '
 			else :
 				self.myCxxFlags += ' /Zi '
-		if ( self.myWarningLevel == 'normal' ) :														### TODO: it is dependant of the myConfig. Must be changed ? yes, done...
+		if ( self.myWarningLevel == 'normal' ) :											### TODO: it is dependant of the myConfig. Must be changed ? yes, done...
 			self.myCxxFlags += ' /W3 '
 		else :
 			self.myCxxFlags += ' /W4 '
 			if '7' in lenv['MSVS']['VERSION'] :
 				self.myCxxFlags += ' /Wp64 '
-																													##/machine:I386
-		self.myLinkFlags	+= ' /nologo /subsystem:windows /incremental:yes '					##/subsystem:console
+																							##/machine:I386
+		self.myLinkFlags	+= ' /nologo /subsystem:windows /incremental:yes '				##/subsystem:console
 		self.myCxxFlags	+= ' -D_WINDOWS '
-																													## remove CONSOLE, MFC support, NOLIB
+																							## remove CONSOLE, MFC support, NOLIB
 		# process myType
 		if ( self.myType == 'exec' ) :
 			self.myCxxFlags += ' /GA '
@@ -366,7 +374,7 @@ class SConsBuildFramework :
 				if '7' in lenv['MSVS']['VERSION'] :
 					self.myCxxFlags += ' /G7 '
 				else :
-					self.myCxxFlags += ' /GD '																## remove Boundchecker support.
+					self.myCxxFlags += ' /GD '												## remove Boundchecker support.
 
 
 	def configureCxxFlagsAndLinkFlagsOnPosix( self, lenv ) :
@@ -465,7 +473,7 @@ class SConsBuildFramework :
 					lenv['LIBS'] += ['glu32']
 				else :
 					lenv['LIBS'] += ['GLU']
-	
+
 			### configure glut ###
 			elif ( elt == 'glut' ) :
 				if		( self.myPlatform == 'win32' ) :
@@ -485,11 +493,38 @@ class SConsBuildFramework :
 	###### Build a project ######
 	def buildProject( self, projectPathName ) :
 
+		myProjectPathName	= projectPathName
+		myProject			= os.path.basename(projectPathName)
+
 		# check if projectPathName is valid
 		if ( os.path.isdir(projectPathName) == False ) :
-			print "sbfWarning: Unable to find directory", projectPathName + '.', "Ignore project", os.path.basename( projectPathName ) + '.'
-			# FIXME todo try a svn checkout ?
-			return
+			print "\nsbfWarning: Unable to find directory", myProjectPathName + '.'
+
+			# try an svn checkout.
+			import pysvn
+			client = pysvn.Client()
+			client.exception_style = 0
+
+			checkoutDone = False
+			for repository in self.mySvnUrls :
+				svnUrl	= os.path.join( repository, myProject, 'trunk' )
+				print "sbfInfo: Try to check out a working copy from", svnUrl, ":"
+				try :
+					revision	= client.checkout(	url = svnUrl, path = myProjectPathName )
+					entry		= client.info( myProjectPathName )
+					print "sbfInfo:", myProject, "founded at", svnUrl
+					if ( entry.revision.kind == pysvn.opt_revision_kind.number ) :
+						print "At revision", entry.revision.number
+					else :
+						print "At revision", entry.revision.date
+					checkoutDone = True
+					break
+				except pysvn.ClientError, e :
+					print str(e)
+
+			if ( checkoutDone == False ) :
+				print "sbfWarning: Unable to populate directory", myProjectPathName, "from svn. Skip to the next project..."
+				return
 
 		# configure a new environment
 		lenv = env.Copy()
@@ -514,16 +549,16 @@ class SConsBuildFramework :
 		self.initializeProject( projectPathName )
 
 		# force clean=1 option if needed.
-		if (	('clean' in self.myBuildTargets)							or
-				('mrproper' in self.myBuildTargets)						or
+		if (	('clean' in self.myBuildTargets)					or
+				('mrproper' in self.myBuildTargets)					or
 				(self.myProject + '_clean' in self.myBuildTargets)	or
 				(self.myProject + '_mrproper' in self.myBuildTargets ) ) :
 			lenv.SetOption('clean', 1)
 
 		# used by code printing messages during the different build stage.
 		lenv['SBF_PROJECT'] = projectPathName
-
-		os.chdir( projectPathName )																											# FIXME is chdir done at scons level ?
+		
+		os.chdir( projectPathName )																									# FIXME is chdir done at scons level ?
 
 		# Dumping construction environment (for debugging).																			# TODO : a method printDebugInfo()
 		#DumpEnv.DumpEnv( lenv )
@@ -546,9 +581,9 @@ class SConsBuildFramework :
 
 		###### configure environment ######
 		lenv['CXXFLAGS']	= self.myCxxFlags
-		lenv['CPPPATH']	= self.myCppPath
+		lenv['CPPPATH']		= self.myCppPath
 		lenv['LINKFLAGS']	= self.myLinkFlags
-		lenv['LIBPATH']	= self.myLibPath
+		lenv['LIBPATH']		= self.myLibPath
 
 		# configure lenv['LIBS'] with lenv['stdlibs']
 		lenv['LIBS'] = lenv['stdlibs']
@@ -582,14 +617,14 @@ class SConsBuildFramework :
 		if		( self.myType == 'exec' or self.myType == 'static' ) :
 			for srcFile in filesFromSrc :
 				objFile				=	(os.path.splitext(srcFile)[0]).replace('src', self.myProjectBuildPathExpanded )
-				srcFileExpanded	=	self.myProjectPathName + os.sep + srcFile
+				srcFileExpanded		=	self.myProjectPathName + os.sep + srcFile
 				objFiles	+=	lenv.Object( objFile, srcFileExpanded )				# Object is a synonym for the StaticObject builder method.
 				### print objFile, ':', srcFileExpanded, '\n'
 
 		elif	( self.myType == 'shared' ) :
 			for srcFile in filesFromSrc :
 				objFile				=	(os.path.splitext(srcFile)[0]).replace('src', self.myProjectBuildPathExpanded )
-				srcFileExpanded	=	self.myProjectPathName + os.sep + srcFile
+				srcFileExpanded		=	self.myProjectPathName + os.sep + srcFile
 				objFiles	+=	lenv.SharedObject( objFile, srcFileExpanded )
 				### print objFile, ':', srcFileExpanded, '\n'
 		else :
@@ -603,25 +638,25 @@ class SConsBuildFramework :
 		objProject += self.myPostfixLinkedToMyConfig
 
 		#
-		#projectTarget				= []
+		#projectTarget			= []
 
 		installInBinTarget		= []
 		installInIncludeTarget	= filesFromInclude
 		installInLibTarget		= []
 
 		if		( self.myType == 'exec' ) :
-			projectTarget = lenv.Program( objProject, objFiles )
-			installInBinTarget += projectTarget
+			projectTarget		=	lenv.Program( objProject, objFiles )
+			installInBinTarget	+=	projectTarget
 		elif	( self.myType == 'static' ) :
-			projectTarget = lenv.StaticLibrary( objProject, objFiles )
-			installInLibTarget += projectTarget
+			projectTarget		=	lenv.StaticLibrary( objProject, objFiles )
+			installInLibTarget	+=	projectTarget
 		elif	( self.myType == 'shared' ) :
-			projectTarget = lenv.SharedLibrary( objProject, objFiles )
-			installInLibTarget += projectTarget
+			projectTarget		=	lenv.SharedLibrary( objProject, objFiles )
+			installInLibTarget	+=	projectTarget
 		else :
 			print 'sbfWarning: during final setup of project'
 		#																																			TODO: myType == 'headers'
-
+		
 		# projectTarget is not deleted before it is rebuilt.
 		lenv.Precious( projectTarget )
 
@@ -703,7 +738,7 @@ class SConsBuildFramework :
 
 # create objects
 # HINTS: to propagate the entire external environment to the execution environment for commands : ENV = os.environ
-env							=	Environment()
+env						=	Environment()
 env['ENV']['PATH']		+=	os.environ['PATH']
 
 #Export('env') not needed.

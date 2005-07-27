@@ -18,7 +18,7 @@ o create doxygen.
 o create automatically a package with files and dependencies.
 o cache = on/off
 o SetOption('implicit_cache', 1), SourceSignatures('MD5') SourceSignatures('timestamp')
-o idea for a new project (with python SOAP) => myOpenBuildFarm
+o idea for a new project (with python-soappy) => myOpenBuildFarm
 o new type of project : headers.
 o vgsdkSamples support
 o vgsdk configure deps in all projects.
@@ -31,7 +31,7 @@ o add scons setConfig='debug' (switch from debug to release with scons cmd)
 o update Makefile (used as a bridge between some IDE and scons).
 o Ajout du fichier licence GPL et des entetes dans tous les fichiers
 o svn
-o stat. (number of lines...)
+o stat. (number of lines... see sloccount, http://sourceforge.net/projects/cccc)
 o search path for projects (used by deps).
 o compile more than one config (=['debug', 'release']).
 o custom config ? add (subconfigname.options).

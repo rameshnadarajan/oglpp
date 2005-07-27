@@ -1,12 +1,13 @@
+svnUrls		= []
 installPaths= []
 buildPath	= 'build'
 cachePath	= ''
 config		= 'debug' #release
 warningLevel= 'normal'
 defines		= []
-type			= 'exec'	# static, shared
+type		= 'exec'	# static, shared
 postfix		= ''
-deps			= []
-uses			= []
-libs			= []
+deps		= []
+uses		= []
+libs		= []
 stdlibs		= []
