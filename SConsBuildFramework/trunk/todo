@@ -1,7 +1,7 @@
 TOTEST:
 -------
 
-o DEPENDENCIES and MULTI-DEPENDENCIES.
+[DONE] o DEPENDENCIES and MULTI-DEPENDENCIES.
 
 
 TOFIX:
@@ -16,7 +16,7 @@ TODO:
 [DONE] o OSError: [Errno 2] No such file or directory: 'C:\\cygwin\\tmp\\nf-vgsdk\\SrcLib\\Virtuals' => if a project (from deps option) is not founded, skip it.
 o create doxygen.
 o create automatically a package with files and dependencies.
-o cache = on/off
+[DONE] o cache = on/off
 o SetOption('implicit_cache', 1), SourceSignatures('MD5') SourceSignatures('timestamp')
 o idea for a new project (with python-soappy) => myOpenBuildFarm
 o new type of project : headers.
@@ -30,7 +30,7 @@ o targets mrproper, clean => clean, uninstall, mrproper
 o add scons setConfig='debug' (switch from debug to release with scons cmd)
 o update Makefile (used as a bridge between some IDE and scons).
 o Ajout du fichier licence GPL et des entetes dans tous les fichiers
-o svn
+[PARTIAL] o svn (checkout and update). TBT update for a non svn project.
 o stat. (number of lines... see sloccount, http://sourceforge.net/projects/cccc)
 o search path for projects (used by deps).
 o compile more than one config (=['debug', 'release']).

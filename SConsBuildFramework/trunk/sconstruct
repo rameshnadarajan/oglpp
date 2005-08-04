@@ -6,23 +6,33 @@
 # Installation : 
 # --------------
 #
-# Python 2.3 and up
+# Python 2.4 and up
 # SCons 0.96.1 and up
 #
-# SCONS_BUILD_FRAMEWORK environment variable must be set to the SConsBuildFramework root directory. It must be terminated by a '\' on windows platform and a '/' in all others one (for example: SCONS_BUILD_FRAMEWORK=D:\SConsBuildFramework\)
+# SCONS_BUILD_FRAMEWORK environment variable must be set to the SConsBuildFramework root directory.
+# It must be terminated by a '\' on windows platform and a '/' in all others one (for example: SCONS_BUILD_FRAMEWORK=D:\SConsBuildFramework\)
 #
-# The configuration of SBF is done by the file .SConsBuildFramework.options from $HOME directory. If this file is not present then configuration is done with SConsBuildFramework.options from $SCONS_BUILD_FRAMEWORK directory.
+# The configuration of SBF is done by the file .SConsBuildFramework.options from $HOME directory. 
+# If this file is not present then configuration is done with SConsBuildFramework.options from $SCONS_BUILD_FRAMEWORK directory.
 #
 # Features :
 # ----------
 #
-# - targets sbfCheck,
+# - list of targets:
+#	- specific sbf target :
+#		sbfCheck	:	print python, scons, CC and SBF version numbers, SCONS_BUILD_FRAMEWORK environment variable, and check if SCONS_BUILD_FRAMEWORK is well formed.
+#	- svn targets:
+#		svnCheckout or myProject_svnCheckout :
+#				checkout missing project(s) from multiple svn repositories (i.e. when a project specified in dependencies does not exist 
+#				on the filesystem, sbf try to checkout it from the first repository specified by svnUrls. If checkout fails, the next 
+#				repository is used. And so on). myProject_svnCheckout target is used to checkout myProject. svnCheckout is used to checkout all projects.
+#		svnUpdate or myProject_svnUpdate :
+#				update project(s) from multiple svn repositories (sbf try to checkout it from the first repository specified by svnUrls. If checkout fails, the next 
+#				repository is used. And so on).
 #   and myproject_build, myproject_install, myproject(idem myproject_install), myproject_clean, myproject_mrproper
 #   and special targets build (for all myproject_build), install (for all myproject_install), all (for all myproject), clean (for all myproject_clean), mrproper (for all myproject_mrproper)
 # - default target = all
 # - projects dependencies (deps could be specified with name of project (search in parent directory), absolute path or relative path).
-# - automatic checkout any missing projects from multiple svn repositories (i.e. when a project specified in dependencies don't exist on the filesystem, sbf try to checkout it
-#	from the first repository specified by svnUrls. If checkout fails, the next repository is used. And so on).
 # - skip any missing projects (i.e. skip a project specified in dependencies but that don't exist on the filesystem).
 #
 # - build objects outside sources directories.
@@ -32,7 +42,7 @@
 # Rqs :
 # -----
 #
-# - spaces in target name are prohibited.
+# - Spaces are not allowed in a project name.
 # - installPaths, config and warningLevel are not used in default.options (only in SConsBuildFramework.options)
 # ...
 #
@@ -76,10 +86,72 @@ def searchFiles( searchDirectory, pruneDirectories, allowedExtensions, oFiles ) 
 	###print 'oFiles=', oFiles
 
 
+###### Svn ######
+def svnCheckout( self ) :
+	# try an svn checkout.
+	import pysvn
+	client = pysvn.Client()
+	client.exception_style = 0
+
+	for repository in self.mySvnUrls :
+		svnUrl	= os.path.join( repository, self.myProject, 'trunk' )
+		print "sbfInfo: Try to check out a working copy from", svnUrl, ":"
+		try :
+			revision	= client.checkout(	url = svnUrl, path = self.myProjectPathName )
+			entry		= client.info( self.myProjectPathName )
+			print "sbfInfo:", self.myProject, "founded at", svnUrl
+			if ( entry.revision.kind == pysvn.opt_revision_kind.number ) :
+				print self.myProject, "at revision", entry.revision.number
+			else :
+				print self.myProject, "at revision", entry.revision.date
+			return True
+		except pysvn.ClientError, e :
+			print str(e)
+	else:
+		return False
+
+
+def svnUpdate( self ) :
+	# try an svn update
+	import pysvn
+	client = pysvn.Client()
+	client.exception_style = 0
+	try :
+		revision = client.update( self.myProjectPathName )
+		if ( revision.kind == pysvn.opt_revision_kind.number ) :
+			print self.myProject, "at revision", revision.number
+		else :
+			print self.myProject, "at revision", revision.date
+		return True		
+	except pysvn.ClientError, e :
+		print str(e)
+		return False
+
 
 ###### Action function for sbfCheck target #######
-def printCheckMessage(target = None, source = None, env = None) :
+def sbfCheck(target = None, source = None, env = None) :
 	print '----------------------- Check version -----------------------'
+	
+	env.Execute( 'python -V' )
+	print
+	
+	env.Execute( 'scons -v' )
+	print
+	
+	env.Execute( checkCC, nopAction )
+	print
+
+	print 'SConsBuildFramework 0.3'
+	sbf_home = os.getenv('SCONS_BUILD_FRAMEWORK')
+	print 'Environment variable SCONS_BUILD_FRAMEWORK=', sbf_home
+	if ( len( sbf_home ) > 0 ) :
+		if ( sbf_home[ len(sbf_home)-1 ] != os.sep ) :
+			print 'sbfError: SCONS_BUILD_FRAMEWORK must be terminated by a directory separator !!!'
+		else:
+			print 'sbfInfo: SCONS_BUILD_FRAMEWORK is well formed.'
+	else :
+		print 'sbfError: SCONS_BUILD_FRAMEWORK must be defined or non empty !!!'
+
 
 def checkCC(target = None, source = None, env = None) :
 	if ( env['CC'] == 'cl' ) :
@@ -89,21 +161,6 @@ def checkCC(target = None, source = None, env = None) :
 	else :
 		ccVersionAction		= Action( env['CC'] + ' -v' )
 		env.Execute( ccVersionAction )
-
-def checkSBF(target = None, source = None, env = None) :
-
-	print 'SConsBuildFramework 0.2'
-
-	sbf_home = os.getenv('SCONS_BUILD_FRAMEWORK')
-	print 'Environment variable SCONS_BUILD_FRAMEWORK=', sbf_home
-
-	if ( len( sbf_home ) > 0 ) :
-		if ( sbf_home[ len(sbf_home)-1 ] != os.sep ) :
-			print 'sbfError: SCONS_BUILD_FRAMEWORK must be terminated by a directory separator !!!'
-		else:
-			print 'sbfInfo: SCONS_BUILD_FRAMEWORK is well formed.'
-	else :
-		print 'sbfError: SCONS_BUILD_FRAMEWORK must be defined or non empty !!!'
 
 
 ###### Print action function ######
@@ -131,53 +188,56 @@ def printMrproper( target, source, localenv ) :
 class SConsBuildFramework :
 
 	# global attributes from command line
-	myBuildTargets						= []
+	myBuildTargets					= set()
 	#myGHasCleanOption				= False
 
 	# globals attributes
-	myPlatform							= ''
-	myCC									= ''
+	myPlatform						= ''
+	myCC							= ''
 	myPlatform_myCC					= ''
 
 	# global attributes from sbf.options or computed from sbf.options
 	# from sbf.options
-	mySvnUrls							= []
-	myInstallPaths						= []
-	myBuildPath							= ''
-	myCachePath							= ''
-	myConfig								= ''
-	myWarningLevel						= ''
+	mySvnUrls						= []
+	mySvnCheckoutExclude			= []
+	mySvnUpdateExclude				= []
+	myInstallPaths					= []
+	myBuildPath						= ''
+	myCachePath						= ''
+	myCacheOn						= False
+	myConfig						= ''
+	myWarningLevel					= ''
 	# computed from sbf.options
-	myInstallExtPaths					= []
+	myInstallExtPaths				= []
 	myInstallDirectory				= ''
 	myGlobalCppPath					= []
 	myGlobalLibPath					= []
 
 	# project local attributes from default.options
-	myDefines							= []
-	myType								= ''
-	myPostfix							= ''
-	myDeps								= []
-	myUses								= []
-	myLibs								= []
-	myStdlibs							= []
+	myDefines						= []
+	myType							= ''
+	myPostfix						= ''
+	myDeps							= []
+	myUses							= []
+	myLibs							= []
+	myStdlibs						= []
 
 	# project local attributes
-	myProjectPathName					= ''
-	myProjectPath						= ''
-	myProject							= ''
+	myProjectPathName				= ''
+	myProjectPath					= ''
+	myProject						= ''
 	myProjectBuildPath				= ''
 	myPostfixLinkedToMyConfig		= ''
 
-	myCxxFlags							= ''
-	myCppPath							= []
-	myLinkFlags							= ''
-	myLibPath							= []
+	myCxxFlags						= ''
+	myCppPath						= []
+	myLinkFlags						= ''
+	myLibPath						= []
 
 	myProjectBuildPathExpanded		= ''
 
 	# list of projects that have been already parsed by scons
-	myParsedProjects					= []
+	myParsedProjects				= set()
 
 
 	###### Constructor ######
@@ -196,7 +256,7 @@ class SConsBuildFramework :
 		Help( myOptions.GenerateHelpText(env) )
 
 		# retrives all targets
-		self.myBuildTargets = map(str, BUILD_TARGETS)
+		self.myBuildTargets = set( map(str, BUILD_TARGETS) )
 
 		#self.myGHasCleanOption = env.GetOption('clean')
 
@@ -210,7 +270,7 @@ class SConsBuildFramework :
 				env.SetOption('clean', 1)
 
 		# myPlatform, myCC and myPlatform_myCC
-		# myPlatform = win32 | cygwin  | posix | darwin					FIXME: posix != linux or cygwin or bsd ?, env['PLATFORM'] != sys.platform => TOTHINK
+		# myPlatform = win32 | cygwin  | posix | darwin					FIXME: posix != linux and bsd ?, env['PLATFORM'] != sys.platform
 		self.myPlatform			= env['PLATFORM']
 
 		# myCC = clX-Y | gcc | env['CC']
@@ -230,9 +290,12 @@ class SConsBuildFramework :
 	###### Initialize global attributes ######
 	def initializeGlobalsFromEnv( self, lenv ) :
 
-		# update mySvnUrls, myInstallPaths, myIntallExtPaths and myInstallDirectory
-		self.mySvnUrls		= lenv['svnUrls']
-		
+		# update mySvnUrls, mySvnCheckoutExclude and mySvnUpdateExclude
+		self.mySvnUrls				= lenv['svnUrls']
+		self.mySvnCheckoutExclude	= lenv['svnCheckoutExclude']
+		self.mySvnUpdateExclude		= lenv['svnUpdateExclude']
+
+		# update myInstallPaths, myIntallExtPaths and myInstallDirectory
 		self.myInstallPaths	= lenv['installPaths']
 
 		self.myInstallExtPaths = []
@@ -245,17 +308,19 @@ class SConsBuildFramework :
 			print 'sbfError: empty installPaths'
 			sys.exit()
 
-		# update myBuildPath, myCachePath, myConfig and myWarning
-		self.myBuildPath			= lenv['buildPath']
+		# update myBuildPath, myCachePath, myCacheOn, myConfig and myWarning
+		self.myBuildPath	= lenv['buildPath']
 		
-		self.myCachePath			= lenv['cachePath']
-		if ( len( self.myCachePath ) > 0 ) :
+		self.myCachePath	= lenv['cachePath']
+		self.myCacheOn		= lenv['cacheOn']
+		if (	(self.myCacheOn == True) and
+				(len( self.myCachePath ) > 0 )	):
 			env.CacheDir( self.myCachePath )
 			print 'sbfInfo: Use cache ', self.myCachePath
 		else :
 			print 'sbfInfo: Don\'t use cache'
 		
-		self.myConfig				= lenv['config']
+		self.myConfig			= lenv['config']
 		self.myWarningLevel		= lenv['warningLevel']
 
 		### use myInstallPaths to update myGlobalCppPath ###
@@ -300,7 +365,7 @@ class SConsBuildFramework :
 			self.myPostfixLinkedToMyConfig = ''
 
 		###
-		self.myCxxFlags	= ''
+		self.myCxxFlags		= ''
 		self.myCppPath		= [self.myProjectPathName + os.sep + 'include'] + self.myGlobalCppPath
 		self.myLinkFlags	= ''
 		self.myLibPath		= self.myGlobalLibPath
@@ -311,11 +376,14 @@ class SConsBuildFramework :
 		myOptions	= Options( file )
 		myOptions.AddOptions(
 			('svnUrls', 'Set the list of subversion repository used in order (from first to last) until a successful checkout occurs'),
+			('svnCheckoutExclude', 'Set the list of project that may not be used for check out subversion operation. All projects not explicitly excluded will be included.'),
+			('svnUpdateExclude', 'Set the list of project that may not be used for update subversion operation. All projects not explicitly excluded will be included.'),
 
 			('installPaths', 'Set the list of search paths to \'/usr/local\' like directories. The first one would be used as a destination path for target named install'),
 
 			('buildPath',	'Set the path to the directory in which to build all files (path could be absolute or relative to the project beiing build)', 'build' ),
 			('cachePath',	'Set the path to cache that will be shared among all the builds using the same cachePath', ''),
+			BoolOption('cacheOn', 'Set to use build cache.', False),
 
 			EnumOption(	'config', 'Select a release or debug binary.', 'release',
 							allowed_values=('debug', 'release'),
@@ -363,7 +431,7 @@ class SConsBuildFramework :
 				self.myCxxFlags += ' /Wp64 '
 																							##/machine:I386
 		self.myLinkFlags	+= ' /nologo /subsystem:windows /incremental:yes '				##/subsystem:console
-		self.myCxxFlags	+= ' -D_WINDOWS '
+		self.myCxxFlags		+= ' -D_WINDOWS '
 																							## remove CONSOLE, MFC support, NOLIB
 		# process myType
 		if ( self.myType == 'exec' ) :
@@ -379,13 +447,13 @@ class SConsBuildFramework :
 
 	def configureCxxFlagsAndLinkFlagsOnPosix( self, lenv ) :
 	
-		lenv['CXX'] = lenv.WhereIs('g++')															### myCxxFlags += ' -pedantic'
+		lenv['CXX'] = lenv.WhereIs('g++')													### myCxxFlags += ' -pedantic'
 		if ( self.myConfig == 'release' ) :
-			self.myCxxFlags	+= ' -DNDEBUG -O3 '													### TODO: more compiler arch-dependant optimization
+			self.myCxxFlags	+= ' -DNDEBUG -O3 '												### TODO: more compiler arch-dependant optimization
 		else :
 			self.myCxxFlags	+= ' -D_DEBUG -DDEBUG -g -O0 '									### profiling myCxxFlags += ' -pg', mpatrol, leaktracer
 
-		# process myWarningLevel, add always -Wall option.										### TODO: add more warnings with myWarningLevel = 'high' ?
+		# process myWarningLevel, add always -Wall option.									### TODO: add more warnings with myWarningLevel = 'high' ?
 		self.myCxxFlags	+= ' -Wall '
 
 
@@ -413,8 +481,8 @@ class SConsBuildFramework :
 	def use_boost( self, lenv, elt ) :
 		if ( self.myPlatform != 'win32' ) :
 			lenv['LIBS']	+= [	'boost_date_time-gcc-mt', 'boost_filesystem-gcc-mt', 'boost_regex-gcc-mt', 'boost_signals-gcc-mt', 'boost_thread-gcc-mt' ]
-			#						[	'boost_date_time-gcc-mt', 'boost_filesystem-gcc-mt', 'boost_prg_exec_monitor-gcc-mt', 'boost_regex-gcc-mt',
-			#							'boost_signals-gcc-mt', 'boost_test_exec_monitor-gcc-mt', 'boost_thread-gcc-mt', 'boost_unit_test_framework-gcc-mt' ]
+			#					[	'boost_date_time-gcc-mt', 'boost_filesystem-gcc-mt', 'boost_prg_exec_monitor-gcc-mt', 'boost_regex-gcc-mt',
+			#						'boost_signals-gcc-mt', 'boost_test_exec_monitor-gcc-mt', 'boost_thread-gcc-mt', 'boost_unit_test_framework-gcc-mt' ]
 		#else:
 		# Nothing to do for win32 platform.
 
@@ -493,39 +561,44 @@ class SConsBuildFramework :
 	###### Build a project ######
 	def buildProject( self, projectPathName ) :
 
-		myProjectPathName	= projectPathName
-		myProject			= os.path.basename(projectPathName)
+		self.myProjectPathName	= projectPathName
+		self.myProject			= os.path.basename(projectPathName)
 
 		# check if projectPathName is valid
 		if ( os.path.isdir(projectPathName) == False ) :
-			print "\nsbfWarning: Unable to find directory", myProjectPathName + '.'
-
-			# try an svn checkout.
-			import pysvn
-			client = pysvn.Client()
-			client.exception_style = 0
-
-			checkoutDone = False
-			for repository in self.mySvnUrls :
-				svnUrl	= os.path.join( repository, myProject, 'trunk' )
-				print "sbfInfo: Try to check out a working copy from", svnUrl, ":"
-				try :
-					revision	= client.checkout(	url = svnUrl, path = myProjectPathName )
-					entry		= client.info( myProjectPathName )
-					print "sbfInfo:", myProject, "founded at", svnUrl
-					if ( entry.revision.kind == pysvn.opt_revision_kind.number ) :
-						print "At revision", entry.revision.number
-					else :
-						print "At revision", entry.revision.date
-					checkoutDone = True
-					break
-				except pysvn.ClientError, e :
-					print str(e)
-
-			if ( checkoutDone == False ) :
-				print "sbfWarning: Unable to populate directory", myProjectPathName, "from svn. Skip to the next project..."
+			print "\nsbfWarning: Unable to find directory", self.myProjectPathName
+			
+			# What to do ?
+			# a svn checkout ?
+			if ( self.myProject not in self.mySvnCheckoutExclude ) :
+				if (	('svnCheckout' in self.myBuildTargets) or
+						(self.myProject+'_svnCheckout' in self.myBuildTargets)	) :
+					print "----------------------- svn checkout %s -----------------------" % self.myProjectPathName
+					successful = svnCheckout(self)
+					if ( successful == False ) :
+						print "sbfWarning: Unable to populate directory", self.myProjectPathName, "from svn. Skip to the next project..."
+						return
+					#else svn checkout done, continue.
+				else :
+					print "sbfWarning: None of targets svnCheckout or", self.myProject + "_svnCheckout have been specified. Skip to the next project..."
+					return
+			else :
+				print "sbfWarning: Exclude from svn checkout. Skip to the next project..."
 				return
 
+		# check svnUpdate ?
+		if ( self.myProject not in self.mySvnUpdateExclude ) :
+			if (	('svnUpdate' in self.myBuildTargets) or
+					(self.myProject+'_svnUpdate' in self.myBuildTargets)	) :
+				print "----------------------- svn update %s -----------------------" % self.myProjectPathName
+				successful = svnUpdate(self)
+				if ( successful == False ) :
+					print "sbfWarning: Unable to update directory", self.myProjectPathName, "from svn."
+				#else svn update done, nothing to do
+			#else nothing to do
+		else :
+			print "sbfWarning: Exclude from svn update."
+		
 		# configure a new environment
 		lenv = env.Copy()
 
@@ -537,7 +610,7 @@ class SConsBuildFramework :
 		for dep in lenv['deps'] :
 			if ( dep not in self.myParsedProjects ) :
 				# dep not already "build"
-				self.myParsedProjects += [dep]
+				self.myParsedProjects.add(dep)
 				if ( len(os.path.split(dep)[0]) == 0 ) :
 					self.buildProject( os.path.abspath(os.path.join('../', dep)) )
 				else :
@@ -558,9 +631,9 @@ class SConsBuildFramework :
 		# used by code printing messages during the different build stage.
 		lenv['SBF_PROJECT'] = projectPathName
 		
-		os.chdir( projectPathName )																									# FIXME is chdir done at scons level ?
+		os.chdir( projectPathName )																							# FIXME is chdir done at scons level ?
 
-		# Dumping construction environment (for debugging).																			# TODO : a method printDebugInfo()
+		# Dumping construction environment (for debugging).																	# TODO : a method printDebugInfo()
 		#DumpEnv.DumpEnv( lenv )
 		#print 'DEBUG:cwd=', os.getcwd()
 
@@ -655,7 +728,7 @@ class SConsBuildFramework :
 			installInLibTarget	+=	projectTarget
 		else :
 			print 'sbfWarning: during final setup of project'
-		#																																			TODO: myType == 'headers'
+		#																												TODO: myType == 'headers'
 		
 		# projectTarget is not deleted before it is rebuilt.
 		lenv.Precious( projectTarget )
@@ -678,8 +751,14 @@ class SConsBuildFramework :
 				installInLibTarget.append(	File(objProject + '.pdb')	)
 
 
-		######	setup targets : myProject_build myProject_install myProject myProject_clean myProject_mrproper ######
+		######	setup targets : myProject_svnCheckout, myProject_svnUpdate, myProject_build myProject_install myProject myProject_clean myProject_mrproper ######
 
+		### myProject_svnCheckout
+		env.Alias( self.myProject + '_svnCheckout', env.Command('dummySvnCheckout.out1', 'dummy.in', Action( nopAction, nopAction ) ) )
+
+		### myProject_svnUpdate
+		env.Alias( self.myProject + '_svnUpdate', env.Command('dummySvnUpdate.out1', 'dummy.in', Action( nopAction, nopAction ) ) )
+		
 		### myProject_build
 		env.Alias( self.myProject + '_build_print', lenv.Command('dummy_build_print' + self.myProject + 'out1', 'dummy.in', Action( nopAction, printEmptyLine ) ) )
 		env.Alias( self.myProject + '_build_print', lenv.Command('dummy_build_print' + self.myProject + 'out2', 'dummy.in', Action( nopAction, printBuild ) ) )
@@ -742,20 +821,15 @@ env						=	Environment()
 env['ENV']['PATH']		+=	os.environ['PATH']
 
 #Export('env') not needed.
-SConsEnvironment.sbf		= SConsBuildFramework()
+SConsEnvironment.sbf	= SConsBuildFramework()
 
 # target 'sbfCheck'
-Alias('sbfCheck')
-env.Alias('sbfCheck', env.Command('dummyCheckVersion.out1', 'dummy.in', Action( printCheckMessage, nopAction ) ) )
-env.Alias('sbfCheck', env.Command('dummyCheckVersion.out2', 'dummy.in', Action( 'python -V' ) ) )
-env.Alias('sbfCheck', env.Command('dummyCheckVersion.out3', 'dummy.in', Action( printEmptyLine, nopAction ) ) )
-env.Alias('sbfCheck', env.Command('dummyCheckVersion.out4', 'dummy.in', Action( 'scons -v' ) ) )
-env.Alias('sbfCheck', env.Command('dummyCheckVersion.out5', 'dummy.in', Action( printEmptyLine, nopAction ) ) )
-env.Alias('sbfCheck', env.Command('dummyCheckVersion.out6', 'dummy.in', Action( checkCC, nopAction ) ) )
-env.Alias('sbfCheck', env.Command('dummyCheckVersion.out7', 'dummy.in', Action( printEmptyLine, nopAction ) ) )
-env.Alias('sbfCheck', env.Command('dummyCheckVersion.out8', 'dummy.in', Action( checkSBF, nopAction ) ) )
+env.Alias('sbfCheck', env.Command('dummyCheckVersion.out1', 'dummy.in', Action( sbfCheck, nopAction ) ) )
 
 # build 'caller' project (and all dependancies recursively)
 env.sbf.buildProject( os.getcwd() )
 
 env.Default( 'all' )
+### special targets: svnCheckout svnUpdate ###
+env.Alias( 'svnCheckout', env.Command('dummySvnCheckout.out1', 'dummy.in', Action( nopAction, nopAction ) ) )
+env.Alias( 'svnUpdate', env.Command('dummySvnUpdate.out1', 'dummy.in', Action( nopAction, nopAction ) ) )
