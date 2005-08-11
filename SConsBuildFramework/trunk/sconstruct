@@ -94,7 +94,7 @@ def svnCheckout( self ) :
 	client.exception_style = 0
 
 	for repository in self.mySvnUrls :
-		svnUrl	= os.path.join( repository, self.myProject, 'trunk' )
+		svnUrl	= repository + '/' + self.myProject + '/trunk'
 		print "sbfInfo: Try to check out a working copy from", svnUrl, ":"
 		try :
 			revision	= client.checkout(	url = svnUrl, path = self.myProjectPathName )
