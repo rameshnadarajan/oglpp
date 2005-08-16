@@ -14,8 +14,8 @@ TODO:
 -----
 
 [DONE] o OSError: [Errno 2] No such file or directory: 'C:\\cygwin\\tmp\\nf-vgsdk\\SrcLib\\Virtuals' => if a project (from deps option) is not founded, skip it.
-o create doxygen.
-o create automatically a package with files and dependencies.
+[TODO] o create doxygen.
+[DONE] o create automatically a package with files and dependencies.
 [DONE] o cache = on/off
 o SetOption('implicit_cache', 1), SourceSignatures('MD5') SourceSignatures('timestamp')
 o idea for a new project (with python-soappy) => myOpenBuildFarm
