@@ -1,9 +1,6 @@
 TOTEST:
 -------
 
-[DONE] o DEPENDENCIES and MULTI-DEPENDENCIES.
-
-
 TOFIX:
 ------
 
@@ -13,10 +10,9 @@ TOFIX:
 TODO:
 -----
 
-[DONE] o OSError: [Errno 2] No such file or directory: 'C:\\cygwin\\tmp\\nf-vgsdk\\SrcLib\\Virtuals' => if a project (from deps option) is not founded, skip it.
-[TODO] o create doxygen.
+[DONE] o create doxygen.
 [DONE] o create automatically a package with files and dependencies.
-[DONE] o cache = on/off
+o use other doxyfile(s).
 o SetOption('implicit_cache', 1), SourceSignatures('MD5') SourceSignatures('timestamp')
 o idea for a new project (with python-soappy) => myOpenBuildFarm
 o new type of project : headers.

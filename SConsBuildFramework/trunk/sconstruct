@@ -23,7 +23,7 @@
 # - list of targets:
 #	- specific sbf target :
 #		sbfCheck	:	print python, scons, CC and SBF version numbers, SCONS_BUILD_FRAMEWORK environment variable, and check if SCONS_BUILD_FRAMEWORK is well formed.
-#	- svn targets:
+#	- svn targets :
 #		svnCheckout or myProject_svnCheckout :
 #				checkout missing project(s) from multiple svn repositories (i.e. when a project specified in dependencies does not exist 
 #				on the filesystem, sbf try to checkout it from the first repository specified by svnUrls. If checkout fails, the next 
@@ -31,6 +31,17 @@
 #		svnUpdate or myProject_svnUpdate :
 #				update project(s) from multiple svn repositories (sbf try to checkout it from the first repository specified by svnUrls. If checkout fails, the next 
 #				repository is used. And so on).
+#	- doxygen targets :
+#		dox_build, dox_install, dox, dox_clean and dox_mrproper.
+#		By default, an automatically generated doxygen configuration file is used by these targets (see the file doxyfile in directory SCONS_BUILD_FRAMEWORK)
+#		PROJECT_NAME, PROJECT_NUMBER, OUTPUT_DIRECTORY, INPUT, EXAMPLE_PATH and IMAGE_PATH are automatically configured by sbf.
+#		sbf sets :
+#		- PROJECT_NAME to 'root project name' at 'build date'.
+#		- PROJECT_NUMBER to 'postfix'
+#		- OUTPUT_DIRECTORY to 'installPaths[0]/project name/doxygen/doxygen.sbf_build'
+#		- INPUT to 'project/include' and 'project/src' and the same recursively for all dependencies.
+#		- EXAMPLE_PATH to 'project/doc/example' and the same recursively for all dependencies.
+#		- IMAGE_PATH to 'project/doc/image' and the same recursively for all dependencies.
 #	- zip related targets :
 #		zip			: a shortcut to 'zipRuntime zipDev zipSrc' targets detailed below.
 #		zipRuntime	: create a package with binaries and libraries.
@@ -40,11 +51,14 @@
 #   and myproject_build, myproject_install, myproject(idem myproject_install), myproject_clean, myproject_mrproper
 #   and special targets build (for all myproject_build), install (for all myproject_install), all (for all myproject), clean (for all myproject_clean), mrproper (for all myproject_mrproper)
 # - default target = all
+#
 # - projects dependencies (deps could be specified with name of project (search in parent directory), absolute path or relative path).
 # - skip any missing projects (i.e. skip a project specified in dependencies but that don't exist on the filesystem).
 #
 # - build objects outside sources directories.
 # - builded files could be shared among all the builds usings the same cache (see cachePath).
+#
+# - prints date, time and sbf version at sbf startup.
 # - ...
 #
 # Rqs :
@@ -91,6 +105,16 @@ def searchFiles( searchDirectory, pruneDirectories, allowedExtensions, oFiles ) 
 					break
 
 	###print 'oFiles=', oFiles
+
+
+# Gets all files
+def searchAllFiles( searchDirectory, oFiles ) :
+	for dirpath, dirnames, filenames in os.walk( searchDirectory, topdown=True ):
+		for file in filenames:
+			pathfilename = os.path.join(dirpath,file)
+			oFiles += [pathfilename]
+
+	### print 'oFiles=', oFiles
 
 
 ###### Svn ######
@@ -163,7 +187,8 @@ def sbfCheck(target = None, source = None, env = None) :
 	env.Execute( checkCC, nopAction )
 	print
 
-	print 'SConsBuildFramework 0.4'
+	printSBFVersion()
+
 	sbf_home = os.getenv('SCONS_BUILD_FRAMEWORK')
 	print 'Environment variable SCONS_BUILD_FRAMEWORK=', sbf_home
 	if ( len( sbf_home ) > 0 ) :
@@ -183,6 +208,14 @@ def checkCC(target = None, source = None, env = None) :
 	else :
 		ccVersionAction		= Action( env['CC'] + ' -v' )
 		env.Execute( ccVersionAction )
+
+
+def printSBFVersion() :
+	print 'SConsBuildFramework v%s' % getSBFVersion()
+
+
+def getSBFVersion() :
+	return 0.5
 
 
 ###### Print action function ######
@@ -205,16 +238,22 @@ def printMrproper( target, source, localenv ) :
 	return "-------------- Mrproper %s files to %s ------------" % (localenv['sbf_projectPathName'], localenv.sbf.myInstallDirectory)
 
 def printZip( target, source, localenv ) :
-	return "----------------------- Create zip archives -----------------------"
+	return "\n----------------------- Create zip archives -----------------------"
 
 def printRuntimeZip( target, source, localenv ) :
-	return "-------------- Create runtime package ------------"
+	return "\n-------------- Create runtime package ------------"
 
 def printDevZip( target, source, localenv ) :
-	return "-------------- Create dev package ------------"
+	return "\n-------------- Create dev package ------------"
 
 def printSrcZip( target, source, localenv ) :
-	return "-------------- Create src package ------------"
+	return "\n-------------- Create src package ------------"
+
+def printDoxygenBuild( target, source, localenv ) :
+	return "\n----------------------- Build documentation with doxygen -----------------------"
+	
+def printDoxygenInstall( target, source, localenv ) :
+	return "\n----------------------- Install doxygen documentation -----------------------"
 
 
 ###### SConsBuildFramework class ######
@@ -290,6 +329,17 @@ class SConsBuildFramework :
 		myOptions.Update( env )
 		Help( myOptions.GenerateHelpText(env) )
 
+		# FIXME : It is disabled, because it doesn't work properly
+		# Log into a file the last scons outputs (stdout and stderr) for a project
+		#myProject = os.path.basename( os.getcwd() )
+		#logCommand = "tee " + os.path.join( env['buildPath'], myProject + "_sbf.log")
+		#sys.stderr = sys.stdout = open( os.path.join( env['buildPath'], myProject + "_sbf.log"), 'w' ) or
+		#sys.stdout = sys.stderr = os.popen(logCommand, "w")
+
+		# Print date, time and sbf version at sbf startup
+		printSBFVersion()
+		print 'started at', str(datetime.datetime.today())
+
 		# retrives all targets
 		self.myBuildTargets = set( map(str, BUILD_TARGETS) )
 
@@ -323,6 +373,7 @@ class SConsBuildFramework :
 
 		#
 		self.initializeGlobalsFromEnv( env )
+
 
 
 	###### Initialize global attributes ######
@@ -438,10 +489,10 @@ class SConsBuildFramework :
 
 			('deps', 'Set dependencies to others projects (all dependencies are automatically built)'),
 
-			('uses', 'Set usage of some predefined libraries (boost, opengl, openil, glu, glut, wx2-4, wxgl2-4)'),
+			('uses', 'Set usage of some predefined libraries (boost, ode, opengl, openil, glu, glut, sdl, wx2-4, wxgl2-4)'),
 			# (cg|cgFX|imageMagick6|imageMagick++6|itk)')
 			#ListOption(	'uses', 'Set usage of some predefined libraries', 'none',
-			#				['boost','opengl','openil','glu','glut','wx2-4','wxgl2-4'] ), # (cg|cgFX|imageMagick6|imageMagick++6|itk)')
+			#				['boost','ode', 'opengl','openil','glu','glut','wx2-4','wxgl2-4'] ), # (cg|cgFX|imageMagick6|imageMagick++6|itk)')
 
 			('libs', 'Set libraries used during the link stage that have been compiled with SConsBuildFramework (this scons system)'),
 			('stdlibs', 'Set the standard libraries used during the link stage.')
@@ -461,7 +512,7 @@ class SConsBuildFramework :
 				self.myCxxFlags += ' /Z7 '
 			else :
 				self.myCxxFlags += ' /Zi '
-		if ( self.myWarningLevel == 'normal' ) :											### TODO: it is dependant of the myConfig. Must be changed ? yes, done...
+		if ( self.myWarningLevel == 'normal' ) :											### TODO: it is dependent of the myConfig. Must be changed ? yes, done...
 			self.myCxxFlags += ' /W3 '
 		else :
 			self.myCxxFlags += ' /W4 '
@@ -487,7 +538,7 @@ class SConsBuildFramework :
 	
 		lenv['CXX'] = lenv.WhereIs('g++')													### myCxxFlags += ' -pedantic'
 		if ( self.myConfig == 'release' ) :
-			self.myCxxFlags	+= ' -DNDEBUG -O3 '												### TODO: more compiler arch-dependant optimization
+			self.myCxxFlags	+= ' -DNDEBUG -O3 '												### TODO: more compiler arch-dependent optimization
 		else :
 			self.myCxxFlags	+= ' -D_DEBUG -DDEBUG -g -O0 '									### profiling myCxxFlags += ' -pg', mpatrol, leaktracer
 
@@ -536,6 +587,12 @@ class SConsBuildFramework :
 #			else :
 #				lenv['LIBS']	+= ['ILd']
 
+	def use_sdl( self, lenv, elt ) :
+		if ( self.myPlatform == 'win32' ) :
+			lenv['LIBS']	+= ['SDL', 'SDLmain']
+		else :
+			lenv.ParseConfig('sdl-config --cflags --libs')
+
 	def use_wxWidgets( self, lenv, elt ) :
 		if	( self.myPlatform == 'win32' ) :
 			lenv['CXXFLAGS'] += ' -DWXUSINGDLL -D__WIN95__ '
@@ -562,6 +619,10 @@ class SConsBuildFramework :
 			if ( elt == 'boost' ) :
 				self.use_boost( lenv, elt )
 	
+			### configure ODE ###
+			elif ( elt == 'ode' ) :
+				lenv['LIBS'] += ['ode']
+
 			### configure OpenGL ###
 			elif ( elt == 'opengl' ) :
 				if		( self.myPlatform == 'win32' ) :
@@ -586,6 +647,10 @@ class SConsBuildFramework :
 					lenv['LIBS'] += ['glut32']
 				else :
 					lenv['LIBS'] += ['glut']
+			
+			### configure sdl ###
+			elif ( elt == 'sdl' ) :
+				self.use_sdl( lenv, elt )
 
 			### configure wx* ###
 			elif ( re.match('^wx[\d-]*$', elt ) or re.match('^wxgl[\d-]*$', elt ) ) :
@@ -879,20 +944,131 @@ env						=	Environment()
 env['ENV']['PATH']		+=	os.environ['PATH']
 
 #Export('env') not needed.
+
 SConsEnvironment.sbf	= SConsBuildFramework()
 
 # target 'sbfCheck'
 env.Alias('sbfCheck', env.Command('dummyCheckVersion.out1', 'dummy.in', Action( sbfCheck, nopAction ) ) )
 
-# build 'caller' project (and all dependancies recursively)
+# build 'caller' project (and all dependencies  recursively)
 env['sbf_projectPathName'] = os.getcwd()
 env.sbf.buildProject( env['sbf_projectPathName'] )
 
 env.Default( 'all' )
 
 ### special targets: svnCheckout svnUpdate ###
+
 env.Alias( 'svnCheckout', env.Command('dummySvnCheckout.out1', 'dummy.in', Action( nopAction, nopAction ) ) )
 env.Alias( 'svnUpdate', env.Command('dummySvnUpdate.out1', 'dummy.in', Action( nopAction, nopAction ) ) )
+
+### special doxygen related targets : dox_build dox_install dox dox_clean dox_mrproper ###
+
+# Creates a custom doxyfile
+def doxyfileAction( target, source, env ) :
+
+	# Compute inputList, examplePath and imagePath parmeters of doxyfile
+	inputList	= ''
+	examplePath	= ''
+	imagePath	= ''
+	for projectName in env.sbf.myParsedProjects :
+	
+		localenv = env.sbf.myParsedProjects[projectName]
+		projectPathName	= localenv['sbf_projectPathName']
+		
+		inputList	+= os.path.join(projectPathName, 'include') + ' '
+		inputList	+= os.path.join(projectPathName, 'src') + ' '	
+		examplePath	+= os.path.join(projectPathName, 'doc', 'example') + ' '
+		imagePath	+= os.path.join(projectPathName, 'doc', 'image') + ' '
+
+	# Create a custom doxyfile
+	import shutil
+	
+	targetName = str(target[0])
+	sourceName = str(source[0])
+	
+	shutil.copyfile(sourceName, targetName)			# or env.Execute( Copy(targetName, sourceName) )
+
+	file = open( targetName, 'a' )
+	
+	file.write( '\n### Added by SBF\n' )
+	file.write( 'PROJECT_NAME		= "%s at %s"\n'		% (env.sbf.myProject, env.sbf.myDate) )
+	file.write( 'PROJECT_NUMBER		= "%s"\n'			% env.sbf.myPostfix )
+	file.write( 'OUTPUT_DIRECTORY	= "%s"\n'			% (targetName + '_build') )
+	file.write( 'INPUT					= %s\n'		% inputList )
+	#FIXME: FILE_PATTERNS, EXCLUDE, EXCLUDE_PATTERNS
+	file.write( 'EXAMPLE_PATH		= %s\n'		% examplePath )
+	file.write( 'IMAGE_PATH			= %s\n'		% imagePath )
+
+	file.close()
+
+
+# Synchronizes files from source to target.
+# target should be yourDestinationPath/dummy.out
+# Recursively copy the entire directory tree rooted at source to the destination directory (named by os.path.dirname(target)).
+# Remark : the destination directory would be removed before the copying occurs (even if not empty, so be carefull).
+def syncAction( target, source, env ) :
+
+	import shutil
+
+	sourcePath		= str(source[0])
+	destinationPath	= os.path.dirname(str(target[0]))
+
+	print 'Copy %s at %s' % (sourcePath, destinationPath)
+
+	if ( os.path.ismount(destinationPath) ) :
+		print 'sbfError: Try to use %s as an installation/desinstallation directory. Stop action to prevent any unwanted file destruction'
+		return None
+
+	shutil.rmtree( destinationPath, True )
+
+	if ( os.path.isdir( os.path.dirname(destinationPath) ) == False ):
+		os.makedirs( os.path.dirname(destinationPath) )
+	shutil.copytree( sourcePath, destinationPath )
+
+
+if (	('dox_build' in env.sbf.myBuildTargets) or
+		('dox_install' in env.sbf.myBuildTargets) or
+		('dox' in env.sbf.myBuildTargets) or
+		('dox_clean' in env.sbf.myBuildTargets) or
+		('dox_mrproper' in env.sbf.myBuildTargets)	):
+		
+	if (	('dox_clean' in env.sbf.myBuildTargets) or
+			('dox_mrproper' in env.sbf.myBuildTargets)	):
+		env.SetOption('clean', 1)
+
+	env.Alias( 'dox_build_print', env.Command('dox_build_print.out1', 'dummy.in', Action( nopAction, printDoxygenBuild ) ) )
+	
+	# FIXME: todo use other doxyfile(s).
+	doxInputDoxyfile		= os.path.join(os.getenv('SCONS_BUILD_FRAMEWORK'), 'doxyfile')
+	doxOutputPath			= os.path.join(env.sbf.myBuildPath, env.sbf.myProject, 'doxygen')
+	doxOutputCustomDoxyfile	= os.path.join(doxOutputPath, 'doxyfile.sbf')
+	
+	doxBuildPath			= os.path.join(doxOutputPath, 'doxyfile.sbf_build')
+	doxInstallPath			= os.path.join(env.sbf.myInstallDirectory, 'doc', env.sbf.myProject)
+
+	# target dox_build
+	env.Alias( 'dox_build', 'dox_build_print' )
+	env.Alias( 'dox_build', env.Command( doxOutputCustomDoxyfile, doxInputDoxyfile, Action(doxyfileAction, nopAction) )	)
+	env.AlwaysBuild( doxOutputCustomDoxyfile )
+	env.Alias( 'dox_build', env.Command( 'dox_build.out2', 'dummy.in', 'doxygen ' + doxOutputCustomDoxyfile )	)
+
+	# target dox_install
+	env.Alias( 'dox_install_print', env.Command('dox_install_print.out1', 'dummy.in', Action( nopAction, printDoxygenInstall ) ) )
+	env.Alias( 'dox_install', 'dox_build' )
+	env.Alias( 'dox_install', 'dox_install_print' )
+	env.Alias( 'dox_install', env.Command( os.path.join(doxInstallPath,'dummy.out'), doxBuildPath, Action(syncAction, nopAction) )	)
+
+	# target dox
+	env.Alias( 'dox', 'dox_install' )
+	
+	# target dox_clean
+	env.Alias( 'dox_clean', 'dox' )
+	env.Clean( 'dox_clean', doxOutputPath )
+
+	# target dox_mrproper
+	env.Alias( 'dox_mrproper', 'dox_clean' )
+	env.Clean( 'dox_mrproper', doxInstallPath )
+
 
 ### special zip related targets : zipRuntime, zipDev, zipSrc and zip ###
 if (	('zipRuntime'	in env.sbf.myBuildTargets) or
@@ -909,13 +1085,12 @@ if (	('zipRuntime'	in env.sbf.myBuildTargets) or
 	env['BUILDERS']['zipArchiver'] = zipBuilder
 
 	#
-	env.Alias( 'zip_print', env.Command('zip_print.out1', 'dummy.in', Action( nopAction, printEmptyLine ) ) )
-	env.Alias( 'zip_print', env.Command('zip_print.out2', 'dummy.in', Action( nopAction, printZip ) ) )
+	env.Alias( 'zip_print', env.Command('zip_print.out1', 'dummy.in', Action( nopAction, printZip ) ) )
 	env.AlwaysBuild( 'zip_print' )
 	
-	env.Alias( 'runtimeZip_print', env.Command('runtimeZip_print.out2', 'dummy.in', Action( nopAction, printRuntimeZip ) ) )
-	env.Alias( 'devZip_print', env.Command('devZip_print.out2', 'dummy.in', Action( nopAction, printDevZip ) ) )
-	env.Alias( 'srcZip_print', env.Command('srcZip_print.out2', 'dummy.in', Action( nopAction, printSrcZip ) ) )
+	env.Alias( 'runtimeZip_print',	env.Command('runtimeZip_print.out1','dummy.in', Action( nopAction, printRuntimeZip ) ) )
+	env.Alias( 'devZip_print',		env.Command('devZip_print.out1',	'dummy.in', Action( nopAction, printDevZip ) ) )
+	env.Alias( 'srcZip_print',		env.Command('srcZip_print.out1',	'dummy.in', Action( nopAction, printSrcZip ) ) )
 
 	env.Alias( 'zipRuntime', 'build' )
 	env.Alias( 'zipRuntime', 'zip_print' )
