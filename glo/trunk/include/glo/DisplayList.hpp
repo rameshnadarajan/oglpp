@@ -102,7 +102,7 @@ private:
 	/**
 	 * @brief Number of display lists.
 	 */
-	int32		m_count;
+	int32	m_count;
 	
 	/**
 	 * @brief Name of the current display list (used during compilation of the display lists).

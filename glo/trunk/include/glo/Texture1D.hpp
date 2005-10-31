@@ -29,13 +29,9 @@ struct GLO_API Texture1D : public Texture
 	Texture1D();
 	
 	//@}
-	
-	/**
-	 * @brief Returns the size of the texture.
-	 * 
-	 * Returns the width of the texture image. This value does'nt includes the border of the texture image.
-	 */
-	const int32	getSize() const;
+
+	// Overriden
+	void getSize( int32& width, int32& height, int32& depth ) const;
 };
 
 

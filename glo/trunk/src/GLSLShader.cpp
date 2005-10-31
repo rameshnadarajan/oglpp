@@ -7,7 +7,6 @@
 
 #include <iostream>     // for I/O
 #include <fstream>      // for file I/O
-//#include <vgDebug/Global.hpp> FIXME
 
 
 
@@ -24,11 +23,12 @@ GLSLShader::GLSLShader( bool initialized )
 				!gleGetCurrent()->isGL_ARB_vertex_shader	||
 				!gleGetCurrent()->isGL_ARB_fragment_shader )
 		{
-			// FIXME vgDebug::get().logError("GLSL not supported.\n");
+			return;
+			// FIXME logError("GLSL not supported.\n");
 		}
 		else
 		{
-			// FIXME vgDebug::get().logDebug("GLSL is supported.\n");
+			// FIXME logDebug("GLSL is supported.\n");
 		}
 		
 		m_firstInstance = false;
@@ -112,7 +112,7 @@ bool GLSLShader::addShader( const GLcharARB *shaderSource, ShaderType shaderType
 
 		if ( !linked )
 		{
-			//FIXME vgDebug::get().logError( "Shaders failed to link...\n" );
+			//FIXME logError( "Shaders failed to link...\n" );
 			
 #ifndef _DEBUG
 			printInfoLog( m_programObject );
@@ -163,7 +163,7 @@ std::string GLSLShader::loadFile( std::string pathfilename )
 	if ( file.is_open() )
 	{
 		const int32	bufferSize	( 1024*4 );
-		char			buffer[bufferSize];
+		char		buffer[bufferSize];
 		
 		while ( !file.eof() )
 		{
@@ -210,7 +210,7 @@ void GLSLShader::printInfoLog( GLhandleARB object )
 	
 		gleGetCurrent()->glGetInfoLogARB(object, maxLength, &maxLength, infoLog);
 
-		//FIXME vgDebug::get().logError( "%s\n", infoLog );	
+		//FIXME logError( "%s\n", infoLog );	
 	
  		delete[] infoLog;
 	}

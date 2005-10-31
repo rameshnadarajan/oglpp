@@ -13,8 +13,8 @@ namespace glo
 
 
 Texture::Texture( GLenum target ) :
-	m_target			(	target 			),
-	m_texture		(	0					)
+	m_target	(	target 	),
+	m_texture	(	0		)
 {
 	m_scaleFactors[0] = m_scaleFactors[1] = m_scaleFactors[2] = 1.f;
 }

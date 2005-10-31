@@ -19,4 +19,22 @@ Texture3D::Texture3D() :
 
 
 
+void Texture3D::getSize( int32& width, int32& height, int32& depth ) const
+{
+	GLint glwidth;
+	GLint glheight;
+	GLint gldepth;
+	GLint glborder;
+	
+	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_WIDTH,	&glwidth	);
+	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_HEIGHT,	&glheight	);
+	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_DEPTH,	&gldepth	);	
+	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_BORDER,	&glborder	);
+	
+	width	= glwidth	- glborder;
+	height	= glheight	- glborder;
+	depth	= gldepth	- glborder;
+}
+
+
 } // namespace glo

@@ -19,17 +19,19 @@ Texture2D::Texture2D() :
 
 
 
-vgm::Vec2i Texture2D::getSize() const
+void Texture2D::getSize( int32& width, int32& height, int32& depth ) const
 {
-	GLint width;
-	GLint height;
-	GLint border;	
+	GLint glwidth;
+	GLint glheight;
+	GLint glborder;
 	
-	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_WIDTH, &width );
-	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_HEIGHT, &height );
-	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_BORDER, &border );
+	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_WIDTH,	&glwidth );
+	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_HEIGHT,	&glheight);
+	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_BORDER,	&glborder);
 	
-	return ( vgm::Vec2i( width-border, height-border ) );
+	width	= glwidth	- glborder;
+	height	= glheight	- glborder;
+	depth	= 0;
 }
 
 

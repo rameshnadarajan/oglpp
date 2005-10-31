@@ -13,7 +13,7 @@ namespace glo
 
 
 VertexBufferObject::VertexBufferObject() :
-	m_buffer	( 0 ),
+	m_buffer( 0 ),
 	m_count	( 0 )
 {
 }
@@ -66,7 +66,7 @@ void VertexBufferObject::release()
 		delete[] m_buffer;
 		
 		m_buffer	= 0;
-		m_count	= 0;
+		m_count		= 0;
 	}
 	// else nothing	
 }
@@ -76,7 +76,7 @@ void VertexBufferObject::release()
 bool VertexBufferObject::isEmpty() const
 {
 	assert(	(m_buffer==0 && m_count==0) ||
-				(m_buffer!=0 && m_count >=1) );
+			(m_buffer!=0 && m_count >=1) );
 
 	return ( /* m_index==0 && not done to do a very little optimization */ m_count==0 );
 }
@@ -86,7 +86,7 @@ bool VertexBufferObject::isEmpty() const
 int32 VertexBufferObject::getNum() const
 {
 	assert(	(m_buffer==0 && m_count==0) ||
-				(m_buffer!=0 && m_count >=1) );
+			(m_buffer!=0 && m_count >=1) );
 
 	return ( m_count );
 }

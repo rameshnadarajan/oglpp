@@ -23,7 +23,7 @@ struct GLO_API GLSLShader : public IResource
 	 * @brief Enumeration of the different type of shader.
 	 */
 	enum ShaderType {
-		VERTEX	= GL_VERTEX_SHADER_ARB,
+		VERTEX		= GL_VERTEX_SHADER_ARB,
 		FRAGMENT	= GL_FRAGMENT_SHADER_ARB
 	};
 
@@ -47,8 +47,7 @@ struct GLO_API GLSLShader : public IResource
 	//@}
 
 
-	bool	addShader(	const GLcharARB *shaderSource, 
-							ShaderType shaderType, bool linkProgram );
+	bool	addShader(	const GLcharARB *shaderSource, ShaderType shaderType, bool linkProgram );
 
 
 	/**
@@ -56,7 +55,7 @@ struct GLO_API GLSLShader : public IResource
 	 */
 	//@{
 
-	void				use();
+	void			use();
 
 	/**
 	 * @brief Use the fixed functionality paths as if the GL had no programmable stages.
@@ -93,7 +92,7 @@ protected:
 	GLint 			getUniformLocation( std::string name );
 
 
-	void				printInfoLog( GLhandleARB object );
+	void			printInfoLog( GLhandleARB object );
 
 	GLhandleARB		m_programObject;
 	

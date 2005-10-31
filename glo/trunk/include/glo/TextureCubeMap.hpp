@@ -29,6 +29,9 @@ struct GLO_API TextureCubeMap : public Texture
 	TextureCubeMap();
 	
 	//@}
+	
+	// Overriden
+	void getSize( int32& width, int32& height, int32& depth ) const;	
 };
 
 

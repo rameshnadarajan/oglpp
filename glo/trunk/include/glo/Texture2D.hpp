@@ -6,8 +6,6 @@
 #ifndef _GLO_TEXTURE2D_H
 #define _GLO_TEXTURE2D_H
 
-#include <vgm/Vector.hpp>
-
 #include "glo/Texture.hpp"
 
 
@@ -32,12 +30,8 @@ struct GLO_API Texture2D : public Texture
 	
 	//@}
 	
-	/**
-	 * @brief Returns the size of the texture.
-	 * 
-	 * Returns the width and height of the texture image. This values does'nt includes the border of the texture image.
-	 */
-	vgm::Vec2i	getSize() const;
+	// Overriden
+	void getSize( int32& width, int32& height, int32& depth ) const;
 };
 
 

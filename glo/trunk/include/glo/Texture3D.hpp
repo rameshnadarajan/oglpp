@@ -29,6 +29,9 @@ struct GLO_API Texture3D : public Texture
 	Texture3D();
 	
 	//@}
+	
+	// Overriden
+	void getSize( int32& width, int32& height, int32& depth ) const;	
 };
 
 

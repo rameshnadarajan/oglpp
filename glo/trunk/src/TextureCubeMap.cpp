@@ -19,4 +19,10 @@ TextureCubeMap::TextureCubeMap() :
 
 
 
+void TextureCubeMap::getSize( int32& width, int32& height, int32& depth ) const
+{
+	assert( false );
+}
+
+
 } // namespace glo

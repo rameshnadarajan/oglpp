@@ -118,7 +118,7 @@ void DisplayList::release()
 bool DisplayList::isEmpty() const
 {
 	assert(	(m_index==0 && m_count==0) ||
-				(m_index!=0 && m_count>=1) );
+			(m_index!=0 && m_count>=1) );
 
 	return ( /* m_index==0 && not done to do a very little optimization */ m_count==0 );
 }

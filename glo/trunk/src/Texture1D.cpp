@@ -19,15 +19,16 @@ Texture1D::Texture1D() :
 
 
 
-const int32 Texture1D::getSize() const
+void Texture1D::getSize( int32& width, int32& height, int32& depth ) const
 {
-	GLint width;
-	GLint border;	
+	GLint glwidth;
+	GLint glborder;	
 	
-	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_WIDTH, &width );
-	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_BORDER, &border );
+	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_WIDTH,	&glwidth );
+	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_BORDER,	&glborder );
 	
-	return ( width-border );
+	width	= glwidth - glborder;
+	height	= depth = 0;
 }
 
 

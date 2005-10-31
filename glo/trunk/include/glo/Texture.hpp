@@ -16,6 +16,9 @@ namespace glo
 /**
  * @brief Encapsulation of a texture object.
  * 
+ * @todo adds glTexImage*() like method.
+ * @todo adds cache of opengl accessors used in getSize()
+ * 
  * @todo Improve documentation, error handling.
  */
 struct GLO_API Texture : public IResource
@@ -57,6 +60,9 @@ struct GLO_API Texture : public IResource
 	 */
 	void release();
 
+	/**
+	 * @brief Activates the desired texture unit.
+	 */
 	static void active( GLenum unit );
 	
 	/**
@@ -99,6 +105,13 @@ struct GLO_API Texture : public IResource
 	 */
 	bool isEmpty() const;
 	
+	/**
+	 * @brief Returns the size of the texture.
+	 * 
+	 * Returns the size of the texture image. This value does'nt includes the border of the texture image.
+	 */
+	virtual void getSize( int32& width, int32& height, int32& depth ) const=0;
+	
 	//@}
 
 	/**
@@ -114,14 +127,14 @@ struct GLO_API Texture : public IResource
 	 * @return the scale factors (3 values).
 	 */
 	const float*	getScaleFactors() const;
-	void				getScaleFactors( float& x, float& y, float& z) const;
+	void			getScaleFactors( float& x, float& y, float& z) const;
 	
 	/**
 	 * @brief Sets the scale factors.
 	 * 
 	 * @param scaleFactors	new scale factors.
 	 */
-	void				setScaleFactors( const float x, const float y, const float z );
+	void			setScaleFactors( const float x, const float y, const float z );
 	//@}
 
 
