@@ -503,9 +503,9 @@ class SConsBuildFramework :
 	###### configure CxxFlags & LinkFlags ######
 	def configureCxxFlagsAndLinkFlagsOnWin32( self, lenv ) :
 	
-		self.myCxxFlags += ' /nologo /GR /GX -DWIN32 -D_MBCS'								### /W3
+		self.myCxxFlags += ' /nologo /GR /GX -DWIN32 -D_MBCS -DNOMINMAX '			### /W3
 		if ( self.myConfig == 'release' ) :													### TODO: use /Zd in release mode to be able to debug a little.
-			self.myCxxFlags += ' -DNDEBUG /Zm600 /MD /O2 /TP '								### { /Gi ignored } and { /Og /Oi /Ot /Ob2 (in O2) }
+			self.myCxxFlags += ' -DNDEBUG /Zm600 /MD /O2 /TP '							### { /Gi ignored } and { /Og /Oi /Ot /Ob2 (in O2) }
 		else :
 			self.myCxxFlags += ' -D_DEBUG -DDEBUG /EHsc /MDd /Od'
 			if '7' in lenv['MSVS']['VERSION'] :
