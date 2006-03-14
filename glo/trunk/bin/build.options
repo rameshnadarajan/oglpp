@@ -1,4 +1,3 @@
-USE  	= ['opengl']
-LIB  	= ['gle_0-3']
+USE  	= ['opengl','gle_0-3']
 TYPE 	= 'shared'
 POSTFIX = '_0-3'
