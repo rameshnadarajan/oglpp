@@ -9,12 +9,15 @@
 #include <ostream>
 #include <string>
 #include <vector>
+
 #include "gle/gle.hpp"
 
 
 
 namespace gle
 {
+
+
 
 /**
  * @brief Provides methods to facilitate common tasks done with OpenGL.
@@ -23,7 +26,6 @@ namespace gle
  * 
  * @todo std::string OpenGLExtensions::getWExtensions( const int32 i32NumElementInExtensionsGroup ) for linux.
  * @todo const bool	isGLErrors( std::string& ) const; Like isGLError() but loop until OpenGL has no more error message.
- * 
  */
 struct GLE_API OpenGLExtensions
 {
@@ -207,7 +209,7 @@ struct GLE_API OpenGLExtensions
 	 * @return false there has been no detectable error since the last call, true if there is an error and errorMsg 
 	 * contains an OpenGL error.
 	 */
-	static const bool	isGLError( std::string& errorMsg );
+	static const bool isGLError( std::string& errorMsg );
 
 	/**
 	 * @brief Report OpenGL errors (if there is one) on the log.
@@ -237,7 +239,7 @@ protected:
 		const std::string separator = "\n"
 		);
 
-	static bool			checkExtension		( const char *extName, const char *extensionString );
+	static const bool	checkExtension	( const char *extName, const char *extensionString );
 	static void*		getExtensionPtr	( const char *_pExtensionName );
 	
 	/**

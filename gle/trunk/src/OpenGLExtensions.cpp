@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2006 Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -10,7 +10,6 @@
 #endif
 
 #include <sstream>
-
 
 // COMPILE TIME TEST ON OPENGL VERSION
 #ifdef WIN32
@@ -25,6 +24,8 @@
 
 namespace gle
 {
+
+
 
 OpenGLExtensions::OpenGLExtensions( std::ostream* pOS /*const bool bEnableLogWindow*/ ) :
 	m_pLog( pOS )
@@ -479,7 +480,7 @@ std::vector< std::string > OpenGLExtensions::separateEachElement( const std::str
 
 
 
-bool OpenGLExtensions::checkExtension( const char *extName, const char *extensionString )
+const bool OpenGLExtensions::checkExtension( const char *extName, const char *extensionString )
 {
 	/*
 	 ** Search for extName in the extensions string.  Use of strstr()
@@ -499,11 +500,11 @@ bool OpenGLExtensions::checkExtension( const char *extName, const char *extensio
 		std::string::size_type n = strcspn(p, " ");
 		if ((extNameLen == n) && (strncmp(extName, p, n) == 0)) 
 		{
-			return (true);
+			return true;
 		}
 		p += (n + 1);
 	}
-	return (false);
+	return false;
 }
 
 
@@ -518,14 +519,21 @@ void *OpenGLExtensions::getExtensionPtr( const char *_pExtensionName )
 
 #else
 
-	void *libHandle;
-	libHandle				=	dlopen("libGL.so", RTLD_LAZY);
-   pExtensionFunction	=	dlsym(libHandle, _pExtensionName);
-   dlclose(libHandle);
+	#if __MACOSX__
+	void *libHandle		= dlopen("libGL.dylib", RTLD_LAZY);
+	assert( libHandle != 0 && "Unable to dlopen libGL.dylib" );
+	#else // UNIX
+	void *libHandle		= dlopen("libGL.so", RTLD_LAZY);
+	assert( libHandle != 0 && "Unable to dlopen libGL.so" );
+	#endif
+	
+	pExtensionFunction	= dlsym(libHandle, _pExtensionName);
+
+	dlclose(libHandle);
 
 #endif
 
-	return ( pExtensionFunction );
+	return pExtensionFunction;
 }
 
 
