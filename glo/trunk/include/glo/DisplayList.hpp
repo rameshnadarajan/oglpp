@@ -3,8 +3,8 @@
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
-#ifndef _GLO_DISPLAYLIST_H
-#define _GLO_DISPLAYLIST_H
+#ifndef _GLO_DISPLAYLIST_HPP
+#define _GLO_DISPLAYLIST_HPP
 
 #include "glo/IResource.hpp"
 
@@ -114,4 +114,4 @@ private:
 
 } // namespace glo
 
-#endif //#ifndef _GLO_DISPLAYLIST_H
+#endif //#ifndef _GLO_DISPLAYLIST_HPP

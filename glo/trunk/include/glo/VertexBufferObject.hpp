@@ -3,8 +3,8 @@
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
-#ifndef _GLO_VERTEXBUFFEROBJECT_H
-#define _GLO_VERTEXBUFFEROBJECT_H
+#ifndef _GLO_VERTEXBUFFEROBJECT_HPP
+#define _GLO_VERTEXBUFFEROBJECT_HPP
 
 #include "glo/IResource.hpp"
 
@@ -79,19 +79,19 @@ struct GLO_API VertexBufferObject : public IResource
 
 	
 	/**
-	 * @name Accessors.
+	 * @name Accessors
 	 */
 	//@{
 	
 	/**
 	 * @brief Returns if this class stored at least one vertex buffer object.
 	 */
-	bool isEmpty() const;
+	const bool isEmpty() const;
 	
 	/**
 	 * @brief Returns the number of vertex buffer objects.
 	 */
-	int32 getNum() const;
+	const int32 getNum() const;
 	
 	//@}
 
@@ -114,4 +114,4 @@ private:
 
 } // namespace glo
 
-#endif //#ifndef _GLO_VERTEXBUFFEROBJECT_H
+#endif //#ifndef _GLO_VERTEXBUFFEROBJECT_HPP

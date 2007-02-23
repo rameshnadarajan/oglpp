@@ -12,8 +12,8 @@ namespace glo
 
 
 
-Texture::Texture( GLenum target ) :
-	m_target	(	target 	),
+Texture::Texture( GLenum target )
+:	m_target	(	target 	),
 	m_texture	(	0		)
 {
 	m_scaleFactors[0] = m_scaleFactors[1] = m_scaleFactors[2] = 1.f;
@@ -33,6 +33,7 @@ void Texture::generate()
 	assert( isEmpty() );
 
 	glGenTextures( 1, &m_texture );
+
 	assert( m_texture != 0 );
 }
 
@@ -52,7 +53,7 @@ void Texture::release()
 
 void Texture::active( GLenum unit )
 {
-	gleGetCurrent()->glActiveTextureARB( unit );
+	glActiveTextureARB( unit );
 }
 
 
@@ -145,7 +146,7 @@ bool Texture::isEmpty() const
 
 const float* Texture::getScaleFactors() const
 {
-	return ( m_scaleFactors );
+	return m_scaleFactors;
 }
 
 

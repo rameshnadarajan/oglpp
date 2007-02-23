@@ -12,8 +12,8 @@ namespace glo
 
 
 
-VertexBufferObject::VertexBufferObject() :
-	m_buffer( 0 ),
+VertexBufferObject::VertexBufferObject() 
+:	m_buffer( 0 ),
 	m_count	( 0 )
 {
 }
@@ -33,9 +33,9 @@ bool VertexBufferObject::generate( GLsizei range )
 	
 	m_buffer = new GLuint[range];
 	
-	gleGetCurrent()->glGenBuffersARB( range, m_buffer );
+	glGenBuffersARB( range, m_buffer );
 	
-	/*// FIXME Must be bind before testing !!*/assert( gleGetCurrent()->glIsBufferARB( m_buffer[0] ) == GL_TRUE );	// I should test all others vertex buffer object, 
+	/*// FIXME Must be bind before testing !!*/assert( glIsBufferARB( m_buffer[0] ) == GL_TRUE );	// I should test all others vertex buffer object, 
 																																			//but it is not very useful.	
 	m_count = range;
 
@@ -48,7 +48,7 @@ GLuint VertexBufferObject::get( uint32 index ) const
 {
 	assert( index < m_count );
 	
-	//assert( gleGetCurrent()->glIsBufferARB( m_buffer[index] ) == GL_TRUE ); //FIXME
+	//assert( glIsBufferARB( m_buffer[index] ) == GL_TRUE ); //FIXME
 	
 	return ( m_buffer[index] );
 }
@@ -59,9 +59,9 @@ void VertexBufferObject::release()
 {
 	if ( !isEmpty() )
 	{
-		// FIXME Must be bind before testing !! assert( gleGetCurrent()->glIsBufferARB( m_buffer[0] ) == GL_TRUE );	// I should test all others vertex buffer object, 
+		// FIXME Must be bind before testing !! assert( glIsBufferARB( m_buffer[0] ) == GL_TRUE );	// I should test all others vertex buffer object, 
 																																				//but it is not very useful.	
-		gleGetCurrent()->glDeleteBuffersARB( m_count, m_buffer );
+		glDeleteBuffersARB( m_count, m_buffer );
 		
 		delete[] m_buffer;
 		
@@ -73,7 +73,7 @@ void VertexBufferObject::release()
 
 
 
-bool VertexBufferObject::isEmpty() const
+const bool VertexBufferObject::isEmpty() const
 {
 	assert(	(m_buffer==0 && m_count==0) ||
 			(m_buffer!=0 && m_count >=1) );
@@ -83,12 +83,12 @@ bool VertexBufferObject::isEmpty() const
 
 
 
-int32 VertexBufferObject::getNum() const
+const int32 VertexBufferObject::getNum() const
 {
 	assert(	(m_buffer==0 && m_count==0) ||
 			(m_buffer!=0 && m_count >=1) );
 
-	return ( m_count );
+	return m_count;
 }
 
 

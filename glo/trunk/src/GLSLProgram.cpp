@@ -3,7 +3,7 @@
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
-#include "glo/GLSLShader.hpp"
+#include "glo/GLSLProgram.hpp"
 
 #include <iostream>     // for I/O
 #include <fstream>      // for file I/O
@@ -15,13 +15,13 @@ namespace glo
 
 
 
-GLSLShader::GLSLShader( bool initialized )
+GLSLProgram::GLSLProgram( bool initialized )
 {
 	if ( m_firstInstance )
 	{
-		if (	!gleGetCurrent()->isGL_ARB_shader_objects	||
-				!gleGetCurrent()->isGL_ARB_vertex_shader	||
-				!gleGetCurrent()->isGL_ARB_fragment_shader )
+		if (	!isGL_ARB_shader_objects	||
+				!isGL_ARB_vertex_shader	||
+				!isGL_ARB_fragment_shader )
 		{
 			return;
 			// FIXME logError("GLSL not supported.\n");
@@ -36,7 +36,7 @@ GLSLShader::GLSLShader( bool initialized )
 	
 	if ( initialized )
 	{
-		m_programObject = gleGetCurrent()->glCreateProgramObjectARB();		
+		m_programObject = glCreateProgramObjectARB();		
 	}
 	else
 	{
@@ -46,17 +46,17 @@ GLSLShader::GLSLShader( bool initialized )
 
 
 
-GLSLShader::~GLSLShader()
+GLSLProgram::~GLSLProgram()
 {
 	if ( m_programObject != 0 )
 	{
-		gleGetCurrent()->glDeleteObjectARB( m_programObject );
+		glDeleteObjectARB( m_programObject );
 	}
 }
 
 
 
-bool GLSLShader::addShader( const GLcharARB *shaderSource, ShaderType shaderType, bool linkProgram )
+bool GLSLProgram::addShader( const GLcharARB *shaderSource, ShaderType shaderType, bool linkProgram )
 {
 	assert( m_programObject != 0	);
 
@@ -64,18 +64,18 @@ bool GLSLShader::addShader( const GLcharARB *shaderSource, ShaderType shaderType
 	assert( shaderType != 0			);
 
 	// SET SOURCES
-	GLhandleARB object = gleGetCurrent()->glCreateShaderObjectARB( shaderType );
+	GLhandleARB object = glCreateShaderObjectARB( shaderType );
 	assert(object != 0);
 
 	GLint length = (GLint)strlen( shaderSource );
-	gleGetCurrent()->glShaderSourceARB( object, 1, &shaderSource, &length );
+	glShaderSourceARB( object, 1, &shaderSource, &length );
 
 	// COMPILE shader object
-	gleGetCurrent()->glCompileShaderARB( object );
+	glCompileShaderARB( object );
 
 	//check if shader compiled
 	GLint compiled = 0;
-	gleGetCurrent()->glGetObjectParameterivARB( object, GL_OBJECT_COMPILE_STATUS_ARB, &compiled );
+	glGetObjectParameterivARB( object, GL_OBJECT_COMPILE_STATUS_ARB, &compiled );
 
 #ifdef _DEBUG
 	printInfoLog( object );
@@ -93,18 +93,18 @@ bool GLSLShader::addShader( const GLcharARB *shaderSource, ShaderType shaderType
 	}
 
 	// attach shader to program object
-	gleGetCurrent()->glAttachObjectARB( m_programObject, object );
+	glAttachObjectARB( m_programObject, object );
 
 	// delete object, no longer needed
-	gleGetCurrent()->glDeleteObjectARB( object );
+	glDeleteObjectARB( object );
 
 	// LINK
 	if ( linkProgram )
 	{
-		gleGetCurrent()->glLinkProgramARB( m_programObject );
+		glLinkProgramARB( m_programObject );
 
 		GLint linked = false;
-		gleGetCurrent()->glGetObjectParameterivARB( m_programObject, GL_OBJECT_LINK_STATUS_ARB, &linked );
+		glGetObjectParameterivARB( m_programObject, GL_OBJECT_LINK_STATUS_ARB, &linked );
 		
 #ifdef _DEBUG
 		printInfoLog( m_programObject );
@@ -122,38 +122,38 @@ bool GLSLShader::addShader( const GLcharARB *shaderSource, ShaderType shaderType
 		}
 	}
 	
-	// gleGetCurrent()->reportGLErrors(); FIXME
+	// reportGLErrors(); FIXME
 	
 	return ( true );
 }
 
 
 
-void GLSLShader::use()
+void GLSLProgram::use()
 {
-	gleGetCurrent()->glUseProgramObjectARB( getProgramObject() );
+	glUseProgramObjectARB( getProgramObject() );
 }
 
 
 
-void GLSLShader::useFixedPaths()
+void GLSLProgram::useFixedPaths()
 {
-	gleGetCurrent()->glUseProgramObjectARB( 0 );
+	glUseProgramObjectARB( 0 );
 }
 
 
 
-void GLSLShader::setUniform1i( std::string name, GLint value )
+void GLSLProgram::setUniform1i( std::string name, GLint value )
 {
 	GLint loc = getUniformLocation( name );
 	assert( loc != -1 );
 	
-	gleGetCurrent()->glUniform1iARB( loc, value );
+	glUniform1iARB( loc, value );
 }
 
 
 
-std::string GLSLShader::loadFile( std::string pathfilename )
+std::string GLSLProgram::loadFile( std::string pathfilename )
 {
 	std::string		retVal;
 	std::ifstream	file;
@@ -185,30 +185,30 @@ std::string GLSLShader::loadFile( std::string pathfilename )
 
 
 
-GLhandleARB GLSLShader::getProgramObject() const
+GLhandleARB GLSLProgram::getProgramObject() const
 {
 	return ( m_programObject );
 }
 
 
 
-int GLSLShader::getUniformLocation( std::string name )
+int GLSLProgram::getUniformLocation( std::string name )
 {
-	return ( gleGetCurrent()->glGetUniformLocationARB( getProgramObject(), name.c_str()) );
+	return ( glGetUniformLocationARB( getProgramObject(), name.c_str()) );
 }
 
 
 
-void GLSLShader::printInfoLog( GLhandleARB object )
+void GLSLProgram::printInfoLog( GLhandleARB object )
 {
 	int maxLength = 0;
-	gleGetCurrent()->glGetObjectParameterivARB( object, GL_OBJECT_INFO_LOG_LENGTH_ARB, &maxLength );
+	glGetObjectParameterivARB( object, GL_OBJECT_INFO_LOG_LENGTH_ARB, &maxLength );
 	
 	if ( maxLength != 0 )
 	{
 		char *infoLog = new char[maxLength];
 	
-		gleGetCurrent()->glGetInfoLogARB(object, maxLength, &maxLength, infoLog);
+		glGetInfoLogARB(object, maxLength, &maxLength, infoLog);
 
 		//FIXME logError( "%s\n", infoLog );	
 	
@@ -218,7 +218,7 @@ void GLSLShader::printInfoLog( GLhandleARB object )
 
 
 
-bool GLSLShader::m_firstInstance = true;
+bool GLSLProgram::m_firstInstance = true;
 
 
 

@@ -12,10 +12,9 @@ namespace glo
 
 
 
-Texture1D::Texture1D() : 
-	Texture(GL_TEXTURE_1D)
-{
-}
+Texture1D::Texture1D()
+: 	Texture(GL_TEXTURE_1D)
+{}
 
 
 
@@ -29,6 +28,17 @@ void Texture1D::getSize( int32& width, int32& height, int32& depth ) const
 	
 	width	= glwidth - glborder;
 	height	= depth = 0;
+}
+
+
+
+void Texture1D::texImage(	GLint level, GLint internalFormat,
+							GLsizei width, GLsizei /*height*/, GLsizei /*depth*/,
+							GLint border,
+							GLenum format, GLenum type,
+							const GLvoid *pixels ) const
+{
+	glTexImage1D( m_target, level, internalFormat, width, border, format, type, pixels );
 }
 
 

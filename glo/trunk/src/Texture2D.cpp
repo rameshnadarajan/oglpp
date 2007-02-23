@@ -12,10 +12,9 @@ namespace glo
 
 
 
-Texture2D::Texture2D() : 
-	Texture(GL_TEXTURE_2D)
-{
-}
+Texture2D::Texture2D() 
+: 	Texture(GL_TEXTURE_2D)
+{}
 
 
 
@@ -32,6 +31,17 @@ void Texture2D::getSize( int32& width, int32& height, int32& depth ) const
 	width	= glwidth	- glborder;
 	height	= glheight	- glborder;
 	depth	= 0;
+}
+
+
+
+void Texture2D::texImage(	GLint level, GLint internalFormat,
+							GLsizei width, GLsizei height, GLsizei /*depth*/,
+							GLint border,
+							GLenum format, GLenum type,
+							const GLvoid *pixels ) const
+{
+	glTexImage2D( m_target, level, internalFormat, width, height, border, format, type, pixels );
 }
 
 

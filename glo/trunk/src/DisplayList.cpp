@@ -12,8 +12,8 @@ namespace glo
 
 
 
-DisplayList::DisplayList() :
-	m_index	( 0 ),
+DisplayList::DisplayList() 
+:	m_index	( 0 ),
 	m_count	( 0 ),
 	m_current( 0 )
 {
@@ -104,7 +104,8 @@ void DisplayList::release()
 {
 	if ( !isEmpty() )
 	{
-		assert( glIsList( m_index ) == GL_TRUE ); // I should test all others display lists, but it is not very useful.
+		// @todo FIXME
+		// assert( glIsList( m_index ) == GL_TRUE ); // I should test all others display lists, but it is not very useful.
 		glDeleteLists( m_index, m_count );
 		
 		m_index	= 0;

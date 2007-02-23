@@ -1,15 +1,18 @@
-// GLE - Copyright (C) 2005, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2006 Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
-#ifndef _GLO_GLO_H
-#define _GLO_GLO_H
+#ifndef _GLO_GLO_HPP
+#define _GLO_GLO_HPP
 
 /** 
  * @namespace glo
  * 
- * @brief glo for open(GL) (O)bject
+ * @brief open(GL) (O)bject
+ * 
+ * The purpose of this library is to encapsulate OpenGL object (like display list, texture and so on) into easy to 
+ * use classes.
  * 
  * \b glo is open source (LGPL).
  */
@@ -36,4 +39,4 @@
 
 
 
-#endif //#ifndef _GLO_GLO_H
+#endif //#ifndef _GLO_GLO_HPP

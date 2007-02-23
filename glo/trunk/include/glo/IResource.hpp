@@ -3,8 +3,8 @@
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
-#ifndef _GLO_IRESOURCE_H
-#define _GLO_IRESOURCE_H
+#ifndef _GLO_IRESOURCE_HPP
+#define _GLO_IRESOURCE_HPP
 
 #include "glo/glo.hpp"
 
@@ -14,18 +14,18 @@ namespace glo
 {
 
 /**
- * @brief Abstract class for all GL object.
+ * @brief Abstract class for any OpenGL resources.
  */
-struct GLO_API IResource
+struct IResource
 {
 	/**
 	 * @brief Virtual destructor.
 	 */
-	virtual ~IResource() {}
+	GLO_API virtual ~IResource() {}
 };
 
 
 
 } // namespace glo
 
-#endif //#ifndef _GLO_IRESOURCE_H
+#endif //#ifndef _GLO_IRESOURCE_HPP

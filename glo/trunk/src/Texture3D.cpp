@@ -12,10 +12,9 @@ namespace glo
 
 
 
-Texture3D::Texture3D() : 
-	Texture(GL_TEXTURE_3D)
-{
-}
+Texture3D::Texture3D() 
+: 	Texture(GL_TEXTURE_3D)
+{}
 
 
 
@@ -35,6 +34,18 @@ void Texture3D::getSize( int32& width, int32& height, int32& depth ) const
 	height	= glheight	- glborder;
 	depth	= gldepth	- glborder;
 }
+
+
+
+void Texture3D::texImage(	GLint level, GLint internalFormat,
+							GLsizei width, GLsizei height, GLsizei depth,
+							GLint border,
+							GLenum format, GLenum type,
+							const GLvoid *pixels ) const
+{
+	glTexImage3D( m_target, level, internalFormat, width, height, depth, border, format, type, pixels );
+}
+
 
 
 } // namespace glo

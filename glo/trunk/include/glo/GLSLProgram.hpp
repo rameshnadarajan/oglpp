@@ -3,8 +3,8 @@
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
-#ifndef _GLO_GLSLSHADER_H
-#define _GLO_GLSLSHADER_H
+#ifndef _GLO_GLSLPROGRAM_HPP
+#define _GLO_GLSLPROGRAM_HPP
 
 #include <string>
 #include "glo/IResource.hpp"
@@ -17,7 +17,7 @@ namespace glo
 /**
  * @todo add link().
  */
-struct GLO_API GLSLShader : public IResource
+struct GLO_API GLSLProgram : public IResource
 {
 	/**
 	 * @brief Enumeration of the different type of shader.
@@ -38,12 +38,12 @@ struct GLO_API GLSLShader : public IResource
 	 * 
 	 * @param initialized	true to create a program object, false to don't do that.
 	 */
-	GLSLShader( bool initialized = true );
+	GLSLProgram( bool initialized = true );
 	
 	/**
 	 * @brief Destructor.
 	 */
-	~GLSLShader();
+	~GLSLProgram();
 	//@}
 
 
@@ -103,4 +103,4 @@ protected:
 
 } // namespace glo
 
-#endif //#ifndef _GLO_GLSLSHADER_H
+#endif //#ifndef _GLO_GLSLPROGRAM_HPP

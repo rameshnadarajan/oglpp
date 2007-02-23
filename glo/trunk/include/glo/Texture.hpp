@@ -3,8 +3,8 @@
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
-#ifndef _GLO_TEXTURE_H
-#define _GLO_TEXTURE_H
+#ifndef _GLO_TEXTURE_HPP
+#define _GLO_TEXTURE_HPP
 
 #include "glo/IResource.hpp"
 
@@ -71,8 +71,13 @@ struct GLO_API Texture : public IResource
 	 * @pre !isEmpty()
 	 */
 	void bind();
-	
-	
+
+	virtual void texImage(	GLint level, GLint internalFormat,
+							GLsizei width, GLsizei height, GLsizei depth,
+							GLint border,
+							GLenum format, GLenum type,
+							const GLvoid *pixels = 0 ) const = 0;
+					
 	void parameter( GLenum pname, GLint i );
 
 	void parameter( GLenum pname, GLfloat f );
@@ -96,7 +101,7 @@ struct GLO_API Texture : public IResource
 	
 	
 	/**
-	 * @name Accessors.
+	 * @name Accessors
 	 */
 	//@{
 	
@@ -110,12 +115,12 @@ struct GLO_API Texture : public IResource
 	 * 
 	 * Returns the size of the texture image. This value does'nt includes the border of the texture image.
 	 */
-	virtual void getSize( int32& width, int32& height, int32& depth ) const=0;
+	virtual void getSize( int32& width, int32& height, int32& depth ) const = 0;
 	
 	//@}
 
 	/**
-	 * @name Scale factors.
+	 * @name Scale factors
 	 * 
 	 * Scale factors is mainly used to adjust texCoord at runtime with texMatrix.
 	 */
@@ -132,7 +137,9 @@ struct GLO_API Texture : public IResource
 	/**
 	 * @brief Sets the scale factors.
 	 * 
-	 * @param scaleFactors	new scale factors.
+	 * @param x		new scale factor
+	 * @param y		new scale factor
+	 * @param z		new scale factor
 	 */
 	void			setScaleFactors( const float x, const float y, const float z );
 	//@}
@@ -160,4 +167,4 @@ protected:
 
 } // namespace glo
 
-#endif //#ifndef _GLO_TEXTURE_H
+#endif //#ifndef _GLO_TEXTURE_HPP
