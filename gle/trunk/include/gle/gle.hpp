@@ -15,8 +15,8 @@
 	
 	#include <GL/gl.h>
 	#include <GL/glext.h>
-	#include <GL/wglext.h>
-	#include <GL/glu.h>
+	//#include <GL/wglext.h>
+	//#include <GL/glu.h>
 	
 #elif __MACOSX__
 
@@ -24,7 +24,7 @@
 	#define APIENTRY
 	#include <GL/gl.h>
 	#include <GL/glext.h>
-	#include <GL/glu.h>
+	//#include <GL/glu.h>
 	//#include <OpenGL/glext.h>
 	//#include <OpenGL/gl.h>
 	//#include <OpenGL/glu.h>
@@ -34,9 +34,9 @@
 	#define __STDC_VERSION__	199901L
 	#include <GL/gl.h>
 	#include <GL/glext.h>
-	#include <GL/glx.h>
-	#include <GL/glxext.h>
-	#include <GL/glu.h>
+	//#include <GL/glx.h>
+	//#include <GL/glxext.h>
+	//#include <GL/glu.h>
 	
 #endif
 

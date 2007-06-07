@@ -11,6 +11,12 @@
 
 #include <sstream>
 
+#ifdef WIN32
+	#include <GL/wglext.h>
+#elif __MACOSX__
+#else // POSIX
+#endif
+
 // COMPILE TIME TEST ON OPENGL VERSION
 #ifdef WIN32
 	#ifdef GL_VERSION_1_1
