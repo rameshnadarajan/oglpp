@@ -75,9 +75,22 @@
 	#define GLE_API __declspec(dllimport)
 	#endif
 
+	#define GLE_CLASS_API
+
+#elif defined(__GNUC__) && (__GNUC__>=4) && defined(__USE_DYLIB_VISIBILITY__)
+
+	#ifdef GLE_EXPORTS
+	#define GLE_API __attribute__ ((visibility("default")))
+	#define GLE_CLASS_API __attribute__ ((visibility("default")))
+	#else
+	#define GLE_API __attribute__ ((visibility("hidden")))
+	#define GLE_CLASS_API __attribute__ ((visibility("hidden")))
+	#endif
+
 #else
 
 	#define GLE_API
+	#define GLE_CLASS_API
 
 #endif
 
