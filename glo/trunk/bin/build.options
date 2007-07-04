@@ -1,3 +1,4 @@
-USE  	= ['opengl','gle_0-3']
+USE  	= ['opengl']
+LIB		= ['gle_0-3']
 TYPE 	= 'shared'
 VERSION = '0-3'

@@ -1,5 +1,5 @@
 type		= 'shared'
-postfix		= '0-3'
-deps		= ['gle']
+version		= '0-3'
+deps		= ['../gle']
 uses		= ['opengl']
 libs		= ['gle 0-3']
