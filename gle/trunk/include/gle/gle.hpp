@@ -3,8 +3,8 @@
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
-#ifndef _GLE_H
-#define _GLE_H
+#ifndef _GLE_HPP
+#define _GLE_HPP
 
 #ifdef WIN32
 
@@ -95,13 +95,14 @@
 #endif
 
 typedef long int32;
-typedef unsigned long uint32;   // FIXME: test if sizeof (uint32) == 4
+typedef unsigned long uint32;   // @todo fixme use int and uint, test if sizeof (uint32) == 4
 
 #include <cassert>
 
 /**
- * @defgroup g_gle gle for open(GL) (E)xtensions library.
- * 
+ * @defgroup g_gle gle
+ *
+ * gle for open(GL) (E)xtensions library.
  * gle is a cross-platform (GNU/Linux, MS Windows and MacOSX) easy-to-use OpenGL extension loader.
  * 
  * Some useful links :
@@ -132,4 +133,4 @@ typedef unsigned long uint32;   // FIXME: test if sizeof (uint32) == 4
  * - OpenGL Specification & Manual Pages : http://www.opengl.org/documentation/spec.html
  */
 
-#endif // #ifndef _GLE_H
+#endif // #ifndef _GLE_HPP
