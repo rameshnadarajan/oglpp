@@ -6,7 +6,7 @@
 #ifndef _GLO_TEXTURE2D_HPP
 #define _GLO_TEXTURE2D_HPP
 
-#include "glo/Texture.hpp"
+#include "glo/Texture1D.hpp"
 
 
 
@@ -16,29 +16,61 @@ namespace glo
 /**
  * @brief Encapsulation of a texture 2D object.
  */
-struct GLO_API Texture2D : public Texture
+struct GLO_API Texture2D : public Texture1D
 {
 	/**
-	 * @name Constructor/Destructor.
+	 * @name Constructor/Destructor
 	 */
 	//@
 	
 	/**
-	 * @brief Constructor.
+	 * @brief Default constructor
 	 */
 	Texture2D();
-	
+
 	//@}
-	
-	// Overriden
-	void getSize( int32& width, int32& height, int32& depth ) const;
-	
+
+
+
+	/**
+	 * @name Accessors
+	 */
+	//@{
+
+	/**
+	 * @brief Returns the height of the texture.
+	 *
+	 * @return the height of the texture
+	 */
+	const GLint getHeight() const;
+
 	// Overridden
-	void texImage(	GLint level, GLint internalFormat,
-					GLsizei width, GLsizei height, GLsizei depth,
-					GLint border,
-					GLenum format, GLenum type,
-					const GLvoid *pixels = 0 ) const;	
+	const GLint getSize( int32& width, int32& height, int32& depth ) const;
+	//@}
+
+
+
+	// Overridden
+	void texImage(	const GLint level, const GLint internalFormat,
+					const GLsizei width, const GLsizei height, const GLsizei depth,
+					const GLint border,
+					const GLenum format, const GLenum type,
+					const GLvoid *pixels = 0 ) const;
+
+	// Overridden
+	void texSubImage(	const GLint level,
+						const GLint xoffset, const GLint yoffset, const GLint zoffset,
+						const GLsizei width, const GLsizei height, const GLsizei depth,
+						const GLenum format, const GLenum type,
+						const GLvoid *pixels = 0 ) const;
+
+protected:
+	/**
+	 * @name Cache for OpenGL accessors
+	 */
+	//@{
+	mutable GLint m_height;
+	//@}
 };
 
 

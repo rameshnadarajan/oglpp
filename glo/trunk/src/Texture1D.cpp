@@ -13,32 +13,47 @@ namespace glo
 
 
 Texture1D::Texture1D()
-: 	Texture(GL_TEXTURE_1D)
-{}
-
-
-
-void Texture1D::getSize( int32& width, int32& height, int32& depth ) const
 {
-	GLint glwidth;
-	GLint glborder;	
-	
-	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_WIDTH,	&glwidth );
-	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_BORDER,	&glborder );
-	
-	width	= glwidth - glborder;
-	height	= depth = 0;
+	m_target = GL_TEXTURE_1D;
 }
 
 
 
-void Texture1D::texImage(	GLint level, GLint internalFormat,
-							GLsizei width, GLsizei /*height*/, GLsizei /*depth*/,
-							GLint border,
-							GLenum format, GLenum type,
+const GLint Texture1D::getSize( int32& width, int32& height, int32& depth ) const
+{
+	const GLint glborder	= getBorderWidth();
+	const GLint glwidth		= getWidth();
+
+	width	= glwidth - glborder;
+	height	= depth = 1;
+
+	return glborder;
+}
+
+
+
+void Texture1D::texImage(	const GLint level, const GLint internalFormat,
+							const GLsizei width, const GLsizei /*height*/, const GLsizei /*depth*/,
+							const GLint border,
+							const GLenum format, const GLenum type,
 							const GLvoid *pixels ) const
 {
 	glTexImage1D( m_target, level, internalFormat, width, border, format, type, pixels );
+	
+	// Updates cache
+	m_border	= border;	
+	m_width		= width;
+}
+
+
+
+void Texture1D::texSubImage(	const GLint level,
+								const GLint xoffset, const GLint /*yoffset*/, const GLint /*zoffset*/,
+								const GLsizei width, const GLsizei /*height*/, const GLsizei /*depth*/,
+								const GLenum format, const GLenum type,
+								const GLvoid *pixels ) const
+{
+	glTexSubImage1D( m_target, level, xoffset, width, format, type, pixels );
 }
 
 

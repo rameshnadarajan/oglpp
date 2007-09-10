@@ -12,23 +12,17 @@ namespace glo
 
 
 
-TextureCubeMap::TextureCubeMap() 
-: 	Texture(GL_TEXTURE_CUBE_MAP_ARB)
-{}
-
-
-
-void TextureCubeMap::getSize( int32& width, int32& height, int32& depth ) const
+TextureCubeMap::TextureCubeMap()
 {
-	assert( false );
+	m_target = getTarget(0);
 }
 
 
 
-void TextureCubeMap::texImage(	GLint level, GLint internalFormat,
-								GLsizei width, GLsizei height, GLsizei depth,
-								GLint border,
-								GLenum format, GLenum type,
+void TextureCubeMap::texImage(	const GLint level, const GLint internalFormat,
+								const GLsizei width, const GLsizei height, const GLsizei depth,
+								const GLint border,
+								const GLenum format, const GLenum type,
 								const GLvoid *pixels ) const
 {
 	texImage( 0, level, internalFormat, width, height, border, format, type, pixels );
@@ -36,14 +30,55 @@ void TextureCubeMap::texImage(	GLint level, GLint internalFormat,
 
 
 
-void TextureCubeMap::texImage(	GLuint targetIndex, 
-								GLint level, GLint internalFormat,
-								GLsizei width, GLsizei height, GLsizei depth,
-								GLint border,
-								GLenum format, GLenum type,
+void TextureCubeMap::texImage(	const GLuint targetIndex, 
+								const GLint level, const GLint internalFormat,
+								const GLsizei width, const GLsizei height, const GLsizei /*depth*/,
+								const GLint border,
+								const GLenum format, const GLenum type,
 								const GLvoid *pixels ) const
 {
-	glTexImage2D( m_cubeMapTarget[targetIndex], level, internalFormat, width, height, border, format, type, pixels );
+	glTexImage2D( getTarget(targetIndex), level, internalFormat, width, height, border, format, type, pixels );
+	
+	// Updates cache
+	if ( targetIndex == 0 )
+	{
+		m_border	= border;
+		m_width		= width;
+		m_height	= height;
+	}
+}
+
+
+
+void TextureCubeMap::texSubImage(	const GLint level,
+									const GLint xoffset, const GLint yoffset, const GLint zoffset,
+									const GLsizei width, const GLsizei height, const GLsizei depth,
+									const GLenum format, const GLenum type,
+									const GLvoid *pixels ) const
+{
+	texSubImage( 0, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels );
+}
+
+
+
+void TextureCubeMap::texSubImage(	const GLuint targetIndex,
+									const GLint level,
+									const GLint xoffset, const GLint yoffset, const GLint /*zoffset*/,
+									const GLsizei width, const GLsizei height, const GLsizei /*depth*/,
+									const GLenum format, const GLenum type,
+									const GLvoid *pixels ) const
+{
+	glTexSubImage2D( getTarget(targetIndex), level, xoffset, yoffset, width, height, format, type, pixels );
+}
+
+
+
+const GLenum TextureCubeMap::getTarget( const int target ) const
+{
+	assert( target >= 0 && "Wrong target index." );
+	assert( target <= 5 && "Wrong target index." );
+
+	return m_cubeMapTarget[target];
 }
 
 

@@ -19,26 +19,44 @@ namespace glo
 struct GLO_API Texture1D : public Texture
 {
 	/**
-	 * @name Constructor/Destructor.
+	 * @name Constructor/Destructor
 	 */
 	//@
 	
 	/**
-	 * @brief Constructor.
+	 * @brief Constructor
 	 */
 	Texture1D();
 	
 	//@}
 
+
+
+	/**
+	 * @name Accessors
+	 */
+	//@{
+
 	// Overridden
-	void getSize( int32& width, int32& height, int32& depth ) const;
-	
+	const GLint getSize( int32& width, int32& height, int32& depth ) const;
+
+	//@}
+
+
+
 	// Overridden
-	void texImage(	GLint level, GLint internalFormat,
-					GLsizei width, GLsizei height, GLsizei depth,
-					GLint border,
-					GLenum format, GLenum type,
+	void texImage(	const GLint level, const GLint internalFormat,
+					const GLsizei width, const GLsizei height, const GLsizei depth,
+					const GLint border,
+					const GLenum format, const GLenum type,
 					const GLvoid *pixels = 0 ) const;
+
+	// Overridden
+	void texSubImage(	const GLint level,
+						const GLint xoffset, const GLint yoffset, const GLint zoffset,
+						const GLsizei width, const GLsizei height, const GLsizei depth,
+						const GLenum format, const GLenum type,
+						const GLvoid *pixels = 0 ) const;
 };
 
 
