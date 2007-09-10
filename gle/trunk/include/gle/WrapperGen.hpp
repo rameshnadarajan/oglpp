@@ -5,8 +5,8 @@
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
-#ifndef _GLE_WRAPPERGEN_H
-#define _GLE_WRAPPERGEN_H
+#ifndef _GLE_WRAPPERGEN_HPP
+#define _GLE_WRAPPERGEN_HPP
 
 #include "gle/gle.hpp"
 
@@ -9741,4 +9741,4 @@ GLE_API bool isGL_WIN_specular_fog();
 //@}
 
 
-#endif // #ifndef _GLE_WRAPPERGEN_H
+#endif // #ifndef _GLE_WRAPPERGEN_HPP

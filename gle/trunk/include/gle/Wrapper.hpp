@@ -3,8 +3,8 @@
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
-#ifndef _GLE_WRAPPER_H
-#define _GLE_WRAPPER_H
+#ifndef _GLE_WRAPPER_HPP
+#define _GLE_WRAPPER_HPP
 
 #include "gle/gle.hpp"
 
@@ -29,4 +29,4 @@ GLE_API gle::OpenGLExtensionsGen*	gleGetCurrent();
 
 
 
-#endif //#ifndef _GLE_WRAPPER_H
+#endif //#ifndef _GLE_WRAPPER_HPP

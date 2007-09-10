@@ -5,8 +5,8 @@
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
-#ifndef _GLE_OPENGLEXTENSIONSGEN_H
-#define _GLE_OPENGLEXTENSIONSGEN_H
+#ifndef _GLE_OPENGLEXTENSIONSGEN_HPP
+#define _GLE_OPENGLEXTENSIONSGEN_HPP
 
 #include <vector>
 
@@ -9972,4 +9972,4 @@ private:
 
 } //namespace gle
 
-#endif // #ifndef _GLE_OPENGLEXTENSIONSGEN_H
+#endif // #ifndef _GLE_OPENGLEXTENSIONSGEN_HPP

@@ -3,8 +3,8 @@
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
-#ifndef _GLE_OPENGLEXTENSIONS_H
-#define _GLE_OPENGLEXTENSIONS_H
+#ifndef _GLE_OPENGLEXTENSIONS_HPP
+#define _GLE_OPENGLEXTENSIONS_HPP
 
 #include <ostream>
 #include <string>
@@ -252,4 +252,4 @@ protected:
 
 } // namespace gle
 
-#endif // #ifndef _GLE_OPENGLEXTENSIONS_H
+#endif // #ifndef _GLE_OPENGLEXTENSIONS_HPP
