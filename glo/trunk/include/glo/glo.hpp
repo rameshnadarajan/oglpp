@@ -21,6 +21,9 @@
 #include <gle/WrapperGen.hpp>
 #include <gle/OpenGLExtensionsGen.hpp>
 
+// @todo remove me
+typedef long int32;
+typedef unsigned long uint32;   // @todo fixme use int and uint, test if sizeof (uint32) == 4
 
 
 #ifdef _WIN32
