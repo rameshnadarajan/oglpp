@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2006 Nicolas Papier.
+// GLE - Copyright (C) 2004, 2006, 2007, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -157,7 +157,7 @@ std::string OpenGLExtensions::getShadingLanguageVersion()
 
 
 
-std::string OpenGLExtensions::getExtensions( const uint32 numElementInExtensionsGroup )
+std::string OpenGLExtensions::getExtensions( const int numElementInExtensionsGroup )
 {
 	const GLubyte *pString;
 	pString = glGetString(GL_EXTENSIONS);
@@ -193,7 +193,7 @@ std::vector< std::string > OpenGLExtensions::getExtensionsVector()
 
 
 
-std::string OpenGLExtensions::getWExtensions( const uint32 numElementInExtensionsGroup )
+std::string OpenGLExtensions::getWExtensions( const int numElementInExtensionsGroup )
 {
 #ifdef WIN32
 	// WGL_ARB_extensions_string
@@ -261,23 +261,23 @@ bool OpenGLExtensions::isWExtensionSupported(const char *pExtension)
 
 
 
-std::string OpenGLExtensions::getInformations( const uint32 numElementInExtensionsGroup )
+std::string OpenGLExtensions::getInformations( const int numElementInExtensionsGroup )
 {
 	assert( numElementInExtensionsGroup >= 0 );
 	
 	std::stringstream strInfos;
-	strInfos << "Vendor                                   : " << getVendor() << std::endl;
-	strInfos << "Renderer                                 : " << getRenderer() << std::endl;
-	strInfos << "Driver version                           : " << getVersion() << std::endl;
+	strInfos << "OpenGL vendor string                     : " << getVendor() << std::endl;
+	strInfos << "OpenGL renderer string                   : " << getRenderer() << std::endl;
+	strInfos << "OpenGL version string                    : " << getVersion() << std::endl;
 	strInfos << "Shading language version                 : " << getShadingLanguageVersion() << std::endl;
 
 	std::vector< std::string > extensions	= getExtensionsVector();
 	std::vector< std::string > wextensions	= getWExtensionsVector();
 	
-	strInfos << "Extension count exposed by driver        : " << static_cast<uint32>(extensions.size()) << std::endl;
-	strInfos << "Window extension count exposed by driver : " << static_cast<uint32>(wextensions.size()) << std::endl;
+	strInfos << "Extension count exposed by driver        : " << static_cast<int>(extensions.size()) << std::endl;
+	strInfos << "Window extension count exposed by driver : " << static_cast<int>(wextensions.size()) << std::endl;
 	strInfos << "Total extension count for this hardware  : " << 
-		static_cast<uint32>(extensions.size() + wextensions.size()) << std::endl;
+		static_cast<int>(extensions.size() + wextensions.size()) << std::endl;
 
 	//
 	std::string strExtensions = getExtensions();
@@ -286,7 +286,7 @@ std::string OpenGLExtensions::getInformations( const uint32 numElementInExtensio
 	{
 		strExtensions = replaceSpaceByEndl( strExtensions, numElementInExtensionsGroup-1 );
 	}
-	strInfos << strExtensions << std::endl;
+	strInfos << "OpenGL extensions : " << std::endl << strExtensions << std::endl;
 
 	strExtensions = getWExtensions();
 	if ( numElementInExtensionsGroup != 0 )
@@ -307,7 +307,7 @@ void OpenGLExtensions::log( const std::string str )
 
 
 
-void OpenGLExtensions::log( const int32 integer )
+void OpenGLExtensions::log( const int integer )
 {
 	(*m_pLog) << integer;
 }
@@ -324,7 +324,7 @@ void OpenGLExtensions::logEndl( const std::string str )
 void OpenGLExtensions::log( const std::vector< std::string > data )
 {
 	for(	std::vector< std::string >::const_iterator	i		= data.begin(),
-																		iEnd	= data.end();
+														iEnd	= data.end();
 			i != iEnd;
 			++i )
 	{
@@ -403,7 +403,7 @@ void OpenGLExtensions::reportGLErrors()
 
 
 
-std::string OpenGLExtensions::replaceSpaceByEndl( const std::string& strString, const uint32 skipNumElement )
+std::string OpenGLExtensions::replaceSpaceByEndl( const std::string& strString, const int skipNumElement )
 {
 	std::string strRetString(strString);
 	
@@ -413,7 +413,7 @@ std::string OpenGLExtensions::replaceSpaceByEndl( const std::string& strString, 
 	do
 	{
 		// Skip some spaces.
-		for( uint32 i=0; i < skipNumElement; )
+		for( int i=0; i < skipNumElement; )
 		{
 			std::string::size_type indexSkip = strRetString.find(" ", index );
 

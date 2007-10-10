@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2006 Nicolas Papier.
+// GLE - Copyright (C) 2004, 2006, 2007, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -12,7 +12,7 @@
 	#define WIN32_LEAN_AND_MEAN 1
 	#include <windows.h> // contains all WGL Functions.
 	#endif
-	
+
 	#include <GL/gl.h>
 	#include <GL/glext.h>
 	//#include <GL/wglext.h>
@@ -25,8 +25,9 @@
 	#include <GL/gl.h>
 	#include <GL/glext.h>
 	//#include <GL/glu.h>
-	//#include <OpenGL/glext.h>
+
 	//#include <OpenGL/gl.h>
+	//#include <OpenGL/glext.h>
 	//#include <OpenGL/glu.h>
 	
 #else // POSIX
@@ -37,7 +38,7 @@
 	//#include <GL/glx.h>
 	//#include <GL/glxext.h>
 	//#include <GL/glu.h>
-	
+
 #endif
 
 
@@ -94,43 +95,42 @@
 
 #endif
 
-typedef long int32;
-typedef unsigned long uint32;   // @todo fixme use int and uint, test if sizeof (uint32) == 4
-
 #include <cassert>
 
 /**
- * @defgroup g_gle gle
+ * @defgroup g_gle	Open(GL) (E)xtensions library
  *
  * gle for open(GL) (E)xtensions library.
- * gle is a cross-platform (GNU/Linux, MS Windows and MacOSX) easy-to-use OpenGL extension loader.
+ *
+ * gle is a cross-platform (GNU/Linux, MS/Windows and Apple/MacOSX) easy-to-use OpenGL extension loader.
+ *
+ * OpenGL extensions mechanism : http://opengl.org/documentation/extensions/
+ *
+ * OpenGL Shading Language : http://opengl.org/documentation/glsl/
  * 
- * Some useful links :
- * - OpenGL 2.0 Spec(pdf) : http://www.opengl.org/documentation/specs/version2.0/glspec20.pdf
- * - OpenGL 1.5 Spec(pdf) : http://www.opengl.org/documentation/specs/version1.5/glspec15.pdf
- * - OpenGL Shading Language Specification : http://oss.sgi.com/projects/ogl-sample/registry/ARB/GLSLangSpec.Full.1.10.59.pdf
- * 
+ * OpenGL links :
+ * - OpenGL 2.1 Reference Pages : http://opengl.org/sdk/docs/man/
+ * - OpenGL 2.1 Specification (pdf) : http://www.opengl.org/registry/doc/glspec21.20061201.pdf
+ * - OpenGL Shading Language Specification v1.20.8 (pdf) : http://www.opengl.org/registry/doc/GLSLangSpec.Full.1.20.8.pdf
+ *
  * - OpenGL extensions from SGI : http://oss.sgi.com/projects/ogl-sample/registry/
  * - OpenGL extensions from NVidia : http://developer.nvidia.com/object/nvidia_opengl_specs.html
- * - OpenGL extensions from ATI : http://www.atitech.com/developer/sdk/radeonSDK/html/info/Prog3D.html
+ * - OpenGL extensions from AMD/ATI : http://www.atitech.com/developer/sdk/radeonSDK/html/info/Prog3D.html
  * - OpenGL extensions from APPLE : http://developer.apple.com/graphicsimaging/opengl/extensions.html
+ *
+ * Old specifications :
+ * - OpenGL 2.0 Specification (pdf) : http://www.opengl.org/documentation/specs/version2.0/glspec20.pdf
+ * - OpenGL 1.5 Specification (pdf) : http://www.opengl.org/documentation/specs/version1.5/glspec15.pdf
+ * - OpenGL 1.4 Specification (pdf) : http://opengl.org/documentation/specs/version1.4/glspec14.pdf
+ * - OpenGL 1.3 Specification (pdf) : http://opengl.org/documentation/specs/version1.3/glspec13.pdf
+ * - OpenGL 1.2.1 Specification (pdf) : http://opengl.org/documentation/specs/version1.2/opengl1.2.1.pdf
+ * - OpenGL Shading Language Specification : http://oss.sgi.com/projects/ogl-sample/registry/ARB/GLSLangSpec.Full.1.10.59.pdf
  * 
- * - GLU Spec(pdf) : http://www.opengl.org/documentation/specs/glu/glu1_3.pdf
- * - GLX Spec(pdf) : http://www.opengl.org/documentation/specs/glx/glx1.3.pdf
- *
+ * Some useful links :
  * - OpenGL 1.2 open source Sample Implementation : http://oss.sgi.com/projects/ogl-sample/index.html
- * - Mesa 3D Graphics Library : http://www.mesa3d.org/
- *
- * - The OpenGL Bluebook HTML format : http://www.parallab.uib.no/SGI_bookshelves/SGI_Developer/books/OpenGL_RM/sgi_html/bk02.html
- * - OpenGL Reference Manual : http://biology.ncsa.uiuc.edu/library/SGI_bookshelves/SGIindex/SGI_Developer_OpenGL_RM.html
- *
- * - Programming Guide Online - Redbook : http://rush3d.com/reference/opengl-redbook-1.1/
- *
- * - GL Manual Pages  : http://www.opengl.org/documentation/specs/man_pages/hardcopy/GL/html/gl/
- * - GLU Manual Pages : http://www.opengl.org/documentation/specs/man_pages/hardcopy/GL/html/glu/
- * - GLX Manual Pages : http://www.opengl.org/documentation/specs/man_pages/hardcopy/GL/html/glx/
- *
- * - OpenGL Specification & Manual Pages : http://www.opengl.org/documentation/spec.html
+ * - Mesa 3D Graphics Library : http://www.mesa3d.org/ 
+ * - GLX 1.4 Specification (pdf) : http://opengl.org/documentation/specs/glx/glx1.4.pdf 
+ * - GLU Specification (pdf) : http://opengl.org/documentation/specs/glu/glu1_3.pdf
  */
 
 #endif // #ifndef _GLE_HPP

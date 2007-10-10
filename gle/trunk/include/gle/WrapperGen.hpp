@@ -1,6 +1,6 @@
-// This file was generated at Wed Apr  6 08:46:51 2005 with gle, please do not modify.
+// This file was generated at Mon Oct  8 15:44:58 2007 with gle, please do not modify.
 
-// GLE - Copyright (C) 2004, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2005, 2007, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -11,149 +11,155 @@
 #include "gle/gle.hpp"
 
 /**
- * @defgroup g_wrapperGroups All OpenGL extensions groups for the wrapper.
+ * @defgroup g_extensionsByVendor		OpenGL extensions by vendor
  *
  * @ingroup g_gle
  */
 
-
-/** 
- * @defgroup	GL_3DFX GL_3DFX (3 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_APPLE GL_APPLE (8 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_ARB GL_ARB (35 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_ATI GL_ATI (14 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_EXT GL_EXT (58 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_FfdMaskSGIX GL_FfdMaskSGIX (0 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_GREMEDY GL_GREMEDY (1 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_HP GL_HP (4 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_IBM GL_IBM (5 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_INGR GL_INGR (2 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_INTEL GL_INTEL (2 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_MESA GL_MESA (4 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_NV GL_NV (36 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_OES GL_OES (1 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_OML GL_OML (3 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_PGI GL_PGI (2 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_REND GL_REND (1 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_S3 GL_S3 (1 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_SGI GL_SGI (3 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_SGIS GL_SGIS (13 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_SGIX GL_SGIX (27 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_SUN GL_SUN (6 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_SUNX GL_SUNX (1 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_VERSION GL_VERSION (0 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	GL_WIN GL_WIN (2 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-/** 
- * @defgroup	Not_in_OpenGL_Extension_Registry Not_in_OpenGL_Extension_Registry (30 extensions found).
- * @ingroup	g_wrapperGroups
- */
-
-			
-			
 /**
- * @name GL_3DFX_multisample
- *	Extension number in OpenGL registry : 207
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/3DFX/3dfx_multisample.txt
- *	@ingroup GL_3DFX
+ * @defgroup g_extensions		OpenGL extensions by name
+ *
+ * @ingroup g_gle
+ */
+
+/**
+ * @defgroup g_virtualExtensions	Virtual OpenGL extensions
+ *
+ * @ingroup g_extensionsByVendor g_extensions
+ */
+
+/** 
+ * @defgroup g_GL_3DFX		GL_3DFX (3 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_APPLE		GL_APPLE (9 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_ARB		GL_ARB (35 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_ATI		GL_ATI (14 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_EXT		GL_EXT (78 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_GREMEDY		GL_GREMEDY (1 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_HP		GL_HP (4 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_IBM		GL_IBM (5 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_INGR		GL_INGR (2 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_INTEL		GL_INTEL (2 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_MESA		GL_MESA (4 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_MESAX		GL_MESAX (1 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_NV		GL_NV (45 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_OES		GL_OES (1 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_OML		GL_OML (3 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_PGI		GL_PGI (2 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_REND		GL_REND (1 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_S3		GL_S3 (1 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_SGI		GL_SGI (3 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_SGIS		GL_SGIS (13 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_SGIX		GL_SGIX (27 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_SUN		GL_SUN (6 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_SUNX		GL_SUNX (1 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_WIN		GL_WIN (2 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (30 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+
+
+/**
+ * @defgroup GL_3DFX_multisample GL_3DFX_multisample
+ * Extension number in OpenGL registry : 207
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/3DFX/3dfx_multisample.txt
+ * @ingroup g_GL_3DFX g_extensions
  */
 //@{
 /**
@@ -163,13 +169,13 @@
 GLE_API bool isGL_3DFX_multisample();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_3DFX_tbuffer
- *	Extension number in OpenGL registry : 208
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/3DFX/tbuffer.txt
- *	@ingroup GL_3DFX
+ * @defgroup GL_3DFX_tbuffer GL_3DFX_tbuffer
+ * Extension number in OpenGL registry : 208
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/3DFX/tbuffer.txt
+ * @ingroup g_GL_3DFX g_extensions
  */
 //@{
 /**
@@ -184,13 +190,13 @@ GLE_API bool isGL_3DFX_tbuffer();
 GLE_API void glTbufferMask3DFX( GLuint mask );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_3DFX_texture_compression_FXT1
- *	Extension number in OpenGL registry : 206
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/3DFX/texture_compression_FXT1.txt
- *	@ingroup GL_3DFX
+ * @defgroup GL_3DFX_texture_compression_FXT1 GL_3DFX_texture_compression_FXT1
+ * Extension number in OpenGL registry : 206
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/3DFX/texture_compression_FXT1.txt
+ * @ingroup g_GL_3DFX g_extensions
  */
 //@{
 /**
@@ -200,13 +206,13 @@ GLE_API void glTbufferMask3DFX( GLuint mask );
 GLE_API bool isGL_3DFX_texture_compression_FXT1();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_APPLE_client_storage
- *	Extension number in OpenGL registry : 270
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/APPLE/client_storage.txt
- *	@ingroup GL_APPLE
+ * @defgroup GL_APPLE_client_storage GL_APPLE_client_storage
+ * Extension number in OpenGL registry : 270
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/client_storage.txt
+ * @ingroup g_GL_APPLE g_extensions
  */
 //@{
 /**
@@ -216,13 +222,13 @@ GLE_API bool isGL_3DFX_texture_compression_FXT1();
 GLE_API bool isGL_APPLE_client_storage();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_APPLE_element_array
- *	Extension number in OpenGL registry : 271
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/APPLE/element_array.txt
- *	@ingroup GL_APPLE
+ * @defgroup GL_APPLE_element_array GL_APPLE_element_array
+ * Extension number in OpenGL registry : 271
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/element_array.txt
+ * @ingroup g_GL_APPLE g_extensions
  */
 //@{
 /**
@@ -257,13 +263,13 @@ GLE_API void glMultiDrawElementArrayAPPLE( GLenum mode, const GLint *first, cons
 GLE_API void glMultiDrawRangeElementArrayAPPLE( GLenum mode, GLuint start, GLuint end, const GLint *first, const GLsizei *count, GLsizei primcount );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_APPLE_fence
- *	Extension number in OpenGL registry : 272
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/APPLE/fence.txt
- *	@ingroup GL_APPLE
+ * @defgroup GL_APPLE_fence GL_APPLE_fence
+ * Extension number in OpenGL registry : 272
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/fence.txt
+ * @ingroup g_GL_APPLE g_extensions
  */
 //@{
 /**
@@ -313,13 +319,39 @@ GLE_API GLboolean glTestObjectAPPLE( GLenum object, GLuint name );
 GLE_API void glFinishObjectAPPLE( GLenum object, GLint name );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_APPLE_specular_vector
- *	Extension number in OpenGL registry : 159
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/APPLE/specular_vector.txt
- *	@ingroup GL_APPLE
+ * @defgroup GL_APPLE_flush_buffer_range GL_APPLE_flush_buffer_range
+ * Extension number in OpenGL registry : 321
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/flush_buffer_range.txt
+ * @ingroup g_GL_APPLE g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_APPLE_flush_buffer_range is supported.
+ * @return Returns \c true if \b GL_APPLE_flush_buffer_range is supported, false otherwise.
+ */
+GLE_API bool isGL_APPLE_flush_buffer_range();
+
+/**
+ * @brief void glBufferParameteriAPPLE( GLenum target, GLenum pname, GLint param );
+ */
+GLE_API void glBufferParameteriAPPLE( GLenum target, GLenum pname, GLint param );
+
+/**
+ * @brief void glFlushMappedBufferRangeAPPLE( GLenum target, GLintptr offset, GLsizeiptr size );
+ */
+GLE_API void glFlushMappedBufferRangeAPPLE( GLenum target, GLintptr offset, GLsizeiptr size );
+
+//@}
+
+
+/**
+ * @defgroup GL_APPLE_specular_vector GL_APPLE_specular_vector
+ * Extension number in OpenGL registry : 159
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/specular_vector.txt
+ * @ingroup g_GL_APPLE g_extensions
  */
 //@{
 /**
@@ -329,13 +361,13 @@ GLE_API void glFinishObjectAPPLE( GLenum object, GLint name );
 GLE_API bool isGL_APPLE_specular_vector();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_APPLE_transform_hint
- *	Extension number in OpenGL registry : 160
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/APPLE/transform_hint.txt
- *	@ingroup GL_APPLE
+ * @defgroup GL_APPLE_transform_hint GL_APPLE_transform_hint
+ * Extension number in OpenGL registry : 160
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/transform_hint.txt
+ * @ingroup g_GL_APPLE g_extensions
  */
 //@{
 /**
@@ -345,13 +377,13 @@ GLE_API bool isGL_APPLE_specular_vector();
 GLE_API bool isGL_APPLE_transform_hint();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_APPLE_vertex_array_object
- *	Extension number in OpenGL registry : 273
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/APPLE/vertex_array_object.txt
- *	@ingroup GL_APPLE
+ * @defgroup GL_APPLE_vertex_array_object GL_APPLE_vertex_array_object
+ * Extension number in OpenGL registry : 273
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/vertex_array_object.txt
+ * @ingroup g_GL_APPLE g_extensions
  */
 //@{
 /**
@@ -371,9 +403,9 @@ GLE_API void glBindVertexArrayAPPLE( GLuint array );
 GLE_API void glDeleteVertexArraysAPPLE( GLsizei n, const GLuint *arrays );
 
 /**
- * @brief void glGenVertexArraysAPPLE( GLsizei n, const GLuint *arrays );
+ * @brief void glGenVertexArraysAPPLE( GLsizei n, GLuint *arrays );
  */
-GLE_API void glGenVertexArraysAPPLE( GLsizei n, const GLuint *arrays );
+GLE_API void glGenVertexArraysAPPLE( GLsizei n, GLuint *arrays );
 
 /**
  * @brief GLboolean glIsVertexArrayAPPLE( GLuint array );
@@ -381,13 +413,13 @@ GLE_API void glGenVertexArraysAPPLE( GLsizei n, const GLuint *arrays );
 GLE_API GLboolean glIsVertexArrayAPPLE( GLuint array );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_APPLE_vertex_array_range
- *	Extension number in OpenGL registry : 274
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/APPLE/vertex_array_range.txt
- *	@ingroup GL_APPLE
+ * @defgroup GL_APPLE_vertex_array_range GL_APPLE_vertex_array_range
+ * Extension number in OpenGL registry : 274
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/vertex_array_range.txt
+ * @ingroup g_GL_APPLE g_extensions
  */
 //@{
 /**
@@ -412,13 +444,13 @@ GLE_API void glFlushVertexArrayRangeAPPLE( GLsizei length, GLvoid *pointer );
 GLE_API void glVertexArrayParameteriAPPLE( GLenum pname, GLint param );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_APPLE_ycbcr_422
- *	Extension number in OpenGL registry : 275
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/APPLE/ycbcr_422.txt
- *	@ingroup GL_APPLE
+ * @defgroup GL_APPLE_ycbcr_422 GL_APPLE_ycbcr_422
+ * Extension number in OpenGL registry : 275
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/ycbcr_422.txt
+ * @ingroup g_GL_APPLE g_extensions
  */
 //@{
 /**
@@ -428,13 +460,13 @@ GLE_API void glVertexArrayParameteriAPPLE( GLenum pname, GLint param );
 GLE_API bool isGL_APPLE_ycbcr_422();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_color_buffer_float
- *	Extension number in OpenGL registry : 39
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/color_buffer_float.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_color_buffer_float GL_ARB_color_buffer_float
+ * Extension number in OpenGL registry : 39
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/color_buffer_float.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -449,13 +481,13 @@ GLE_API bool isGL_ARB_color_buffer_float();
 GLE_API void glClampColorARB( GLenum target, GLenum clamp );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_depth_texture
- *	Extension number in OpenGL registry : 22
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/depth_texture.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_depth_texture GL_ARB_depth_texture
+ * Extension number in OpenGL registry : 22
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/depth_texture.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -465,13 +497,13 @@ GLE_API void glClampColorARB( GLenum target, GLenum clamp );
 GLE_API bool isGL_ARB_depth_texture();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_draw_buffers
- *	Extension number in OpenGL registry : 37
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/draw_buffers.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_draw_buffers GL_ARB_draw_buffers
+ * Extension number in OpenGL registry : 37
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/draw_buffers.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -486,13 +518,13 @@ GLE_API bool isGL_ARB_draw_buffers();
 GLE_API void glDrawBuffersARB( GLsizei n, const GLenum *bufs );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_fragment_program
- *	Extension number in OpenGL registry : 27
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/fragment_program.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_fragment_program GL_ARB_fragment_program
+ * Extension number in OpenGL registry : 27
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/fragment_program.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -502,13 +534,13 @@ GLE_API void glDrawBuffersARB( GLsizei n, const GLenum *bufs );
 GLE_API bool isGL_ARB_fragment_program();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_fragment_program_shadow
- *	Extension number in OpenGL registry : 36
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/fragment_program_shadow.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_fragment_program_shadow GL_ARB_fragment_program_shadow
+ * Extension number in OpenGL registry : 36
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/fragment_program_shadow.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -518,13 +550,13 @@ GLE_API bool isGL_ARB_fragment_program();
 GLE_API bool isGL_ARB_fragment_program_shadow();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_fragment_shader
- *	Extension number in OpenGL registry : 32
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/fragment_shader.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_fragment_shader GL_ARB_fragment_shader
+ * Extension number in OpenGL registry : 32
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/fragment_shader.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -534,13 +566,13 @@ GLE_API bool isGL_ARB_fragment_program_shadow();
 GLE_API bool isGL_ARB_fragment_shader();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_half_float_pixel
- *	Extension number in OpenGL registry : 40
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/half_float_pixel.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_half_float_pixel GL_ARB_half_float_pixel
+ * Extension number in OpenGL registry : 40
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/half_float_pixel.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -553,9 +585,9 @@ GLE_API bool isGL_ARB_half_float_pixel();
 
 			
 /**	
- * @name GL_ARB_imaging
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_ARB_imaging GL_ARB_imaging
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -565,13 +597,13 @@ GLE_API bool isGL_ARB_half_float_pixel();
 GLE_API bool isGL_ARB_imaging();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_matrix_palette
- *	Extension number in OpenGL registry : 16
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/matrix_palette.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_matrix_palette GL_ARB_matrix_palette
+ * Extension number in OpenGL registry : 16
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/matrix_palette.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -606,13 +638,13 @@ GLE_API void glMatrixIndexuivARB( GLint size, const GLuint *indices );
 GLE_API void glMatrixIndexPointerARB( GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_multisample
- *	Extension number in OpenGL registry : 5
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/multisample.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_multisample GL_ARB_multisample
+ * Extension number in OpenGL registry : 5
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/multisample.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -627,13 +659,13 @@ GLE_API bool isGL_ARB_multisample();
 GLE_API void glSampleCoverageARB( GLclampf value, GLboolean invert );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_multitexture
- *	Extension number in OpenGL registry : 1
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/multitexture.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_multitexture GL_ARB_multitexture
+ * Extension number in OpenGL registry : 1
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/multitexture.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -813,13 +845,13 @@ GLE_API void glMultiTexCoord4sARB( GLenum target, GLshort s, GLshort t, GLshort 
 GLE_API void glMultiTexCoord4svARB( GLenum target, const GLshort *v );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_occlusion_query
- *	Extension number in OpenGL registry : 29
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/occlusion_query.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_occlusion_query GL_ARB_occlusion_query
+ * Extension number in OpenGL registry : 29
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/occlusion_query.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -869,13 +901,13 @@ GLE_API void glGetQueryObjectivARB( GLuint id, GLenum pname, GLint *params );
 GLE_API void glGetQueryObjectuivARB( GLuint id, GLenum pname, GLuint *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_pixel_buffer_object
- *	Extension number in OpenGL registry : 42
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/pixel_buffer_object.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_pixel_buffer_object GL_ARB_pixel_buffer_object
+ * Extension number in OpenGL registry : 42
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/pixel_buffer_object.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -885,13 +917,13 @@ GLE_API void glGetQueryObjectuivARB( GLuint id, GLenum pname, GLuint *params );
 GLE_API bool isGL_ARB_pixel_buffer_object();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_point_parameters
- *	Extension number in OpenGL registry : 14
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/point_parameters.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_point_parameters GL_ARB_point_parameters
+ * Extension number in OpenGL registry : 14
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/point_parameters.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -911,13 +943,13 @@ GLE_API void glPointParameterfARB( GLenum pname, GLfloat param );
 GLE_API void glPointParameterfvARB( GLenum pname, const GLfloat *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_point_sprite
- *	Extension number in OpenGL registry : 35
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/point_sprite.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_point_sprite GL_ARB_point_sprite
+ * Extension number in OpenGL registry : 35
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/point_sprite.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -927,13 +959,13 @@ GLE_API void glPointParameterfvARB( GLenum pname, const GLfloat *params );
 GLE_API bool isGL_ARB_point_sprite();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_shader_objects
- *	Extension number in OpenGL registry : 30
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/shader_objects.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_shader_objects GL_ARB_shader_objects
+ * Extension number in OpenGL registry : 30
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/shader_objects.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1138,13 +1170,13 @@ GLE_API void glGetUniformivARB( GLhandleARB programObj, GLint location, GLint *p
 GLE_API void glGetShaderSourceARB( GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *source );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_shading_language_100
- *	Extension number in OpenGL registry : 33
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/shading_language_100.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_shading_language_100 GL_ARB_shading_language_100
+ * Extension number in OpenGL registry : 33
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/shading_language_100.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1154,13 +1186,13 @@ GLE_API void glGetShaderSourceARB( GLhandleARB obj, GLsizei maxLength, GLsizei *
 GLE_API bool isGL_ARB_shading_language_100();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_shadow
- *	Extension number in OpenGL registry : 23
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/shadow.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_shadow GL_ARB_shadow
+ * Extension number in OpenGL registry : 23
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/shadow.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1170,13 +1202,13 @@ GLE_API bool isGL_ARB_shading_language_100();
 GLE_API bool isGL_ARB_shadow();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_shadow_ambient
- *	Extension number in OpenGL registry : 24
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/shadow_ambient.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_shadow_ambient GL_ARB_shadow_ambient
+ * Extension number in OpenGL registry : 24
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/shadow_ambient.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1186,13 +1218,13 @@ GLE_API bool isGL_ARB_shadow();
 GLE_API bool isGL_ARB_shadow_ambient();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_texture_border_clamp
- *	Extension number in OpenGL registry : 13
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/texture_border_clamp.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_texture_border_clamp GL_ARB_texture_border_clamp
+ * Extension number in OpenGL registry : 13
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_border_clamp.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1202,13 +1234,13 @@ GLE_API bool isGL_ARB_shadow_ambient();
 GLE_API bool isGL_ARB_texture_border_clamp();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_texture_compression
- *	Extension number in OpenGL registry : 12
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/texture_compression.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_texture_compression GL_ARB_texture_compression
+ * Extension number in OpenGL registry : 12
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_compression.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1253,13 +1285,13 @@ GLE_API void glCompressedTexSubImage1DARB( GLenum target, GLint level, GLint xof
 GLE_API void glGetCompressedTexImageARB( GLenum target, GLint level, GLvoid *img );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_texture_cube_map
- *	Extension number in OpenGL registry : 7
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/texture_cube_map.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_texture_cube_map GL_ARB_texture_cube_map
+ * Extension number in OpenGL registry : 7
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_cube_map.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1269,13 +1301,13 @@ GLE_API void glGetCompressedTexImageARB( GLenum target, GLint level, GLvoid *img
 GLE_API bool isGL_ARB_texture_cube_map();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_texture_env_add
- *	Extension number in OpenGL registry : 6
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/texture_env_add.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_texture_env_add GL_ARB_texture_env_add
+ * Extension number in OpenGL registry : 6
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_env_add.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1285,13 +1317,13 @@ GLE_API bool isGL_ARB_texture_cube_map();
 GLE_API bool isGL_ARB_texture_env_add();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_texture_env_combine
- *	Extension number in OpenGL registry : 17
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/texture_env_combine.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_texture_env_combine GL_ARB_texture_env_combine
+ * Extension number in OpenGL registry : 17
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_env_combine.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1301,13 +1333,13 @@ GLE_API bool isGL_ARB_texture_env_add();
 GLE_API bool isGL_ARB_texture_env_combine();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_texture_env_crossbar
- *	Extension number in OpenGL registry : 18
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/texture_env_crossbar.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_texture_env_crossbar GL_ARB_texture_env_crossbar
+ * Extension number in OpenGL registry : 18
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_env_crossbar.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1317,13 +1349,13 @@ GLE_API bool isGL_ARB_texture_env_combine();
 GLE_API bool isGL_ARB_texture_env_crossbar();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_texture_env_dot3
- *	Extension number in OpenGL registry : 19
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/texture_env_dot3.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_texture_env_dot3 GL_ARB_texture_env_dot3
+ * Extension number in OpenGL registry : 19
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_env_dot3.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1333,13 +1365,13 @@ GLE_API bool isGL_ARB_texture_env_crossbar();
 GLE_API bool isGL_ARB_texture_env_dot3();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_texture_float
- *	Extension number in OpenGL registry : 41
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/texture_float.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_texture_float GL_ARB_texture_float
+ * Extension number in OpenGL registry : 41
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_float.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1349,13 +1381,13 @@ GLE_API bool isGL_ARB_texture_env_dot3();
 GLE_API bool isGL_ARB_texture_float();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_texture_mirrored_repeat
- *	Extension number in OpenGL registry : 21
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/texture_mirrored_repeat.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_texture_mirrored_repeat GL_ARB_texture_mirrored_repeat
+ * Extension number in OpenGL registry : 21
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_mirrored_repeat.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1365,13 +1397,13 @@ GLE_API bool isGL_ARB_texture_float();
 GLE_API bool isGL_ARB_texture_mirrored_repeat();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_texture_non_power_of_two
- *	Extension number in OpenGL registry : 34
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/texture_non_power_of_two.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_texture_non_power_of_two GL_ARB_texture_non_power_of_two
+ * Extension number in OpenGL registry : 34
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_non_power_of_two.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1381,13 +1413,13 @@ GLE_API bool isGL_ARB_texture_mirrored_repeat();
 GLE_API bool isGL_ARB_texture_non_power_of_two();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_texture_rectangle
- *	Extension number in OpenGL registry : 38
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/texture_rectangle.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_texture_rectangle GL_ARB_texture_rectangle
+ * Extension number in OpenGL registry : 38
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_rectangle.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1397,13 +1429,13 @@ GLE_API bool isGL_ARB_texture_non_power_of_two();
 GLE_API bool isGL_ARB_texture_rectangle();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_transpose_matrix
- *	Extension number in OpenGL registry : 3
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/transpose_matrix.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_transpose_matrix GL_ARB_transpose_matrix
+ * Extension number in OpenGL registry : 3
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/transpose_matrix.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1433,13 +1465,13 @@ GLE_API void glMultTransposeMatrixfARB( const GLfloat *m );
 GLE_API void glMultTransposeMatrixdARB( const GLdouble *m );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_vertex_blend
- *	Extension number in OpenGL registry : 15
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/vertex_blend.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_vertex_blend GL_ARB_vertex_blend
+ * Extension number in OpenGL registry : 15
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/vertex_blend.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1499,13 +1531,13 @@ GLE_API void glWeightPointerARB( GLint size, GLenum type, GLsizei stride, const 
 GLE_API void glVertexBlendARB( GLint count );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_vertex_buffer_object
- *	Extension number in OpenGL registry : 28
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/vertex_buffer_object.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_vertex_buffer_object GL_ARB_vertex_buffer_object
+ * Extension number in OpenGL registry : 28
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/vertex_buffer_object.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1570,13 +1602,13 @@ GLE_API void glGetBufferParameterivARB( GLenum target, GLenum pname, GLint *para
 GLE_API void glGetBufferPointervARB( GLenum target, GLenum pname, GLvoid* *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_vertex_program
- *	Extension number in OpenGL registry : 26
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/vertex_program.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_vertex_program GL_ARB_vertex_program
+ * Extension number in OpenGL registry : 26
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/vertex_program.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1896,13 +1928,13 @@ GLE_API void glGetVertexAttribPointervARB( GLuint index, GLenum pname, GLvoid* *
 GLE_API GLboolean glIsProgramARB( GLuint program );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_vertex_shader
- *	Extension number in OpenGL registry : 31
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/vertex_shader.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_vertex_shader GL_ARB_vertex_shader
+ * Extension number in OpenGL registry : 31
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/vertex_shader.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1927,13 +1959,13 @@ GLE_API void glGetActiveAttribARB( GLhandleARB programObj, GLuint index, GLsizei
 GLE_API GLint glGetAttribLocationARB( GLhandleARB programObj, const GLcharARB *name );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ARB_window_pos
- *	Extension number in OpenGL registry : 25
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ARB/window_pos.txt
- *	@ingroup GL_ARB
+ * @defgroup GL_ARB_window_pos GL_ARB_window_pos
+ * Extension number in OpenGL registry : 25
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/window_pos.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -2023,13 +2055,13 @@ GLE_API void glWindowPos3sARB( GLshort x, GLshort y, GLshort z );
 GLE_API void glWindowPos3svARB( const GLshort *v );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_draw_buffers
- *	Extension number in OpenGL registry : 277
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/draw_buffers.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_draw_buffers GL_ATI_draw_buffers
+ * Extension number in OpenGL registry : 277
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/draw_buffers.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2044,13 +2076,13 @@ GLE_API bool isGL_ATI_draw_buffers();
 GLE_API void glDrawBuffersATI( GLsizei n, const GLenum *bufs );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_element_array
- *	Extension number in OpenGL registry : 256
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/element_array.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_element_array GL_ATI_element_array
+ * Extension number in OpenGL registry : 256
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/element_array.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2075,13 +2107,13 @@ GLE_API void glDrawElementArrayATI( GLenum mode, GLsizei count );
 GLE_API void glDrawRangeElementArrayATI( GLenum mode, GLuint start, GLuint end, GLsizei count );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_envmap_bumpmap
- *	Extension number in OpenGL registry : 244
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/envmap_bumpmap.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_envmap_bumpmap GL_ATI_envmap_bumpmap
+ * Extension number in OpenGL registry : 244
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/envmap_bumpmap.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2111,13 +2143,13 @@ GLE_API void glGetTexBumpParameterivATI( GLenum pname, GLint *param );
 GLE_API void glGetTexBumpParameterfvATI( GLenum pname, GLfloat *param );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_fragment_shader
- *	Extension number in OpenGL registry : 245
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/fragment_shader.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_fragment_shader GL_ATI_fragment_shader
+ * Extension number in OpenGL registry : 245
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/fragment_shader.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2197,13 +2229,13 @@ GLE_API void glAlphaFragmentOp3ATI( GLenum op, GLuint dst, GLuint dstMod, GLuint
 GLE_API void glSetFragmentShaderConstantATI( GLuint dst, const GLfloat *value );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_map_object_buffer
- *	Extension number in OpenGL registry : 288
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/map_object_buffer.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_map_object_buffer GL_ATI_map_object_buffer
+ * Extension number in OpenGL registry : 288
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/map_object_buffer.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2226,9 +2258,9 @@ GLE_API void glUnmapObjectBufferATI( GLuint buffer );
 
 			
 /**	
- * @name GL_ATI_pixel_format_float
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_ATI_pixel_format_float GL_ATI_pixel_format_float
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -2238,13 +2270,13 @@ GLE_API void glUnmapObjectBufferATI( GLuint buffer );
 GLE_API bool isGL_ATI_pixel_format_float();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_pn_triangles
- *	Extension number in OpenGL registry : 246
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/pn_triangles.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_pn_triangles GL_ATI_pn_triangles
+ * Extension number in OpenGL registry : 246
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/pn_triangles.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2264,13 +2296,13 @@ GLE_API void glPNTrianglesiATI( GLenum pname, GLint param );
 GLE_API void glPNTrianglesfATI( GLenum pname, GLfloat param );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_separate_stencil
- *	Extension number in OpenGL registry : 289
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/separate_stencil.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_separate_stencil GL_ATI_separate_stencil
+ * Extension number in OpenGL registry : 289
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/separate_stencil.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2290,13 +2322,13 @@ GLE_API void glStencilOpSeparateATI( GLenum face, GLenum sfail, GLenum dpfail, G
 GLE_API void glStencilFuncSeparateATI( GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_text_fragment_shader
- *	Extension number in OpenGL registry : 269
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/text_fragment_shader.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_text_fragment_shader GL_ATI_text_fragment_shader
+ * Extension number in OpenGL registry : 269
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/text_fragment_shader.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2306,13 +2338,13 @@ GLE_API void glStencilFuncSeparateATI( GLenum frontfunc, GLenum backfunc, GLint 
 GLE_API bool isGL_ATI_text_fragment_shader();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_texture_env_combine3
- *	Extension number in OpenGL registry : 279
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/texture_env_combine3.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_texture_env_combine3 GL_ATI_texture_env_combine3
+ * Extension number in OpenGL registry : 279
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/texture_env_combine3.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2322,13 +2354,13 @@ GLE_API bool isGL_ATI_text_fragment_shader();
 GLE_API bool isGL_ATI_texture_env_combine3();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_texture_float
- *	Extension number in OpenGL registry : 280
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/texture_float.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_texture_float GL_ATI_texture_float
+ * Extension number in OpenGL registry : 280
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/texture_float.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2338,13 +2370,13 @@ GLE_API bool isGL_ATI_texture_env_combine3();
 GLE_API bool isGL_ATI_texture_float();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_texture_mirror_once
- *	Extension number in OpenGL registry : 221
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/texture_mirror_once.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_texture_mirror_once GL_ATI_texture_mirror_once
+ * Extension number in OpenGL registry : 221
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/texture_mirror_once.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2354,13 +2386,13 @@ GLE_API bool isGL_ATI_texture_float();
 GLE_API bool isGL_ATI_texture_mirror_once();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_vertex_array_object
- *	Extension number in OpenGL registry : 247
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/vertex_array_object.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_vertex_array_object GL_ATI_vertex_array_object
+ * Extension number in OpenGL registry : 247
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/vertex_array_object.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2430,13 +2462,13 @@ GLE_API void glGetVariantArrayObjectfvATI( GLuint id, GLenum pname, GLfloat *par
 GLE_API void glGetVariantArrayObjectivATI( GLuint id, GLenum pname, GLint *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_vertex_attrib_array_object
- *	Extension number in OpenGL registry : 290
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/vertex_attrib_array_object.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_vertex_attrib_array_object GL_ATI_vertex_attrib_array_object
+ * Extension number in OpenGL registry : 290
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/vertex_attrib_array_object.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2461,13 +2493,13 @@ GLE_API void glGetVertexAttribArrayObjectfvATI( GLuint index, GLenum pname, GLfl
 GLE_API void glGetVertexAttribArrayObjectivATI( GLuint index, GLenum pname, GLint *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_ATI_vertex_streams
- *	Extension number in OpenGL registry : 249
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/ATI/vertex_streams.txt
- *	@ingroup GL_ATI
+ * @defgroup GL_ATI_vertex_streams GL_ATI_vertex_streams
+ * Extension number in OpenGL registry : 249
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/vertex_streams.txt
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
 /**
@@ -2702,13 +2734,13 @@ GLE_API void glVertexBlendEnviATI( GLenum pname, GLint param );
 GLE_API void glVertexBlendEnvfATI( GLenum pname, GLfloat param );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_422_pixels
- *	Extension number in OpenGL registry : 178
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/422_pixels.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_422_pixels GL_EXT_422_pixels
+ * Extension number in OpenGL registry : 178
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/422_pixels.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -2718,13 +2750,13 @@ GLE_API void glVertexBlendEnvfATI( GLenum pname, GLfloat param );
 GLE_API bool isGL_EXT_422_pixels();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_abgr
- *	Extension number in OpenGL registry : 1
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/abgr.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_abgr GL_EXT_abgr
+ * Extension number in OpenGL registry : 1
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/abgr.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -2734,13 +2766,13 @@ GLE_API bool isGL_EXT_422_pixels();
 GLE_API bool isGL_EXT_abgr();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_bgra
- *	Extension number in OpenGL registry : 129
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/bgra.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_bgra GL_EXT_bgra
+ * Extension number in OpenGL registry : 129
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/bgra.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -2750,13 +2782,44 @@ GLE_API bool isGL_EXT_abgr();
 GLE_API bool isGL_EXT_bgra();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_blend_color
- *	Extension number in OpenGL registry : 2
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/blend_color.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_bindable_uniform GL_EXT_bindable_uniform
+ * Extension number in OpenGL registry : 342
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/bindable_uniform.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_bindable_uniform is supported.
+ * @return Returns \c true if \b GL_EXT_bindable_uniform is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_bindable_uniform();
+
+/**
+ * @brief void glUniformBufferEXT( GLuint program, GLint location, GLuint buffer );
+ */
+GLE_API void glUniformBufferEXT( GLuint program, GLint location, GLuint buffer );
+
+/**
+ * @brief GLint glGetUniformBufferSizeEXT( GLuint program, GLint location );
+ */
+GLE_API GLint glGetUniformBufferSizeEXT( GLuint program, GLint location );
+
+/**
+ * @brief GLintptr glGetUniformOffsetEXT( GLuint program, GLint location );
+ */
+GLE_API GLintptr glGetUniformOffsetEXT( GLuint program, GLint location );
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_blend_color GL_EXT_blend_color
+ * Extension number in OpenGL registry : 2
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/blend_color.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -2771,13 +2834,13 @@ GLE_API bool isGL_EXT_blend_color();
 GLE_API void glBlendColorEXT( GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_blend_equation_separate
- *	Extension number in OpenGL registry : 299
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/blend_equation_separate.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_blend_equation_separate GL_EXT_blend_equation_separate
+ * Extension number in OpenGL registry : 299
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/blend_equation_separate.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -2792,13 +2855,13 @@ GLE_API bool isGL_EXT_blend_equation_separate();
 GLE_API void glBlendEquationSeparateEXT( GLenum modeRGB, GLenum modeAlpha );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_blend_func_separate
- *	Extension number in OpenGL registry : 173
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/blend_func_separate.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_blend_func_separate GL_EXT_blend_func_separate
+ * Extension number in OpenGL registry : 173
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/blend_func_separate.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -2813,13 +2876,13 @@ GLE_API bool isGL_EXT_blend_func_separate();
 GLE_API void glBlendFuncSeparateEXT( GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_blend_logic_op
- *	Extension number in OpenGL registry : 39
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/blend_logic_op.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_blend_logic_op GL_EXT_blend_logic_op
+ * Extension number in OpenGL registry : 39
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/blend_logic_op.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -2829,13 +2892,13 @@ GLE_API void glBlendFuncSeparateEXT( GLenum sfactorRGB, GLenum dfactorRGB, GLenu
 GLE_API bool isGL_EXT_blend_logic_op();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_blend_minmax
- *	Extension number in OpenGL registry : 37
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/blend_minmax.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_blend_minmax GL_EXT_blend_minmax
+ * Extension number in OpenGL registry : 37
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/blend_minmax.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -2850,13 +2913,13 @@ GLE_API bool isGL_EXT_blend_minmax();
 GLE_API void glBlendEquationEXT( GLenum mode );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_blend_subtract
- *	Extension number in OpenGL registry : 38
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/blend_subtract.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_blend_subtract GL_EXT_blend_subtract
+ * Extension number in OpenGL registry : 38
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/blend_subtract.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -2866,13 +2929,13 @@ GLE_API void glBlendEquationEXT( GLenum mode );
 GLE_API bool isGL_EXT_blend_subtract();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_clip_volume_hint
- *	Extension number in OpenGL registry : 79
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/clip_volume_hint.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_clip_volume_hint GL_EXT_clip_volume_hint
+ * Extension number in OpenGL registry : 79
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/clip_volume_hint.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -2882,13 +2945,13 @@ GLE_API bool isGL_EXT_blend_subtract();
 GLE_API bool isGL_EXT_clip_volume_hint();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_cmyka
- *	Extension number in OpenGL registry : 18
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/cmyka.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_cmyka GL_EXT_cmyka
+ * Extension number in OpenGL registry : 18
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/cmyka.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -2899,27 +2962,12 @@ GLE_API bool isGL_EXT_cmyka();
 
 //@}
 
-			
-/**	
- * @name GL_EXT_color_matrix
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
- */
-//@{
-/**
- * @brief Test if \b GL_EXT_color_matrix is supported.
- * @return Returns \c true if \b GL_EXT_color_matrix is supported, false otherwise.
- */
-GLE_API bool isGL_EXT_color_matrix();
 
-//@}
-			
-			
 /**
- * @name GL_EXT_color_subtable
- *	Extension number in OpenGL registry : 74
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/color_subtable.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_color_subtable GL_EXT_color_subtable
+ * Extension number in OpenGL registry : 74
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/color_subtable.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -2939,13 +2987,13 @@ GLE_API void glColorSubTableEXT( GLenum target, GLsizei start, GLsizei count, GL
 GLE_API void glCopyColorSubTableEXT( GLenum target, GLsizei start, GLint x, GLint y, GLsizei width );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_compiled_vertex_array
- *	Extension number in OpenGL registry : 97
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/compiled_vertex_array.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_compiled_vertex_array GL_EXT_compiled_vertex_array
+ * Extension number in OpenGL registry : 97
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/compiled_vertex_array.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -2965,13 +3013,13 @@ GLE_API void glLockArraysEXT( GLint first, GLsizei count );
 GLE_API void glUnlockArraysEXT( void );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_convolution
- *	Extension number in OpenGL registry : 12
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/convolution.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_convolution GL_EXT_convolution
+ * Extension number in OpenGL registry : 12
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/convolution.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3046,13 +3094,13 @@ GLE_API void glGetSeparableFilterEXT( GLenum target, GLenum format, GLenum type,
 GLE_API void glSeparableFilter2DEXT( GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *row, const GLvoid *column );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_coordinate_frame
- *	Extension number in OpenGL registry : 156
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/coordinate_frame.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_coordinate_frame GL_EXT_coordinate_frame
+ * Extension number in OpenGL registry : 156
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/coordinate_frame.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3172,13 +3220,13 @@ GLE_API void glTangentPointerEXT( GLenum type, GLsizei stride, const GLvoid *poi
 GLE_API void glBinormalPointerEXT( GLenum type, GLsizei stride, const GLvoid *pointer );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_copy_texture
- *	Extension number in OpenGL registry : 10
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/copy_texture.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_copy_texture GL_EXT_copy_texture
+ * Extension number in OpenGL registry : 10
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/copy_texture.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3213,13 +3261,13 @@ GLE_API void glCopyTexSubImage2DEXT( GLenum target, GLint level, GLint xoffset, 
 GLE_API void glCopyTexSubImage3DEXT( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_cull_vertex
- *	Extension number in OpenGL registry : 98
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/cull_vertex.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_cull_vertex GL_EXT_cull_vertex
+ * Extension number in OpenGL registry : 98
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/cull_vertex.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3239,13 +3287,13 @@ GLE_API void glCullParameterdvEXT( GLenum pname, GLdouble *params );
 GLE_API void glCullParameterfvEXT( GLenum pname, GLfloat *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_depth_bounds_test
- *	Extension number in OpenGL registry : 297
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/depth_bounds_test.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_depth_bounds_test GL_EXT_depth_bounds_test
+ * Extension number in OpenGL registry : 297
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/depth_bounds_test.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3260,13 +3308,85 @@ GLE_API bool isGL_EXT_depth_bounds_test();
 GLE_API void glDepthBoundsEXT( GLclampd zmin, GLclampd zmax );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_draw_range_elements
- *	Extension number in OpenGL registry : 112
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/draw_range_elements.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_draw_buffers2 GL_EXT_draw_buffers2
+ * Extension number in OpenGL registry : 340
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/draw_buffers2.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_draw_buffers2 is supported.
+ * @return Returns \c true if \b GL_EXT_draw_buffers2 is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_draw_buffers2();
+
+/**
+ * @brief void glColorMaskIndexedEXT( GLuint index, GLboolean r, GLboolean g, GLboolean b, GLboolean a );
+ */
+GLE_API void glColorMaskIndexedEXT( GLuint index, GLboolean r, GLboolean g, GLboolean b, GLboolean a );
+
+/**
+ * @brief void glGetBooleanIndexedvEXT( GLenum target, GLuint index, GLboolean *data );
+ */
+GLE_API void glGetBooleanIndexedvEXT( GLenum target, GLuint index, GLboolean *data );
+
+/**
+ * @brief void glGetIntegerIndexedvEXT( GLenum target, GLuint index, GLint *data );
+ */
+GLE_API void glGetIntegerIndexedvEXT( GLenum target, GLuint index, GLint *data );
+
+/**
+ * @brief void glEnableIndexedEXT( GLenum target, GLuint index );
+ */
+GLE_API void glEnableIndexedEXT( GLenum target, GLuint index );
+
+/**
+ * @brief void glDisableIndexedEXT( GLenum target, GLuint index );
+ */
+GLE_API void glDisableIndexedEXT( GLenum target, GLuint index );
+
+/**
+ * @brief GLboolean glIsEnabledIndexedEXT( GLenum target, GLuint index );
+ */
+GLE_API GLboolean glIsEnabledIndexedEXT( GLenum target, GLuint index );
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_draw_instanced GL_EXT_draw_instanced
+ * Extension number in OpenGL registry : 327
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/draw_instanced.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_draw_instanced is supported.
+ * @return Returns \c true if \b GL_EXT_draw_instanced is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_draw_instanced();
+
+/**
+ * @brief void glDrawArraysInstancedEXT( GLenum mode, GLint start, GLsizei count, GLsizei primcount );
+ */
+GLE_API void glDrawArraysInstancedEXT( GLenum mode, GLint start, GLsizei count, GLsizei primcount );
+
+/**
+ * @brief void glDrawElementsInstancedEXT( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount );
+ */
+GLE_API void glDrawElementsInstancedEXT( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount );
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_draw_range_elements GL_EXT_draw_range_elements
+ * Extension number in OpenGL registry : 112
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/draw_range_elements.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3281,13 +3401,13 @@ GLE_API bool isGL_EXT_draw_range_elements();
 GLE_API void glDrawRangeElementsEXT( GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_fog_coord
- *	Extension number in OpenGL registry : 149
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/fog_coord.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_fog_coord GL_EXT_fog_coord
+ * Extension number in OpenGL registry : 149
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/fog_coord.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3322,13 +3442,55 @@ GLE_API void glFogCoorddvEXT( const GLdouble *coord );
 GLE_API void glFogCoordPointerEXT( GLenum type, GLsizei stride, const GLvoid *pointer );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_framebuffer_object
- *	Extension number in OpenGL registry : 310
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/framebuffer_object.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_framebuffer_blit GL_EXT_framebuffer_blit
+ * Extension number in OpenGL registry : 316
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/framebuffer_blit.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_framebuffer_blit is supported.
+ * @return Returns \c true if \b GL_EXT_framebuffer_blit is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_framebuffer_blit();
+
+/**
+ * @brief void glBlitFramebufferEXT( GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter );
+ */
+GLE_API void glBlitFramebufferEXT( GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter );
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample
+ * Extension number in OpenGL registry : 317
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/framebuffer_multisample.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_framebuffer_multisample is supported.
+ * @return Returns \c true if \b GL_EXT_framebuffer_multisample is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_framebuffer_multisample();
+
+/**
+ * @brief void glRenderbufferStorageMultisampleEXT( GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height );
+ */
+GLE_API void glRenderbufferStorageMultisampleEXT( GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height );
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_framebuffer_object GL_EXT_framebuffer_object
+ * Extension number in OpenGL registry : 310
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3423,13 +3585,147 @@ GLE_API void glGetFramebufferAttachmentParameterivEXT( GLenum target, GLenum att
 GLE_API void glGenerateMipmapEXT( GLenum target );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_histogram
- *	Extension number in OpenGL registry : 11
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/histogram.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_framebuffer_sRGB GL_EXT_framebuffer_sRGB
+ * Extension number in OpenGL registry : 337
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/framebuffer_sRGB.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_framebuffer_sRGB is supported.
+ * @return Returns \c true if \b GL_EXT_framebuffer_sRGB is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_framebuffer_sRGB();
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_geometry_shader4 GL_EXT_geometry_shader4
+ * Extension number in OpenGL registry : 324
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/geometry_shader4.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_geometry_shader4 is supported.
+ * @return Returns \c true if \b GL_EXT_geometry_shader4 is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_geometry_shader4();
+
+/**
+ * @brief void glProgramParameteriEXT( GLuint program, GLenum pname, GLint value );
+ */
+GLE_API void glProgramParameteriEXT( GLuint program, GLenum pname, GLint value );
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_gpu_program_parameters GL_EXT_gpu_program_parameters
+ * Extension number in OpenGL registry : 320
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/gpu_program_parameters.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_gpu_program_parameters is supported.
+ * @return Returns \c true if \b GL_EXT_gpu_program_parameters is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_gpu_program_parameters();
+
+/**
+ * @brief void glProgramEnvParameters4fvEXT( GLenum target, GLuint index, GLsizei count, const GLfloat *params );
+ */
+GLE_API void glProgramEnvParameters4fvEXT( GLenum target, GLuint index, GLsizei count, const GLfloat *params );
+
+/**
+ * @brief void glProgramLocalParameters4fvEXT( GLenum target, GLuint index, GLsizei count, const GLfloat *params );
+ */
+GLE_API void glProgramLocalParameters4fvEXT( GLenum target, GLuint index, GLsizei count, const GLfloat *params );
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_gpu_shader4 GL_EXT_gpu_shader4
+ * Extension number in OpenGL registry : 326
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/gpu_shader4.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_gpu_shader4 is supported.
+ * @return Returns \c true if \b GL_EXT_gpu_shader4 is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_gpu_shader4();
+
+/**
+ * @brief void glGetUniformuivEXT( GLuint program, GLint location, GLuint *params );
+ */
+GLE_API void glGetUniformuivEXT( GLuint program, GLint location, GLuint *params );
+
+/**
+ * @brief void glBindFragDataLocationEXT( GLuint program, GLuint color, const GLchar *name );
+ */
+GLE_API void glBindFragDataLocationEXT( GLuint program, GLuint color, const GLchar *name );
+
+/**
+ * @brief GLint glGetFragDataLocationEXT( GLuint program, const GLchar *name );
+ */
+GLE_API GLint glGetFragDataLocationEXT( GLuint program, const GLchar *name );
+
+/**
+ * @brief void glUniform1uiEXT( GLint location, GLuint v0 );
+ */
+GLE_API void glUniform1uiEXT( GLint location, GLuint v0 );
+
+/**
+ * @brief void glUniform2uiEXT( GLint location, GLuint v0, GLuint v1 );
+ */
+GLE_API void glUniform2uiEXT( GLint location, GLuint v0, GLuint v1 );
+
+/**
+ * @brief void glUniform3uiEXT( GLint location, GLuint v0, GLuint v1, GLuint v2 );
+ */
+GLE_API void glUniform3uiEXT( GLint location, GLuint v0, GLuint v1, GLuint v2 );
+
+/**
+ * @brief void glUniform4uiEXT( GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3 );
+ */
+GLE_API void glUniform4uiEXT( GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3 );
+
+/**
+ * @brief void glUniform1uivEXT( GLint location, GLsizei count, const GLuint *value );
+ */
+GLE_API void glUniform1uivEXT( GLint location, GLsizei count, const GLuint *value );
+
+/**
+ * @brief void glUniform2uivEXT( GLint location, GLsizei count, const GLuint *value );
+ */
+GLE_API void glUniform2uivEXT( GLint location, GLsizei count, const GLuint *value );
+
+/**
+ * @brief void glUniform3uivEXT( GLint location, GLsizei count, const GLuint *value );
+ */
+GLE_API void glUniform3uivEXT( GLint location, GLsizei count, const GLuint *value );
+
+/**
+ * @brief void glUniform4uivEXT( GLint location, GLsizei count, const GLuint *value );
+ */
+GLE_API void glUniform4uivEXT( GLint location, GLsizei count, const GLuint *value );
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_histogram GL_EXT_histogram
+ * Extension number in OpenGL registry : 11
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/histogram.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3489,13 +3785,13 @@ GLE_API void glResetHistogramEXT( GLenum target );
 GLE_API void glResetMinmaxEXT( GLenum target );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_index_array_formats
- *	Extension number in OpenGL registry : 96
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/index_array_formats.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_index_array_formats GL_EXT_index_array_formats
+ * Extension number in OpenGL registry : 96
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/index_array_formats.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3505,13 +3801,13 @@ GLE_API void glResetMinmaxEXT( GLenum target );
 GLE_API bool isGL_EXT_index_array_formats();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_index_func
- *	Extension number in OpenGL registry : 95
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/index_func.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_index_func GL_EXT_index_func
+ * Extension number in OpenGL registry : 95
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/index_func.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3526,13 +3822,13 @@ GLE_API bool isGL_EXT_index_func();
 GLE_API void glIndexFuncEXT( GLenum func, GLclampf ref );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_index_material
- *	Extension number in OpenGL registry : 94
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/index_material.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_index_material GL_EXT_index_material
+ * Extension number in OpenGL registry : 94
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/index_material.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3547,13 +3843,13 @@ GLE_API bool isGL_EXT_index_material();
 GLE_API void glIndexMaterialEXT( GLenum face, GLenum mode );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_index_texture
- *	Extension number in OpenGL registry : 93
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/index_texture.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_index_texture GL_EXT_index_texture
+ * Extension number in OpenGL registry : 93
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/index_texture.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3563,13 +3859,13 @@ GLE_API void glIndexMaterialEXT( GLenum face, GLenum mode );
 GLE_API bool isGL_EXT_index_texture();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_light_texture
- *	Extension number in OpenGL registry : 117
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/light_texture.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_light_texture GL_EXT_light_texture
+ * Extension number in OpenGL registry : 117
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/light_texture.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3594,13 +3890,13 @@ GLE_API void glTextureLightEXT( GLenum pname );
 GLE_API void glTextureMaterialEXT( GLenum face, GLenum mode );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_misc_attribute
- *	Extension number in OpenGL registry : 31
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/misc_attribute.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_misc_attribute GL_EXT_misc_attribute
+ * Extension number in OpenGL registry : 31
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/misc_attribute.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3610,13 +3906,13 @@ GLE_API void glTextureMaterialEXT( GLenum face, GLenum mode );
 GLE_API bool isGL_EXT_misc_attribute();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_multi_draw_arrays
- *	Extension number in OpenGL registry : 148
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/multi_draw_arrays.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_multi_draw_arrays GL_EXT_multi_draw_arrays
+ * Extension number in OpenGL registry : 148
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/multi_draw_arrays.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3639,9 +3935,9 @@ GLE_API void glMultiDrawElementsEXT( GLenum mode, const GLsizei *count, GLenum t
 
 			
 /**	
- * @name GL_EXT_multisample
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_EXT_multisample GL_EXT_multisample
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -3661,13 +3957,45 @@ GLE_API void glSampleMaskEXT( GLclampf value, GLboolean invert );
 GLE_API void glSamplePatternEXT( GLenum pattern );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_packed_pixels
- *	Extension number in OpenGL registry : 23
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/packed_pixels.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_packed_depth_stencil GL_EXT_packed_depth_stencil
+ * Extension number in OpenGL registry : 312
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/packed_depth_stencil.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_packed_depth_stencil is supported.
+ * @return Returns \c true if \b GL_EXT_packed_depth_stencil is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_packed_depth_stencil();
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_packed_float GL_EXT_packed_float
+ * Extension number in OpenGL registry : 328
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/packed_float.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_packed_float is supported.
+ * @return Returns \c true if \b GL_EXT_packed_float is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_packed_float();
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_packed_pixels GL_EXT_packed_pixels
+ * Extension number in OpenGL registry : 23
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/packed_pixels.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3677,13 +4005,13 @@ GLE_API void glSamplePatternEXT( GLenum pattern );
 GLE_API bool isGL_EXT_packed_pixels();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_paletted_texture
- *	Extension number in OpenGL registry : 78
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/paletted_texture.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_paletted_texture GL_EXT_paletted_texture
+ * Extension number in OpenGL registry : 78
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/paletted_texture.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3713,13 +4041,13 @@ GLE_API void glGetColorTableParameterivEXT( GLenum target, GLenum pname, GLint *
 GLE_API void glGetColorTableParameterfvEXT( GLenum target, GLenum pname, GLfloat *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_pixel_buffer_object
- *	Extension number in OpenGL registry : 302
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/pixel_buffer_object.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_pixel_buffer_object GL_EXT_pixel_buffer_object
+ * Extension number in OpenGL registry : 302
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/pixel_buffer_object.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3729,13 +4057,13 @@ GLE_API void glGetColorTableParameterfvEXT( GLenum target, GLenum pname, GLfloat
 GLE_API bool isGL_EXT_pixel_buffer_object();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_pixel_transform
- *	Extension number in OpenGL registry : 138
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/pixel_transform.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_pixel_transform GL_EXT_pixel_transform
+ * Extension number in OpenGL registry : 138
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/pixel_transform.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3765,13 +4093,13 @@ GLE_API void glPixelTransformParameterivEXT( GLenum target, GLenum pname, const 
 GLE_API void glPixelTransformParameterfvEXT( GLenum target, GLenum pname, const GLfloat *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_pixel_transform_color_table
- *	Extension number in OpenGL registry : 139
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/pixel_transform_color_table.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_pixel_transform_color_table GL_EXT_pixel_transform_color_table
+ * Extension number in OpenGL registry : 139
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/pixel_transform_color_table.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3781,13 +4109,13 @@ GLE_API void glPixelTransformParameterfvEXT( GLenum target, GLenum pname, const 
 GLE_API bool isGL_EXT_pixel_transform_color_table();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_point_parameters
- *	Extension number in OpenGL registry : 54
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/point_parameters.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_point_parameters GL_EXT_point_parameters
+ * Extension number in OpenGL registry : 54
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/point_parameters.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3807,13 +4135,13 @@ GLE_API void glPointParameterfEXT( GLenum pname, GLfloat param );
 GLE_API void glPointParameterfvEXT( GLenum pname, const GLfloat *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_polygon_offset
- *	Extension number in OpenGL registry : 3
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/polygon_offset.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_polygon_offset GL_EXT_polygon_offset
+ * Extension number in OpenGL registry : 3
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/polygon_offset.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3828,13 +4156,13 @@ GLE_API bool isGL_EXT_polygon_offset();
 GLE_API void glPolygonOffsetEXT( GLfloat factor, GLfloat bias );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_rescale_normal
- *	Extension number in OpenGL registry : 27
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/rescale_normal.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_rescale_normal GL_EXT_rescale_normal
+ * Extension number in OpenGL registry : 27
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/rescale_normal.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3844,13 +4172,13 @@ GLE_API void glPolygonOffsetEXT( GLfloat factor, GLfloat bias );
 GLE_API bool isGL_EXT_rescale_normal();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_secondary_color
- *	Extension number in OpenGL registry : 145
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/secondary_color.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_secondary_color GL_EXT_secondary_color
+ * Extension number in OpenGL registry : 145
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/secondary_color.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3945,13 +4273,13 @@ GLE_API void glSecondaryColor3usvEXT( const GLushort *v );
 GLE_API void glSecondaryColorPointerEXT( GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_separate_specular_color
- *	Extension number in OpenGL registry : 144
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/separate_specular_color.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_separate_specular_color GL_EXT_separate_specular_color
+ * Extension number in OpenGL registry : 144
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/separate_specular_color.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3961,13 +4289,13 @@ GLE_API void glSecondaryColorPointerEXT( GLint size, GLenum type, GLsizei stride
 GLE_API bool isGL_EXT_separate_specular_color();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_shadow_funcs
- *	Extension number in OpenGL registry : 267
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/shadow_funcs.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_shadow_funcs GL_EXT_shadow_funcs
+ * Extension number in OpenGL registry : 267
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/shadow_funcs.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3977,13 +4305,13 @@ GLE_API bool isGL_EXT_separate_specular_color();
 GLE_API bool isGL_EXT_shadow_funcs();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_shared_texture_palette
- *	Extension number in OpenGL registry : 141
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/shared_texture_palette.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_shared_texture_palette GL_EXT_shared_texture_palette
+ * Extension number in OpenGL registry : 141
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/shared_texture_palette.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -3993,13 +4321,34 @@ GLE_API bool isGL_EXT_shadow_funcs();
 GLE_API bool isGL_EXT_shared_texture_palette();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_stencil_two_side
- *	Extension number in OpenGL registry : 268
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/stencil_two_side.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_stencil_clear_tag GL_EXT_stencil_clear_tag
+ * Extension number in OpenGL registry : 314
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/stencil_clear_tag.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_stencil_clear_tag is supported.
+ * @return Returns \c true if \b GL_EXT_stencil_clear_tag is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_stencil_clear_tag();
+
+/**
+ * @brief void glStencilClearTagEXT( GLsizei stencilTagBits, GLuint stencilClearTag );
+ */
+GLE_API void glStencilClearTagEXT( GLsizei stencilTagBits, GLuint stencilClearTag );
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_stencil_two_side GL_EXT_stencil_two_side
+ * Extension number in OpenGL registry : 268
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/stencil_two_side.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4014,13 +4363,13 @@ GLE_API bool isGL_EXT_stencil_two_side();
 GLE_API void glActiveStencilFaceEXT( GLenum face );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_stencil_wrap
- *	Extension number in OpenGL registry : 176
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/stencil_wrap.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_stencil_wrap GL_EXT_stencil_wrap
+ * Extension number in OpenGL registry : 176
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/stencil_wrap.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4030,13 +4379,13 @@ GLE_API void glActiveStencilFaceEXT( GLenum face );
 GLE_API bool isGL_EXT_stencil_wrap();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_subtexture
- *	Extension number in OpenGL registry : 9
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/subtexture.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_subtexture GL_EXT_subtexture
+ * Extension number in OpenGL registry : 9
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/subtexture.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4056,13 +4405,13 @@ GLE_API void glTexSubImage1DEXT( GLenum target, GLint level, GLint xoffset, GLsi
 GLE_API void glTexSubImage2DEXT( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_texture
- *	Extension number in OpenGL registry : 4
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/texture.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_texture GL_EXT_texture
+ * Extension number in OpenGL registry : 4
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4072,13 +4421,13 @@ GLE_API void glTexSubImage2DEXT( GLenum target, GLint level, GLint xoffset, GLin
 GLE_API bool isGL_EXT_texture();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_texture3D
- *	Extension number in OpenGL registry : 6
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/texture3D.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_texture3D GL_EXT_texture3D
+ * Extension number in OpenGL registry : 6
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture3D.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4098,13 +4447,82 @@ GLE_API void glTexImage3DEXT( GLenum target, GLint level, GLenum internalformat,
 GLE_API void glTexSubImage3DEXT( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_texture_compression_s3tc
- *	Extension number in OpenGL registry : 198
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/texture_compression_s3tc.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_texture_array GL_EXT_texture_array
+ * Extension number in OpenGL registry : 329
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_array.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_texture_array is supported.
+ * @return Returns \c true if \b GL_EXT_texture_array is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_texture_array();
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_texture_buffer_object GL_EXT_texture_buffer_object
+ * Extension number in OpenGL registry : 330
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_buffer_object.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_texture_buffer_object is supported.
+ * @return Returns \c true if \b GL_EXT_texture_buffer_object is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_texture_buffer_object();
+
+/**
+ * @brief void glTexBufferEXT( GLenum target, GLenum internalformat, GLuint buffer );
+ */
+GLE_API void glTexBufferEXT( GLenum target, GLenum internalformat, GLuint buffer );
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_texture_compression_latc GL_EXT_texture_compression_latc
+ * Extension number in OpenGL registry : 331
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_compression_latc.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_texture_compression_latc is supported.
+ * @return Returns \c true if \b GL_EXT_texture_compression_latc is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_texture_compression_latc();
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_rgtc
+ * Extension number in OpenGL registry : 332
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_compression_rgtc.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_texture_compression_rgtc is supported.
+ * @return Returns \c true if \b GL_EXT_texture_compression_rgtc is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_texture_compression_rgtc();
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_texture_compression_s3tc GL_EXT_texture_compression_s3tc
+ * Extension number in OpenGL registry : 198
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_compression_s3tc.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4117,9 +4535,9 @@ GLE_API bool isGL_EXT_texture_compression_s3tc();
 
 			
 /**	
- * @name GL_EXT_texture_cube_map
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_EXT_texture_cube_map GL_EXT_texture_cube_map
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -4129,13 +4547,13 @@ GLE_API bool isGL_EXT_texture_compression_s3tc();
 GLE_API bool isGL_EXT_texture_cube_map();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_texture_env_add
- *	Extension number in OpenGL registry : 185
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/texture_env_add.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_texture_env_add GL_EXT_texture_env_add
+ * Extension number in OpenGL registry : 185
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_env_add.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4145,13 +4563,13 @@ GLE_API bool isGL_EXT_texture_cube_map();
 GLE_API bool isGL_EXT_texture_env_add();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_texture_env_combine
- *	Extension number in OpenGL registry : 158
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/texture_env_combine.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_texture_env_combine GL_EXT_texture_env_combine
+ * Extension number in OpenGL registry : 158
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_env_combine.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4161,13 +4579,13 @@ GLE_API bool isGL_EXT_texture_env_add();
 GLE_API bool isGL_EXT_texture_env_combine();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_texture_env_dot3
- *	Extension number in OpenGL registry : 220
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/texture_env_dot3.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_texture_env_dot3 GL_EXT_texture_env_dot3
+ * Extension number in OpenGL registry : 220
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_env_dot3.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4177,13 +4595,13 @@ GLE_API bool isGL_EXT_texture_env_combine();
 GLE_API bool isGL_EXT_texture_env_dot3();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_texture_filter_anisotropic
- *	Extension number in OpenGL registry : 187
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/texture_filter_anisotropic.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_texture_filter_anisotropic GL_EXT_texture_filter_anisotropic
+ * Extension number in OpenGL registry : 187
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_filter_anisotropic.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4193,13 +4611,59 @@ GLE_API bool isGL_EXT_texture_env_dot3();
 GLE_API bool isGL_EXT_texture_filter_anisotropic();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_texture_lod_bias
- *	Extension number in OpenGL registry : 186
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/texture_lod_bias.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_texture_integer GL_EXT_texture_integer
+ * Extension number in OpenGL registry : 343
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_integer.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_texture_integer is supported.
+ * @return Returns \c true if \b GL_EXT_texture_integer is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_texture_integer();
+
+/**
+ * @brief void glTexParameterIivEXT( GLenum target, GLenum pname, const GLint *params );
+ */
+GLE_API void glTexParameterIivEXT( GLenum target, GLenum pname, const GLint *params );
+
+/**
+ * @brief void glTexParameterIuivEXT( GLenum target, GLenum pname, const GLuint *params );
+ */
+GLE_API void glTexParameterIuivEXT( GLenum target, GLenum pname, const GLuint *params );
+
+/**
+ * @brief void glGetTexParameterIivEXT( GLenum target, GLenum pname, GLint *params );
+ */
+GLE_API void glGetTexParameterIivEXT( GLenum target, GLenum pname, GLint *params );
+
+/**
+ * @brief void glGetTexParameterIuivEXT( GLenum target, GLenum pname, GLuint *params );
+ */
+GLE_API void glGetTexParameterIuivEXT( GLenum target, GLenum pname, GLuint *params );
+
+/**
+ * @brief void glClearColorIiEXT( GLint red, GLint green, GLint blue, GLint alpha );
+ */
+GLE_API void glClearColorIiEXT( GLint red, GLint green, GLint blue, GLint alpha );
+
+/**
+ * @brief void glClearColorIuiEXT( GLuint red, GLuint green, GLuint blue, GLuint alpha );
+ */
+GLE_API void glClearColorIuiEXT( GLuint red, GLuint green, GLuint blue, GLuint alpha );
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_texture_lod_bias GL_EXT_texture_lod_bias
+ * Extension number in OpenGL registry : 186
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_lod_bias.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4209,13 +4673,13 @@ GLE_API bool isGL_EXT_texture_filter_anisotropic();
 GLE_API bool isGL_EXT_texture_lod_bias();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_texture_mirror_clamp
- *	Extension number in OpenGL registry : 298
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/texture_mirror_clamp.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_texture_mirror_clamp GL_EXT_texture_mirror_clamp
+ * Extension number in OpenGL registry : 298
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_mirror_clamp.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4225,13 +4689,13 @@ GLE_API bool isGL_EXT_texture_lod_bias();
 GLE_API bool isGL_EXT_texture_mirror_clamp();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_texture_object
- *	Extension number in OpenGL registry : 20
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/texture_object.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_texture_object GL_EXT_texture_object
+ * Extension number in OpenGL registry : 20
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_object.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4271,13 +4735,13 @@ GLE_API GLboolean glIsTextureEXT( GLuint texture );
 GLE_API void glPrioritizeTexturesEXT( GLsizei n, const GLuint *textures, const GLclampf *priorities );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_texture_perturb_normal
- *	Extension number in OpenGL registry : 147
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/texture_perturb_normal.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_texture_perturb_normal GL_EXT_texture_perturb_normal
+ * Extension number in OpenGL registry : 147
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_perturb_normal.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4292,13 +4756,71 @@ GLE_API bool isGL_EXT_texture_perturb_normal();
 GLE_API void glTextureNormalEXT( GLenum mode );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_vertex_array
- *	Extension number in OpenGL registry : 30
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/vertex_array.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_texture_sRGB GL_EXT_texture_sRGB
+ * Extension number in OpenGL registry : 315
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_sRGB.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_texture_sRGB is supported.
+ * @return Returns \c true if \b GL_EXT_texture_sRGB is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_texture_sRGB();
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_texture_shared_exponent GL_EXT_texture_shared_exponent
+ * Extension number in OpenGL registry : 333
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_shared_exponent.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_texture_shared_exponent is supported.
+ * @return Returns \c true if \b GL_EXT_texture_shared_exponent is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_texture_shared_exponent();
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_timer_query GL_EXT_timer_query
+ * Extension number in OpenGL registry : 319
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/timer_query.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_timer_query is supported.
+ * @return Returns \c true if \b GL_EXT_timer_query is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_timer_query();
+
+/**
+ * @brief void glGetQueryObjecti64vEXT( GLuint id, GLenum pname, GLint64EXT *params );
+ */
+GLE_API void glGetQueryObjecti64vEXT( GLuint id, GLenum pname, GLint64EXT *params );
+
+/**
+ * @brief void glGetQueryObjectui64vEXT( GLuint id, GLenum pname, GLuint64EXT *params );
+ */
+GLE_API void glGetQueryObjectui64vEXT( GLuint id, GLenum pname, GLuint64EXT *params );
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_vertex_array GL_EXT_vertex_array
+ * Extension number in OpenGL registry : 30
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/vertex_array.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4353,13 +4875,13 @@ GLE_API void glTexCoordPointerEXT( GLint size, GLenum type, GLsizei stride, GLsi
 GLE_API void glVertexPointerEXT( GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_vertex_shader
- *	Extension number in OpenGL registry : 248
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/vertex_shader.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_vertex_shader GL_EXT_vertex_shader
+ * Extension number in OpenGL registry : 248
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4579,13 +5101,13 @@ GLE_API void glGetLocalConstantIntegervEXT( GLuint id, GLenum value, GLint *data
 GLE_API void glGetLocalConstantFloatvEXT( GLuint id, GLenum value, GLfloat *data );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_EXT_vertex_weighting
- *	Extension number in OpenGL registry : 188
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/EXT/vertex_weighting.txt
- *	@ingroup GL_EXT
+ * @defgroup GL_EXT_vertex_weighting GL_EXT_vertex_weighting
+ * Extension number in OpenGL registry : 188
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/vertex_weighting.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -4613,9 +5135,9 @@ GLE_API void glVertexWeightPointerEXT( GLsizei size, GLenum type, GLsizei stride
 
 			
 /**	
- * @name GL_FfdMaskSGIX
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_FfdMaskSGIX GL_FfdMaskSGIX
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -4625,13 +5147,13 @@ GLE_API void glVertexWeightPointerEXT( GLsizei size, GLenum type, GLsizei stride
 GLE_API bool isGL_FfdMaskSGIX();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_GREMEDY_string_marker
- *	Extension number in OpenGL registry : 311
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/GREMEDY/string_marker.txt
- *	@ingroup GL_GREMEDY
+ * @defgroup GL_GREMEDY_string_marker GL_GREMEDY_string_marker
+ * Extension number in OpenGL registry : 311
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/GREMEDY/string_marker.txt
+ * @ingroup g_GL_GREMEDY g_extensions
  */
 //@{
 /**
@@ -4646,13 +5168,13 @@ GLE_API bool isGL_GREMEDY_string_marker();
 GLE_API void glStringMarkerGREMEDY( GLsizei len, const GLvoid *string );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_HP_convolution_border_modes
- *	Extension number in OpenGL registry : 67
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/HP/convolution_border_modes.txt
- *	@ingroup GL_HP
+ * @defgroup GL_HP_convolution_border_modes GL_HP_convolution_border_modes
+ * Extension number in OpenGL registry : 67
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/HP/convolution_border_modes.txt
+ * @ingroup g_GL_HP g_extensions
  */
 //@{
 /**
@@ -4662,13 +5184,13 @@ GLE_API void glStringMarkerGREMEDY( GLsizei len, const GLvoid *string );
 GLE_API bool isGL_HP_convolution_border_modes();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_HP_image_transform
- *	Extension number in OpenGL registry : 66
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/HP/image_transform.txt
- *	@ingroup GL_HP
+ * @defgroup GL_HP_image_transform GL_HP_image_transform
+ * Extension number in OpenGL registry : 66
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/HP/image_transform.txt
+ * @ingroup g_GL_HP g_extensions
  */
 //@{
 /**
@@ -4708,13 +5230,13 @@ GLE_API void glGetImageTransformParameterivHP( GLenum target, GLenum pname, GLin
 GLE_API void glGetImageTransformParameterfvHP( GLenum target, GLenum pname, GLfloat *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_HP_occlusion_test
- *	Extension number in OpenGL registry : 137
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/HP/occlusion_test.txt
- *	@ingroup GL_HP
+ * @defgroup GL_HP_occlusion_test GL_HP_occlusion_test
+ * Extension number in OpenGL registry : 137
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/HP/occlusion_test.txt
+ * @ingroup g_GL_HP g_extensions
  */
 //@{
 /**
@@ -4724,13 +5246,13 @@ GLE_API void glGetImageTransformParameterfvHP( GLenum target, GLenum pname, GLfl
 GLE_API bool isGL_HP_occlusion_test();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_HP_texture_lighting
- *	Extension number in OpenGL registry : 111
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/HP/texture_lighting.txt
- *	@ingroup GL_HP
+ * @defgroup GL_HP_texture_lighting GL_HP_texture_lighting
+ * Extension number in OpenGL registry : 111
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/HP/texture_lighting.txt
+ * @ingroup g_GL_HP g_extensions
  */
 //@{
 /**
@@ -4740,13 +5262,13 @@ GLE_API bool isGL_HP_occlusion_test();
 GLE_API bool isGL_HP_texture_lighting();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_IBM_cull_vertex
- *	Extension number in OpenGL registry : 199
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/IBM/cull_vertex.txt
- *	@ingroup GL_IBM
+ * @defgroup GL_IBM_cull_vertex GL_IBM_cull_vertex
+ * Extension number in OpenGL registry : 199
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/IBM/cull_vertex.txt
+ * @ingroup g_GL_IBM g_extensions
  */
 //@{
 /**
@@ -4756,13 +5278,13 @@ GLE_API bool isGL_HP_texture_lighting();
 GLE_API bool isGL_IBM_cull_vertex();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_IBM_multimode_draw_arrays
- *	Extension number in OpenGL registry : 200
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/IBM/multimode_draw_arrays.txt
- *	@ingroup GL_IBM
+ * @defgroup GL_IBM_multimode_draw_arrays GL_IBM_multimode_draw_arrays
+ * Extension number in OpenGL registry : 200
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/IBM/multimode_draw_arrays.txt
+ * @ingroup g_GL_IBM g_extensions
  */
 //@{
 /**
@@ -4782,13 +5304,13 @@ GLE_API void glMultiModeDrawArraysIBM( const GLenum *mode, const GLint *first, c
 GLE_API void glMultiModeDrawElementsIBM( const GLenum *mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, GLint modestride );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_IBM_rasterpos_clip
- *	Extension number in OpenGL registry : 110
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/IBM/rasterpos_clip.txt
- *	@ingroup GL_IBM
+ * @defgroup GL_IBM_rasterpos_clip GL_IBM_rasterpos_clip
+ * Extension number in OpenGL registry : 110
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/IBM/rasterpos_clip.txt
+ * @ingroup g_GL_IBM g_extensions
  */
 //@{
 /**
@@ -4798,13 +5320,13 @@ GLE_API void glMultiModeDrawElementsIBM( const GLenum *mode, const GLsizei *coun
 GLE_API bool isGL_IBM_rasterpos_clip();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_IBM_texture_mirrored_repeat
- *	Extension number in OpenGL registry : 224
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/IBM/texture_mirrored_repeat.txt
- *	@ingroup GL_IBM
+ * @defgroup GL_IBM_texture_mirrored_repeat GL_IBM_texture_mirrored_repeat
+ * Extension number in OpenGL registry : 224
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/IBM/texture_mirrored_repeat.txt
+ * @ingroup g_GL_IBM g_extensions
  */
 //@{
 /**
@@ -4814,13 +5336,13 @@ GLE_API bool isGL_IBM_rasterpos_clip();
 GLE_API bool isGL_IBM_texture_mirrored_repeat();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_IBM_vertex_array_lists
- *	Extension number in OpenGL registry : 201
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/IBM/vertex_array_lists.txt
- *	@ingroup GL_IBM
+ * @defgroup GL_IBM_vertex_array_lists GL_IBM_vertex_array_lists
+ * Extension number in OpenGL registry : 201
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/IBM/vertex_array_lists.txt
+ * @ingroup g_GL_IBM g_extensions
  */
 //@{
 /**
@@ -4873,9 +5395,9 @@ GLE_API void glVertexPointerListIBM( GLint size, GLenum type, GLint stride, cons
 
 			
 /**	
- * @name GL_INGR_blend_func_separate
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_INGR_blend_func_separate GL_INGR_blend_func_separate
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -4890,13 +5412,13 @@ GLE_API bool isGL_INGR_blend_func_separate();
 GLE_API void glBlendFuncSeparateINGR( GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_INGR_color_clamp
- *	Extension number in OpenGL registry : 174
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/INGR/color_clamp.txt
- *	@ingroup GL_INGR
+ * @defgroup GL_INGR_color_clamp GL_INGR_color_clamp
+ * Extension number in OpenGL registry : 174
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/INGR/color_clamp.txt
+ * @ingroup g_GL_INGR g_extensions
  */
 //@{
 /**
@@ -4906,13 +5428,13 @@ GLE_API void glBlendFuncSeparateINGR( GLenum sfactorRGB, GLenum dfactorRGB, GLen
 GLE_API bool isGL_INGR_color_clamp();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_INGR_interlace_read
- *	Extension number in OpenGL registry : 175
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/INGR/interlace_read.txt
- *	@ingroup GL_INGR
+ * @defgroup GL_INGR_interlace_read GL_INGR_interlace_read
+ * Extension number in OpenGL registry : 175
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/INGR/interlace_read.txt
+ * @ingroup g_GL_INGR g_extensions
  */
 //@{
 /**
@@ -4925,9 +5447,9 @@ GLE_API bool isGL_INGR_interlace_read();
 
 			
 /**	
- * @name GL_INGR_palette_buffer
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_INGR_palette_buffer GL_INGR_palette_buffer
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -4937,13 +5459,13 @@ GLE_API bool isGL_INGR_interlace_read();
 GLE_API bool isGL_INGR_palette_buffer();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_INTEL_parallel_arrays
- *	Extension number in OpenGL registry : 136
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/INTEL/parallel_arrays.txt
- *	@ingroup GL_INTEL
+ * @defgroup GL_INTEL_parallel_arrays GL_INTEL_parallel_arrays
+ * Extension number in OpenGL registry : 136
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/INTEL/parallel_arrays.txt
+ * @ingroup g_GL_INTEL g_extensions
  */
 //@{
 /**
@@ -4973,13 +5495,13 @@ GLE_API void glColorPointervINTEL( GLint size, GLenum type, const GLvoid* *point
 GLE_API void glTexCoordPointervINTEL( GLint size, GLenum type, const GLvoid* *pointer );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_INTEL_texture_scissor
- *	Extension number in OpenGL registry : 135
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/INTEL/texture_scissor.txt
- *	@ingroup GL_INTEL
+ * @defgroup GL_INTEL_texture_scissor GL_INTEL_texture_scissor
+ * Extension number in OpenGL registry : 135
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/INTEL/texture_scissor.txt
+ * @ingroup g_GL_INTEL g_extensions
  */
 //@{
 /**
@@ -4989,13 +5511,29 @@ GLE_API void glTexCoordPointervINTEL( GLint size, GLenum type, const GLvoid* *po
 GLE_API bool isGL_INTEL_texture_scissor();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_MESA_pack_invert
- *	Extension number in OpenGL registry : 300
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/MESA/pack_invert.txt
- *	@ingroup GL_MESA
+ * @defgroup GL_MESAX_texture_stack GL_MESAX_texture_stack
+ * Extension number in OpenGL registry : 318
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/MESAX/texture_stack.txt
+ * @ingroup g_GL_MESAX g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_MESAX_texture_stack is supported.
+ * @return Returns \c true if \b GL_MESAX_texture_stack is supported, false otherwise.
+ */
+GLE_API bool isGL_MESAX_texture_stack();
+
+//@}
+
+
+/**
+ * @defgroup GL_MESA_pack_invert GL_MESA_pack_invert
+ * Extension number in OpenGL registry : 300
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/MESA/pack_invert.txt
+ * @ingroup g_GL_MESA g_extensions
  */
 //@{
 /**
@@ -5005,13 +5543,13 @@ GLE_API bool isGL_INTEL_texture_scissor();
 GLE_API bool isGL_MESA_pack_invert();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_MESA_resize_buffers
- *	Extension number in OpenGL registry : 196
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/MESA/resize_buffers.txt
- *	@ingroup GL_MESA
+ * @defgroup GL_MESA_resize_buffers GL_MESA_resize_buffers
+ * Extension number in OpenGL registry : 196
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/MESA/resize_buffers.txt
+ * @ingroup g_GL_MESA g_extensions
  */
 //@{
 /**
@@ -5026,13 +5564,13 @@ GLE_API bool isGL_MESA_resize_buffers();
 GLE_API void glResizeBuffersMESA( void );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_MESA_window_pos
- *	Extension number in OpenGL registry : 197
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/MESA/window_pos.txt
- *	@ingroup GL_MESA
+ * @defgroup GL_MESA_window_pos GL_MESA_window_pos
+ * Extension number in OpenGL registry : 197
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/MESA/window_pos.txt
+ * @ingroup g_GL_MESA g_extensions
  */
 //@{
 /**
@@ -5162,13 +5700,13 @@ GLE_API void glWindowPos4sMESA( GLshort x, GLshort y, GLshort z, GLshort w );
 GLE_API void glWindowPos4svMESA( const GLshort *v );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_MESA_ycbcr_texture
- *	Extension number in OpenGL registry : 301
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/MESA/ycbcr_texture.txt
- *	@ingroup GL_MESA
+ * @defgroup GL_MESA_ycbcr_texture GL_MESA_ycbcr_texture
+ * Extension number in OpenGL registry : 301
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/MESA/ycbcr_texture.txt
+ * @ingroup g_GL_MESA g_extensions
  */
 //@{
 /**
@@ -5178,13 +5716,13 @@ GLE_API void glWindowPos4svMESA( const GLshort *v );
 GLE_API bool isGL_MESA_ycbcr_texture();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_blend_square
- *	Extension number in OpenGL registry : 194
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/blend_square.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_blend_square GL_NV_blend_square
+ * Extension number in OpenGL registry : 194
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/blend_square.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5194,13 +5732,13 @@ GLE_API bool isGL_MESA_ycbcr_texture();
 GLE_API bool isGL_NV_blend_square();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_copy_depth_to_color
- *	Extension number in OpenGL registry : 243
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/copy_depth_to_color.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_copy_depth_to_color GL_NV_copy_depth_to_color
+ * Extension number in OpenGL registry : 243
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/copy_depth_to_color.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5210,13 +5748,44 @@ GLE_API bool isGL_NV_blend_square();
 GLE_API bool isGL_NV_copy_depth_to_color();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_depth_clamp
- *	Extension number in OpenGL registry : 260
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/depth_clamp.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_depth_buffer_float GL_NV_depth_buffer_float
+ * Extension number in OpenGL registry : 334
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/depth_buffer_float.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_depth_buffer_float is supported.
+ * @return Returns \c true if \b GL_NV_depth_buffer_float is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_depth_buffer_float();
+
+/**
+ * @brief void glDepthRangedNV( GLdouble zNear, GLdouble zFar );
+ */
+GLE_API void glDepthRangedNV( GLdouble zNear, GLdouble zFar );
+
+/**
+ * @brief void glClearDepthdNV( GLdouble depth );
+ */
+GLE_API void glClearDepthdNV( GLdouble depth );
+
+/**
+ * @brief void glDepthBoundsdNV( GLdouble zmin, GLdouble zmax );
+ */
+GLE_API void glDepthBoundsdNV( GLdouble zmin, GLdouble zmax );
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_depth_clamp GL_NV_depth_clamp
+ * Extension number in OpenGL registry : 260
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/depth_clamp.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5226,13 +5795,13 @@ GLE_API bool isGL_NV_copy_depth_to_color();
 GLE_API bool isGL_NV_depth_clamp();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_evaluators
- *	Extension number in OpenGL registry : 225
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/evaluators.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_evaluators GL_NV_evaluators
+ * Extension number in OpenGL registry : 225
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/evaluators.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5287,13 +5856,13 @@ GLE_API void glGetMapAttribParameterfvNV( GLenum target, GLuint index, GLenum pn
 GLE_API void glEvalMapsNV( GLenum target, GLenum mode );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_fence
- *	Extension number in OpenGL registry : 222
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/fence.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_fence GL_NV_fence
+ * Extension number in OpenGL registry : 222
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/fence.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5338,13 +5907,13 @@ GLE_API void glFinishFenceNV( GLuint fence );
 GLE_API void glSetFenceNV( GLuint fence, GLenum condition );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_float_buffer
- *	Extension number in OpenGL registry : 281
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/float_buffer.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_float_buffer GL_NV_float_buffer
+ * Extension number in OpenGL registry : 281
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/float_buffer.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5354,13 +5923,13 @@ GLE_API void glSetFenceNV( GLuint fence, GLenum condition );
 GLE_API bool isGL_NV_float_buffer();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_fog_distance
- *	Extension number in OpenGL registry : 192
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/fog_distance.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_fog_distance GL_NV_fog_distance
+ * Extension number in OpenGL registry : 192
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/fog_distance.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5370,13 +5939,13 @@ GLE_API bool isGL_NV_float_buffer();
 GLE_API bool isGL_NV_fog_distance();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_fragment_program
- *	Extension number in OpenGL registry : 282
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/fragment_program.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_fragment_program GL_NV_fragment_program
+ * Extension number in OpenGL registry : 282
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/fragment_program.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5416,13 +5985,13 @@ GLE_API void glGetProgramNamedParameterfvNV( GLuint id, GLsizei len, const GLuby
 GLE_API void glGetProgramNamedParameterdvNV( GLuint id, GLsizei len, const GLubyte *name, GLdouble *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_fragment_program2
- *	Extension number in OpenGL registry : 304
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/fragment_program2.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_fragment_program2 GL_NV_fragment_program2
+ * Extension number in OpenGL registry : 304
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/fragment_program2.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5432,13 +6001,29 @@ GLE_API void glGetProgramNamedParameterdvNV( GLuint id, GLsizei len, const GLuby
 GLE_API bool isGL_NV_fragment_program2();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_fragment_program_option
- *	Extension number in OpenGL registry : 303
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/fragment_program_option.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_fragment_program4 GL_NV_fragment_program4
+ * Extension number in OpenGL registry : 335
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/fragment_program4.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_fragment_program4 is supported.
+ * @return Returns \c true if \b GL_NV_fragment_program4 is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_fragment_program4();
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_fragment_program_option GL_NV_fragment_program_option
+ * Extension number in OpenGL registry : 303
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/fragment_program_option.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5448,13 +6033,182 @@ GLE_API bool isGL_NV_fragment_program2();
 GLE_API bool isGL_NV_fragment_program_option();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_half_float
- *	Extension number in OpenGL registry : 283
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/half_float.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_framebuffer_multisample_coverage GL_NV_framebuffer_multisample_coverage
+ * Extension number in OpenGL registry : 336
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/framebuffer_multisample_coverage.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_framebuffer_multisample_coverage is supported.
+ * @return Returns \c true if \b GL_NV_framebuffer_multisample_coverage is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_framebuffer_multisample_coverage();
+
+/**
+ * @brief void glRenderbufferStorageMultisampleCoverageNV( GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height );
+ */
+GLE_API void glRenderbufferStorageMultisampleCoverageNV( GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height );
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_geometry_program4 GL_NV_geometry_program4
+ * Extension number in OpenGL registry : 323
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/geometry_program4.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_geometry_program4 is supported.
+ * @return Returns \c true if \b GL_NV_geometry_program4 is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_geometry_program4();
+
+/**
+ * @brief void glProgramVertexLimitNV( GLenum target, GLint limit );
+ */
+GLE_API void glProgramVertexLimitNV( GLenum target, GLint limit );
+
+/**
+ * @brief void glFramebufferTextureEXT( GLenum target, GLenum attachment, GLuint texture, GLint level );
+ */
+GLE_API void glFramebufferTextureEXT( GLenum target, GLenum attachment, GLuint texture, GLint level );
+
+/**
+ * @brief void glFramebufferTextureLayerEXT( GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer );
+ */
+GLE_API void glFramebufferTextureLayerEXT( GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer );
+
+/**
+ * @brief void glFramebufferTextureFaceEXT( GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face );
+ */
+GLE_API void glFramebufferTextureFaceEXT( GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face );
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_geometry_shader4 GL_NV_geometry_shader4
+ * Extension number in OpenGL registry : 338
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/geometry_shader4.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_geometry_shader4 is supported.
+ * @return Returns \c true if \b GL_NV_geometry_shader4 is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_geometry_shader4();
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_gpu_program4 GL_NV_gpu_program4
+ * Extension number in OpenGL registry : 322
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/gpu_program4.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_gpu_program4 is supported.
+ * @return Returns \c true if \b GL_NV_gpu_program4 is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_gpu_program4();
+
+/**
+ * @brief void glProgramLocalParameterI4iNV( GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w );
+ */
+GLE_API void glProgramLocalParameterI4iNV( GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w );
+
+/**
+ * @brief void glProgramLocalParameterI4ivNV( GLenum target, GLuint index, const GLint *params );
+ */
+GLE_API void glProgramLocalParameterI4ivNV( GLenum target, GLuint index, const GLint *params );
+
+/**
+ * @brief void glProgramLocalParametersI4ivNV( GLenum target, GLuint index, GLsizei count, const GLint *params );
+ */
+GLE_API void glProgramLocalParametersI4ivNV( GLenum target, GLuint index, GLsizei count, const GLint *params );
+
+/**
+ * @brief void glProgramLocalParameterI4uiNV( GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+ */
+GLE_API void glProgramLocalParameterI4uiNV( GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+
+/**
+ * @brief void glProgramLocalParameterI4uivNV( GLenum target, GLuint index, const GLuint *params );
+ */
+GLE_API void glProgramLocalParameterI4uivNV( GLenum target, GLuint index, const GLuint *params );
+
+/**
+ * @brief void glProgramLocalParametersI4uivNV( GLenum target, GLuint index, GLsizei count, const GLuint *params );
+ */
+GLE_API void glProgramLocalParametersI4uivNV( GLenum target, GLuint index, GLsizei count, const GLuint *params );
+
+/**
+ * @brief void glProgramEnvParameterI4iNV( GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w );
+ */
+GLE_API void glProgramEnvParameterI4iNV( GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w );
+
+/**
+ * @brief void glProgramEnvParameterI4ivNV( GLenum target, GLuint index, const GLint *params );
+ */
+GLE_API void glProgramEnvParameterI4ivNV( GLenum target, GLuint index, const GLint *params );
+
+/**
+ * @brief void glProgramEnvParametersI4ivNV( GLenum target, GLuint index, GLsizei count, const GLint *params );
+ */
+GLE_API void glProgramEnvParametersI4ivNV( GLenum target, GLuint index, GLsizei count, const GLint *params );
+
+/**
+ * @brief void glProgramEnvParameterI4uiNV( GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+ */
+GLE_API void glProgramEnvParameterI4uiNV( GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+
+/**
+ * @brief void glProgramEnvParameterI4uivNV( GLenum target, GLuint index, const GLuint *params );
+ */
+GLE_API void glProgramEnvParameterI4uivNV( GLenum target, GLuint index, const GLuint *params );
+
+/**
+ * @brief void glProgramEnvParametersI4uivNV( GLenum target, GLuint index, GLsizei count, const GLuint *params );
+ */
+GLE_API void glProgramEnvParametersI4uivNV( GLenum target, GLuint index, GLsizei count, const GLuint *params );
+
+/**
+ * @brief void glGetProgramLocalParameterIivNV( GLenum target, GLuint index, GLint *params );
+ */
+GLE_API void glGetProgramLocalParameterIivNV( GLenum target, GLuint index, GLint *params );
+
+/**
+ * @brief void glGetProgramLocalParameterIuivNV( GLenum target, GLuint index, GLuint *params );
+ */
+GLE_API void glGetProgramLocalParameterIuivNV( GLenum target, GLuint index, GLuint *params );
+
+/**
+ * @brief void glGetProgramEnvParameterIivNV( GLenum target, GLuint index, GLint *params );
+ */
+GLE_API void glGetProgramEnvParameterIivNV( GLenum target, GLuint index, GLint *params );
+
+/**
+ * @brief void glGetProgramEnvParameterIuivNV( GLenum target, GLuint index, GLuint *params );
+ */
+GLE_API void glGetProgramEnvParameterIuivNV( GLenum target, GLuint index, GLuint *params );
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_half_float GL_NV_half_float
+ * Extension number in OpenGL registry : 283
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/half_float.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5694,13 +6448,13 @@ GLE_API void glVertexAttribs3hvNV( GLuint index, GLsizei n, const GLhalfNV *v );
 GLE_API void glVertexAttribs4hvNV( GLuint index, GLsizei n, const GLhalfNV *v );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_light_max_exponent
- *	Extension number in OpenGL registry : 189
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/light_max_exponent.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_light_max_exponent GL_NV_light_max_exponent
+ * Extension number in OpenGL registry : 189
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/light_max_exponent.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5710,13 +6464,13 @@ GLE_API void glVertexAttribs4hvNV( GLuint index, GLsizei n, const GLhalfNV *v );
 GLE_API bool isGL_NV_light_max_exponent();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_multisample_filter_hint
- *	Extension number in OpenGL registry : 259
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/multisample_filter_hint.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_multisample_filter_hint GL_NV_multisample_filter_hint
+ * Extension number in OpenGL registry : 259
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/multisample_filter_hint.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5726,13 +6480,13 @@ GLE_API bool isGL_NV_light_max_exponent();
 GLE_API bool isGL_NV_multisample_filter_hint();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_occlusion_query
- *	Extension number in OpenGL registry : 261
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/occlusion_query.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_occlusion_query GL_NV_occlusion_query
+ * Extension number in OpenGL registry : 261
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/occlusion_query.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5777,13 +6531,13 @@ GLE_API void glGetOcclusionQueryivNV( GLuint id, GLenum pname, GLint *params );
 GLE_API void glGetOcclusionQueryuivNV( GLuint id, GLenum pname, GLuint *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_packed_depth_stencil
- *	Extension number in OpenGL registry : 226
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/packed_depth_stencil.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_packed_depth_stencil GL_NV_packed_depth_stencil
+ * Extension number in OpenGL registry : 226
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/packed_depth_stencil.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5793,13 +6547,44 @@ GLE_API void glGetOcclusionQueryuivNV( GLuint id, GLenum pname, GLuint *params )
 GLE_API bool isGL_NV_packed_depth_stencil();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_pixel_data_range
- *	Extension number in OpenGL registry : 284
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/pixel_data_range.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_parameter_buffer_object GL_NV_parameter_buffer_object
+ * Extension number in OpenGL registry : 339
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/parameter_buffer_object.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_parameter_buffer_object is supported.
+ * @return Returns \c true if \b GL_NV_parameter_buffer_object is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_parameter_buffer_object();
+
+/**
+ * @brief void glProgramBufferParametersfvNV( GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLfloat *params );
+ */
+GLE_API void glProgramBufferParametersfvNV( GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLfloat *params );
+
+/**
+ * @brief void glProgramBufferParametersIivNV( GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLint *params );
+ */
+GLE_API void glProgramBufferParametersIivNV( GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLint *params );
+
+/**
+ * @brief void glProgramBufferParametersIuivNV( GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLuint *params );
+ */
+GLE_API void glProgramBufferParametersIuivNV( GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLuint *params );
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_pixel_data_range GL_NV_pixel_data_range
+ * Extension number in OpenGL registry : 284
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/pixel_data_range.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5819,13 +6604,13 @@ GLE_API void glPixelDataRangeNV( GLenum target, GLsizei length, GLvoid *pointer 
 GLE_API void glFlushPixelDataRangeNV( GLenum target );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_point_sprite
- *	Extension number in OpenGL registry : 262
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/point_sprite.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_point_sprite GL_NV_point_sprite
+ * Extension number in OpenGL registry : 262
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/point_sprite.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5845,13 +6630,13 @@ GLE_API void glPointParameteriNV( GLenum pname, GLint param );
 GLE_API void glPointParameterivNV( GLenum pname, const GLint *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_primitive_restart
- *	Extension number in OpenGL registry : 285
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/primitive_restart.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_primitive_restart GL_NV_primitive_restart
+ * Extension number in OpenGL registry : 285
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/primitive_restart.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5871,13 +6656,13 @@ GLE_API void glPrimitiveRestartNV( void );
 GLE_API void glPrimitiveRestartIndexNV( GLuint index );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_register_combiners
- *	Extension number in OpenGL registry : 191
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/register_combiners.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_register_combiners GL_NV_register_combiners
+ * Extension number in OpenGL registry : 191
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/register_combiners.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5952,13 +6737,13 @@ GLE_API void glGetFinalCombinerInputParameterfvNV( GLenum variable, GLenum pname
 GLE_API void glGetFinalCombinerInputParameterivNV( GLenum variable, GLenum pname, GLint *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_register_combiners2
- *	Extension number in OpenGL registry : 227
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/register_combiners2.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_register_combiners2 GL_NV_register_combiners2
+ * Extension number in OpenGL registry : 227
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/register_combiners2.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5978,13 +6763,13 @@ GLE_API void glCombinerStageParameterfvNV( GLenum stage, GLenum pname, const GLf
 GLE_API void glGetCombinerStageParameterfvNV( GLenum stage, GLenum pname, GLfloat *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_texgen_emboss
- *	Extension number in OpenGL registry : 193
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/texgen_emboss.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_texgen_emboss GL_NV_texgen_emboss
+ * Extension number in OpenGL registry : 193
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/texgen_emboss.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -5994,13 +6779,13 @@ GLE_API void glGetCombinerStageParameterfvNV( GLenum stage, GLenum pname, GLfloa
 GLE_API bool isGL_NV_texgen_emboss();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_texgen_reflection
- *	Extension number in OpenGL registry : 179
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/texgen_reflection.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_texgen_reflection GL_NV_texgen_reflection
+ * Extension number in OpenGL registry : 179
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/texgen_reflection.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6010,13 +6795,13 @@ GLE_API bool isGL_NV_texgen_emboss();
 GLE_API bool isGL_NV_texgen_reflection();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_texture_compression_vtc
- *	Extension number in OpenGL registry : 228
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/texture_compression_vtc.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_texture_compression_vtc GL_NV_texture_compression_vtc
+ * Extension number in OpenGL registry : 228
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/texture_compression_vtc.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6026,13 +6811,13 @@ GLE_API bool isGL_NV_texgen_reflection();
 GLE_API bool isGL_NV_texture_compression_vtc();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_texture_env_combine4
- *	Extension number in OpenGL registry : 195
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/texture_env_combine4.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_texture_env_combine4 GL_NV_texture_env_combine4
+ * Extension number in OpenGL registry : 195
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/texture_env_combine4.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6042,13 +6827,13 @@ GLE_API bool isGL_NV_texture_compression_vtc();
 GLE_API bool isGL_NV_texture_env_combine4();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_texture_expand_normal
- *	Extension number in OpenGL registry : 286
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/texture_expand_normal.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_texture_expand_normal GL_NV_texture_expand_normal
+ * Extension number in OpenGL registry : 286
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/texture_expand_normal.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6058,13 +6843,13 @@ GLE_API bool isGL_NV_texture_env_combine4();
 GLE_API bool isGL_NV_texture_expand_normal();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_texture_rectangle
- *	Extension number in OpenGL registry : 229
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/texture_rectangle.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_texture_rectangle GL_NV_texture_rectangle
+ * Extension number in OpenGL registry : 229
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/texture_rectangle.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6074,13 +6859,13 @@ GLE_API bool isGL_NV_texture_expand_normal();
 GLE_API bool isGL_NV_texture_rectangle();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_texture_shader
- *	Extension number in OpenGL registry : 230
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/texture_shader.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_texture_shader GL_NV_texture_shader
+ * Extension number in OpenGL registry : 230
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/texture_shader.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6090,13 +6875,13 @@ GLE_API bool isGL_NV_texture_rectangle();
 GLE_API bool isGL_NV_texture_shader();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_texture_shader2
- *	Extension number in OpenGL registry : 231
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/texture_shader2.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_texture_shader2 GL_NV_texture_shader2
+ * Extension number in OpenGL registry : 231
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/texture_shader2.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6106,13 +6891,13 @@ GLE_API bool isGL_NV_texture_shader();
 GLE_API bool isGL_NV_texture_shader2();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_texture_shader3
- *	Extension number in OpenGL registry : 265
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/texture_shader3.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_texture_shader3 GL_NV_texture_shader3
+ * Extension number in OpenGL registry : 265
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/texture_shader3.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6122,13 +6907,84 @@ GLE_API bool isGL_NV_texture_shader2();
 GLE_API bool isGL_NV_texture_shader3();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_vertex_array_range
- *	Extension number in OpenGL registry : 190
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/vertex_array_range.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_transform_feedback GL_NV_transform_feedback
+ * Extension number in OpenGL registry : 341
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/transform_feedback.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_transform_feedback is supported.
+ * @return Returns \c true if \b GL_NV_transform_feedback is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_transform_feedback();
+
+/**
+ * @brief void glBeginTransformFeedbackNV( GLenum primitiveMode );
+ */
+GLE_API void glBeginTransformFeedbackNV( GLenum primitiveMode );
+
+/**
+ * @brief void glEndTransformFeedbackNV( void );
+ */
+GLE_API void glEndTransformFeedbackNV( void );
+
+/**
+ * @brief void glTransformFeedbackAttribsNV( GLuint count, const GLint *attribs, GLenum bufferMode );
+ */
+GLE_API void glTransformFeedbackAttribsNV( GLuint count, const GLint *attribs, GLenum bufferMode );
+
+/**
+ * @brief void glBindBufferRangeNV( GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size );
+ */
+GLE_API void glBindBufferRangeNV( GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size );
+
+/**
+ * @brief void glBindBufferOffsetNV( GLenum target, GLuint index, GLuint buffer, GLintptr offset );
+ */
+GLE_API void glBindBufferOffsetNV( GLenum target, GLuint index, GLuint buffer, GLintptr offset );
+
+/**
+ * @brief void glBindBufferBaseNV( GLenum target, GLuint index, GLuint buffer );
+ */
+GLE_API void glBindBufferBaseNV( GLenum target, GLuint index, GLuint buffer );
+
+/**
+ * @brief void glTransformFeedbackVaryingsNV( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode );
+ */
+GLE_API void glTransformFeedbackVaryingsNV( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode );
+
+/**
+ * @brief void glActiveVaryingNV( GLuint program, const GLchar *name );
+ */
+GLE_API void glActiveVaryingNV( GLuint program, const GLchar *name );
+
+/**
+ * @brief GLint glGetVaryingLocationNV( GLuint program, const GLchar *name );
+ */
+GLE_API GLint glGetVaryingLocationNV( GLuint program, const GLchar *name );
+
+/**
+ * @brief void glGetActiveVaryingNV( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
+ */
+GLE_API void glGetActiveVaryingNV( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
+
+/**
+ * @brief void glGetTransformFeedbackVaryingNV( GLuint program, GLuint index, GLint *location );
+ */
+GLE_API void glGetTransformFeedbackVaryingNV( GLuint program, GLuint index, GLint *location );
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_vertex_array_range GL_NV_vertex_array_range
+ * Extension number in OpenGL registry : 190
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/vertex_array_range.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6148,13 +7004,13 @@ GLE_API void glFlushVertexArrayRangeNV( void );
 GLE_API void glVertexArrayRangeNV( GLsizei length, const GLvoid *pointer );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_vertex_array_range2
- *	Extension number in OpenGL registry : 232
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/vertex_array_range2.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_vertex_array_range2 GL_NV_vertex_array_range2
+ * Extension number in OpenGL registry : 232
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/vertex_array_range2.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6164,13 +7020,13 @@ GLE_API void glVertexArrayRangeNV( GLsizei length, const GLvoid *pointer );
 GLE_API bool isGL_NV_vertex_array_range2();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_vertex_program
- *	Extension number in OpenGL registry : 233
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/vertex_program.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_vertex_program GL_NV_vertex_program
+ * Extension number in OpenGL registry : 233
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/vertex_program.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6500,13 +7356,13 @@ GLE_API void glVertexAttribs4svNV( GLuint index, GLsizei count, const GLshort *v
 GLE_API void glVertexAttribs4ubvNV( GLuint index, GLsizei count, const GLubyte *v );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_vertex_program1_1
- *	Extension number in OpenGL registry : 266
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/vertex_program1_1.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_vertex_program1_1 GL_NV_vertex_program1_1
+ * Extension number in OpenGL registry : 266
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/vertex_program1_1.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6516,13 +7372,13 @@ GLE_API void glVertexAttribs4ubvNV( GLuint index, GLsizei count, const GLubyte *
 GLE_API bool isGL_NV_vertex_program1_1();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_vertex_program2
- *	Extension number in OpenGL registry : 287
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/vertex_program2.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_vertex_program2 GL_NV_vertex_program2
+ * Extension number in OpenGL registry : 287
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/vertex_program2.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6532,13 +7388,13 @@ GLE_API bool isGL_NV_vertex_program1_1();
 GLE_API bool isGL_NV_vertex_program2();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_vertex_program2_option
- *	Extension number in OpenGL registry : 305
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/vertex_program2_option.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_vertex_program2_option GL_NV_vertex_program2_option
+ * Extension number in OpenGL registry : 305
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/vertex_program2_option.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6548,13 +7404,13 @@ GLE_API bool isGL_NV_vertex_program2();
 GLE_API bool isGL_NV_vertex_program2_option();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_NV_vertex_program3
- *	Extension number in OpenGL registry : 306
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/NV/vertex_program3.txt
- *	@ingroup GL_NV
+ * @defgroup GL_NV_vertex_program3 GL_NV_vertex_program3
+ * Extension number in OpenGL registry : 306
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/vertex_program3.txt
+ * @ingroup g_GL_NV g_extensions
  */
 //@{
 /**
@@ -6564,13 +7420,144 @@ GLE_API bool isGL_NV_vertex_program2_option();
 GLE_API bool isGL_NV_vertex_program3();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_OES_read_format
- *	Extension number in OpenGL registry : 295
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/OES/read_format.txt
- *	@ingroup GL_OES
+ * @defgroup GL_NV_vertex_program4 GL_NV_vertex_program4
+ * Extension number in OpenGL registry : 325
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/vertex_program4.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_vertex_program4 is supported.
+ * @return Returns \c true if \b GL_NV_vertex_program4 is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_vertex_program4();
+
+/**
+ * @brief void glVertexAttribI1iEXT( GLuint index, GLint x );
+ */
+GLE_API void glVertexAttribI1iEXT( GLuint index, GLint x );
+
+/**
+ * @brief void glVertexAttribI2iEXT( GLuint index, GLint x, GLint y );
+ */
+GLE_API void glVertexAttribI2iEXT( GLuint index, GLint x, GLint y );
+
+/**
+ * @brief void glVertexAttribI3iEXT( GLuint index, GLint x, GLint y, GLint z );
+ */
+GLE_API void glVertexAttribI3iEXT( GLuint index, GLint x, GLint y, GLint z );
+
+/**
+ * @brief void glVertexAttribI4iEXT( GLuint index, GLint x, GLint y, GLint z, GLint w );
+ */
+GLE_API void glVertexAttribI4iEXT( GLuint index, GLint x, GLint y, GLint z, GLint w );
+
+/**
+ * @brief void glVertexAttribI1uiEXT( GLuint index, GLuint x );
+ */
+GLE_API void glVertexAttribI1uiEXT( GLuint index, GLuint x );
+
+/**
+ * @brief void glVertexAttribI2uiEXT( GLuint index, GLuint x, GLuint y );
+ */
+GLE_API void glVertexAttribI2uiEXT( GLuint index, GLuint x, GLuint y );
+
+/**
+ * @brief void glVertexAttribI3uiEXT( GLuint index, GLuint x, GLuint y, GLuint z );
+ */
+GLE_API void glVertexAttribI3uiEXT( GLuint index, GLuint x, GLuint y, GLuint z );
+
+/**
+ * @brief void glVertexAttribI4uiEXT( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+ */
+GLE_API void glVertexAttribI4uiEXT( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+
+/**
+ * @brief void glVertexAttribI1ivEXT( GLuint index, const GLint *v );
+ */
+GLE_API void glVertexAttribI1ivEXT( GLuint index, const GLint *v );
+
+/**
+ * @brief void glVertexAttribI2ivEXT( GLuint index, const GLint *v );
+ */
+GLE_API void glVertexAttribI2ivEXT( GLuint index, const GLint *v );
+
+/**
+ * @brief void glVertexAttribI3ivEXT( GLuint index, const GLint *v );
+ */
+GLE_API void glVertexAttribI3ivEXT( GLuint index, const GLint *v );
+
+/**
+ * @brief void glVertexAttribI4ivEXT( GLuint index, const GLint *v );
+ */
+GLE_API void glVertexAttribI4ivEXT( GLuint index, const GLint *v );
+
+/**
+ * @brief void glVertexAttribI1uivEXT( GLuint index, const GLuint *v );
+ */
+GLE_API void glVertexAttribI1uivEXT( GLuint index, const GLuint *v );
+
+/**
+ * @brief void glVertexAttribI2uivEXT( GLuint index, const GLuint *v );
+ */
+GLE_API void glVertexAttribI2uivEXT( GLuint index, const GLuint *v );
+
+/**
+ * @brief void glVertexAttribI3uivEXT( GLuint index, const GLuint *v );
+ */
+GLE_API void glVertexAttribI3uivEXT( GLuint index, const GLuint *v );
+
+/**
+ * @brief void glVertexAttribI4uivEXT( GLuint index, const GLuint *v );
+ */
+GLE_API void glVertexAttribI4uivEXT( GLuint index, const GLuint *v );
+
+/**
+ * @brief void glVertexAttribI4bvEXT( GLuint index, const GLbyte *v );
+ */
+GLE_API void glVertexAttribI4bvEXT( GLuint index, const GLbyte *v );
+
+/**
+ * @brief void glVertexAttribI4svEXT( GLuint index, const GLshort *v );
+ */
+GLE_API void glVertexAttribI4svEXT( GLuint index, const GLshort *v );
+
+/**
+ * @brief void glVertexAttribI4ubvEXT( GLuint index, const GLubyte *v );
+ */
+GLE_API void glVertexAttribI4ubvEXT( GLuint index, const GLubyte *v );
+
+/**
+ * @brief void glVertexAttribI4usvEXT( GLuint index, const GLushort *v );
+ */
+GLE_API void glVertexAttribI4usvEXT( GLuint index, const GLushort *v );
+
+/**
+ * @brief void glVertexAttribIPointerEXT( GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+ */
+GLE_API void glVertexAttribIPointerEXT( GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+
+/**
+ * @brief void glGetVertexAttribIivEXT( GLuint index, GLenum pname, GLint *params );
+ */
+GLE_API void glGetVertexAttribIivEXT( GLuint index, GLenum pname, GLint *params );
+
+/**
+ * @brief void glGetVertexAttribIuivEXT( GLuint index, GLenum pname, GLuint *params );
+ */
+GLE_API void glGetVertexAttribIuivEXT( GLuint index, GLenum pname, GLuint *params );
+
+//@}
+
+
+/**
+ * @defgroup GL_OES_read_format GL_OES_read_format
+ * Extension number in OpenGL registry : 295
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/OES/read_format.txt
+ * @ingroup g_GL_OES g_extensions
  */
 //@{
 /**
@@ -6580,13 +7567,13 @@ GLE_API bool isGL_NV_vertex_program3();
 GLE_API bool isGL_OES_read_format();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_OML_interlace
- *	Extension number in OpenGL registry : 239
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/OML/interlace.txt
- *	@ingroup GL_OML
+ * @defgroup GL_OML_interlace GL_OML_interlace
+ * Extension number in OpenGL registry : 239
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/OML/interlace.txt
+ * @ingroup g_GL_OML g_extensions
  */
 //@{
 /**
@@ -6596,13 +7583,13 @@ GLE_API bool isGL_OES_read_format();
 GLE_API bool isGL_OML_interlace();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_OML_resample
- *	Extension number in OpenGL registry : 241
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/OML/resample.txt
- *	@ingroup GL_OML
+ * @defgroup GL_OML_resample GL_OML_resample
+ * Extension number in OpenGL registry : 241
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/OML/resample.txt
+ * @ingroup g_GL_OML g_extensions
  */
 //@{
 /**
@@ -6612,13 +7599,13 @@ GLE_API bool isGL_OML_interlace();
 GLE_API bool isGL_OML_resample();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_OML_subsample
- *	Extension number in OpenGL registry : 240
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/OML/subsample.txt
- *	@ingroup GL_OML
+ * @defgroup GL_OML_subsample GL_OML_subsample
+ * Extension number in OpenGL registry : 240
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/OML/subsample.txt
+ * @ingroup g_GL_OML g_extensions
  */
 //@{
 /**
@@ -6628,13 +7615,13 @@ GLE_API bool isGL_OML_resample();
 GLE_API bool isGL_OML_subsample();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_PGI_misc_hints
- *	Extension number in OpenGL registry : 77
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/PGI/misc_hints.txt
- *	@ingroup GL_PGI
+ * @defgroup GL_PGI_misc_hints GL_PGI_misc_hints
+ * Extension number in OpenGL registry : 77
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/PGI/misc_hints.txt
+ * @ingroup g_GL_PGI g_extensions
  */
 //@{
 /**
@@ -6649,13 +7636,13 @@ GLE_API bool isGL_PGI_misc_hints();
 GLE_API void glHintPGI( GLenum target, GLint mode );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_PGI_vertex_hints
- *	Extension number in OpenGL registry : 76
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/PGI/vertex_hints.txt
- *	@ingroup GL_PGI
+ * @defgroup GL_PGI_vertex_hints GL_PGI_vertex_hints
+ * Extension number in OpenGL registry : 76
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/PGI/vertex_hints.txt
+ * @ingroup g_GL_PGI g_extensions
  */
 //@{
 /**
@@ -6665,13 +7652,13 @@ GLE_API void glHintPGI( GLenum target, GLint mode );
 GLE_API bool isGL_PGI_vertex_hints();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_REND_screen_coordinates
- *	Extension number in OpenGL registry : 155
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/REND/screen_coordinates.txt
- *	@ingroup GL_REND
+ * @defgroup GL_REND_screen_coordinates GL_REND_screen_coordinates
+ * Extension number in OpenGL registry : 155
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/REND/screen_coordinates.txt
+ * @ingroup g_GL_REND g_extensions
  */
 //@{
 /**
@@ -6681,13 +7668,13 @@ GLE_API bool isGL_PGI_vertex_hints();
 GLE_API bool isGL_REND_screen_coordinates();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_S3_s3tc
- *	Extension number in OpenGL registry : 276
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/S3/s3tc.txt
- *	@ingroup GL_S3
+ * @defgroup GL_S3_s3tc GL_S3_s3tc
+ * Extension number in OpenGL registry : 276
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/S3/s3tc.txt
+ * @ingroup g_GL_S3 g_extensions
  */
 //@{
 /**
@@ -6697,13 +7684,13 @@ GLE_API bool isGL_REND_screen_coordinates();
 GLE_API bool isGL_S3_s3tc();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIS_detail_texture
- *	Extension number in OpenGL registry : 21
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIS/detail_texture.txt
- *	@ingroup GL_SGIS
+ * @defgroup GL_SGIS_detail_texture GL_SGIS_detail_texture
+ * Extension number in OpenGL registry : 21
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIS/detail_texture.txt
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
 /**
@@ -6723,13 +7710,13 @@ GLE_API void glDetailTexFuncSGIS( GLenum target, GLsizei n, const GLfloat *point
 GLE_API void glGetDetailTexFuncSGIS( GLenum target, GLfloat *points );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIS_fog_function
- *	Extension number in OpenGL registry : 64
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIS/fog_func.txt
- *	@ingroup GL_SGIS
+ * @defgroup GL_SGIS_fog_function GL_SGIS_fog_function
+ * Extension number in OpenGL registry : 64
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIS/fog_func.txt
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
 /**
@@ -6749,13 +7736,13 @@ GLE_API void glFogFuncSGIS( GLsizei n, const GLfloat *points );
 GLE_API void glGetFogFuncSGIS( GLfloat *points );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIS_generate_mipmap
- *	Extension number in OpenGL registry : 32
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIS/generate_mipmap.txt
- *	@ingroup GL_SGIS
+ * @defgroup GL_SGIS_generate_mipmap GL_SGIS_generate_mipmap
+ * Extension number in OpenGL registry : 32
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIS/generate_mipmap.txt
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
 /**
@@ -6765,13 +7752,13 @@ GLE_API void glGetFogFuncSGIS( GLfloat *points );
 GLE_API bool isGL_SGIS_generate_mipmap();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIS_multisample
- *	Extension number in OpenGL registry : 25
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIS/multisample.txt
- *	@ingroup GL_SGIS
+ * @defgroup GL_SGIS_multisample GL_SGIS_multisample
+ * Extension number in OpenGL registry : 25
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIS/multisample.txt
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
 /**
@@ -6791,13 +7778,13 @@ GLE_API void glSampleMaskSGIS( GLclampf value, GLboolean invert );
 GLE_API void glSamplePatternSGIS( GLenum pattern );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIS_pixel_texture
- *	Extension number in OpenGL registry : 15
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIS/pixel_texture.txt
- *	@ingroup GL_SGIS
+ * @defgroup GL_SGIS_pixel_texture GL_SGIS_pixel_texture
+ * Extension number in OpenGL registry : 15
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIS/pixel_texture.txt
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
 /**
@@ -6840,9 +7827,9 @@ GLE_API void glGetPixelTexGenParameterfvSGIS( GLenum pname, GLfloat *params );
 
 			
 /**	
- * @name GL_SGIS_point_line_texgen
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIS_point_line_texgen GL_SGIS_point_line_texgen
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -6855,9 +7842,9 @@ GLE_API bool isGL_SGIS_point_line_texgen();
 
 			
 /**	
- * @name GL_SGIS_point_parameters
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIS_point_parameters GL_SGIS_point_parameters
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -6877,13 +7864,13 @@ GLE_API void glPointParameterfSGIS( GLenum pname, GLfloat param );
 GLE_API void glPointParameterfvSGIS( GLenum pname, const GLfloat *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIS_sharpen_texture
- *	Extension number in OpenGL registry : 22
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIS/sharpen_texture.txt
- *	@ingroup GL_SGIS
+ * @defgroup GL_SGIS_sharpen_texture GL_SGIS_sharpen_texture
+ * Extension number in OpenGL registry : 22
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIS/sharpen_texture.txt
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
 /**
@@ -6903,13 +7890,13 @@ GLE_API void glSharpenTexFuncSGIS( GLenum target, GLsizei n, const GLfloat *poin
 GLE_API void glGetSharpenTexFuncSGIS( GLenum target, GLfloat *points );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIS_texture4D
- *	Extension number in OpenGL registry : 16
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIS/texture4D.txt
- *	@ingroup GL_SGIS
+ * @defgroup GL_SGIS_texture4D GL_SGIS_texture4D
+ * Extension number in OpenGL registry : 16
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIS/texture4D.txt
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
 /**
@@ -6929,13 +7916,13 @@ GLE_API void glTexImage4DSGIS( GLenum target, GLint level, GLenum internalformat
 GLE_API void glTexSubImage4DSGIS( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint woffset, GLsizei width, GLsizei height, GLsizei depth, GLsizei size4d, GLenum format, GLenum type, const GLvoid *pixels );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIS_texture_border_clamp
- *	Extension number in OpenGL registry : 36
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIS/texture_border_clamp.txt
- *	@ingroup GL_SGIS
+ * @defgroup GL_SGIS_texture_border_clamp GL_SGIS_texture_border_clamp
+ * Extension number in OpenGL registry : 36
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIS/texture_border_clamp.txt
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
 /**
@@ -6945,13 +7932,13 @@ GLE_API void glTexSubImage4DSGIS( GLenum target, GLint level, GLint xoffset, GLi
 GLE_API bool isGL_SGIS_texture_border_clamp();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIS_texture_color_mask
- *	Extension number in OpenGL registry : 214
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIS/texture_color_mask.txt
- *	@ingroup GL_SGIS
+ * @defgroup GL_SGIS_texture_color_mask GL_SGIS_texture_color_mask
+ * Extension number in OpenGL registry : 214
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIS/texture_color_mask.txt
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
 /**
@@ -6966,13 +7953,13 @@ GLE_API bool isGL_SGIS_texture_color_mask();
 GLE_API void glTextureColorMaskSGIS( GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIS_texture_edge_clamp
- *	Extension number in OpenGL registry : 35
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIS/texture_edge_clamp.txt
- *	@ingroup GL_SGIS
+ * @defgroup GL_SGIS_texture_edge_clamp GL_SGIS_texture_edge_clamp
+ * Extension number in OpenGL registry : 35
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIS/texture_edge_clamp.txt
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
 /**
@@ -6982,13 +7969,13 @@ GLE_API void glTextureColorMaskSGIS( GLboolean red, GLboolean green, GLboolean b
 GLE_API bool isGL_SGIS_texture_edge_clamp();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIS_texture_filter4
- *	Extension number in OpenGL registry : 7
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIS/texture_filter4.txt
- *	@ingroup GL_SGIS
+ * @defgroup GL_SGIS_texture_filter4 GL_SGIS_texture_filter4
+ * Extension number in OpenGL registry : 7
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIS/texture_filter4.txt
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
 /**
@@ -7008,13 +7995,13 @@ GLE_API void glGetTexFilterFuncSGIS( GLenum target, GLenum filter, GLfloat *weig
 GLE_API void glTexFilterFuncSGIS( GLenum target, GLenum filter, GLsizei n, const GLfloat *weights );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIS_texture_lod
- *	Extension number in OpenGL registry : 24
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIS/texture_lod.txt
- *	@ingroup GL_SGIS
+ * @defgroup GL_SGIS_texture_lod GL_SGIS_texture_lod
+ * Extension number in OpenGL registry : 24
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIS/texture_lod.txt
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
 /**
@@ -7024,13 +8011,13 @@ GLE_API void glTexFilterFuncSGIS( GLenum target, GLenum filter, GLsizei n, const
 GLE_API bool isGL_SGIS_texture_lod();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIS_texture_select
- *	Extension number in OpenGL registry : 51
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIS/texture_select.txt
- *	@ingroup GL_SGIS
+ * @defgroup GL_SGIS_texture_select GL_SGIS_texture_select
+ * Extension number in OpenGL registry : 51
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIS/texture_select.txt
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
 /**
@@ -7040,13 +8027,13 @@ GLE_API bool isGL_SGIS_texture_lod();
 GLE_API bool isGL_SGIS_texture_select();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_async
- *	Extension number in OpenGL registry : 132
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/async.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_async GL_SGIX_async
+ * Extension number in OpenGL registry : 132
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/async.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7086,13 +8073,13 @@ GLE_API void glDeleteAsyncMarkersSGIX( GLuint marker, GLsizei range );
 GLE_API GLboolean glIsAsyncMarkerSGIX( GLuint marker );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_async_histogram
- *	Extension number in OpenGL registry : 134
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/async_histogram.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_async_histogram GL_SGIX_async_histogram
+ * Extension number in OpenGL registry : 134
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/async_histogram.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7102,13 +8089,13 @@ GLE_API GLboolean glIsAsyncMarkerSGIX( GLuint marker );
 GLE_API bool isGL_SGIX_async_histogram();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_async_pixel
- *	Extension number in OpenGL registry : 133
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/async_pixel.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_async_pixel GL_SGIX_async_pixel
+ * Extension number in OpenGL registry : 133
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/async_pixel.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7118,13 +8105,13 @@ GLE_API bool isGL_SGIX_async_histogram();
 GLE_API bool isGL_SGIX_async_pixel();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_blend_alpha_minmax
- *	Extension number in OpenGL registry : 119
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/blend_alpha_minmax.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_blend_alpha_minmax GL_SGIX_blend_alpha_minmax
+ * Extension number in OpenGL registry : 119
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/blend_alpha_minmax.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7137,9 +8124,9 @@ GLE_API bool isGL_SGIX_blend_alpha_minmax();
 
 			
 /**	
- * @name GL_SGIX_calligraphic_fragment
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_calligraphic_fragment GL_SGIX_calligraphic_fragment
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7149,13 +8136,13 @@ GLE_API bool isGL_SGIX_blend_alpha_minmax();
 GLE_API bool isGL_SGIX_calligraphic_fragment();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_clipmap
- *	Extension number in OpenGL registry : 33
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/clipmap.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_clipmap GL_SGIX_clipmap
+ * Extension number in OpenGL registry : 33
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/clipmap.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7168,9 +8155,9 @@ GLE_API bool isGL_SGIX_clipmap();
 
 			
 /**	
- * @name GL_SGIX_convolution_accuracy
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_convolution_accuracy GL_SGIX_convolution_accuracy
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7183,9 +8170,9 @@ GLE_API bool isGL_SGIX_convolution_accuracy();
 
 			
 /**	
- * @name GL_SGIX_depth_pass_instrument
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_depth_pass_instrument GL_SGIX_depth_pass_instrument
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7195,13 +8182,13 @@ GLE_API bool isGL_SGIX_convolution_accuracy();
 GLE_API bool isGL_SGIX_depth_pass_instrument();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_depth_texture
- *	Extension number in OpenGL registry : 63
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/depth_texture.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_depth_texture GL_SGIX_depth_texture
+ * Extension number in OpenGL registry : 63
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/depth_texture.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7211,13 +8198,13 @@ GLE_API bool isGL_SGIX_depth_pass_instrument();
 GLE_API bool isGL_SGIX_depth_texture();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_flush_raster
- *	Extension number in OpenGL registry : 61
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/flush_raster.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_flush_raster GL_SGIX_flush_raster
+ * Extension number in OpenGL registry : 61
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/flush_raster.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7232,13 +8219,13 @@ GLE_API bool isGL_SGIX_flush_raster();
 GLE_API void glFlushRasterSGIX( void );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_fog_offset
- *	Extension number in OpenGL registry : 65
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/fog_offset.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_fog_offset GL_SGIX_fog_offset
+ * Extension number in OpenGL registry : 65
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/fog_offset.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7251,9 +8238,9 @@ GLE_API bool isGL_SGIX_fog_offset();
 
 			
 /**	
- * @name GL_SGIX_fog_scale
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_fog_scale GL_SGIX_fog_scale
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7266,9 +8253,9 @@ GLE_API bool isGL_SGIX_fog_scale();
 
 			
 /**	
- * @name GL_SGIX_fragment_lighting
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_fragment_lighting GL_SGIX_fragment_lighting
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7368,13 +8355,13 @@ GLE_API void glGetFragmentMaterialivSGIX( GLenum face, GLenum pname, GLint *para
 GLE_API void glLightEnviSGIX( GLenum pname, GLint param );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_framezoom
- *	Extension number in OpenGL registry : 57
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/framezoom.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_framezoom GL_SGIX_framezoom
+ * Extension number in OpenGL registry : 57
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/framezoom.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7392,9 +8379,9 @@ GLE_API void glFrameZoomSGIX( GLint factor );
 
 			
 /**	
- * @name GL_SGIX_igloo_interface
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_igloo_interface GL_SGIX_igloo_interface
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7412,9 +8399,9 @@ GLE_API void glIglooInterfaceSGIX( GLenum pname, const GLvoid *params );
 
 			
 /**	
- * @name GL_SGIX_impact_pixel_texture
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_impact_pixel_texture GL_SGIX_impact_pixel_texture
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7424,13 +8411,13 @@ GLE_API void glIglooInterfaceSGIX( GLenum pname, const GLvoid *params );
 GLE_API bool isGL_SGIX_impact_pixel_texture();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_instruments
- *	Extension number in OpenGL registry : 55
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/instruments.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_instruments GL_SGIX_instruments
+ * Extension number in OpenGL registry : 55
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/instruments.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7470,13 +8457,13 @@ GLE_API void glStartInstrumentsSGIX( void );
 GLE_API void glStopInstrumentsSGIX( GLint marker );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_interlace
- *	Extension number in OpenGL registry : 45
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/interlace.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_interlace GL_SGIX_interlace
+ * Extension number in OpenGL registry : 45
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/interlace.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7486,13 +8473,13 @@ GLE_API void glStopInstrumentsSGIX( GLint marker );
 GLE_API bool isGL_SGIX_interlace();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_ir_instrument1
- *	Extension number in OpenGL registry : 81
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/ir_instrument1.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_ir_instrument1 GL_SGIX_ir_instrument1
+ * Extension number in OpenGL registry : 81
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/ir_instrument1.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7502,13 +8489,13 @@ GLE_API bool isGL_SGIX_interlace();
 GLE_API bool isGL_SGIX_ir_instrument1();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_list_priority
- *	Extension number in OpenGL registry : 80
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/list_priority.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_list_priority GL_SGIX_list_priority
+ * Extension number in OpenGL registry : 80
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/list_priority.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7548,13 +8535,13 @@ GLE_API void glListParameteriSGIX( GLuint list, GLenum pname, GLint param );
 GLE_API void glListParameterivSGIX( GLuint list, GLenum pname, const GLint *params );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_pixel_texture
- *	Extension number in OpenGL registry : 15a
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/sgix_pixel_texture.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_pixel_texture GL_SGIX_pixel_texture
+ * Extension number in OpenGL registry : 15a
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/sgix_pixel_texture.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7572,9 +8559,9 @@ GLE_API void glPixelTexGenSGIX( GLenum mode );
 
 			
 /**	
- * @name GL_SGIX_pixel_tiles
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_pixel_tiles GL_SGIX_pixel_tiles
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7587,9 +8574,9 @@ GLE_API bool isGL_SGIX_pixel_tiles();
 
 			
 /**	
- * @name GL_SGIX_polynomial_ffd
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_polynomial_ffd GL_SGIX_polynomial_ffd
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7619,13 +8606,13 @@ GLE_API void glDeformSGIX( GLbitfield mask );
 GLE_API void glLoadIdentityDeformationMapSGIX( GLbitfield mask );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_reference_plane
- *	Extension number in OpenGL registry : 60
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/reference_plane.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_reference_plane GL_SGIX_reference_plane
+ * Extension number in OpenGL registry : 60
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/reference_plane.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7640,13 +8627,13 @@ GLE_API bool isGL_SGIX_reference_plane();
 GLE_API void glReferencePlaneSGIX( const GLdouble *equation );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_resample
- *	Extension number in OpenGL registry : 212
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/resample.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_resample GL_SGIX_resample
+ * Extension number in OpenGL registry : 212
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/resample.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7659,9 +8646,9 @@ GLE_API bool isGL_SGIX_resample();
 
 			
 /**	
- * @name GL_SGIX_scalebias_hint
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_scalebias_hint GL_SGIX_scalebias_hint
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7671,13 +8658,13 @@ GLE_API bool isGL_SGIX_resample();
 GLE_API bool isGL_SGIX_scalebias_hint();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_shadow
- *	Extension number in OpenGL registry : 34
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/shadow.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_shadow GL_SGIX_shadow
+ * Extension number in OpenGL registry : 34
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/shadow.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7687,13 +8674,13 @@ GLE_API bool isGL_SGIX_scalebias_hint();
 GLE_API bool isGL_SGIX_shadow();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_shadow_ambient
- *	Extension number in OpenGL registry : 90
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/shadow_ambient.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_shadow_ambient GL_SGIX_shadow_ambient
+ * Extension number in OpenGL registry : 90
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/shadow_ambient.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7703,13 +8690,13 @@ GLE_API bool isGL_SGIX_shadow();
 GLE_API bool isGL_SGIX_shadow_ambient();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_sprite
- *	Extension number in OpenGL registry : 52
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/sprite.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_sprite GL_SGIX_sprite
+ * Extension number in OpenGL registry : 52
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/sprite.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7742,9 +8729,9 @@ GLE_API void glSpriteParameterivSGIX( GLenum pname, const GLint *params );
 
 			
 /**	
- * @name GL_SGIX_subsample
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_subsample GL_SGIX_subsample
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7754,13 +8741,13 @@ GLE_API void glSpriteParameterivSGIX( GLenum pname, const GLint *params );
 GLE_API bool isGL_SGIX_subsample();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_tag_sample_buffer
- *	Extension number in OpenGL registry : 58
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/tag_sample_buffer.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_tag_sample_buffer GL_SGIX_tag_sample_buffer
+ * Extension number in OpenGL registry : 58
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/tag_sample_buffer.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7775,13 +8762,13 @@ GLE_API bool isGL_SGIX_tag_sample_buffer();
 GLE_API void glTagSampleBufferSGIX( void );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_texture_add_env
- *	Extension number in OpenGL registry : 69
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/texture_env_add.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_texture_add_env GL_SGIX_texture_add_env
+ * Extension number in OpenGL registry : 69
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/texture_env_add.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7791,13 +8778,13 @@ GLE_API void glTagSampleBufferSGIX( void );
 GLE_API bool isGL_SGIX_texture_add_env();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_texture_coordinate_clamp
- *	Extension number in OpenGL registry : 235
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/texture_coordinate_clamp.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_texture_coordinate_clamp GL_SGIX_texture_coordinate_clamp
+ * Extension number in OpenGL registry : 235
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/texture_coordinate_clamp.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7807,13 +8794,13 @@ GLE_API bool isGL_SGIX_texture_add_env();
 GLE_API bool isGL_SGIX_texture_coordinate_clamp();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_texture_lod_bias
- *	Extension number in OpenGL registry : 84
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/texture_lod_bias.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_texture_lod_bias GL_SGIX_texture_lod_bias
+ * Extension number in OpenGL registry : 84
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/texture_lod_bias.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7823,13 +8810,13 @@ GLE_API bool isGL_SGIX_texture_coordinate_clamp();
 GLE_API bool isGL_SGIX_texture_lod_bias();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_texture_multi_buffer
- *	Extension number in OpenGL registry : 53
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/texture_multi_buffer.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_texture_multi_buffer GL_SGIX_texture_multi_buffer
+ * Extension number in OpenGL registry : 53
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/texture_multi_buffer.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7839,13 +8826,13 @@ GLE_API bool isGL_SGIX_texture_lod_bias();
 GLE_API bool isGL_SGIX_texture_multi_buffer();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_texture_scale_bias
- *	Extension number in OpenGL registry : 56
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/texture_scale_bias.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_texture_scale_bias GL_SGIX_texture_scale_bias
+ * Extension number in OpenGL registry : 56
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/texture_scale_bias.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7858,9 +8845,9 @@ GLE_API bool isGL_SGIX_texture_scale_bias();
 
 			
 /**	
- * @name GL_SGIX_texture_select
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_texture_select GL_SGIX_texture_select
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7870,13 +8857,13 @@ GLE_API bool isGL_SGIX_texture_scale_bias();
 GLE_API bool isGL_SGIX_texture_select();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_vertex_preclip
- *	Extension number in OpenGL registry : 210
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/vertex_preclip.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_vertex_preclip GL_SGIX_vertex_preclip
+ * Extension number in OpenGL registry : 210
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/vertex_preclip.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7886,13 +8873,13 @@ GLE_API bool isGL_SGIX_texture_select();
 GLE_API bool isGL_SGIX_vertex_preclip();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGIX_ycrcb
- *	Extension number in OpenGL registry : 101
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGIX/ycrcb.txt
- *	@ingroup GL_SGIX
+ * @defgroup GL_SGIX_ycrcb GL_SGIX_ycrcb
+ * Extension number in OpenGL registry : 101
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/ycrcb.txt
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
 /**
@@ -7905,9 +8892,9 @@ GLE_API bool isGL_SGIX_ycrcb();
 
 			
 /**	
- * @name GL_SGIX_ycrcb_subsample
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_ycrcb_subsample GL_SGIX_ycrcb_subsample
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7920,9 +8907,9 @@ GLE_API bool isGL_SGIX_ycrcb_subsample();
 
 			
 /**	
- * @name GL_SGIX_ycrcba
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGIX_ycrcba GL_SGIX_ycrcba
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -7932,13 +8919,13 @@ GLE_API bool isGL_SGIX_ycrcb_subsample();
 GLE_API bool isGL_SGIX_ycrcba();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGI_color_matrix
- *	Extension number in OpenGL registry : 13
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGI/color_matrix.txt
- *	@ingroup GL_SGI
+ * @defgroup GL_SGI_color_matrix GL_SGI_color_matrix
+ * Extension number in OpenGL registry : 13
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGI/color_matrix.txt
+ * @ingroup g_GL_SGI g_extensions
  */
 //@{
 /**
@@ -7948,13 +8935,13 @@ GLE_API bool isGL_SGIX_ycrcba();
 GLE_API bool isGL_SGI_color_matrix();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGI_color_table
- *	Extension number in OpenGL registry : 14
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGI/color_table.txt
- *	@ingroup GL_SGI
+ * @defgroup GL_SGI_color_table GL_SGI_color_table
+ * Extension number in OpenGL registry : 14
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGI/color_table.txt
+ * @ingroup g_GL_SGI g_extensions
  */
 //@{
 /**
@@ -8002,9 +8989,9 @@ GLE_API void glGetColorTableParameterivSGI( GLenum target, GLenum pname, GLint *
 
 			
 /**	
- * @name GL_SGI_depth_pass_instrument
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+ * @defgroup GL_SGI_depth_pass_instrument GL_SGI_depth_pass_instrument
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -8014,13 +9001,13 @@ GLE_API void glGetColorTableParameterivSGI( GLenum target, GLenum pname, GLint *
 GLE_API bool isGL_SGI_depth_pass_instrument();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SGI_texture_color_table
- *	Extension number in OpenGL registry : 17
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SGI/texture_color_table.txt
- *	@ingroup GL_SGI
+ * @defgroup GL_SGI_texture_color_table GL_SGI_texture_color_table
+ * Extension number in OpenGL registry : 17
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGI/texture_color_table.txt
+ * @ingroup g_GL_SGI g_extensions
  */
 //@{
 /**
@@ -8030,13 +9017,13 @@ GLE_API bool isGL_SGI_depth_pass_instrument();
 GLE_API bool isGL_SGI_texture_color_table();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SUNX_constant_data
- *	Extension number in OpenGL registry : 163
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SUNX/constant_data.txt
- *	@ingroup GL_SUNX
+ * @defgroup GL_SUNX_constant_data GL_SUNX_constant_data
+ * Extension number in OpenGL registry : 163
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SUNX/constant_data.txt
+ * @ingroup g_GL_SUNX g_extensions
  */
 //@{
 /**
@@ -8051,13 +9038,13 @@ GLE_API bool isGL_SUNX_constant_data();
 GLE_API void glFinishTextureSUNX( void );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SUN_convolution_border_modes
- *	Extension number in OpenGL registry : 182
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SUN/convolution_border_modes.txt
- *	@ingroup GL_SUN
+ * @defgroup GL_SUN_convolution_border_modes GL_SUN_convolution_border_modes
+ * Extension number in OpenGL registry : 182
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SUN/convolution_border_modes.txt
+ * @ingroup g_GL_SUN g_extensions
  */
 //@{
 /**
@@ -8067,13 +9054,13 @@ GLE_API void glFinishTextureSUNX( void );
 GLE_API bool isGL_SUN_convolution_border_modes();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SUN_global_alpha
- *	Extension number in OpenGL registry : 164
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SUN/global_alpha.txt
- *	@ingroup GL_SUN
+ * @defgroup GL_SUN_global_alpha GL_SUN_global_alpha
+ * Extension number in OpenGL registry : 164
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SUN/global_alpha.txt
+ * @ingroup g_GL_SUN g_extensions
  */
 //@{
 /**
@@ -8123,13 +9110,13 @@ GLE_API void glGlobalAlphaFactorusSUN( GLushort factor );
 GLE_API void glGlobalAlphaFactoruiSUN( GLuint factor );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SUN_mesh_array
- *	Extension number in OpenGL registry : 257
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SUN/mesh_array.txt
- *	@ingroup GL_SUN
+ * @defgroup GL_SUN_mesh_array GL_SUN_mesh_array
+ * Extension number in OpenGL registry : 257
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SUN/mesh_array.txt
+ * @ingroup g_GL_SUN g_extensions
  */
 //@{
 /**
@@ -8144,13 +9131,13 @@ GLE_API bool isGL_SUN_mesh_array();
 GLE_API void glDrawMeshArraysSUN( GLenum mode, GLint first, GLsizei count, GLsizei width );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SUN_slice_accum
- *	Extension number in OpenGL registry : 258
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SUN/slice_accum.txt
- *	@ingroup GL_SUN
+ * @defgroup GL_SUN_slice_accum GL_SUN_slice_accum
+ * Extension number in OpenGL registry : 258
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SUN/slice_accum.txt
+ * @ingroup g_GL_SUN g_extensions
  */
 //@{
 /**
@@ -8160,13 +9147,13 @@ GLE_API void glDrawMeshArraysSUN( GLenum mode, GLint first, GLsizei count, GLsiz
 GLE_API bool isGL_SUN_slice_accum();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SUN_triangle_list
- *	Extension number in OpenGL registry : 165
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SUN/triangle_list.txt
- *	@ingroup GL_SUN
+ * @defgroup GL_SUN_triangle_list GL_SUN_triangle_list
+ * Extension number in OpenGL registry : 165
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SUN/triangle_list.txt
+ * @ingroup g_GL_SUN g_extensions
  */
 //@{
 /**
@@ -8211,13 +9198,13 @@ GLE_API void glReplacementCodeubvSUN( const GLubyte *code );
 GLE_API void glReplacementCodePointerSUN( GLenum type, GLsizei stride, const GLvoid* *pointer );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_SUN_vertex
- *	Extension number in OpenGL registry : 166
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/SUN/vertex.txt
- *	@ingroup GL_SUN
+ * @defgroup GL_SUN_vertex GL_SUN_vertex
+ * Extension number in OpenGL registry : 166
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SUN/vertex.txt
+ * @ingroup g_GL_SUN g_extensions
  */
 //@{
 /**
@@ -8428,11 +9415,10 @@ GLE_API void glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN( const GLu
 
 //@}
 
-			
-/**	
- * @name GL_VERSION_1_2
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+
+/**
+ * @defgroup GL_VERSION_1_2 GL_VERSION_1_2
+ * @ingroup g_virtualExtensions
  */
 //@{
 /**
@@ -8633,11 +9619,10 @@ GLE_API void glCopyTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLi
 
 //@}
 
-			
-/**	
- * @name GL_VERSION_1_3
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+
+/**
+ * @defgroup GL_VERSION_1_3 GL_VERSION_1_3
+ * @ingroup g_virtualExtensions
  */
 //@{
 /**
@@ -8878,11 +9863,10 @@ GLE_API void glGetCompressedTexImage( GLenum target, GLint level, GLvoid *img );
 
 //@}
 
-			
-/**	
- * @name GL_VERSION_1_4
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+
+/**
+ * @defgroup GL_VERSION_1_4 GL_VERSION_1_4
+ * @ingroup g_virtualExtensions
  */
 //@{
 /**
@@ -9118,11 +10102,10 @@ GLE_API void glWindowPos3sv( const GLshort *v );
 
 //@}
 
-			
-/**	
- * @name GL_VERSION_1_5
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+
+/**
+ * @defgroup GL_VERSION_1_5 GL_VERSION_1_5
+ * @ingroup g_virtualExtensions
  */
 //@{
 /**
@@ -9228,11 +10211,10 @@ GLE_API void glGetBufferPointerv( GLenum target, GLenum pname, GLvoid* *params )
 
 //@}
 
-			
-/**	
- * @name GL_VERSION_2_0
- *	Extension not found in OpenGL extensions registry !!!
- *	@ingroup Not_in_OpenGL_Extension_Registry
+
+/**
+ * @defgroup GL_VERSION_2_0 GL_VERSION_2_0
+ * @ingroup g_virtualExtensions
  */
 //@{
 /**
@@ -9707,13 +10689,57 @@ GLE_API void glVertexAttrib4usv( GLuint index, const GLushort *v );
 GLE_API void glVertexAttribPointer( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid *pointer );
 
 //@}
-			
-			
+
+
 /**
- * @name GL_WIN_phong_shading
- *	Extension number in OpenGL registry : 113
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/WIN/phong_shading.txt
- *	@ingroup GL_WIN
+ * @defgroup GL_VERSION_2_1 GL_VERSION_2_1
+ * @ingroup g_virtualExtensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_VERSION_2_1 is supported.
+ * @return Returns \c true if \b GL_VERSION_2_1 is supported, false otherwise.
+ */
+GLE_API bool isGL_VERSION_2_1();
+
+/**
+ * @brief void glUniformMatrix2x3fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ */
+GLE_API void glUniformMatrix2x3fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+
+/**
+ * @brief void glUniformMatrix3x2fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ */
+GLE_API void glUniformMatrix3x2fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+
+/**
+ * @brief void glUniformMatrix2x4fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ */
+GLE_API void glUniformMatrix2x4fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+
+/**
+ * @brief void glUniformMatrix4x2fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ */
+GLE_API void glUniformMatrix4x2fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+
+/**
+ * @brief void glUniformMatrix3x4fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ */
+GLE_API void glUniformMatrix3x4fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+
+/**
+ * @brief void glUniformMatrix4x3fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ */
+GLE_API void glUniformMatrix4x3fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+
+//@}
+
+
+/**
+ * @defgroup GL_WIN_phong_shading GL_WIN_phong_shading
+ * Extension number in OpenGL registry : 113
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/WIN/phong_shading.txt
+ * @ingroup g_GL_WIN g_extensions
  */
 //@{
 /**
@@ -9723,13 +10749,13 @@ GLE_API void glVertexAttribPointer( GLuint index, GLint size, GLenum type, GLboo
 GLE_API bool isGL_WIN_phong_shading();
 
 //@}
-			
-			
+
+
 /**
- * @name GL_WIN_specular_fog
- *	Extension number in OpenGL registry : 114
- *	@sa OpenGL Extension Registry : http://oss.sgi.com/projects/ogl-sample/registry/WIN/specular_fog.txt
- *	@ingroup GL_WIN
+ * @defgroup GL_WIN_specular_fog GL_WIN_specular_fog
+ * Extension number in OpenGL registry : 114
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/WIN/specular_fog.txt
+ * @ingroup g_GL_WIN g_extensions
  */
 //@{
 /**

@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2007, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -24,13 +24,15 @@ namespace gle
  * 
  * Informations about current OpenGL implementation (version, extensions...) and errors could be retrieved.
  * 
- * @todo std::string OpenGLExtensions::getWExtensions( const int32 i32NumElementInExtensionsGroup ) for linux.
- * @todo const bool	isGLErrors( std::string& ) const; Like isGLError() but loop until OpenGL has no more error message.
+ * @todo move static method to gle namespace.
+ *
+ * @todo std::string OpenGLExtensions::getWExtensions( const int i32NumElementInExtensionsGroup ) for linux.
+ * @todo const bool isGLErrors( std::string& ) const; Like isGLError() but loop until OpenGL has no more error message.
  */
 struct GLE_API OpenGLExtensions
 {
 	/**
-	 * @name Constructor/Destructor.
+	 * @name Constructor/Destructor
 	 */
 	//@{
 
@@ -48,7 +50,7 @@ struct GLE_API OpenGLExtensions
 
 
 	/** 
-	 * @name Basic accessors.
+	 * @name Basic accessors
 	 */
 	//@{
 
@@ -87,7 +89,7 @@ struct GLE_API OpenGLExtensions
 	 * 
 	 * @return	a string containing all OpenGL extensions.
 	 */
-	static std::string	getExtensions( const uint32 numElementInExtensionsGroup = 0 );
+	static std::string	getExtensions( const int numElementInExtensionsGroup = 0 );
 	
 	/**
 	 * @brief Get some informations from OpenGL drivers.
@@ -103,7 +105,7 @@ struct GLE_API OpenGLExtensions
 	 * 
 	 * @return	a string containing all extensions returned by wglGetExtensionsStringARB or glx....
 	 */
-	static std::string	getWExtensions( const uint32 numElementInExtensionsGroup = 0 );
+	static std::string	getWExtensions( const int numElementInExtensionsGroup = 0 );
 
 	/**
 	 * @brief Get some informations from OpenGL drivers.
@@ -116,7 +118,7 @@ struct GLE_API OpenGLExtensions
 
 
 	/** 
-	 * @name Extended accessors.
+	 * @name Extended accessors
 	 */
 	//@{
 
@@ -138,7 +140,7 @@ struct GLE_API OpenGLExtensions
 
 
 	/** 
-	 * @name Display opengl informations.
+	 * @name Display opengl informations
 	 */
 	//@{
 
@@ -147,12 +149,12 @@ struct GLE_API OpenGLExtensions
 	 * 
 	 * @return a string with the informations.
 	 */
-	static std::string getInformations( const uint32 numElementInExtensionsGroup = 0 );
+	static std::string getInformations( const int numElementInExtensionsGroup = 0 );
 
 	//@}
 	
 	/**
-	 * @name Logging functions.
+	 * @name Logging functions
 	 */
 	//@{
 
@@ -168,7 +170,7 @@ struct GLE_API OpenGLExtensions
 	 * 
 	 * @param integer		the integer
 	 */
-	void log( const int32 integer );
+	void log( const int integer );
 	
 	/**
 	 * @brief Adds a string to the log and an end of line.
@@ -188,7 +190,7 @@ struct GLE_API OpenGLExtensions
 
 
 	/**
-	 * @name GL Errors managements.
+	 * @name GL Errors managements
 	 */
 	//@{
 
@@ -226,7 +228,7 @@ protected:
 	 * @param stringToProcess				the string to process.
 	 * @param skipNumElement				number of space that must be skipped before each replacement.
 	 */
-	static std::string replaceSpaceByEndl( const std::string& stringToProcess, const uint32 skipNumElement = 0 );
+	static std::string replaceSpaceByEndl( const std::string& stringToProcess, const int skipNumElement = 0 );
 
 	/**
 	 * @brief Split a string into a vector of string.

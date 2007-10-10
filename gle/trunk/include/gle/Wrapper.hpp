@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2007, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -10,21 +10,22 @@
 
 
 
-namespace gle
-{
-	struct OpenGLExtensionsGen;
-
-	struct GLE_API Wrapper
-	{
-		static gle::OpenGLExtensionsGen *m_current;
-	};
-}
+namespace gle { struct OpenGLExtensionsGen; }
 
 
 
-// API
-GLE_API void								gleSetCurrent( gle::OpenGLExtensionsGen *current );
+/**
+ * @brief Sets the current gle context
+ * 
+ * @param current	the gle context
+ */
+GLE_API void						gleSetCurrent( gle::OpenGLExtensionsGen *current );
 
+/**
+ * @brief Returns the current gle context
+ * 
+ * @return the gle context
+ */
 GLE_API gle::OpenGLExtensionsGen*	gleGetCurrent();
 
 
