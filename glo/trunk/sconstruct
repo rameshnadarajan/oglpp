@@ -2,4 +2,4 @@ import os
 sbf_root			= os.getenv('SCONS_BUILD_FRAMEWORK')
 sbf_root_normalized	= os.path.normpath( os.path.expandvars( sbf_root ) )
 SConscriptChdir(0)
-SConscript( sbf_root_normalized + os.sep + 'sconstruct' )
+SConscript( sbf_root_normalized + os.sep + 'sbfMain' )
