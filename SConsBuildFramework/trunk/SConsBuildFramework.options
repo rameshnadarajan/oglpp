@@ -1,3 +1,4 @@
+# global sbf settings
 svnUrls				= []
 svnCheckoutExclude	= []
 svnUpdateExclude	= []
@@ -7,6 +8,7 @@ cachePath			= ''
 cacheOn				= False
 config				= 'debug' # debug, release
 warningLevel		= 'normal'
+# project settings
 vcsUse				= 'yes' # no
 defines				= []
 type				= 'none'	# exec, static, shared, none

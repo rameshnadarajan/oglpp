@@ -1,4 +1,4 @@
-# SConsBuildFramework - Copyright (C) 2005, 2007, Nicolas Papier.
+# SConsBuildFramework - Copyright (C) 2005, 2007, 2008, Nicolas Papier.
 # Distributed under the terms of the GNU General Public License (GPL)
 # as published by the Free Software Foundation.
 # Author Nicolas Papier
@@ -12,46 +12,10 @@
 #								PySVN 1.5.2 for python 2.5 and svn 1.4.5 installation kit (py25-pysvn-svn145-1.5.2-872.exe)
 #						PySVN 1.4.2 for python 2.4 and svn 1.3.1 installation kit (py24-pysvn-svn131-1.4.2-640.exe)
 #	On Debian\testing: Package python2.4-svn (old one was 1.1.2-3, current one is 1.3.1-1+b1)														??? update and test on linux, MacOSX an unix/posix ???
-# o	On Windows platform, you must copy the file 'scons' from SConsBuildFramework distribution in a directory that is in your PATH.
-#	It's just a bridge to the scons.bat batch file that starts SCons in order to run SCons by typing 'scons' and not 'scons.bat'.
-#	The file 'scons.bat' installed by SCons in your Python/Scripts must be like 'scons' file in your PATH.
 # o	cygwin on windows platform ?
 #
 #
 #
-# SCONS_BUILD_FRAMEWORK environment variable
-# ----------------------------------------------------------
-#
-# SCONS_BUILD_FRAMEWORK environment variable must be set to the SConsBuildFramework root directory (i.e the directory that contains the file you are reading). It must be an absolute path.
-# Environment variables containing in SCONS_BUILD_FRAMEWORK variable are expended (if any). 
-# A wide range of path notations are supported, like redundant separators, up-level references, on windows forward or backward slashes.
-# But the cygwin notations, '/cygdrive/c/...', is not supported (by and only by this environment variable)
-# On Windows platform, execute one of the following command in bash shell (or sets the environment variables of the system) :
-# - export SCONS_BUILD_FRAMEWORK="D:\Dev\SConsBuildFramework" (this is the recommended notation with volume and backward slashes).
-# or
-# - export SCONS_BUILD_FRAMEWORK="D:/Dev/SConsBuildFramework"
-# or even
-# - export SCONS_BUILD_FRAMEWORK="D:\\Dev////SConsBuildFramework\\\"
-#
-# To check to whole SConsBuildFramework installation and print some informations about versions of available tools, executes 'scons sbfCheck' in SConsBuildFramework directory. 
-# This command checks the SCONS_BUILD_FRAMEWORK environment variable. See target sbfCheck description for more detailed informations.
-#
-#
-#
-# Configuration files descriptions
-# -----------------------------------
-#
-# In a configuration file, a path name could have different form :
-# - on windows system : 
-#	- the cygwin way '/cygdrive/C/temp/sbf/build' 
-#	- the windows way 'c:\\temp\\sbf\\build'
-# - on posix/unix and on macosx : '/home/me/sbf/build'
-# Environment variables containing in path name are expanded (like $HOME).
-#
-# 1. The main configuration file ($HOME/.SConsBuildFramework.options or $SCONS_BUILD_FRAMEWORK/SConsBuildFramework.options)
-#
-# The configuration of sbf is done by the file '.SConsBuildFramework.options' from your HOME directory. If this file is not present,
-# then configuration is done by the file 'SConsBuildFramework.options' from SCONS_BUILD_FRAMEWORK directory.
 #
 # @todo explains all options
 #
@@ -139,7 +103,7 @@ import string
 import sys
 
 from SCons.Script.SConscript import SConsEnvironment
-#import DumpEnv
+import DumpEnv
 
 
 
@@ -403,7 +367,7 @@ def sbfCheck(target = None, source = None, env = None) :
 			if ( not os.path.exists(sbf_root) ) :
 				print 'sbfError: SCONS_BUILD_FRAMEWORK is not an existing path'
 			else :
-				sbf_root_main = sbf_root_normalized + os.sep + 'sbfMain'
+				sbf_root_main = sbf_root_normalized + os.sep + 'sbfMain.py'
 				if ( os.path.exists( sbf_root_main ) ) :
 					print 'sbfInfo: SCONS_BUILD_FRAMEWORK is perfectly defined (existing path, well written and is the main directory of SConsBuildFramework)'
 				else :
@@ -601,6 +565,11 @@ class SConsBuildFramework :
 
 		self.my_Platform_myCC = '_' + self.myPlatform + '_' + self.myCC
 
+		# Adds support of Microsoft Manifest Tool for Visual Studio 2005 (cl8)
+		if self.myPlatform == 'win32' and self.myCC == 'cl8-0' :
+			env['LINKCOM'] = [env['LINKCOM'], 'mt.exe -nologo -manifest ${TARGET}.manifest -outputresource:$TARGET;1']
+			env['SHLINKCOM'] = [env['SHLINKCOM'], 'mt.exe -nologo -manifest ${TARGET}.manifest -outputresource:$TARGET;2']
+
 		#
 		self.initializeGlobalsFromEnv( env )
 
@@ -706,7 +675,12 @@ class SConsBuildFramework :
 		self.myCxxFlags		= ''
 		self.myCppPath		= [os.path.join(self.myProjectPathName, 'include')] + self.myGlobalCppPath
 		self.myLinkFlags	= ''
+#		print 'A:projectPathName', projectPathName
+#		print 'A:self.myLibPath init=', self.myLibPath
+#		print 'A:self.myGlobalLibPath=', self.myGlobalLibPath
 		self.myLibPath		= self.myGlobalLibPath
+#		print 'B:self.myLibPath init=', self.myLibPath
+#		print 'B:self.myGlobalLibPath=', self.myGlobalLibPath
 
 
 	###### Read a *.options file ######
@@ -742,7 +716,7 @@ class SConsBuildFramework :
 
 			('deps', 'Set dependencies to others projects (all dependencies are automatically built)'),
 
-			('uses', 'Set usage of some predefined libraries (boost1-33-1, boost=boost1-33-1, cairo1-2-6, cairo=cairo1-2-6, itk2-6, itk=itk2-6, ode, opengl, openil, openilu, glu, glut, sdl, wx2-6, wxgl2-6, wx2-8, wxgl2-8, wx=wx2-8, wxgl=wxgl2-8)'),
+			('uses', 'Set usage of some predefined libraries (boost1-33-1, boost=boost1-33-1, cairo1-2-6, cairo=cairo1-2-6, itk2-6, itk=itk2-6, ode, opengl, openil, openilu, glu, glut, sdl, sofa, wx2-6, wxgl2-6, wx2-8, wxgl2-8, wx=wx2-8, wxgl=wxgl2-8)'),
 			# (cg|cgFX|imageMagick6|imageMagick++6|itk)')
 			#ListOption(	'uses', 'Set usage of some predefined libraries', 'none',
 			#				['boost','ode', 'opengl','openil','glu','glut','wx2-4','wxgl2-4'] ), # (cg|cgFX|imageMagick6|imageMagick++6|itk)')	FIXME
@@ -755,16 +729,44 @@ class SConsBuildFramework :
 
 	###### configure CxxFlags & LinkFlags ######
 	def configureCxxFlagsAndLinkFlagsOnWin32( self, lenv ) :
-	
-		self.myCxxFlags += ' /nologo /GR /GX -DWIN32 -D_MBCS -DNOMINMAX '			### /W3
+
+		# Configures Microsoft Platform SDK for Windows Server 2003 R2 (TODO: should be done by scons...)
+		if '8' in lenv['MSVS']['VERSION'] :
+			#print 'self.myCppPath=', self.myCppPath
+			lenv.Append( CPPPATH = 'C:\\Program Files\\Microsoft Platform SDK for Windows Server 2003 R2\\Include' )
+			#self.myCppPath.append( 'C:\\Program Files\\Microsoft Platform SDK for Windows Server 2003 R2\\Include' )
+			#print 'self.myCppPath=', self.myCppPath
+			lenv.Append( LIBPATH = 'C:\\Program Files\\Microsoft Platform SDK for Windows Server 2003 R2\\Lib' )
+			#self.myLibPath.append( 'C:\\Program Files\\Microsoft Platform SDK for Windows Server 2003 R2\\Lib' )
+			self.myCxxFlags += ' /EHsc'	# /GX is deprecated in Visual C++ 2005
+		elif '7' in lenv['MSVS']['VERSION'] :
+			self.myCxxFlags += ' /GX'
+
+#		self.myCxxFlags += ' /nologo /GR -DWIN32 -D_MBCS -DNOMINMAX '			### /W3
+		self.myCxxFlags += ' /GR '									# Enable Run-Time Type Information
+		self.myCxxFlags += ' -DWIN32 -D_MBCS -DNOMINMAX ' 			# defines
 		if ( self.myConfig == 'release' ) :											### TODO: use /Zd in release mode to be able to debug a little.
 			self.myCxxFlags += ' -DNDEBUG /Zm600 /MD /O2 /TP '						### { /Gi ignored } and { /Og /Oi /Ot /Ob2 (in O2) }
 		else :
-			self.myCxxFlags += ' -D_DEBUG -DDEBUG /EHsc /MDd /Od'
-			if '7' in lenv['MSVS']['VERSION'] :
-				self.myCxxFlags += ' /Z7 '
-			else :
-				self.myCxxFlags += ' /Zi '
+#			self.myCxxFlags += ' -D_DEBUG -DDEBUG /EHsc /MDd /Od'
+			self.myCxxFlags += ' -D_DEBUG -DDEBUG'
+			self.myCxxFlags += ' /MDd /Od'
+			# Produces a program database (PDB) that contains type information and symbolic debugging information for use with the debugger. 
+			# The symbolic debugging information includes the names and types of variables, as well as functions and line numbers. 
+			# /ZI Produces a program database in a format that supports the Edit and Continue feature.
+			# /Gm Enable Minimal Rebuild.
+			#self.myCxxFlags += ' /ZI /Gm' TODO not compatible with parallel (-j) builds.
+
+			#if '8' in lenv['MSVS']['VERSION'] :
+				#self.myCxxFlags += ' /Gm ' # Enable Minimal Rebuild
+				#self.myCxxFlags += ' /Zi '
+			#else :
+			#	self.myCxxFlags += ' /Z7 '
+#			if '7' in lenv['MSVS']['VERSION'] :
+#				self.myCxxFlags += ' /Z7 '
+#			else :
+#				self.myCxxFlags += ' /Zi '
+
 		if ( self.myWarningLevel == 'normal' ) :									### TODO: it is dependent of the myConfig. Must be changed ? yes, do it...
 			self.myCxxFlags += ' /W3 '
 		else :
@@ -782,10 +784,10 @@ class SConsBuildFramework :
 		else :
 			if ( self.myType == 'shared' ) :
 				self.myCxxFlags	+= ' -D_USRDLL '
-				if '7' in lenv['MSVS']['VERSION'] :
-					self.myCxxFlags += ' /G7 '
-				else :
-					self.myCxxFlags += ' /GD '										## remove Boundchecker support.
+				#if '7' in lenv['MSVS']['VERSION'] :
+				#	self.myCxxFlags += ' /G7 '
+				#else :
+					#self.myCxxFlags += ' /GD '										## remove Boundchecker support.
 
 
 	def configureCxxFlagsAndLinkFlagsOnPosix( self, lenv ) :
@@ -902,6 +904,20 @@ class SConsBuildFramework :
 			lenv['LIBS']	+= ['SDL', 'SDLmain']
 		else :
 			lenv.ParseConfig('sdl-config --cflags --libs')
+
+	# TODO: packages sofa into a localExt and adapts the following code to be more sbf friendly
+	def use_sofa( self, lenv, elt ) :
+		sofa_path = os.getenv('SOFA_PATH')
+		lenv['CPPPATH'] += [sofa_path + os.sep + 'modules']
+		lenv['CPPPATH'] += [sofa_path + os.sep + 'framework']
+		lenv['LIBS'] += ['SofaCore','SofaDefaultType','SofaComponent','SofaHelper','SofaSimulation']
+
+		if ( self.myPlatform == 'win32' ) :
+			lenv['LIBS'] += ['libxml2','NewMAT','Gdi32','Shell32']
+			if ( self.myConfig == 'release' ) :
+				lenv['LIBPATH']	+= [sofa_path + '/lib/win32/ReleaseVC8', sofa_path + '/lib/win32/Common']
+			else :
+				lenv['LIBPATH']	+= [sofa_path + '/lib/win32/DebugVC8', sofa_path + '/lib/win32/Common']
 #???
 	#@todo Adds support to both ANSI and Unicode version of wx, static/dynamic and db stuff (see http://www.wxwidgets.org/wiki/index.php/MSVC_.NET_Setup_Guide)
 	def use_wxWidgets( self, lenv, elt ) :
@@ -1009,6 +1025,10 @@ class SConsBuildFramework :
 			elif ( elt == 'sdl' ) :
 				self.use_sdl( lenv, elt )
 
+			### configure sofa ###
+			elif ( elt == 'sofa' ) :
+				self.use_sofa( lenv, elt )
+
 			### configure wx* ###
 			elif (	re.match('^wx[\d-]*$', elt ) or
 					re.match('^wxgl[\d-]*$', elt ) or
@@ -1044,21 +1064,21 @@ class SConsBuildFramework :
 		self.myProjectPath		= os.path.dirname( projectPathName )
 		self.myProject			= os.path.basename(projectPathName)
 
-		# user wants a vcs checkout ?
+		# User wants a vcs checkout ?
 		tryVcsCheckout = ('svnCheckout' in self.myBuildTargets) or (self.myProject+'_svnCheckout' in self.myBuildTargets)
 
 		# Tests existance of project path name
 		existanceOfProjectPathName = os.path.isdir(self.myProjectPathName)
 
-		# configure a new environment
+		# Configures a new environment
 		lenv = env.Copy()		
 
 		# What must be done for this project ?
-#exist	vcs
-#True	True 	=> nothing (already checkout) or env checkout
-#True	False	=> env
-#[False	True	=> checkout] env
-#[DONE]False	False	=> return
+		#existanceOfProjectPathName	tryVcsCheckout		action
+		#True					True 				[env] checkout(if lenv['vcsUse'] == 'yes') [env]
+		#True					False				[env]
+		#[False	True	=> checkout] env
+		#[DONE]False	False	=> return
 
 		if (not existanceOfProjectPathName ) :
 			if ( not tryVcsCheckout ) :
@@ -1094,16 +1114,12 @@ class SConsBuildFramework :
 			#else :
 				# nothing to do
 
-#print "----------------------- %s in %s -----------------------" % (self.myProject, self.myProjectPathName)
-#print "sbfInfo: Already checkout. Skip to the next project..."
-#return
-
 		# Tests existance of project path name
 		if ( os.path.isdir(self.myProjectPathName) ) :
 			# register the new environment
-			self.myParsedProjects[self.myProject] = lenv		
+			self.myParsedProjects[self.myProject] = lenv
 		else :
-			print "sbfWarning: Unable to find project", self.myProject, "in directory", self.myProjectPathName			
+			print "sbfWarning: Unable to find project", self.myProject, "in directory", self.myProjectPathName
 			print "sbfInfo: Skip to the next project..."
 			return
 
@@ -1128,7 +1144,7 @@ class SConsBuildFramework :
 
 
 
-		# construct dependencies
+		# Constructs dependencies
 		# @todo only in verbose
 		#print "sbfDebug:%s dependencies are %s" % (self.myProject, lenv['deps'])
 
@@ -1143,10 +1159,8 @@ class SConsBuildFramework :
 			if ( os.path.split(normalizedDependency)[1] not in self.myParsedProjects ) :
 				# dependency not already "build"
 				self.buildProject( normalizedDependency )
-			#else nothing to do, project already "build"
-			#else :
+			#else : # nothing to do, project already "build"
 				#print "sbfDebug: project %s already parsed." % projectPathName
-
 
 		# initialize the project
 		self.initializeProjectFromEnv( lenv )
@@ -1190,10 +1204,16 @@ class SConsBuildFramework :
 		self.configureCxxFlagsAndLinkFlags( lenv )
 
 		###### configure environment ######
-		lenv.Append(	CXXFLAGS	= self.myCxxFlags,
-						CPPPATH		= self.myCppPath,
-						LINKFLAGS	= self.myLinkFlags,
+		#print 'before=', lenv['LIBPATH']
+#		print '1:self.myLibPath=', self.myLibPath
+#		if lenv.has_key( 'LIBPATH' ) :
+#			print '1=LIBPATH', lenv['LIBPATH']		
+		lenv.Append(	CXXFLAGS	= self.myCxxFlags )
+		lenv.AppendUnique( CPPPATH = self.myCppPath )
+		lenv.Append(	LINKFLAGS	= self.myLinkFlags,
 						LIBPATH		= self.myLibPath ) # @todo AppendUnique should be better, but seems to cut cmd-line
+#		print '2:self.myLibPath=', self.myLibPath
+#		print '2=LIBPATH', lenv['LIBPATH']
 
 		# configure lenv['LIBS'] with lenv['stdlibs']
 		lenv.Append( LIBS = lenv['stdlibs'] ) # @todo AppendUnique
@@ -1385,8 +1405,11 @@ class SConsBuildFramework :
 
 # create objects
 # HINTS: to propagate the entire external environment to the execution environment for commands : ENV = os.environ
-env						=	Environment(MSVS_VERSION='7.1') #@todo adds this as an option and move to lenv
+env						=	Environment(MSVS_VERSION='8.0') #@todo adds this as an option and move to lenv
 env['ENV']['PATH']		+=	os.environ['PATH']															### FIXME not very recommended
+
+# Dumping construction environment (for debugging).																	# TODO : a method printDebugInfo()
+#DumpEnv.DumpEnv( env )
 
 #Export('env') not needed.
 
@@ -1626,4 +1649,3 @@ if (	('zipRuntime'	in env.sbf.myBuildTargets) or
 #else:
 #	shutil.rmtree( srcZipPath, True )
 #endtodo
-
