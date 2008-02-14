@@ -2,6 +2,7 @@
 svnUrls				= []
 svnCheckoutExclude	= []
 svnUpdateExclude	= []
+clVersion			= 'highest'
 installPaths		= []
 buildPath			= 'build'
 cachePath			= ''

@@ -72,7 +72,14 @@
 #		zipDev			: create a package with binaries, libraries and includes files.
 #		zipSrc			: create a package with source files, i.e. all files under vcs are considered as source
 #	- myproject_build, myproject_install, myproject(idem myproject_install), myproject_clean, myproject_mrproper
-#	- and special targets build (for all myproject_build), install (for all myproject_install), all (for all myproject), clean (for all myproject_clean), mrproper (for all myproject_mrproper)
+#	- and special targets :
+#		- build (for all myproject_build)
+#		- install (for all myproject_install)
+#		- all (for all myproject)
+#		- debug (like target all, but config option is forced to debug)
+#		- release (like target all but config option is forced to release)
+#		- clean (for all myproject_clean)
+#		- mrproper (for all myproject_mrproper)
 #	- default target = all
 #
 #
@@ -395,7 +402,7 @@ def printSBFVersion() :
 
 
 def getSBFVersion() :
-	return '0.6beta'
+	return '0.6beta1'
 
 
 ###### Print action function ######
@@ -439,6 +446,9 @@ def printDoxygenInstall( target, source, localenv ) :
 ###### SConsBuildFramework main class ######
 
 class SConsBuildFramework :
+
+	#
+	# myEnv SCons environment
 
 	# global attributes from command line
 	myBuildTargets					= set()
@@ -508,19 +518,57 @@ class SConsBuildFramework :
 	###### Constructor ######
 	def __init__(self) :
 
-		# read .SConsBuildFramework.options from $HOME or SConsBuildFramework.options from $SCONS_BUILD_FRAMEWORK.
+		# Reads .SConsBuildFramework.options from your home directory or SConsBuildFramework.options from $SCONS_BUILD_FRAMEWORK.
 		homeSConsBuildFrameworkOptions = os.path.expanduser('~/.SConsBuildFramework.options')
 
-		if ( os.path.isfile(homeSConsBuildFrameworkOptions) ) :
+		if os.path.isfile(homeSConsBuildFrameworkOptions) :
+			# Reads from your home directory.
 			myOptions = self.readOptions( homeSConsBuildFrameworkOptions )
 		else :
+			# Reads from $SCONS_BUILD_FRAMEWORK directory.
 			sbf_root			= os.getenv('SCONS_BUILD_FRAMEWORK')
 			sbf_root_normalized	= getNormalizedPathname( sbf_root )
 			myOptions = self.readOptions( os.path.join( sbf_root_normalized, 'SConsBuildFramework.options' ) )
 
-		# update env and generate help
-		myOptions.Update( env )
-		Help( myOptions.GenerateHelpText(env) )
+		# Constructs SCons environment.
+		tmpEnv = Environment( options = myOptions )
+
+		if tmpEnv['PLATFORM'] == 'win32' :
+			# Tests existance of cl
+			if len(tmpEnv['MSVS']['VERSIONS']) == 0 :
+				print 'sbfError: no version of cl is available.'
+				Exit( 1 )
+
+			# Tests existance of the desired version of cl
+			if tmpEnv['clVersion'] not in tmpEnv['MSVS']['VERSIONS'] and tmpEnv['clVersion'] != 'highest' :
+				print 'sbfError: clVersion sets to', tmpEnv['clVersion'], 
+				if len(tmpEnv['MSVS']['VERSIONS']) == 1 :
+					print ', available version is ', tmpEnv['MSVS']['VERSIONS']
+				else :
+					print ', available versions are ', tmpEnv['MSVS']['VERSIONS']
+				Exit( 1 )
+
+			# There is no more case of errors.
+			if tmpEnv['clVersion'] == 'highest' :
+				self.myEnv = tmpEnv
+			else :
+				self.myEnv = Environment( options = myOptions, MSVS_VERSION = tmpEnv['clVersion'] )
+				# TODO Environment is construct two times. This is done just to be able to read 'clVersion' option. OPTME see below :
+				# env["MSVS"] = {"VERSION": "8.0"}
+				# env["MSVS_VERSION"] = "8.0"
+				# Tool("msvc")(env)
+		#print "self.myEnv['MSVS']", self.myEnv['MSVS']
+		#print 'self.myEnv[MSVS_VERSION]', self.myEnv['MSVS_VERSION']
+		self.myEnv['ENV']['PATH'] += os.environ['PATH'] ### FIXME not very recommended
+
+		# Generates help.
+		Help("""
+Type: 'scons release' to build the production program/library,
+      'scons debug' to build the debug version.
+
+Documentation on the options:
+""")
+		Help( myOptions.GenerateHelpText(self.myEnv) )
 
 		# @todo FIXME : It is disabled, because it doesn't work properly
 		# Log into a file the last scons outputs (stdout and stderr) for a project
@@ -549,29 +597,35 @@ class SConsBuildFramework :
 				print 'sbfError: only one target allowed when using special target clean or mrproper'
 				Exit( 1 )
 			else :
-				env.SetOption('clean', 1)
+				self.myEnv.SetOption('clean', 1)
+
+		# Overrides the config option, when one of the special targets, named 'debug' and 'release', is specified at command line.
+		if 'debug' in self.myBuildTargets :
+			self.myEnv['config'] = 'debug'
+		elif 'release' in self.myBuildTargets :
+			self.myEnv['config'] = 'release'
 
 		# myPlatform, myCC and my_Platform_myCC
 		# myPlatform = win32 | cygwin  | posix | darwin					TOTHINK: posix != linux and bsd ?, env['PLATFORM'] != sys.platform
-		self.myPlatform	= env['PLATFORM']
+		self.myPlatform	= self.myEnv['PLATFORM']
 
-		# myCC = clX-Y | gcc | env['CC']
-		if		( env['CC'] == 'cl' ) :
-			self.myCC = 'cl' + env['MSVS_VERSION'].replace('.','-')
-		elif	( env['CC'] == 'g++') :
+		# myCC = clX-Y | gcc | self.myEnv['CC']
+		if		( self.myEnv['CC'] == 'cl' ) :
+			self.myCC = 'cl' + self.myEnv['MSVS_VERSION'].replace('.','-')
+		elif	( self.myEnv['CC'] == 'g++') :
 			self.myCC = 'gcc'
 		else :
-			self.myCC = env['CC']
+			self.myCC = self.myEnv['CC']
 
 		self.my_Platform_myCC = '_' + self.myPlatform + '_' + self.myCC
 
 		# Adds support of Microsoft Manifest Tool for Visual Studio 2005 (cl8)
 		if self.myPlatform == 'win32' and self.myCC == 'cl8-0' :
-			env['LINKCOM'] = [env['LINKCOM'], 'mt.exe -nologo -manifest ${TARGET}.manifest -outputresource:$TARGET;1']
-			env['SHLINKCOM'] = [env['SHLINKCOM'], 'mt.exe -nologo -manifest ${TARGET}.manifest -outputresource:$TARGET;2']
+			self.myEnv['LINKCOM'	] = [self.myEnv['LINKCOM'	], 'mt.exe -nologo -manifest ${TARGET}.manifest -outputresource:$TARGET;1']
+			self.myEnv['SHLINKCOM'	] = [self.myEnv['SHLINKCOM'], 'mt.exe -nologo -manifest ${TARGET}.manifest -outputresource:$TARGET;2']
 
 		#
-		self.initializeGlobalsFromEnv( env )
+		self.initializeGlobalsFromEnv( self.myEnv )
 
 
 
@@ -691,6 +745,13 @@ class SConsBuildFramework :
 			('svnCheckoutExclude', 'Set the list of project that may not be used for check out subversion operation. All projects not explicitly excluded will be included.'),
 			('svnUpdateExclude', 'Set the list of project that may not be used for update subversion operation. All projects not explicitly excluded will be included.'),
 
+			EnumOption('clVersion', 'MS Visual C++ compiler (cl.exe) version using the following version schema : x.y or year. Use the special value \'highest\' to select the highest installed version.', 'highest',
+						allowed_values = ( '7.1', '8.0', 'highest' ),
+						map={
+								'2003' : '7.1',
+								'2005' : '8.0'
+							} ),
+
 			('installPaths', 'Set the list of search paths to \'/usr/local\' like directories. The first one would be used as a destination path for target named install'),
 
 			('buildPath',	'Set the path to the directory in which to build all files (path could be absolute or relative to the project being build)', 'build' ),
@@ -779,6 +840,8 @@ class SConsBuildFramework :
 		self.myCxxFlags	+= ' -D_WINDOWS '
 																					## remove CONSOLE, MFC support, NOLIB
 		# process myType
+		#self.myCxxFlags += ' /DBOOST_ALL_DYN_LINK'
+
 		if ( self.myType == 'exec' ) :
 			self.myCxxFlags += ' /GA '
 		else :
@@ -835,6 +898,20 @@ class SConsBuildFramework :
 			lenv['LIBS'] += [ 'boost_program_options-1_33_1', 'boost_wserialization-1_33_1', 'boost_python-1_33_1' ]
 		#else:
 		# Nothing to do for win32 platform.
+
+	# def use_boost( self, lenv, elt ) :
+		# if self.myPlatform == 'win32' :
+			# lenv.Append( CPPDEFINES = 'BOOST_ALL_DYN_LINK' )
+		# elif self.myPlatform == 'posix' :
+			# lenv['LIBS'] += [ 'boost_date_time-gcc-mt-1_33_1', 'boost_filesystem-gcc-mt-1_33_1', 'boost_regex-gcc-mt-1_33_1', 'boost_signals-gcc-mt-1_33_1']
+			# lenv['LIBS'] += [ 'boost_thread-gcc-mt-1_33_1'  , 'boost_serialization-gcc-mt-1_33_1', 'boost_iostreams-gcc-mt-1_33_1']
+			# lenv['LIBS'] += [ 'boost_program_options-gcc-mt-1_33_1', 'boost_wserialization-gcc-mt-1_33_1', 'boost_python-gcc-mt-1_33_1' ]
+		# elif ( self.myPlatform == 'darwin' ) :
+			# lenv['LIBS'] += [ 'boost_date_time-1_33_1', 'boost_filesystem-1_33_1', 'boost_regex-1_33_1', 'boost_signals-1_33_1']
+			# lenv['LIBS'] += [ 'boost_thread-1_33_1'  , 'boost_serialization-1_33_1', 'boost_iostreams-1_33_1']
+			# lenv['LIBS'] += [ 'boost_program_options-1_33_1', 'boost_wserialization-1_33_1', 'boost_python-1_33_1' ]
+		# else:
+			# print 'sbfWarning: uses=[\'%s\'] not supported on platform %s.' % ( elt, self.myPlatform )
 
 	def use_cairo( self, lenv, elt ) :
 		lenv.AppendUnique( CPPPATH = os.path.join( self.myIncludesInstallExtPaths[0], 'cairo' ) )
@@ -1391,10 +1468,12 @@ class SConsBuildFramework :
 		for elt in installInBinTarget :
 			lenv['sbf_bin'] += elt.abspath
 
-		###### special targets: build install all clean mrproper ######
+		###### special targets: build install all debug release clean mrproper ######
 		env.Alias( 'build',		aliasProjectBuild		)
 		env.Alias( 'install',	aliasProjectInstall		)
 		env.Alias( 'all',		aliasProject			)
+		env.Alias( 'debug',		aliasProject			)
+		env.Alias( 'release',	aliasProject			)
 		env.Alias( 'clean',		aliasProjectClean		)
 		env.Alias( 'mrproper',	aliasProjectMrproper	)
 
@@ -1405,15 +1484,14 @@ class SConsBuildFramework :
 
 # create objects
 # HINTS: to propagate the entire external environment to the execution environment for commands : ENV = os.environ
-env						=	Environment(MSVS_VERSION='8.0') #@todo adds this as an option and move to lenv
-env['ENV']['PATH']		+=	os.environ['PATH']															### FIXME not very recommended
-
-# Dumping construction environment (for debugging).																	# TODO : a method printDebugInfo()
-#DumpEnv.DumpEnv( env )
 
 #Export('env') not needed.
 
 SConsEnvironment.sbf	= SConsBuildFramework()
+env = SConsEnvironment.sbf.myEnv # TODO remove me (this line is just for compatibility with the old global env)
+
+# Dumping construction environment (for debugging).																	# TODO : a method printDebugInfo()
+#DumpEnv.DumpEnv( env )
 
 # target 'sbfCheck'
 env.Alias('sbfCheck', env.Command('dummyCheckVersion.out1', 'dummy.in', Action( sbfCheck, nopAction ) ) )
