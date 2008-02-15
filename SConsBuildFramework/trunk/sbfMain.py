@@ -158,6 +158,21 @@ def searchAllFiles( searchDirectory, oFiles ) :
 
 
 ###### Svn ######
+def svnGetURL( path ) :
+
+	import pysvn
+
+	client = pysvn.Client()
+	client.exception_style = 0
+
+	try :
+		info = client.info( path )
+		return info.url
+
+	except pysvn.ClientError, e :
+		print str(e)
+		return ""
+
 def svnGetAllVersionedFiles( path ) :
 
 	import pysvn
@@ -192,14 +207,14 @@ def svnExport( sbf, project, destinationPath ) :
 		try :
 			revision	= client.export(	src_url_or_path = svnUrl,
 											dest_path = destinationPath )
-			print "sbfInfo:", project, "founded at", svnUrl
+			print "sbfInfo:", project, "found at", svnUrl
 			if ( revision.kind == pysvn.opt_revision_kind.number ) :
 				print project, "at revision", revision.number
 			else :
 				print project, "at revision", revision.date
 			return True
 		except pysvn.ClientError, e :
-			print str(e)
+			print str(e), "\n"
 	else:
 		return False
 
@@ -234,7 +249,7 @@ def svnCallbackNotify( sbf, eventDict ) :
 		pysvn.wc_notify_action.skip:					'?',
 		pysvn.wc_notify_action.update_delete:			'D',
 		pysvn.wc_notify_action.update_add:				'A',
-		pysvn.wc_notify_action.update_update:			None,
+		pysvn.wc_notify_action.update_update:			'U',
 		pysvn.wc_notify_action.update_completed:		None,
 		pysvn.wc_notify_action.update_external:			'E',
 		pysvn.wc_notify_action.status_completed:		None,
@@ -252,18 +267,19 @@ def svnCallbackNotify( sbf, eventDict ) :
 	}
 
 	path = eventDict['path'] 
-	if path  == '' :
+	if len(path) == 0 :
 		# empty path, nothing to do
 		return
 
 	action = eventDict['action']
 
-	if	( wcNotifyActionMap.has_key(action)
-	and	wcNotifyActionMap[action] is not None ) :
+	if (wcNotifyActionMap.has_key(action) and (wcNotifyActionMap[action] is not None)						# known action that must trigger a message
+	and not (action == pysvn.wc_notify_action.update_update and eventDict['kind'] == pysvn.node_kind.dir)	# but not in this special case
+	):
 		print wcNotifyActionMap[action], "\t",
 		print convertPathAbsToRel( sbf.myProjectPathName, path )
 
-	return
+
 
 class svnCallbackNotifyWrapper:
 	def __init__( self, sbf ) :
@@ -275,7 +291,7 @@ class svnCallbackNotifyWrapper:
 
 
 def svnCheckout( sbf ) :
-	# try an svn checkout.
+	# try a checkout.
 	import pysvn
 	client = pysvn.Client()
 	client.callback_notify = svnCallbackNotifyWrapper( sbf )
@@ -285,29 +301,32 @@ def svnCheckout( sbf ) :
 		svnUrl	= repository + '/' + sbf.myProject + '/trunk'
 		print "sbfInfo: Try to check out a working copy from", svnUrl, ":"
 		try :
-			revision	= client.checkout(	url = svnUrl, path = sbf.myProjectPathName )
-			print "sbfInfo:", sbf.myProject, "founded at", svnUrl
+			revision = client.checkout(	url = svnUrl, path = sbf.myProjectPathName )
+			print "sbfInfo:", sbf.myProject, "found at", svnUrl
 			printSvnInfo( sbf, client )
 			return True
 		except pysvn.ClientError, e :
-			print str(e)
-	else:
-		return False
+			print str(e), "\n"
+
+	return False
 
 
 
 def svnUpdate( sbf ) :
-	# try an svn update
+	# try an update.
 	import pysvn
 	client = pysvn.Client()
+	client.callback_notify = svnCallbackNotifyWrapper( sbf )
 	client.exception_style = 0
+
 	try :
 		revision = client.update( sbf.myProjectPathName )
 		printSvnInfo( sbf, client )
-		return True		
+		return True
 	except pysvn.ClientError, e :
-		print str(e)
+		print str(e), "\n"
 		return False
+
 
 
 ###### Archiver action ######
@@ -352,7 +371,7 @@ def sbfCheck(target = None, source = None, env = None) :
 	env.Execute( checkCC, nopAction )
 	print
 
-	print 'doxygen version ',
+	print 'doxygen version : ',
 	env.Execute( '@doxygen --version' )
 	print
 
@@ -398,11 +417,11 @@ def checkCC(target = None, source = None, env = None) :
 
 
 def printSBFVersion() :
-	print 'SConsBuildFramework v%s' % getSBFVersion()
+	print 'SConsBuildFramework : %s' % getSBFVersion()
 
 
 def getSBFVersion() :
-	return '0.6beta1'
+	return '0.6beta2'
 
 
 ###### Print action function ######
@@ -620,7 +639,7 @@ Documentation on the options:
 		self.my_Platform_myCC = '_' + self.myPlatform + '_' + self.myCC
 
 		# Adds support of Microsoft Manifest Tool for Visual Studio 2005 (cl8)
-		if self.myPlatform == 'win32' and self.myCC == 'cl8-0' :
+		if self.myPlatform == 'win32' and (self.myCC in ['cl8-0Exp', 'cl8-0']) : # TODO testing all cl version is not very cute. Convert to a number and test it ?
 			self.myEnv['LINKCOM'	] = [self.myEnv['LINKCOM'	], 'mt.exe -nologo -manifest ${TARGET}.manifest -outputresource:$TARGET;1']
 			self.myEnv['SHLINKCOM'	] = [self.myEnv['SHLINKCOM'], 'mt.exe -nologo -manifest ${TARGET}.manifest -outputresource:$TARGET;2']
 
@@ -746,10 +765,11 @@ Documentation on the options:
 			('svnUpdateExclude', 'Set the list of project that may not be used for update subversion operation. All projects not explicitly excluded will be included.'),
 
 			EnumOption('clVersion', 'MS Visual C++ compiler (cl.exe) version using the following version schema : x.y or year. Use the special value \'highest\' to select the highest installed version.', 'highest',
-						allowed_values = ( '7.1', '8.0', 'highest' ),
+						allowed_values = ( '7.1', '8.0Exp', '8.0', 'highest' ),
 						map={
-								'2003' : '7.1',
-								'2005' : '8.0'
+								'2003'		: '7.1',
+								'2005Exp'	: '8.0Exp',								
+								'2005'		: '8.0',
 							} ),
 
 			('installPaths', 'Set the list of search paths to \'/usr/local\' like directories. The first one would be used as a destination path for target named install'),
@@ -786,6 +806,15 @@ Documentation on the options:
 			('stdlibs', 'Set the standard libraries used during the link stage.')
 								)
 		return myOptions
+
+
+	###### Read a .options file and update environment (self.myBuildOptions and lenv are modified). ######
+	def readOptionsAndUpdateEnv( self, lenv, configDotOptionsFile = 'default.options' ) :
+		configDotOptionsPathFile = self.myProjectPathName + os.sep + configDotOptionsFile
+		if os.path.isfile(configDotOptionsPathFile) :
+			# update lenv with config.options
+			self.myBuildOptions = self.readOptions( configDotOptionsPathFile )
+			self.myBuildOptions.Update( lenv )
 
 
 	###### configure CxxFlags & LinkFlags ######
@@ -984,7 +1013,15 @@ Documentation on the options:
 
 	# TODO: packages sofa into a localExt and adapts the following code to be more sbf friendly
 	def use_sofa( self, lenv, elt ) :
+		# Retrieves SOFA_PATH
 		sofa_path = os.getenv('SOFA_PATH')
+		if not sofa_path :
+			print "sbfWarning: SOFA_PATH is not defined."
+			return
+		if not os.path.exists(sofa_path) :
+			print "sbfWarning: SOFA_PATH is defined on a non existing path."
+			return
+		#
 		lenv['CPPPATH'] += [sofa_path + os.sep + 'modules']
 		lenv['CPPPATH'] += [sofa_path + os.sep + 'framework']
 		lenv['LIBS'] += ['SofaCore','SofaDefaultType','SofaComponent','SofaHelper','SofaSimulation']
@@ -1120,23 +1157,35 @@ Documentation on the options:
 	def vcsCheckout( self ) :
 		print "----------------------- vcs checkout project %s in %s -----------------------" % (self.myProject, self.myProjectPathName)
 
-		if ( self.myProject in self.mySvnCheckoutExclude ) :
-			print "sbfWarning: Exclude from vcs checkout. Skip to the next project..."
+		if self.myProject in self.mySvnCheckoutExclude :
+			print "sbfInfo: Exclude from vcs checkout."
+			print "sbfInfo: Skip to the next project..."
 			return
 
 		successful = svnCheckout( self )
 
-		if ( successful == False ) :
+		if successful == False :
 			print "sbfWarning: Unable to populate directory", self.myProjectPathName, "from vcs."
-			#Skip to the next project..."
-			#return
-		#else vcs checkout successful, continue.
-	#else nothing to do
+		#else vcs checkout successful.
+
+	def vcsUpdate( self ) :
+		print "----------------------- vcs update project %s in %s -----------------------" % (self.myProject, self.myProjectPathName)
+
+		if self.myProject in self.mySvnUpdateExclude :
+			print "sbfInfo: Exclude from vcs update."
+			print "sbfInfo: Skip to the next project..."
+			return
+
+		successful = svnUpdate( self )
+
+		if successful == False :
+			print "sbfWarning: Unable to update directory", self.myProjectPathName, "from vcs."
+		#else vcs update successful.
 
 	###### Build a project ######
 	def buildProject( self, projectPathName ) :
 
-		# initializes basic informations about incoming project
+		# Initializes basic informations about incoming project
 		self.myProjectPathName	= projectPathName
 		self.myProjectPath		= os.path.dirname( projectPathName )
 		self.myProject			= os.path.basename(projectPathName)
@@ -1152,74 +1201,61 @@ Documentation on the options:
 
 		# What must be done for this project ?
 		#existanceOfProjectPathName	tryVcsCheckout		action
-		#True					True 				[env] checkout(if lenv['vcsUse'] == 'yes') [env]
-		#True					False				[env]
-		#[False	True	=> checkout] env
-		#[DONE]False	False	=> return
+		#True					True 				env (checkout and env, if lenv['vcsUse'] == 'yes' and not already checkout from vcs) 
+		#True					False				env
+		#False					True				vcsCheckout env
+		#False					False				return
 
-		if (not existanceOfProjectPathName ) :
-			if ( not tryVcsCheckout ) :
+		if not existanceOfProjectPathName :
+			if not tryVcsCheckout:
 				print "----------------------- project %s in %s -----------------------" % (self.myProject, self.myProjectPathName)
-				print "sbfWarning: Unable to find project", self.myProject, "in directory", self.myProjectPathName				
-				print "sbfWarning: None of targets svnCheckout or", self.myProject + "_svnCheckout have been specified."
+				print "sbfWarning: Unable to find project", self.myProject, "in directory", self.myProjectPathName
+				print "sbfInfo: None of targets svnCheckout or", self.myProject + "_svnCheckout have been specified."
 				return
 			else :
 				self.vcsCheckout()
-
-				# update lenv with build.options
-				self.myBuildOptions = self.readOptions( self.myProjectPathName + os.sep + 'default.options' )
-				self.myBuildOptions.Update( lenv )
-
+				self.readOptionsAndUpdateEnv( lenv )
 		else :
-			if ( os.path.isfile( self.myProjectPathName + os.sep + 'default.options' ) ) :
-				# update lenv with build.options
-				self.myBuildOptions = self.readOptions( self.myProjectPathName + os.sep + 'default.options' )
-				self.myBuildOptions.Update( lenv )
+			self.readOptionsAndUpdateEnv( lenv )
 
-			if ( tryVcsCheckout ) :
-				if ( lenv['vcsUse'] == 'yes' ) :
-					self.vcsCheckout()
-					if ( os.path.isfile( self.myProjectPathName + os.sep + 'default.options' ) ) :
-						# update lenv with build.options
-						self.myBuildOptions = self.readOptions( self.myProjectPathName + os.sep + 'default.options' )
-						self.myBuildOptions.Update( lenv )
-
+			if tryVcsCheckout :
+				if lenv['vcsUse'] == 'yes' :
+					projectURL = svnGetURL(self.myProjectPathName)
+					if len(projectURL) > 0 :
+						# @todo only if verbose
+						print "----------------------- project %s in %s -----------------------" % (self.myProject, self.myProjectPathName)
+						print "sbfInfo: Already checkout from %s using svn." % projectURL
+						print "sbfInfo: Uses 'svnUpdate' to get the latest changes from the repository."
+					else :
+						self.vcsCheckout()
+						self.readOptionsAndUpdateEnv( lenv )
 				else :
 					# @todo only if verbose
-					print "----------------------- project %s in %s -----------------------" % (self.myProject, self.myProjectPathName)					
-					print "sbfInfo: vcsUse sets to no. Skip to the next project..."
-			#else :
-				# nothing to do
+					print "----------------------- project %s in %s -----------------------" % (self.myProject, self.myProjectPathName)
+					print "sbfInfo: 'vcsUse' option sets to no. So svn checkout is disabled."
+			#else nothing to do
 
 		# Tests existance of project path name
-		if ( os.path.isdir(self.myProjectPathName) ) :
-			# register the new environment
+		if os.path.isdir(self.myProjectPathName) :
+			# Adds the new environment
 			self.myParsedProjects[self.myProject] = lenv
 		else :
 			print "sbfWarning: Unable to find project", self.myProject, "in directory", self.myProjectPathName
 			print "sbfInfo: Skip to the next project..."
 			return
 
-		# Try an vcs update ?
-#		tryVcsUpdate = ('svnUpdate' in self.myBuildTargets) or (self.myProject+'_svnUpdate' in self.myBuildTargets)
-#		print "self.myVcsUse", self.myVcsUse
-#		if ( tryVcsUpdate ) :
-#			if ( self.myVcsUse == 'yes' ) :
-#			else :
-#				print
-			
-#			if ( self.myVcsUse == 'yes' and (self.myProject not in self.mySvnUpdateExclude) ) :
-#			if (	 	) :
-#				print "----------------------- vcs update %s -----------------------" % self.myProjectPathName
-#				successful = svnUpdate(self)
-#				if ( successful == False ) :
-#					print "sbfWarning: Unable to update directory", self.myProjectPathName, "from svn."
-				#else svn update done, nothing to do
-			#else nothing to do
-#		else :
-#			print "sbfWarning: Exclude %s from svn update." % self.myProject
+		# User wants a vcs update ?
+		tryVcsUpdate = ('svnUpdate' in self.myBuildTargets) or (self.myProject+'_svnUpdate' in self.myBuildTargets)
 
-
+		if tryVcsUpdate :
+			if lenv['vcsUse'] == 'yes' :
+				self.vcsUpdate()
+				self.readOptionsAndUpdateEnv( lenv )
+			else :
+				# @todo only if verbose
+				print "----------------------- project %s in %s -----------------------" % (self.myProject, self.myProjectPathName)
+				print "sbfInfo: 'vcsUse' option sets to no. So svn update is disabled."
+		# else nothing to do.
 
 		# Constructs dependencies
 		# @todo only in verbose
