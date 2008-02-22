@@ -44,16 +44,16 @@
 # list of targets:
 #	- specific sbf target :
 #		sbfCheck	:	print python version, python version used by scons, scons, CC and sbf version numbers, SCONS_BUILD_FRAMEWORK environment variable, and checks if SCONS_BUILD_FRAMEWORK is well formed.
-#					If SCONS_BUILD_FRAMEWORK is not defined, a message to explain how to define it is printed. 
+#					If SCONS_BUILD_FRAMEWORK is not defined, a message to explain how to define it is printed.
 #					If SCONS_BUILD_FRAMEWORK is defined, sbf checks if SCONS_BUILD_FRAMEWORK is perfectly defined (i.e. path exists, well written and is the main directory of SConsBuildFramework)
 #
 #	- svn (subversion) targets :
 #		svnCheckout or myProject_svnCheckout :
-#				checkout missing project(s) from multiple svn repositories (i.e. when a project specified in dependencies does not exist 
-#				on the filesystem, sbf try to checkout it from the first repository specified by svnUrls. If checkout fails, the next 
+#				checkout missing project(s) from multiple svn repositories (i.e. when a project specified in dependencies does not exist
+#				on the filesystem, sbf try to checkout it from the first repository specified by svnUrls. If checkout fails, the next
 #				repository is used. And so on). myProject_svnCheckout target is used to checkout myProject. svnCheckout is used to checkout all projects.
 #		svnUpdate or myProject_svnUpdate :
-#				update project(s) from multiple svn repositories (sbf try to checkout it from the first repository specified by svnUrls. If checkout fails, the next 
+#				update project(s) from multiple svn repositories (sbf try to checkout it from the first repository specified by svnUrls. If checkout fails, the next
 #				repository is used. And so on).
 #	- doxygen targets :
 #		dox_build, dox_install, dox, dox_clean and dox_mrproper.
@@ -112,6 +112,29 @@ import sys
 from SCons.Script.SConscript import SConsEnvironment
 import DumpEnv
 
+
+
+###### Return the value of the environment variable varname if it exists, or None ######
+# The returned path, if any, could be normalized (see getNormalizedPathname())
+# A warning is printed if the environment variable does'nt exist or if the environment variable refers to an non existing path.
+def getPathFromEnv( varname, normalizedPathname = True ) :
+	# Retrieves environment variable
+	path = os.getenv( varname )
+
+	# Error cases
+	if not path :
+		print "sbfWarning: %s is not defined." % varname
+		return None
+
+	if not os.path.exists( path ) :
+		print "sbfWarning: %s is defined, but its value '%s' is not a valid path." % (varname, path)
+		return None
+
+	# Normalized path name
+	if normalizedPathname :
+		path = getNormalizedPathname( path )
+
+	return path
 
 
 ###### Expands environment variables and normalizes the pathname ######
@@ -184,7 +207,7 @@ def svnGetAllVersionedFiles( path ) :
 		statusList = client.status( path )
 
 		allFiles = [ status.path for status in statusList
-						if status.is_versioned and 
+						if status.is_versioned and
 						(status.entry is not None and status.entry.kind == pysvn.node_kind.file) ]
 
 		return allFiles
@@ -266,7 +289,7 @@ def svnCallbackNotify( sbf, eventDict ) :
 		pysvn.wc_notify_action.failed_unlock:			None,
 	}
 
-	path = eventDict['path'] 
+	path = eventDict['path']
 	if len(path) == 0 :
 		# empty path, nothing to do
 		return
@@ -388,7 +411,7 @@ def sbfCheck(target = None, source = None, env = None) :
 		print 'sbfInfo: This can be done with the following bash command : export SCONS_BUILD_FRAMEWORK=\'', env.GetLaunchDir(), '\''
 	else :
 		print 'Environment variable SCONS_BUILD_FRAMEWORK=', sbf_root
-		sbf_root_normalized	= os.path.normpath( os.path.expandvars( sbf_root ) )
+		sbf_root_normalized	= getNormalizedPathname( sbf_root )
 		if ( sbf_root == sbf_root_normalized ) :
 			if ( not os.path.exists(sbf_root) ) :
 				print 'sbfError: SCONS_BUILD_FRAMEWORK is not an existing path'
@@ -457,7 +480,7 @@ def printSrcZip( target, source, localenv ) :
 
 def printDoxygenBuild( target, source, localenv ) :
 	return "\n----------------------- Build documentation with doxygen -----------------------"
-	
+
 def printDoxygenInstall( target, source, localenv ) :
 	return "\n----------------------- Install doxygen documentation -----------------------"
 
@@ -497,7 +520,7 @@ class SConsBuildFramework :
 	myIncludesInstallPaths			= []
 	myLibInstallPaths				= []
 	myIncludesInstallExtPaths		= []
-	myLibInstallExtPaths			= []	
+	myLibInstallExtPaths			= []
 	myGlobalCppPath					= []
 	myGlobalLibPath					= []
 
@@ -560,7 +583,7 @@ class SConsBuildFramework :
 
 			# Tests existance of the desired version of cl
 			if tmpEnv['clVersion'] not in tmpEnv['MSVS']['VERSIONS'] and tmpEnv['clVersion'] != 'highest' :
-				print 'sbfError: clVersion sets to', tmpEnv['clVersion'], 
+				print 'sbfError: clVersion sets to', tmpEnv['clVersion'],
 				if len(tmpEnv['MSVS']['VERSIONS']) == 1 :
 					print ', available version is ', tmpEnv['MSVS']['VERSIONS']
 				else :
@@ -725,7 +748,7 @@ Documentation on the options:
 			self.myProjectBuildPath = self.myBuildPath
 		else :
 			self.myProjectBuildPath = os.path.join( self.myProjectPathName, self.myBuildPath )
-			
+
 		if ( self.myConfig == 'debug' ) :										### TODO: not good if more than one config must be built
 			self.myPostfixLinkedToMyConfig = 'D'
 			self.my_PostfixLinkedToMyConfig = '_' + self.myPostfixLinkedToMyConfig
@@ -768,7 +791,7 @@ Documentation on the options:
 						allowed_values = ( '7.1', '8.0Exp', '8.0', 'highest' ),
 						map={
 								'2003'		: '7.1',
-								'2005Exp'	: '8.0Exp',								
+								'2005Exp'	: '8.0Exp',
 								'2005'		: '8.0',
 							} ),
 
@@ -797,8 +820,8 @@ Documentation on the options:
 
 			('deps', 'Set dependencies to others projects (all dependencies are automatically built)'),
 
-			('uses', 'Set usage of some predefined libraries (boost1-33-1, boost=boost1-33-1, cairo1-2-6, cairo=cairo1-2-6, itk2-6, itk=itk2-6, ode, opengl, openil, openilu, glu, glut, sdl, sofa, wx2-6, wxgl2-6, wx2-8, wxgl2-8, wx=wx2-8, wxgl=wxgl2-8)'),
-			# (cg|cgFX|imageMagick6|imageMagick++6|itk)')
+			('uses', 'Set usage of some predefined libraries (boost1-33-1, boost=boost1-33-1, cairo1-2-6, cairo=cairo1-2-6, gtkmm2-4, gtkmm=gtkmm2-4, itk2-6, itk=itk2-6, ode, opengl, openil, openilu, glu, glut, sdl, sofa, wx2-6, wxgl2-6, wx2-8, wxgl2-8, wx=wx2-8, wxgl=wxgl2-8)'),
+			# (cg|cgFX|imageMagick6|imageMagick++6)')
 			#ListOption(	'uses', 'Set usage of some predefined libraries', 'none',
 			#				['boost','ode', 'opengl','openil','glu','glut','wx2-4','wxgl2-4'] ), # (cg|cgFX|imageMagick6|imageMagick++6|itk)')	FIXME
 
@@ -841,8 +864,8 @@ Documentation on the options:
 #			self.myCxxFlags += ' -D_DEBUG -DDEBUG /EHsc /MDd /Od'
 			self.myCxxFlags += ' -D_DEBUG -DDEBUG'
 			self.myCxxFlags += ' /MDd /Od'
-			# Produces a program database (PDB) that contains type information and symbolic debugging information for use with the debugger. 
-			# The symbolic debugging information includes the names and types of variables, as well as functions and line numbers. 
+			# Produces a program database (PDB) that contains type information and symbolic debugging information for use with the debugger.
+			# The symbolic debugging information includes the names and types of variables, as well as functions and line numbers.
 			# /ZI Produces a program database in a format that supports the Edit and Continue feature.
 			# /Gm Enable Minimal Rebuild.
 			#self.myCxxFlags += ' /ZI /Gm' TODO not compatible with parallel (-j) builds.
@@ -863,11 +886,22 @@ Documentation on the options:
 			self.myCxxFlags += ' /W4 '
 			if '7' in lenv['MSVS']['VERSION'] :
 				self.myCxxFlags += ' /Wp64 '
-																					##/machine:I386
-		self.myLinkFlags	+= ' /subsystem:windows /incremental:yes '		##/subsystem:console
-#???		self.myLinkFlags	+= ' /nologo /subsystem:windows /incremental:yes '		##/subsystem:console		
+																			##/machine:I386
+		if self.myConfig == 'release' :
+			# subsystem sets to console to output debugging informations.
+			self.myLinkFlags	+= ' /SUBSYSTEM:CONSOLE '
+			#self.myLinkFlags	+= ' /SUBSYSTEM:WINDOWS '
+
+			# To ensure that the final release build does not contain padding or thunks, link nonincrementally.
+			self.myLinkFlags += ' /INCREMENTAL:NO '
+		else :
+			# subsystem sets to console to output debugging informations.
+			self.myLinkFlags	+= ' /SUBSYSTEM:CONSOLE '
+
+			# By default, the linker runs in incremental mode.
+
 		self.myCxxFlags	+= ' -D_WINDOWS '
-																					## remove CONSOLE, MFC support, NOLIB
+																					## remove MFC support, NOLIB
 		# process myType
 		#self.myCxxFlags += ' /DBOOST_ALL_DYN_LINK'
 
@@ -883,7 +917,7 @@ Documentation on the options:
 
 
 	def configureCxxFlagsAndLinkFlagsOnPosix( self, lenv ) :
-	
+
 		lenv['CXX'] = lenv.WhereIs('g++')											### FIXME: remove me
 																					### myCxxFlags += ' -pedantic'
 		if ( self.myConfig == 'release' ) :
@@ -946,15 +980,57 @@ Documentation on the options:
 		lenv.AppendUnique( CPPPATH = os.path.join( self.myIncludesInstallExtPaths[0], 'cairo' ) )
 		lenv.AppendUnique( LIBS = ['cairo', 'fontconfig', 'freetype', 'png', 'z' ] )
 
+	# TODO: GTK_BASEPATH and GTKMM_BASEPATH documentation
+	def use_gtkmm( self, lenv, elt ) :
+		# Retrieves GTK_BASEPATH and GTKMM_BASEPATH
+		gtkBasePath		= getPathFromEnv('GTK_BASEPATH')
+		gtkmmBasePath	= getPathFromEnv('GTKMM_BASEPATH')
+		if	(gtkBasePath is None) or \
+			(gtkmmBasePath is None ) :
+			print 'sbfWarning: Unable to configure %s.' % elt
+			return
+		#
+		gtkmmCppPath = ['include/libglademm-2.4', 'lib/libglademm-2.4/include', 'lib/gtkmm-2.4/include',
+						'include/gtkmm-2.4', 'lib/gdkmm-2.4/include', 'include/gdkmm-2.4', 'include/pangomm-1.4',
+						'include/atkmm-1.6', 'lib/libxml++-2.6/include', 'include/libxml++-2.6',
+						'lib/glibmm-2.4/include', 'include/glibmm-2.4', 'include/cairomm-1.0',
+						'lib/sigc++-2.0/include', 'include/sigc++-2.0']
+
+		for cppPath in gtkmmCppPath :
+			lenv.AppendUnique( CPPPATH = os.path.join(gtkmmBasePath, cppPath) )
+
+		gtkCppPath = [	'lib/gtkglext-1.0/include', 'include/gtkglext-1.0', 'include/libglade-2.0', 'lib/gtk-2.0/include',
+						'include/gtk-2.0', 'include/pango-1.0', 'include/atk-1.0', 'lib/glib-2.0/include',
+						'include/glib-2.0', 'include/libxml2', 'include/cairo', 'include' ]
+
+		for cppPath in gtkCppPath :
+			lenv.AppendUnique( CPPPATH = os.path.join(gtkBasePath, cppPath) )
+
+		#
+		if self.myPlatform == 'win32' :
+			lenv.AppendUnique( LIBS = [	'glademm-2.4', 'xml++-2.6', 'gtkmm-2.4', 'glade-2.0', 'gdkmm-2.4', 'atkmm-1.6',
+										'pangomm-1.4', 'glibmm-2.4', 'cairomm-1.0', 'sigc-2.0',
+										'gtk-win32-2.0', 'xml2', 'gdk-win32-2.0', 'atk-1.0', 'gdk_pixbuf-2.0',
+										'pangowin32-1.0', 'pangocairo-1.0', 'pango-1.0', 'cairo', 'gobject-2.0',
+										'gmodule-2.0', 'glib-2.0', 'intl', 'iconv' ] )
+			lenv.AppendUnique( LIBS = [ 'gtkglext-win32-1.0', 'gdkglext-win32-1.0' ] )
+
+			lenv.AppendUnique( LIBPATH = [	os.path.join(gtkBasePath, 'lib'),
+											os.path.join(gtkmmBasePath, 'lib') ] )
+
+			lenv.AppendUnique( CPPFLAGS = [ '/vd2', '/wd4250' ] )
+		else :
+			print 'sbfWarning: uses=[\'%s\'] not supported on platform %s.' % ( elt, self.myPlatform )
+
 	def use_itk( self, lenv, elt ) :
 		# already and always done by sbf ' -DNOMINMAX'
-		
+
 		# includes
 		itkIncludes = []
 		if ( elt in [ 'itk2-6', 'itk' ] ) :
 			itkIncludes = [	'itk', 'itk/Algorithms', 'itk/BasicFilters', 'itk/Common', 'itk/expat', 'itk/Numerics', 'itk/IO',
-							'itk/Numerics/FEM', 'itk/Numerics/Statistics', 'itk/Numerics/NeuralNetworks', 'itk/SpatialObject', 
-							'itk/Utilities/MetaIO', 'itk/Utilities/NrrdIO', 'itk/Utilities/DICOMParser', 'itk/Utilities', 
+							'itk/Numerics/FEM', 'itk/Numerics/Statistics', 'itk/Numerics/NeuralNetworks', 'itk/SpatialObject',
+							'itk/Utilities/MetaIO', 'itk/Utilities/NrrdIO', 'itk/Utilities/DICOMParser', 'itk/Utilities',
 							'itk/Utilities/vxl/vcl', 'itk/Utilities/vxl/core' ]
 		else :
 			print "sbfWarning: ", elt, " unsupported."
@@ -984,7 +1060,7 @@ Documentation on the options:
 	def use_openIL( self, lenv, elt ) :
 		if ( self.myPlatform == 'win32' ) :
 			if ( self.myConfig == 'release' ) :
-				lenv['LIBS']	+= ['DevIL']	
+				lenv['LIBS']	+= ['DevIL']
 			else :
 				lenv['LIBS']	+= ['DevIL'] #['DevILd'] @todo openil should be compiled in debug on win32 platform
 		else :
@@ -992,7 +1068,7 @@ Documentation on the options:
 				lenv['LIBS']	+= ['IL']
 			else :
 				lenv['LIBS']	+= ['ILd']
-				
+
 	def use_openILU( self, lenv, elt ) :
 		if ( self.myPlatform == 'win32' ) :
 			if ( self.myConfig == 'release' ) :
@@ -1011,28 +1087,30 @@ Documentation on the options:
 		else :
 			lenv.ParseConfig('sdl-config --cflags --libs')
 
+	# TODO: SOFA_PATH documentation
 	# TODO: packages sofa into a localExt and adapts the following code to be more sbf friendly
 	def use_sofa( self, lenv, elt ) :
 		# Retrieves SOFA_PATH
-		sofa_path = os.getenv('SOFA_PATH')
-		if not sofa_path :
-			print "sbfWarning: SOFA_PATH is not defined."
+		sofa_path = getPathFromEnv('SOFA_PATH')
+		if sofa_path is None :
+			print 'sbfWarning: Unable to configure %s.' % elt
 			return
-		if not os.path.exists(sofa_path) :
-			print "sbfWarning: SOFA_PATH is defined on a non existing path."
-			return
-		#
-		lenv['CPPPATH'] += [sofa_path + os.sep + 'modules']
-		lenv['CPPPATH'] += [sofa_path + os.sep + 'framework']
-		lenv['LIBS'] += ['SofaCore','SofaDefaultType','SofaComponent','SofaHelper','SofaSimulation']
 
-		if ( self.myPlatform == 'win32' ) :
-			lenv['LIBS'] += ['libxml2','NewMAT','Gdi32','Shell32']
-			if ( self.myConfig == 'release' ) :
-				lenv['LIBPATH']	+= [sofa_path + '/lib/win32/ReleaseVC8', sofa_path + '/lib/win32/Common']
+		#
+		lenv['CPPPATH'] += [ os.path.join(sofa_path, 'modules') ]
+		lenv['CPPPATH'] += [ os.path.join(sofa_path, 'framework') ]
+		lenv['LIBS']	+= ['SofaCore', 'SofaDefaultType', 'SofaComponent', 'SofaHelper', 'SofaSimulation']
+
+		if self.myPlatform == 'win32' :
+			lenv['LIBS'] += ['libxml2', 'NewMAT', 'Gdi32', 'Shell32']
+			if self.myConfig == 'release' :
+				lenv['LIBPATH']	+= [ os.path.join( sofa_path, 'lib/win32/ReleaseVC8') ]
 			else :
-				lenv['LIBPATH']	+= [sofa_path + '/lib/win32/DebugVC8', sofa_path + '/lib/win32/Common']
-#???
+				lenv['LIBPATH']	+= [ os.path.join( sofa_path, 'lib/win32/DebugVC8' ) ]
+			lenv['LIBPATH'] += [ os.path.join( sofa_path, 'lib/win32/Common' ) ]
+		else :
+			print 'sbfWarning: uses=[\'%s\'] not supported on platform %s.' % ( elt, self.myPlatform )
+
 	#@todo Adds support to both ANSI and Unicode version of wx, static/dynamic and db stuff (see http://www.wxwidgets.org/wiki/index.php/MSVC_.NET_Setup_Guide)
 	def use_wxWidgets( self, lenv, elt ) :
 		if	( self.myPlatform == 'win32' ) :
@@ -1051,11 +1129,11 @@ Documentation on the options:
 					lenv.Append( LIBS = ['wxmsw26d_gl'] )
 			elif ( elt in ['wx2-8', 'wx'] ) :
 				if ( self.myConfig == 'release' ) :
-					lenv.Append( LIBS = [	'wxbase28', 'wxbase28_net', 'wxbase28_xml', 'wxmsw28_adv', 'wxmsw28_aui', 'wxmsw28_core', 
+					lenv.Append( LIBS = [	'wxbase28', 'wxbase28_net', 'wxbase28_xml', 'wxmsw28_adv', 'wxmsw28_aui', 'wxmsw28_core',
 											'wxmsw28_html', 'wxmsw28_media', 'wxmsw28_qa', 'wxmsw28_richtext', 'wxmsw28_xrc'	] )
 										# wxbase28_odbc, wxmsw28_dbgrid
 				else :
-					lenv.Append( LIBS = [	'wxbase28d', 'wxbase28d_net', 'wxbase28d_xml', 'wxmsw28d_adv', 'wxmsw28d_aui', 'wxmsw28d_core', 
+					lenv.Append( LIBS = [	'wxbase28d', 'wxbase28d_net', 'wxbase28d_xml', 'wxmsw28d_adv', 'wxmsw28d_aui', 'wxmsw28d_core',
 											'wxmsw28d_html', 'wxmsw28d_media', 'wxmsw28d_qa', 'wxmsw28d_richtext', 'wxmsw28d_xrc'	] )
 										# wxbase28d_odbc, wxmsw28d_dbgrid
 			elif ( elt in ['wxgl2-8', 'wxgl'] ) :
@@ -1098,10 +1176,14 @@ Documentation on the options:
 			elif ( elt in ['cairo', 'cairo1-2-6' ] ) :
 				self.use_cairo( lenv, elt )
 
+			### configure gtk/gtkmm ###
+			elif ( elt in ['gtkmm', 'gtkmm2-4'] ) :
+				self.use_gtkmm( lenv, elt );
+
 			### configure itk ###
 			elif ( elt in ['itk', 'itk2-6'] ) :
 				self.use_itk( lenv, elt )
-	
+
 			### configure ODE ###
 			elif ( elt == 'ode' ) :
 				lenv['LIBS'] += ['ode']
@@ -1116,7 +1198,7 @@ Documentation on the options:
 			### configure openIL ###
 			elif ( elt == 'openil' ) :
 				self.use_openIL( lenv, elt )
-	
+
 			### configure openILU ###
 			elif ( elt == 'openilu' ) :
 				self.use_openILU( lenv, elt )
@@ -1134,7 +1216,7 @@ Documentation on the options:
 					lenv['LIBS'] += ['glut32']
 				else :
 					lenv['LIBS'] += ['glut']
-			
+
 			### configure sdl ###
 			elif ( elt == 'sdl' ) :
 				self.use_sdl( lenv, elt )
@@ -1197,11 +1279,11 @@ Documentation on the options:
 		existanceOfProjectPathName = os.path.isdir(self.myProjectPathName)
 
 		# Configures a new environment
-		lenv = env.Copy()		
+		lenv = env.Copy()
 
 		# What must be done for this project ?
 		#existanceOfProjectPathName	tryVcsCheckout		action
-		#True					True 				env (checkout and env, if lenv['vcsUse'] == 'yes' and not already checkout from vcs) 
+		#True					True 				env (checkout and env, if lenv['vcsUse'] == 'yes' and not already checkout from vcs)
 		#True					False				env
 		#False					True				vcsCheckout env
 		#False					False				return
@@ -1305,7 +1387,7 @@ Documentation on the options:
 
 		### expand myProjectBuildPathExpanded
 		self.myProjectBuildPathExpanded = os.path.join( self.myProjectBuildPath, self.myProject, self.myVersion, self.myPlatform, self.myCC, self.myConfig )
-		
+
 		if ( len(self.myPostfix) > 0 ) :
 			self.myProjectBuildPathExpanded += '_' + self.myPostfix
 
@@ -1320,7 +1402,7 @@ Documentation on the options:
 		#print 'before=', lenv['LIBPATH']
 #		print '1:self.myLibPath=', self.myLibPath
 #		if lenv.has_key( 'LIBPATH' ) :
-#			print '1=LIBPATH', lenv['LIBPATH']		
+#			print '1=LIBPATH', lenv['LIBPATH']
 		lenv.Append(	CXXFLAGS	= self.myCxxFlags )
 		lenv.AppendUnique( CPPPATH = self.myCppPath )
 		lenv.Append(	LINKFLAGS	= self.myLinkFlags,
@@ -1343,7 +1425,7 @@ Documentation on the options:
 				print 'sbfWarning: skip ', lib, ' because its name contains more than two spaces'
 
 			lenv.Append( LIBS = [libExpanded] )
-#???			lenv['LIBS'] += [libExpanded]			
+#???			lenv['LIBS'] += [libExpanded]
 
 		# configure lenv[*] with lenv['uses']
 		self.uses( lenv )
@@ -1356,7 +1438,7 @@ Documentation on the options:
 		searchFiles( 'src', ['.*'], ['.cpp'], filesFromSrc )
 		#searchFiles( 'src', ['.*', 'DEBUG_*', 'RELEASE_*'], ['.cpp'], filesFromSrc )
 		searchFiles( 'include', ['.*'], ['.hpp','.hxx'], filesFromInclude )
-		#searchFiles( 'include', ['.*'], ['.hpp','.hxx','.h'], filesFromInclude )		
+		#searchFiles( 'include', ['.*'], ['.hpp','.hxx','.h'], filesFromInclude )
 
 		objFiles = []
 		if		( self.myType in ['exec', 'static'] ) :
@@ -1406,11 +1488,11 @@ Documentation on the options:
 
 		if ( self.myType in ['exec', 'static', 'shared'] ) :
 			# projectTarget is not deleted before it is rebuilt.
-			lenv.Precious( projectTarget )			
+			lenv.Precious( projectTarget )
 
 		# PDB: pdb only generate on win32 and in debug mode.
 		if (	(self.myPlatform == 'win32') and (self.myConfig == 'debug')	) :
-		
+
 			# PDB Generation
 			# static library don't generate pdb.
 			if	(self.myType in ['exec', 'shared'] ) :
@@ -1433,7 +1515,7 @@ Documentation on the options:
 
 		### myProject_svnUpdate
 		env.Alias( self.myProject + '_svnUpdate', env.Command('dummySvnUpdate.out1', 'dummy.in', Action( nopAction, nopAction ) ) )
-		
+
 		### myProject_build
 		env.Alias( self.myProject + '_build_print', lenv.Command('dummy_build_print' + self.myProject + 'out1', 'dummy.in', Action( nopAction, printEmptyLine ) ) )
 		env.Alias( self.myProject + '_build_print', lenv.Command('dummy_build_print' + self.myProject + 'out2', 'dummy.in', Action( nopAction, printBuild ) ) )
@@ -1445,10 +1527,10 @@ Documentation on the options:
 
 		### myProject_install
 		installTarget	=	lenv.Install( os.path.join(self.myInstallDirectory, 'bin'),		installInBinTarget )
-		
+
 		for file in installInIncludeTarget :
 			installTarget +=	lenv.InstallAs( os.path.join(self.myInstallDirectory, file), os.path.join(self.myProjectPathName, file) )
-		
+
 		installTarget	+=	lenv.Install( os.path.join(self.myInstallDirectory, 'lib'),	installInLibTarget )
 
 		#
@@ -1556,36 +1638,36 @@ def doxyfileAction( target, source, env ) :
 	examplePath	= ''
 	imagePath	= ''
 	for projectName in env.sbf.myParsedProjects :
-		
+
 		localenv = env.sbf.myParsedProjects[projectName]
 		projectPathName	= localenv['sbf_projectPathName']
-		
+
 		newPathEntry	= os.path.join(projectPathName, 'include') + ' '
 		if os.path.exists( newPathEntry ) :
 			inputList	+= newPathEntry
-		
+
 		newPathEntry	= os.path.join(projectPathName, 'src') + ' '
 		if os.path.exists( newPathEntry ) :
 			inputList	+= newPathEntry
-		
+
 		newPathEntry	= os.path.join(projectPathName, 'doc', 'example') + ' '
-		if os.path.exists( newPathEntry ) :	
+		if os.path.exists( newPathEntry ) :
 			examplePath	+= newPathEntry
-			
+
 		newPathEntry	= os.path.join(projectPathName, 'doc', 'image') + ' '
 		if os.path.exists( newPathEntry ) :
 			imagePath	+= newPathEntry
 
 	# Create a custom doxyfile
 	import shutil
-	
+
 	targetName = str(target[0])
 	sourceName = str(source[0])
-	
+
 	shutil.copyfile(sourceName, targetName)			# or env.Execute( Copy(targetName, sourceName) )
 
 	file = open( targetName, 'a' )
-	
+
 	file.write( '\n### Added by SConsBuildFramework\n' )
 	file.write( 'PROJECT_NAME		= "%s"\n'					% env.sbf.myProject )
 	file.write( 'PROJECT_NUMBER		= "%s generated at %s"\n'	% (env.sbf.myVersion, env.sbf.myDateTime) )
@@ -1730,13 +1812,13 @@ if (	('zipRuntime'	in env.sbf.myBuildTargets) or
 
 		# Adds files to dev zip
 		devZipFiles += env.Install(		os.path.join(devZipPath, 'bin'),			lenv['sbf_bin'] )
-		
+
 		for file in lenv['sbf_include'] :
 			devZipFiles += env.InstallAs(		os.path.join(devZipPath, file),		os.path.join(projectPathName, file) )
 
 		devZipFiles += env.Install(				os.path.join(devZipPath, 'lib'),	lenv['sbf_lib_object'] )
 		devZipFiles += env.Install(				os.path.join(devZipPath, 'lib'),	lenv['sbf_lib_object_for_developer'] )
-		
+
 		# Adds files to src zip
 		allFiles = svnGetAllVersionedFiles( projectPathName )
 
