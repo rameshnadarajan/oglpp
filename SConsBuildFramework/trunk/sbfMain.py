@@ -43,7 +43,8 @@
 #
 # list of targets:
 #	- specific sbf target :
-#		sbfCheck	:	print python version, python version used by scons, scons, CC and sbf version numbers, SCONS_BUILD_FRAMEWORK environment variable, and checks if SCONS_BUILD_FRAMEWORK is well formed.
+#		sbfCheck	:	to check sbf and related tools installation.
+#					print python version, python version used by scons, scons, CC and sbf version numbers, SCONS_BUILD_FRAMEWORK environment variable, and checks if SCONS_BUILD_FRAMEWORK is well formed.
 #					If SCONS_BUILD_FRAMEWORK is not defined, a message to explain how to define it is printed.
 #					If SCONS_BUILD_FRAMEWORK is defined, sbf checks if SCONS_BUILD_FRAMEWORK is perfectly defined (i.e. path exists, well written and is the main directory of SConsBuildFramework)
 #
@@ -68,7 +69,7 @@
 #			- IMAGE_PATH to 'project/doc/image' and the same recursively for all dependencies.
 #	- zip related targets :
 #		zip				: a shortcut to 'zipRuntime zipDev zipSrc' targets detailed below.
-#		zipRuntime		: create a package with binaries and libraries.
+#		zipRuntime		: create a package with binaries, libraries and resource files (the directory 'share').
 #		zipDev			: create a package with binaries, libraries and includes files.
 #		zipSrc			: create a package with source files, i.e. all files under vcs are considered as source
 #	- myproject_build, myproject_install, myproject(idem myproject_install), myproject_clean, myproject_mrproper
@@ -103,14 +104,14 @@
 ###### imports ######
 import datetime
 import distutils.archive_util
-import fnmatch
 import os
 import re
 import string
 import sys
 
 from SCons.Script.SConscript import SConsEnvironment
-import DumpEnv
+#import DumpEnv
+from sbfFiles import *
 
 
 
@@ -136,48 +137,6 @@ def getPathFromEnv( varname, normalizedPathname = True ) :
 
 	return path
 
-
-###### Expands environment variables and normalizes the pathname ######
-def getNormalizedPathname( pathname ) :
-	return os.path.normpath( os.path.expandvars( pathname ) )
-
-
-###### Converts absolute absPathName into a path relative to basePathName ######
-def convertPathAbsToRel( basePathName, absPathName ) :
-	length = len(basePathName)
-	return absPathName[length+1:]
-
-###### Searching files in a filesystem ######
-# Prune some directories
-# Exclude/retain only a specific set of extensions for files
-def searchFiles( searchDirectory, pruneDirectories, allowedExtensions, oFiles ) :
-	for dirpath, dirnames, filenames in os.walk( searchDirectory, topdown=True ):
-		# prune directories
-		prune = []
-		for pruneDirectory in pruneDirectories :
-			prune.extend( fnmatch.filter(dirnames, pruneDirectory) )
-		for x in prune:
-			###print 'prune', x
-			dirnames.remove( x )
-
-		for file in filenames:
-			for extension in allowedExtensions :
-				if ( os.path.splitext(file)[1] == extension ) :
-					pathfilename = os.path.join(dirpath,file)
-					oFiles += [pathfilename]
-					break
-
-	###print 'oFiles=', oFiles
-
-
-# Gets all files
-def searchAllFiles( searchDirectory, oFiles ) :
-	for dirpath, dirnames, filenames in os.walk( searchDirectory, topdown=True ):
-		for file in filenames:
-			pathfilename = os.path.join(dirpath,file)
-			oFiles += [pathfilename]
-
-	### print 'oFiles=', oFiles
 
 
 ###### Svn ######
@@ -214,7 +173,7 @@ def svnGetAllVersionedFiles( path ) :
 
 	except pysvn.ClientError, e :
 		print str(e)
-#		return []
+		return []
 
 
 def svnExport( sbf, project, destinationPath ) :
@@ -444,7 +403,7 @@ def printSBFVersion() :
 
 
 def getSBFVersion() :
-	return '0.6beta2'
+	return '0.6beta3'
 
 
 ###### Print action function ######
@@ -500,8 +459,11 @@ class SConsBuildFramework :
 	myDate							= ''
 	myDateTime						= ''
 	myPlatform						= ''
-	myCC							= ''
-	my_Platform_myCC				= ''
+	myCC							= ''			# cl, gcc
+	myCCVersionNumber				= 0				# 8.000000 for cl8-0, 4.002001 for gcc 4.2.1
+	myIsExpressEdition				= False			# True if Visual Express Edition, False otherwise
+	myCCVersion						= ''			# cl8-0
+	my_Platform_myCCVersion			= ''
 
 
 	# global attributes from .SConsBuildFramework.options or computed from it
@@ -608,6 +570,29 @@ class SConsBuildFramework :
 Type: 'scons release' to build the production program/library,
       'scons debug' to build the debug version.
 
+      'scons build' for all myproject_build
+      'scons install' for all myproject_install
+      'scons all' for all myproject (this is the default target)
+      'scons debug' like target all, but config option is forced to debug
+      'scons release' like target all but config option is forced to release
+      'scons clean' for all myproject_clean
+      'scons mrproper' for all myproject_mrproper
+
+      'scons myproject_build' or 'myproject_install' or 'myproject' (idem myproject_install) or 'myproject_clean' or 'myproject_mrproper'
+
+      'scons sbfCheck' to check sbf and related tools installation.
+
+      'scons svnCheckout'
+      'scons svnUpdate'
+
+      'scons dox'
+
+      'scons zipRuntime'
+      'scons zipDev'
+      'scons zipSrc'
+      'scons zip'
+
+
 Documentation on the options:
 """)
 		Help( myOptions.GenerateHelpText(self.myEnv) )
@@ -647,22 +632,49 @@ Documentation on the options:
 		elif 'release' in self.myBuildTargets :
 			self.myEnv['config'] = 'release'
 
-		# myPlatform, myCC and my_Platform_myCC
-		# myPlatform = win32 | cygwin  | posix | darwin					TOTHINK: posix != linux and bsd ?, env['PLATFORM'] != sys.platform
+		# myPlatform, myCC, myCCVersionNumber, myCCVersion and my_Platform_myCCVersion
+		# myPlatform = win32 | cygwin  | posix | darwin				TODO: TOTHINK: posix != linux and bsd ?, env['PLATFORM'] != sys.platform
 		self.myPlatform	= self.myEnv['PLATFORM']
 
-		# myCC = clX-Y | gcc | self.myEnv['CC']
-		if		( self.myEnv['CC'] == 'cl' ) :
-			self.myCC = 'cl' + self.myEnv['MSVS_VERSION'].replace('.','-')
-		elif	( self.myEnv['CC'] == 'g++') :
+		# myCC, myCCVersionNumber, myCCVersion and my_Platform_myCCVersion
+		if self.myEnv['CC'] == 'cl' :
+			# Sets compiler
+			self.myCC				=	'cl'
+			# Extracts version number
+			# Step 1 : Extracts x.y (without Exp if any)
+			ccVersion				=	self.myEnv['MSVS_VERSION'].replace('Exp', '', 1)
+			# Step 2 : Extracts major and minor version
+			splittedCCVersion		=	ccVersion.split( '.', 1 )
+			# Step 3 : Computes version number
+			self.myCCVersionNumber	=	float(splittedCCVersion[0])
+			self.myCCVersionNumber	+=	float(splittedCCVersion[1])/1000
+			# Constructs myCCVersion ( clMajor-Minor[Exp] )
+			self.myIsExpressEdition = self.myEnv['MSVS_VERSION'].find('Exp') != -1
+			self.myCCVersion = self.myCC + self.getVersionNumberString2( self.myCCVersionNumber )
+			if self.myIsExpressEdition :
+				# Adds 'Exp'
+				self.myCCVersion += 'Exp'
+		elif self.myEnv['CC'] == 'g++' :
+			# Sets compiler
 			self.myCC = 'gcc'
+			# TODO: Extracts version number
+			self.myCCVersionNumber = 0.000000
+			print 'CCVERSION=',		self.myEnv['CCVERSION']
+			print 'CXXVERSION=',	self.myEnv['CXXVERSION']
+			self.myCCVersion = self.myCC # TODO: self.getVersionNumberString3( self.myCCVersionNumber )
 		else :
+			# Sets compiler
 			self.myCC = self.myEnv['CC']
+			# TODO: Extracts version number
+			self.myCCVersionNumber = 0.000000
+			print 'CCVERSION=',		self.myEnv['CCVERSION']
+			print 'CXXVERSION=',	self.myEnv['CXXVERSION']
+			self.myCCVersion = self.myCC # TODO: self.getVersionNumberString3( self.myCCVersionNumber )
 
-		self.my_Platform_myCC = '_' + self.myPlatform + '_' + self.myCC
+		self.my_Platform_myCCVersion = '_' + self.myPlatform + '_' + self.myCCVersion
 
-		# Adds support of Microsoft Manifest Tool for Visual Studio 2005 (cl8)
-		if self.myPlatform == 'win32' and (self.myCC in ['cl8-0Exp', 'cl8-0']) : # TODO testing all cl version is not very cute. Convert to a number and test it ?
+		# Adds support of Microsoft Manifest Tool for Visual Studio 2005 (cl8) and up
+		if self.myCC == 'cl' and self.myCCVersionNumber >= 8.000000 :
 			self.myEnv['LINKCOM'	] = [self.myEnv['LINKCOM'	], 'mt.exe -nologo -manifest ${TARGET}.manifest -outputresource:$TARGET;1']
 			self.myEnv['SHLINKCOM'	] = [self.myEnv['SHLINKCOM'], 'mt.exe -nologo -manifest ${TARGET}.manifest -outputresource:$TARGET;2']
 
@@ -686,7 +698,7 @@ Documentation on the options:
 
 		self.myInstallExtPaths = []
 		for element in self.myInstallPaths :
-			self.myInstallExtPaths	+= [element + 'Ext' + self.my_Platform_myCC]
+			self.myInstallExtPaths	+= [element + 'Ext' + self.my_Platform_myCCVersion]
 
 		if ( len(self.myInstallPaths) >= 1 ) :
 			self.myInstallDirectory	= self.myInstallPaths[0]
@@ -840,53 +852,61 @@ Documentation on the options:
 			self.myBuildOptions.Update( lenv )
 
 
-	###### configure CxxFlags & LinkFlags ######
+	###### Configures CxxFlags & LinkFlags ######
 	def configureCxxFlagsAndLinkFlagsOnWin32( self, lenv ) :
 
-		# Configures Microsoft Platform SDK for Windows Server 2003 R2 (TODO: should be done by scons...)
-		if '8' in lenv['MSVS']['VERSION'] :
+		# Configures Microsoft Platform SDK for Windows Server 2003 R2 (TODO: FIXME : should be done by SCons...)
+		if self.myIsExpressEdition :
 			#print 'self.myCppPath=', self.myCppPath
 			lenv.Append( CPPPATH = 'C:\\Program Files\\Microsoft Platform SDK for Windows Server 2003 R2\\Include' )
 			#self.myCppPath.append( 'C:\\Program Files\\Microsoft Platform SDK for Windows Server 2003 R2\\Include' )
 			#print 'self.myCppPath=', self.myCppPath
 			lenv.Append( LIBPATH = 'C:\\Program Files\\Microsoft Platform SDK for Windows Server 2003 R2\\Lib' )
-			#self.myLibPath.append( 'C:\\Program Files\\Microsoft Platform SDK for Windows Server 2003 R2\\Lib' )
-			self.myCxxFlags += ' /EHsc'	# /GX is deprecated in Visual C++ 2005
-		elif '7' in lenv['MSVS']['VERSION'] :
-			self.myCxxFlags += ' /GX'
 
-#		self.myCxxFlags += ' /nologo /GR -DWIN32 -D_MBCS -DNOMINMAX '			### /W3
-		self.myCxxFlags += ' /GR '									# Enable Run-Time Type Information
-		self.myCxxFlags += ' -DWIN32 -D_MBCS -DNOMINMAX ' 			# defines
-		if ( self.myConfig == 'release' ) :											### TODO: use /Zd in release mode to be able to debug a little.
-			self.myCxxFlags += ' -DNDEBUG /Zm600 /MD /O2 /TP '						### { /Gi ignored } and { /Og /Oi /Ot /Ob2 (in O2) }
+		#
+		if self.myCCVersionNumber >= 8.000000 :
+			self.myCxxFlags += ' /EHsc '			# /GX is deprecated in Visual C++ 2005
+		elif self.myCCVersionNumber >= 7.000000 :
+			self.myCxxFlags += ' /GX '
+			if self.myConfig == 'release' :
+				self.myCxxFlags += ' /Zm600 '
+
+		# /TP : Specify Source File Type (C++) => adds by SCons
+		# /GR : Enable Run-Time Type Information
+		self.myCxxFlags += ' /GR '
+		# Defines
+		self.myCxxFlags += ' /DWIN32 /D_WINDOWS /DNOMINMAX '
+
+		if self.myConfig == 'release' :							### TODO: use /Zd in release mode to be able to debug a little.
+			self.myCxxFlags += ' /DNDEBUG '
+			self.myCxxFlags += ' /MD /O2 '
 		else :
-#			self.myCxxFlags += ' -D_DEBUG -DDEBUG /EHsc /MDd /Od'
-			self.myCxxFlags += ' -D_DEBUG -DDEBUG'
-			self.myCxxFlags += ' /MDd /Od'
-			# Produces a program database (PDB) that contains type information and symbolic debugging information for use with the debugger.
-			# The symbolic debugging information includes the names and types of variables, as well as functions and line numbers.
-			# /ZI Produces a program database in a format that supports the Edit and Continue feature.
-			# /Gm Enable Minimal Rebuild.
-			#self.myCxxFlags += ' /ZI /Gm' TODO not compatible with parallel (-j) builds.
+			self.myCxxFlags += ' /D_DEBUG /DDEBUG '
+			# /Od : Disable (Debug)
+			self.myCxxFlags += ' /MDd /Od '
+			# /Zi : Produces a program database (PDB) that contains type information and symbolic debugging information
+			# for use with the debugger. The symbolic debugging information includes the names and types of variables,
+			# as well as functions and line numbers. Using the /Zi instead may yield improved link-time performance,
+			# although parallel builds will no longer work. You can generate PDB files with the /Zi switch by overriding
+			# the default $CCPDBFLAGS variable
+			# /ZI : Produces a program database in a format that supports the Edit and Continue feature.
+			# /Gm : Enable Minimal Rebuild.
+			#self.myCxxFlags += ' /ZI /Gm ' TODO not compatible with parallel (-j) builds.
 
-			#if '8' in lenv['MSVS']['VERSION'] :
-				#self.myCxxFlags += ' /Gm ' # Enable Minimal Rebuild
-				#self.myCxxFlags += ' /Zi '
-			#else :
-			#	self.myCxxFlags += ' /Z7 '
-#			if '7' in lenv['MSVS']['VERSION'] :
-#				self.myCxxFlags += ' /Z7 '
-#			else :
-#				self.myCxxFlags += ' /Zi '
-
-		if ( self.myWarningLevel == 'normal' ) :									### TODO: it is dependent of the myConfig. Must be changed ? yes, do it...
+		# Warnings
+		if self.myWarningLevel == 'normal' :		### TODO: it is dependent of the myConfig. Must be changed ? yes, do it...
 			self.myCxxFlags += ' /W3 '
 		else :
+			#
 			self.myCxxFlags += ' /W4 '
-			if '7' in lenv['MSVS']['VERSION'] :
+			# /Wall : Enables all warnings
+			self.myCxxFlags += ' /Wall '
+			#
+			if self.myCCVersionNumber >= 7.000000 :
+				# /Wp64 : Detect 64-Bit Portability Issues
 				self.myCxxFlags += ' /Wp64 '
-																			##/machine:I386
+
+		# Subsystem and incremental flags
 		if self.myConfig == 'release' :
 			# subsystem sets to console to output debugging informations.
 			self.myLinkFlags	+= ' /SUBSYSTEM:CONSOLE '
@@ -900,20 +920,16 @@ Documentation on the options:
 
 			# By default, the linker runs in incremental mode.
 
-		self.myCxxFlags	+= ' -D_WINDOWS '
-																					## remove MFC support, NOLIB
-		# process myType
-		#self.myCxxFlags += ' /DBOOST_ALL_DYN_LINK'
+		# TODO: FIXME: hack for boost
+		self.myCxxFlags		+= ' /DBOOST_ALL_DYN_LINK '
 
-		if ( self.myType == 'exec' ) :
+		# self.myLinkFlags	+= ' /VERSION:%s ' % self.myVersion.replace('-','.')	TODO: use a .def file
+		if		self.myType == 'exec' :
+			# /GA : Results in more efficient code for an .exe file for accessing thread-local storage (TLS) variables.
 			self.myCxxFlags += ' /GA '
-		else :
-			if ( self.myType == 'shared' ) :
-				self.myCxxFlags	+= ' -D_USRDLL '
-				#if '7' in lenv['MSVS']['VERSION'] :
-				#	self.myCxxFlags += ' /G7 '
-				#else :
-					#self.myCxxFlags += ' /GD '										## remove Boundchecker support.
+		elif	self.myType == 'shared' :
+			self.myCxxFlags	+= ' /D_USRDLL '
+
 
 
 	def configureCxxFlagsAndLinkFlagsOnPosix( self, lenv ) :
@@ -931,6 +947,7 @@ Documentation on the options:
 
 	def configureCxxFlagsAndLinkFlags( self, lenv ) :
 
+		### TODO: moves defines(-Dxxxx) from platform specific methods into this one.
 		### complete myCxxFlags and myLinkFlags ###
 		if ( self.myPlatform == 'win32' ) :
 			self.configureCxxFlagsAndLinkFlagsOnWin32( lenv )
@@ -1233,7 +1250,7 @@ Documentation on the options:
 
 			### configure others ? ###
 			else :
-				print "sbfWarning: unknown uses=[", elt, "']"
+				print "sbfWarning: unknown uses=['%s']" % elt
 
 
 	def vcsCheckout( self ) :
@@ -1386,7 +1403,7 @@ Documentation on the options:
 		#print "sbfDebug: Constructing project %s in %s" % (self.myProject, self.myProjectPathName)
 
 		### expand myProjectBuildPathExpanded
-		self.myProjectBuildPathExpanded = os.path.join( self.myProjectBuildPath, self.myProject, self.myVersion, self.myPlatform, self.myCC, self.myConfig )
+		self.myProjectBuildPathExpanded = os.path.join( self.myProjectBuildPath, self.myProject, self.myVersion, self.myPlatform, self.myCCVersion, self.myConfig )
 
 		if ( len(self.myPostfix) > 0 ) :
 			self.myProjectBuildPathExpanded += '_' + self.myPostfix
@@ -1418,9 +1435,9 @@ Documentation on the options:
 			libSplited	= string.split(lib, ' ')
 			libExpanded = ''
 			if ( len(libSplited) == 1 ) :
-				libExpanded += lib + self.my_Platform_myCC + self.my_PostfixLinkedToMyConfig
+				libExpanded += lib + self.my_Platform_myCCVersion + self.my_PostfixLinkedToMyConfig
 			elif ( len(libSplited) == 2 ) :
-				libExpanded += libSplited[0] + '_' + libSplited[1] + self.my_Platform_myCC + self.my_PostfixLinkedToMyConfig
+				libExpanded += libSplited[0] + '_' + libSplited[1] + self.my_Platform_myCCVersion + self.my_PostfixLinkedToMyConfig
 			else:
 				print 'sbfWarning: skip ', lib, ' because its name contains more than two spaces'
 
@@ -1430,38 +1447,44 @@ Documentation on the options:
 		# configure lenv[*] with lenv['uses']
 		self.uses( lenv )
 
-		###### setup 'pseudo BuildDir' (with OBJPREFIX) ######													###todo use builddir ?
-		###todo .cpp .cxx .c => config.options global, idem for pruneDirectories, .h .... => config.options global ?
+		###### setup 'pseudo BuildDir' (with OBJPREFIX) ######									###todo use builddir ?
+		### TODO: .cpp .cxx .c => config.options global, idem for pruneDirectories, .h .... => config.options global ?
 		filesFromSrc		= []
 		filesFromInclude	= []
+		filesFromShare		= []
 
-		searchFiles( 'src', ['.*'], ['.cpp'], filesFromSrc )
-		#searchFiles( 'src', ['.*', 'DEBUG_*', 'RELEASE_*'], ['.cpp'], filesFromSrc )
-		searchFiles( 'include', ['.*'], ['.hpp','.hxx'], filesFromInclude )
-		#searchFiles( 'include', ['.*'], ['.hpp','.hxx','.h'], filesFromInclude )
+		basenameWithDotRe = r"^[a-zA-Z][a-zA-Z0-9_\-]*\."
+
+		searchFiles( 'src',		filesFromSrc,		['.svn'], basenameWithDotRe + r"cpp$" )
+		#searchFiles1( 'src',		['.svn'], ['.cpp'], filesFromSrc )
+
+		searchFiles( 'include',	filesFromInclude,	['.svn'], basenameWithDotRe + r"(?:hpp|hxx|h)$" )
+		#searchFiles1( 'include', ['.svn'], ['.hpp','.hxx','.h'], filesFromInclude )
+
+		searchFiles( 'share',	filesFromShare,		['.svn'] )
 
 		objFiles = []
-		if		( self.myType in ['exec', 'static'] ) :
+		if		self.myType in ['exec', 'static'] :
 			for srcFile in filesFromSrc :
-				objFile			=	(os.path.splitext(srcFile)[0]).replace('src', self.myProjectBuildPathExpanded )
+				objFile			=	(os.path.splitext(srcFile)[0]).replace('src', self.myProjectBuildPathExpanded, 1 )
 				srcFileExpanded	=	os.path.join(self.myProjectPathName, srcFile)
 				objFiles		+=	lenv.Object( objFile, srcFileExpanded )				# Object is a synonym for the StaticObject builder method.
 				### print objFile, ':', srcFileExpanded, '\n'
 
-		elif	( self.myType == 'shared' ) :
+		elif	self.myType == 'shared':
 			for srcFile in filesFromSrc :
-				objFile			=	(os.path.splitext(srcFile)[0]).replace('src', self.myProjectBuildPathExpanded )
+				objFile			=	(os.path.splitext(srcFile)[0]).replace('src', self.myProjectBuildPathExpanded, 1 )
 				srcFileExpanded	=	os.path.join(self.myProjectPathName, srcFile)
 				objFiles		+=	lenv.SharedObject( objFile, srcFileExpanded )
 				### print objFile, ':', srcFileExpanded, '\n'
 		else :
-			if ( self.myType != 'none' ) :
+			if	self.myType != 'none' :
 				print 'sbfWarning: during setup of pseudo BuildDir'
 			# else nothing to do for 'none'
 
 
 		### final result of project ###
-		objProject = os.path.join( self.myProjectBuildPathExpanded, self.myProject ) + '_' + self.myVersion + self.my_Platform_myCC
+		objProject = os.path.join( self.myProjectBuildPathExpanded, self.myProject ) + '_' + self.myVersion + self.my_Platform_myCCVersion
 
 		objProject += self.my_FullPostfix
 
@@ -1469,42 +1492,42 @@ Documentation on the options:
 		installInBinTarget		= []
 		installInIncludeTarget	= filesFromInclude
 		installInLibTarget		= []
+		installInShareTarget	= filesFromShare
 
-		if		( self.myType == 'exec' ) :
+		if		self.myType == 'exec' :
 			projectTarget		=	lenv.Program( objProject, objFiles )
 			installInBinTarget	+=	projectTarget
-		elif	( self.myType == 'static' ) :
+		elif	self.myType == 'static' :
 			projectTarget		=	lenv.StaticLibrary( objProject, objFiles )
 			installInLibTarget	+=	projectTarget
-		elif	( self.myType == 'shared' ) :
+		elif	self.myType == 'shared' :
 			projectTarget		=	lenv.SharedLibrary( objProject, objFiles )
 			installInLibTarget	+=	projectTarget
-		elif	( self.myType == 'none' ) :
+		elif self.myType == 'none' :
 			projectTarget		= ''
 		else :
 			print 'sbfWarning: during final setup of project'
 		#																	TODO: myType == 'headers'
 
 
-		if ( self.myType in ['exec', 'static', 'shared'] ) :
+		if self.myType in ['exec', 'static', 'shared'] :
 			# projectTarget is not deleted before it is rebuilt.
 			lenv.Precious( projectTarget )
 
 		# PDB: pdb only generate on win32 and in debug mode.
-		if (	(self.myPlatform == 'win32') and (self.myConfig == 'debug')	) :
-
+		if (self.myPlatform == 'win32') and (self.myConfig == 'debug') :
 			# PDB Generation
 			# static library don't generate pdb.
-			if	(self.myType in ['exec', 'shared'] ) :
+			if	self.myType in ['exec', 'shared'] :
 				lenv['PDB'] = objProject + '.pdb'
 				lenv.SideEffect(lenv['PDB'], projectTarget)
 				# it is not deleted before it is rebuilt.
 				lenv.Precious( lenv['PDB'] )
 
 			# PDB Installation
-			if		( self.myType == 'exec' ) :
+			if		self.myType == 'exec' :
 				installInBinTarget.append(	File(objProject + '.pdb')	)
-			elif	( self.myType == 'shared' ) :
+			elif	self.myType == 'shared' :
 				installInLibTarget.append(	File(objProject + '.pdb')	)
 
 
@@ -1533,6 +1556,10 @@ Documentation on the options:
 
 		installTarget	+=	lenv.Install( os.path.join(self.myInstallDirectory, 'lib'),	installInLibTarget )
 
+		for file in installInShareTarget :
+			installTarget += lenv.InstallAs(	file.replace('share', self.getShareInstallDirectory(), 1),
+												os.path.join(self.myProjectPathName, file) )
+
 		#
 		env.Alias( self.myProject + '_install_print', lenv.Command('dummy_install_print' + self.myProject + 'out1', 'dummy.in', Action( nopAction, printInstall ) ) )
 		env.AlwaysBuild( self.myProject + '_install_print' )
@@ -1555,36 +1582,50 @@ Documentation on the options:
 		aliasProjectClean = env.Alias( self.myProject + '_clean', self.myProject + '_build' )
 
 		### myProject_mrproper
-		# FIXME: TODO: printMrproper see myProject_clean target.
+		# TODO: printMrproper see myProject_clean target.
 
 		aliasProjectMrproper = env.Alias( self.myProject + '_mrproper', aliasProjectInstall )
 		env.Clean( self.myProject + '_mrproper', os.path.join(self.myProjectBuildPath, self.myProject) )
 		env.Clean( self.myProject + '_mrproper', os.path.join(self.myInstallDirectory, 'include', self.myProject) )
 
+		shareProjectInstallDirectory = os.path.join( self.myInstallDirectory, 'share', self.myProject )
+		if os.path.exists( shareProjectInstallDirectory ) :
+			shareProjectInstallEntries = os.listdir( shareProjectInstallDirectory )
+			if	len(shareProjectInstallEntries) == 0 or \
+				(len(shareProjectInstallEntries) == 1 and shareProjectInstallEntries[0] == self.myVersion) :
+				env.Clean( self.myProject + '_mrproper', shareProjectInstallDirectory )
+			else :
+				env.Clean( self.myProject + '_mrproper', self.getShareInstallDirectory() )
+		# else : nothing to do, no share/myProject directory
+
+		# TODO: and the local/doc/myProject directory ?
+
 		#@todo myproject_zip
 
-		### configure lenv
+		### Configures lenv
+		lenv['sbf_bin']							= []
 		lenv['sbf_include']						= filesFromInclude
-		lenv['sbf_src']							= filesFromSrc
 		lenv['sbf_lib_object']					= []
 		lenv['sbf_lib_object_for_developer']	= []
-		lenv['sbf_bin']							= []
+		lenv['sbf_share']						= filesFromShare
 
+		for elt in installInBinTarget :
+			lenv['sbf_bin'].append( elt.abspath )
+
+		# TODO: not very platform independent
 		for elt in installInLibTarget :
-			#@todo must be optimize.
+			# TODO: must be optimize
 			absPathFilename	= elt.abspath
 			filename		= os.path.split(absPathFilename)[1]
 			filenameExt		= os.path.splitext(filename)[1]
-			if ( filenameExt == '.exp' ) :
+			if filenameExt == '.exp' :
 				# exclude *.exp
 				continue
-			if ( filenameExt in ['.pdb', '.lib'] ) :
-				lenv['sbf_lib_object_for_developer'] += [absPathFilename]
+			if filenameExt in ['.pdb', '.lib'] :
+				lenv['sbf_lib_object_for_developer'].append( absPathFilename )
 			else :
-				lenv['sbf_lib_object'] += [absPathFilename]
+				lenv['sbf_lib_object'].append( absPathFilename )
 
-		for elt in installInBinTarget :
-			lenv['sbf_bin'] += elt.abspath
 
 		###### special targets: build install all debug release clean mrproper ######
 		env.Alias( 'build',		aliasProjectBuild		)
@@ -1594,6 +1635,33 @@ Documentation on the options:
 		env.Alias( 'release',	aliasProject			)
 		env.Alias( 'clean',		aliasProjectClean		)
 		env.Alias( 'mrproper',	aliasProjectMrproper	)
+
+	###### Helpers ######
+	### share directory
+	def getShareDirectory( self ) :
+		return os.path.join( 'share', self.myProject, self.myVersion )
+
+	def getShareInstallDirectory( self ) :
+		return os.path.join( self.myInstallDirectory, self.getShareDirectory() )
+
+	### Management of version number
+	def getVersionNumberTuple( self, versionNumber ) :
+		major				= int(versionNumber)
+		minorDotMaintenance	= (versionNumber-major)*1000
+		minor				= int(minorDotMaintenance)
+		maintenance			= int((minorDotMaintenance-minor)*1000)
+		return ( major, minor, maintenance )
+
+	def getVersionNumberString1( self, versionNumber ) :
+		return str( int(versionNumber) )
+
+	def getVersionNumberString2( self, versionNumber ) :
+		tuple = self.getVersionNumberTuple( versionNumber )
+		return "%u-%u" % ( tuple[0], tuple[1] )
+
+	def getVersionNumberString3( self, versionNumber ) :
+		tuple = self.getVersionNumberTuple( versionNumber )
+		return "%u-%u-%u" % ( tuple[0], tuple[1], tuple[2] )
 
 
 
@@ -1770,7 +1838,7 @@ if (	('zipRuntime'	in env.sbf.myBuildTargets) or
 	# zipPathBase = /mnt/data/sbf/build/pak/vgsdk_0-4
 	zipPathBase	=	os.path.join( env.sbf.myBuildPath, 'pak', env['sbf_project'] + '_' + rootProjectEnv['version'] )
 	# zipPath = zipPathBase + "_win32_cl7-1_D"
-	zipPath		=	zipPathBase + env.sbf.my_Platform_myCC + env.sbf.my_FullPostfix
+	zipPath		=	zipPathBase + env.sbf.my_Platform_myCCVersion + env.sbf.my_FullPostfix
 
 	#_dev_2005_08_09
 	runtimeZipPath	= zipPath		+ '_runtime_'	+ env.sbf.myDate
@@ -1805,10 +1873,17 @@ if (	('zipRuntime'	in env.sbf.myBuildTargets) or
 		lenv			= env.sbf.myParsedProjects[projectName]
 		projectPathName	= lenv['sbf_projectPathName']
 		project			= lenv['sbf_project']
+		version			= lenv['sbf_version']
 
 		# Adds files to runtime zip
 		runtimeZipFiles += env.Install(	os.path.join(runtimeZipPath, 'runtime'),	lenv['sbf_bin'] )
 		runtimeZipFiles += env.Install(	os.path.join(runtimeZipPath, 'runtime'),	lenv['sbf_lib_object'] )
+
+		for file in lenv['sbf_share'] :
+			runtimeZipFiles += env.InstallAs(	file.replace(	'share',
+																os.path.join(runtimeZipPath, 'share', project, version),
+																1),
+												os.path.join(projectPathName, file) )
 
 		# Adds files to dev zip
 		devZipFiles += env.Install(		os.path.join(devZipPath, 'bin'),			lenv['sbf_bin'] )
@@ -1820,13 +1895,15 @@ if (	('zipRuntime'	in env.sbf.myBuildTargets) or
 		devZipFiles += env.Install(				os.path.join(devZipPath, 'lib'),	lenv['sbf_lib_object_for_developer'] )
 
 		# Adds files to src zip
-		allFiles = svnGetAllVersionedFiles( projectPathName )
+		if lenv['vcsUse'] == 'yes' :
+			allFiles = svnGetAllVersionedFiles( projectPathName )
 
-		projectRelPath = convertPathAbsToRel( env['sbf_launchDir'], projectPathName )
+			projectRelPath = convertPathAbsToRel( env['sbf_launchDir'], projectPathName )
 
-		for absFile in allFiles :
-			relFile = convertPathAbsToRel( projectPathName, absFile )
-			srcZipFiles += env.InstallAs( os.path.join(srcZipPath, projectRelPath, relFile), absFile )
+			for absFile in allFiles :
+				relFile = convertPathAbsToRel( projectPathName, absFile )
+				srcZipFiles += env.InstallAs( os.path.join(srcZipPath, projectRelPath, relFile), absFile )
+		# else nothing to do
 
 	runtimeZipFiles	+= env.zipArchiver( runtimeZipPath + '_pak',	runtimeZipPath )
 	devZipFiles		+= env.zipArchiver( devZipPath + '_pak',		devZipPath )
