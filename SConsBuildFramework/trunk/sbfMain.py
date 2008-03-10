@@ -81,6 +81,9 @@
 #		- release (like target all but config option is forced to release)
 #		- clean (for all myproject_clean)
 #		- mrproper (for all myproject_mrproper)
+#   - Visual Studio targets :
+#       - myproject_vcproj to build a Microsoft Visual Studio project file
+#       - vcproj for all myproject_vcproj
 #	- default target = all
 #
 #
@@ -104,6 +107,7 @@
 ###### imports ######
 import datetime
 import distutils.archive_util
+import glob
 import os
 import re
 import string
@@ -443,6 +447,10 @@ def printDoxygenBuild( target, source, localenv ) :
 def printDoxygenInstall( target, source, localenv ) :
 	return "\n----------------------- Install doxygen documentation -----------------------"
 
+def printVisualStudioProjectBuild( target, source, localenv ) :
+	return "\n----------------------- Build %s Visual Studio Project -----------------------" % localenv['sbf_projectPathName']
+
+
 
 ###### SConsBuildFramework main class ######
 
@@ -579,6 +587,9 @@ Type: 'scons release' to build the production program/library,
       'scons mrproper' for all myproject_mrproper
 
       'scons myproject_build' or 'myproject_install' or 'myproject' (idem myproject_install) or 'myproject_clean' or 'myproject_mrproper'
+
+      'scons myproject_vcproj' to build a Microsoft Visual Studio project file
+      'scons vcproj' for all myproject_vcproj
 
       'scons sbfCheck' to check sbf and related tools installation.
 
@@ -1549,12 +1560,19 @@ Documentation on the options:
 		env.Clean( self.myProject + '_build', self.myProjectBuildPathExpanded  )
 
 		### myProject_install
-		installTarget	=	lenv.Install( os.path.join(self.myInstallDirectory, 'bin'),		installInBinTarget )
+		if len(installInBinTarget) > 0 :
+			MSVSProjectBuildTarget	= lenv.Install( os.path.join(self.myInstallDirectory, 'bin'), installInBinTarget )
+			installTarget			= MSVSProjectBuildTarget
+		else :
+			MSVSProjectBuildTarget	= []
+			installTarget			= []
 
 		for file in installInIncludeTarget :
-			installTarget +=	lenv.InstallAs( os.path.join(self.myInstallDirectory, file), os.path.join(self.myProjectPathName, file) )
+			installTarget += lenv.InstallAs( os.path.join(self.myInstallDirectory, file), os.path.join(self.myProjectPathName, file) )
 
-		installTarget	+=	lenv.Install( os.path.join(self.myInstallDirectory, 'lib'),	installInLibTarget )
+		if len(installInLibTarget) > 0 :
+			MSVSProjectBuildTarget = lenv.Install( os.path.join(self.myInstallDirectory, 'lib'), installInLibTarget )
+			installTarget.append( MSVSProjectBuildTarget )
 
 		for file in installInShareTarget :
 			installTarget += lenv.InstallAs(	file.replace('share', self.getShareInstallDirectory(), 1),
@@ -1571,9 +1589,41 @@ Documentation on the options:
 		### myProject
 		aliasProject = env.Alias( self.myProject, aliasProjectInstall )
 
+		### myProject_vcproj
+		### TODO: Adds vcproj files to clean/mrproper
+		### TODO: Adds target vcsln
+		if len(MSVSProjectBuildTarget) > 0 :
+			env.Alias(	self.myProject + '_vcproj_print',
+						lenv.Command(	'dummy_vcproj_print' + self.myProject + 'out1', 'dummy.in',
+										Action( nopAction, printVisualStudioProjectBuild ) ) )
+
+			vcprojFile		= os.path.join( self.myProjectPathName, self.myProject ) + env['MSVSPROJECTSUFFIX']
+			optionsFiles	= glob.glob( self.myProjectPathName + os.sep + '*.options' )
+
+			if self.myConfig == 'release' :
+				MSVSProjectVariant = ['Release']
+			else :
+				MSVSProjectVariant = ['Debug']
+
+			vcprojTarget = env.MSVSProject(
+								target		= vcprojFile,
+								srcs		= filesFromSrc,
+								incs		= filesFromInclude,
+								resources	= filesFromShare,
+								misc		= optionsFiles,
+								buildtarget = MSVSProjectBuildTarget[0],
+								variant		= MSVSProjectVariant,
+								auto_build_solution = 0 )
+
+			aliasVCProjTarget = env.Alias( self.myProject + '_vcproj', self.myProject + '_vcproj_print' )
+			env.Alias( self.myProject + '_vcproj', vcprojTarget )
+			###### target vcproj ######
+			env.Alias( 'vcproj', aliasVCProjTarget )
+		# else no build target, so do nothing
+
 		### myProject_clean
 
-		### FIXME																									printClean does'nt work ??? modified behavior when clean=1 ?
+		### FIXME																					printClean does'nt work ??? modified behavior when clean=1 ?
 		#env.Alias( self.myProject + '_clean_print', lenv.Command('dummy_clean_print' + self.myProject + 'out1', 'dummy.in', Action( nopAction, printEmptyLine ) ) )
 		#env.Alias( self.myProject + '_clean_print', lenv.Command('dummy_clean_print' + self.myProject + 'out2', 'dummy.in', Action( nopAction, printClean ) ) )
 		#env.AlwaysBuild( self.myProject + '_clean_print' )
@@ -1626,7 +1676,6 @@ Documentation on the options:
 			else :
 				lenv['sbf_lib_object'].append( absPathFilename )
 
-
 		###### special targets: build install all debug release clean mrproper ######
 		env.Alias( 'build',		aliasProjectBuild		)
 		env.Alias( 'install',	aliasProjectInstall		)
@@ -1635,6 +1684,8 @@ Documentation on the options:
 		env.Alias( 'release',	aliasProject			)
 		env.Alias( 'clean',		aliasProjectClean		)
 		env.Alias( 'mrproper',	aliasProjectMrproper	)
+
+
 
 	###### Helpers ######
 	### share directory
