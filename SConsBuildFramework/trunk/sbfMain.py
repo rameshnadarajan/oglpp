@@ -1151,24 +1151,28 @@ Documentation on the options:
 		else :
 			print 'sbfWarning: uses=[\'%s\'] not supported on platform %s.' % ( elt, self.myPlatform )
 
-	#@todo Adds support to both ANSI and Unicode version of wx, static/dynamic and db stuff (see http://www.wxwidgets.org/wiki/index.php/MSVC_.NET_Setup_Guide)
+	#@todo Adds support to both ANSI and Unicode version of wx
+	#@todo Adds support static/dynamic and db stuff (see http://www.wxwidgets.org/wiki/index.php/MSVC_.NET_Setup_Guide)
 	def use_wxWidgets( self, lenv, elt ) :
-		if	( self.myPlatform == 'win32' ) :
+		if	self.myPlatform == 'win32' :
 
 			lenv.Append( CPPDEFINES = [ 'WXUSINGDLL', '__WIN95__' ] )
 
-			if ( elt == 'wx2-6' ) :
-				if ( self.myConfig == 'release' ) :
+			if self.myType == 'exec' :
+				lenv.Replace( LINKFLAGS = ['/SUBSYSTEM:WINDOWS'] )
+
+			if elt == 'wx2-6' :
+				if self.myConfig == 'release' :
 					lenv.Append( LIBS = [	'wxbase26', 'wxmsw26_adv', 'wxmsw26_core', 'wxmsw26_html', 'wxbase26_net', 'wxmsw26_xrc' ] )		### xml
 				else :
 					lenv.Append( LIBS = [	'wxbase26d', 'wxmsw26d_adv', 'wxmsw26d_core', 'wxmsw26d_html', 'wxbase26d_net', 'wxmsw26d_xrc' ] )	### xml
-			elif ( elt == 'wxgl2-6' ) :
-				if ( self.myConfig == 'release' ) :
+			elif elt == 'wxgl2-6' :
+				if self.myConfig == 'release' :
 					lenv.Append( LIBS = ['wxmsw26_gl'] )
 				else :
 					lenv.Append( LIBS = ['wxmsw26d_gl'] )
-			elif ( elt in ['wx2-8', 'wx'] ) :
-				if ( self.myConfig == 'release' ) :
+			elif elt in ['wx2-8', 'wx'] :
+				if self.myConfig == 'release' :
 					lenv.Append( LIBS = [	'wxbase28', 'wxbase28_net', 'wxbase28_xml', 'wxmsw28_adv', 'wxmsw28_aui', 'wxmsw28_core',
 											'wxmsw28_html', 'wxmsw28_media', 'wxmsw28_qa', 'wxmsw28_richtext', 'wxmsw28_xrc'	] )
 										# wxbase28_odbc, wxmsw28_dbgrid
@@ -1176,28 +1180,28 @@ Documentation on the options:
 					lenv.Append( LIBS = [	'wxbase28d', 'wxbase28d_net', 'wxbase28d_xml', 'wxmsw28d_adv', 'wxmsw28d_aui', 'wxmsw28d_core',
 											'wxmsw28d_html', 'wxmsw28d_media', 'wxmsw28d_qa', 'wxmsw28d_richtext', 'wxmsw28d_xrc'	] )
 										# wxbase28d_odbc, wxmsw28d_dbgrid
-			elif ( elt in ['wxgl2-8', 'wxgl'] ) :
-				if ( self.myConfig == 'release' ) :
+			elif elt in ['wxgl2-8', 'wxgl'] :
+				if self.myConfig == 'release' :
 					lenv.Append( LIBS = [	'wxmsw28_gl'	] )
 				else :
 					lenv.Append( LIBS = [	'wxmsw28d_gl'	] )
 			else :
 				print "sbfWarning: Unsupported version of wxWidgets"
-		elif ( self.myPlatform == 'darwin' ) :
+		elif self.myPlatform == 'darwin' :
 			print "sbfWarning: Unsupported version of wxWidgets"
 		else :
 			#lenv['CXXFLAGS'] += ' -DGTK_NO_CHECK_CASTS -D__WXGTK__ -D_FILE_OFFSET_BITS=64 -D_LARGE_FILES '					### FIXME: bug in ParseConfig() ? remove me ?
-			if ( elt == 'wx2-4' ) :
+			if elt == 'wx2-4' :
 				env.ParseConfig('wx-config --prefix=' + os.path.join( self.myInstallExtPaths[0], 'lib' ) + ' --cppflags --ldflags --libs')
-			elif ( elt == 'wxgl2-4' ) :
+			elif elt == 'wxgl2-4' :
 				env.ParseConfig('wx-config --prefix=' + os.path.join( self.myInstallExtPaths[0], 'lib' ) + ' --cppflags --ldflags --libs --gl-libs')
-			elif ( elt in ['wx2-6', 'wx'] ) :
-				if ( self.myConfig == 'release' ) :
+			elif elt in ['wx2-6', 'wx'] :
+				if self.myConfig == 'release' :
 					env.ParseConfig('wx-config --debug=no --cppflags --libs base adv core html net xml xrc')
 				else:
 					env.ParseConfig('wx-config --debug=yes --cppflags --libs base adv core html net xml xrc')
-			elif ( elt == 'wxgl2-6' ) :
-				if ( self.myConfig == 'release' ) :
+			elif elt == 'wxgl2-6' :
+				if self.myConfig == 'release' :
 					env.ParseConfig('wx-config --debug=no --libs gl')
 				else:
 					env.ParseConfig('wx-config --debug=yes --libs gl')
