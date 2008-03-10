@@ -1008,13 +1008,12 @@ Documentation on the options:
 		lenv.AppendUnique( CPPPATH = os.path.join( self.myIncludesInstallExtPaths[0], 'cairo' ) )
 		lenv.AppendUnique( LIBS = ['cairo', 'fontconfig', 'freetype', 'png', 'z' ] )
 
-	# TODO: GTK_BASEPATH and GTKMM_BASEPATH documentation
+	# TODO: GTK_BASEPATH and GTKMM_BASEPATH documentation, package gtkmm
 	def use_gtkmm( self, lenv, elt ) :
 		# Retrieves GTK_BASEPATH and GTKMM_BASEPATH
 		gtkBasePath		= getPathFromEnv('GTK_BASEPATH')
 		gtkmmBasePath	= getPathFromEnv('GTKMM_BASEPATH')
-		if	(gtkBasePath is None) or \
-			(gtkmmBasePath is None ) :
+		if	(gtkBasePath is None) or (gtkmmBasePath is None ) :
 			print 'sbfWarning: Unable to configure %s.' % elt
 			return
 		#
@@ -1036,11 +1035,24 @@ Documentation on the options:
 
 		#
 		if self.myPlatform == 'win32' :
-			lenv.AppendUnique( LIBS = [	'glademm-2.4', 'xml++-2.6', 'gtkmm-2.4', 'glade-2.0', 'gdkmm-2.4', 'atkmm-1.6',
-										'pangomm-1.4', 'glibmm-2.4', 'cairomm-1.0', 'sigc-2.0',
+#			lenv.AppendUnique( LIBS = [	'glademm-2.4', 'xml++-2.6', 'gtkmm-2.4', 'glade-2.0', 'gdkmm-2.4', 'atkmm-1.6',
+#										'pangomm-1.4', 'glibmm-2.4', 'cairomm-1.0', 'sigc-2.0',
+#										'gtk-win32-2.0', 'xml2', 'gdk-win32-2.0', 'atk-1.0', 'gdk_pixbuf-2.0',
+#										'pangowin32-1.0', 'pangocairo-1.0', 'pango-1.0', 'cairo', 'gobject-2.0',
+#										'gmodule-2.0', 'glib-2.0', 'intl', 'iconv' ] )
+
+			if self.myConfig == 'release' :
+				lenv.AppendUnique( LIBS = [	'glademm-2.4', 'xml++-2.6', 'gtkmm-2.4', 'gdkmm-2.4', 'atkmm-1.6',
+											'pangomm-1.4', 'glibmm-2.4', 'cairomm-1.0', 'sigc-2.0' ] )
+			else:
+				lenv.AppendUnique( LIBS = [	'glademm-2.4d', 'xml++-2.6d', 'gtkmm-2.4d', 'gdkmm-2.4d', 'atkmm-1.6d',
+											'pangomm-1.4d', 'glibmm-2.4d', 'cairomm-1.0d', 'sigc-2.0d' ] )
+
+			lenv.AppendUnique( LIBS = [	'glade-2.0',
 										'gtk-win32-2.0', 'xml2', 'gdk-win32-2.0', 'atk-1.0', 'gdk_pixbuf-2.0',
 										'pangowin32-1.0', 'pangocairo-1.0', 'pango-1.0', 'cairo', 'gobject-2.0',
 										'gmodule-2.0', 'glib-2.0', 'intl', 'iconv' ] )
+
 			lenv.AppendUnique( LIBS = [ 'gtkglext-win32-1.0', 'gdkglext-win32-1.0' ] )
 
 			lenv.AppendUnique( LIBPATH = [	os.path.join(gtkBasePath, 'lib'),
