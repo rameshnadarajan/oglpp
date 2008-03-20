@@ -8,9 +8,9 @@ import os
 import re
 
 
-###### Expands environment variables in the given pathname and normalizes it ######
+###### Expands '~' and environment variables in the given pathname and normalizes it ######
 def getNormalizedPathname( pathname ) :
-	return os.path.normpath( os.path.expandvars( pathname ) )
+	return os.path.normpath( os.path.expandvars(os.path.expanduser(pathname)) )
 
 
 ###### Converts absolute pathname absPathName into a path relative to basePathName ######
