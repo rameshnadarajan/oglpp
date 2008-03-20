@@ -114,7 +114,6 @@ import string
 import sys
 
 from SCons.Script.SConscript import SConsEnvironment
-#import DumpEnv
 from sbfFiles import *
 
 
@@ -143,7 +142,79 @@ def getPathFromEnv( varname, normalizedPathname = True ) :
 
 
 
-###### Svn ######
+###### Options : validators and converters ######
+OptionUses_allowedValues = [	### @todo allow special values like '', 'none', 'all'
+					'boost1-33-1', 'cairo1-2-6', 'gtkmm2-4', 'itk2-6', 'ode', 'opengl', 'openil', 'openilu',
+					'glu', 'glut', 'sdl', 'sofa', 'wx2-6', 'wxgl2-6', 'wx2-8', 'wxgl2-8' ]
+								# cg|cgFX|imageMagick6|imageMagick++6
+
+OptionUses_alias = {
+		'boost'		: 'boost1-33-1',
+		'cairo'		: 'cairo1-2-6',
+		'gtkmm'		: 'gtkmm2-4',
+		'itk'		: 'itk2-6',
+		'wx'		: 'wx2-8',
+		'wxgl'		: 'wxgl2-8' }
+
+def usesValidator( key, val, env ) :
+
+	# Splits the string val to obtain a list of values (the words are separated by arbitrary strings of whitespace characters)
+	list_of_values = val.split()
+
+	invalid_values = [ value for value in list_of_values if value not in OptionUses_allowedValues ]
+#=======================================================================================================================
+#	for value in list_of_values :
+#		if value not in allowed_values :
+#			invalid_values += ' ' + value
+#=======================================================================================================================
+	if len(invalid_values) > 0 :
+		import SCons.Errors
+		raise SCons.Errors.UserError("Invalid value(s) for option uses:%s" % invalid_values)
+
+### Splits the given string to obtain a list of values ###
+def convertToList( str ) :
+	if str.find(',') == -1 :
+		# no ','
+		# The words are separated by arbitrary strings of whitespace characters
+		return str.split()
+	else:
+		# ','
+		# The words are comma-separated
+		return str.replace(' ', '').split(',')
+
+### Constructs a string from a list ###
+def convertToString( list ) :
+	result = ' '
+	for element in list :
+		result += element + ' '
+
+	return result
+
+### Constructs a string from a dictionary ###
+def convertDictToString( dict ) :
+	result = ''
+	for key, value in dict.iteritems() :
+		result += "%s=%s " % (key, value)
+	return result
+
+def usesConverter( val ) :
+	list_of_values = convertToList( val )
+
+	result = []
+
+	for value in list_of_values :
+		if value in OptionUses_alias :
+			# Converts incoming value and appends to result
+			result.append( OptionUses_alias[value] )
+		else :
+			# Appends to result
+			result.append( value )
+
+	return result
+
+
+
+##### Svn ######
 def svnGetURL( path ) :
 
 	import pysvn
@@ -480,6 +551,7 @@ class SConsBuildFramework :
 	mySvnUpdateExclude				= []
 	myInstallPaths					= []
 	myBuildPath						= ''
+	mySConsignFilePath				= None
 	myCachePath						= ''
 	myCacheOn						= False
 	myConfig						= ''
@@ -572,6 +644,11 @@ class SConsBuildFramework :
 		#print "self.myEnv['MSVS']", self.myEnv['MSVS']
 		#print 'self.myEnv[MSVS_VERSION]', self.myEnv['MSVS_VERSION']
 		self.myEnv['ENV']['PATH'] += os.environ['PATH'] ### FIXME not very recommended
+
+		#self.myEnv.SourceSignatures('timestamp') #'MD5' ???
+		#print "COMMAND_LINE_TARGETS=", COMMAND_LINE_TARGETS ### ???
+
+		#print self.myEnv.Dump()
 
 		# Generates help.
 		Help("""
@@ -717,13 +794,28 @@ Documentation on the options:
 			print 'sbfError: empty installPaths'
 			Exit( 1 )
 
-		# update myBuildPath, myCachePath, myCacheOn, myConfig and myWarningLevel
-		self.myBuildPath	= getNormalizedPathname( lenv['buildPath'] )
+		# Updates myBuildPath, mySConsignFilePath, myCachePath, myCacheOn, myConfig and myWarningLevel
+		self.myBuildPath = getNormalizedPathname( lenv['buildPath'] )
+
+		# SCons signatures configuration (i.e. location of .sconsign file)
+		if lenv['SConsignFilePath'] == 'buildPath' :
+			# Explicitly stores signatures in directory given by 'buildPath' option in a file named '.sconsign.dblite'
+			self.mySConsignFilePath = self.myBuildPath
+		else :
+			# Explicitly stores signatures in directory given by 'SConsignFilePath' option in a file named '.sconsign.dblite'
+			self.mySConsignFilePath = getNormalizedPathname( lenv['SConsignFilePath'] )
+
+		if not os.path.isabs( self.mySConsignFilePath ) :
+			print 'sbfError: SConsignFilePath option = %s' % self.mySConsignFilePath
+			print 'sbfError: SConsignFilePath option is not an absolute path name.'
+			Exit(1)
+
+		self.myEnv.SConsignFile( os.path.join(self.mySConsignFilePath, '.sconsign') )
 
 		self.myCachePath	= getNormalizedPathname( lenv['cachePath'] )
 		self.myCacheOn		= lenv['cacheOn']
-		if (	(self.myCacheOn == True) and
-				(len( self.myCachePath ) > 0 )	):
+		if (self.myCacheOn == True) and \
+		(len( self.myCachePath ) > 0 ) :
 			env.CacheDir( self.myCachePath )
 			print 'sbfInfo: Use cache ', self.myCachePath
 		else :
@@ -802,15 +894,17 @@ Documentation on the options:
 #		print 'B:self.myGlobalLibPath=', self.myGlobalLibPath
 
 
+
 	###### Read a *.options file ######
 	def readOptions( self, file ) :
 		myOptions = Options( file )
 		myOptions.AddOptions(
-			('svnUrls', 'Set the list of subversion repository used in order (from first to last) until a successful checkout occurs'),
-			('svnCheckoutExclude', 'Set the list of project that may not be used for check out subversion operation. All projects not explicitly excluded will be included.'),
-			('svnUpdateExclude', 'Set the list of project that may not be used for update subversion operation. All projects not explicitly excluded will be included.'),
+			('svnUrls', 'The list of subversion repositories used, from first to last, until a successful checkout occurs.', []),
+			('svnCheckoutExclude', 'The list of projects excludes from subversion checkout operations. All projects not explicitly excluded will be included.', []),
+			('svnUpdateExclude', 'The list of projects excludes from subversion update operations. All projects not explicitly excluded will be included.', []),
 
-			EnumOption('clVersion', 'MS Visual C++ compiler (cl.exe) version using the following version schema : x.y or year. Use the special value \'highest\' to select the highest installed version.', 'highest',
+			EnumOption(	'clVersion', 'MS Visual C++ compiler (cl.exe) version using the following version schema : x.y or year. Use the special value \'highest\' to select the highest installed version.',
+						'highest',
 						allowed_values = ( '7.1', '8.0Exp', '8.0', 'highest' ),
 						map={
 								'2003'		: '7.1',
@@ -818,40 +912,50 @@ Documentation on the options:
 								'2005'		: '8.0',
 							} ),
 
-			('installPaths', 'Set the list of search paths to \'/usr/local\' like directories. The first one would be used as a destination path for target named install'),
+			('installPaths', 'The list of search paths to \'/usr/local\' like directories. The first one would be used as a destination path for target named install.', []),
 
-			('buildPath',	'Set the path to the directory in which to build all files (path could be absolute or relative to the project being build)', 'build' ),
-			('cachePath',	'Set the path to cache that will be shared among all the builds using the same cachePath', ''),
-			BoolOption('cacheOn', 'Set to use build cache.', False),
+			PathOption(	'buildPath',
+						'The build directory in which to build all derived files. It could be an absolute path, or a relative path to the project being build)',
+						'build',
+						PathOption.PathAccept),
+			(	'SConsignFilePath',
+				'Stores signatures (.sconsign.dblite file) in the specified absolute path name. If SConsignFilePath is not defined or is equal to string \'buildPath\' (the default value), the value of \'buildPath\' option is used.',
+				'buildPath' ),
+			PathOption('cachePath', 'The directory where derived files will be cached. The derived files in the cache will be shared among all the builds using the same cachePath directory.', '', PathOption.PathAccept),
+			BoolOption('cacheOn', 'Sets to True to use the build cache system (see cachePath option), False (the default) to disable it.', False),
 
-			EnumOption(	'config', 'Select a release or debug binary.', 'release',
-							allowed_values=('debug', 'release'),
-							map={}, ignorecase=1 ),
-			EnumOption( 'warningLevel', 'Select level of warnings.', 'normal',
-							allowed_values=('normal', 'high'),
-							map={}, ignorecase=1 ),
+			EnumOption(	'config', "Sets to 'release' to build the production program/library. Or sets to 'debug' to build the debug version.",
+						'release',
+						allowed_values=('debug', 'release'),
+						map={}, ignorecase=1 ),
+			EnumOption( 'warningLevel', 'Sets the level of warnings.', 'normal',
+						allowed_values=('normal', 'high'),
+						map={}, ignorecase=1 ),
 
-			EnumOption( 'vcsUse', 'Set to true if the project use a versionning control system', 'yes',
+			EnumOption( 'vcsUse', "'yes' if the project use a versioning control system, 'no' otherwise.", 'yes',
 						allowed_values=('yes', 'no'),
 						map={}, ignorecase=1 ),
-			( 'defines', 'Set the list of predefined names (as a macro)'),
-			EnumOption( 'type', 'Type of the target', 'none',
-							allowed_values=('exec', 'static','shared','none'),
-							map={}, ignorecase=1 ),
-			('version', 'Set the version number specified by a pair separated by - (i.e. major-minor)'),
-			('postfix', 'Add a postfix to the target name'),
+			('defines', 'The list of preprocessor definitions given to the compiler at each invocation (same effect as #define xxx).', ''),
+			EnumOption( 'type', "Specifies the project/target type. 'exec' for executable projects, 'static' for static library projects, 'shared' for dynamic library projects, 'none' for meta or headers only projects.",
+						'none',
+						allowed_values=('exec', 'static','shared','none'),
+						map={}, ignorecase=1 ),
+			('version', "Sets the project/target version specified by two numbers separated by '-'. For example '1-0'.", '0-0'),
+			('postfix', 'Adds a postfix to the target name.', ''),
 
-			('deps', 'Set dependencies to others projects (all dependencies are automatically built)'),
+			('deps', 'Specifies list of dependencies to others projects.', []),
 
-			('uses', 'Set usage of some predefined libraries (boost1-33-1, boost=boost1-33-1, cairo1-2-6, cairo=cairo1-2-6, gtkmm2-4, gtkmm=gtkmm2-4, itk2-6, itk=itk2-6, ode, opengl, openil, openilu, glu, glut, sdl, sofa, wx2-6, wxgl2-6, wx2-8, wxgl2-8, wx=wx2-8, wxgl=wxgl2-8)'),
-			# (cg|cgFX|imageMagick6|imageMagick++6)')
-			#ListOption(	'uses', 'Set usage of some predefined libraries', 'none',
-			#				['boost','ode', 'opengl','openil','glu','glut','wx2-4','wxgl2-4'] ), # (cg|cgFX|imageMagick6|imageMagick++6|itk)')	FIXME
+			(	'uses',
+				'Specifies a list of packages to configure for compilation and link stages.\nAvailable packages:%s\nAlias: %s' % (convertToString(OptionUses_allowedValues), convertDictToString(OptionUses_alias)),
+				[],
+				usesValidator,
+				usesConverter ),
 
-			('libs', 'Set libraries used during the link stage that have been compiled with SConsBuildFramework (this scons system)'),
-			('stdlibs', 'Set the standard libraries used during the link stage.')
+			('libs', 'The list of libraries used during the link stage that have been compiled with SConsBuildFramework (this SCons system).', []),
+			('stdlibs', 'The list of standard libraries used during the link stage.', [])
 								)
 		return myOptions
+
 
 
 	###### Read a .options file and update environment (self.myBuildOptions and lenv are modified). ######
@@ -1423,7 +1527,7 @@ Documentation on the options:
 		os.chdir( projectPathName )																				### FIXME is chdir done at scons level ?
 
 		# Dumping construction environment (for debugging).																	# TODO : a method printDebugInfo()
-		#DumpEnv.DumpEnv( lenv )
+		#lenv.Dump()
 		#print 'DEBUG:cwd=', os.getcwd()
 
 		### construct project ###
@@ -1744,7 +1848,7 @@ SConsEnvironment.sbf	= SConsBuildFramework()
 env = SConsEnvironment.sbf.myEnv # TODO remove me (this line is just for compatibility with the old global env)
 
 # Dumping construction environment (for debugging).																	# TODO : a method printDebugInfo()
-#DumpEnv.DumpEnv( env )
+#env.Dump()
 
 # target 'sbfCheck'
 env.Alias('sbfCheck', env.Command('dummyCheckVersion.out1', 'dummy.in', Action( sbfCheck, nopAction ) ) )
