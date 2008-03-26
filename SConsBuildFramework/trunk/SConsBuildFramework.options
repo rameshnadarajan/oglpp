@@ -8,7 +8,7 @@
 #SConsignFilePath	= 'buildPath' or '~'
 #cachePath			= ''
 #cacheOn			= False
-#config				= 'release' # debug, release
+#config				= 'release' # debug or release : the default compilation mode.
 #warningLevel		= 'normal'
 # project settings
 #vcsUse				= 'yes' # no
