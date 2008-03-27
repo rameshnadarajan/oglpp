@@ -350,7 +350,12 @@ class svnCallbackNotifyWrapper:
 
 
 def svnCheckout( sbf ) :
-	# try a checkout.
+	# Checks validity of 'svnUrls' option
+	# @todo Checks if urls are valid
+	if len(sbf.mySvnUrls) == 0 :
+		raise SCons.Errors.UserError("Unable to do any svn checkout, because option 'svnUrls' is empty.")
+
+	# Try a checkout
 	import pysvn
 	client = pysvn.Client()
 	client.callback_notify = svnCallbackNotifyWrapper( sbf )
@@ -1449,6 +1454,10 @@ Documentation on the options:
 		# User wants a vcs checkout ?
 		tryVcsCheckout = ('svnCheckout' in self.myBuildTargets) or (self.myProject+'_svnCheckout' in self.myBuildTargets)
 
+		# Checks validity of 'svnUrls' option (only if needed).
+		if tryVcsCheckout and len(self.mySvnUrls) == 0 :
+			raise SCons.Errors.UserError("Unable to do any svn checkout, because option 'svnUrls' is empty.")
+
 		# Tests existance of project path name
 		existanceOfProjectPathName = os.path.isdir(self.myProjectPathName)
 
@@ -1647,25 +1656,26 @@ Documentation on the options:
 
 		#
 		installInBinTarget		= []
-		installInIncludeTarget	= filesFromInclude
+		installInIncludeTarget	= []
 		installInLibTarget		= []
 		installInShareTarget	= filesFromShare
 
 		if		self.myType == 'exec' :
-			projectTarget		=	lenv.Program( objProject, objFiles )
-			installInBinTarget	+=	projectTarget
+			projectTarget			=	lenv.Program( objProject, objFiles )
+			installInBinTarget		+=	projectTarget
 		elif	self.myType == 'static' :
-			projectTarget		=	lenv.StaticLibrary( objProject, objFiles )
-			installInLibTarget	+=	projectTarget
+			projectTarget			=	lenv.StaticLibrary( objProject, objFiles )
+			installInLibTarget		+=	projectTarget
+			installInIncludeTarget	+=	filesFromInclude
 		elif	self.myType == 'shared' :
-			projectTarget		=	lenv.SharedLibrary( objProject, objFiles )
-			installInLibTarget	+=	projectTarget
+			projectTarget			=	lenv.SharedLibrary( objProject, objFiles )
+			installInLibTarget		+=	projectTarget
+			installInIncludeTarget	+=	filesFromInclude
 		elif self.myType == 'none' :
-			projectTarget		= ''
+			projectTarget			=	''
+			installInIncludeTarget	+=	filesFromInclude
 		else :
 			print 'sbfWarning: during final setup of project'
-		#																	TODO: myType == 'headers'
-
 
 		if self.myType in ['exec', 'static', 'shared'] :
 			# projectTarget is not deleted before it is rebuilt.
