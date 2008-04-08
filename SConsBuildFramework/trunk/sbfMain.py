@@ -882,6 +882,7 @@ Documentation on the options:
 
 	###### Read a *.options file ######
 	def readOptions( self, file ) :
+
 		myOptions = Options( file )
 		myOptions.AddOptions(
 			('svnUrls', 'The list of subversion repositories used, from first to last, until a successful checkout occurs.', []),

@@ -309,9 +309,11 @@ def uses( self, lenv ) :
 		### configure OpenGL ###
 		elif elt == 'opengl' :
 			if self.myPlatform == 'win32' :
-				lenv['LIBS'] += ['opengl32']
+				lenv.Append( LIBS = [	'opengl32',	# OpenGL and wgl functions
+										'gdi32'		# Pixelformat and swap related functions
+									] )
 			else :
-				lenv['LIBS'] += ['GL']
+				lenv.Append( LIBS = ['GL'] )
 
 		### configure openIL ###
 		elif elt == 'openil' :
