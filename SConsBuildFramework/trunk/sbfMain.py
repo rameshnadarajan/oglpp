@@ -265,10 +265,14 @@ def svnExportAction( target, source, env ) :
 def printSvnInfo( sbf, client ) :
 	import pysvn
 	entry = client.info( sbf.myProjectPathName )
-	if ( entry.revision.kind == pysvn.opt_revision_kind.number ) :
+	if not entry :
+		# no entry (i.e. None and co), project probably not under svn
+		return False
+	if entry.revision.kind == pysvn.opt_revision_kind.number :
 		print sbf.myProject, "at revision", entry.revision.number
 	else :
 		print sbf.myProject, "at revision", entry.revision.date
+	return True
 
 
 
@@ -363,8 +367,7 @@ def svnUpdate( sbf ) :
 
 	try :
 		revision = client.update( sbf.myProjectPathName )
-		printSvnInfo( sbf, client )
-		return True
+		return printSvnInfo( sbf, client )
 	except pysvn.ClientError, e :
 		print str(e), "\n"
 		return False
