@@ -1,0 +1,4 @@
+vcsUse		= 'no'
+type		= 'shared'
+version		= '0-0'
+uses		= ['opengl']

@@ -1,0 +1,14 @@
+vcsUse		= 'no'
+type		= 'shared'
+version		= '0-0'
+uses		= [ 'gtkmm' ]			# @todo it should be gtk and not gtkmm
+libs		= [ 'glc 0-0' ]
+
+from SCons.Script.SConscript import SConsEnvironment
+sbf			= SConsEnvironment.sbf
+platform	= sbf.myPlatform
+
+if platform == 'win32' :
+	stdlibs = [ 'User32' ] # for GetDC and ReleaseDC
+
+deps		= [ '..' ]
