@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -105,7 +105,7 @@ void DisplayList::release()
 	if ( !isEmpty() )
 	{
 		// @todo FIXME
-		// assert( glIsList( m_index ) == GL_TRUE ); // I should test all others display lists, but it is not very useful.
+		assert( glIsList( m_index ) == GL_TRUE ); // I should test all others display lists, but it is not very useful.
 		glDeleteLists( m_index, m_count );
 		
 		m_index	= 0;
