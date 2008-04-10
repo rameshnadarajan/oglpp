@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2006, 2007, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2006, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -278,6 +278,85 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 	strInfos << "Window extension count exposed by driver : " << static_cast<int>(wextensions.size()) << std::endl;
 	strInfos << "Total extension count for this hardware  : " << 
 		static_cast<int>(extensions.size() + wextensions.size()) << std::endl;
+
+	strInfos << std::endl;
+
+	//
+	strInfos << "Pixel format informations : " << std::endl;
+
+	GLint		glint;
+	GLboolean	glbool;
+
+	GLint red, green, blue, alpha;
+	glGetIntegerv( GL_RED_BITS,		&red );
+	glGetIntegerv( GL_GREEN_BITS,	&green );	
+	glGetIntegerv( GL_BLUE_BITS,	&blue );
+	glGetIntegerv( GL_ALPHA_BITS,	&alpha );
+
+	strInfos << "The number of bitplanes in color buffer							: " << red + green + blue + alpha << std::endl;
+
+	glGetIntegerv( GL_DEPTH_BITS, &glint );
+	strInfos << "GL_DEPTH_BITS (the number of bitplanes in the depth buffer)				: " << glint << std::endl;
+
+	glGetIntegerv( GL_STENCIL_BITS, &glint );
+	strInfos << "GL_STENCIL_BITS (the number of bitplanes in the stencil buffer)				: " << glint << std::endl;
+
+	GLint accum_red, accum_green, accum_blue, accum_alpha;
+	glGetIntegerv( GL_ACCUM_RED_BITS,	&accum_red );
+	glGetIntegerv( GL_ACCUM_GREEN_BITS,	&accum_green );	
+	glGetIntegerv( GL_ACCUM_BLUE_BITS,	&accum_blue );
+	glGetIntegerv( GL_ACCUM_ALPHA_BITS,	&accum_alpha );
+
+	strInfos << "The number of bitplanes in the accumulation buffer					: " << accum_red + accum_green + accum_blue + accum_alpha << std::endl;
+
+	glGetIntegerv( GL_AUX_BUFFERS, &glint );
+	strInfos << "GL_AUX_BUFFERS (the number of auxiliary color buffers)					: " << glint << std::endl;
+
+	glGetBooleanv( GL_DOUBLEBUFFER, &glbool );
+	if ( glbool == GL_TRUE )
+	{
+		strInfos << "GL_DOUBLEBUFFER (a boolean indicating whether double buffering is supported)		: TRUE " << std::endl;
+	}
+	else
+	{
+		strInfos << "GL_DOUBLEBUFFER (a boolean indicating whether double buffering is supported )		: FALSE " << std::endl;
+	}
+
+	glGetBooleanv( GL_RGBA_MODE, &glbool );
+	if ( glbool == GL_TRUE )
+	{
+		strInfos << "GL_RGBA_MODE (a boolean indicating whether OpenGL is in RGBA mode or color-index mode)	: TRUE " << std::endl;
+	}
+	else
+	{
+		strInfos << "GL_RGBA_MODE (a boolean indicating whether OpenGL is in RGBA mode or color-index mode)	: FALSE " << std::endl;
+	}
+
+	glGetBooleanv( GL_STEREO, &glbool );
+	if ( glbool == GL_TRUE )
+	{
+		strInfos << "GL_STEREO (a boolean indicating indicating whether stereo buffers (left and right) are supported) : TRUE " << std::endl;
+	}
+	else
+	{
+		strInfos << "GL_STEREO (a boolean indicating indicating whether stereo buffers (left and right) are supported) : FALSE " << std::endl;
+	}
+
+	strInfos << "GL_RED_BITS (the number of red bitplanes in each color buffer)		: " << red << std::endl;
+	strInfos << "GL_GREEN_BITS (the number of green bitplanes in each color buffer)	: " << green << std::endl;
+	strInfos << "GL_BLUE_BITS (the number of blue bitplanes in each color buffer)	: " << blue << std::endl;
+	strInfos << "GL_ALPHA_BITS (the number of alpha bitplanes in each color buffer)	: " << alpha << std::endl;
+
+	glGetIntegerv( GL_ACCUM_RED_BITS,	&red );
+	glGetIntegerv( GL_ACCUM_GREEN_BITS,	&green );	
+	glGetIntegerv( GL_ACCUM_BLUE_BITS,	&blue );
+	glGetIntegerv( GL_ACCUM_ALPHA_BITS,	&alpha );
+	strInfos << "GL_ACCUM_RED_BITS (the number of red bitplanes in the accumulation buffer)	: " << red << std::endl;
+	strInfos << "GL_ACCUM_GREEN_BITS (the number of green bitplanes in the accumulation buffer)	: " << green << std::endl;
+	strInfos << "GL_ACCUM_BLUE_BITS (the number of blue bitplanes in the accumulation buffer)	: " << blue << std::endl;
+	strInfos << "GL_ACCUM_ALPHA_BITS (the number of alpha bitplanes in the accumulation buffer)	: " << alpha << std::endl;
+
+	strInfos << std::endl;
 
 	//
 	std::string strExtensions = getExtensions();

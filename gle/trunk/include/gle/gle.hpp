@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2006, 2007, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2006, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -96,6 +96,18 @@
 #endif
 
 #include <cassert>
+
+/** 
+ * @namespace gle
+ * 
+ * @brief Open(GL) (E)xtensions library
+ * 
+ * gle for open(GL) (E)xtensions library.
+ *
+ * gle is a cross-platform (GNU/Linux, MS/Windows and Apple/MacOSX) easy-to-use OpenGL extension loader.
+ * 
+ * \b gle is open source (LGPL).
+ */
 
 /**
  * @defgroup g_gle	Open(GL) (E)xtensions library
