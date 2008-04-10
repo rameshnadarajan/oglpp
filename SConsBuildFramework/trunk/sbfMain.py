@@ -196,7 +196,6 @@ def usesConverter( val ) :
 
 ##### Svn ######
 def svnGetURL( path ) :
-
 	import pysvn
 
 	client = pysvn.Client()
@@ -204,7 +203,10 @@ def svnGetURL( path ) :
 
 	try :
 		info = client.info( path )
-		return info.url
+		if not info :
+			return ""
+		else :
+			return info.url
 
 	except pysvn.ClientError, e :
 		print str(e)
@@ -349,8 +351,7 @@ def svnCheckout( sbf ) :
 		try :
 			revision = client.checkout(	url = svnUrl, path = sbf.myProjectPathName )
 			print "sbfInfo:", sbf.myProject, "found at", svnUrl
-			printSvnInfo( sbf, client )
-			return True
+			return printSvnInfo( sbf, client )
 		except pysvn.ClientError, e :
 			print str(e), "\n"
 
