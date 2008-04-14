@@ -3,4 +3,4 @@ type		= 'shared'
 version		= '0-0'
 uses		= [ 'gtkmm' ]
 libs		= [ 'glc 0-0', 'glc_gtk 0-0' ]
-#deps		= [ '../glc_gtk', '..' ]
+deps		= [ '../glc', '../glc_gtk' ]

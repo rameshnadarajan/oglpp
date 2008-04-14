@@ -11,4 +11,4 @@ platform	= sbf.myPlatform
 if platform == 'win32' :
 	stdlibs = [ 'User32' ] # for GetDC and ReleaseDC
 
-deps		= [ '..' ]
+deps		= [ '../glc' ]
