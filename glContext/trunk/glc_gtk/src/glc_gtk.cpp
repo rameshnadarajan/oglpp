@@ -23,7 +23,11 @@ glc_drawable_t * glc_gtk_drawable_create( GtkDrawingArea * drawingArea )
 	assert( drawable != 0 && "Unable to allocate glc_drawable_t." );
 
 	// Retrieves the window of the drawing area
-	GdkWindow *gdkWindow = ((GtkWidget*)drawingArea)->window;
+	GdkWindow *gdkWindow = GTK_WIDGET(drawingArea)->window;
+
+	// Turns off the double buffering of the widget
+	// So clearing to the background color or pixmap will no more happen automatically.
+	gtk_widget_set_double_buffered( GTK_WIDGET(drawingArea), FALSE );
 
 	// Initializes the drawable
 	drawable->window	= (GLC_WINDOW_HANDLE) GDK_WINDOW_HWND( gdkWindow );
