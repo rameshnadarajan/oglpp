@@ -162,7 +162,7 @@ def convertToList( str ) :
 		# The words are comma-separated
 		return str.replace(' ', '').split(',')
 
-### Constructs a string from a list ###
+### Constructs a string from a list or a set ###
 def convertToString( list ) :
 	result = ' '
 	for element in list :
@@ -467,7 +467,7 @@ def printSBFVersion() :
 
 
 def getSBFVersion() :
-	return '0.6beta3'
+	return '0.6.1'
 
 
 ###### Print action function ######
@@ -516,14 +516,22 @@ def printVisualStudioProjectBuild( target, source, localenv ) :
 
 class SConsBuildFramework :
 
-	#
-	# myEnv SCons environment
+	# Command-line options
+	myCmdLineOptionsList			= ['debug', 'release', 'nodeps', 'deps']
+	myCmdLineOptions				= set( myCmdLineOptionsList )
 
-	# global attributes from command line
+	# SCons environment
+	myEnv							= None
+
+	# Options instances
+	mySBFOptions					= None
+	myProjectOptions				= None
+
+	# Global attributes from command line
 	myBuildTargets					= set()
 	#myGHasCleanOption				= False
 
-	# globals attributes
+	# Globals attributes
 	myDate							= ''
 	myDateTime						= ''
 	myPlatform						= ''
@@ -534,7 +542,7 @@ class SConsBuildFramework :
 	my_Platform_myCCVersion			= ''
 
 
-	# global attributes from .SConsBuildFramework.options or computed from it
+	# Global attributes from .SConsBuildFramework.options or computed from it
 	mySvnUrls						= []
 	mySvnCheckoutExclude			= []
 	mySvnUpdateExclude				= []
@@ -545,7 +553,7 @@ class SConsBuildFramework :
 	myCacheOn						= False
 	myConfig						= ''
 	myWarningLevel					= ''
-	# computed from .SConsBuildFramework.options
+	# Computed from .SConsBuildFramework.options
 	myInstallExtPaths				= []
 	myInstallDirectory				= ''
 	myIncludesInstallPaths			= []
@@ -556,7 +564,7 @@ class SConsBuildFramework :
 	myGlobalLibPath					= []
 
 	#@todo use env and lenv or at least copy in env
-	# project local attributes from default.options
+	# Project local attributes from default.options
 	myVcsUse						= ''
 	myDefines						= []
 	myType							= ''
@@ -567,7 +575,7 @@ class SConsBuildFramework :
 	myLibs							= []
 	myStdlibs						= []
 
-	# project local attributes
+	# Project local attributes
 	myProjectPathName				= ''	# d:\Dev\SrcLib\vgsdk\dependencies\gle
 	myProjectPath					= ''	# d:\Dev\SrcLib\vgsdk\dependencies
 	myProject						= ''	# gle
@@ -583,7 +591,7 @@ class SConsBuildFramework :
 
 	myProjectBuildPathExpanded		= ''	# c:\temp\sbf\build\gle\0-3\win32\cl7-1\debug
 
-	# list of projects that have been already parsed by scons
+	# List of projects that have been already parsed by scons
 	myParsedProjects				= {}
 
 
@@ -596,15 +604,15 @@ class SConsBuildFramework :
 
 		if os.path.isfile(homeSConsBuildFrameworkOptions) :
 			# Reads from your home directory.
-			myOptions = self.readOptions( homeSConsBuildFrameworkOptions )
+			self.mySBFOptions = self.readSConsBuildFrameworkOptions( homeSConsBuildFrameworkOptions )
 		else :
 			# Reads from $SCONS_BUILD_FRAMEWORK directory.
 			sbf_root			= os.getenv('SCONS_BUILD_FRAMEWORK')
 			sbf_root_normalized	= getNormalizedPathname( sbf_root )
-			myOptions = self.readOptions( os.path.join( sbf_root_normalized, 'SConsBuildFramework.options' ) )
+			self.mySBFOptions	= self.readSConsBuildFrameworkOptions( os.path.join( sbf_root_normalized, 'SConsBuildFramework.options' ) )
 
 		# Constructs SCons environment.
-		tmpEnv = Environment( options = myOptions )
+		tmpEnv = Environment( options = self.mySBFOptions )
 
 		if tmpEnv['PLATFORM'] == 'win32' :
 			# Tests existance of cl
@@ -625,7 +633,7 @@ class SConsBuildFramework :
 			if tmpEnv['clVersion'] == 'highest' :
 				self.myEnv = tmpEnv
 			else :
-				self.myEnv = Environment( options = myOptions, MSVS_VERSION = tmpEnv['clVersion'] )
+				self.myEnv = Environment( options = self.mySBFOptions, MSVS_VERSION = tmpEnv['clVersion'] )
 				# TODO Environment is construct two times. This is done just to be able to read 'clVersion' option. OPTME see below :
 				# env["MSVS"] = {"VERSION": "8.0"}
 				# env["MSVS_VERSION"] = "8.0"
@@ -634,45 +642,62 @@ class SConsBuildFramework :
 		#print 'self.myEnv[MSVS_VERSION]', self.myEnv['MSVS_VERSION']
 		self.myEnv['ENV']['PATH'] += os.environ['PATH'] ### FIXME not very recommended
 
-		#self.myEnv.SourceSignatures('timestamp') #'MD5' ???
-		#print "COMMAND_LINE_TARGETS=", COMMAND_LINE_TARGETS ### ???
+		self.myEnv.SourceSignatures('MD5')			# MD5 or timestamp
+		self.myEnv.TargetSignatures('content')		# build or content
 
 		#print self.myEnv.Dump()
 
-		# Generates help.
+		# Generates help
 		Help("""
-Type: 'scons release' to build the production program/library,
-      'scons debug' to build the debug version.
+Type:
+ 'scons sbfCheck' to check sbf and related tools installation.
 
-      'scons build' for all myproject_build
-      'scons install' for all myproject_install
-      'scons all' for all myproject (this is the default target)
-      'scons debug' like target all, but config option is forced to debug
-      'scons release' like target all but config option is forced to release
-      'scons clean' for all myproject_clean
-      'scons mrproper' for all myproject_mrproper
+ 'scons svnCheckout'
+ 'scons svnUpdate'
 
-      'scons myproject_build' or 'myproject_install' or 'myproject' (idem myproject_install) or 'myproject_clean' or 'myproject_mrproper'
+ 'scons' or 'scons all' to build your project and all its dependencies in the current 'config' (debug or release). 'All' is the default target.
+ 'scons clean' to clean intermediate files (see buildPath option).
+ 'scons mrproper' to clean installed files (see installPaths option). 'clean' target is also executed, so intermediate files are cleaned.
 
-      'scons myproject_vcproj' to build a Microsoft Visual Studio project file
-      'scons vcproj' for all myproject_vcproj
+ 'scons vcproj' to build Microsoft Visual Studio project file(s).
 
-      'scons sbfCheck' to check sbf and related tools installation.
+ 'scons dox' to generate doxygen documentation.
 
-      'scons svnCheckout'
-      'scons svnUpdate'
-
-      'scons dox'
-
-      'scons zipRuntime'
-      'scons zipDev'
-      'scons zipSrc'
-      'scons zip'
+ 'scons zipRuntime'
+ 'scons zipDev'
+ 'scons zipSrc'
+ 'scons zip'
 
 
-Documentation on the options:
+Command-line options:
+debug    a shortcut for config=debug. See 'config' option for additionnal informations.
+release  a shortcut for config=release. See 'config' option for additionnal informations.
+
+nodeps   a shortcut for nodeps=true. See 'nodeps' option for additionnal informations.
+deps     a shortcut for nodeps=false. See 'nodeps' option for additionnal informations.
+
+
+SConsBuildFramework options:
 """)
-		Help( myOptions.GenerateHelpText(self.myEnv) )
+
+#=======================================================================================================================
+#	  'scons build' for all myproject_build
+#	  'scons install' for all myproject_install
+#
+#	  'scons build' for all myproject_build
+#	  'scons install' for all myproject_install
+#	  'scons' or 'scons all' for all myproject (this is the default target)
+#	  'scons debug' like target all, but config option is forced to debug
+#	  'scons release' like target all but config option is forced to release
+#	  'scons clean' for all myproject_clean
+#	  'scons mrproper' for all myproject_mrproper
+#
+#	  'scons myproject_build' or 'myproject_install' or 'myproject' (idem myproject_install) or 'myproject_clean' or 'myproject_mrproper'
+#
+#     'scons myproject_vcproj' to build a Microsoft Visual Studio project file.
+#=======================================================================================================================
+
+		Help( self.mySBFOptions.GenerateHelpText(self.myEnv) )
 
 		# @todo FIXME : It is disabled, because it doesn't work properly
 		# Log into a file the last scons outputs (stdout and stderr) for a project
@@ -694,16 +719,29 @@ Documentation on the options:
 
 		#self.myGHasCleanOption = env.GetOption('clean')
 
-		# force clean=1 option if needed.
-		if (	('clean' in self.myBuildTargets) or
-				('mrproper' in self.myBuildTargets) ) :
-			if ( len(self.myBuildTargets) != 1 ) :
-				print 'sbfError: only one target allowed when using special target clean or mrproper'
-				Exit( 1 )
+		# Sets clean=1 option if needed.
+		if (	'clean' in self.myBuildTargets or
+				'mrproper' in self.myBuildTargets	) :
+			# target clean or mrproper
+			buildTargetsWithoutCmdLineOptions = self.myBuildTargets - self.myCmdLineOptions
+
+			if len(buildTargetsWithoutCmdLineOptions) != 1 :
+				raise SCons.Errors.UserError(	"'clean' and 'mrproper' special targets must be used without any others targets.\nCurrent specified targets: %s"
+												% convertToString(buildTargetsWithoutCmdLineOptions) )
 			else :
 				self.myEnv.SetOption('clean', 1)
 
-		# Overrides the config option, when one of the special targets, named 'debug' and 'release', is specified at command line.
+		# Analyses command line options and/or
+		# Processes special targets used as shortcuts for sbf options
+		# This 'hack' is useful to 'simulate' command-line options. But without '-' or '--' @todo options with --options
+		if 'nodeps' in self.myBuildTargets :
+			self.myEnv['nodeps'] = True
+
+		if 'deps' in self.myBuildTargets :
+			self.myEnv['nodeps'] = False
+
+		# Overrides the 'config' option, when one of the special targets, named 'debug' and 'release', is specified
+		# at command line.
 		if 'debug' in self.myBuildTargets :
 			self.myEnv['config'] = 'debug'
 		elif 'release' in self.myBuildTargets :
@@ -758,6 +796,8 @@ Documentation on the options:
 		#
 		self.initializeGlobalsFromEnv( self.myEnv )
 
+		# Prints current 'config' option
+		print "\nConfiguration: %s\n" % self.myEnv['config']
 
 
 	###### Initialize global attributes ######
@@ -884,11 +924,14 @@ Documentation on the options:
 
 
 
-	###### Read a *.options file ######
-	def readOptions( self, file ) :
+	###### Reads the main configuration file (i.e. configuration of sbf) ######
+	def readSConsBuildFrameworkOptions( self, file ) :
 
 		myOptions = Options( file )
 		myOptions.AddOptions(
+			BoolOption(	'nodeps', "Sets to true, i.e. y, yes, t, true, 1, on and all, to do not follow project dependencies. Sets to false, i.e. n, no, f, false, 0, off and none, to follow project dependencies.",
+						'false' ),
+
 			('svnUrls', 'The list of subversion repositories used, from first to last, until a successful checkout occurs.', []),
 			('svnCheckoutExclude', 'The list of projects excludes from subversion checkout operations. All projects not explicitly excluded will be included.', []),
 			('svnUpdateExclude', 'The list of projects excludes from subversion update operations. All projects not explicitly excluded will be included.', []),
@@ -920,8 +963,16 @@ Documentation on the options:
 						map={}, ignorecase=1 ),
 			EnumOption( 'warningLevel', 'Sets the level of warnings.', 'normal',
 						allowed_values=('normal', 'high'),
-						map={}, ignorecase=1 ),
+						map={}, ignorecase=1 )
+								)
+		return myOptions
 
+
+	###### Reads a configuration file for a project ######
+	def readProjectOptions( self, file ) :
+
+		myOptions = Options( file )
+		myOptions.AddOptions(
 			EnumOption( 'vcsUse', "'yes' if the project use a versioning control system, 'no' otherwise.", 'yes',
 						allowed_values=('yes', 'no'),
 						map={}, ignorecase=1 ),
@@ -947,14 +998,14 @@ Documentation on the options:
 		return myOptions
 
 
-
-	###### Read a .options file and update environment (self.myBuildOptions and lenv are modified). ######
-	def readOptionsAndUpdateEnv( self, lenv, configDotOptionsFile = 'default.options' ) :
+	###### Reads a configuration file for a project ######
+	###### Updates environment (self.myProjectOptions and lenv are modified).
+	def readProjectOptionsAndUpdateEnv( self, lenv, configDotOptionsFile = 'default.options' ) :
 		configDotOptionsPathFile = self.myProjectPathName + os.sep + configDotOptionsFile
 		if os.path.isfile(configDotOptionsPathFile) :
 			# update lenv with config.options
-			self.myBuildOptions = self.readOptions( configDotOptionsPathFile )
-			self.myBuildOptions.Update( lenv )
+			self.myProjectOptions = self.readProjectOptions( configDotOptionsPathFile )
+			self.myProjectOptions.Update( lenv )
 
 
 	###### Configures CxxFlags & LinkFlags ######
@@ -1119,42 +1170,42 @@ Documentation on the options:
 		existanceOfProjectPathName = os.path.isdir(self.myProjectPathName)
 
 		# Configures a new environment
-		lenv = env.Copy()
+		lenv = self.myEnv.Clone()
 
 		# What must be done for this project ?
 		#existanceOfProjectPathName	tryVcsCheckout		action
-		#True					True 				env (checkout and env, if lenv['vcsUse'] == 'yes' and not already checkout from vcs)
-		#True					False				env
-		#False					True				vcsCheckout env
-		#False					False				return
+		#True						True 				env (checkout and env, if lenv['vcsUse'] == 'yes' and not already checkout from vcs)
+		#True						False				env
+		#False						True				vcsCheckout env
+		#False						False				return
 
 		if not existanceOfProjectPathName :
 			if not tryVcsCheckout:
-				print "----------------------- project %s in %s -----------------------" % (self.myProject, self.myProjectPathName)
-				print "sbfWarning: Unable to find project", self.myProject, "in directory", self.myProjectPathName
+				print "----------------------- project %s in %s -----------------------" % (self.myProject, self.myProjectPath)
+				print "sbfWarning: Unable to find project", self.myProject, "in directory", self.myProjectPath
 				print "sbfInfo: None of targets svnCheckout or", self.myProject + "_svnCheckout have been specified."
 				return
 			else :
 				self.vcsCheckout()
-				self.readOptionsAndUpdateEnv( lenv )
+				self.readProjectOptionsAndUpdateEnv( lenv )
 		else :
-			self.readOptionsAndUpdateEnv( lenv )
-
+			self.readProjectOptionsAndUpdateEnv( lenv )
 			if tryVcsCheckout :
 				if lenv['vcsUse'] == 'yes' :
 					projectURL = svnGetURL(self.myProjectPathName)
 					if len(projectURL) > 0 :
 						# @todo only if verbose
-						print "----------------------- project %s in %s -----------------------" % (self.myProject, self.myProjectPathName)
+						print "----------------------- project %s in %s -----------------------" % (self.myProject, self.myProjectPath)
 						print "sbfInfo: Already checkout from %s using svn." % projectURL
 						print "sbfInfo: Uses 'svnUpdate' to get the latest changes from the repository."
 					else :
 						self.vcsCheckout()
-						self.readOptionsAndUpdateEnv( lenv )
+						self.readProjectOptionsAndUpdateEnv( lenv )
 				else :
+					print "Skip project %s in %s" % (self.myProject, self.myProjectPath)
 					# @todo only if verbose
-					print "----------------------- project %s in %s -----------------------" % (self.myProject, self.myProjectPathName)
-					print "sbfInfo: 'vcsUse' option sets to no. So svn checkout is disabled."
+					#print "----------------------- project %s in %s -----------------------" % (self.myProject, self.myProjectPath)
+					#print "sbfInfo: 'vcsUse' option sets to no. So svn checkout is disabled."
 			#else nothing to do
 
 		# Tests existance of project path name
@@ -1162,7 +1213,7 @@ Documentation on the options:
 			# Adds the new environment
 			self.myParsedProjects[self.myProject] = lenv
 		else :
-			print "sbfWarning: Unable to find project", self.myProject, "in directory", self.myProjectPathName
+			print "sbfWarning: Unable to find project", self.myProject, "in directory", self.myProjectPath
 			print "sbfInfo: Skip to the next project..."
 			return
 
@@ -1172,41 +1223,58 @@ Documentation on the options:
 		if tryVcsUpdate :
 			if lenv['vcsUse'] == 'yes' :
 				self.vcsUpdate()
-				self.readOptionsAndUpdateEnv( lenv )
+				self.readProjectOptionsAndUpdateEnv( lenv )
 			else :
+				print "Skip project %s in %s" % (self.myProject, self.myProjectPath)
 				# @todo only if verbose
-				print "----------------------- project %s in %s -----------------------" % (self.myProject, self.myProjectPathName)
-				print "sbfInfo: 'vcsUse' option sets to no. So svn update is disabled."
+				#print "----------------------- project %s in %s -----------------------" % (self.myProject, self.myProjectPath)
+				#print "sbfInfo: 'vcsUse' option sets to no. So svn update is disabled."
 		# else nothing to do.
 
 		# Constructs dependencies
-		# @todo only in verbose
+		# @todo only in debug
 		#print "sbfDebug:%s dependencies are %s" % (self.myProject, lenv['deps'])
 
-		for dependency in lenv['deps'] :
-			if ( os.path.isabs( dependency ) ) :
-				# dependency is an absolute path
-				normalizedDependency = getNormalizedPathname( dependency )
-			else :
-				# dependency is a path relative to default.options file directory
-				normalizedDependency = getNormalizedPathname( projectPathName + os.sep + dependency )
+		# Adds help on project options only for the first project.
+		if len(self.myParsedProjects) == 1 :
+			Help("""
 
-			if ( os.path.split(normalizedDependency)[1] not in self.myParsedProjects ) :
-				# dependency not already "build"
-				self.buildProject( normalizedDependency )
-			#else : # nothing to do, project already "build"
-				#print "sbfDebug: project %s already parsed." % projectPathName
+
+%s options:
+""" % self.myProject )
+			Help( self.myProjectOptions.GenerateHelpText(lenv) )
+
+		# Takes care of 'nodeps' option
+		if lenv['nodeps'] :
+			# Removes all dependencies because 'nodeps' option is enabled
+			del lenv['deps'][:]
+		else :
+			for dependency in lenv['deps'] :
+				if os.path.isabs( dependency ) :
+					# dependency is an absolute path
+					normalizedDependency = getNormalizedPathname( dependency )
+				else :
+					# dependency is a path relative to default.options file directory
+					normalizedDependency = getNormalizedPathname( projectPathName + os.sep + dependency )
+
+				if ( os.path.split(normalizedDependency)[1] not in self.myParsedProjects ) :
+					# dependency not already "build"
+					self.buildProject( normalizedDependency )
+				#else : # nothing to do, project already "build"
+					#print "sbfDebug: project %s already parsed." % projectPathName
 
 		# initialize the project
 		self.initializeProjectFromEnv( lenv )
 		self.initializeProject( projectPathName )
 
-		# force clean=1 option if needed.
-		if (	('clean' in self.myBuildTargets)						or
-				('mrproper' in self.myBuildTargets)						or
-				(self.myProject + '_clean' in self.myBuildTargets)		or
-				(self.myProject + '_mrproper' in self.myBuildTargets ) ) :
-			lenv.SetOption('clean', 1)
+#=======================================================================================================================
+#		# Sets clean=1 option if needed.
+#		if (	('clean' in self.myBuildTargets)						or
+#				('mrproper' in self.myBuildTargets)						or
+#				(self.myProject + '_clean' in self.myBuildTargets)		or
+#				(self.myProject + '_mrproper' in self.myBuildTargets ) ) :
+#			lenv.SetOption('clean', 1)
+#=======================================================================================================================
 
 		# used by code printing messages during the different build stage.
 		lenv['sbf_projectPathName'	] = self.myProjectPathName
@@ -1265,7 +1333,6 @@ Documentation on the options:
 				print 'sbfWarning: skip ', lib, ' because its name contains more than two spaces'
 
 			lenv.Append( LIBS = [libExpanded] )
-#???			lenv['LIBS'] += [libExpanded]
 
 		# configure lenv[*] with lenv['uses']
 		uses( self, lenv )
@@ -1489,12 +1556,10 @@ Documentation on the options:
 			else :
 				lenv['sbf_lib_object'].append( absPathFilename )
 
-		###### special targets: build install all debug release clean mrproper ######
+		###### special targets: build install all clean mrproper ######
 		env.Alias( 'build',		aliasProjectBuild		)
 		env.Alias( 'install',	aliasProjectInstall		)
 		env.Alias( 'all',		aliasProject			)
-		env.Alias( 'debug',		aliasProject			)
-		env.Alias( 'release',	aliasProject			)
 		env.Alias( 'clean',		aliasProjectClean		)
 		env.Alias( 'mrproper',	aliasProjectMrproper	)
 
@@ -1544,21 +1609,25 @@ env = SConsEnvironment.sbf.myEnv # TODO remove me (this line is just for compati
 #env.Dump()
 
 # target 'sbfCheck'
-env.Alias('sbfCheck', env.Command('dummyCheckVersion.out1', 'dummy.in', Action( sbfCheck, nopAction ) ) )
+Alias('sbfCheck', env.Command('dummyCheckVersion.out1', 'dummy.in', Action( sbfCheck, nopAction ) ) )
 
 # build project from launch directory (and all dependencies recursively)
 env['sbf_launchDir'			]	= os.getcwd()
 env['sbf_projectPathName'	]	= env['sbf_launchDir']
 env['sbf_projectPath'		]	= os.path.dirname(env['sbf_launchDir'])
 env['sbf_project'			]	= os.path.basename(env['sbf_launchDir'])
+
+Alias(		'all' )
+Default(	'all' )
+Alias( SConsEnvironment.sbf.myCmdLineOptionsList, 'all' )
+
 env.sbf.buildProject( env['sbf_projectPathName'] )
 
-env.Default( 'all' )
 
 ### special targets: svnCheckout svnUpdate ###
 
-env.Alias( 'svnCheckout', env.Command('dummySvnCheckout.out1', 'dummy.in', Action( nopAction, nopAction ) ) )
-env.Alias( 'svnUpdate', env.Command('dummySvnUpdate.out1', 'dummy.in', Action( nopAction, nopAction ) ) )
+Alias( 'svnCheckout', env.Command('dummySvnCheckout.out1', 'dummy.in', Action( nopAction, nopAction ) ) )
+Alias( 'svnUpdate', env.Command('dummySvnUpdate.out1', 'dummy.in', Action( nopAction, nopAction ) ) )
 
 ### special doxygen related targets : dox_build dox_install dox dox_clean dox_mrproper ###
 
