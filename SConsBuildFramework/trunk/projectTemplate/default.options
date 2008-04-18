@@ -1,2 +1,10 @@
-type		= 'shared'
-version		= '0-0'
+# project settings
+#vcsUse				= 'yes' # no
+#defines			= []
+type				= 'shared'	# exec, static, shared, none
+#version			= '0-0'
+#postfix			= ''
+#deps				= []
+#uses				= []
+#libs				= []
+#stdlibs			= []

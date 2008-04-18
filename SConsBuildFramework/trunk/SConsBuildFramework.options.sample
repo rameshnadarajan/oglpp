@@ -1,4 +1,5 @@
-# global sbf settings
+# sbf settings
+#nodeps				= false
 #svnUrls			= []
 #svnCheckoutExclude	= []
 #svnUpdateExclude	= []
@@ -10,13 +11,3 @@
 #cacheOn			= False
 #config				= 'release' # debug or release : the default compilation mode.
 #warningLevel		= 'normal'
-# project settings
-#vcsUse				= 'yes' # no
-#defines			= []
-#type				= 'none'	# exec, static, shared, none
-#version			= '0-0'
-#postfix			= ''
-#deps				= []
-#uses				= []
-#libs				= []
-#stdlibs			= []
