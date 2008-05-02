@@ -1231,6 +1231,11 @@ SConsBuildFramework options:
 				#print "sbfInfo: 'vcsUse' option sets to no. So svn update is disabled."
 		# else nothing to do.
 
+		# Tests project options existance
+		if self.myProjectOptions is None :
+			# No project options, this is not a project to build.
+			return
+
 		# Constructs dependencies
 		# @todo only in debug
 		#print "sbfDebug:%s dependencies are %s" % (self.myProject, lenv['deps'])
