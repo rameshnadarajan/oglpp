@@ -1,6 +1,8 @@
 # sbf settings
 #nodeps				= false
+#exclude			= true
 #svnUrls			= []
+#projectExclude		= []
 #svnCheckoutExclude	= []
 #svnUpdateExclude	= []
 #clVersion			= 'highest'

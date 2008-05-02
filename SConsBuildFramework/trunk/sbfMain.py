@@ -467,7 +467,7 @@ def printSBFVersion() :
 
 
 def getSBFVersion() :
-	return '0.6.1'
+	return '0.6.2'
 
 
 ###### Print action function ######
@@ -517,7 +517,7 @@ def printVisualStudioProjectBuild( target, source, localenv ) :
 class SConsBuildFramework :
 
 	# Command-line options
-	myCmdLineOptionsList			= ['debug', 'release', 'nodeps', 'deps']
+	myCmdLineOptionsList			= ['debug', 'release', 'nodeps', 'deps', 'noexclude', 'exclude']
 	myCmdLineOptions				= set( myCmdLineOptionsList )
 
 	# SCons environment
@@ -670,12 +670,14 @@ Type:
 
 
 Command-line options:
-debug    a shortcut for config=debug. See 'config' option for additionnal informations.
-release  a shortcut for config=release. See 'config' option for additionnal informations.
+debug      a shortcut for config=debug. See 'config' option for additionnal informations.
+release    a shortcut for config=release. See 'config' option for additionnal informations.
 
-nodeps   a shortcut for nodeps=true. See 'nodeps' option for additionnal informations.
-deps     a shortcut for nodeps=false. See 'nodeps' option for additionnal informations.
+nodeps     a shortcut for nodeps=true. See 'nodeps' option for additionnal informations.
+deps       a shortcut for nodeps=false. See 'nodeps' option for additionnal informations.
 
+noexclude  a shortcut for exclude=true. See 'exclude' option for additionnal informations.
+exclude    a shortcut for exclude=false. See 'exclude' option for additionnal informations.
 
 SConsBuildFramework options:
 """)
@@ -733,19 +735,33 @@ SConsBuildFramework options:
 
 		# Analyses command line options and/or
 		# Processes special targets used as shortcuts for sbf options
-		# This 'hack' is useful to 'simulate' command-line options. But without '-' or '--' @todo options with --options
-		if 'nodeps' in self.myBuildTargets :
-			self.myEnv['nodeps'] = True
-
-		if 'deps' in self.myBuildTargets :
-			self.myEnv['nodeps'] = False
+		# This 'hack' is useful to 'simulate' command-line options. But without '-' or '--'
 
 		# Overrides the 'config' option, when one of the special targets, named 'debug' and 'release', is specified
 		# at command line.
+		if ('debug' in self.myBuildTargets) and ('release' in self.myBuildTargets) :
+			raise SCons.Errors.UserError("Targets 'debug' and 'release' have been specified at command-line. Chooses one of both.")
 		if 'debug' in self.myBuildTargets :
 			self.myEnv['config'] = 'debug'
 		elif 'release' in self.myBuildTargets :
 			self.myEnv['config'] = 'release'
+
+		# Overrides the 'nodeps' option, when one of the special targets is specified at command line.
+		if ('nodeps' in self.myBuildTargets) and ('deps' in self.myBuildTargets) :
+			raise SCons.Errors.UserError("Targets 'nodeps' and 'deps' have been specified at command-line. Chooses one of both.")
+		if 'nodeps' in self.myBuildTargets :
+			self.myEnv['nodeps'] = True
+		elif 'deps' in self.myBuildTargets :
+			self.myEnv['nodeps'] = False
+
+		# Overrides the 'exclude' option, when one of the special targets is specified at command line.
+		if ('noexclude' in self.myBuildTargets) and ('exclude' in self.myBuildTargets) :
+			raise SCons.Errors.UserError("Targets 'noexclude' and 'exclude' have been specified at command-line. Chooses one of both.")
+		if 'noexclude' in self.myBuildTargets :
+			self.myEnv['exclude'] = False
+		elif 'exclude' in self.myBuildTargets :
+			self.myEnv['exclude'] = True
+
 
 		# myPlatform, myCC, myCCVersionNumber, myCCVersion and my_Platform_myCCVersion
 		# myPlatform = win32 | cygwin  | posix | darwin				TODO: TOTHINK: posix != linux and bsd ?, env['PLATFORM'] != sys.platform
@@ -931,8 +947,11 @@ SConsBuildFramework options:
 		myOptions.AddOptions(
 			BoolOption(	'nodeps', "Sets to true, i.e. y, yes, t, true, 1, on and all, to do not follow project dependencies. Sets to false, i.e. n, no, f, false, 0, off and none, to follow project dependencies.",
 						'false' ),
+			BoolOption(	'exclude', "Sets to true, i.e. y, yes, t, true, 1, on and all, to use the 'projectExclude' sbf option. Sets to false, i.e. n, no, f, false, 0, off and none, to ignore the 'projectExclude' sbf option.",
+						'true' ),
 
 			('svnUrls', 'The list of subversion repositories used, from first to last, until a successful checkout occurs.', []),
+			('projectExclude', 'The list of projects excludes from any sbf operations. All projects not explicitly excluded will be included.', []),
 			('svnCheckoutExclude', 'The list of projects excludes from subversion checkout operations. All projects not explicitly excluded will be included.', []),
 			('svnUpdateExclude', 'The list of projects excludes from subversion update operations. All projects not explicitly excluded will be included.', []),
 
@@ -1158,6 +1177,11 @@ SConsBuildFramework options:
 		self.myProjectPathName	= projectPathName
 		self.myProjectPath		= os.path.dirname( projectPathName )
 		self.myProject			= os.path.basename(projectPathName)
+
+		# Tests if the incoming project must be ignored
+		if self.myEnv['exclude'] and self.myProject in self.myEnv['projectExclude'] :
+			print "Ignore project %s in %s" % (self.myProject, self.myProjectPath)
+			return
 
 		# User wants a vcs checkout ?
 		tryVcsCheckout = ('svnCheckout' in self.myBuildTargets) or (self.myProject+'_svnCheckout' in self.myBuildTargets)
