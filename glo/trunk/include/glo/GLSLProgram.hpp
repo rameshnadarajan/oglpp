@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2007, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -49,6 +49,11 @@ struct GLO_API GLSLProgram : public IResource
 
 
 	const bool addShader( const GLcharARB *shaderSource, const ShaderType shaderType, const bool linkProgram );
+
+	/**
+	 * @pre assert( getProgramObject() != 0 && "Empty glsl program" );
+	 */
+	const bool link();
 	// @todo Adds methods attachShader, compile, link()...
 
 

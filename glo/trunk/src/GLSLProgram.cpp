@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2007, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -97,32 +97,51 @@ const bool GLSLProgram::addShader( const GLcharARB *shaderSource, const ShaderTy
 	// DELETE object, no longer needed
 	glDeleteObjectARB( object );
 
-	// @todo link()
-	// LINK
+	// LINK stage
 	if ( linkProgram )
 	{
-		glLinkProgramARB( m_programObject );
-
-		GLint linked = false;
-		glGetObjectParameterivARB( m_programObject, GL_OBJECT_LINK_STATUS_ARB, &linked );
-
-//#ifdef _DEBUG
-		printInfoLog( m_programObject );
-//#endif
-
-		if ( !linked )
-		{
-			//FIXME logError( "Shaders failed to link...\n" );
-//#ifndef _DEBUG
-			//printInfoLog( m_programObject );
-//#endif
-			return false;
-		}
+		const bool linkStatus = link();
+		return linkStatus;
+	}
+	else
+	{
+		return true;
 	}
 
 	// reportGLErrors(); FIXME
 
 	return true;
+}
+
+
+
+const bool GLSLProgram::link()
+{
+	assert( getProgramObject() != 0 && "Empty glsl program" );
+
+	// Link program
+	glLinkProgramARB( getProgramObject() );
+
+	// Checks status
+	GLint linked;
+	glGetObjectParameterivARB( getProgramObject(), GL_OBJECT_LINK_STATUS_ARB, &linked );
+
+//#ifdef _DEBUG
+	printInfoLog( getProgramObject() );
+//#endif
+
+	if ( !linked )
+	{
+		std::cerr << "Shaders failed to link..." << std::endl;
+		printInfoLog( getProgramObject() );
+	}
+	else
+	{
+		std::cerr << "Shaders have been successfully linked." << std::endl;
+		printInfoLog( getProgramObject() );
+	}
+
+	return linked;
 }
 
 
@@ -381,14 +400,14 @@ const std::string GLSLProgram::loadFile( const std::string pathfilename )
 	
 	if ( file.is_open() )
 	{
-		const int32	bufferSize	( 1024*4 );
+		const unsigned int	bufferSize	( 1024*4 );
 		char		buffer[bufferSize];
-		
+
 		while ( !file.eof() )
 		{
 			file.read( buffer, bufferSize );
 
-			int32 size( file.gcount() );		
+			unsigned int size( file.gcount() );
 			retVal.append( buffer, size );
 		}
 
