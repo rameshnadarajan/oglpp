@@ -22,12 +22,16 @@ struct GLO_API GLSLProgram : public IResource
 	/**
 	 * @brief Enumeration of the different type of shader
 	 */
-	enum ShaderType {
-		VERTEX		= GL_VERTEX_SHADER_ARB,
-		FRAGMENT	= GL_FRAGMENT_SHADER_ARB,
-		GEOMETRY	= GL_GEOMETRY_SHADER_EXT
+	enum ShaderType
+	{
+		VERTEX = 0,
+		FRAGMENT,
+		GEOMETRY
 	};
 
+	static const GLenum convertShaderType2GLEnum( const ShaderType shaderType );
+
+	static const std::string& convertShaderType2String( const ShaderType shaderType );
 
 	/**
 	 * @name Constructor and destructor
@@ -152,6 +156,9 @@ protected:
 
 private:
 	GLhandleARB		m_programObject;
+
+	static GLenum		m_GLEnumShaderType[];
+	static std::string	m_stringShaderType[];
 
 	static bool		m_firstInstance;
 };

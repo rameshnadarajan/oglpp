@@ -5,13 +5,26 @@
 
 #include "glo/GLSLProgram.hpp"
 
-#include <iostream>     // for I/O
-#include <fstream>      // for file I/O
+#include <fstream>	// for file I/O
+#include <iostream>	// for I/O
 
 
 
 namespace glo
 {
+
+
+
+const GLenum GLSLProgram::convertShaderType2GLEnum( const ShaderType shaderType )
+{
+	return m_GLEnumShaderType[shaderType];
+}
+
+
+const std::string& GLSLProgram::convertShaderType2String( const ShaderType shaderType )
+{
+	return m_stringShaderType[shaderType];
+}
 
 
 
@@ -67,7 +80,7 @@ const bool GLSLProgram::addShader( const GLcharARB *shaderSource, const ShaderTy
 	// SET SOURCES
 	// @todo Creates a GLSLShader.[shaderSource, compile, compileStatus, infoLog, attachTo(GLSLProgram, deleteShader)]
 	// @todo exceptions
-	GLhandleARB object = glCreateShaderObjectARB( shaderType );
+	GLhandleARB object = glCreateShaderObjectARB( convertShaderType2GLEnum(shaderType) );
 	assert(object != 0);
 
 	const GLint length = static_cast<GLint>( strlen( shaderSource ) );
@@ -81,6 +94,7 @@ const bool GLSLProgram::addShader( const GLcharARB *shaderSource, const ShaderTy
 	glGetObjectParameterivARB( object, GL_OBJECT_COMPILE_STATUS_ARB, &compiled );
 
 //#ifdef _DEBUG
+	std::cout << convertShaderType2String(shaderType) << " shader compilation" << std::endl;
 	printInfoLog( object ); // FIXME
 //#endif
 
@@ -127,18 +141,19 @@ const bool GLSLProgram::link()
 	glGetObjectParameterivARB( getProgramObject(), GL_OBJECT_LINK_STATUS_ARB, &linked );
 
 //#ifdef _DEBUG
+	std::cout << "Program link" << std::endl;
 	printInfoLog( getProgramObject() );
 //#endif
 
 	if ( !linked )
 	{
-		std::cerr << "Shaders failed to link..." << std::endl;
-		printInfoLog( getProgramObject() );
+		std::cerr << "Program failed to link..." << std::endl;
+		//printInfoLog( getProgramObject() );
 	}
 	else
 	{
-		std::cerr << "Shaders have been successfully linked." << std::endl;
-		printInfoLog( getProgramObject() );
+		std::cout << "Program have been successfully linked." << std::endl;
+		//printInfoLog( getProgramObject() );
 	}
 
 	return linked;
@@ -481,13 +496,32 @@ void GLSLProgram::printInfoLog( GLhandleARB object )
 
 		glGetInfoLogARB(object, maxLength, &maxLength, infoLog);
 
-		std::cerr << "glo.GLSLProgram: GLSL INFO LOG: " << std::string(infoLog) << std::endl; 
-
-		// @todo FIXME logError( "%s\n", infoLog );
+		if ( maxLength > 0 )
+		{
+			std::cout << "glo.GLSLProgram: info log :\n" << std::string(infoLog) << std::endl; 
+			// @todo FIXME logError( "%s\n", infoLog );
+		}
 
  		delete[] infoLog;
 	}
 }
+
+
+
+GLenum GLSLProgram::m_GLEnumShaderType[] = 
+{
+	GL_VERTEX_SHADER_ARB,
+	GL_FRAGMENT_SHADER_ARB,
+	GL_GEOMETRY_SHADER_EXT
+};
+
+
+std::string GLSLProgram::m_stringShaderType[] =
+{
+	"VERTEX",
+	"FRAGMENT",
+	"GEOMETRY"
+};
 
 
 
