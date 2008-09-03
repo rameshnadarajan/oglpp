@@ -1,9 +1,11 @@
-// GLE - Copyright (C) 2005, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
 #include "glo/Texture.hpp"
+
+#include <iostream>
 
 
 
@@ -28,7 +30,7 @@ Texture::Texture()
 :	//m_target	(	target 	),
 	m_texture	(	0		),
 
-	m_border( 0	),	
+	m_border( 0	),
 	m_width	( 0 )
 {
 	m_scaleFactors[0] = m_scaleFactors[1] = m_scaleFactors[2] = 1.f;
@@ -38,7 +40,14 @@ Texture::Texture()
 
 Texture::~Texture()
 {
-	release();
+	if ( gleGetCurrent() )
+	{
+		release();
+	}
+	else
+	{
+		std::cerr << "Unable to release texture object " << m_texture << "." << std::endl;
+	}
 }
 
 
@@ -59,7 +68,7 @@ void Texture::release()
 	if ( !isEmpty() )
 	{
 		glDeleteTextures( 1, &m_texture );
-		
+
 		m_texture = 0;
 	}
 }

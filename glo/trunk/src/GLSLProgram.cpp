@@ -63,7 +63,21 @@ GLSLProgram::GLSLProgram( bool initialized )
 
 GLSLProgram::~GLSLProgram()
 {
-	if ( m_programObject != 0 )
+	if ( gleGetCurrent() )
+	{
+		release();
+	}
+	else
+	{
+		std::cerr << "Unable to release program object " << m_programObject << "." << std::endl;
+	}
+}
+
+
+
+void GLSLProgram::release()
+{
+	if ( m_programObject != 0 && gleGetCurrent() )
 	{
 		glDeleteObjectARB( m_programObject );
 	}

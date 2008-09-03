@@ -49,6 +49,11 @@ struct GLO_API GLSLProgram : public IResource
 	 * @brief Destructor.
 	 */
 	~GLSLProgram();
+
+	/**
+	 * @brief Releases OpenGL resource.
+	 */
+	void release();
 	//@}
 
 

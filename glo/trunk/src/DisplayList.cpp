@@ -5,6 +5,8 @@
 
 #include "glo/DisplayList.hpp"
 
+#include <iostream>
+
 
 
 namespace glo
@@ -23,7 +25,14 @@ DisplayList::DisplayList()
 
 DisplayList::~DisplayList()
 {
-	release();
+	if ( gleGetCurrent() )
+	{
+		release();
+	}
+	else
+	{
+		std::cerr << "Unable to release display list " << m_index << "." << std::endl;
+	}
 }
 
 
@@ -42,7 +51,7 @@ bool DisplayList::begin( GLsizei range )
 		return ( false );
 	}
 
-	assert( glIsList( m_index ) == GL_TRUE );	
+	assert( glIsList( m_index ) == GL_TRUE );
 	glNewList( m_index, GL_COMPILE );
 
 	m_current = m_index;

@@ -1,9 +1,11 @@
-// GLE - Copyright (C) 2005, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
 #include "glo/VertexBufferObject.hpp"
+
+#include <iostream>
 
 
 
@@ -22,7 +24,14 @@ VertexBufferObject::VertexBufferObject()
 
 VertexBufferObject::~VertexBufferObject()
 {
-	release();
+	if ( gleGetCurrent() )
+	{
+		release();
+	}
+	else
+	{
+		std::cerr << "Unable to release vertex buffer object (id=" << m_buffer << ", " << "count=" << m_count << ")" << std::endl;
+	}
 }
 
 
@@ -57,18 +66,18 @@ GLuint VertexBufferObject::get( uint32 index ) const
 
 void VertexBufferObject::release()
 {
-	if ( !isEmpty() )
+	if ( !isEmpty() && gleGetCurrent() )
 	{
 		// FIXME Must be bind before testing !! assert( glIsBufferARB( m_buffer[0] ) == GL_TRUE );	// I should test all others vertex buffer object, 
 																																				//but it is not very useful.	
 		glDeleteBuffersARB( m_count, m_buffer );
-		
+
 		delete[] m_buffer;
-		
+
 		m_buffer	= 0;
 		m_count		= 0;
 	}
-	// else nothing	
+	// else nothing
 }
 
 
