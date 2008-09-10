@@ -1,6 +1,6 @@
-// This file was generated at Mon Oct  8 15:44:58 2007 with gle, please do not modify.
+// This file was generated at Fri Jun 20 14:40:22 2008 with gle, please do not modify.
 
-// GLE - Copyright (C) 2004, 2005, 2007, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -4538,6 +4538,21 @@ bool isGL_FfdMaskSGIX()
 	const bool isSupported = gleGetCurrent()->isGL_FfdMaskSGIX;
 	
 	return isSupported;
+}
+
+
+// ********* GL_GREMEDY_frame_terminator *********
+bool isGL_GREMEDY_frame_terminator()
+{
+	const bool isSupported = gleGetCurrent()->isGL_GREMEDY_frame_terminator;
+	
+	return isSupported;
+}
+
+					
+void glFrameTerminatorGREMEDY( void )
+{
+	gleGetCurrent()->glFrameTerminatorGREMEDY(  );
 }
 
 

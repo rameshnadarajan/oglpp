@@ -1,6 +1,6 @@
-// This file was generated at Mon Oct  8 15:44:58 2007 with gle, please do not modify.
+// This file was generated at Fri Jun 20 14:40:22 2008 with gle, please do not modify.
 
-// GLE - Copyright (C) 2004, 2005, 2007, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -17,8 +17,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 293;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 1192;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 294;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 1193;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS ) :
@@ -1203,6 +1203,11 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_FfdMaskSGIX ******
 	isGL_FfdMaskSGIX                                              = false;
+
+
+	// ****** GL_GREMEDY_frame_terminator ******
+	isGL_GREMEDY_frame_terminator                                 = false;
+	glFrameTerminatorGREMEDY                                      = 0;
 
 
 	// ****** GL_GREMEDY_string_marker ******
@@ -9298,6 +9303,45 @@ void OpenGLExtensionsGen::initializeGL_GREMEDY()
 	int	localSupportedProcCount 	= 0;
 	int	localInitializedProcCount	= 0;
 
+	
+	// ****** GL_GREMEDY_frame_terminator ******
+	
+	isGL_GREMEDY_frame_terminator = isExtensionSupported("GL_GREMEDY_frame_terminator");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_GREMEDY_frame_terminator ) // || isSEDEnable()
+	{
+
+		glFrameTerminatorGREMEDY = (PFNGLFRAMETERMINATORGREMEDYPROC) getExtensionPtr( "glFrameTerminatorGREMEDY" );
+		if ( glFrameTerminatorGREMEDY != 0 )	++localInitializedProcCount;
+	} // if ( isGL_GREMEDY_frame_terminator || isSEDEnable() )
+	
+	if ( isGL_GREMEDY_frame_terminator )
+	{
+		std::stringstream strStream;
+		strStream << "GL_GREMEDY_frame_terminator                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_GREMEDY_frame_terminator                                 : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_GREMEDY_frame_terminator") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_GREMEDY_frame_terminator                                 : not detected." );
+	}
 	
 	// ****** GL_GREMEDY_string_marker ******
 	

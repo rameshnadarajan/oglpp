@@ -1,6 +1,6 @@
-// This file was generated at Mon Oct  8 15:44:58 2007 with gle, please do not modify.
+// This file was generated at Fri Jun 20 14:40:22 2008 with gle, please do not modify.
 
-// GLE - Copyright (C) 2004, 2005, 2007, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -17,11 +17,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Mon Oct  8 15:44:58 2007 with gle, please do not modify.
+ * - Stamp = // This file was generated at Fri Jun 20 14:40:22 2008 with gle, please do not modify.
  * - Number of tokens					= 0
- * - Number of functions				= 1192
- * - Number of extensions found(in headers)	= 293
- * - Number of extensions in OpenGL registry	= 331
+ * - Number of functions				= 1193
+ * - Number of extensions found(in headers)	= 294
+ * - Number of extensions in OpenGL registry	= 339
  */
 
 
@@ -4191,6 +4191,20 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_FfdMaskSGIX is supported, false otherwise.
 	 */
 	bool isGL_FfdMaskSGIX;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_GREMEDY_frame_terminator is supported, false otherwise.
+	 */
+	bool isGL_GREMEDY_frame_terminator;
+
+	/**
+	* @brief void glFrameTerminatorGREMEDY( void );
+	*/
+	PFNGLFRAMETERMINATORGREMEDYPROC                               glFrameTerminatorGREMEDY;
 
 
 

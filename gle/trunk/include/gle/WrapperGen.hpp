@@ -1,6 +1,6 @@
-// This file was generated at Mon Oct  8 15:44:58 2007 with gle, please do not modify.
+// This file was generated at Fri Jun 20 14:40:22 2008 with gle, please do not modify.
 
-// GLE - Copyright (C) 2004, 2005, 2007, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -54,7 +54,7 @@
  */
 
 /** 
- * @defgroup g_GL_GREMEDY		GL_GREMEDY (1 extensions found)
+ * @defgroup g_GL_GREMEDY		GL_GREMEDY (2 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -5145,6 +5145,27 @@ GLE_API void glVertexWeightPointerEXT( GLsizei size, GLenum type, GLsizei stride
  * @return Returns \c true if \b GL_FfdMaskSGIX is supported, false otherwise.
  */
 GLE_API bool isGL_FfdMaskSGIX();
+
+//@}
+
+
+/**
+ * @defgroup GL_GREMEDY_frame_terminator GL_GREMEDY_frame_terminator
+ * Extension number in OpenGL registry : 345
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/GREMEDY/frame_terminator.txt
+ * @ingroup g_GL_GREMEDY g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_GREMEDY_frame_terminator is supported.
+ * @return Returns \c true if \b GL_GREMEDY_frame_terminator is supported, false otherwise.
+ */
+GLE_API bool isGL_GREMEDY_frame_terminator();
+
+/**
+ * @brief void glFrameTerminatorGREMEDY( void );
+ */
+GLE_API void glFrameTerminatorGREMEDY( void );
 
 //@}
 
