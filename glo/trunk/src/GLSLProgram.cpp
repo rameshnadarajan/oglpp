@@ -5,6 +5,7 @@
 
 #include "glo/GLSLProgram.hpp"
 
+#include <cstring>
 #include <fstream>	// for file I/O
 #include <iostream>	// for I/O
 
@@ -97,7 +98,7 @@ const bool GLSLProgram::addShader( const GLcharARB *shaderSource, const ShaderTy
 	GLhandleARB object = glCreateShaderObjectARB( convertShaderType2GLEnum(shaderType) );
 	assert(object != 0);
 
-	const GLint length = static_cast<GLint>( strlen( shaderSource ) );
+	const GLint length = static_cast<GLint>( std::strlen( shaderSource ) );
 	glShaderSourceARB( object, 1, &shaderSource, &length );
 
 	// COMPILE shader object
