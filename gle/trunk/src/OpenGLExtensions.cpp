@@ -9,6 +9,7 @@
 #include <dlfcn.h>
 #endif
 
+#include <cstring>
 #include <sstream>
 
 #ifdef WIN32
@@ -577,7 +578,7 @@ const bool OpenGLExtensions::checkExtension( const char *extName, const char *ex
 	char *pend;
 	std::string::size_type extNameLen;
 
-	extNameLen = strlen(extName);
+	extNameLen = std::strlen(extName);
 	pend = p + strlen(p);
 
 	while (p < pend) 
