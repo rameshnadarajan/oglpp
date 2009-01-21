@@ -1,0 +1,9 @@
+#summary Open(GL) (E)xtension library
+
+= Introduction =
+
+The goal of the gle, a shortcut for Open(GL) (E)xtension library, is to provide all OpenGL extensions to C/C++ OpenGL developers.
+
+= Details =
+
+gle detect, at run-time, whether OpenGL extensions are supported or not by the driver. gle initialize them and provide entry points to be able to use it easily.
