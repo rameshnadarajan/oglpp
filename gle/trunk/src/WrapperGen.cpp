@@ -1,4 +1,4 @@
-// This file was generated at Fri Jun 20 14:40:22 2008 with gle, please do not modify.
+// This file was generated at Wed Jan 21 15:42:33 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -272,6 +272,15 @@ void glClampColorARB( GLenum target, GLenum clamp )
 }
 
 
+// ********* GL_ARB_depth_buffer_float *********
+bool isGL_ARB_depth_buffer_float()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_depth_buffer_float;
+	
+	return isSupported;
+}
+
+
 // ********* GL_ARB_depth_texture *********
 bool isGL_ARB_depth_texture()
 {
@@ -293,6 +302,27 @@ bool isGL_ARB_draw_buffers()
 void glDrawBuffersARB( GLsizei n, const GLenum *bufs )
 {
 	gleGetCurrent()->glDrawBuffersARB( n, bufs );
+}
+
+
+// ********* GL_ARB_draw_instanced *********
+bool isGL_ARB_draw_instanced()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_draw_instanced;
+	
+	return isSupported;
+}
+
+					
+void glDrawArraysInstancedARB( GLenum mode, GLint first, GLsizei count, GLsizei primcount )
+{
+	gleGetCurrent()->glDrawArraysInstancedARB( mode, first, count, primcount );
+}
+
+					
+void glDrawElementsInstancedARB( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount )
+{
+	gleGetCurrent()->glDrawElementsInstancedARB( mode, count, type, indices, primcount );
 }
 
 
@@ -323,10 +353,190 @@ bool isGL_ARB_fragment_shader()
 }
 
 
+// ********* GL_ARB_framebuffer_object *********
+bool isGL_ARB_framebuffer_object()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_framebuffer_object;
+	
+	return isSupported;
+}
+
+					
+GLboolean glIsRenderbuffer( GLuint renderbuffer )
+{
+	return ( gleGetCurrent()->glIsRenderbuffer( renderbuffer) );
+}
+
+					
+void glBindRenderbuffer( GLenum target, GLuint renderbuffer )
+{
+	gleGetCurrent()->glBindRenderbuffer( target, renderbuffer );
+}
+
+					
+void glDeleteRenderbuffers( GLsizei n, const GLuint *renderbuffers )
+{
+	gleGetCurrent()->glDeleteRenderbuffers( n, renderbuffers );
+}
+
+					
+void glGenRenderbuffers( GLsizei n, GLuint *renderbuffers )
+{
+	gleGetCurrent()->glGenRenderbuffers( n, renderbuffers );
+}
+
+					
+void glRenderbufferStorage( GLenum target, GLenum internalformat, GLsizei width, GLsizei height )
+{
+	gleGetCurrent()->glRenderbufferStorage( target, internalformat, width, height );
+}
+
+					
+void glGetRenderbufferParameteriv( GLenum target, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetRenderbufferParameteriv( target, pname, params );
+}
+
+					
+GLboolean glIsFramebuffer( GLuint framebuffer )
+{
+	return ( gleGetCurrent()->glIsFramebuffer( framebuffer) );
+}
+
+					
+void glBindFramebuffer( GLenum target, GLuint framebuffer )
+{
+	gleGetCurrent()->glBindFramebuffer( target, framebuffer );
+}
+
+					
+void glDeleteFramebuffers( GLsizei n, const GLuint *framebuffers )
+{
+	gleGetCurrent()->glDeleteFramebuffers( n, framebuffers );
+}
+
+					
+void glGenFramebuffers( GLsizei n, GLuint *framebuffers )
+{
+	gleGetCurrent()->glGenFramebuffers( n, framebuffers );
+}
+
+					
+GLenum glCheckFramebufferStatus( GLenum target )
+{
+	return ( gleGetCurrent()->glCheckFramebufferStatus( target) );
+}
+
+					
+void glFramebufferTexture1D( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level )
+{
+	gleGetCurrent()->glFramebufferTexture1D( target, attachment, textarget, texture, level );
+}
+
+					
+void glFramebufferTexture2D( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level )
+{
+	gleGetCurrent()->glFramebufferTexture2D( target, attachment, textarget, texture, level );
+}
+
+					
+void glFramebufferTexture3D( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset )
+{
+	gleGetCurrent()->glFramebufferTexture3D( target, attachment, textarget, texture, level, zoffset );
+}
+
+					
+void glFramebufferRenderbuffer( GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer )
+{
+	gleGetCurrent()->glFramebufferRenderbuffer( target, attachment, renderbuffertarget, renderbuffer );
+}
+
+					
+void glGetFramebufferAttachmentParameteriv( GLenum target, GLenum attachment, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetFramebufferAttachmentParameteriv( target, attachment, pname, params );
+}
+
+					
+void glGenerateMipmap( GLenum target )
+{
+	gleGetCurrent()->glGenerateMipmap( target );
+}
+
+					
+void glBlitFramebuffer( GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter )
+{
+	gleGetCurrent()->glBlitFramebuffer( srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter );
+}
+
+					
+void glRenderbufferStorageMultisample( GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height )
+{
+	gleGetCurrent()->glRenderbufferStorageMultisample( target, samples, internalformat, width, height );
+}
+
+					
+void glFramebufferTextureLayer( GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer )
+{
+	gleGetCurrent()->glFramebufferTextureLayer( target, attachment, texture, level, layer );
+}
+
+
+// ********* GL_ARB_framebuffer_sRGB *********
+bool isGL_ARB_framebuffer_sRGB()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_framebuffer_sRGB;
+	
+	return isSupported;
+}
+
+
+// ********* GL_ARB_geometry_shader4 *********
+bool isGL_ARB_geometry_shader4()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_geometry_shader4;
+	
+	return isSupported;
+}
+
+					
+void glProgramParameteriARB( GLuint program, GLenum pname, GLint value )
+{
+	gleGetCurrent()->glProgramParameteriARB( program, pname, value );
+}
+
+					
+void glFramebufferTextureARB( GLenum target, GLenum attachment, GLuint texture, GLint level )
+{
+	gleGetCurrent()->glFramebufferTextureARB( target, attachment, texture, level );
+}
+
+					
+void glFramebufferTextureLayerARB( GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer )
+{
+	gleGetCurrent()->glFramebufferTextureLayerARB( target, attachment, texture, level, layer );
+}
+
+					
+void glFramebufferTextureFaceARB( GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face )
+{
+	gleGetCurrent()->glFramebufferTextureFaceARB( target, attachment, texture, level, face );
+}
+
+
 // ********* GL_ARB_half_float_pixel *********
 bool isGL_ARB_half_float_pixel()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_half_float_pixel;
+	
+	return isSupported;
+}
+
+
+// ********* GL_ARB_half_float_vertex *********
+bool isGL_ARB_half_float_vertex()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_half_float_vertex;
 	
 	return isSupported;
 }
@@ -338,6 +548,42 @@ bool isGL_ARB_imaging()
 	const bool isSupported = gleGetCurrent()->isGL_ARB_imaging;
 	
 	return isSupported;
+}
+
+
+// ********* GL_ARB_instanced_arrays *********
+bool isGL_ARB_instanced_arrays()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_instanced_arrays;
+	
+	return isSupported;
+}
+
+					
+void glVertexAttribDivisor( GLuint index, GLuint divisor )
+{
+	gleGetCurrent()->glVertexAttribDivisor( index, divisor );
+}
+
+
+// ********* GL_ARB_map_buffer_range *********
+bool isGL_ARB_map_buffer_range()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_map_buffer_range;
+	
+	return isSupported;
+}
+
+					
+void glMapBufferRange( GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access )
+{
+	gleGetCurrent()->glMapBufferRange( target, offset, length, access );
+}
+
+					
+void glFlushMappedBufferRange( GLenum target, GLintptr offset, GLsizeiptr length )
+{
+	gleGetCurrent()->glFlushMappedBufferRange( target, offset, length );
 }
 
 
@@ -983,6 +1229,21 @@ bool isGL_ARB_texture_border_clamp()
 }
 
 
+// ********* GL_ARB_texture_buffer_object *********
+bool isGL_ARB_texture_buffer_object()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_buffer_object;
+	
+	return isSupported;
+}
+
+					
+void glTexBufferARB( GLenum target, GLenum internalformat, GLuint buffer )
+{
+	gleGetCurrent()->glTexBufferARB( target, internalformat, buffer );
+}
+
+
 // ********* GL_ARB_texture_compression *********
 bool isGL_ARB_texture_compression()
 {
@@ -1031,6 +1292,15 @@ void glCompressedTexSubImage1DARB( GLenum target, GLint level, GLint xoffset, GL
 void glGetCompressedTexImageARB( GLenum target, GLint level, GLvoid *img )
 {
 	gleGetCurrent()->glGetCompressedTexImageARB( target, level, img );
+}
+
+
+// ********* GL_ARB_texture_compression_rgtc *********
+bool isGL_ARB_texture_compression_rgtc()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_compression_rgtc;
+	
+	return isSupported;
 }
 
 
@@ -1115,6 +1385,15 @@ bool isGL_ARB_texture_rectangle()
 }
 
 
+// ********* GL_ARB_texture_rg *********
+bool isGL_ARB_texture_rg()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_rg;
+	
+	return isSupported;
+}
+
+
 // ********* GL_ARB_transpose_matrix *********
 bool isGL_ARB_transpose_matrix()
 {
@@ -1145,6 +1424,39 @@ void glMultTransposeMatrixfARB( const GLfloat *m )
 void glMultTransposeMatrixdARB( const GLdouble *m )
 {
 	gleGetCurrent()->glMultTransposeMatrixdARB( m );
+}
+
+
+// ********* GL_ARB_vertex_array_object *********
+bool isGL_ARB_vertex_array_object()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_vertex_array_object;
+	
+	return isSupported;
+}
+
+					
+void glBindVertexArray( GLuint array )
+{
+	gleGetCurrent()->glBindVertexArray( array );
+}
+
+					
+void glDeleteVertexArrays( GLsizei n, const GLuint *arrays )
+{
+	gleGetCurrent()->glDeleteVertexArrays( n, arrays );
+}
+
+					
+void glGenVertexArrays( GLsizei n, GLuint *arrays )
+{
+	gleGetCurrent()->glGenVertexArrays( n, arrays );
+}
+
+					
+GLboolean glIsVertexArray( GLuint array )
+{
+	return ( gleGetCurrent()->glIsVertexArray( array) );
 }
 
 
@@ -2963,6 +3275,1131 @@ void glDepthBoundsEXT( GLclampd zmin, GLclampd zmax )
 }
 
 
+// ********* GL_EXT_direct_state_access *********
+bool isGL_EXT_direct_state_access()
+{
+	const bool isSupported = gleGetCurrent()->isGL_EXT_direct_state_access;
+	
+	return isSupported;
+}
+
+					
+void glClientAttribDefaultEXT( GLbitfield mask )
+{
+	gleGetCurrent()->glClientAttribDefaultEXT( mask );
+}
+
+					
+void glPushClientAttribDefaultEXT( GLbitfield mask )
+{
+	gleGetCurrent()->glPushClientAttribDefaultEXT( mask );
+}
+
+					
+void glMatrixLoadfEXT( GLenum mode, const GLfloat *m )
+{
+	gleGetCurrent()->glMatrixLoadfEXT( mode, m );
+}
+
+					
+void glMatrixLoaddEXT( GLenum mode, const GLdouble *m )
+{
+	gleGetCurrent()->glMatrixLoaddEXT( mode, m );
+}
+
+					
+void glMatrixMultfEXT( GLenum mode, const GLfloat *m )
+{
+	gleGetCurrent()->glMatrixMultfEXT( mode, m );
+}
+
+					
+void glMatrixMultdEXT( GLenum mode, const GLdouble *m )
+{
+	gleGetCurrent()->glMatrixMultdEXT( mode, m );
+}
+
+					
+void glMatrixLoadIdentityEXT( GLenum mode )
+{
+	gleGetCurrent()->glMatrixLoadIdentityEXT( mode );
+}
+
+					
+void glMatrixRotatefEXT( GLenum mode, GLfloat angle, GLfloat x, GLfloat y, GLfloat z )
+{
+	gleGetCurrent()->glMatrixRotatefEXT( mode, angle, x, y, z );
+}
+
+					
+void glMatrixRotatedEXT( GLenum mode, GLdouble angle, GLdouble x, GLdouble y, GLdouble z )
+{
+	gleGetCurrent()->glMatrixRotatedEXT( mode, angle, x, y, z );
+}
+
+					
+void glMatrixScalefEXT( GLenum mode, GLfloat x, GLfloat y, GLfloat z )
+{
+	gleGetCurrent()->glMatrixScalefEXT( mode, x, y, z );
+}
+
+					
+void glMatrixScaledEXT( GLenum mode, GLdouble x, GLdouble y, GLdouble z )
+{
+	gleGetCurrent()->glMatrixScaledEXT( mode, x, y, z );
+}
+
+					
+void glMatrixTranslatefEXT( GLenum mode, GLfloat x, GLfloat y, GLfloat z )
+{
+	gleGetCurrent()->glMatrixTranslatefEXT( mode, x, y, z );
+}
+
+					
+void glMatrixTranslatedEXT( GLenum mode, GLdouble x, GLdouble y, GLdouble z )
+{
+	gleGetCurrent()->glMatrixTranslatedEXT( mode, x, y, z );
+}
+
+					
+void glMatrixFrustumEXT( GLenum mode, GLdouble left, GLdouble right, GLdouble bottom, GLdouble top, GLdouble zNear, GLdouble zFar )
+{
+	gleGetCurrent()->glMatrixFrustumEXT( mode, left, right, bottom, top, zNear, zFar );
+}
+
+					
+void glMatrixOrthoEXT( GLenum mode, GLdouble left, GLdouble right, GLdouble bottom, GLdouble top, GLdouble zNear, GLdouble zFar )
+{
+	gleGetCurrent()->glMatrixOrthoEXT( mode, left, right, bottom, top, zNear, zFar );
+}
+
+					
+void glMatrixPopEXT( GLenum mode )
+{
+	gleGetCurrent()->glMatrixPopEXT( mode );
+}
+
+					
+void glMatrixPushEXT( GLenum mode )
+{
+	gleGetCurrent()->glMatrixPushEXT( mode );
+}
+
+					
+void glMatrixLoadTransposefEXT( GLenum mode, const GLfloat *m )
+{
+	gleGetCurrent()->glMatrixLoadTransposefEXT( mode, m );
+}
+
+					
+void glMatrixLoadTransposedEXT( GLenum mode, const GLdouble *m )
+{
+	gleGetCurrent()->glMatrixLoadTransposedEXT( mode, m );
+}
+
+					
+void glMatrixMultTransposefEXT( GLenum mode, const GLfloat *m )
+{
+	gleGetCurrent()->glMatrixMultTransposefEXT( mode, m );
+}
+
+					
+void glMatrixMultTransposedEXT( GLenum mode, const GLdouble *m )
+{
+	gleGetCurrent()->glMatrixMultTransposedEXT( mode, m );
+}
+
+					
+void glTextureParameterfEXT( GLuint texture, GLenum target, GLenum pname, GLfloat param )
+{
+	gleGetCurrent()->glTextureParameterfEXT( texture, target, pname, param );
+}
+
+					
+void glTextureParameterfvEXT( GLuint texture, GLenum target, GLenum pname, const GLfloat *params )
+{
+	gleGetCurrent()->glTextureParameterfvEXT( texture, target, pname, params );
+}
+
+					
+void glTextureParameteriEXT( GLuint texture, GLenum target, GLenum pname, GLint param )
+{
+	gleGetCurrent()->glTextureParameteriEXT( texture, target, pname, param );
+}
+
+					
+void glTextureParameterivEXT( GLuint texture, GLenum target, GLenum pname, const GLint *params )
+{
+	gleGetCurrent()->glTextureParameterivEXT( texture, target, pname, params );
+}
+
+					
+void glTextureImage1DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLenum format, GLenum type, const GLvoid *pixels )
+{
+	gleGetCurrent()->glTextureImage1DEXT( texture, target, level, internalformat, width, border, format, type, pixels );
+}
+
+					
+void glTextureImage2DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid *pixels )
+{
+	gleGetCurrent()->glTextureImage2DEXT( texture, target, level, internalformat, width, height, border, format, type, pixels );
+}
+
+					
+void glTextureSubImage1DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels )
+{
+	gleGetCurrent()->glTextureSubImage1DEXT( texture, target, level, xoffset, width, format, type, pixels );
+}
+
+					
+void glTextureSubImage2DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels )
+{
+	gleGetCurrent()->glTextureSubImage2DEXT( texture, target, level, xoffset, yoffset, width, height, format, type, pixels );
+}
+
+					
+void glCopyTextureImage1DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border )
+{
+	gleGetCurrent()->glCopyTextureImage1DEXT( texture, target, level, internalformat, x, y, width, border );
+}
+
+					
+void glCopyTextureImage2DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border )
+{
+	gleGetCurrent()->glCopyTextureImage2DEXT( texture, target, level, internalformat, x, y, width, height, border );
+}
+
+					
+void glCopyTextureSubImage1DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width )
+{
+	gleGetCurrent()->glCopyTextureSubImage1DEXT( texture, target, level, xoffset, x, y, width );
+}
+
+					
+void glCopyTextureSubImage2DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height )
+{
+	gleGetCurrent()->glCopyTextureSubImage2DEXT( texture, target, level, xoffset, yoffset, x, y, width, height );
+}
+
+					
+void glGetTextureImageEXT( GLuint texture, GLenum target, GLint level, GLenum format, GLenum type, GLvoid *pixels )
+{
+	gleGetCurrent()->glGetTextureImageEXT( texture, target, level, format, type, pixels );
+}
+
+					
+void glGetTextureParameterfvEXT( GLuint texture, GLenum target, GLenum pname, GLfloat *params )
+{
+	gleGetCurrent()->glGetTextureParameterfvEXT( texture, target, pname, params );
+}
+
+					
+void glGetTextureParameterivEXT( GLuint texture, GLenum target, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetTextureParameterivEXT( texture, target, pname, params );
+}
+
+					
+void glGetTextureLevelParameterfvEXT( GLuint texture, GLenum target, GLint level, GLenum pname, GLfloat *params )
+{
+	gleGetCurrent()->glGetTextureLevelParameterfvEXT( texture, target, level, pname, params );
+}
+
+					
+void glGetTextureLevelParameterivEXT( GLuint texture, GLenum target, GLint level, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetTextureLevelParameterivEXT( texture, target, level, pname, params );
+}
+
+					
+void glTextureImage3DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels )
+{
+	gleGetCurrent()->glTextureImage3DEXT( texture, target, level, internalformat, width, height, depth, border, format, type, pixels );
+}
+
+					
+void glTextureSubImage3DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels )
+{
+	gleGetCurrent()->glTextureSubImage3DEXT( texture, target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels );
+}
+
+					
+void glCopyTextureSubImage3DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height )
+{
+	gleGetCurrent()->glCopyTextureSubImage3DEXT( texture, target, level, xoffset, yoffset, zoffset, x, y, width, height );
+}
+
+					
+void glMultiTexParameterfEXT( GLenum texunit, GLenum target, GLenum pname, GLfloat param )
+{
+	gleGetCurrent()->glMultiTexParameterfEXT( texunit, target, pname, param );
+}
+
+					
+void glMultiTexParameterfvEXT( GLenum texunit, GLenum target, GLenum pname, const GLfloat *params )
+{
+	gleGetCurrent()->glMultiTexParameterfvEXT( texunit, target, pname, params );
+}
+
+					
+void glMultiTexParameteriEXT( GLenum texunit, GLenum target, GLenum pname, GLint param )
+{
+	gleGetCurrent()->glMultiTexParameteriEXT( texunit, target, pname, param );
+}
+
+					
+void glMultiTexParameterivEXT( GLenum texunit, GLenum target, GLenum pname, const GLint *params )
+{
+	gleGetCurrent()->glMultiTexParameterivEXT( texunit, target, pname, params );
+}
+
+					
+void glMultiTexImage1DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLenum format, GLenum type, const GLvoid *pixels )
+{
+	gleGetCurrent()->glMultiTexImage1DEXT( texunit, target, level, internalformat, width, border, format, type, pixels );
+}
+
+					
+void glMultiTexImage2DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid *pixels )
+{
+	gleGetCurrent()->glMultiTexImage2DEXT( texunit, target, level, internalformat, width, height, border, format, type, pixels );
+}
+
+					
+void glMultiTexSubImage1DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels )
+{
+	gleGetCurrent()->glMultiTexSubImage1DEXT( texunit, target, level, xoffset, width, format, type, pixels );
+}
+
+					
+void glMultiTexSubImage2DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels )
+{
+	gleGetCurrent()->glMultiTexSubImage2DEXT( texunit, target, level, xoffset, yoffset, width, height, format, type, pixels );
+}
+
+					
+void glCopyMultiTexImage1DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border )
+{
+	gleGetCurrent()->glCopyMultiTexImage1DEXT( texunit, target, level, internalformat, x, y, width, border );
+}
+
+					
+void glCopyMultiTexImage2DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border )
+{
+	gleGetCurrent()->glCopyMultiTexImage2DEXT( texunit, target, level, internalformat, x, y, width, height, border );
+}
+
+					
+void glCopyMultiTexSubImage1DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width )
+{
+	gleGetCurrent()->glCopyMultiTexSubImage1DEXT( texunit, target, level, xoffset, x, y, width );
+}
+
+					
+void glCopyMultiTexSubImage2DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height )
+{
+	gleGetCurrent()->glCopyMultiTexSubImage2DEXT( texunit, target, level, xoffset, yoffset, x, y, width, height );
+}
+
+					
+void glGetMultiTexImageEXT( GLenum texunit, GLenum target, GLint level, GLenum format, GLenum type, GLvoid *pixels )
+{
+	gleGetCurrent()->glGetMultiTexImageEXT( texunit, target, level, format, type, pixels );
+}
+
+					
+void glGetMultiTexParameterfvEXT( GLenum texunit, GLenum target, GLenum pname, GLfloat *params )
+{
+	gleGetCurrent()->glGetMultiTexParameterfvEXT( texunit, target, pname, params );
+}
+
+					
+void glGetMultiTexParameterivEXT( GLenum texunit, GLenum target, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetMultiTexParameterivEXT( texunit, target, pname, params );
+}
+
+					
+void glGetMultiTexLevelParameterfvEXT( GLenum texunit, GLenum target, GLint level, GLenum pname, GLfloat *params )
+{
+	gleGetCurrent()->glGetMultiTexLevelParameterfvEXT( texunit, target, level, pname, params );
+}
+
+					
+void glGetMultiTexLevelParameterivEXT( GLenum texunit, GLenum target, GLint level, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetMultiTexLevelParameterivEXT( texunit, target, level, pname, params );
+}
+
+					
+void glMultiTexImage3DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels )
+{
+	gleGetCurrent()->glMultiTexImage3DEXT( texunit, target, level, internalformat, width, height, depth, border, format, type, pixels );
+}
+
+					
+void glMultiTexSubImage3DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels )
+{
+	gleGetCurrent()->glMultiTexSubImage3DEXT( texunit, target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels );
+}
+
+					
+void glCopyMultiTexSubImage3DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height )
+{
+	gleGetCurrent()->glCopyMultiTexSubImage3DEXT( texunit, target, level, xoffset, yoffset, zoffset, x, y, width, height );
+}
+
+					
+void glBindMultiTextureEXT( GLenum texunit, GLenum target, GLuint texture )
+{
+	gleGetCurrent()->glBindMultiTextureEXT( texunit, target, texture );
+}
+
+					
+void glEnableClientStateIndexedEXT( GLenum array, GLuint index )
+{
+	gleGetCurrent()->glEnableClientStateIndexedEXT( array, index );
+}
+
+					
+void glDisableClientStateIndexedEXT( GLenum array, GLuint index )
+{
+	gleGetCurrent()->glDisableClientStateIndexedEXT( array, index );
+}
+
+					
+void glMultiTexCoordPointerEXT( GLenum texunit, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer )
+{
+	gleGetCurrent()->glMultiTexCoordPointerEXT( texunit, size, type, stride, pointer );
+}
+
+					
+void glMultiTexEnvfEXT( GLenum texunit, GLenum target, GLenum pname, GLfloat param )
+{
+	gleGetCurrent()->glMultiTexEnvfEXT( texunit, target, pname, param );
+}
+
+					
+void glMultiTexEnvfvEXT( GLenum texunit, GLenum target, GLenum pname, const GLfloat *params )
+{
+	gleGetCurrent()->glMultiTexEnvfvEXT( texunit, target, pname, params );
+}
+
+					
+void glMultiTexEnviEXT( GLenum texunit, GLenum target, GLenum pname, GLint param )
+{
+	gleGetCurrent()->glMultiTexEnviEXT( texunit, target, pname, param );
+}
+
+					
+void glMultiTexEnvivEXT( GLenum texunit, GLenum target, GLenum pname, const GLint *params )
+{
+	gleGetCurrent()->glMultiTexEnvivEXT( texunit, target, pname, params );
+}
+
+					
+void glMultiTexGendEXT( GLenum texunit, GLenum coord, GLenum pname, GLdouble param )
+{
+	gleGetCurrent()->glMultiTexGendEXT( texunit, coord, pname, param );
+}
+
+					
+void glMultiTexGendvEXT( GLenum texunit, GLenum coord, GLenum pname, const GLdouble *params )
+{
+	gleGetCurrent()->glMultiTexGendvEXT( texunit, coord, pname, params );
+}
+
+					
+void glMultiTexGenfEXT( GLenum texunit, GLenum coord, GLenum pname, GLfloat param )
+{
+	gleGetCurrent()->glMultiTexGenfEXT( texunit, coord, pname, param );
+}
+
+					
+void glMultiTexGenfvEXT( GLenum texunit, GLenum coord, GLenum pname, const GLfloat *params )
+{
+	gleGetCurrent()->glMultiTexGenfvEXT( texunit, coord, pname, params );
+}
+
+					
+void glMultiTexGeniEXT( GLenum texunit, GLenum coord, GLenum pname, GLint param )
+{
+	gleGetCurrent()->glMultiTexGeniEXT( texunit, coord, pname, param );
+}
+
+					
+void glMultiTexGenivEXT( GLenum texunit, GLenum coord, GLenum pname, const GLint *params )
+{
+	gleGetCurrent()->glMultiTexGenivEXT( texunit, coord, pname, params );
+}
+
+					
+void glGetMultiTexEnvfvEXT( GLenum texunit, GLenum target, GLenum pname, GLfloat *params )
+{
+	gleGetCurrent()->glGetMultiTexEnvfvEXT( texunit, target, pname, params );
+}
+
+					
+void glGetMultiTexEnvivEXT( GLenum texunit, GLenum target, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetMultiTexEnvivEXT( texunit, target, pname, params );
+}
+
+					
+void glGetMultiTexGendvEXT( GLenum texunit, GLenum coord, GLenum pname, GLdouble *params )
+{
+	gleGetCurrent()->glGetMultiTexGendvEXT( texunit, coord, pname, params );
+}
+
+					
+void glGetMultiTexGenfvEXT( GLenum texunit, GLenum coord, GLenum pname, GLfloat *params )
+{
+	gleGetCurrent()->glGetMultiTexGenfvEXT( texunit, coord, pname, params );
+}
+
+					
+void glGetMultiTexGenivEXT( GLenum texunit, GLenum coord, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetMultiTexGenivEXT( texunit, coord, pname, params );
+}
+
+					
+void glGetFloatIndexedvEXT( GLenum target, GLuint index, GLfloat *data )
+{
+	gleGetCurrent()->glGetFloatIndexedvEXT( target, index, data );
+}
+
+					
+void glGetDoubleIndexedvEXT( GLenum target, GLuint index, GLdouble *data )
+{
+	gleGetCurrent()->glGetDoubleIndexedvEXT( target, index, data );
+}
+
+					
+void glGetPointerIndexedvEXT( GLenum target, GLuint index, GLvoid* *data )
+{
+	gleGetCurrent()->glGetPointerIndexedvEXT( target, index, data );
+}
+
+					
+void glCompressedTextureImage3DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *bits )
+{
+	gleGetCurrent()->glCompressedTextureImage3DEXT( texture, target, level, internalformat, width, height, depth, border, imageSize, bits );
+}
+
+					
+void glCompressedTextureImage2DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *bits )
+{
+	gleGetCurrent()->glCompressedTextureImage2DEXT( texture, target, level, internalformat, width, height, border, imageSize, bits );
+}
+
+					
+void glCompressedTextureImage1DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *bits )
+{
+	gleGetCurrent()->glCompressedTextureImage1DEXT( texture, target, level, internalformat, width, border, imageSize, bits );
+}
+
+					
+void glCompressedTextureSubImage3DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *bits )
+{
+	gleGetCurrent()->glCompressedTextureSubImage3DEXT( texture, target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, bits );
+}
+
+					
+void glCompressedTextureSubImage2DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *bits )
+{
+	gleGetCurrent()->glCompressedTextureSubImage2DEXT( texture, target, level, xoffset, yoffset, width, height, format, imageSize, bits );
+}
+
+					
+void glCompressedTextureSubImage1DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *bits )
+{
+	gleGetCurrent()->glCompressedTextureSubImage1DEXT( texture, target, level, xoffset, width, format, imageSize, bits );
+}
+
+					
+void glGetCompressedTextureImageEXT( GLuint texture, GLenum target, GLint lod, GLvoid *img )
+{
+	gleGetCurrent()->glGetCompressedTextureImageEXT( texture, target, lod, img );
+}
+
+					
+void glCompressedMultiTexImage3DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *bits )
+{
+	gleGetCurrent()->glCompressedMultiTexImage3DEXT( texunit, target, level, internalformat, width, height, depth, border, imageSize, bits );
+}
+
+					
+void glCompressedMultiTexImage2DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *bits )
+{
+	gleGetCurrent()->glCompressedMultiTexImage2DEXT( texunit, target, level, internalformat, width, height, border, imageSize, bits );
+}
+
+					
+void glCompressedMultiTexImage1DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *bits )
+{
+	gleGetCurrent()->glCompressedMultiTexImage1DEXT( texunit, target, level, internalformat, width, border, imageSize, bits );
+}
+
+					
+void glCompressedMultiTexSubImage3DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *bits )
+{
+	gleGetCurrent()->glCompressedMultiTexSubImage3DEXT( texunit, target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, bits );
+}
+
+					
+void glCompressedMultiTexSubImage2DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *bits )
+{
+	gleGetCurrent()->glCompressedMultiTexSubImage2DEXT( texunit, target, level, xoffset, yoffset, width, height, format, imageSize, bits );
+}
+
+					
+void glCompressedMultiTexSubImage1DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *bits )
+{
+	gleGetCurrent()->glCompressedMultiTexSubImage1DEXT( texunit, target, level, xoffset, width, format, imageSize, bits );
+}
+
+					
+void glGetCompressedMultiTexImageEXT( GLenum texunit, GLenum target, GLint lod, GLvoid *img )
+{
+	gleGetCurrent()->glGetCompressedMultiTexImageEXT( texunit, target, lod, img );
+}
+
+					
+void glNamedProgramStringEXT( GLuint program, GLenum target, GLenum format, GLsizei len, const GLvoid *string )
+{
+	gleGetCurrent()->glNamedProgramStringEXT( program, target, format, len, string );
+}
+
+					
+void glNamedProgramLocalParameter4dEXT( GLuint program, GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w )
+{
+	gleGetCurrent()->glNamedProgramLocalParameter4dEXT( program, target, index, x, y, z, w );
+}
+
+					
+void glNamedProgramLocalParameter4dvEXT( GLuint program, GLenum target, GLuint index, const GLdouble *params )
+{
+	gleGetCurrent()->glNamedProgramLocalParameter4dvEXT( program, target, index, params );
+}
+
+					
+void glNamedProgramLocalParameter4fEXT( GLuint program, GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
+{
+	gleGetCurrent()->glNamedProgramLocalParameter4fEXT( program, target, index, x, y, z, w );
+}
+
+					
+void glNamedProgramLocalParameter4fvEXT( GLuint program, GLenum target, GLuint index, const GLfloat *params )
+{
+	gleGetCurrent()->glNamedProgramLocalParameter4fvEXT( program, target, index, params );
+}
+
+					
+void glGetNamedProgramLocalParameterdvEXT( GLuint program, GLenum target, GLuint index, GLdouble *params )
+{
+	gleGetCurrent()->glGetNamedProgramLocalParameterdvEXT( program, target, index, params );
+}
+
+					
+void glGetNamedProgramLocalParameterfvEXT( GLuint program, GLenum target, GLuint index, GLfloat *params )
+{
+	gleGetCurrent()->glGetNamedProgramLocalParameterfvEXT( program, target, index, params );
+}
+
+					
+void glGetNamedProgramivEXT( GLuint program, GLenum target, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetNamedProgramivEXT( program, target, pname, params );
+}
+
+					
+void glGetNamedProgramStringEXT( GLuint program, GLenum target, GLenum pname, GLvoid *string )
+{
+	gleGetCurrent()->glGetNamedProgramStringEXT( program, target, pname, string );
+}
+
+					
+void glNamedProgramLocalParameters4fvEXT( GLuint program, GLenum target, GLuint index, GLsizei count, const GLfloat *params )
+{
+	gleGetCurrent()->glNamedProgramLocalParameters4fvEXT( program, target, index, count, params );
+}
+
+					
+void glNamedProgramLocalParameterI4iEXT( GLuint program, GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w )
+{
+	gleGetCurrent()->glNamedProgramLocalParameterI4iEXT( program, target, index, x, y, z, w );
+}
+
+					
+void glNamedProgramLocalParameterI4ivEXT( GLuint program, GLenum target, GLuint index, const GLint *params )
+{
+	gleGetCurrent()->glNamedProgramLocalParameterI4ivEXT( program, target, index, params );
+}
+
+					
+void glNamedProgramLocalParametersI4ivEXT( GLuint program, GLenum target, GLuint index, GLsizei count, const GLint *params )
+{
+	gleGetCurrent()->glNamedProgramLocalParametersI4ivEXT( program, target, index, count, params );
+}
+
+					
+void glNamedProgramLocalParameterI4uiEXT( GLuint program, GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w )
+{
+	gleGetCurrent()->glNamedProgramLocalParameterI4uiEXT( program, target, index, x, y, z, w );
+}
+
+					
+void glNamedProgramLocalParameterI4uivEXT( GLuint program, GLenum target, GLuint index, const GLuint *params )
+{
+	gleGetCurrent()->glNamedProgramLocalParameterI4uivEXT( program, target, index, params );
+}
+
+					
+void glNamedProgramLocalParametersI4uivEXT( GLuint program, GLenum target, GLuint index, GLsizei count, const GLuint *params )
+{
+	gleGetCurrent()->glNamedProgramLocalParametersI4uivEXT( program, target, index, count, params );
+}
+
+					
+void glGetNamedProgramLocalParameterIivEXT( GLuint program, GLenum target, GLuint index, GLint *params )
+{
+	gleGetCurrent()->glGetNamedProgramLocalParameterIivEXT( program, target, index, params );
+}
+
+					
+void glGetNamedProgramLocalParameterIuivEXT( GLuint program, GLenum target, GLuint index, GLuint *params )
+{
+	gleGetCurrent()->glGetNamedProgramLocalParameterIuivEXT( program, target, index, params );
+}
+
+					
+void glTextureParameterIivEXT( GLuint texture, GLenum target, GLenum pname, const GLint *params )
+{
+	gleGetCurrent()->glTextureParameterIivEXT( texture, target, pname, params );
+}
+
+					
+void glTextureParameterIuivEXT( GLuint texture, GLenum target, GLenum pname, const GLuint *params )
+{
+	gleGetCurrent()->glTextureParameterIuivEXT( texture, target, pname, params );
+}
+
+					
+void glGetTextureParameterIivEXT( GLuint texture, GLenum target, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetTextureParameterIivEXT( texture, target, pname, params );
+}
+
+					
+void glGetTextureParameterIuivEXT( GLuint texture, GLenum target, GLenum pname, GLuint *params )
+{
+	gleGetCurrent()->glGetTextureParameterIuivEXT( texture, target, pname, params );
+}
+
+					
+void glMultiTexParameterIivEXT( GLenum texunit, GLenum target, GLenum pname, const GLint *params )
+{
+	gleGetCurrent()->glMultiTexParameterIivEXT( texunit, target, pname, params );
+}
+
+					
+void glMultiTexParameterIuivEXT( GLenum texunit, GLenum target, GLenum pname, const GLuint *params )
+{
+	gleGetCurrent()->glMultiTexParameterIuivEXT( texunit, target, pname, params );
+}
+
+					
+void glGetMultiTexParameterIivEXT( GLenum texunit, GLenum target, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetMultiTexParameterIivEXT( texunit, target, pname, params );
+}
+
+					
+void glGetMultiTexParameterIuivEXT( GLenum texunit, GLenum target, GLenum pname, GLuint *params )
+{
+	gleGetCurrent()->glGetMultiTexParameterIuivEXT( texunit, target, pname, params );
+}
+
+					
+void glProgramUniform1fEXT( GLuint program, GLint location, GLfloat v0 )
+{
+	gleGetCurrent()->glProgramUniform1fEXT( program, location, v0 );
+}
+
+					
+void glProgramUniform2fEXT( GLuint program, GLint location, GLfloat v0, GLfloat v1 )
+{
+	gleGetCurrent()->glProgramUniform2fEXT( program, location, v0, v1 );
+}
+
+					
+void glProgramUniform3fEXT( GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2 )
+{
+	gleGetCurrent()->glProgramUniform3fEXT( program, location, v0, v1, v2 );
+}
+
+					
+void glProgramUniform4fEXT( GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3 )
+{
+	gleGetCurrent()->glProgramUniform4fEXT( program, location, v0, v1, v2, v3 );
+}
+
+					
+void glProgramUniform1iEXT( GLuint program, GLint location, GLint v0 )
+{
+	gleGetCurrent()->glProgramUniform1iEXT( program, location, v0 );
+}
+
+					
+void glProgramUniform2iEXT( GLuint program, GLint location, GLint v0, GLint v1 )
+{
+	gleGetCurrent()->glProgramUniform2iEXT( program, location, v0, v1 );
+}
+
+					
+void glProgramUniform3iEXT( GLuint program, GLint location, GLint v0, GLint v1, GLint v2 )
+{
+	gleGetCurrent()->glProgramUniform3iEXT( program, location, v0, v1, v2 );
+}
+
+					
+void glProgramUniform4iEXT( GLuint program, GLint location, GLint v0, GLint v1, GLint v2, GLint v3 )
+{
+	gleGetCurrent()->glProgramUniform4iEXT( program, location, v0, v1, v2, v3 );
+}
+
+					
+void glProgramUniform1fvEXT( GLuint program, GLint location, GLsizei count, const GLfloat *value )
+{
+	gleGetCurrent()->glProgramUniform1fvEXT( program, location, count, value );
+}
+
+					
+void glProgramUniform2fvEXT( GLuint program, GLint location, GLsizei count, const GLfloat *value )
+{
+	gleGetCurrent()->glProgramUniform2fvEXT( program, location, count, value );
+}
+
+					
+void glProgramUniform3fvEXT( GLuint program, GLint location, GLsizei count, const GLfloat *value )
+{
+	gleGetCurrent()->glProgramUniform3fvEXT( program, location, count, value );
+}
+
+					
+void glProgramUniform4fvEXT( GLuint program, GLint location, GLsizei count, const GLfloat *value )
+{
+	gleGetCurrent()->glProgramUniform4fvEXT( program, location, count, value );
+}
+
+					
+void glProgramUniform1ivEXT( GLuint program, GLint location, GLsizei count, const GLint *value )
+{
+	gleGetCurrent()->glProgramUniform1ivEXT( program, location, count, value );
+}
+
+					
+void glProgramUniform2ivEXT( GLuint program, GLint location, GLsizei count, const GLint *value )
+{
+	gleGetCurrent()->glProgramUniform2ivEXT( program, location, count, value );
+}
+
+					
+void glProgramUniform3ivEXT( GLuint program, GLint location, GLsizei count, const GLint *value )
+{
+	gleGetCurrent()->glProgramUniform3ivEXT( program, location, count, value );
+}
+
+					
+void glProgramUniform4ivEXT( GLuint program, GLint location, GLsizei count, const GLint *value )
+{
+	gleGetCurrent()->glProgramUniform4ivEXT( program, location, count, value );
+}
+
+					
+void glProgramUniformMatrix2fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value )
+{
+	gleGetCurrent()->glProgramUniformMatrix2fvEXT( program, location, count, transpose, value );
+}
+
+					
+void glProgramUniformMatrix3fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value )
+{
+	gleGetCurrent()->glProgramUniformMatrix3fvEXT( program, location, count, transpose, value );
+}
+
+					
+void glProgramUniformMatrix4fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value )
+{
+	gleGetCurrent()->glProgramUniformMatrix4fvEXT( program, location, count, transpose, value );
+}
+
+					
+void glProgramUniformMatrix2x3fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value )
+{
+	gleGetCurrent()->glProgramUniformMatrix2x3fvEXT( program, location, count, transpose, value );
+}
+
+					
+void glProgramUniformMatrix3x2fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value )
+{
+	gleGetCurrent()->glProgramUniformMatrix3x2fvEXT( program, location, count, transpose, value );
+}
+
+					
+void glProgramUniformMatrix2x4fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value )
+{
+	gleGetCurrent()->glProgramUniformMatrix2x4fvEXT( program, location, count, transpose, value );
+}
+
+					
+void glProgramUniformMatrix4x2fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value )
+{
+	gleGetCurrent()->glProgramUniformMatrix4x2fvEXT( program, location, count, transpose, value );
+}
+
+					
+void glProgramUniformMatrix3x4fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value )
+{
+	gleGetCurrent()->glProgramUniformMatrix3x4fvEXT( program, location, count, transpose, value );
+}
+
+					
+void glProgramUniformMatrix4x3fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value )
+{
+	gleGetCurrent()->glProgramUniformMatrix4x3fvEXT( program, location, count, transpose, value );
+}
+
+					
+void glProgramUniform1uiEXT( GLuint program, GLint location, GLuint v0 )
+{
+	gleGetCurrent()->glProgramUniform1uiEXT( program, location, v0 );
+}
+
+					
+void glProgramUniform2uiEXT( GLuint program, GLint location, GLuint v0, GLuint v1 )
+{
+	gleGetCurrent()->glProgramUniform2uiEXT( program, location, v0, v1 );
+}
+
+					
+void glProgramUniform3uiEXT( GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2 )
+{
+	gleGetCurrent()->glProgramUniform3uiEXT( program, location, v0, v1, v2 );
+}
+
+					
+void glProgramUniform4uiEXT( GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3 )
+{
+	gleGetCurrent()->glProgramUniform4uiEXT( program, location, v0, v1, v2, v3 );
+}
+
+					
+void glProgramUniform1uivEXT( GLuint program, GLint location, GLsizei count, const GLuint *value )
+{
+	gleGetCurrent()->glProgramUniform1uivEXT( program, location, count, value );
+}
+
+					
+void glProgramUniform2uivEXT( GLuint program, GLint location, GLsizei count, const GLuint *value )
+{
+	gleGetCurrent()->glProgramUniform2uivEXT( program, location, count, value );
+}
+
+					
+void glProgramUniform3uivEXT( GLuint program, GLint location, GLsizei count, const GLuint *value )
+{
+	gleGetCurrent()->glProgramUniform3uivEXT( program, location, count, value );
+}
+
+					
+void glProgramUniform4uivEXT( GLuint program, GLint location, GLsizei count, const GLuint *value )
+{
+	gleGetCurrent()->glProgramUniform4uivEXT( program, location, count, value );
+}
+
+					
+void glNamedBufferDataEXT( GLuint buffer, GLsizeiptr size, const GLvoid *data, GLenum usage )
+{
+	gleGetCurrent()->glNamedBufferDataEXT( buffer, size, data, usage );
+}
+
+					
+void glNamedBufferSubDataEXT( GLuint buffer, GLintptr offset, GLsizeiptr size, const GLvoid *data )
+{
+	gleGetCurrent()->glNamedBufferSubDataEXT( buffer, offset, size, data );
+}
+
+					
+GLvoid* glMapNamedBufferEXT( GLuint buffer, GLenum access )
+{
+	return ( gleGetCurrent()->glMapNamedBufferEXT( buffer, access) );
+}
+
+					
+GLboolean glUnmapNamedBufferEXT( GLuint buffer )
+{
+	return ( gleGetCurrent()->glUnmapNamedBufferEXT( buffer) );
+}
+
+					
+void glGetNamedBufferParameterivEXT( GLuint buffer, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetNamedBufferParameterivEXT( buffer, pname, params );
+}
+
+					
+void glGetNamedBufferPointervEXT( GLuint buffer, GLenum pname, GLvoid* *params )
+{
+	gleGetCurrent()->glGetNamedBufferPointervEXT( buffer, pname, params );
+}
+
+					
+void glGetNamedBufferSubDataEXT( GLuint buffer, GLintptr offset, GLsizeiptr size, GLvoid *data )
+{
+	gleGetCurrent()->glGetNamedBufferSubDataEXT( buffer, offset, size, data );
+}
+
+					
+void glTextureBufferEXT( GLuint texture, GLenum target, GLenum internalformat, GLuint buffer )
+{
+	gleGetCurrent()->glTextureBufferEXT( texture, target, internalformat, buffer );
+}
+
+					
+void glMultiTexBufferEXT( GLenum texunit, GLenum target, GLenum internalformat, GLuint buffer )
+{
+	gleGetCurrent()->glMultiTexBufferEXT( texunit, target, internalformat, buffer );
+}
+
+					
+void glNamedRenderbufferStorageEXT( GLuint renderbuffer, GLenum internalformat, GLsizei width, GLsizei height )
+{
+	gleGetCurrent()->glNamedRenderbufferStorageEXT( renderbuffer, internalformat, width, height );
+}
+
+					
+void glGetNamedRenderbufferParameterivEXT( GLuint renderbuffer, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetNamedRenderbufferParameterivEXT( renderbuffer, pname, params );
+}
+
+					
+GLenum glCheckNamedFramebufferStatusEXT( GLuint framebuffer, GLenum target )
+{
+	return ( gleGetCurrent()->glCheckNamedFramebufferStatusEXT( framebuffer, target) );
+}
+
+					
+void glNamedFramebufferTexture1DEXT( GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level )
+{
+	gleGetCurrent()->glNamedFramebufferTexture1DEXT( framebuffer, attachment, textarget, texture, level );
+}
+
+					
+void glNamedFramebufferTexture2DEXT( GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level )
+{
+	gleGetCurrent()->glNamedFramebufferTexture2DEXT( framebuffer, attachment, textarget, texture, level );
+}
+
+					
+void glNamedFramebufferTexture3DEXT( GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset )
+{
+	gleGetCurrent()->glNamedFramebufferTexture3DEXT( framebuffer, attachment, textarget, texture, level, zoffset );
+}
+
+					
+void glNamedFramebufferRenderbufferEXT( GLuint framebuffer, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer )
+{
+	gleGetCurrent()->glNamedFramebufferRenderbufferEXT( framebuffer, attachment, renderbuffertarget, renderbuffer );
+}
+
+					
+void glGetNamedFramebufferAttachmentParameterivEXT( GLuint framebuffer, GLenum attachment, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetNamedFramebufferAttachmentParameterivEXT( framebuffer, attachment, pname, params );
+}
+
+					
+void glGenerateTextureMipmapEXT( GLuint texture, GLenum target )
+{
+	gleGetCurrent()->glGenerateTextureMipmapEXT( texture, target );
+}
+
+					
+void glGenerateMultiTexMipmapEXT( GLenum texunit, GLenum target )
+{
+	gleGetCurrent()->glGenerateMultiTexMipmapEXT( texunit, target );
+}
+
+					
+void glFramebufferDrawBufferEXT( GLuint framebuffer, GLenum mode )
+{
+	gleGetCurrent()->glFramebufferDrawBufferEXT( framebuffer, mode );
+}
+
+					
+void glFramebufferDrawBuffersEXT( GLuint framebuffer, GLsizei n, const GLenum *bufs )
+{
+	gleGetCurrent()->glFramebufferDrawBuffersEXT( framebuffer, n, bufs );
+}
+
+					
+void glFramebufferReadBufferEXT( GLuint framebuffer, GLenum mode )
+{
+	gleGetCurrent()->glFramebufferReadBufferEXT( framebuffer, mode );
+}
+
+					
+void glGetFramebufferParameterivEXT( GLuint framebuffer, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetFramebufferParameterivEXT( framebuffer, pname, params );
+}
+
+					
+void glNamedRenderbufferStorageMultisampleEXT( GLuint renderbuffer, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height )
+{
+	gleGetCurrent()->glNamedRenderbufferStorageMultisampleEXT( renderbuffer, samples, internalformat, width, height );
+}
+
+					
+void glNamedRenderbufferStorageMultisampleCoverageEXT( GLuint renderbuffer, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height )
+{
+	gleGetCurrent()->glNamedRenderbufferStorageMultisampleCoverageEXT( renderbuffer, coverageSamples, colorSamples, internalformat, width, height );
+}
+
+					
+void glNamedFramebufferTextureEXT( GLuint framebuffer, GLenum attachment, GLuint texture, GLint level )
+{
+	gleGetCurrent()->glNamedFramebufferTextureEXT( framebuffer, attachment, texture, level );
+}
+
+					
+void glNamedFramebufferTextureLayerEXT( GLuint framebuffer, GLenum attachment, GLuint texture, GLint level, GLint layer )
+{
+	gleGetCurrent()->glNamedFramebufferTextureLayerEXT( framebuffer, attachment, texture, level, layer );
+}
+
+					
+void glNamedFramebufferTextureFaceEXT( GLuint framebuffer, GLenum attachment, GLuint texture, GLint level, GLenum face )
+{
+	gleGetCurrent()->glNamedFramebufferTextureFaceEXT( framebuffer, attachment, texture, level, face );
+}
+
+					
+void glTextureRenderbufferEXT( GLuint texture, GLenum target, GLuint renderbuffer )
+{
+	gleGetCurrent()->glTextureRenderbufferEXT( texture, target, renderbuffer );
+}
+
+					
+void glMultiTexRenderbufferEXT( GLenum texunit, GLenum target, GLuint renderbuffer )
+{
+	gleGetCurrent()->glMultiTexRenderbufferEXT( texunit, target, renderbuffer );
+}
+
+
 // ********* GL_EXT_draw_buffers2 *********
 bool isGL_EXT_draw_buffers2()
 {
@@ -4160,6 +5597,15 @@ bool isGL_EXT_texture_shared_exponent()
 }
 
 
+// ********* GL_EXT_texture_swizzle *********
+bool isGL_EXT_texture_swizzle()
+{
+	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_swizzle;
+	
+	return isSupported;
+}
+
+
 // ********* GL_EXT_timer_query *********
 bool isGL_EXT_timer_query()
 {
@@ -4178,6 +5624,57 @@ void glGetQueryObjecti64vEXT( GLuint id, GLenum pname, GLint64EXT *params )
 void glGetQueryObjectui64vEXT( GLuint id, GLenum pname, GLuint64EXT *params )
 {
 	gleGetCurrent()->glGetQueryObjectui64vEXT( id, pname, params );
+}
+
+
+// ********* GL_EXT_transform_feedback *********
+bool isGL_EXT_transform_feedback()
+{
+	const bool isSupported = gleGetCurrent()->isGL_EXT_transform_feedback;
+	
+	return isSupported;
+}
+
+					
+void glBeginTransformFeedbackEXT( GLenum primitiveMode )
+{
+	gleGetCurrent()->glBeginTransformFeedbackEXT( primitiveMode );
+}
+
+					
+void glEndTransformFeedbackEXT( void )
+{
+	gleGetCurrent()->glEndTransformFeedbackEXT(  );
+}
+
+					
+void glBindBufferRangeEXT( GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size )
+{
+	gleGetCurrent()->glBindBufferRangeEXT( target, index, buffer, offset, size );
+}
+
+					
+void glBindBufferOffsetEXT( GLenum target, GLuint index, GLuint buffer, GLintptr offset )
+{
+	gleGetCurrent()->glBindBufferOffsetEXT( target, index, buffer, offset );
+}
+
+					
+void glBindBufferBaseEXT( GLenum target, GLuint index, GLuint buffer )
+{
+	gleGetCurrent()->glBindBufferBaseEXT( target, index, buffer );
+}
+
+					
+void glTransformFeedbackVaryingsEXT( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode )
+{
+	gleGetCurrent()->glTransformFeedbackVaryingsEXT( program, count, locations, bufferMode );
+}
+
+					
+void glGetTransformFeedbackVaryingEXT( GLuint program, GLuint index, GLint *location )
+{
+	gleGetCurrent()->glGetTransformFeedbackVaryingEXT( program, index, location );
 }
 
 
@@ -4241,6 +5738,15 @@ void glTexCoordPointerEXT( GLint size, GLenum type, GLsizei stride, GLsizei coun
 void glVertexPointerEXT( GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer )
 {
 	gleGetCurrent()->glVertexPointerEXT( size, type, stride, count, pointer );
+}
+
+
+// ********* GL_EXT_vertex_array_bgra *********
+bool isGL_EXT_vertex_array_bgra()
+{
+	const bool isSupported = gleGetCurrent()->isGL_EXT_vertex_array_bgra;
+	
+	return isSupported;
 }
 
 
@@ -5036,6 +6542,27 @@ bool isGL_NV_blend_square()
 }
 
 
+// ********* GL_NV_conditional_render *********
+bool isGL_NV_conditional_render()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_conditional_render;
+	
+	return isSupported;
+}
+
+					
+void glBeginConditionalRenderNV( GLuint id, GLenum mode )
+{
+	gleGetCurrent()->glBeginConditionalRenderNV( id, mode );
+}
+
+					
+void glEndConditionalRenderNV( void )
+{
+	gleGetCurrent()->glEndConditionalRenderNV(  );
+}
+
+
 // ********* GL_NV_copy_depth_to_color *********
 bool isGL_NV_copy_depth_to_color()
 {
@@ -5141,6 +6668,33 @@ void glGetMapAttribParameterfvNV( GLenum target, GLuint index, GLenum pname, GLf
 void glEvalMapsNV( GLenum target, GLenum mode )
 {
 	gleGetCurrent()->glEvalMapsNV( target, mode );
+}
+
+
+// ********* GL_NV_explicit_multisample *********
+bool isGL_NV_explicit_multisample()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_explicit_multisample;
+	
+	return isSupported;
+}
+
+					
+void glGetMultisamplefvNV( GLenum pname, GLuint index, GLfloat *val )
+{
+	gleGetCurrent()->glGetMultisamplefvNV( pname, index, val );
+}
+
+					
+void glSampleMaskIndexedNV( GLuint index, GLbitfield mask )
+{
+	gleGetCurrent()->glSampleMaskIndexedNV( index, mask );
+}
+
+					
+void glTexRenderbufferNV( GLenum target, GLuint renderbuffer )
+{
+	gleGetCurrent()->glTexRenderbufferNV( target, renderbuffer );
 }
 
 
@@ -5879,6 +7433,15 @@ void glPointParameterivNV( GLenum pname, const GLint *params )
 }
 
 
+// ********* GL_NV_present_video *********
+bool isGL_NV_present_video()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_present_video;
+	
+	return isSupported;
+}
+
+
 // ********* GL_NV_primitive_restart *********
 bool isGL_NV_primitive_restart()
 {
@@ -6161,6 +7724,57 @@ void glGetActiveVaryingNV( GLuint program, GLuint index, GLsizei bufSize, GLsize
 void glGetTransformFeedbackVaryingNV( GLuint program, GLuint index, GLint *location )
 {
 	gleGetCurrent()->glGetTransformFeedbackVaryingNV( program, index, location );
+}
+
+
+// ********* GL_NV_transform_feedback2 *********
+bool isGL_NV_transform_feedback2()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_transform_feedback2;
+	
+	return isSupported;
+}
+
+					
+void glBindTransformFeedbackNV( GLenum target, GLuint id )
+{
+	gleGetCurrent()->glBindTransformFeedbackNV( target, id );
+}
+
+					
+void glDeleteTransformFeedbacksNV( GLsizei n, const GLuint *ids )
+{
+	gleGetCurrent()->glDeleteTransformFeedbacksNV( n, ids );
+}
+
+					
+void glGenTransformFeedbacksNV( GLsizei n, GLuint *ids )
+{
+	gleGetCurrent()->glGenTransformFeedbacksNV( n, ids );
+}
+
+					
+GLboolean glIsTransformFeedbackNV( GLuint id )
+{
+	return ( gleGetCurrent()->glIsTransformFeedbackNV( id) );
+}
+
+					
+void glPauseTransformFeedbackNV( void )
+{
+	gleGetCurrent()->glPauseTransformFeedbackNV(  );
+}
+
+					
+void glResumeTransformFeedbackNV( void )
+{
+	gleGetCurrent()->glResumeTransformFeedbackNV(  );
+}
+
+					
+void glDrawTransformFeedbackNV( GLenum mode, GLuint id )
+{
+	gleGetCurrent()->glDrawTransformFeedbackNV( mode, id );
 }
 
 
@@ -9794,6 +11408,363 @@ void glUniformMatrix3x4fv( GLint location, GLsizei count, GLboolean transpose, c
 void glUniformMatrix4x3fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value )
 {
 	gleGetCurrent()->glUniformMatrix4x3fv( location, count, transpose, value );
+}
+
+
+// ********* GL_VERSION_3_0 *********
+bool isGL_VERSION_3_0()
+{
+	const bool isSupported = gleGetCurrent()->isGL_VERSION_3_0;
+	
+	return isSupported;
+}
+
+					
+void glColorMaski( GLuint index, GLboolean r, GLboolean g, GLboolean b, GLboolean a )
+{
+	gleGetCurrent()->glColorMaski( index, r, g, b, a );
+}
+
+					
+void glGetBooleani_v( GLenum target, GLuint index, GLboolean *data )
+{
+	gleGetCurrent()->glGetBooleani_v( target, index, data );
+}
+
+					
+void glGetIntegeri_v( GLenum target, GLuint index, GLint *data )
+{
+	gleGetCurrent()->glGetIntegeri_v( target, index, data );
+}
+
+					
+void glEnablei( GLenum target, GLuint index )
+{
+	gleGetCurrent()->glEnablei( target, index );
+}
+
+					
+void glDisablei( GLenum target, GLuint index )
+{
+	gleGetCurrent()->glDisablei( target, index );
+}
+
+					
+GLboolean glIsEnabledi( GLenum target, GLuint index )
+{
+	return ( gleGetCurrent()->glIsEnabledi( target, index) );
+}
+
+					
+void glBeginTransformFeedback( GLenum primitiveMode )
+{
+	gleGetCurrent()->glBeginTransformFeedback( primitiveMode );
+}
+
+					
+void glEndTransformFeedback( void )
+{
+	gleGetCurrent()->glEndTransformFeedback(  );
+}
+
+					
+void glBindBufferRange( GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size )
+{
+	gleGetCurrent()->glBindBufferRange( target, index, buffer, offset, size );
+}
+
+					
+void glBindBufferBase( GLenum target, GLuint index, GLuint buffer )
+{
+	gleGetCurrent()->glBindBufferBase( target, index, buffer );
+}
+
+					
+void glTransformFeedbackVaryings( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode )
+{
+	gleGetCurrent()->glTransformFeedbackVaryings( program, count, locations, bufferMode );
+}
+
+					
+void glGetTransformFeedbackVarying( GLuint program, GLuint index, GLint *location )
+{
+	gleGetCurrent()->glGetTransformFeedbackVarying( program, index, location );
+}
+
+					
+void glClampColor( GLenum target, GLenum clamp )
+{
+	gleGetCurrent()->glClampColor( target, clamp );
+}
+
+					
+void glBeginConditionalRender( GLuint id, GLenum mode )
+{
+	gleGetCurrent()->glBeginConditionalRender( id, mode );
+}
+
+					
+void glEndConditionalRender( void )
+{
+	gleGetCurrent()->glEndConditionalRender(  );
+}
+
+					
+void glVertexAttribI1i( GLuint index, GLint x )
+{
+	gleGetCurrent()->glVertexAttribI1i( index, x );
+}
+
+					
+void glVertexAttribI2i( GLuint index, GLint x, GLint y )
+{
+	gleGetCurrent()->glVertexAttribI2i( index, x, y );
+}
+
+					
+void glVertexAttribI3i( GLuint index, GLint x, GLint y, GLint z )
+{
+	gleGetCurrent()->glVertexAttribI3i( index, x, y, z );
+}
+
+					
+void glVertexAttribI4i( GLuint index, GLint x, GLint y, GLint z, GLint w )
+{
+	gleGetCurrent()->glVertexAttribI4i( index, x, y, z, w );
+}
+
+					
+void glVertexAttribI1ui( GLuint index, GLuint x )
+{
+	gleGetCurrent()->glVertexAttribI1ui( index, x );
+}
+
+					
+void glVertexAttribI2ui( GLuint index, GLuint x, GLuint y )
+{
+	gleGetCurrent()->glVertexAttribI2ui( index, x, y );
+}
+
+					
+void glVertexAttribI3ui( GLuint index, GLuint x, GLuint y, GLuint z )
+{
+	gleGetCurrent()->glVertexAttribI3ui( index, x, y, z );
+}
+
+					
+void glVertexAttribI4ui( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w )
+{
+	gleGetCurrent()->glVertexAttribI4ui( index, x, y, z, w );
+}
+
+					
+void glVertexAttribI1iv( GLuint index, const GLint *v )
+{
+	gleGetCurrent()->glVertexAttribI1iv( index, v );
+}
+
+					
+void glVertexAttribI2iv( GLuint index, const GLint *v )
+{
+	gleGetCurrent()->glVertexAttribI2iv( index, v );
+}
+
+					
+void glVertexAttribI3iv( GLuint index, const GLint *v )
+{
+	gleGetCurrent()->glVertexAttribI3iv( index, v );
+}
+
+					
+void glVertexAttribI4iv( GLuint index, const GLint *v )
+{
+	gleGetCurrent()->glVertexAttribI4iv( index, v );
+}
+
+					
+void glVertexAttribI1uiv( GLuint index, const GLuint *v )
+{
+	gleGetCurrent()->glVertexAttribI1uiv( index, v );
+}
+
+					
+void glVertexAttribI2uiv( GLuint index, const GLuint *v )
+{
+	gleGetCurrent()->glVertexAttribI2uiv( index, v );
+}
+
+					
+void glVertexAttribI3uiv( GLuint index, const GLuint *v )
+{
+	gleGetCurrent()->glVertexAttribI3uiv( index, v );
+}
+
+					
+void glVertexAttribI4uiv( GLuint index, const GLuint *v )
+{
+	gleGetCurrent()->glVertexAttribI4uiv( index, v );
+}
+
+					
+void glVertexAttribI4bv( GLuint index, const GLbyte *v )
+{
+	gleGetCurrent()->glVertexAttribI4bv( index, v );
+}
+
+					
+void glVertexAttribI4sv( GLuint index, const GLshort *v )
+{
+	gleGetCurrent()->glVertexAttribI4sv( index, v );
+}
+
+					
+void glVertexAttribI4ubv( GLuint index, const GLubyte *v )
+{
+	gleGetCurrent()->glVertexAttribI4ubv( index, v );
+}
+
+					
+void glVertexAttribI4usv( GLuint index, const GLushort *v )
+{
+	gleGetCurrent()->glVertexAttribI4usv( index, v );
+}
+
+					
+void glVertexAttribIPointer( GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer )
+{
+	gleGetCurrent()->glVertexAttribIPointer( index, size, type, stride, pointer );
+}
+
+					
+void glGetVertexAttribIiv( GLuint index, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetVertexAttribIiv( index, pname, params );
+}
+
+					
+void glGetVertexAttribIuiv( GLuint index, GLenum pname, GLuint *params )
+{
+	gleGetCurrent()->glGetVertexAttribIuiv( index, pname, params );
+}
+
+					
+void glGetUniformuiv( GLuint program, GLint location, GLuint *params )
+{
+	gleGetCurrent()->glGetUniformuiv( program, location, params );
+}
+
+					
+void glBindFragDataLocation( GLuint program, GLuint color, const GLchar *name )
+{
+	gleGetCurrent()->glBindFragDataLocation( program, color, name );
+}
+
+					
+GLint glGetFragDataLocation( GLuint program, const GLchar *name )
+{
+	return ( gleGetCurrent()->glGetFragDataLocation( program, name) );
+}
+
+					
+void glUniform1ui( GLint location, GLuint v0 )
+{
+	gleGetCurrent()->glUniform1ui( location, v0 );
+}
+
+					
+void glUniform2ui( GLint location, GLuint v0, GLuint v1 )
+{
+	gleGetCurrent()->glUniform2ui( location, v0, v1 );
+}
+
+					
+void glUniform3ui( GLint location, GLuint v0, GLuint v1, GLuint v2 )
+{
+	gleGetCurrent()->glUniform3ui( location, v0, v1, v2 );
+}
+
+					
+void glUniform4ui( GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3 )
+{
+	gleGetCurrent()->glUniform4ui( location, v0, v1, v2, v3 );
+}
+
+					
+void glUniform1uiv( GLint location, GLsizei count, const GLuint *value )
+{
+	gleGetCurrent()->glUniform1uiv( location, count, value );
+}
+
+					
+void glUniform2uiv( GLint location, GLsizei count, const GLuint *value )
+{
+	gleGetCurrent()->glUniform2uiv( location, count, value );
+}
+
+					
+void glUniform3uiv( GLint location, GLsizei count, const GLuint *value )
+{
+	gleGetCurrent()->glUniform3uiv( location, count, value );
+}
+
+					
+void glUniform4uiv( GLint location, GLsizei count, const GLuint *value )
+{
+	gleGetCurrent()->glUniform4uiv( location, count, value );
+}
+
+					
+void glTexParameterIiv( GLenum target, GLenum pname, const GLint *params )
+{
+	gleGetCurrent()->glTexParameterIiv( target, pname, params );
+}
+
+					
+void glTexParameterIuiv( GLenum target, GLenum pname, const GLuint *params )
+{
+	gleGetCurrent()->glTexParameterIuiv( target, pname, params );
+}
+
+					
+void glGetTexParameterIiv( GLenum target, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetTexParameterIiv( target, pname, params );
+}
+
+					
+void glGetTexParameterIuiv( GLenum target, GLenum pname, GLuint *params )
+{
+	gleGetCurrent()->glGetTexParameterIuiv( target, pname, params );
+}
+
+					
+void glClearBufferiv( GLenum buffer, GLint drawbuffer, const GLint *value )
+{
+	gleGetCurrent()->glClearBufferiv( buffer, drawbuffer, value );
+}
+
+					
+void glClearBufferuiv( GLenum buffer, GLint drawbuffer, const GLuint *value )
+{
+	gleGetCurrent()->glClearBufferuiv( buffer, drawbuffer, value );
+}
+
+					
+void glClearBufferfv( GLenum buffer, GLint drawbuffer, const GLfloat *value )
+{
+	gleGetCurrent()->glClearBufferfv( buffer, drawbuffer, value );
+}
+
+					
+void glClearBufferfi( GLenum buffer, GLint drawbuffer, GLfloat depth, GLint stencil )
+{
+	gleGetCurrent()->glClearBufferfi( buffer, drawbuffer, depth, stencil );
+}
+
+					
+const GLubyte * glGetStringi( GLenum name, GLuint index )
+{
+	return ( gleGetCurrent()->glGetStringi( name, index) );
 }
 
 
