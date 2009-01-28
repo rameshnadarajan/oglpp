@@ -1,7 +1,18 @@
-#summary One-sentence summary of this page.
+#summary Getting Started with glContext
 
-= Introduction =
+= Overview =
 
-*glContext* is a library providing the needed cross-platform API to add OpenGL capabilities to any user interface toolkits (gtk/gtkmm, wxWidgets, qt and so on).
+*glContext* or how to add OpenGL capabilities to any user interface toolkits.
 
 = Details =
+*glContext* is a C library providing the needed cross-platform API to add OpenGL capabilities to any user interface toolkits (gtk/gtkmm, wxWidgets, qt and so on).
+The goal of the glContext library is to build an API inspired by [http://www.cairographics.org cairo] which provides the OpenGL capabilities to any widget of any user interface toolkit and executed on any operating system.
+
+= License =
+The software is released under the [http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License (LGPL)] open source licence.
+
+----
+Others libraries :
+ * [http://www.student.oulu.fi/~jlof/gtkglarea/ GtkGLArea]
+ * wxGLCanvas in wxWidgets
+ * QtOpenGL for Qt
