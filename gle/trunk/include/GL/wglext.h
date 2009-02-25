@@ -46,9 +46,9 @@ extern "C" {
 /*************************************************************/
 
 /* Header file version number */
-/* wglext.h last updated 2007/02/09 */
+/* wglext.h last updated 2008/10/07 */
 /* Current version at http://www.opengl.org/registry/ */
-#define WGL_WGLEXT_VERSION 9
+#define WGL_WGLEXT_VERSION 11
 
 #ifndef WGL_ARB_buffer_region
 #define WGL_FRONT_COLOR_BUFFER_BIT_ARB 0x00000001
@@ -171,6 +171,16 @@ extern "C" {
 
 #ifndef WGL_ARB_pixel_format_float
 #define WGL_TYPE_RGBA_FLOAT_ARB        0x21A0
+#endif
+
+#ifndef WGL_ARB_create_context
+#define WGL_CONTEXT_DEBUG_BIT_ARB      0x0001
+#define WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB 0x0002
+#define WGL_CONTEXT_MAJOR_VERSION_ARB  0x2091
+#define WGL_CONTEXT_MINOR_VERSION_ARB  0x2092
+#define WGL_CONTEXT_LAYER_PLANE_ARB    0x2093
+#define WGL_CONTEXT_FLAGS_ARB          0x2094
+#define ERROR_INVALID_VERSION_ARB      0x2095
 #endif
 
 #ifndef WGL_EXT_make_current_read
@@ -328,6 +338,34 @@ extern "C" {
 #define WGL_FRAMEBUFFER_SRGB_CAPABLE_EXT 0x20A9
 #endif
 
+#ifndef WGL_NV_present_video
+#define WGL_NUM_VIDEO_SLOTS_NV         0x20F0
+#endif
+
+#ifndef WGL_NV_video_out
+#define WGL_BIND_TO_VIDEO_RGB_NV       0x20C0
+#define WGL_BIND_TO_VIDEO_RGBA_NV      0x20C1
+#define WGL_BIND_TO_VIDEO_RGB_AND_DEPTH_NV 0x20C2
+#define WGL_VIDEO_OUT_COLOR_NV         0x20C3
+#define WGL_VIDEO_OUT_ALPHA_NV         0x20C4
+#define WGL_VIDEO_OUT_DEPTH_NV         0x20C5
+#define WGL_VIDEO_OUT_COLOR_AND_ALPHA_NV 0x20C6
+#define WGL_VIDEO_OUT_COLOR_AND_DEPTH_NV 0x20C7
+#define WGL_VIDEO_OUT_FRAME            0x20C8
+#define WGL_VIDEO_OUT_FIELD_1          0x20C9
+#define WGL_VIDEO_OUT_FIELD_2          0x20CA
+#define WGL_VIDEO_OUT_STACKED_FIELDS_1_2 0x20CB
+#define WGL_VIDEO_OUT_STACKED_FIELDS_2_1 0x20CC
+#endif
+
+#ifndef WGL_NV_swap_group
+#endif
+
+#ifndef WGL_NV_gpu_affinity
+#define WGL_ERROR_INCOMPATIBLE_AFFINITY_MASKS_NV 0x20D0
+#define WGL_ERROR_MISSING_AFFINITY_MASK_NV 0x20D1
+#endif
+
 
 /*************************************************************/
 
@@ -336,6 +374,24 @@ DECLARE_HANDLE(HPBUFFERARB);
 #endif
 #ifndef WGL_EXT_pbuffer
 DECLARE_HANDLE(HPBUFFEREXT);
+#endif
+#ifndef WGL_NV_present_video
+DECLARE_HANDLE(HVIDEOOUTPUTDEVICENV);
+#endif
+#ifndef WGL_NV_video_out
+DECLARE_HANDLE(HPVIDEODEV);
+#endif
+#ifndef WGL_NV_gpu_affinity
+DECLARE_HANDLE(HPGPUNV);
+DECLARE_HANDLE(HGPUNV);
+
+typedef struct _GPU_DEVICE {
+    DWORD  cb;
+    CHAR   DeviceName[32];
+    CHAR   DeviceString[128];
+    DWORD  Flags;
+    RECT   rcVirtualScreen;
+} GPU_DEVICE, *PGPU_DEVICE;
 #endif
 
 #ifndef WGL_ARB_buffer_region
@@ -416,6 +472,14 @@ typedef BOOL (WINAPI * PFNWGLSETPBUFFERATTRIBARBPROC) (HPBUFFERARB hPbuffer, con
 
 #ifndef WGL_ARB_pixel_format_float
 #define WGL_ARB_pixel_format_float 1
+#endif
+
+#ifndef WGL_ARB_create_context
+#define WGL_ARB_create_context 1
+#ifdef WGL_WGLEXT_PROTOTYPES
+extern HGLRC WINAPI wglCreateContextAttribsARB (HDC, HGLRC, const int *);
+#endif /* WGL_WGLEXT_PROTOTYPES */
+typedef HGLRC (WINAPI * PFNWGLCREATECONTEXTATTRIBSARBPROC) (HDC hDC, HGLRC hShareContext, const int *attribList);
 #endif
 
 #ifndef WGL_EXT_display_color_table
@@ -638,6 +702,70 @@ typedef BOOL (WINAPI * PFNWGLQUERYFRAMETRACKINGI3DPROC) (DWORD *pFrameCount, DWO
 
 #ifndef WGL_EXT_framebuffer_sRGB
 #define WGL_EXT_framebuffer_sRGB 1
+#endif
+
+#ifndef WGL_NV_present_video
+#define WGL_NV_present_video 1
+#ifdef WGL_WGLEXT_PROTOTYPES
+extern int WINAPI wglEnumerateVideoDevicesNV (HDC, HVIDEOOUTPUTDEVICENV *);
+extern BOOL WINAPI wglBindVideoDeviceNV (HDC, unsigned int, HVIDEOOUTPUTDEVICENV, const int *);
+extern BOOL WINAPI wglQueryCurrentContextNV (int, int *);
+#endif /* WGL_WGLEXT_PROTOTYPES */
+typedef int (WINAPI * PFNWGLENUMERATEVIDEODEVICESNVPROC) (HDC hDC, HVIDEOOUTPUTDEVICENV *phDeviceList);
+typedef BOOL (WINAPI * PFNWGLBINDVIDEODEVICENVPROC) (HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, const int *piAttribList);
+typedef BOOL (WINAPI * PFNWGLQUERYCURRENTCONTEXTNVPROC) (int iAttribute, int *piValue);
+#endif
+
+#ifndef WGL_NV_video_out
+#define WGL_NV_video_out 1
+#ifdef WGL_WGLEXT_PROTOTYPES
+extern BOOL WINAPI wglGetVideoDeviceNV (HDC, int, HPVIDEODEV *);
+extern BOOL WINAPI wglReleaseVideoDeviceNV (HPVIDEODEV);
+extern BOOL WINAPI wglBindVideoImageNV (HPVIDEODEV, HPBUFFERARB, int);
+extern BOOL WINAPI wglReleaseVideoImageNV (HPBUFFERARB, int);
+extern BOOL WINAPI wglSendPbufferToVideoNV (HPBUFFERARB, int, unsigned long *, BOOL);
+extern BOOL WINAPI wglGetVideoInfoNV (HPVIDEODEV, unsigned long *, unsigned long *);
+#endif /* WGL_WGLEXT_PROTOTYPES */
+typedef BOOL (WINAPI * PFNWGLGETVIDEODEVICENVPROC) (HDC hDC, int numDevices, HPVIDEODEV *hVideoDevice);
+typedef BOOL (WINAPI * PFNWGLRELEASEVIDEODEVICENVPROC) (HPVIDEODEV hVideoDevice);
+typedef BOOL (WINAPI * PFNWGLBINDVIDEOIMAGENVPROC) (HPVIDEODEV hVideoDevice, HPBUFFERARB hPbuffer, int iVideoBuffer);
+typedef BOOL (WINAPI * PFNWGLRELEASEVIDEOIMAGENVPROC) (HPBUFFERARB hPbuffer, int iVideoBuffer);
+typedef BOOL (WINAPI * PFNWGLSENDPBUFFERTOVIDEONVPROC) (HPBUFFERARB hPbuffer, int iBufferType, unsigned long *pulCounterPbuffer, BOOL bBlock);
+typedef BOOL (WINAPI * PFNWGLGETVIDEOINFONVPROC) (HPVIDEODEV hpVideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo);
+#endif
+
+#ifndef WGL_NV_swap_group
+#define WGL_NV_swap_group 1
+#ifdef WGL_WGLEXT_PROTOTYPES
+extern BOOL WINAPI wglJoinSwapGroupNV (HDC, GLuint);
+extern BOOL WINAPI wglBindSwapBarrierNV (GLuint, GLuint);
+extern BOOL WINAPI wglQuerySwapGroupNV (HDC, GLuint *, GLuint *);
+extern BOOL WINAPI wglQueryMaxSwapGroupsNV (HDC, GLuint *, GLuint *);
+extern BOOL WINAPI wglQueryFrameCountNV (HDC, GLuint *);
+extern BOOL WINAPI wglResetFrameCountNV (HDC);
+#endif /* WGL_WGLEXT_PROTOTYPES */
+typedef BOOL (WINAPI * PFNWGLJOINSWAPGROUPNVPROC) (HDC hDC, GLuint group);
+typedef BOOL (WINAPI * PFNWGLBINDSWAPBARRIERNVPROC) (GLuint group, GLuint barrier);
+typedef BOOL (WINAPI * PFNWGLQUERYSWAPGROUPNVPROC) (HDC hDC, GLuint *group, GLuint *barrier);
+typedef BOOL (WINAPI * PFNWGLQUERYMAXSWAPGROUPSNVPROC) (HDC hDC, GLuint *maxGroups, GLuint *maxBarriers);
+typedef BOOL (WINAPI * PFNWGLQUERYFRAMECOUNTNVPROC) (HDC hDC, GLuint *count);
+typedef BOOL (WINAPI * PFNWGLRESETFRAMECOUNTNVPROC) (HDC hDC);
+#endif
+
+#ifndef WGL_NV_gpu_affinity
+#define WGL_NV_gpu_affinity 1
+#ifdef WGL_WGLEXT_PROTOTYPES
+extern BOOL WINAPI wglEnumGpusNV (UINT, HGPUNV *);
+extern BOOL WINAPI wglEnumGpuDevicesNV (HGPUNV, UINT, PGPU_DEVICE);
+extern HDC WINAPI wglCreateAffinityDCNV (const HGPUNV *);
+extern BOOL WINAPI wglEnumGpusFromAffinityDCNV (HDC, UINT, HGPUNV *);
+extern BOOL WINAPI wglDeleteDCNV (HDC);
+#endif /* WGL_WGLEXT_PROTOTYPES */
+typedef BOOL (WINAPI * PFNWGLENUMGPUSNVPROC) (UINT iGpuIndex, HGPUNV *phGpu);
+typedef BOOL (WINAPI * PFNWGLENUMGPUDEVICESNVPROC) (HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice);
+typedef HDC (WINAPI * PFNWGLCREATEAFFINITYDCNVPROC) (const HGPUNV *phGpuList);
+typedef BOOL (WINAPI * PFNWGLENUMGPUSFROMAFFINITYDCNVPROC) (HDC hAffinityDC, UINT iGpuIndex, HGPUNV *hGpu);
+typedef BOOL (WINAPI * PFNWGLDELETEDCNVPROC) (HDC hdc);
 #endif
 
 
