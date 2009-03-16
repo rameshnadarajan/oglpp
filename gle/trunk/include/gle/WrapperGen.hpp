@@ -1,4 +1,4 @@
-// This file was generated at Wed Jan 21 15:42:33 2009 with gle, please do not modify.
+// This file was generated at Mon Mar 16 11:11:46 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -34,6 +34,11 @@
  */
 
 /** 
+ * @defgroup g_GL_AMD		GL_AMD (1 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
  * @defgroup g_GL_APPLE		GL_APPLE (9 extensions found)
  * @ingroup g_extensionsByVendor
  */
@@ -44,7 +49,7 @@
  */
 
 /** 
- * @defgroup g_GL_ATI		GL_ATI (14 extensions found)
+ * @defgroup g_GL_ATI		GL_ATI (15 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -204,6 +209,77 @@ GLE_API void glTbufferMask3DFX( GLuint mask );
  * @return Returns \c true if \b GL_3DFX_texture_compression_FXT1 is supported, false otherwise.
  */
 GLE_API bool isGL_3DFX_texture_compression_FXT1();
+
+//@}
+
+
+/**
+ * @defgroup GL_AMD_performance_monitor GL_AMD_performance_monitor
+ * Extension number in OpenGL registry : 360
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/performance_monitor.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_AMD_performance_monitor is supported.
+ * @return Returns \c true if \b GL_AMD_performance_monitor is supported, false otherwise.
+ */
+GLE_API bool isGL_AMD_performance_monitor();
+
+/**
+ * @brief void glGetPerfMonitorGroupsAMD( GLint *numGroups, GLsizei groupsSize, GLuint *groups );
+ */
+GLE_API void glGetPerfMonitorGroupsAMD( GLint *numGroups, GLsizei groupsSize, GLuint *groups );
+
+/**
+ * @brief void glGetPerfMonitorCountersAMD( GLuint group, GLint *numCounters, GLint *maxActiveCounters, GLsizei counterSize, GLuint *counters );
+ */
+GLE_API void glGetPerfMonitorCountersAMD( GLuint group, GLint *numCounters, GLint *maxActiveCounters, GLsizei counterSize, GLuint *counters );
+
+/**
+ * @brief void glGetPerfMonitorGroupStringAMD( GLuint group, GLsizei bufSize, GLsizei *length, GLchar *groupString );
+ */
+GLE_API void glGetPerfMonitorGroupStringAMD( GLuint group, GLsizei bufSize, GLsizei *length, GLchar *groupString );
+
+/**
+ * @brief void glGetPerfMonitorCounterStringAMD( GLuint group, GLuint counter, GLsizei bufSize, GLsizei *length, GLchar *counterString );
+ */
+GLE_API void glGetPerfMonitorCounterStringAMD( GLuint group, GLuint counter, GLsizei bufSize, GLsizei *length, GLchar *counterString );
+
+/**
+ * @brief void glGetPerfMonitorCounterInfoAMD( GLuint group, GLuint counter, GLenum pname, void *data );
+ */
+GLE_API void glGetPerfMonitorCounterInfoAMD( GLuint group, GLuint counter, GLenum pname, void *data );
+
+/**
+ * @brief void glGenPerfMonitorsAMD( GLsizei n, GLuint *monitors );
+ */
+GLE_API void glGenPerfMonitorsAMD( GLsizei n, GLuint *monitors );
+
+/**
+ * @brief void glDeletePerfMonitorsAMD( GLsizei n, GLuint *monitors );
+ */
+GLE_API void glDeletePerfMonitorsAMD( GLsizei n, GLuint *monitors );
+
+/**
+ * @brief void glSelectPerfMonitorCountersAMD( GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList );
+ */
+GLE_API void glSelectPerfMonitorCountersAMD( GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList );
+
+/**
+ * @brief void glBeginPerfMonitorAMD( GLuint monitor );
+ */
+GLE_API void glBeginPerfMonitorAMD( GLuint monitor );
+
+/**
+ * @brief void glEndPerfMonitorAMD( GLuint monitor );
+ */
+GLE_API void glEndPerfMonitorAMD( GLuint monitor );
+
+/**
+ * @brief void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten );
+ */
+GLE_API void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten );
 
 //@}
 
@@ -860,9 +936,9 @@ GLE_API void glVertexAttribDivisor( GLuint index, GLuint divisor );
 GLE_API bool isGL_ARB_map_buffer_range();
 
 /**
- * @brief void glMapBufferRange( GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access );
+ * @brief GLvoid* glMapBufferRange( GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access );
  */
-GLE_API void glMapBufferRange( GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access );
+GLE_API GLvoid* glMapBufferRange( GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access );
 
 /**
  * @brief void glFlushMappedBufferRange( GLenum target, GLintptr offset, GLsizeiptr length );
@@ -2615,6 +2691,22 @@ GLE_API GLvoid* glMapObjectBufferATI( GLuint buffer );
  * @brief void glUnmapObjectBufferATI( GLuint buffer );
  */
 GLE_API void glUnmapObjectBufferATI( GLuint buffer );
+
+//@}
+
+
+/**
+ * @defgroup GL_ATI_meminfo GL_ATI_meminfo
+ * Extension number in OpenGL registry : 359
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/meminfo.txt
+ * @ingroup g_GL_ATI g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ATI_meminfo is supported.
+ * @return Returns \c true if \b GL_ATI_meminfo is supported, false otherwise.
+ */
+GLE_API bool isGL_ATI_meminfo();
 
 //@}
 
@@ -8114,6 +8206,41 @@ GLE_API void glPointParameterivNV( GLenum pname, const GLint *params );
  */
 GLE_API bool isGL_NV_present_video();
 
+/**
+ * @brief void glPresentFrameKeyedNV( GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLuint key0, GLenum target1, GLuint fill1, GLuint key1 );
+ */
+GLE_API void glPresentFrameKeyedNV( GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLuint key0, GLenum target1, GLuint fill1, GLuint key1 );
+
+/**
+ * @brief void glPresentFrameDualFillNV( GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLenum target1, GLuint fill1, GLenum target2, GLuint fill2, GLenum target3, GLuint fill3 );
+ */
+GLE_API void glPresentFrameDualFillNV( GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLenum target1, GLuint fill1, GLenum target2, GLuint fill2, GLenum target3, GLuint fill3 );
+
+/**
+ * @brief void glGetVideoivNV( GLuint video_slot, GLenum pname, GLint *params );
+ */
+GLE_API void glGetVideoivNV( GLuint video_slot, GLenum pname, GLint *params );
+
+/**
+ * @brief void glGetVideouivNV( GLuint video_slot, GLenum pname, GLuint *params );
+ */
+GLE_API void glGetVideouivNV( GLuint video_slot, GLenum pname, GLuint *params );
+
+/**
+ * @brief void glGetVideoi64vNV( GLuint video_slot, GLenum pname, GLint64EXT *params );
+ */
+GLE_API void glGetVideoi64vNV( GLuint video_slot, GLenum pname, GLint64EXT *params );
+
+/**
+ * @brief void glGetVideoui64vNV( GLuint video_slot, GLenum pname, GLuint64EXT *params );
+ */
+GLE_API void glGetVideoui64vNV( GLuint video_slot, GLenum pname, GLuint64EXT *params );
+
+/**
+ * @brief void glVideoParameterivNV( GLuint video_slot, GLenum pname, const GLint *params );
+ */
+GLE_API void glVideoParameterivNV( GLuint video_slot, GLenum pname, const GLint *params );
+
 //@}
 
 
@@ -9092,7 +9219,7 @@ GLE_API void glGetVertexAttribIuivEXT( GLuint index, GLenum pname, GLuint *param
 /**
  * @defgroup GL_OES_read_format GL_OES_read_format
  * Extension number in OpenGL registry : 295
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/OES/read_format.txt
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/OES/OES_read_format.txt
  * @ingroup g_GL_OES g_extensions
  */
 //@{

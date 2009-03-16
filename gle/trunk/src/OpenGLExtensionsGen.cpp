@@ -1,4 +1,4 @@
-// This file was generated at Wed Jan 21 15:42:33 2009 with gle, please do not modify.
+// This file was generated at Mon Mar 16 11:11:46 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,8 +17,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 315;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 1490;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 317;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 1508;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS ) :
@@ -46,6 +46,22 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_3DFX_texture_compression_FXT1 ******
 	isGL_3DFX_texture_compression_FXT1                            = false;
+
+
+	// ****** GL_AMD_performance_monitor ******
+	isGL_AMD_performance_monitor                                  = false;
+
+	glGetPerfMonitorGroupsAMD                                     = 0;
+	glGetPerfMonitorCountersAMD                                   = 0;
+	glGetPerfMonitorGroupStringAMD                                = 0;
+	glGetPerfMonitorCounterStringAMD                              = 0;
+	glGetPerfMonitorCounterInfoAMD                                = 0;
+	glGenPerfMonitorsAMD                                          = 0;
+	glDeletePerfMonitorsAMD                                       = 0;
+	glSelectPerfMonitorCountersAMD                                = 0;
+	glBeginPerfMonitorAMD                                         = 0;
+	glEndPerfMonitorAMD                                           = 0;
+	glGetPerfMonitorCounterDataAMD                                = 0;
 
 
 	// ****** GL_APPLE_client_storage ******
@@ -604,6 +620,10 @@ void OpenGLExtensionsGen::clear()
 
 	glMapObjectBufferATI                                          = 0;
 	glUnmapObjectBufferATI                                        = 0;
+
+
+	// ****** GL_ATI_meminfo ******
+	isGL_ATI_meminfo                                              = false;
 
 
 	// ****** GL_ATI_pixel_format_float ******
@@ -1875,6 +1895,14 @@ void OpenGLExtensionsGen::clear()
 	// ****** GL_NV_present_video ******
 	isGL_NV_present_video                                         = false;
 
+	glPresentFrameKeyedNV                                         = 0;
+	glPresentFrameDualFillNV                                      = 0;
+	glGetVideoivNV                                                = 0;
+	glGetVideouivNV                                               = 0;
+	glGetVideoi64vNV                                              = 0;
+	glGetVideoui64vNV                                             = 0;
+	glVideoParameterivNV                                          = 0;
+
 
 	// ****** GL_NV_primitive_restart ******
 	isGL_NV_primitive_restart                                     = false;
@@ -2922,6 +2950,9 @@ void OpenGLExtensionsGen::initialize()
 	initializeGL_3DFX();
 
 
+	initializeGL_AMD();
+
+
 	initializeGL_APPLE();
 
 
@@ -3154,6 +3185,83 @@ void OpenGLExtensionsGen::initializeGL_3DFX()
 	else
 	{
 		logEndl( "GL_3DFX_texture_compression_FXT1                            : not detected." );
+	}
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeGL_AMD()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+	
+	// ****** GL_AMD_performance_monitor ******
+	
+	isGL_AMD_performance_monitor = isExtensionSupported("GL_AMD_performance_monitor");
+	
+	localSupportedProcCount		= 11;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_AMD_performance_monitor ) // || isSEDEnable()
+	{
+
+		glGetPerfMonitorGroupsAMD = (PFNGLGETPERFMONITORGROUPSAMDPROC) getExtensionPtr( "glGetPerfMonitorGroupsAMD" );
+		if ( glGetPerfMonitorGroupsAMD != 0 )	++localInitializedProcCount;
+
+		glGetPerfMonitorCountersAMD = (PFNGLGETPERFMONITORCOUNTERSAMDPROC) getExtensionPtr( "glGetPerfMonitorCountersAMD" );
+		if ( glGetPerfMonitorCountersAMD != 0 )	++localInitializedProcCount;
+
+		glGetPerfMonitorGroupStringAMD = (PFNGLGETPERFMONITORGROUPSTRINGAMDPROC) getExtensionPtr( "glGetPerfMonitorGroupStringAMD" );
+		if ( glGetPerfMonitorGroupStringAMD != 0 )	++localInitializedProcCount;
+
+		glGetPerfMonitorCounterStringAMD = (PFNGLGETPERFMONITORCOUNTERSTRINGAMDPROC) getExtensionPtr( "glGetPerfMonitorCounterStringAMD" );
+		if ( glGetPerfMonitorCounterStringAMD != 0 )	++localInitializedProcCount;
+
+		glGetPerfMonitorCounterInfoAMD = (PFNGLGETPERFMONITORCOUNTERINFOAMDPROC) getExtensionPtr( "glGetPerfMonitorCounterInfoAMD" );
+		if ( glGetPerfMonitorCounterInfoAMD != 0 )	++localInitializedProcCount;
+
+		glGenPerfMonitorsAMD = (PFNGLGENPERFMONITORSAMDPROC) getExtensionPtr( "glGenPerfMonitorsAMD" );
+		if ( glGenPerfMonitorsAMD != 0 )	++localInitializedProcCount;
+
+		glDeletePerfMonitorsAMD = (PFNGLDELETEPERFMONITORSAMDPROC) getExtensionPtr( "glDeletePerfMonitorsAMD" );
+		if ( glDeletePerfMonitorsAMD != 0 )	++localInitializedProcCount;
+
+		glSelectPerfMonitorCountersAMD = (PFNGLSELECTPERFMONITORCOUNTERSAMDPROC) getExtensionPtr( "glSelectPerfMonitorCountersAMD" );
+		if ( glSelectPerfMonitorCountersAMD != 0 )	++localInitializedProcCount;
+
+		glBeginPerfMonitorAMD = (PFNGLBEGINPERFMONITORAMDPROC) getExtensionPtr( "glBeginPerfMonitorAMD" );
+		if ( glBeginPerfMonitorAMD != 0 )	++localInitializedProcCount;
+
+		glEndPerfMonitorAMD = (PFNGLENDPERFMONITORAMDPROC) getExtensionPtr( "glEndPerfMonitorAMD" );
+		if ( glEndPerfMonitorAMD != 0 )	++localInitializedProcCount;
+
+		glGetPerfMonitorCounterDataAMD = (PFNGLGETPERFMONITORCOUNTERDATAAMDPROC) getExtensionPtr( "glGetPerfMonitorCounterDataAMD" );
+		if ( glGetPerfMonitorCounterDataAMD != 0 )	++localInitializedProcCount;
+	} // if ( isGL_AMD_performance_monitor || isSEDEnable() )
+	
+	if ( isGL_AMD_performance_monitor )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_performance_monitor                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_performance_monitor                                  : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_performance_monitor") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_performance_monitor                                  : not detected." );
 	}
 } // initialize()
 
@@ -6172,6 +6280,39 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	else
 	{
 		logEndl( "GL_ATI_map_object_buffer                                    : not detected." );
+	}
+	
+	// ****** GL_ATI_meminfo ******
+	
+	isGL_ATI_meminfo = isExtensionSupported("GL_ATI_meminfo");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_ATI_meminfo )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ATI_meminfo                                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ATI_meminfo                                              : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ATI_meminfo") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ATI_meminfo                                              : not detected." );
 	}
 	
 	// ****** GL_ATI_pixel_format_float ******
@@ -13122,9 +13263,33 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	
 	isGL_NV_present_video = isExtensionSupported("GL_NV_present_video");
 	
-	localSupportedProcCount		= 0;
+	localSupportedProcCount		= 7;
 	localInitializedProcCount	= 0;
 	
+	if ( isGL_NV_present_video ) // || isSEDEnable()
+	{
+
+		glPresentFrameKeyedNV = (PFNGLPRESENTFRAMEKEYEDNVPROC) getExtensionPtr( "glPresentFrameKeyedNV" );
+		if ( glPresentFrameKeyedNV != 0 )	++localInitializedProcCount;
+
+		glPresentFrameDualFillNV = (PFNGLPRESENTFRAMEDUALFILLNVPROC) getExtensionPtr( "glPresentFrameDualFillNV" );
+		if ( glPresentFrameDualFillNV != 0 )	++localInitializedProcCount;
+
+		glGetVideoivNV = (PFNGLGETVIDEOIVNVPROC) getExtensionPtr( "glGetVideoivNV" );
+		if ( glGetVideoivNV != 0 )	++localInitializedProcCount;
+
+		glGetVideouivNV = (PFNGLGETVIDEOUIVNVPROC) getExtensionPtr( "glGetVideouivNV" );
+		if ( glGetVideouivNV != 0 )	++localInitializedProcCount;
+
+		glGetVideoi64vNV = (PFNGLGETVIDEOI64VNVPROC) getExtensionPtr( "glGetVideoi64vNV" );
+		if ( glGetVideoi64vNV != 0 )	++localInitializedProcCount;
+
+		glGetVideoui64vNV = (PFNGLGETVIDEOUI64VNVPROC) getExtensionPtr( "glGetVideoui64vNV" );
+		if ( glGetVideoui64vNV != 0 )	++localInitializedProcCount;
+
+		glVideoParameterivNV = (PFNGLVIDEOPARAMETERIVNVPROC) getExtensionPtr( "glVideoParameterivNV" );
+		if ( glVideoParameterivNV != 0 )	++localInitializedProcCount;
+	} // if ( isGL_NV_present_video || isSEDEnable() )
 	
 	if ( isGL_NV_present_video )
 	{

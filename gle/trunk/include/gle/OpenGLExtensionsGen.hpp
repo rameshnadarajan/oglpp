@@ -1,4 +1,4 @@
-// This file was generated at Wed Jan 21 15:42:33 2009 with gle, please do not modify.
+// This file was generated at Mon Mar 16 11:11:46 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,11 +17,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Wed Jan 21 15:42:33 2009 with gle, please do not modify.
+ * - Stamp = // This file was generated at Mon Mar 16 11:11:46 2009 with gle, please do not modify.
  * - Number of tokens					= 0
- * - Number of functions				= 1490
- * - Number of extensions found(in headers)	= 315
- * - Number of extensions in OpenGL registry	= 361
+ * - Number of functions				= 1508
+ * - Number of extensions found(in headers)	= 317
+ * - Number of extensions in OpenGL registry	= 366
  */
 
 
@@ -69,6 +69,11 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Initialize the GL_3DFX extension group.
 	 */
 	void initializeGL_3DFX();
+
+	/** 
+	 * @brief Initialize the GL_AMD extension group.
+	 */
+	void initializeGL_AMD();
 
 	/** 
 	 * @brief Initialize the GL_APPLE extension group.
@@ -232,6 +237,70 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_3DFX_texture_compression_FXT1 is supported, false otherwise.
 	 */
 	bool isGL_3DFX_texture_compression_FXT1;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_performance_monitor is supported, false otherwise.
+	 */
+	bool isGL_AMD_performance_monitor;
+
+	/**
+	* @brief void glGetPerfMonitorGroupsAMD( GLint *numGroups, GLsizei groupsSize, GLuint *groups );
+	*/
+	PFNGLGETPERFMONITORGROUPSAMDPROC                              glGetPerfMonitorGroupsAMD;
+
+	/**
+	* @brief void glGetPerfMonitorCountersAMD( GLuint group, GLint *numCounters, GLint *maxActiveCounters, GLsizei counterSize, GLuint *counters );
+	*/
+	PFNGLGETPERFMONITORCOUNTERSAMDPROC                            glGetPerfMonitorCountersAMD;
+
+	/**
+	* @brief void glGetPerfMonitorGroupStringAMD( GLuint group, GLsizei bufSize, GLsizei *length, GLchar *groupString );
+	*/
+	PFNGLGETPERFMONITORGROUPSTRINGAMDPROC                         glGetPerfMonitorGroupStringAMD;
+
+	/**
+	* @brief void glGetPerfMonitorCounterStringAMD( GLuint group, GLuint counter, GLsizei bufSize, GLsizei *length, GLchar *counterString );
+	*/
+	PFNGLGETPERFMONITORCOUNTERSTRINGAMDPROC                       glGetPerfMonitorCounterStringAMD;
+
+	/**
+	* @brief void glGetPerfMonitorCounterInfoAMD( GLuint group, GLuint counter, GLenum pname, void *data );
+	*/
+	PFNGLGETPERFMONITORCOUNTERINFOAMDPROC                         glGetPerfMonitorCounterInfoAMD;
+
+	/**
+	* @brief void glGenPerfMonitorsAMD( GLsizei n, GLuint *monitors );
+	*/
+	PFNGLGENPERFMONITORSAMDPROC                                   glGenPerfMonitorsAMD;
+
+	/**
+	* @brief void glDeletePerfMonitorsAMD( GLsizei n, GLuint *monitors );
+	*/
+	PFNGLDELETEPERFMONITORSAMDPROC                                glDeletePerfMonitorsAMD;
+
+	/**
+	* @brief void glSelectPerfMonitorCountersAMD( GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList );
+	*/
+	PFNGLSELECTPERFMONITORCOUNTERSAMDPROC                         glSelectPerfMonitorCountersAMD;
+
+	/**
+	* @brief void glBeginPerfMonitorAMD( GLuint monitor );
+	*/
+	PFNGLBEGINPERFMONITORAMDPROC                                  glBeginPerfMonitorAMD;
+
+	/**
+	* @brief void glEndPerfMonitorAMD( GLuint monitor );
+	*/
+	PFNGLENDPERFMONITORAMDPROC                                    glEndPerfMonitorAMD;
+
+	/**
+	* @brief void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten );
+	*/
+	PFNGLGETPERFMONITORCOUNTERDATAAMDPROC                         glGetPerfMonitorCounterDataAMD;
 
 
 
@@ -714,7 +783,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	bool isGL_ARB_map_buffer_range;
 
 	/**
-	* @brief void glMapBufferRange( GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access );
+	* @brief GLvoid* glMapBufferRange( GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access );
 	*/
 	PFNGLMAPBUFFERRANGEPROC                                       glMapBufferRange;
 
@@ -2210,6 +2279,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glUnmapObjectBufferATI( GLuint buffer );
 	*/
 	PFNGLUNMAPOBJECTBUFFERATIPROC                                 glUnmapObjectBufferATI;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ATI_meminfo is supported, false otherwise.
+	 */
+	bool isGL_ATI_meminfo;
 
 
 
@@ -6706,6 +6784,41 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_NV_present_video is supported, false otherwise.
 	 */
 	bool isGL_NV_present_video;
+
+	/**
+	* @brief void glPresentFrameKeyedNV( GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLuint key0, GLenum target1, GLuint fill1, GLuint key1 );
+	*/
+	PFNGLPRESENTFRAMEKEYEDNVPROC                                  glPresentFrameKeyedNV;
+
+	/**
+	* @brief void glPresentFrameDualFillNV( GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLenum target1, GLuint fill1, GLenum target2, GLuint fill2, GLenum target3, GLuint fill3 );
+	*/
+	PFNGLPRESENTFRAMEDUALFILLNVPROC                               glPresentFrameDualFillNV;
+
+	/**
+	* @brief void glGetVideoivNV( GLuint video_slot, GLenum pname, GLint *params );
+	*/
+	PFNGLGETVIDEOIVNVPROC                                         glGetVideoivNV;
+
+	/**
+	* @brief void glGetVideouivNV( GLuint video_slot, GLenum pname, GLuint *params );
+	*/
+	PFNGLGETVIDEOUIVNVPROC                                        glGetVideouivNV;
+
+	/**
+	* @brief void glGetVideoi64vNV( GLuint video_slot, GLenum pname, GLint64EXT *params );
+	*/
+	PFNGLGETVIDEOI64VNVPROC                                       glGetVideoi64vNV;
+
+	/**
+	* @brief void glGetVideoui64vNV( GLuint video_slot, GLenum pname, GLuint64EXT *params );
+	*/
+	PFNGLGETVIDEOUI64VNVPROC                                      glGetVideoui64vNV;
+
+	/**
+	* @brief void glVideoParameterivNV( GLuint video_slot, GLenum pname, const GLint *params );
+	*/
+	PFNGLVIDEOPARAMETERIVNVPROC                                   glVideoParameterivNV;
 
 
 

@@ -1,4 +1,4 @@
-// This file was generated at Wed Jan 21 15:42:33 2009 with gle, please do not modify.
+// This file was generated at Mon Mar 16 11:11:46 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -41,6 +41,81 @@ bool isGL_3DFX_texture_compression_FXT1()
 	const bool isSupported = gleGetCurrent()->isGL_3DFX_texture_compression_FXT1;
 	
 	return isSupported;
+}
+
+
+// ********* GL_AMD_performance_monitor *********
+bool isGL_AMD_performance_monitor()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_performance_monitor;
+	
+	return isSupported;
+}
+
+					
+void glGetPerfMonitorGroupsAMD( GLint *numGroups, GLsizei groupsSize, GLuint *groups )
+{
+	gleGetCurrent()->glGetPerfMonitorGroupsAMD( numGroups, groupsSize, groups );
+}
+
+					
+void glGetPerfMonitorCountersAMD( GLuint group, GLint *numCounters, GLint *maxActiveCounters, GLsizei counterSize, GLuint *counters )
+{
+	gleGetCurrent()->glGetPerfMonitorCountersAMD( group, numCounters, maxActiveCounters, counterSize, counters );
+}
+
+					
+void glGetPerfMonitorGroupStringAMD( GLuint group, GLsizei bufSize, GLsizei *length, GLchar *groupString )
+{
+	gleGetCurrent()->glGetPerfMonitorGroupStringAMD( group, bufSize, length, groupString );
+}
+
+					
+void glGetPerfMonitorCounterStringAMD( GLuint group, GLuint counter, GLsizei bufSize, GLsizei *length, GLchar *counterString )
+{
+	gleGetCurrent()->glGetPerfMonitorCounterStringAMD( group, counter, bufSize, length, counterString );
+}
+
+					
+void glGetPerfMonitorCounterInfoAMD( GLuint group, GLuint counter, GLenum pname, void *data )
+{
+	gleGetCurrent()->glGetPerfMonitorCounterInfoAMD( group, counter, pname, data );
+}
+
+					
+void glGenPerfMonitorsAMD( GLsizei n, GLuint *monitors )
+{
+	gleGetCurrent()->glGenPerfMonitorsAMD( n, monitors );
+}
+
+					
+void glDeletePerfMonitorsAMD( GLsizei n, GLuint *monitors )
+{
+	gleGetCurrent()->glDeletePerfMonitorsAMD( n, monitors );
+}
+
+					
+void glSelectPerfMonitorCountersAMD( GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList )
+{
+	gleGetCurrent()->glSelectPerfMonitorCountersAMD( monitor, enable, group, numCounters, counterList );
+}
+
+					
+void glBeginPerfMonitorAMD( GLuint monitor )
+{
+	gleGetCurrent()->glBeginPerfMonitorAMD( monitor );
+}
+
+					
+void glEndPerfMonitorAMD( GLuint monitor )
+{
+	gleGetCurrent()->glEndPerfMonitorAMD( monitor );
+}
+
+					
+void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten )
+{
+	gleGetCurrent()->glGetPerfMonitorCounterDataAMD( monitor, pname, dataSize, data, bytesWritten );
 }
 
 
@@ -575,9 +650,9 @@ bool isGL_ARB_map_buffer_range()
 }
 
 					
-void glMapBufferRange( GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access )
+GLvoid* glMapBufferRange( GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access )
 {
-	gleGetCurrent()->glMapBufferRange( target, offset, length, access );
+	return ( gleGetCurrent()->glMapBufferRange( target, offset, length, access) );
 }
 
 					
@@ -2303,6 +2378,15 @@ GLvoid* glMapObjectBufferATI( GLuint buffer )
 void glUnmapObjectBufferATI( GLuint buffer )
 {
 	gleGetCurrent()->glUnmapObjectBufferATI( buffer );
+}
+
+
+// ********* GL_ATI_meminfo *********
+bool isGL_ATI_meminfo()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ATI_meminfo;
+	
+	return isSupported;
 }
 
 
@@ -7439,6 +7523,48 @@ bool isGL_NV_present_video()
 	const bool isSupported = gleGetCurrent()->isGL_NV_present_video;
 	
 	return isSupported;
+}
+
+					
+void glPresentFrameKeyedNV( GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLuint key0, GLenum target1, GLuint fill1, GLuint key1 )
+{
+	gleGetCurrent()->glPresentFrameKeyedNV( video_slot, minPresentTime, beginPresentTimeId, presentDurationId, type, target0, fill0, key0, target1, fill1, key1 );
+}
+
+					
+void glPresentFrameDualFillNV( GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLenum target1, GLuint fill1, GLenum target2, GLuint fill2, GLenum target3, GLuint fill3 )
+{
+	gleGetCurrent()->glPresentFrameDualFillNV( video_slot, minPresentTime, beginPresentTimeId, presentDurationId, type, target0, fill0, target1, fill1, target2, fill2, target3, fill3 );
+}
+
+					
+void glGetVideoivNV( GLuint video_slot, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetVideoivNV( video_slot, pname, params );
+}
+
+					
+void glGetVideouivNV( GLuint video_slot, GLenum pname, GLuint *params )
+{
+	gleGetCurrent()->glGetVideouivNV( video_slot, pname, params );
+}
+
+					
+void glGetVideoi64vNV( GLuint video_slot, GLenum pname, GLint64EXT *params )
+{
+	gleGetCurrent()->glGetVideoi64vNV( video_slot, pname, params );
+}
+
+					
+void glGetVideoui64vNV( GLuint video_slot, GLenum pname, GLuint64EXT *params )
+{
+	gleGetCurrent()->glGetVideoui64vNV( video_slot, pname, params );
+}
+
+					
+void glVideoParameterivNV( GLuint video_slot, GLenum pname, const GLint *params )
+{
+	gleGetCurrent()->glVideoParameterivNV( video_slot, pname, params );
 }
 
 
