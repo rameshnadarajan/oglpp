@@ -19,7 +19,10 @@ glc_drawable_t * glc_gtkmm_drawable_create( Gtk::DrawingArea * drawingArea )
 	glc_drawable_t * drawable = glc_gtk_drawable_create( gtkDrawingArea );
 
 	// Initializes the drawable
-	drawable->backend->destroy	= &glc_gtkmm_drawable_destroy;
+	if( drawable != 0 )
+	{
+		drawable->backend->destroy	= &glc_gtkmm_drawable_destroy;
+	}
 
 	return drawable;
 }
