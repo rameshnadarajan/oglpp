@@ -1,4 +1,4 @@
-// This file was generated at Mon Mar 16 11:11:46 2009 with gle, please do not modify.
+// This file was generated at Wed Mar 25 13:27:43 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,11 +17,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Mon Mar 16 11:11:46 2009 with gle, please do not modify.
+ * - Stamp = // This file was generated at Wed Mar 25 13:27:43 2009 with gle, please do not modify.
  * - Number of tokens					= 0
- * - Number of functions				= 1508
- * - Number of extensions found(in headers)	= 317
- * - Number of extensions in OpenGL registry	= 366
+ * - Number of functions				= 1510
+ * - Number of extensions found(in headers)	= 319
+ * - Number of extensions in OpenGL registry	= 369
  */
 
 
@@ -301,6 +301,34 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten );
 	*/
 	PFNGLGETPERFMONITORCOUNTERDATAAMDPROC                         glGetPerfMonitorCounterDataAMD;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_texture_texture4 is supported, false otherwise.
+	 */
+	bool isGL_AMD_texture_texture4;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_vertex_shader_tesselator is supported, false otherwise.
+	 */
+	bool isGL_AMD_vertex_shader_tesselator;
+
+	/**
+	* @brief void glTessellationFactorAMD( GLfloat factor );
+	*/
+	PFNGLTESSELLATIONFACTORAMDPROC                                glTessellationFactorAMD;
+
+	/**
+	* @brief void glTessellationModeAMD( GLenum mode );
+	*/
+	PFNGLTESSELLATIONMODEAMDPROC                                  glTessellationModeAMD;
 
 
 

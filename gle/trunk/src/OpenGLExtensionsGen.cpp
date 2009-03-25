@@ -1,4 +1,4 @@
-// This file was generated at Mon Mar 16 11:11:46 2009 with gle, please do not modify.
+// This file was generated at Wed Mar 25 13:27:43 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,8 +17,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 317;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 1508;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 319;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 1510;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS ) :
@@ -62,6 +62,17 @@ void OpenGLExtensionsGen::clear()
 	glBeginPerfMonitorAMD                                         = 0;
 	glEndPerfMonitorAMD                                           = 0;
 	glGetPerfMonitorCounterDataAMD                                = 0;
+
+
+	// ****** GL_AMD_texture_texture4 ******
+	isGL_AMD_texture_texture4                                     = false;
+
+
+	// ****** GL_AMD_vertex_shader_tesselator ******
+	isGL_AMD_vertex_shader_tesselator                             = false;
+
+	glTessellationFactorAMD                                       = 0;
+	glTessellationModeAMD                                         = 0;
 
 
 	// ****** GL_APPLE_client_storage ******
@@ -3262,6 +3273,81 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	else
 	{
 		logEndl( "GL_AMD_performance_monitor                                  : not detected." );
+	}
+	
+	// ****** GL_AMD_texture_texture4 ******
+	
+	isGL_AMD_texture_texture4 = isExtensionSupported("GL_AMD_texture_texture4");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_AMD_texture_texture4 )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_texture_texture4                                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_texture_texture4                                     : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_texture_texture4") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_texture_texture4                                     : not detected." );
+	}
+	
+	// ****** GL_AMD_vertex_shader_tesselator ******
+	
+	isGL_AMD_vertex_shader_tesselator = isExtensionSupported("GL_AMD_vertex_shader_tesselator");
+	
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_AMD_vertex_shader_tesselator ) // || isSEDEnable()
+	{
+
+		glTessellationFactorAMD = (PFNGLTESSELLATIONFACTORAMDPROC) getExtensionPtr( "glTessellationFactorAMD" );
+		if ( glTessellationFactorAMD != 0 )	++localInitializedProcCount;
+
+		glTessellationModeAMD = (PFNGLTESSELLATIONMODEAMDPROC) getExtensionPtr( "glTessellationModeAMD" );
+		if ( glTessellationModeAMD != 0 )	++localInitializedProcCount;
+	} // if ( isGL_AMD_vertex_shader_tesselator || isSEDEnable() )
+	
+	if ( isGL_AMD_vertex_shader_tesselator )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_vertex_shader_tesselator                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_vertex_shader_tesselator                             : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_vertex_shader_tesselator") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_vertex_shader_tesselator                             : not detected." );
 	}
 } // initialize()
 

@@ -1,4 +1,4 @@
-// This file was generated at Mon Mar 16 11:11:46 2009 with gle, please do not modify.
+// This file was generated at Wed Mar 25 13:27:43 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -34,7 +34,7 @@
  */
 
 /** 
- * @defgroup g_GL_AMD		GL_AMD (1 extensions found)
+ * @defgroup g_GL_AMD		GL_AMD (2 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -154,7 +154,7 @@
  */
 
 /** 
- * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (29 extensions found)
+ * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (30 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -280,6 +280,47 @@ GLE_API void glEndPerfMonitorAMD( GLuint monitor );
  * @brief void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten );
  */
 GLE_API void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten );
+
+//@}
+
+
+/**
+ * @defgroup GL_AMD_texture_texture4 GL_AMD_texture_texture4
+ * Extension number in OpenGL registry : 362
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/texture_texture4.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_AMD_texture_texture4 is supported.
+ * @return Returns \c true if \b GL_AMD_texture_texture4 is supported, false otherwise.
+ */
+GLE_API bool isGL_AMD_texture_texture4();
+
+//@}
+
+			
+/**	
+ * @defgroup GL_AMD_vertex_shader_tesselator GL_AMD_vertex_shader_tesselator
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_AMD_vertex_shader_tesselator is supported.
+ * @return Returns \c true if \b GL_AMD_vertex_shader_tesselator is supported, false otherwise.
+ */
+GLE_API bool isGL_AMD_vertex_shader_tesselator();
+
+/**
+ * @brief void glTessellationFactorAMD( GLfloat factor );
+ */
+GLE_API void glTessellationFactorAMD( GLfloat factor );
+
+/**
+ * @brief void glTessellationModeAMD( GLenum mode );
+ */
+GLE_API void glTessellationModeAMD( GLenum mode );
 
 //@}
 

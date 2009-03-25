@@ -1,4 +1,4 @@
-// This file was generated at Mon Mar 16 11:11:46 2009 with gle, please do not modify.
+// This file was generated at Wed Mar 25 13:27:43 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -116,6 +116,36 @@ void glEndPerfMonitorAMD( GLuint monitor )
 void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten )
 {
 	gleGetCurrent()->glGetPerfMonitorCounterDataAMD( monitor, pname, dataSize, data, bytesWritten );
+}
+
+
+// ********* GL_AMD_texture_texture4 *********
+bool isGL_AMD_texture_texture4()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_texture_texture4;
+	
+	return isSupported;
+}
+
+
+// ********* GL_AMD_vertex_shader_tesselator *********
+bool isGL_AMD_vertex_shader_tesselator()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_vertex_shader_tesselator;
+	
+	return isSupported;
+}
+
+					
+void glTessellationFactorAMD( GLfloat factor )
+{
+	gleGetCurrent()->glTessellationFactorAMD( factor );
+}
+
+					
+void glTessellationModeAMD( GLenum mode )
+{
+	gleGetCurrent()->glTessellationModeAMD( mode );
 }
 
 
