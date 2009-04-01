@@ -22,7 +22,7 @@ gle detects, at run-time, whether OpenGL extensions are supported or not by the 
 
 = Usage =
 {{{
-//#include <gle/gle.h>
+//#include <gle/gl.h>
 #include <gle/Wrapper.hpp>
 #include <gle/WrapperGen.hpp>
 #include <gle/OpenGLExtensionsGen.hpp>
