@@ -1,4 +1,4 @@
-// This file was generated at Wed Mar 25 13:27:43 2009 with gle, please do not modify.
+// This file was generated at Wed Mar 25 13:43:56 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,10 +17,10 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Wed Mar 25 13:27:43 2009 with gle, please do not modify.
+ * - Stamp = // This file was generated at Wed Mar 25 13:43:56 2009 with gle, please do not modify.
  * - Number of tokens					= 0
- * - Number of functions				= 1510
- * - Number of extensions found(in headers)	= 319
+ * - Number of functions				= 1511
+ * - Number of extensions found(in headers)	= 320
  * - Number of extensions in OpenGL registry	= 369
  */
 
@@ -4758,6 +4758,20 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_EXT_provoking_vertex is supported, false otherwise.
+	 */
+	bool isGL_EXT_provoking_vertex;
+
+	/**
+	* @brief void glProvokingVertexEXT( GLenum mode );
+	*/
+	PFNGLPROVOKINGVERTEXEXTPROC                                   glProvokingVertexEXT;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_EXT_rescale_normal is supported, false otherwise.
 	 */
 	bool isGL_EXT_rescale_normal;
@@ -5253,12 +5267,12 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLBINDBUFFERBASEEXTPROC                                    glBindBufferBaseEXT;
 
 	/**
-	* @brief void glTransformFeedbackVaryingsEXT( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode );
+	* @brief void glTransformFeedbackVaryingsEXT( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
 	*/
 	PFNGLTRANSFORMFEEDBACKVARYINGSEXTPROC                         glTransformFeedbackVaryingsEXT;
 
 	/**
-	* @brief void glGetTransformFeedbackVaryingEXT( GLuint program, GLuint index, GLint *location );
+	* @brief void glGetTransformFeedbackVaryingEXT( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
 	*/
 	PFNGLGETTRANSFORMFEEDBACKVARYINGEXTPROC                       glGetTransformFeedbackVaryingEXT;
 
@@ -10370,12 +10384,12 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLBINDBUFFERBASEPROC                                       glBindBufferBase;
 
 	/**
-	* @brief void glTransformFeedbackVaryings( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode );
+	* @brief void glTransformFeedbackVaryings( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
 	*/
 	PFNGLTRANSFORMFEEDBACKVARYINGSPROC                            glTransformFeedbackVaryings;
 
 	/**
-	* @brief void glGetTransformFeedbackVarying( GLuint program, GLuint index, GLint *location );
+	* @brief void glGetTransformFeedbackVarying( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
 	*/
 	PFNGLGETTRANSFORMFEEDBACKVARYINGPROC                          glGetTransformFeedbackVarying;
 

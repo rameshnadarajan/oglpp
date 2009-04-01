@@ -1,4 +1,4 @@
-// This file was generated at Wed Mar 25 13:27:43 2009 with gle, please do not modify.
+// This file was generated at Wed Mar 25 13:43:56 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -5237,6 +5237,21 @@ void glPolygonOffsetEXT( GLfloat factor, GLfloat bias )
 }
 
 
+// ********* GL_EXT_provoking_vertex *********
+bool isGL_EXT_provoking_vertex()
+{
+	const bool isSupported = gleGetCurrent()->isGL_EXT_provoking_vertex;
+	
+	return isSupported;
+}
+
+					
+void glProvokingVertexEXT( GLenum mode )
+{
+	gleGetCurrent()->glProvokingVertexEXT( mode );
+}
+
+
 // ********* GL_EXT_rescale_normal *********
 bool isGL_EXT_rescale_normal()
 {
@@ -5780,15 +5795,15 @@ void glBindBufferBaseEXT( GLenum target, GLuint index, GLuint buffer )
 }
 
 					
-void glTransformFeedbackVaryingsEXT( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode )
+void glTransformFeedbackVaryingsEXT( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode )
 {
-	gleGetCurrent()->glTransformFeedbackVaryingsEXT( program, count, locations, bufferMode );
+	gleGetCurrent()->glTransformFeedbackVaryingsEXT( program, count, varyings, bufferMode );
 }
 
 					
-void glGetTransformFeedbackVaryingEXT( GLuint program, GLuint index, GLint *location )
+void glGetTransformFeedbackVaryingEXT( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name )
 {
-	gleGetCurrent()->glGetTransformFeedbackVaryingEXT( program, index, location );
+	gleGetCurrent()->glGetTransformFeedbackVaryingEXT( program, index, bufSize, length, size, type, name );
 }
 
 
@@ -11636,15 +11651,15 @@ void glBindBufferBase( GLenum target, GLuint index, GLuint buffer )
 }
 
 					
-void glTransformFeedbackVaryings( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode )
+void glTransformFeedbackVaryings( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode )
 {
-	gleGetCurrent()->glTransformFeedbackVaryings( program, count, locations, bufferMode );
+	gleGetCurrent()->glTransformFeedbackVaryings( program, count, varyings, bufferMode );
 }
 
 					
-void glGetTransformFeedbackVarying( GLuint program, GLuint index, GLint *location )
+void glGetTransformFeedbackVarying( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name )
 {
-	gleGetCurrent()->glGetTransformFeedbackVarying( program, index, location );
+	gleGetCurrent()->glGetTransformFeedbackVarying( program, index, bufSize, length, size, type, name );
 }
 
 					

@@ -1,4 +1,4 @@
-// This file was generated at Wed Mar 25 13:27:43 2009 with gle, please do not modify.
+// This file was generated at Wed Mar 25 13:43:56 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,8 +17,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 319;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 1510;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 320;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 1511;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS ) :
@@ -1278,6 +1278,11 @@ void OpenGLExtensionsGen::clear()
 	// ****** GL_EXT_polygon_offset ******
 	isGL_EXT_polygon_offset                                       = false;
 	glPolygonOffsetEXT                                            = 0;
+
+
+	// ****** GL_EXT_provoking_vertex ******
+	isGL_EXT_provoking_vertex                                     = false;
+	glProvokingVertexEXT                                          = 0;
 
 
 	// ****** GL_EXT_rescale_normal ******
@@ -9611,6 +9616,45 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	else
 	{
 		logEndl( "GL_EXT_polygon_offset                                       : not detected." );
+	}
+	
+	// ****** GL_EXT_provoking_vertex ******
+	
+	isGL_EXT_provoking_vertex = isExtensionSupported("GL_EXT_provoking_vertex");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_EXT_provoking_vertex ) // || isSEDEnable()
+	{
+
+		glProvokingVertexEXT = (PFNGLPROVOKINGVERTEXEXTPROC) getExtensionPtr( "glProvokingVertexEXT" );
+		if ( glProvokingVertexEXT != 0 )	++localInitializedProcCount;
+	} // if ( isGL_EXT_provoking_vertex || isSEDEnable() )
+	
+	if ( isGL_EXT_provoking_vertex )
+	{
+		std::stringstream strStream;
+		strStream << "GL_EXT_provoking_vertex                                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_EXT_provoking_vertex                                     : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_EXT_provoking_vertex") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_EXT_provoking_vertex                                     : not detected." );
 	}
 	
 	// ****** GL_EXT_rescale_normal ******

@@ -1,4 +1,4 @@
-// This file was generated at Wed Mar 25 13:27:43 2009 with gle, please do not modify.
+// This file was generated at Wed Mar 25 13:43:56 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -54,7 +54,7 @@
  */
 
 /** 
- * @defgroup g_GL_EXT		GL_EXT (82 extensions found)
+ * @defgroup g_GL_EXT		GL_EXT (83 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -5600,6 +5600,27 @@ GLE_API void glPolygonOffsetEXT( GLfloat factor, GLfloat bias );
 
 
 /**
+ * @defgroup GL_EXT_provoking_vertex GL_EXT_provoking_vertex
+ * Extension number in OpenGL registry : 364
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/provoking_vertex.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_provoking_vertex is supported.
+ * @return Returns \c true if \b GL_EXT_provoking_vertex is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_provoking_vertex();
+
+/**
+ * @brief void glProvokingVertexEXT( GLenum mode );
+ */
+GLE_API void glProvokingVertexEXT( GLenum mode );
+
+//@}
+
+
+/**
  * @defgroup GL_EXT_rescale_normal GL_EXT_rescale_normal
  * Extension number in OpenGL registry : 27
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/rescale_normal.txt
@@ -6312,14 +6333,14 @@ GLE_API void glBindBufferOffsetEXT( GLenum target, GLuint index, GLuint buffer, 
 GLE_API void glBindBufferBaseEXT( GLenum target, GLuint index, GLuint buffer );
 
 /**
- * @brief void glTransformFeedbackVaryingsEXT( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode );
+ * @brief void glTransformFeedbackVaryingsEXT( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
  */
-GLE_API void glTransformFeedbackVaryingsEXT( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode );
+GLE_API void glTransformFeedbackVaryingsEXT( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
 
 /**
- * @brief void glGetTransformFeedbackVaryingEXT( GLuint program, GLuint index, GLint *location );
+ * @brief void glGetTransformFeedbackVaryingEXT( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
  */
-GLE_API void glGetTransformFeedbackVaryingEXT( GLuint program, GLuint index, GLint *location );
+GLE_API void glGetTransformFeedbackVaryingEXT( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
 
 //@}
 
@@ -12503,14 +12524,14 @@ GLE_API void glBindBufferRange( GLenum target, GLuint index, GLuint buffer, GLin
 GLE_API void glBindBufferBase( GLenum target, GLuint index, GLuint buffer );
 
 /**
- * @brief void glTransformFeedbackVaryings( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode );
+ * @brief void glTransformFeedbackVaryings( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
  */
-GLE_API void glTransformFeedbackVaryings( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode );
+GLE_API void glTransformFeedbackVaryings( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
 
 /**
- * @brief void glGetTransformFeedbackVarying( GLuint program, GLuint index, GLint *location );
+ * @brief void glGetTransformFeedbackVarying( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
  */
-GLE_API void glGetTransformFeedbackVarying( GLuint program, GLuint index, GLint *location );
+GLE_API void glGetTransformFeedbackVarying( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
 
 /**
  * @brief void glClampColor( GLenum target, GLenum clamp );
