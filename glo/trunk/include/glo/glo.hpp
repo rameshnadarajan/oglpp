@@ -9,7 +9,7 @@
 /** 
  * @namespace glo
  * 
- * @brief open(GL) (O)bject
+ * @brief Open(GL) (O)bject
  * 
  * The purpose of this library is to encapsulate OpenGL object (like display list, texture and so on) into easy to 
  * use classes.
