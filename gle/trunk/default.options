@@ -1,3 +1,4 @@
+description	= 'Open(GL) (E)xtensions'
 type		= 'shared'
 version		= '0-3'
 uses		= ['opengl']
