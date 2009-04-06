@@ -1,3 +1,4 @@
+description	= 'Open(GL) (O)bject'
 type		= 'shared'
 version		= '0-3'
 deps		= ['../gle']
