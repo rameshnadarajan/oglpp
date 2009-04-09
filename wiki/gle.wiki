@@ -22,9 +22,8 @@ gle detects, at run-time, whether OpenGL extensions are supported or not by the 
 
 = Usage =
 {{{
-//#include <gle/gl.h>
-#include <gle/Wrapper.hpp>
-#include <gle/WrapperGen.hpp>
+//#include <gle/Wrapper.hpp>
+//#include <gle/WrapperGen.hpp>
 #include <gle/OpenGLExtensionsGen.hpp>
 
 // gle main object to be able to access OpenGL extensions.
@@ -33,6 +32,7 @@ gle::OpenGLExtensionsGen gleContext;
 gleContext.clear();
 gleContext.initialize();
 
+#include <gle/gl.h>
 // Sets it current
 gleSetCurrent( gleContext );
 
