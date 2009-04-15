@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2006, 2007, 2008, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -20,7 +20,7 @@
 	#include <GL/glext.h>
 	//#include <GL/wglext.h>
 	//#include <GL/glu.h>
-	
+
 #elif __MACOSX__
 
 	#define WINGDIAPI
@@ -125,8 +125,16 @@
  * 
  * OpenGL links :
  * - OpenGL 2.1 Reference Pages : http://opengl.org/sdk/docs/man/
- * - OpenGL 2.1 Specification (pdf) : http://www.opengl.org/registry/doc/glspec21.20061201.pdf
+ *
+ * - OpenGL 3.1 Specification (pdf revised 2009/03/24) : http://www.opengl.org/registry/doc/glspec31.20090324.pdf
+ * - OpenGL 3.1 Specification with GL_ARB_compatibility extension (pdf revised 2009/03/24) : http://www.opengl.org/registry/doc/glspec31undep.20090324.pdf
+ * - OpenGL 3.0 Specification (pdf revised 2008/08/11) : http://www.opengl.org/registry/doc/glspec30.20080811.pdf
+ * - OpenGL 2.1 Specification (pdf revised 2006/12/01) : http://www.opengl.org/registry/doc/glspec21.20061201.pdf
+ *
+ * - OpenGL Shading Language Specification v1.40.00 (pdf) : http://www.opengl.org/registry/doc/GLSLangSpec.Full.1.40.05.pdf
+ * - OpenGL Shading Language Specification v1.30.08 (pdf) : http://www.opengl.org/registry/doc/GLSLangSpec.Full.1.30.08.withchanges.pdf
  * - OpenGL Shading Language Specification v1.20.8 (pdf) : http://www.opengl.org/registry/doc/GLSLangSpec.Full.1.20.8.pdf
+ * - OpenGL Shading Language Specification v1.10.59 (pdf) : http://www.opengl.org/registry/doc/GLSLangSpec.Full.1.10.59.pdf
  *
  * - OpenGL extensions from SGI : http://oss.sgi.com/projects/ogl-sample/registry/
  * - OpenGL extensions from NVidia : http://developer.nvidia.com/object/nvidia_opengl_specs.html
