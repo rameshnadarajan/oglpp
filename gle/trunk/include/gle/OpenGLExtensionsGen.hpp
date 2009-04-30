@@ -1,4 +1,4 @@
-// This file was generated at Wed Mar 25 13:43:56 2009 with gle, please do not modify.
+// This file was generated at Thu Apr 30 13:03:08 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,10 +17,10 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Wed Mar 25 13:43:56 2009 with gle, please do not modify.
+ * - Stamp = // This file was generated at Thu Apr 30 13:03:08 2009 with gle, please do not modify.
  * - Number of tokens					= 0
- * - Number of functions				= 1511
- * - Number of extensions found(in headers)	= 320
+ * - Number of functions				= 1523
+ * - Number of extensions found(in headers)	= 333
  * - Number of extensions in OpenGL registry	= 369
  */
 
@@ -540,6 +540,29 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_compatibility is supported, false otherwise.
+	 */
+	bool isGL_ARB_compatibility;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_copy_buffer is supported, false otherwise.
+	 */
+	bool isGL_ARB_copy_buffer;
+
+	/**
+	* @brief void glCopyBufferSubData( GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size );
+	*/
+	PFNGLCOPYBUFFERSUBDATAPROC                                    glCopyBufferSubData;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_depth_buffer_float is supported, false otherwise.
 	 */
 	bool isGL_ARB_depth_buffer_float;
@@ -727,6 +750,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_framebuffer_object_DEPRECATED is supported, false otherwise.
+	 */
+	bool isGL_ARB_framebuffer_object_DEPRECATED;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_framebuffer_sRGB is supported, false otherwise.
 	 */
 	bool isGL_ARB_framebuffer_sRGB;
@@ -792,14 +824,23 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_imaging_DEPRECATED is supported, false otherwise.
+	 */
+	bool isGL_ARB_imaging_DEPRECATED;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_instanced_arrays is supported, false otherwise.
 	 */
 	bool isGL_ARB_instanced_arrays;
 
 	/**
-	* @brief void glVertexAttribDivisor( GLuint index, GLuint divisor );
+	* @brief void glVertexAttribDivisorARB( GLuint index, GLuint divisor );
 	*/
-	PFNGLVERTEXATTRIBDIVISORPROC                                  glVertexAttribDivisor;
+	PFNGLVERTEXATTRIBDIVISORARBPROC                               glVertexAttribDivisorARB;
 
 
 
@@ -1558,6 +1599,50 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glMultTransposeMatrixdARB( const GLdouble *m );
 	*/
 	PFNGLMULTTRANSPOSEMATRIXDARBPROC                              glMultTransposeMatrixdARB;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_uniform_buffer_object is supported, false otherwise.
+	 */
+	bool isGL_ARB_uniform_buffer_object;
+
+	/**
+	* @brief void glGetUniformIndices( GLuint program, GLsizei uniformCount, const GLchar* *uniformNames, GLuint *uniformIndices );
+	*/
+	PFNGLGETUNIFORMINDICESPROC                                    glGetUniformIndices;
+
+	/**
+	* @brief void glGetActiveUniformsiv( GLuint program, GLsizei uniformCount, const GLuint *uniformIndices, GLenum pname, GLint *params );
+	*/
+	PFNGLGETACTIVEUNIFORMSIVPROC                                  glGetActiveUniformsiv;
+
+	/**
+	* @brief void glGetActiveUniformName( GLuint program, GLuint uniformIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformName );
+	*/
+	PFNGLGETACTIVEUNIFORMNAMEPROC                                 glGetActiveUniformName;
+
+	/**
+	* @brief GLuint glGetUniformBlockIndex( GLuint program, const GLchar *uniformBlockName );
+	*/
+	PFNGLGETUNIFORMBLOCKINDEXPROC                                 glGetUniformBlockIndex;
+
+	/**
+	* @brief void glGetActiveUniformBlockiv( GLuint program, GLuint uniformBlockIndex, GLenum pname, GLint *params );
+	*/
+	PFNGLGETACTIVEUNIFORMBLOCKIVPROC                              glGetActiveUniformBlockiv;
+
+	/**
+	* @brief void glGetActiveUniformBlockName( GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformBlockName );
+	*/
+	PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC                            glGetActiveUniformBlockName;
+
+	/**
+	* @brief void glUniformBlockBinding( GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding );
+	*/
+	PFNGLUNIFORMBLOCKBINDINGPROC                                  glUniformBlockBinding;
 
 
 
@@ -9060,6 +9145,30 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLDRAWRANGEELEMENTSPROC                                    glDrawRangeElements;
 
 	/**
+	* @brief void glTexImage3D( GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+	*/
+	PFNGLTEXIMAGE3DPROC                                           glTexImage3D;
+
+	/**
+	* @brief void glTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels );
+	*/
+	PFNGLTEXSUBIMAGE3DPROC                                        glTexSubImage3D;
+
+	/**
+	* @brief void glCopyTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+	*/
+	PFNGLCOPYTEXSUBIMAGE3DPROC                                    glCopyTexSubImage3D;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_VERSION_1_2_DEPRECATED is supported, false otherwise.
+	 */
+	bool isGL_VERSION_1_2_DEPRECATED;
+
+	/**
 	* @brief void glColorTable( GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *table );
 	*/
 	PFNGLCOLORTABLEPROC                                           glColorTable;
@@ -9219,21 +9328,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	*/
 	PFNGLRESETMINMAXPROC                                          glResetMinmax;
 
-	/**
-	* @brief void glTexImage3D( GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
-	*/
-	PFNGLTEXIMAGE3DPROC                                           glTexImage3D;
-
-	/**
-	* @brief void glTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels );
-	*/
-	PFNGLTEXSUBIMAGE3DPROC                                        glTexSubImage3D;
-
-	/**
-	* @brief void glCopyTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height );
-	*/
-	PFNGLCOPYTEXSUBIMAGE3DPROC                                    glCopyTexSubImage3D;
-
 
 
 
@@ -9247,6 +9341,55 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glActiveTexture( GLenum texture );
 	*/
 	PFNGLACTIVETEXTUREPROC                                        glActiveTexture;
+
+	/**
+	* @brief void glSampleCoverage( GLclampf value, GLboolean invert );
+	*/
+	PFNGLSAMPLECOVERAGEPROC                                       glSampleCoverage;
+
+	/**
+	* @brief void glCompressedTexImage3D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *data );
+	*/
+	PFNGLCOMPRESSEDTEXIMAGE3DPROC                                 glCompressedTexImage3D;
+
+	/**
+	* @brief void glCompressedTexImage2D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *data );
+	*/
+	PFNGLCOMPRESSEDTEXIMAGE2DPROC                                 glCompressedTexImage2D;
+
+	/**
+	* @brief void glCompressedTexImage1D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *data );
+	*/
+	PFNGLCOMPRESSEDTEXIMAGE1DPROC                                 glCompressedTexImage1D;
+
+	/**
+	* @brief void glCompressedTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *data );
+	*/
+	PFNGLCOMPRESSEDTEXSUBIMAGE3DPROC                              glCompressedTexSubImage3D;
+
+	/**
+	* @brief void glCompressedTexSubImage2D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *data );
+	*/
+	PFNGLCOMPRESSEDTEXSUBIMAGE2DPROC                              glCompressedTexSubImage2D;
+
+	/**
+	* @brief void glCompressedTexSubImage1D( GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *data );
+	*/
+	PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC                              glCompressedTexSubImage1D;
+
+	/**
+	* @brief void glGetCompressedTexImage( GLenum target, GLint level, GLvoid *img );
+	*/
+	PFNGLGETCOMPRESSEDTEXIMAGEPROC                                glGetCompressedTexImage;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_VERSION_1_3_DEPRECATED is supported, false otherwise.
+	 */
+	bool isGL_VERSION_1_3_DEPRECATED;
 
 	/**
 	* @brief void glClientActiveTexture( GLenum texture );
@@ -9433,46 +9576,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	*/
 	PFNGLMULTTRANSPOSEMATRIXDPROC                                 glMultTransposeMatrixd;
 
-	/**
-	* @brief void glSampleCoverage( GLclampf value, GLboolean invert );
-	*/
-	PFNGLSAMPLECOVERAGEPROC                                       glSampleCoverage;
-
-	/**
-	* @brief void glCompressedTexImage3D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *data );
-	*/
-	PFNGLCOMPRESSEDTEXIMAGE3DPROC                                 glCompressedTexImage3D;
-
-	/**
-	* @brief void glCompressedTexImage2D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *data );
-	*/
-	PFNGLCOMPRESSEDTEXIMAGE2DPROC                                 glCompressedTexImage2D;
-
-	/**
-	* @brief void glCompressedTexImage1D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *data );
-	*/
-	PFNGLCOMPRESSEDTEXIMAGE1DPROC                                 glCompressedTexImage1D;
-
-	/**
-	* @brief void glCompressedTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *data );
-	*/
-	PFNGLCOMPRESSEDTEXSUBIMAGE3DPROC                              glCompressedTexSubImage3D;
-
-	/**
-	* @brief void glCompressedTexSubImage2D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *data );
-	*/
-	PFNGLCOMPRESSEDTEXSUBIMAGE2DPROC                              glCompressedTexSubImage2D;
-
-	/**
-	* @brief void glCompressedTexSubImage1D( GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *data );
-	*/
-	PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC                              glCompressedTexSubImage1D;
-
-	/**
-	* @brief void glGetCompressedTexImage( GLenum target, GLint level, GLvoid *img );
-	*/
-	PFNGLGETCOMPRESSEDTEXIMAGEPROC                                glGetCompressedTexImage;
-
 
 
 
@@ -9486,31 +9589,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glBlendFuncSeparate( GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha );
 	*/
 	PFNGLBLENDFUNCSEPARATEPROC                                    glBlendFuncSeparate;
-
-	/**
-	* @brief void glFogCoordf( GLfloat coord );
-	*/
-	PFNGLFOGCOORDFPROC                                            glFogCoordf;
-
-	/**
-	* @brief void glFogCoordfv( const GLfloat *coord );
-	*/
-	PFNGLFOGCOORDFVPROC                                           glFogCoordfv;
-
-	/**
-	* @brief void glFogCoordd( GLdouble coord );
-	*/
-	PFNGLFOGCOORDDPROC                                            glFogCoordd;
-
-	/**
-	* @brief void glFogCoorddv( const GLdouble *coord );
-	*/
-	PFNGLFOGCOORDDVPROC                                           glFogCoorddv;
-
-	/**
-	* @brief void glFogCoordPointer( GLenum type, GLsizei stride, const GLvoid *pointer );
-	*/
-	PFNGLFOGCOORDPOINTERPROC                                      glFogCoordPointer;
 
 	/**
 	* @brief void glMultiDrawArrays( GLenum mode, GLint *first, GLsizei *count, GLsizei primcount );
@@ -9541,6 +9619,40 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glPointParameteriv( GLenum pname, const GLint *params );
 	*/
 	PFNGLPOINTPARAMETERIVPROC                                     glPointParameteriv;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_VERSION_1_4_DEPRECATED is supported, false otherwise.
+	 */
+	bool isGL_VERSION_1_4_DEPRECATED;
+
+	/**
+	* @brief void glFogCoordf( GLfloat coord );
+	*/
+	PFNGLFOGCOORDFPROC                                            glFogCoordf;
+
+	/**
+	* @brief void glFogCoordfv( const GLfloat *coord );
+	*/
+	PFNGLFOGCOORDFVPROC                                           glFogCoordfv;
+
+	/**
+	* @brief void glFogCoordd( GLdouble coord );
+	*/
+	PFNGLFOGCOORDDPROC                                            glFogCoordd;
+
+	/**
+	* @brief void glFogCoorddv( const GLdouble *coord );
+	*/
+	PFNGLFOGCOORDDVPROC                                           glFogCoorddv;
+
+	/**
+	* @brief void glFogCoordPointer( GLenum type, GLsizei stride, const GLvoid *pointer );
+	*/
+	PFNGLFOGCOORDPOINTERPROC                                      glFogCoordPointer;
 
 	/**
 	* @brief void glSecondaryColor3b( GLbyte red, GLbyte green, GLbyte blue );
@@ -9810,6 +9922,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glGetBufferPointerv( GLenum target, GLenum pname, GLvoid* *params );
 	*/
 	PFNGLGETBUFFERPOINTERVPROC                                    glGetBufferPointerv;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_VERSION_1_5_DEPRECATED is supported, false otherwise.
+	 */
+	bool isGL_VERSION_1_5_DEPRECATED;
 
 
 
@@ -10290,6 +10411,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_VERSION_2_0_DEPRECATED is supported, false otherwise.
+	 */
+	bool isGL_VERSION_2_0_DEPRECATED;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_VERSION_2_1 is supported, false otherwise.
 	 */
 	bool isGL_VERSION_2_1;
@@ -10323,6 +10453,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glUniformMatrix4x3fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
 	*/
 	PFNGLUNIFORMMATRIX4X3FVPROC                                   glUniformMatrix4x3fv;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_VERSION_2_1_DEPRECATED is supported, false otherwise.
+	 */
+	bool isGL_VERSION_2_1_DEPRECATED;
 
 
 
@@ -10407,106 +10546,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glEndConditionalRender( void );
 	*/
 	PFNGLENDCONDITIONALRENDERPROC                                 glEndConditionalRender;
-
-	/**
-	* @brief void glVertexAttribI1i( GLuint index, GLint x );
-	*/
-	PFNGLVERTEXATTRIBI1IPROC                                      glVertexAttribI1i;
-
-	/**
-	* @brief void glVertexAttribI2i( GLuint index, GLint x, GLint y );
-	*/
-	PFNGLVERTEXATTRIBI2IPROC                                      glVertexAttribI2i;
-
-	/**
-	* @brief void glVertexAttribI3i( GLuint index, GLint x, GLint y, GLint z );
-	*/
-	PFNGLVERTEXATTRIBI3IPROC                                      glVertexAttribI3i;
-
-	/**
-	* @brief void glVertexAttribI4i( GLuint index, GLint x, GLint y, GLint z, GLint w );
-	*/
-	PFNGLVERTEXATTRIBI4IPROC                                      glVertexAttribI4i;
-
-	/**
-	* @brief void glVertexAttribI1ui( GLuint index, GLuint x );
-	*/
-	PFNGLVERTEXATTRIBI1UIPROC                                     glVertexAttribI1ui;
-
-	/**
-	* @brief void glVertexAttribI2ui( GLuint index, GLuint x, GLuint y );
-	*/
-	PFNGLVERTEXATTRIBI2UIPROC                                     glVertexAttribI2ui;
-
-	/**
-	* @brief void glVertexAttribI3ui( GLuint index, GLuint x, GLuint y, GLuint z );
-	*/
-	PFNGLVERTEXATTRIBI3UIPROC                                     glVertexAttribI3ui;
-
-	/**
-	* @brief void glVertexAttribI4ui( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
-	*/
-	PFNGLVERTEXATTRIBI4UIPROC                                     glVertexAttribI4ui;
-
-	/**
-	* @brief void glVertexAttribI1iv( GLuint index, const GLint *v );
-	*/
-	PFNGLVERTEXATTRIBI1IVPROC                                     glVertexAttribI1iv;
-
-	/**
-	* @brief void glVertexAttribI2iv( GLuint index, const GLint *v );
-	*/
-	PFNGLVERTEXATTRIBI2IVPROC                                     glVertexAttribI2iv;
-
-	/**
-	* @brief void glVertexAttribI3iv( GLuint index, const GLint *v );
-	*/
-	PFNGLVERTEXATTRIBI3IVPROC                                     glVertexAttribI3iv;
-
-	/**
-	* @brief void glVertexAttribI4iv( GLuint index, const GLint *v );
-	*/
-	PFNGLVERTEXATTRIBI4IVPROC                                     glVertexAttribI4iv;
-
-	/**
-	* @brief void glVertexAttribI1uiv( GLuint index, const GLuint *v );
-	*/
-	PFNGLVERTEXATTRIBI1UIVPROC                                    glVertexAttribI1uiv;
-
-	/**
-	* @brief void glVertexAttribI2uiv( GLuint index, const GLuint *v );
-	*/
-	PFNGLVERTEXATTRIBI2UIVPROC                                    glVertexAttribI2uiv;
-
-	/**
-	* @brief void glVertexAttribI3uiv( GLuint index, const GLuint *v );
-	*/
-	PFNGLVERTEXATTRIBI3UIVPROC                                    glVertexAttribI3uiv;
-
-	/**
-	* @brief void glVertexAttribI4uiv( GLuint index, const GLuint *v );
-	*/
-	PFNGLVERTEXATTRIBI4UIVPROC                                    glVertexAttribI4uiv;
-
-	/**
-	* @brief void glVertexAttribI4bv( GLuint index, const GLbyte *v );
-	*/
-	PFNGLVERTEXATTRIBI4BVPROC                                     glVertexAttribI4bv;
-
-	/**
-	* @brief void glVertexAttribI4sv( GLuint index, const GLshort *v );
-	*/
-	PFNGLVERTEXATTRIBI4SVPROC                                     glVertexAttribI4sv;
-
-	/**
-	* @brief void glVertexAttribI4ubv( GLuint index, const GLubyte *v );
-	*/
-	PFNGLVERTEXATTRIBI4UBVPROC                                    glVertexAttribI4ubv;
-
-	/**
-	* @brief void glVertexAttribI4usv( GLuint index, const GLushort *v );
-	*/
-	PFNGLVERTEXATTRIBI4USVPROC                                    glVertexAttribI4usv;
 
 	/**
 	* @brief void glVertexAttribIPointer( GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
@@ -10622,6 +10661,144 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief const GLubyte * glGetStringi( GLenum name, GLuint index );
 	*/
 	PFNGLGETSTRINGIPROC                                           glGetStringi;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_VERSION_3_0_DEPRECATED is supported, false otherwise.
+	 */
+	bool isGL_VERSION_3_0_DEPRECATED;
+
+	/**
+	* @brief void glVertexAttribI1i( GLuint index, GLint x );
+	*/
+	PFNGLVERTEXATTRIBI1IPROC                                      glVertexAttribI1i;
+
+	/**
+	* @brief void glVertexAttribI2i( GLuint index, GLint x, GLint y );
+	*/
+	PFNGLVERTEXATTRIBI2IPROC                                      glVertexAttribI2i;
+
+	/**
+	* @brief void glVertexAttribI3i( GLuint index, GLint x, GLint y, GLint z );
+	*/
+	PFNGLVERTEXATTRIBI3IPROC                                      glVertexAttribI3i;
+
+	/**
+	* @brief void glVertexAttribI4i( GLuint index, GLint x, GLint y, GLint z, GLint w );
+	*/
+	PFNGLVERTEXATTRIBI4IPROC                                      glVertexAttribI4i;
+
+	/**
+	* @brief void glVertexAttribI1ui( GLuint index, GLuint x );
+	*/
+	PFNGLVERTEXATTRIBI1UIPROC                                     glVertexAttribI1ui;
+
+	/**
+	* @brief void glVertexAttribI2ui( GLuint index, GLuint x, GLuint y );
+	*/
+	PFNGLVERTEXATTRIBI2UIPROC                                     glVertexAttribI2ui;
+
+	/**
+	* @brief void glVertexAttribI3ui( GLuint index, GLuint x, GLuint y, GLuint z );
+	*/
+	PFNGLVERTEXATTRIBI3UIPROC                                     glVertexAttribI3ui;
+
+	/**
+	* @brief void glVertexAttribI4ui( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+	*/
+	PFNGLVERTEXATTRIBI4UIPROC                                     glVertexAttribI4ui;
+
+	/**
+	* @brief void glVertexAttribI1iv( GLuint index, const GLint *v );
+	*/
+	PFNGLVERTEXATTRIBI1IVPROC                                     glVertexAttribI1iv;
+
+	/**
+	* @brief void glVertexAttribI2iv( GLuint index, const GLint *v );
+	*/
+	PFNGLVERTEXATTRIBI2IVPROC                                     glVertexAttribI2iv;
+
+	/**
+	* @brief void glVertexAttribI3iv( GLuint index, const GLint *v );
+	*/
+	PFNGLVERTEXATTRIBI3IVPROC                                     glVertexAttribI3iv;
+
+	/**
+	* @brief void glVertexAttribI4iv( GLuint index, const GLint *v );
+	*/
+	PFNGLVERTEXATTRIBI4IVPROC                                     glVertexAttribI4iv;
+
+	/**
+	* @brief void glVertexAttribI1uiv( GLuint index, const GLuint *v );
+	*/
+	PFNGLVERTEXATTRIBI1UIVPROC                                    glVertexAttribI1uiv;
+
+	/**
+	* @brief void glVertexAttribI2uiv( GLuint index, const GLuint *v );
+	*/
+	PFNGLVERTEXATTRIBI2UIVPROC                                    glVertexAttribI2uiv;
+
+	/**
+	* @brief void glVertexAttribI3uiv( GLuint index, const GLuint *v );
+	*/
+	PFNGLVERTEXATTRIBI3UIVPROC                                    glVertexAttribI3uiv;
+
+	/**
+	* @brief void glVertexAttribI4uiv( GLuint index, const GLuint *v );
+	*/
+	PFNGLVERTEXATTRIBI4UIVPROC                                    glVertexAttribI4uiv;
+
+	/**
+	* @brief void glVertexAttribI4bv( GLuint index, const GLbyte *v );
+	*/
+	PFNGLVERTEXATTRIBI4BVPROC                                     glVertexAttribI4bv;
+
+	/**
+	* @brief void glVertexAttribI4sv( GLuint index, const GLshort *v );
+	*/
+	PFNGLVERTEXATTRIBI4SVPROC                                     glVertexAttribI4sv;
+
+	/**
+	* @brief void glVertexAttribI4ubv( GLuint index, const GLubyte *v );
+	*/
+	PFNGLVERTEXATTRIBI4UBVPROC                                    glVertexAttribI4ubv;
+
+	/**
+	* @brief void glVertexAttribI4usv( GLuint index, const GLushort *v );
+	*/
+	PFNGLVERTEXATTRIBI4USVPROC                                    glVertexAttribI4usv;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_VERSION_3_1 is supported, false otherwise.
+	 */
+	bool isGL_VERSION_3_1;
+
+	/**
+	* @brief void glDrawArraysInstanced( GLenum mode, GLint first, GLsizei count, GLsizei primcount );
+	*/
+	PFNGLDRAWARRAYSINSTANCEDPROC                                  glDrawArraysInstanced;
+
+	/**
+	* @brief void glDrawElementsInstanced( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount );
+	*/
+	PFNGLDRAWELEMENTSINSTANCEDPROC                                glDrawElementsInstanced;
+
+	/**
+	* @brief void glTexBuffer( GLenum target, GLenum internalformat, GLuint buffer );
+	*/
+	PFNGLTEXBUFFERPROC                                            glTexBuffer;
+
+	/**
+	* @brief void glPrimitiveRestartIndex( GLuint index );
+	*/
+	PFNGLPRIMITIVERESTARTINDEXPROC                                glPrimitiveRestartIndex;
 
 
 
