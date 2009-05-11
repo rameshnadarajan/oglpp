@@ -1,4 +1,4 @@
-// This file was generated at Thu Apr 30 13:03:08 2009 with gle, please do not modify.
+// This file was generated at Mon May 11 10:51:03 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -8414,11 +8414,6 @@ GLE_API void glGetVideoi64vNV( GLuint video_slot, GLenum pname, GLint64EXT *para
  * @brief void glGetVideoui64vNV( GLuint video_slot, GLenum pname, GLuint64EXT *params );
  */
 GLE_API void glGetVideoui64vNV( GLuint video_slot, GLenum pname, GLuint64EXT *params );
-
-/**
- * @brief void glVideoParameterivNV( GLuint video_slot, GLenum pname, const GLint *params );
- */
-GLE_API void glVideoParameterivNV( GLuint video_slot, GLenum pname, const GLint *params );
 
 //@}
 

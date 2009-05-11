@@ -1,4 +1,4 @@
-// This file was generated at Thu Apr 30 13:03:08 2009 with gle, please do not modify.
+// This file was generated at Mon May 11 10:51:03 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,9 +17,9 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Thu Apr 30 13:03:08 2009 with gle, please do not modify.
+ * - Stamp = // This file was generated at Mon May 11 10:51:03 2009 with gle, please do not modify.
  * - Number of tokens					= 0
- * - Number of functions				= 1523
+ * - Number of functions				= 1522
  * - Number of extensions found(in headers)	= 333
  * - Number of extensions in OpenGL registry	= 369
  */
@@ -6941,11 +6941,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glGetVideoui64vNV( GLuint video_slot, GLenum pname, GLuint64EXT *params );
 	*/
 	PFNGLGETVIDEOUI64VNVPROC                                      glGetVideoui64vNV;
-
-	/**
-	* @brief void glVideoParameterivNV( GLuint video_slot, GLenum pname, const GLint *params );
-	*/
-	PFNGLVIDEOPARAMETERIVNVPROC                                   glVideoParameterivNV;
 
 
 

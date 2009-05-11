@@ -1,4 +1,4 @@
-// This file was generated at Thu Apr 30 13:03:08 2009 with gle, please do not modify.
+// This file was generated at Mon May 11 10:51:03 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -18,7 +18,7 @@ namespace gle
 
 
 const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 333;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 1523;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 1522;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS ) :
@@ -1946,7 +1946,6 @@ void OpenGLExtensionsGen::clear()
 	glGetVideouivNV                                               = 0;
 	glGetVideoi64vNV                                              = 0;
 	glGetVideoui64vNV                                             = 0;
-	glVideoParameterivNV                                          = 0;
 
 
 	// ****** GL_NV_primitive_restart ******
@@ -13658,7 +13657,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	
 	isGL_NV_present_video = isExtensionSupported("GL_NV_present_video");
 	
-	localSupportedProcCount		= 7;
+	localSupportedProcCount		= 6;
 	localInitializedProcCount	= 0;
 	
 	if ( isGL_NV_present_video ) // || isSEDEnable()
@@ -13681,9 +13680,6 @@ void OpenGLExtensionsGen::initializeGL_NV()
 
 		glGetVideoui64vNV = (PFNGLGETVIDEOUI64VNVPROC) getExtensionPtr( "glGetVideoui64vNV" );
 		if ( glGetVideoui64vNV != 0 )	++localInitializedProcCount;
-
-		glVideoParameterivNV = (PFNGLVIDEOPARAMETERIVNVPROC) getExtensionPtr( "glVideoParameterivNV" );
-		if ( glVideoParameterivNV != 0 )	++localInitializedProcCount;
 	} // if ( isGL_NV_present_video || isSEDEnable() )
 	
 	if ( isGL_NV_present_video )
