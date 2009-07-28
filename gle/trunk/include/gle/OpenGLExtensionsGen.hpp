@@ -1,6 +1,6 @@
-// This file was generated at Mon May 11 10:51:03 2009 with gle, please do not modify.
+// This file was generated at Wed Jun 10 14:51:44 2009 with gle, please do not modify.
 
-// GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -17,10 +17,10 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Mon May 11 10:51:03 2009 with gle, please do not modify.
+ * - Stamp = // This file was generated at Wed Jun 10 14:51:44 2009 with gle, please do not modify.
  * - Number of tokens					= 0
- * - Number of functions				= 1522
- * - Number of extensions found(in headers)	= 333
+ * - Number of functions				= 1625
+ * - Number of extensions found(in headers)	= 371
  * - Number of extensions in OpenGL registry	= 369
  */
 
@@ -204,6 +204,51 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Initialize the Not_in_OpenGL_Extension_Registry extension group.
 	 */
 	void initializeNot_in_OpenGL_Extension_Registry();
+
+	/** 
+	 * @brief Initialize the WGL_3DFX extension group.
+	 */
+	void initializeWGL_3DFX();
+
+	/** 
+	 * @brief Initialize the WGL_3DL extension group.
+	 */
+	void initializeWGL_3DL();
+
+	/** 
+	 * @brief Initialize the WGL_AMD extension group.
+	 */
+	void initializeWGL_AMD();
+
+	/** 
+	 * @brief Initialize the WGL_ARB extension group.
+	 */
+	void initializeWGL_ARB();
+
+	/** 
+	 * @brief Initialize the WGL_ATI extension group.
+	 */
+	void initializeWGL_ATI();
+
+	/** 
+	 * @brief Initialize the WGL_EXT extension group.
+	 */
+	void initializeWGL_EXT();
+
+	/** 
+	 * @brief Initialize the WGL_I3D extension group.
+	 */
+	void initializeWGL_I3D();
+
+	/** 
+	 * @brief Initialize the WGL_NV extension group.
+	 */
+	void initializeWGL_NV();
+
+	/** 
+	 * @brief Initialize the WGL_OML extension group.
+	 */
+	void initializeWGL_OML();
 
 
 
@@ -10813,6 +10858,1129 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 */
 	bool isGL_WIN_specular_fog;
 
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_3DFX_multisample is supported, false otherwise.
+	 */
+	bool isWGL_3DFX_multisample;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_3DL_stereo_control is supported, false otherwise.
+	 */
+	bool isWGL_3DL_stereo_control;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_AMD_gpu_association is supported, false otherwise.
+	 */
+	bool isWGL_AMD_gpu_association;
+
+	/**
+	* @brief UINT  wglGetGPUIDsAMD( UINT maxCount, UINT *ids );
+	*/
+	PFNWGLGETGPUIDSAMDPROC                                        wglGetGPUIDsAMD;
+
+	/**
+	* @brief INT  wglGetGPUInfoAMD( UINT id, int property, GLenum dataType, UINT size, void *data );
+	*/
+	PFNWGLGETGPUINFOAMDPROC                                       wglGetGPUInfoAMD;
+
+	/**
+	* @brief UINT  wglGetContextGPUIDAMD( HGLRC hglrc );
+	*/
+	PFNWGLGETCONTEXTGPUIDAMDPROC                                  wglGetContextGPUIDAMD;
+
+	/**
+	* @brief HGLRC  wglCreateAssociatedContextAMD( UINT id );
+	*/
+	PFNWGLCREATEASSOCIATEDCONTEXTAMDPROC                          wglCreateAssociatedContextAMD;
+
+	/**
+	* @brief HGLRC  wglCreateAssociatedContextAttribsAMD( UINT id, HGLRC hShareContext, const int *attribList );
+	*/
+	PFNWGLCREATEASSOCIATEDCONTEXTATTRIBSAMDPROC                   wglCreateAssociatedContextAttribsAMD;
+
+	/**
+	* @brief BOOL  wglDeleteAssociatedContextAMD( HGLRC hglrc );
+	*/
+	PFNWGLDELETEASSOCIATEDCONTEXTAMDPROC                          wglDeleteAssociatedContextAMD;
+
+	/**
+	* @brief BOOL  wglMakeAssociatedContextCurrentAMD( HGLRC hglrc );
+	*/
+	PFNWGLMAKEASSOCIATEDCONTEXTCURRENTAMDPROC                     wglMakeAssociatedContextCurrentAMD;
+
+	/**
+	* @brief HGLRC  wglGetCurrentAssociatedContextAMD( void );
+	*/
+	PFNWGLGETCURRENTASSOCIATEDCONTEXTAMDPROC                      wglGetCurrentAssociatedContextAMD;
+
+	/**
+	* @brief VOID  wglBlitContextFramebufferAMD( HGLRC dstCtx, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter );
+	*/
+	PFNWGLBLITCONTEXTFRAMEBUFFERAMDPROC                           wglBlitContextFramebufferAMD;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_ARB_buffer_region is supported, false otherwise.
+	 */
+	bool isWGL_ARB_buffer_region;
+
+	/**
+	* @brief HANDLE  wglCreateBufferRegionARB( HDC hDC, int iLayerPlane, UINT uType );
+	*/
+	PFNWGLCREATEBUFFERREGIONARBPROC                               wglCreateBufferRegionARB;
+
+	/**
+	* @brief VOID  wglDeleteBufferRegionARB( HANDLE hRegion );
+	*/
+	PFNWGLDELETEBUFFERREGIONARBPROC                               wglDeleteBufferRegionARB;
+
+	/**
+	* @brief BOOL  wglSaveBufferRegionARB( HANDLE hRegion, int x, int y, int width, int height );
+	*/
+	PFNWGLSAVEBUFFERREGIONARBPROC                                 wglSaveBufferRegionARB;
+
+	/**
+	* @brief BOOL  wglRestoreBufferRegionARB( HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc );
+	*/
+	PFNWGLRESTOREBUFFERREGIONARBPROC                              wglRestoreBufferRegionARB;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_ARB_create_context is supported, false otherwise.
+	 */
+	bool isWGL_ARB_create_context;
+
+	/**
+	* @brief HGLRC  wglCreateContextAttribsARB( HDC hDC, HGLRC hShareContext, const int *attribList );
+	*/
+	PFNWGLCREATECONTEXTATTRIBSARBPROC                             wglCreateContextAttribsARB;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_ARB_extensions_string is supported, false otherwise.
+	 */
+	bool isWGL_ARB_extensions_string;
+
+	/**
+	* @brief const char *  wglGetExtensionsStringARB( HDC hdc );
+	*/
+	PFNWGLGETEXTENSIONSSTRINGARBPROC                              wglGetExtensionsStringARB;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_ARB_make_current_read is supported, false otherwise.
+	 */
+	bool isWGL_ARB_make_current_read;
+
+	/**
+	* @brief BOOL  wglMakeContextCurrentARB( HDC hDrawDC, HDC hReadDC, HGLRC hglrc );
+	*/
+	PFNWGLMAKECONTEXTCURRENTARBPROC                               wglMakeContextCurrentARB;
+
+	/**
+	* @brief HDC  wglGetCurrentReadDCARB( void );
+	*/
+	PFNWGLGETCURRENTREADDCARBPROC                                 wglGetCurrentReadDCARB;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_ARB_multisample is supported, false otherwise.
+	 */
+	bool isWGL_ARB_multisample;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_ARB_pbuffer is supported, false otherwise.
+	 */
+	bool isWGL_ARB_pbuffer;
+
+	/**
+	* @brief HPBUFFERARB  wglCreatePbufferARB( HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList );
+	*/
+	PFNWGLCREATEPBUFFERARBPROC                                    wglCreatePbufferARB;
+
+	/**
+	* @brief HDC  wglGetPbufferDCARB( HPBUFFERARB hPbuffer );
+	*/
+	PFNWGLGETPBUFFERDCARBPROC                                     wglGetPbufferDCARB;
+
+	/**
+	* @brief int  wglReleasePbufferDCARB( HPBUFFERARB hPbuffer, HDC hDC );
+	*/
+	PFNWGLRELEASEPBUFFERDCARBPROC                                 wglReleasePbufferDCARB;
+
+	/**
+	* @brief BOOL  wglDestroyPbufferARB( HPBUFFERARB hPbuffer );
+	*/
+	PFNWGLDESTROYPBUFFERARBPROC                                   wglDestroyPbufferARB;
+
+	/**
+	* @brief BOOL  wglQueryPbufferARB( HPBUFFERARB hPbuffer, int iAttribute, int *piValue );
+	*/
+	PFNWGLQUERYPBUFFERARBPROC                                     wglQueryPbufferARB;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_ARB_pixel_format is supported, false otherwise.
+	 */
+	bool isWGL_ARB_pixel_format;
+
+	/**
+	* @brief BOOL  wglGetPixelFormatAttribivARB( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, int *piValues );
+	*/
+	PFNWGLGETPIXELFORMATATTRIBIVARBPROC                           wglGetPixelFormatAttribivARB;
+
+	/**
+	* @brief BOOL  wglGetPixelFormatAttribfvARB( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, FLOAT *pfValues );
+	*/
+	PFNWGLGETPIXELFORMATATTRIBFVARBPROC                           wglGetPixelFormatAttribfvARB;
+
+	/**
+	* @brief BOOL  wglChoosePixelFormatARB( HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats );
+	*/
+	PFNWGLCHOOSEPIXELFORMATARBPROC                                wglChoosePixelFormatARB;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_ARB_pixel_format_float is supported, false otherwise.
+	 */
+	bool isWGL_ARB_pixel_format_float;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_ARB_render_texture is supported, false otherwise.
+	 */
+	bool isWGL_ARB_render_texture;
+
+	/**
+	* @brief BOOL  wglBindTexImageARB( HPBUFFERARB hPbuffer, int iBuffer );
+	*/
+	PFNWGLBINDTEXIMAGEARBPROC                                     wglBindTexImageARB;
+
+	/**
+	* @brief BOOL  wglReleaseTexImageARB( HPBUFFERARB hPbuffer, int iBuffer );
+	*/
+	PFNWGLRELEASETEXIMAGEARBPROC                                  wglReleaseTexImageARB;
+
+	/**
+	* @brief BOOL  wglSetPbufferAttribARB( HPBUFFERARB hPbuffer, const int *piAttribList );
+	*/
+	PFNWGLSETPBUFFERATTRIBARBPROC                                 wglSetPbufferAttribARB;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_ATI_pixel_format_float is supported, false otherwise.
+	 */
+	bool isWGL_ATI_pixel_format_float;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_EXT_depth_float is supported, false otherwise.
+	 */
+	bool isWGL_EXT_depth_float;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_EXT_display_color_table is supported, false otherwise.
+	 */
+	bool isWGL_EXT_display_color_table;
+
+	/**
+	* @brief GLboolean  wglCreateDisplayColorTableEXT( GLushort id );
+	*/
+	PFNWGLCREATEDISPLAYCOLORTABLEEXTPROC                          wglCreateDisplayColorTableEXT;
+
+	/**
+	* @brief GLboolean  wglLoadDisplayColorTableEXT( const GLushort *table, GLuint length );
+	*/
+	PFNWGLLOADDISPLAYCOLORTABLEEXTPROC                            wglLoadDisplayColorTableEXT;
+
+	/**
+	* @brief GLboolean  wglBindDisplayColorTableEXT( GLushort id );
+	*/
+	PFNWGLBINDDISPLAYCOLORTABLEEXTPROC                            wglBindDisplayColorTableEXT;
+
+	/**
+	* @brief VOID  wglDestroyDisplayColorTableEXT( GLushort id );
+	*/
+	PFNWGLDESTROYDISPLAYCOLORTABLEEXTPROC                         wglDestroyDisplayColorTableEXT;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_EXT_extensions_string is supported, false otherwise.
+	 */
+	bool isWGL_EXT_extensions_string;
+
+	/**
+	* @brief const char *  wglGetExtensionsStringEXT( void );
+	*/
+	PFNWGLGETEXTENSIONSSTRINGEXTPROC                              wglGetExtensionsStringEXT;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_EXT_framebuffer_sRGB is supported, false otherwise.
+	 */
+	bool isWGL_EXT_framebuffer_sRGB;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_EXT_make_current_read is supported, false otherwise.
+	 */
+	bool isWGL_EXT_make_current_read;
+
+	/**
+	* @brief BOOL  wglMakeContextCurrentEXT( HDC hDrawDC, HDC hReadDC, HGLRC hglrc );
+	*/
+	PFNWGLMAKECONTEXTCURRENTEXTPROC                               wglMakeContextCurrentEXT;
+
+	/**
+	* @brief HDC  wglGetCurrentReadDCEXT( void );
+	*/
+	PFNWGLGETCURRENTREADDCEXTPROC                                 wglGetCurrentReadDCEXT;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_EXT_multisample is supported, false otherwise.
+	 */
+	bool isWGL_EXT_multisample;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_EXT_pbuffer is supported, false otherwise.
+	 */
+	bool isWGL_EXT_pbuffer;
+
+	/**
+	* @brief HPBUFFEREXT  wglCreatePbufferEXT( HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList );
+	*/
+	PFNWGLCREATEPBUFFEREXTPROC                                    wglCreatePbufferEXT;
+
+	/**
+	* @brief HDC  wglGetPbufferDCEXT( HPBUFFEREXT hPbuffer );
+	*/
+	PFNWGLGETPBUFFERDCEXTPROC                                     wglGetPbufferDCEXT;
+
+	/**
+	* @brief int  wglReleasePbufferDCEXT( HPBUFFEREXT hPbuffer, HDC hDC );
+	*/
+	PFNWGLRELEASEPBUFFERDCEXTPROC                                 wglReleasePbufferDCEXT;
+
+	/**
+	* @brief BOOL  wglDestroyPbufferEXT( HPBUFFEREXT hPbuffer );
+	*/
+	PFNWGLDESTROYPBUFFEREXTPROC                                   wglDestroyPbufferEXT;
+
+	/**
+	* @brief BOOL  wglQueryPbufferEXT( HPBUFFEREXT hPbuffer, int iAttribute, int *piValue );
+	*/
+	PFNWGLQUERYPBUFFEREXTPROC                                     wglQueryPbufferEXT;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_EXT_pixel_format is supported, false otherwise.
+	 */
+	bool isWGL_EXT_pixel_format;
+
+	/**
+	* @brief BOOL  wglGetPixelFormatAttribivEXT( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, int *piValues );
+	*/
+	PFNWGLGETPIXELFORMATATTRIBIVEXTPROC                           wglGetPixelFormatAttribivEXT;
+
+	/**
+	* @brief BOOL  wglGetPixelFormatAttribfvEXT( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, FLOAT *pfValues );
+	*/
+	PFNWGLGETPIXELFORMATATTRIBFVEXTPROC                           wglGetPixelFormatAttribfvEXT;
+
+	/**
+	* @brief BOOL  wglChoosePixelFormatEXT( HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats );
+	*/
+	PFNWGLCHOOSEPIXELFORMATEXTPROC                                wglChoosePixelFormatEXT;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_EXT_pixel_format_packed_float is supported, false otherwise.
+	 */
+	bool isWGL_EXT_pixel_format_packed_float;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_EXT_swap_control is supported, false otherwise.
+	 */
+	bool isWGL_EXT_swap_control;
+
+	/**
+	* @brief BOOL  wglSwapIntervalEXT( int interval );
+	*/
+	PFNWGLSWAPINTERVALEXTPROC                                     wglSwapIntervalEXT;
+
+	/**
+	* @brief int  wglGetSwapIntervalEXT( void );
+	*/
+	PFNWGLGETSWAPINTERVALEXTPROC                                  wglGetSwapIntervalEXT;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_I3D_digital_video_control is supported, false otherwise.
+	 */
+	bool isWGL_I3D_digital_video_control;
+
+	/**
+	* @brief BOOL  wglGetDigitalVideoParametersI3D( HDC hDC, int iAttribute, int *piValue );
+	*/
+	PFNWGLGETDIGITALVIDEOPARAMETERSI3DPROC                        wglGetDigitalVideoParametersI3D;
+
+	/**
+	* @brief BOOL  wglSetDigitalVideoParametersI3D( HDC hDC, int iAttribute, const int *piValue );
+	*/
+	PFNWGLSETDIGITALVIDEOPARAMETERSI3DPROC                        wglSetDigitalVideoParametersI3D;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_I3D_gamma is supported, false otherwise.
+	 */
+	bool isWGL_I3D_gamma;
+
+	/**
+	* @brief BOOL  wglGetGammaTableParametersI3D( HDC hDC, int iAttribute, int *piValue );
+	*/
+	PFNWGLGETGAMMATABLEPARAMETERSI3DPROC                          wglGetGammaTableParametersI3D;
+
+	/**
+	* @brief BOOL  wglSetGammaTableParametersI3D( HDC hDC, int iAttribute, const int *piValue );
+	*/
+	PFNWGLSETGAMMATABLEPARAMETERSI3DPROC                          wglSetGammaTableParametersI3D;
+
+	/**
+	* @brief BOOL  wglGetGammaTableI3D( HDC hDC, int iEntries, USHORT *puRed, USHORT *puGreen, USHORT *puBlue );
+	*/
+	PFNWGLGETGAMMATABLEI3DPROC                                    wglGetGammaTableI3D;
+
+	/**
+	* @brief BOOL  wglSetGammaTableI3D( HDC hDC, int iEntries, const USHORT *puRed, const USHORT *puGreen, const USHORT *puBlue );
+	*/
+	PFNWGLSETGAMMATABLEI3DPROC                                    wglSetGammaTableI3D;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_I3D_genlock is supported, false otherwise.
+	 */
+	bool isWGL_I3D_genlock;
+
+	/**
+	* @brief BOOL  wglEnableGenlockI3D( HDC hDC );
+	*/
+	PFNWGLENABLEGENLOCKI3DPROC                                    wglEnableGenlockI3D;
+
+	/**
+	* @brief BOOL  wglDisableGenlockI3D( HDC hDC );
+	*/
+	PFNWGLDISABLEGENLOCKI3DPROC                                   wglDisableGenlockI3D;
+
+	/**
+	* @brief BOOL  wglIsEnabledGenlockI3D( HDC hDC, BOOL *pFlag );
+	*/
+	PFNWGLISENABLEDGENLOCKI3DPROC                                 wglIsEnabledGenlockI3D;
+
+	/**
+	* @brief BOOL  wglGenlockSourceI3D( HDC hDC, UINT uSource );
+	*/
+	PFNWGLGENLOCKSOURCEI3DPROC                                    wglGenlockSourceI3D;
+
+	/**
+	* @brief BOOL  wglGetGenlockSourceI3D( HDC hDC, UINT *uSource );
+	*/
+	PFNWGLGETGENLOCKSOURCEI3DPROC                                 wglGetGenlockSourceI3D;
+
+	/**
+	* @brief BOOL  wglGenlockSourceEdgeI3D( HDC hDC, UINT uEdge );
+	*/
+	PFNWGLGENLOCKSOURCEEDGEI3DPROC                                wglGenlockSourceEdgeI3D;
+
+	/**
+	* @brief BOOL  wglGetGenlockSourceEdgeI3D( HDC hDC, UINT *uEdge );
+	*/
+	PFNWGLGETGENLOCKSOURCEEDGEI3DPROC                             wglGetGenlockSourceEdgeI3D;
+
+	/**
+	* @brief BOOL  wglGenlockSampleRateI3D( HDC hDC, UINT uRate );
+	*/
+	PFNWGLGENLOCKSAMPLERATEI3DPROC                                wglGenlockSampleRateI3D;
+
+	/**
+	* @brief BOOL  wglGetGenlockSampleRateI3D( HDC hDC, UINT *uRate );
+	*/
+	PFNWGLGETGENLOCKSAMPLERATEI3DPROC                             wglGetGenlockSampleRateI3D;
+
+	/**
+	* @brief BOOL  wglGenlockSourceDelayI3D( HDC hDC, UINT uDelay );
+	*/
+	PFNWGLGENLOCKSOURCEDELAYI3DPROC                               wglGenlockSourceDelayI3D;
+
+	/**
+	* @brief BOOL  wglGetGenlockSourceDelayI3D( HDC hDC, UINT *uDelay );
+	*/
+	PFNWGLGETGENLOCKSOURCEDELAYI3DPROC                            wglGetGenlockSourceDelayI3D;
+
+	/**
+	* @brief BOOL  wglQueryGenlockMaxSourceDelayI3D( HDC hDC, UINT *uMaxLineDelay, UINT *uMaxPixelDelay );
+	*/
+	PFNWGLQUERYGENLOCKMAXSOURCEDELAYI3DPROC                       wglQueryGenlockMaxSourceDelayI3D;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_I3D_image_buffer is supported, false otherwise.
+	 */
+	bool isWGL_I3D_image_buffer;
+
+	/**
+	* @brief LPVOID  wglCreateImageBufferI3D( HDC hDC, DWORD dwSize, UINT uFlags );
+	*/
+	PFNWGLCREATEIMAGEBUFFERI3DPROC                                wglCreateImageBufferI3D;
+
+	/**
+	* @brief BOOL  wglDestroyImageBufferI3D( HDC hDC, LPVOID pAddress );
+	*/
+	PFNWGLDESTROYIMAGEBUFFERI3DPROC                               wglDestroyImageBufferI3D;
+
+	/**
+	* @brief BOOL  wglAssociateImageBufferEventsI3D( HDC hDC, const HANDLE *pEvent, const LPVOID *pAddress, const DWORD *pSize, UINT count );
+	*/
+	PFNWGLASSOCIATEIMAGEBUFFEREVENTSI3DPROC                       wglAssociateImageBufferEventsI3D;
+
+	/**
+	* @brief BOOL  wglReleaseImageBufferEventsI3D( HDC hDC, const LPVOID *pAddress, UINT count );
+	*/
+	PFNWGLRELEASEIMAGEBUFFEREVENTSI3DPROC                         wglReleaseImageBufferEventsI3D;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_I3D_swap_frame_lock is supported, false otherwise.
+	 */
+	bool isWGL_I3D_swap_frame_lock;
+
+	/**
+	* @brief BOOL  wglEnableFrameLockI3D( void );
+	*/
+	PFNWGLENABLEFRAMELOCKI3DPROC                                  wglEnableFrameLockI3D;
+
+	/**
+	* @brief BOOL  wglDisableFrameLockI3D( void );
+	*/
+	PFNWGLDISABLEFRAMELOCKI3DPROC                                 wglDisableFrameLockI3D;
+
+	/**
+	* @brief BOOL  wglIsEnabledFrameLockI3D( BOOL *pFlag );
+	*/
+	PFNWGLISENABLEDFRAMELOCKI3DPROC                               wglIsEnabledFrameLockI3D;
+
+	/**
+	* @brief BOOL  wglQueryFrameLockMasterI3D( BOOL *pFlag );
+	*/
+	PFNWGLQUERYFRAMELOCKMASTERI3DPROC                             wglQueryFrameLockMasterI3D;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_I3D_swap_frame_usage is supported, false otherwise.
+	 */
+	bool isWGL_I3D_swap_frame_usage;
+
+	/**
+	* @brief BOOL  wglGetFrameUsageI3D( float *pUsage );
+	*/
+	PFNWGLGETFRAMEUSAGEI3DPROC                                    wglGetFrameUsageI3D;
+
+	/**
+	* @brief BOOL  wglBeginFrameTrackingI3D( void );
+	*/
+	PFNWGLBEGINFRAMETRACKINGI3DPROC                               wglBeginFrameTrackingI3D;
+
+	/**
+	* @brief BOOL  wglEndFrameTrackingI3D( void );
+	*/
+	PFNWGLENDFRAMETRACKINGI3DPROC                                 wglEndFrameTrackingI3D;
+
+	/**
+	* @brief BOOL  wglQueryFrameTrackingI3D( DWORD *pFrameCount, DWORD *pMissedFrames, float *pLastMissedUsage );
+	*/
+	PFNWGLQUERYFRAMETRACKINGI3DPROC                               wglQueryFrameTrackingI3D;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_NV_float_buffer is supported, false otherwise.
+	 */
+	bool isWGL_NV_float_buffer;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_NV_gpu_affinity is supported, false otherwise.
+	 */
+	bool isWGL_NV_gpu_affinity;
+
+	/**
+	* @brief BOOL  wglEnumGpusNV( UINT iGpuIndex, HGPUNV *phGpu );
+	*/
+	PFNWGLENUMGPUSNVPROC                                          wglEnumGpusNV;
+
+	/**
+	* @brief BOOL  wglEnumGpuDevicesNV( HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice );
+	*/
+	PFNWGLENUMGPUDEVICESNVPROC                                    wglEnumGpuDevicesNV;
+
+	/**
+	* @brief HDC  wglCreateAffinityDCNV( const HGPUNV *phGpuList );
+	*/
+	PFNWGLCREATEAFFINITYDCNVPROC                                  wglCreateAffinityDCNV;
+
+	/**
+	* @brief BOOL  wglEnumGpusFromAffinityDCNV( HDC hAffinityDC, UINT iGpuIndex, HGPUNV *hGpu );
+	*/
+	PFNWGLENUMGPUSFROMAFFINITYDCNVPROC                            wglEnumGpusFromAffinityDCNV;
+
+	/**
+	* @brief BOOL  wglDeleteDCNV( HDC hdc );
+	*/
+	PFNWGLDELETEDCNVPROC                                          wglDeleteDCNV;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_NV_present_video is supported, false otherwise.
+	 */
+	bool isWGL_NV_present_video;
+
+	/**
+	* @brief int  wglEnumerateVideoDevicesNV( HDC hDC, HVIDEOOUTPUTDEVICENV *phDeviceList );
+	*/
+	PFNWGLENUMERATEVIDEODEVICESNVPROC                             wglEnumerateVideoDevicesNV;
+
+	/**
+	* @brief BOOL  wglBindVideoDeviceNV( HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, const int *piAttribList );
+	*/
+	PFNWGLBINDVIDEODEVICENVPROC                                   wglBindVideoDeviceNV;
+
+	/**
+	* @brief BOOL  wglQueryCurrentContextNV( int iAttribute, int *piValue );
+	*/
+	PFNWGLQUERYCURRENTCONTEXTNVPROC                               wglQueryCurrentContextNV;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_NV_render_depth_texture is supported, false otherwise.
+	 */
+	bool isWGL_NV_render_depth_texture;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_NV_render_texture_rectangle is supported, false otherwise.
+	 */
+	bool isWGL_NV_render_texture_rectangle;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_NV_swap_group is supported, false otherwise.
+	 */
+	bool isWGL_NV_swap_group;
+
+	/**
+	* @brief BOOL  wglJoinSwapGroupNV( HDC hDC, GLuint group );
+	*/
+	PFNWGLJOINSWAPGROUPNVPROC                                     wglJoinSwapGroupNV;
+
+	/**
+	* @brief BOOL  wglBindSwapBarrierNV( GLuint group, GLuint barrier );
+	*/
+	PFNWGLBINDSWAPBARRIERNVPROC                                   wglBindSwapBarrierNV;
+
+	/**
+	* @brief BOOL  wglQuerySwapGroupNV( HDC hDC, GLuint *group, GLuint *barrier );
+	*/
+	PFNWGLQUERYSWAPGROUPNVPROC                                    wglQuerySwapGroupNV;
+
+	/**
+	* @brief BOOL  wglQueryMaxSwapGroupsNV( HDC hDC, GLuint *maxGroups, GLuint *maxBarriers );
+	*/
+	PFNWGLQUERYMAXSWAPGROUPSNVPROC                                wglQueryMaxSwapGroupsNV;
+
+	/**
+	* @brief BOOL  wglQueryFrameCountNV( HDC hDC, GLuint *count );
+	*/
+	PFNWGLQUERYFRAMECOUNTNVPROC                                   wglQueryFrameCountNV;
+
+	/**
+	* @brief BOOL  wglResetFrameCountNV( HDC hDC );
+	*/
+	PFNWGLRESETFRAMECOUNTNVPROC                                   wglResetFrameCountNV;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_NV_vertex_array_range is supported, false otherwise.
+	 */
+	bool isWGL_NV_vertex_array_range;
+
+	/**
+	* @brief void*  wglAllocateMemoryNV( GLsizei size, GLfloat readfreq, GLfloat writefreq, GLfloat priority );
+	*/
+	PFNWGLALLOCATEMEMORYNVPROC                                    wglAllocateMemoryNV;
+
+	/**
+	* @brief void  wglFreeMemoryNV( void *pointer );
+	*/
+	PFNWGLFREEMEMORYNVPROC                                        wglFreeMemoryNV;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_NV_video_out is supported, false otherwise.
+	 */
+	bool isWGL_NV_video_out;
+
+	/**
+	* @brief BOOL  wglGetVideoDeviceNV( HDC hDC, int numDevices, HPVIDEODEV *hVideoDevice );
+	*/
+	PFNWGLGETVIDEODEVICENVPROC                                    wglGetVideoDeviceNV;
+
+	/**
+	* @brief BOOL  wglReleaseVideoDeviceNV( HPVIDEODEV hVideoDevice );
+	*/
+	PFNWGLRELEASEVIDEODEVICENVPROC                                wglReleaseVideoDeviceNV;
+
+	/**
+	* @brief BOOL  wglBindVideoImageNV( HPVIDEODEV hVideoDevice, HPBUFFERARB hPbuffer, int iVideoBuffer );
+	*/
+	PFNWGLBINDVIDEOIMAGENVPROC                                    wglBindVideoImageNV;
+
+	/**
+	* @brief BOOL  wglReleaseVideoImageNV( HPBUFFERARB hPbuffer, int iVideoBuffer );
+	*/
+	PFNWGLRELEASEVIDEOIMAGENVPROC                                 wglReleaseVideoImageNV;
+
+	/**
+	* @brief BOOL  wglSendPbufferToVideoNV( HPBUFFERARB hPbuffer, int iBufferType, unsigned long *pulCounterPbuffer, BOOL bBlock );
+	*/
+	PFNWGLSENDPBUFFERTOVIDEONVPROC                                wglSendPbufferToVideoNV;
+
+	/**
+	* @brief BOOL  wglGetVideoInfoNV( HPVIDEODEV hpVideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo );
+	*/
+	PFNWGLGETVIDEOINFONVPROC                                      wglGetVideoInfoNV;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_OML_sync_control is supported, false otherwise.
+	 */
+	bool isWGL_OML_sync_control;
+
+	/**
+	* @brief BOOL  wglGetSyncValuesOML( HDC hdc, INT64 *ust, INT64 *msc, INT64 *sbc );
+	*/
+	PFNWGLGETSYNCVALUESOMLPROC                                    wglGetSyncValuesOML;
+
+	/**
+	* @brief BOOL  wglGetMscRateOML( HDC hdc, INT32 *numerator, INT32 *denominator );
+	*/
+	PFNWGLGETMSCRATEOMLPROC                                       wglGetMscRateOML;
+
+	/**
+	* @brief INT64  wglSwapBuffersMscOML( HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder );
+	*/
+	PFNWGLSWAPBUFFERSMSCOMLPROC                                   wglSwapBuffersMscOML;
+
+	/**
+	* @brief INT64  wglSwapLayerBuffersMscOML( HDC hdc, int fuPlanes, INT64 target_msc, INT64 divisor, INT64 remainder );
+	*/
+	PFNWGLSWAPLAYERBUFFERSMSCOMLPROC                              wglSwapLayerBuffersMscOML;
+
+	/**
+	* @brief BOOL  wglWaitForMscOML( HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder, INT64 *ust, INT64 *msc, INT64 *sbc );
+	*/
+	PFNWGLWAITFORMSCOMLPROC                                       wglWaitForMscOML;
+
+	/**
+	* @brief BOOL  wglWaitForSbcOML( HDC hdc, INT64 target_sbc, INT64 *ust, INT64 *msc, INT64 *sbc );
+	*/
+	PFNWGLWAITFORSBCOMLPROC                                       wglWaitForSbcOML;
+
+
+
+
+#endif // WIN32
 
 
 

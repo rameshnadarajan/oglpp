@@ -1,6 +1,6 @@
-// This file was generated at Mon May 11 10:51:03 2009 with gle, please do not modify.
+// This file was generated at Wed Jun 10 14:51:44 2009 with gle, please do not modify.
 
-// GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -154,7 +154,47 @@
  */
 
 /** 
- * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (41 extensions found)
+ * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (49 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_WGL_3DL		WGL_3DL (1 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_WGL_AMD		WGL_AMD (1 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_WGL_ARB		WGL_ARB (7 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_WGL_ATI		WGL_ATI (1 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_WGL_EXT		WGL_EXT (8 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_WGL_I3D		WGL_I3D (6 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_WGL_NV		WGL_NV (5 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_WGL_OML		WGL_OML (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -13040,6 +13080,1387 @@ GLE_API bool isGL_WIN_phong_shading();
 GLE_API bool isGL_WIN_specular_fog();
 
 //@}
+
+
+
+#ifdef WIN32
+
+			
+/**	
+ * @defgroup WGL_3DFX_multisample WGL_3DFX_multisample
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_3DFX_multisample is supported.
+ * @return Returns \c true if \b WGL_3DFX_multisample is supported, false otherwise.
+ */
+GLE_API bool isWGL_3DFX_multisample();
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_3DL_stereo_control WGL_3DL_stereo_control
+ * Extension number in OpenGL registry : 313
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/3DL/stereo_control.txt
+ * @ingroup g_WGL_3DL g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_3DL_stereo_control is supported.
+ * @return Returns \c true if \b WGL_3DL_stereo_control is supported, false otherwise.
+ */
+GLE_API bool isWGL_3DL_stereo_control();
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_AMD_gpu_association WGL_AMD_gpu_association
+ * Extension number in OpenGL registry : 361
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/wgl_gpu_association.txt
+ * @ingroup g_WGL_AMD g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_AMD_gpu_association is supported.
+ * @return Returns \c true if \b WGL_AMD_gpu_association is supported, false otherwise.
+ */
+GLE_API bool isWGL_AMD_gpu_association();
+
+/**
+ * @brief UINT  wglGetGPUIDsAMD( UINT maxCount, UINT *ids );
+ */
+GLE_API UINT  wglGetGPUIDsAMD( UINT maxCount, UINT *ids );
+
+/**
+ * @brief INT  wglGetGPUInfoAMD( UINT id, int property, GLenum dataType, UINT size, void *data );
+ */
+GLE_API INT  wglGetGPUInfoAMD( UINT id, int property, GLenum dataType, UINT size, void *data );
+
+/**
+ * @brief UINT  wglGetContextGPUIDAMD( HGLRC hglrc );
+ */
+GLE_API UINT  wglGetContextGPUIDAMD( HGLRC hglrc );
+
+/**
+ * @brief HGLRC  wglCreateAssociatedContextAMD( UINT id );
+ */
+GLE_API HGLRC  wglCreateAssociatedContextAMD( UINT id );
+
+/**
+ * @brief HGLRC  wglCreateAssociatedContextAttribsAMD( UINT id, HGLRC hShareContext, const int *attribList );
+ */
+GLE_API HGLRC  wglCreateAssociatedContextAttribsAMD( UINT id, HGLRC hShareContext, const int *attribList );
+
+/**
+ * @brief BOOL  wglDeleteAssociatedContextAMD( HGLRC hglrc );
+ */
+GLE_API BOOL  wglDeleteAssociatedContextAMD( HGLRC hglrc );
+
+/**
+ * @brief BOOL  wglMakeAssociatedContextCurrentAMD( HGLRC hglrc );
+ */
+GLE_API BOOL  wglMakeAssociatedContextCurrentAMD( HGLRC hglrc );
+
+/**
+ * @brief HGLRC  wglGetCurrentAssociatedContextAMD( void );
+ */
+GLE_API HGLRC  wglGetCurrentAssociatedContextAMD( void );
+
+/**
+ * @brief VOID  wglBlitContextFramebufferAMD( HGLRC dstCtx, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter );
+ */
+GLE_API VOID  wglBlitContextFramebufferAMD( HGLRC dstCtx, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_ARB_buffer_region WGL_ARB_buffer_region
+ * Extension number in OpenGL registry : 4
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/wgl_buffer_region.txt
+ * @ingroup g_WGL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_ARB_buffer_region is supported.
+ * @return Returns \c true if \b WGL_ARB_buffer_region is supported, false otherwise.
+ */
+GLE_API bool isWGL_ARB_buffer_region();
+
+/**
+ * @brief HANDLE  wglCreateBufferRegionARB( HDC hDC, int iLayerPlane, UINT uType );
+ */
+GLE_API HANDLE  wglCreateBufferRegionARB( HDC hDC, int iLayerPlane, UINT uType );
+
+/**
+ * @brief VOID  wglDeleteBufferRegionARB( HANDLE hRegion );
+ */
+GLE_API VOID  wglDeleteBufferRegionARB( HANDLE hRegion );
+
+/**
+ * @brief BOOL  wglSaveBufferRegionARB( HANDLE hRegion, int x, int y, int width, int height );
+ */
+GLE_API BOOL  wglSaveBufferRegionARB( HANDLE hRegion, int x, int y, int width, int height );
+
+/**
+ * @brief BOOL  wglRestoreBufferRegionARB( HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc );
+ */
+GLE_API BOOL  wglRestoreBufferRegionARB( HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_ARB_create_context WGL_ARB_create_context
+ * Extension number in OpenGL registry : 55
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/wgl_create_context.txt
+ * @ingroup g_WGL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_ARB_create_context is supported.
+ * @return Returns \c true if \b WGL_ARB_create_context is supported, false otherwise.
+ */
+GLE_API bool isWGL_ARB_create_context();
+
+/**
+ * @brief HGLRC  wglCreateContextAttribsARB( HDC hDC, HGLRC hShareContext, const int *attribList );
+ */
+GLE_API HGLRC  wglCreateContextAttribsARB( HDC hDC, HGLRC hShareContext, const int *attribList );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_ARB_extensions_string WGL_ARB_extensions_string
+ * Extension number in OpenGL registry : 8
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/wgl_extensions_string.txt
+ * @ingroup g_WGL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_ARB_extensions_string is supported.
+ * @return Returns \c true if \b WGL_ARB_extensions_string is supported, false otherwise.
+ */
+GLE_API bool isWGL_ARB_extensions_string();
+
+/**
+ * @brief const char *  wglGetExtensionsStringARB( HDC hdc );
+ */
+GLE_API const char *  wglGetExtensionsStringARB( HDC hdc );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_ARB_make_current_read WGL_ARB_make_current_read
+ * Extension number in OpenGL registry : 10
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/wgl_make_current_read.txt
+ * @ingroup g_WGL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_ARB_make_current_read is supported.
+ * @return Returns \c true if \b WGL_ARB_make_current_read is supported, false otherwise.
+ */
+GLE_API bool isWGL_ARB_make_current_read();
+
+/**
+ * @brief BOOL  wglMakeContextCurrentARB( HDC hDrawDC, HDC hReadDC, HGLRC hglrc );
+ */
+GLE_API BOOL  wglMakeContextCurrentARB( HDC hDrawDC, HDC hReadDC, HGLRC hglrc );
+
+/**
+ * @brief HDC  wglGetCurrentReadDCARB( void );
+ */
+GLE_API HDC  wglGetCurrentReadDCARB( void );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+			
+/**	
+ * @defgroup WGL_ARB_multisample WGL_ARB_multisample
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_ARB_multisample is supported.
+ * @return Returns \c true if \b WGL_ARB_multisample is supported, false otherwise.
+ */
+GLE_API bool isWGL_ARB_multisample();
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_ARB_pbuffer WGL_ARB_pbuffer
+ * Extension number in OpenGL registry : 11
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/wgl_pbuffer.txt
+ * @ingroup g_WGL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_ARB_pbuffer is supported.
+ * @return Returns \c true if \b WGL_ARB_pbuffer is supported, false otherwise.
+ */
+GLE_API bool isWGL_ARB_pbuffer();
+
+/**
+ * @brief HPBUFFERARB  wglCreatePbufferARB( HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList );
+ */
+GLE_API HPBUFFERARB  wglCreatePbufferARB( HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList );
+
+/**
+ * @brief HDC  wglGetPbufferDCARB( HPBUFFERARB hPbuffer );
+ */
+GLE_API HDC  wglGetPbufferDCARB( HPBUFFERARB hPbuffer );
+
+/**
+ * @brief int  wglReleasePbufferDCARB( HPBUFFERARB hPbuffer, HDC hDC );
+ */
+GLE_API int  wglReleasePbufferDCARB( HPBUFFERARB hPbuffer, HDC hDC );
+
+/**
+ * @brief BOOL  wglDestroyPbufferARB( HPBUFFERARB hPbuffer );
+ */
+GLE_API BOOL  wglDestroyPbufferARB( HPBUFFERARB hPbuffer );
+
+/**
+ * @brief BOOL  wglQueryPbufferARB( HPBUFFERARB hPbuffer, int iAttribute, int *piValue );
+ */
+GLE_API BOOL  wglQueryPbufferARB( HPBUFFERARB hPbuffer, int iAttribute, int *piValue );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_ARB_pixel_format WGL_ARB_pixel_format
+ * Extension number in OpenGL registry : 9
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/wgl_pixel_format.txt
+ * @ingroup g_WGL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_ARB_pixel_format is supported.
+ * @return Returns \c true if \b WGL_ARB_pixel_format is supported, false otherwise.
+ */
+GLE_API bool isWGL_ARB_pixel_format();
+
+/**
+ * @brief BOOL  wglGetPixelFormatAttribivARB( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, int *piValues );
+ */
+GLE_API BOOL  wglGetPixelFormatAttribivARB( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, int *piValues );
+
+/**
+ * @brief BOOL  wglGetPixelFormatAttribfvARB( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, FLOAT *pfValues );
+ */
+GLE_API BOOL  wglGetPixelFormatAttribfvARB( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, FLOAT *pfValues );
+
+/**
+ * @brief BOOL  wglChoosePixelFormatARB( HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats );
+ */
+GLE_API BOOL  wglChoosePixelFormatARB( HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+			
+/**	
+ * @defgroup WGL_ARB_pixel_format_float WGL_ARB_pixel_format_float
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_ARB_pixel_format_float is supported.
+ * @return Returns \c true if \b WGL_ARB_pixel_format_float is supported, false otherwise.
+ */
+GLE_API bool isWGL_ARB_pixel_format_float();
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_ARB_render_texture WGL_ARB_render_texture
+ * Extension number in OpenGL registry : 20
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/wgl_render_texture.txt
+ * @ingroup g_WGL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_ARB_render_texture is supported.
+ * @return Returns \c true if \b WGL_ARB_render_texture is supported, false otherwise.
+ */
+GLE_API bool isWGL_ARB_render_texture();
+
+/**
+ * @brief BOOL  wglBindTexImageARB( HPBUFFERARB hPbuffer, int iBuffer );
+ */
+GLE_API BOOL  wglBindTexImageARB( HPBUFFERARB hPbuffer, int iBuffer );
+
+/**
+ * @brief BOOL  wglReleaseTexImageARB( HPBUFFERARB hPbuffer, int iBuffer );
+ */
+GLE_API BOOL  wglReleaseTexImageARB( HPBUFFERARB hPbuffer, int iBuffer );
+
+/**
+ * @brief BOOL  wglSetPbufferAttribARB( HPBUFFERARB hPbuffer, const int *piAttribList );
+ */
+GLE_API BOOL  wglSetPbufferAttribARB( HPBUFFERARB hPbuffer, const int *piAttribList );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_ATI_pixel_format_float WGL_ATI_pixel_format_float
+ * Extension number in OpenGL registry : 278
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ATI/pixel_format_float.txt
+ * @ingroup g_WGL_ATI g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_ATI_pixel_format_float is supported.
+ * @return Returns \c true if \b WGL_ATI_pixel_format_float is supported, false otherwise.
+ */
+GLE_API bool isWGL_ATI_pixel_format_float();
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_EXT_depth_float WGL_EXT_depth_float
+ * Extension number in OpenGL registry : 177
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/wgl_depth_float.txt
+ * @ingroup g_WGL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_EXT_depth_float is supported.
+ * @return Returns \c true if \b WGL_EXT_depth_float is supported, false otherwise.
+ */
+GLE_API bool isWGL_EXT_depth_float();
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_EXT_display_color_table WGL_EXT_display_color_table
+ * Extension number in OpenGL registry : 167
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/wgl_display_color_table.txt
+ * @ingroup g_WGL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_EXT_display_color_table is supported.
+ * @return Returns \c true if \b WGL_EXT_display_color_table is supported, false otherwise.
+ */
+GLE_API bool isWGL_EXT_display_color_table();
+
+/**
+ * @brief GLboolean  wglCreateDisplayColorTableEXT( GLushort id );
+ */
+GLE_API GLboolean  wglCreateDisplayColorTableEXT( GLushort id );
+
+/**
+ * @brief GLboolean  wglLoadDisplayColorTableEXT( const GLushort *table, GLuint length );
+ */
+GLE_API GLboolean  wglLoadDisplayColorTableEXT( const GLushort *table, GLuint length );
+
+/**
+ * @brief GLboolean  wglBindDisplayColorTableEXT( GLushort id );
+ */
+GLE_API GLboolean  wglBindDisplayColorTableEXT( GLushort id );
+
+/**
+ * @brief VOID  wglDestroyDisplayColorTableEXT( GLushort id );
+ */
+GLE_API VOID  wglDestroyDisplayColorTableEXT( GLushort id );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_EXT_extensions_string WGL_EXT_extensions_string
+ * Extension number in OpenGL registry : 168
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/wgl_extensions_string.txt
+ * @ingroup g_WGL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_EXT_extensions_string is supported.
+ * @return Returns \c true if \b WGL_EXT_extensions_string is supported, false otherwise.
+ */
+GLE_API bool isWGL_EXT_extensions_string();
+
+/**
+ * @brief const char *  wglGetExtensionsStringEXT( void );
+ */
+GLE_API const char *  wglGetExtensionsStringEXT( void );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+			
+/**	
+ * @defgroup WGL_EXT_framebuffer_sRGB WGL_EXT_framebuffer_sRGB
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_EXT_framebuffer_sRGB is supported.
+ * @return Returns \c true if \b WGL_EXT_framebuffer_sRGB is supported, false otherwise.
+ */
+GLE_API bool isWGL_EXT_framebuffer_sRGB();
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_EXT_make_current_read WGL_EXT_make_current_read
+ * Extension number in OpenGL registry : 169
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/wgl_make_current_read.txt
+ * @ingroup g_WGL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_EXT_make_current_read is supported.
+ * @return Returns \c true if \b WGL_EXT_make_current_read is supported, false otherwise.
+ */
+GLE_API bool isWGL_EXT_make_current_read();
+
+/**
+ * @brief BOOL  wglMakeContextCurrentEXT( HDC hDrawDC, HDC hReadDC, HGLRC hglrc );
+ */
+GLE_API BOOL  wglMakeContextCurrentEXT( HDC hDrawDC, HDC hReadDC, HGLRC hglrc );
+
+/**
+ * @brief HDC  wglGetCurrentReadDCEXT( void );
+ */
+GLE_API HDC  wglGetCurrentReadDCEXT( void );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_EXT_multisample WGL_EXT_multisample
+ * Extension number in OpenGL registry : 209
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/wgl_multisample.txt
+ * @ingroup g_WGL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_EXT_multisample is supported.
+ * @return Returns \c true if \b WGL_EXT_multisample is supported, false otherwise.
+ */
+GLE_API bool isWGL_EXT_multisample();
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_EXT_pbuffer WGL_EXT_pbuffer
+ * Extension number in OpenGL registry : 171
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/wgl_pbuffer.txt
+ * @ingroup g_WGL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_EXT_pbuffer is supported.
+ * @return Returns \c true if \b WGL_EXT_pbuffer is supported, false otherwise.
+ */
+GLE_API bool isWGL_EXT_pbuffer();
+
+/**
+ * @brief HPBUFFEREXT  wglCreatePbufferEXT( HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList );
+ */
+GLE_API HPBUFFEREXT  wglCreatePbufferEXT( HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList );
+
+/**
+ * @brief HDC  wglGetPbufferDCEXT( HPBUFFEREXT hPbuffer );
+ */
+GLE_API HDC  wglGetPbufferDCEXT( HPBUFFEREXT hPbuffer );
+
+/**
+ * @brief int  wglReleasePbufferDCEXT( HPBUFFEREXT hPbuffer, HDC hDC );
+ */
+GLE_API int  wglReleasePbufferDCEXT( HPBUFFEREXT hPbuffer, HDC hDC );
+
+/**
+ * @brief BOOL  wglDestroyPbufferEXT( HPBUFFEREXT hPbuffer );
+ */
+GLE_API BOOL  wglDestroyPbufferEXT( HPBUFFEREXT hPbuffer );
+
+/**
+ * @brief BOOL  wglQueryPbufferEXT( HPBUFFEREXT hPbuffer, int iAttribute, int *piValue );
+ */
+GLE_API BOOL  wglQueryPbufferEXT( HPBUFFEREXT hPbuffer, int iAttribute, int *piValue );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_EXT_pixel_format WGL_EXT_pixel_format
+ * Extension number in OpenGL registry : 170
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/wgl_pixel_format.txt
+ * @ingroup g_WGL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_EXT_pixel_format is supported.
+ * @return Returns \c true if \b WGL_EXT_pixel_format is supported, false otherwise.
+ */
+GLE_API bool isWGL_EXT_pixel_format();
+
+/**
+ * @brief BOOL  wglGetPixelFormatAttribivEXT( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, int *piValues );
+ */
+GLE_API BOOL  wglGetPixelFormatAttribivEXT( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, int *piValues );
+
+/**
+ * @brief BOOL  wglGetPixelFormatAttribfvEXT( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, FLOAT *pfValues );
+ */
+GLE_API BOOL  wglGetPixelFormatAttribfvEXT( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, FLOAT *pfValues );
+
+/**
+ * @brief BOOL  wglChoosePixelFormatEXT( HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats );
+ */
+GLE_API BOOL  wglChoosePixelFormatEXT( HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+			
+/**	
+ * @defgroup WGL_EXT_pixel_format_packed_float WGL_EXT_pixel_format_packed_float
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_EXT_pixel_format_packed_float is supported.
+ * @return Returns \c true if \b WGL_EXT_pixel_format_packed_float is supported, false otherwise.
+ */
+GLE_API bool isWGL_EXT_pixel_format_packed_float();
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_EXT_swap_control WGL_EXT_swap_control
+ * Extension number in OpenGL registry : 172
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/wgl_swap_control.txt
+ * @ingroup g_WGL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_EXT_swap_control is supported.
+ * @return Returns \c true if \b WGL_EXT_swap_control is supported, false otherwise.
+ */
+GLE_API bool isWGL_EXT_swap_control();
+
+/**
+ * @brief BOOL  wglSwapIntervalEXT( int interval );
+ */
+GLE_API BOOL  wglSwapIntervalEXT( int interval );
+
+/**
+ * @brief int  wglGetSwapIntervalEXT( void );
+ */
+GLE_API int  wglGetSwapIntervalEXT( void );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_I3D_digital_video_control WGL_I3D_digital_video_control
+ * Extension number in OpenGL registry : 250
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/I3D/wgl_digital_video_control.txt
+ * @ingroup g_WGL_I3D g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_I3D_digital_video_control is supported.
+ * @return Returns \c true if \b WGL_I3D_digital_video_control is supported, false otherwise.
+ */
+GLE_API bool isWGL_I3D_digital_video_control();
+
+/**
+ * @brief BOOL  wglGetDigitalVideoParametersI3D( HDC hDC, int iAttribute, int *piValue );
+ */
+GLE_API BOOL  wglGetDigitalVideoParametersI3D( HDC hDC, int iAttribute, int *piValue );
+
+/**
+ * @brief BOOL  wglSetDigitalVideoParametersI3D( HDC hDC, int iAttribute, const int *piValue );
+ */
+GLE_API BOOL  wglSetDigitalVideoParametersI3D( HDC hDC, int iAttribute, const int *piValue );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_I3D_gamma WGL_I3D_gamma
+ * Extension number in OpenGL registry : 251
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/I3D/wgl_gamma.txt
+ * @ingroup g_WGL_I3D g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_I3D_gamma is supported.
+ * @return Returns \c true if \b WGL_I3D_gamma is supported, false otherwise.
+ */
+GLE_API bool isWGL_I3D_gamma();
+
+/**
+ * @brief BOOL  wglGetGammaTableParametersI3D( HDC hDC, int iAttribute, int *piValue );
+ */
+GLE_API BOOL  wglGetGammaTableParametersI3D( HDC hDC, int iAttribute, int *piValue );
+
+/**
+ * @brief BOOL  wglSetGammaTableParametersI3D( HDC hDC, int iAttribute, const int *piValue );
+ */
+GLE_API BOOL  wglSetGammaTableParametersI3D( HDC hDC, int iAttribute, const int *piValue );
+
+/**
+ * @brief BOOL  wglGetGammaTableI3D( HDC hDC, int iEntries, USHORT *puRed, USHORT *puGreen, USHORT *puBlue );
+ */
+GLE_API BOOL  wglGetGammaTableI3D( HDC hDC, int iEntries, USHORT *puRed, USHORT *puGreen, USHORT *puBlue );
+
+/**
+ * @brief BOOL  wglSetGammaTableI3D( HDC hDC, int iEntries, const USHORT *puRed, const USHORT *puGreen, const USHORT *puBlue );
+ */
+GLE_API BOOL  wglSetGammaTableI3D( HDC hDC, int iEntries, const USHORT *puRed, const USHORT *puGreen, const USHORT *puBlue );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_I3D_genlock WGL_I3D_genlock
+ * Extension number in OpenGL registry : 252
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/I3D/wgl_genlock.txt
+ * @ingroup g_WGL_I3D g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_I3D_genlock is supported.
+ * @return Returns \c true if \b WGL_I3D_genlock is supported, false otherwise.
+ */
+GLE_API bool isWGL_I3D_genlock();
+
+/**
+ * @brief BOOL  wglEnableGenlockI3D( HDC hDC );
+ */
+GLE_API BOOL  wglEnableGenlockI3D( HDC hDC );
+
+/**
+ * @brief BOOL  wglDisableGenlockI3D( HDC hDC );
+ */
+GLE_API BOOL  wglDisableGenlockI3D( HDC hDC );
+
+/**
+ * @brief BOOL  wglIsEnabledGenlockI3D( HDC hDC, BOOL *pFlag );
+ */
+GLE_API BOOL  wglIsEnabledGenlockI3D( HDC hDC, BOOL *pFlag );
+
+/**
+ * @brief BOOL  wglGenlockSourceI3D( HDC hDC, UINT uSource );
+ */
+GLE_API BOOL  wglGenlockSourceI3D( HDC hDC, UINT uSource );
+
+/**
+ * @brief BOOL  wglGetGenlockSourceI3D( HDC hDC, UINT *uSource );
+ */
+GLE_API BOOL  wglGetGenlockSourceI3D( HDC hDC, UINT *uSource );
+
+/**
+ * @brief BOOL  wglGenlockSourceEdgeI3D( HDC hDC, UINT uEdge );
+ */
+GLE_API BOOL  wglGenlockSourceEdgeI3D( HDC hDC, UINT uEdge );
+
+/**
+ * @brief BOOL  wglGetGenlockSourceEdgeI3D( HDC hDC, UINT *uEdge );
+ */
+GLE_API BOOL  wglGetGenlockSourceEdgeI3D( HDC hDC, UINT *uEdge );
+
+/**
+ * @brief BOOL  wglGenlockSampleRateI3D( HDC hDC, UINT uRate );
+ */
+GLE_API BOOL  wglGenlockSampleRateI3D( HDC hDC, UINT uRate );
+
+/**
+ * @brief BOOL  wglGetGenlockSampleRateI3D( HDC hDC, UINT *uRate );
+ */
+GLE_API BOOL  wglGetGenlockSampleRateI3D( HDC hDC, UINT *uRate );
+
+/**
+ * @brief BOOL  wglGenlockSourceDelayI3D( HDC hDC, UINT uDelay );
+ */
+GLE_API BOOL  wglGenlockSourceDelayI3D( HDC hDC, UINT uDelay );
+
+/**
+ * @brief BOOL  wglGetGenlockSourceDelayI3D( HDC hDC, UINT *uDelay );
+ */
+GLE_API BOOL  wglGetGenlockSourceDelayI3D( HDC hDC, UINT *uDelay );
+
+/**
+ * @brief BOOL  wglQueryGenlockMaxSourceDelayI3D( HDC hDC, UINT *uMaxLineDelay, UINT *uMaxPixelDelay );
+ */
+GLE_API BOOL  wglQueryGenlockMaxSourceDelayI3D( HDC hDC, UINT *uMaxLineDelay, UINT *uMaxPixelDelay );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_I3D_image_buffer WGL_I3D_image_buffer
+ * Extension number in OpenGL registry : 253
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/I3D/wgl_image_buffer.txt
+ * @ingroup g_WGL_I3D g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_I3D_image_buffer is supported.
+ * @return Returns \c true if \b WGL_I3D_image_buffer is supported, false otherwise.
+ */
+GLE_API bool isWGL_I3D_image_buffer();
+
+/**
+ * @brief LPVOID  wglCreateImageBufferI3D( HDC hDC, DWORD dwSize, UINT uFlags );
+ */
+GLE_API LPVOID  wglCreateImageBufferI3D( HDC hDC, DWORD dwSize, UINT uFlags );
+
+/**
+ * @brief BOOL  wglDestroyImageBufferI3D( HDC hDC, LPVOID pAddress );
+ */
+GLE_API BOOL  wglDestroyImageBufferI3D( HDC hDC, LPVOID pAddress );
+
+/**
+ * @brief BOOL  wglAssociateImageBufferEventsI3D( HDC hDC, const HANDLE *pEvent, const LPVOID *pAddress, const DWORD *pSize, UINT count );
+ */
+GLE_API BOOL  wglAssociateImageBufferEventsI3D( HDC hDC, const HANDLE *pEvent, const LPVOID *pAddress, const DWORD *pSize, UINT count );
+
+/**
+ * @brief BOOL  wglReleaseImageBufferEventsI3D( HDC hDC, const LPVOID *pAddress, UINT count );
+ */
+GLE_API BOOL  wglReleaseImageBufferEventsI3D( HDC hDC, const LPVOID *pAddress, UINT count );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_I3D_swap_frame_lock WGL_I3D_swap_frame_lock
+ * Extension number in OpenGL registry : 254
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/I3D/wgl_swap_frame_lock.txt
+ * @ingroup g_WGL_I3D g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_I3D_swap_frame_lock is supported.
+ * @return Returns \c true if \b WGL_I3D_swap_frame_lock is supported, false otherwise.
+ */
+GLE_API bool isWGL_I3D_swap_frame_lock();
+
+/**
+ * @brief BOOL  wglEnableFrameLockI3D( void );
+ */
+GLE_API BOOL  wglEnableFrameLockI3D( void );
+
+/**
+ * @brief BOOL  wglDisableFrameLockI3D( void );
+ */
+GLE_API BOOL  wglDisableFrameLockI3D( void );
+
+/**
+ * @brief BOOL  wglIsEnabledFrameLockI3D( BOOL *pFlag );
+ */
+GLE_API BOOL  wglIsEnabledFrameLockI3D( BOOL *pFlag );
+
+/**
+ * @brief BOOL  wglQueryFrameLockMasterI3D( BOOL *pFlag );
+ */
+GLE_API BOOL  wglQueryFrameLockMasterI3D( BOOL *pFlag );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_I3D_swap_frame_usage WGL_I3D_swap_frame_usage
+ * Extension number in OpenGL registry : 255
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/I3D/wgl_swap_frame_usage.txt
+ * @ingroup g_WGL_I3D g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_I3D_swap_frame_usage is supported.
+ * @return Returns \c true if \b WGL_I3D_swap_frame_usage is supported, false otherwise.
+ */
+GLE_API bool isWGL_I3D_swap_frame_usage();
+
+/**
+ * @brief BOOL  wglGetFrameUsageI3D( float *pUsage );
+ */
+GLE_API BOOL  wglGetFrameUsageI3D( float *pUsage );
+
+/**
+ * @brief BOOL  wglBeginFrameTrackingI3D( void );
+ */
+GLE_API BOOL  wglBeginFrameTrackingI3D( void );
+
+/**
+ * @brief BOOL  wglEndFrameTrackingI3D( void );
+ */
+GLE_API BOOL  wglEndFrameTrackingI3D( void );
+
+/**
+ * @brief BOOL  wglQueryFrameTrackingI3D( DWORD *pFrameCount, DWORD *pMissedFrames, float *pLastMissedUsage );
+ */
+GLE_API BOOL  wglQueryFrameTrackingI3D( DWORD *pFrameCount, DWORD *pMissedFrames, float *pLastMissedUsage );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+			
+/**	
+ * @defgroup WGL_NV_float_buffer WGL_NV_float_buffer
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_NV_float_buffer is supported.
+ * @return Returns \c true if \b WGL_NV_float_buffer is supported, false otherwise.
+ */
+GLE_API bool isWGL_NV_float_buffer();
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_NV_gpu_affinity WGL_NV_gpu_affinity
+ * Extension number in OpenGL registry : 355
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/gpu_affinity.txt
+ * @ingroup g_WGL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_NV_gpu_affinity is supported.
+ * @return Returns \c true if \b WGL_NV_gpu_affinity is supported, false otherwise.
+ */
+GLE_API bool isWGL_NV_gpu_affinity();
+
+/**
+ * @brief BOOL  wglEnumGpusNV( UINT iGpuIndex, HGPUNV *phGpu );
+ */
+GLE_API BOOL  wglEnumGpusNV( UINT iGpuIndex, HGPUNV *phGpu );
+
+/**
+ * @brief BOOL  wglEnumGpuDevicesNV( HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice );
+ */
+GLE_API BOOL  wglEnumGpuDevicesNV( HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice );
+
+/**
+ * @brief HDC  wglCreateAffinityDCNV( const HGPUNV *phGpuList );
+ */
+GLE_API HDC  wglCreateAffinityDCNV( const HGPUNV *phGpuList );
+
+/**
+ * @brief BOOL  wglEnumGpusFromAffinityDCNV( HDC hAffinityDC, UINT iGpuIndex, HGPUNV *hGpu );
+ */
+GLE_API BOOL  wglEnumGpusFromAffinityDCNV( HDC hAffinityDC, UINT iGpuIndex, HGPUNV *hGpu );
+
+/**
+ * @brief BOOL  wglDeleteDCNV( HDC hdc );
+ */
+GLE_API BOOL  wglDeleteDCNV( HDC hdc );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+			
+/**	
+ * @defgroup WGL_NV_present_video WGL_NV_present_video
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_NV_present_video is supported.
+ * @return Returns \c true if \b WGL_NV_present_video is supported, false otherwise.
+ */
+GLE_API bool isWGL_NV_present_video();
+
+/**
+ * @brief int  wglEnumerateVideoDevicesNV( HDC hDC, HVIDEOOUTPUTDEVICENV *phDeviceList );
+ */
+GLE_API int  wglEnumerateVideoDevicesNV( HDC hDC, HVIDEOOUTPUTDEVICENV *phDeviceList );
+
+/**
+ * @brief BOOL  wglBindVideoDeviceNV( HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, const int *piAttribList );
+ */
+GLE_API BOOL  wglBindVideoDeviceNV( HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, const int *piAttribList );
+
+/**
+ * @brief BOOL  wglQueryCurrentContextNV( int iAttribute, int *piValue );
+ */
+GLE_API BOOL  wglQueryCurrentContextNV( int iAttribute, int *piValue );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_NV_render_depth_texture WGL_NV_render_depth_texture
+ * Extension number in OpenGL registry : 263
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/render_depth_texture.txt
+ * @ingroup g_WGL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_NV_render_depth_texture is supported.
+ * @return Returns \c true if \b WGL_NV_render_depth_texture is supported, false otherwise.
+ */
+GLE_API bool isWGL_NV_render_depth_texture();
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_NV_render_texture_rectangle WGL_NV_render_texture_rectangle
+ * Extension number in OpenGL registry : 264
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/render_texture_rectangle.txt
+ * @ingroup g_WGL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_NV_render_texture_rectangle is supported.
+ * @return Returns \c true if \b WGL_NV_render_texture_rectangle is supported, false otherwise.
+ */
+GLE_API bool isWGL_NV_render_texture_rectangle();
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_NV_swap_group WGL_NV_swap_group
+ * Extension number in OpenGL registry : 351
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/wgl_swap_group.txt
+ * @ingroup g_WGL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_NV_swap_group is supported.
+ * @return Returns \c true if \b WGL_NV_swap_group is supported, false otherwise.
+ */
+GLE_API bool isWGL_NV_swap_group();
+
+/**
+ * @brief BOOL  wglJoinSwapGroupNV( HDC hDC, GLuint group );
+ */
+GLE_API BOOL  wglJoinSwapGroupNV( HDC hDC, GLuint group );
+
+/**
+ * @brief BOOL  wglBindSwapBarrierNV( GLuint group, GLuint barrier );
+ */
+GLE_API BOOL  wglBindSwapBarrierNV( GLuint group, GLuint barrier );
+
+/**
+ * @brief BOOL  wglQuerySwapGroupNV( HDC hDC, GLuint *group, GLuint *barrier );
+ */
+GLE_API BOOL  wglQuerySwapGroupNV( HDC hDC, GLuint *group, GLuint *barrier );
+
+/**
+ * @brief BOOL  wglQueryMaxSwapGroupsNV( HDC hDC, GLuint *maxGroups, GLuint *maxBarriers );
+ */
+GLE_API BOOL  wglQueryMaxSwapGroupsNV( HDC hDC, GLuint *maxGroups, GLuint *maxBarriers );
+
+/**
+ * @brief BOOL  wglQueryFrameCountNV( HDC hDC, GLuint *count );
+ */
+GLE_API BOOL  wglQueryFrameCountNV( HDC hDC, GLuint *count );
+
+/**
+ * @brief BOOL  wglResetFrameCountNV( HDC hDC );
+ */
+GLE_API BOOL  wglResetFrameCountNV( HDC hDC );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+			
+/**	
+ * @defgroup WGL_NV_vertex_array_range WGL_NV_vertex_array_range
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_NV_vertex_array_range is supported.
+ * @return Returns \c true if \b WGL_NV_vertex_array_range is supported, false otherwise.
+ */
+GLE_API bool isWGL_NV_vertex_array_range();
+
+/**
+ * @brief void*  wglAllocateMemoryNV( GLsizei size, GLfloat readfreq, GLfloat writefreq, GLfloat priority );
+ */
+GLE_API void*  wglAllocateMemoryNV( GLsizei size, GLfloat readfreq, GLfloat writefreq, GLfloat priority );
+
+/**
+ * @brief void  wglFreeMemoryNV( void *pointer );
+ */
+GLE_API void  wglFreeMemoryNV( void *pointer );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_NV_video_out WGL_NV_video_out
+ * Extension number in OpenGL registry : 349
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/wgl_video_out.txt
+ * @ingroup g_WGL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_NV_video_out is supported.
+ * @return Returns \c true if \b WGL_NV_video_out is supported, false otherwise.
+ */
+GLE_API bool isWGL_NV_video_out();
+
+/**
+ * @brief BOOL  wglGetVideoDeviceNV( HDC hDC, int numDevices, HPVIDEODEV *hVideoDevice );
+ */
+GLE_API BOOL  wglGetVideoDeviceNV( HDC hDC, int numDevices, HPVIDEODEV *hVideoDevice );
+
+/**
+ * @brief BOOL  wglReleaseVideoDeviceNV( HPVIDEODEV hVideoDevice );
+ */
+GLE_API BOOL  wglReleaseVideoDeviceNV( HPVIDEODEV hVideoDevice );
+
+/**
+ * @brief BOOL  wglBindVideoImageNV( HPVIDEODEV hVideoDevice, HPBUFFERARB hPbuffer, int iVideoBuffer );
+ */
+GLE_API BOOL  wglBindVideoImageNV( HPVIDEODEV hVideoDevice, HPBUFFERARB hPbuffer, int iVideoBuffer );
+
+/**
+ * @brief BOOL  wglReleaseVideoImageNV( HPBUFFERARB hPbuffer, int iVideoBuffer );
+ */
+GLE_API BOOL  wglReleaseVideoImageNV( HPBUFFERARB hPbuffer, int iVideoBuffer );
+
+/**
+ * @brief BOOL  wglSendPbufferToVideoNV( HPBUFFERARB hPbuffer, int iBufferType, unsigned long *pulCounterPbuffer, BOOL bBlock );
+ */
+GLE_API BOOL  wglSendPbufferToVideoNV( HPBUFFERARB hPbuffer, int iBufferType, unsigned long *pulCounterPbuffer, BOOL bBlock );
+
+/**
+ * @brief BOOL  wglGetVideoInfoNV( HPVIDEODEV hpVideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo );
+ */
+GLE_API BOOL  wglGetVideoInfoNV( HPVIDEODEV hpVideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_OML_sync_control WGL_OML_sync_control
+ * Extension number in OpenGL registry : 242
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/OML/wgl_sync_control.txt
+ * @ingroup g_WGL_OML g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_OML_sync_control is supported.
+ * @return Returns \c true if \b WGL_OML_sync_control is supported, false otherwise.
+ */
+GLE_API bool isWGL_OML_sync_control();
+
+/**
+ * @brief BOOL  wglGetSyncValuesOML( HDC hdc, INT64 *ust, INT64 *msc, INT64 *sbc );
+ */
+GLE_API BOOL  wglGetSyncValuesOML( HDC hdc, INT64 *ust, INT64 *msc, INT64 *sbc );
+
+/**
+ * @brief BOOL  wglGetMscRateOML( HDC hdc, INT32 *numerator, INT32 *denominator );
+ */
+GLE_API BOOL  wglGetMscRateOML( HDC hdc, INT32 *numerator, INT32 *denominator );
+
+/**
+ * @brief INT64  wglSwapBuffersMscOML( HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder );
+ */
+GLE_API INT64  wglSwapBuffersMscOML( HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder );
+
+/**
+ * @brief INT64  wglSwapLayerBuffersMscOML( HDC hdc, int fuPlanes, INT64 target_msc, INT64 divisor, INT64 remainder );
+ */
+GLE_API INT64  wglSwapLayerBuffersMscOML( HDC hdc, int fuPlanes, INT64 target_msc, INT64 divisor, INT64 remainder );
+
+/**
+ * @brief BOOL  wglWaitForMscOML( HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder, INT64 *ust, INT64 *msc, INT64 *sbc );
+ */
+GLE_API BOOL  wglWaitForMscOML( HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder, INT64 *ust, INT64 *msc, INT64 *sbc );
+
+/**
+ * @brief BOOL  wglWaitForSbcOML( HDC hdc, INT64 target_sbc, INT64 *ust, INT64 *msc, INT64 *sbc );
+ */
+GLE_API BOOL  wglWaitForSbcOML( HDC hdc, INT64 target_sbc, INT64 *ust, INT64 *msc, INT64 *sbc );
+
+//@}
+
+
+#endif // WIN32
 
 
 #endif // #ifndef _GLE_WRAPPERGEN_HPP

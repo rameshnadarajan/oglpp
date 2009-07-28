@@ -1,6 +1,6 @@
-// This file was generated at Mon May 11 10:51:03 2009 with gle, please do not modify.
+// This file was generated at Wed Jun 10 14:51:44 2009 with gle, please do not modify.
 
-// GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -15,7 +15,7 @@
 bool isGL_3DFX_multisample()
 {
 	const bool isSupported = gleGetCurrent()->isGL_3DFX_multisample;
-	
+
 	return isSupported;
 }
 
@@ -24,7 +24,7 @@ bool isGL_3DFX_multisample()
 bool isGL_3DFX_tbuffer()
 {
 	const bool isSupported = gleGetCurrent()->isGL_3DFX_tbuffer;
-	
+
 	return isSupported;
 }
 
@@ -39,7 +39,7 @@ void glTbufferMask3DFX( GLuint mask )
 bool isGL_3DFX_texture_compression_FXT1()
 {
 	const bool isSupported = gleGetCurrent()->isGL_3DFX_texture_compression_FXT1;
-	
+
 	return isSupported;
 }
 
@@ -48,7 +48,7 @@ bool isGL_3DFX_texture_compression_FXT1()
 bool isGL_AMD_performance_monitor()
 {
 	const bool isSupported = gleGetCurrent()->isGL_AMD_performance_monitor;
-	
+
 	return isSupported;
 }
 
@@ -123,7 +123,7 @@ void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataS
 bool isGL_AMD_texture_texture4()
 {
 	const bool isSupported = gleGetCurrent()->isGL_AMD_texture_texture4;
-	
+
 	return isSupported;
 }
 
@@ -132,7 +132,7 @@ bool isGL_AMD_texture_texture4()
 bool isGL_AMD_vertex_shader_tesselator()
 {
 	const bool isSupported = gleGetCurrent()->isGL_AMD_vertex_shader_tesselator;
-	
+
 	return isSupported;
 }
 
@@ -153,7 +153,7 @@ void glTessellationModeAMD( GLenum mode )
 bool isGL_APPLE_client_storage()
 {
 	const bool isSupported = gleGetCurrent()->isGL_APPLE_client_storage;
-	
+
 	return isSupported;
 }
 
@@ -162,7 +162,7 @@ bool isGL_APPLE_client_storage()
 bool isGL_APPLE_element_array()
 {
 	const bool isSupported = gleGetCurrent()->isGL_APPLE_element_array;
-	
+
 	return isSupported;
 }
 
@@ -201,7 +201,7 @@ void glMultiDrawRangeElementArrayAPPLE( GLenum mode, GLuint start, GLuint end, c
 bool isGL_APPLE_fence()
 {
 	const bool isSupported = gleGetCurrent()->isGL_APPLE_fence;
-	
+
 	return isSupported;
 }
 
@@ -258,7 +258,7 @@ void glFinishObjectAPPLE( GLenum object, GLint name )
 bool isGL_APPLE_flush_buffer_range()
 {
 	const bool isSupported = gleGetCurrent()->isGL_APPLE_flush_buffer_range;
-	
+
 	return isSupported;
 }
 
@@ -279,7 +279,7 @@ void glFlushMappedBufferRangeAPPLE( GLenum target, GLintptr offset, GLsizeiptr s
 bool isGL_APPLE_specular_vector()
 {
 	const bool isSupported = gleGetCurrent()->isGL_APPLE_specular_vector;
-	
+
 	return isSupported;
 }
 
@@ -288,7 +288,7 @@ bool isGL_APPLE_specular_vector()
 bool isGL_APPLE_transform_hint()
 {
 	const bool isSupported = gleGetCurrent()->isGL_APPLE_transform_hint;
-	
+
 	return isSupported;
 }
 
@@ -297,7 +297,7 @@ bool isGL_APPLE_transform_hint()
 bool isGL_APPLE_vertex_array_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_APPLE_vertex_array_object;
-	
+
 	return isSupported;
 }
 
@@ -330,7 +330,7 @@ GLboolean glIsVertexArrayAPPLE( GLuint array )
 bool isGL_APPLE_vertex_array_range()
 {
 	const bool isSupported = gleGetCurrent()->isGL_APPLE_vertex_array_range;
-	
+
 	return isSupported;
 }
 
@@ -357,7 +357,7 @@ void glVertexArrayParameteriAPPLE( GLenum pname, GLint param )
 bool isGL_APPLE_ycbcr_422()
 {
 	const bool isSupported = gleGetCurrent()->isGL_APPLE_ycbcr_422;
-	
+
 	return isSupported;
 }
 
@@ -366,7 +366,7 @@ bool isGL_APPLE_ycbcr_422()
 bool isGL_ARB_color_buffer_float()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_color_buffer_float;
-	
+
 	return isSupported;
 }
 
@@ -381,7 +381,7 @@ void glClampColorARB( GLenum target, GLenum clamp )
 bool isGL_ARB_compatibility()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_compatibility;
-	
+
 	return isSupported;
 }
 
@@ -390,7 +390,7 @@ bool isGL_ARB_compatibility()
 bool isGL_ARB_copy_buffer()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_copy_buffer;
-	
+
 	return isSupported;
 }
 
@@ -405,7 +405,7 @@ void glCopyBufferSubData( GLenum readTarget, GLenum writeTarget, GLintptr readOf
 bool isGL_ARB_depth_buffer_float()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_depth_buffer_float;
-	
+
 	return isSupported;
 }
 
@@ -414,7 +414,7 @@ bool isGL_ARB_depth_buffer_float()
 bool isGL_ARB_depth_texture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_depth_texture;
-	
+
 	return isSupported;
 }
 
@@ -423,7 +423,7 @@ bool isGL_ARB_depth_texture()
 bool isGL_ARB_draw_buffers()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_draw_buffers;
-	
+
 	return isSupported;
 }
 
@@ -438,7 +438,7 @@ void glDrawBuffersARB( GLsizei n, const GLenum *bufs )
 bool isGL_ARB_draw_instanced()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_draw_instanced;
-	
+
 	return isSupported;
 }
 
@@ -459,7 +459,7 @@ void glDrawElementsInstancedARB( GLenum mode, GLsizei count, GLenum type, const 
 bool isGL_ARB_fragment_program()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_fragment_program;
-	
+
 	return isSupported;
 }
 
@@ -468,7 +468,7 @@ bool isGL_ARB_fragment_program()
 bool isGL_ARB_fragment_program_shadow()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_fragment_program_shadow;
-	
+
 	return isSupported;
 }
 
@@ -477,7 +477,7 @@ bool isGL_ARB_fragment_program_shadow()
 bool isGL_ARB_fragment_shader()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_fragment_shader;
-	
+
 	return isSupported;
 }
 
@@ -486,7 +486,7 @@ bool isGL_ARB_fragment_shader()
 bool isGL_ARB_framebuffer_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_framebuffer_object;
-	
+
 	return isSupported;
 }
 
@@ -615,7 +615,7 @@ void glFramebufferTextureLayer( GLenum target, GLenum attachment, GLuint texture
 bool isGL_ARB_framebuffer_object_DEPRECATED()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_framebuffer_object_DEPRECATED;
-	
+
 	return isSupported;
 }
 
@@ -624,7 +624,7 @@ bool isGL_ARB_framebuffer_object_DEPRECATED()
 bool isGL_ARB_framebuffer_sRGB()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_framebuffer_sRGB;
-	
+
 	return isSupported;
 }
 
@@ -633,7 +633,7 @@ bool isGL_ARB_framebuffer_sRGB()
 bool isGL_ARB_geometry_shader4()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_geometry_shader4;
-	
+
 	return isSupported;
 }
 
@@ -666,7 +666,7 @@ void glFramebufferTextureFaceARB( GLenum target, GLenum attachment, GLuint textu
 bool isGL_ARB_half_float_pixel()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_half_float_pixel;
-	
+
 	return isSupported;
 }
 
@@ -675,7 +675,7 @@ bool isGL_ARB_half_float_pixel()
 bool isGL_ARB_half_float_vertex()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_half_float_vertex;
-	
+
 	return isSupported;
 }
 
@@ -684,7 +684,7 @@ bool isGL_ARB_half_float_vertex()
 bool isGL_ARB_imaging()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_imaging;
-	
+
 	return isSupported;
 }
 
@@ -693,7 +693,7 @@ bool isGL_ARB_imaging()
 bool isGL_ARB_imaging_DEPRECATED()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_imaging_DEPRECATED;
-	
+
 	return isSupported;
 }
 
@@ -702,7 +702,7 @@ bool isGL_ARB_imaging_DEPRECATED()
 bool isGL_ARB_instanced_arrays()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_instanced_arrays;
-	
+
 	return isSupported;
 }
 
@@ -717,7 +717,7 @@ void glVertexAttribDivisorARB( GLuint index, GLuint divisor )
 bool isGL_ARB_map_buffer_range()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_map_buffer_range;
-	
+
 	return isSupported;
 }
 
@@ -738,7 +738,7 @@ void glFlushMappedBufferRange( GLenum target, GLintptr offset, GLsizeiptr length
 bool isGL_ARB_matrix_palette()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_matrix_palette;
-	
+
 	return isSupported;
 }
 
@@ -777,7 +777,7 @@ void glMatrixIndexPointerARB( GLint size, GLenum type, GLsizei stride, const GLv
 bool isGL_ARB_multisample()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_multisample;
-	
+
 	return isSupported;
 }
 
@@ -792,7 +792,7 @@ void glSampleCoverageARB( GLclampf value, GLboolean invert )
 bool isGL_ARB_multitexture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_multitexture;
-	
+
 	return isSupported;
 }
 
@@ -1005,7 +1005,7 @@ void glMultiTexCoord4svARB( GLenum target, const GLshort *v )
 bool isGL_ARB_occlusion_query()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_occlusion_query;
-	
+
 	return isSupported;
 }
 
@@ -1062,7 +1062,7 @@ void glGetQueryObjectuivARB( GLuint id, GLenum pname, GLuint *params )
 bool isGL_ARB_pixel_buffer_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_pixel_buffer_object;
-	
+
 	return isSupported;
 }
 
@@ -1071,7 +1071,7 @@ bool isGL_ARB_pixel_buffer_object()
 bool isGL_ARB_point_parameters()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_point_parameters;
-	
+
 	return isSupported;
 }
 
@@ -1092,7 +1092,7 @@ void glPointParameterfvARB( GLenum pname, const GLfloat *params )
 bool isGL_ARB_point_sprite()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_point_sprite;
-	
+
 	return isSupported;
 }
 
@@ -1101,7 +1101,7 @@ bool isGL_ARB_point_sprite()
 bool isGL_ARB_shader_objects()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_shader_objects;
-	
+
 	return isSupported;
 }
 
@@ -1344,7 +1344,7 @@ void glGetShaderSourceARB( GLhandleARB obj, GLsizei maxLength, GLsizei *length, 
 bool isGL_ARB_shading_language_100()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_shading_language_100;
-	
+
 	return isSupported;
 }
 
@@ -1353,7 +1353,7 @@ bool isGL_ARB_shading_language_100()
 bool isGL_ARB_shadow()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_shadow;
-	
+
 	return isSupported;
 }
 
@@ -1362,7 +1362,7 @@ bool isGL_ARB_shadow()
 bool isGL_ARB_shadow_ambient()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_shadow_ambient;
-	
+
 	return isSupported;
 }
 
@@ -1371,7 +1371,7 @@ bool isGL_ARB_shadow_ambient()
 bool isGL_ARB_texture_border_clamp()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_border_clamp;
-	
+
 	return isSupported;
 }
 
@@ -1380,7 +1380,7 @@ bool isGL_ARB_texture_border_clamp()
 bool isGL_ARB_texture_buffer_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_buffer_object;
-	
+
 	return isSupported;
 }
 
@@ -1395,7 +1395,7 @@ void glTexBufferARB( GLenum target, GLenum internalformat, GLuint buffer )
 bool isGL_ARB_texture_compression()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_compression;
-	
+
 	return isSupported;
 }
 
@@ -1446,7 +1446,7 @@ void glGetCompressedTexImageARB( GLenum target, GLint level, GLvoid *img )
 bool isGL_ARB_texture_compression_rgtc()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_compression_rgtc;
-	
+
 	return isSupported;
 }
 
@@ -1455,7 +1455,7 @@ bool isGL_ARB_texture_compression_rgtc()
 bool isGL_ARB_texture_cube_map()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_cube_map;
-	
+
 	return isSupported;
 }
 
@@ -1464,7 +1464,7 @@ bool isGL_ARB_texture_cube_map()
 bool isGL_ARB_texture_env_add()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_env_add;
-	
+
 	return isSupported;
 }
 
@@ -1473,7 +1473,7 @@ bool isGL_ARB_texture_env_add()
 bool isGL_ARB_texture_env_combine()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_env_combine;
-	
+
 	return isSupported;
 }
 
@@ -1482,7 +1482,7 @@ bool isGL_ARB_texture_env_combine()
 bool isGL_ARB_texture_env_crossbar()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_env_crossbar;
-	
+
 	return isSupported;
 }
 
@@ -1491,7 +1491,7 @@ bool isGL_ARB_texture_env_crossbar()
 bool isGL_ARB_texture_env_dot3()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_env_dot3;
-	
+
 	return isSupported;
 }
 
@@ -1500,7 +1500,7 @@ bool isGL_ARB_texture_env_dot3()
 bool isGL_ARB_texture_float()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_float;
-	
+
 	return isSupported;
 }
 
@@ -1509,7 +1509,7 @@ bool isGL_ARB_texture_float()
 bool isGL_ARB_texture_mirrored_repeat()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_mirrored_repeat;
-	
+
 	return isSupported;
 }
 
@@ -1518,7 +1518,7 @@ bool isGL_ARB_texture_mirrored_repeat()
 bool isGL_ARB_texture_non_power_of_two()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_non_power_of_two;
-	
+
 	return isSupported;
 }
 
@@ -1527,7 +1527,7 @@ bool isGL_ARB_texture_non_power_of_two()
 bool isGL_ARB_texture_rectangle()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_rectangle;
-	
+
 	return isSupported;
 }
 
@@ -1536,7 +1536,7 @@ bool isGL_ARB_texture_rectangle()
 bool isGL_ARB_texture_rg()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_rg;
-	
+
 	return isSupported;
 }
 
@@ -1545,7 +1545,7 @@ bool isGL_ARB_texture_rg()
 bool isGL_ARB_transpose_matrix()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_transpose_matrix;
-	
+
 	return isSupported;
 }
 
@@ -1578,7 +1578,7 @@ void glMultTransposeMatrixdARB( const GLdouble *m )
 bool isGL_ARB_uniform_buffer_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_uniform_buffer_object;
-	
+
 	return isSupported;
 }
 
@@ -1629,7 +1629,7 @@ void glUniformBlockBinding( GLuint program, GLuint uniformBlockIndex, GLuint uni
 bool isGL_ARB_vertex_array_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_vertex_array_object;
-	
+
 	return isSupported;
 }
 
@@ -1662,7 +1662,7 @@ GLboolean glIsVertexArray( GLuint array )
 bool isGL_ARB_vertex_blend()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_vertex_blend;
-	
+
 	return isSupported;
 }
 
@@ -1731,7 +1731,7 @@ void glVertexBlendARB( GLint count )
 bool isGL_ARB_vertex_buffer_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_vertex_buffer_object;
-	
+
 	return isSupported;
 }
 
@@ -1806,7 +1806,7 @@ void glGetBufferPointervARB( GLenum target, GLenum pname, GLvoid* *params )
 bool isGL_ARB_vertex_program()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_vertex_program;
-	
+
 	return isSupported;
 }
 
@@ -2187,7 +2187,7 @@ GLboolean glIsProgramARB( GLuint program )
 bool isGL_ARB_vertex_shader()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_vertex_shader;
-	
+
 	return isSupported;
 }
 
@@ -2214,7 +2214,7 @@ GLint glGetAttribLocationARB( GLhandleARB programObj, const GLcharARB *name )
 bool isGL_ARB_window_pos()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_window_pos;
-	
+
 	return isSupported;
 }
 
@@ -2319,7 +2319,7 @@ void glWindowPos3svARB( const GLshort *v )
 bool isGL_ATI_draw_buffers()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_draw_buffers;
-	
+
 	return isSupported;
 }
 
@@ -2334,7 +2334,7 @@ void glDrawBuffersATI( GLsizei n, const GLenum *bufs )
 bool isGL_ATI_element_array()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_element_array;
-	
+
 	return isSupported;
 }
 
@@ -2361,7 +2361,7 @@ void glDrawRangeElementArrayATI( GLenum mode, GLuint start, GLuint end, GLsizei 
 bool isGL_ATI_envmap_bumpmap()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_envmap_bumpmap;
-	
+
 	return isSupported;
 }
 
@@ -2394,7 +2394,7 @@ void glGetTexBumpParameterfvATI( GLenum pname, GLfloat *param )
 bool isGL_ATI_fragment_shader()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_fragment_shader;
-	
+
 	return isSupported;
 }
 
@@ -2487,7 +2487,7 @@ void glSetFragmentShaderConstantATI( GLuint dst, const GLfloat *value )
 bool isGL_ATI_map_object_buffer()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_map_object_buffer;
-	
+
 	return isSupported;
 }
 
@@ -2508,7 +2508,7 @@ void glUnmapObjectBufferATI( GLuint buffer )
 bool isGL_ATI_meminfo()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_meminfo;
-	
+
 	return isSupported;
 }
 
@@ -2517,7 +2517,7 @@ bool isGL_ATI_meminfo()
 bool isGL_ATI_pixel_format_float()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_pixel_format_float;
-	
+
 	return isSupported;
 }
 
@@ -2526,7 +2526,7 @@ bool isGL_ATI_pixel_format_float()
 bool isGL_ATI_pn_triangles()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_pn_triangles;
-	
+
 	return isSupported;
 }
 
@@ -2547,7 +2547,7 @@ void glPNTrianglesfATI( GLenum pname, GLfloat param )
 bool isGL_ATI_separate_stencil()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_separate_stencil;
-	
+
 	return isSupported;
 }
 
@@ -2568,7 +2568,7 @@ void glStencilFuncSeparateATI( GLenum frontfunc, GLenum backfunc, GLint ref, GLu
 bool isGL_ATI_text_fragment_shader()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_text_fragment_shader;
-	
+
 	return isSupported;
 }
 
@@ -2577,7 +2577,7 @@ bool isGL_ATI_text_fragment_shader()
 bool isGL_ATI_texture_env_combine3()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_texture_env_combine3;
-	
+
 	return isSupported;
 }
 
@@ -2586,7 +2586,7 @@ bool isGL_ATI_texture_env_combine3()
 bool isGL_ATI_texture_float()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_texture_float;
-	
+
 	return isSupported;
 }
 
@@ -2595,7 +2595,7 @@ bool isGL_ATI_texture_float()
 bool isGL_ATI_texture_mirror_once()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_texture_mirror_once;
-	
+
 	return isSupported;
 }
 
@@ -2604,7 +2604,7 @@ bool isGL_ATI_texture_mirror_once()
 bool isGL_ATI_vertex_array_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_vertex_array_object;
-	
+
 	return isSupported;
 }
 
@@ -2685,7 +2685,7 @@ void glGetVariantArrayObjectivATI( GLuint id, GLenum pname, GLint *params )
 bool isGL_ATI_vertex_attrib_array_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_vertex_attrib_array_object;
-	
+
 	return isSupported;
 }
 
@@ -2712,7 +2712,7 @@ void glGetVertexAttribArrayObjectivATI( GLuint index, GLenum pname, GLint *param
 bool isGL_ATI_vertex_streams()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ATI_vertex_streams;
-	
+
 	return isSupported;
 }
 
@@ -2991,7 +2991,7 @@ void glVertexBlendEnvfATI( GLenum pname, GLfloat param )
 bool isGL_EXT_422_pixels()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_422_pixels;
-	
+
 	return isSupported;
 }
 
@@ -3000,7 +3000,7 @@ bool isGL_EXT_422_pixels()
 bool isGL_EXT_abgr()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_abgr;
-	
+
 	return isSupported;
 }
 
@@ -3009,7 +3009,7 @@ bool isGL_EXT_abgr()
 bool isGL_EXT_bgra()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_bgra;
-	
+
 	return isSupported;
 }
 
@@ -3018,7 +3018,7 @@ bool isGL_EXT_bgra()
 bool isGL_EXT_bindable_uniform()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_bindable_uniform;
-	
+
 	return isSupported;
 }
 
@@ -3045,7 +3045,7 @@ GLintptr glGetUniformOffsetEXT( GLuint program, GLint location )
 bool isGL_EXT_blend_color()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_blend_color;
-	
+
 	return isSupported;
 }
 
@@ -3060,7 +3060,7 @@ void glBlendColorEXT( GLclampf red, GLclampf green, GLclampf blue, GLclampf alph
 bool isGL_EXT_blend_equation_separate()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_blend_equation_separate;
-	
+
 	return isSupported;
 }
 
@@ -3075,7 +3075,7 @@ void glBlendEquationSeparateEXT( GLenum modeRGB, GLenum modeAlpha )
 bool isGL_EXT_blend_func_separate()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_blend_func_separate;
-	
+
 	return isSupported;
 }
 
@@ -3090,7 +3090,7 @@ void glBlendFuncSeparateEXT( GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfacto
 bool isGL_EXT_blend_logic_op()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_blend_logic_op;
-	
+
 	return isSupported;
 }
 
@@ -3099,7 +3099,7 @@ bool isGL_EXT_blend_logic_op()
 bool isGL_EXT_blend_minmax()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_blend_minmax;
-	
+
 	return isSupported;
 }
 
@@ -3114,7 +3114,7 @@ void glBlendEquationEXT( GLenum mode )
 bool isGL_EXT_blend_subtract()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_blend_subtract;
-	
+
 	return isSupported;
 }
 
@@ -3123,7 +3123,7 @@ bool isGL_EXT_blend_subtract()
 bool isGL_EXT_clip_volume_hint()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_clip_volume_hint;
-	
+
 	return isSupported;
 }
 
@@ -3132,7 +3132,7 @@ bool isGL_EXT_clip_volume_hint()
 bool isGL_EXT_cmyka()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_cmyka;
-	
+
 	return isSupported;
 }
 
@@ -3141,7 +3141,7 @@ bool isGL_EXT_cmyka()
 bool isGL_EXT_color_subtable()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_color_subtable;
-	
+
 	return isSupported;
 }
 
@@ -3162,7 +3162,7 @@ void glCopyColorSubTableEXT( GLenum target, GLsizei start, GLint x, GLint y, GLs
 bool isGL_EXT_compiled_vertex_array()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_compiled_vertex_array;
-	
+
 	return isSupported;
 }
 
@@ -3183,7 +3183,7 @@ void glUnlockArraysEXT( void )
 bool isGL_EXT_convolution()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_convolution;
-	
+
 	return isSupported;
 }
 
@@ -3270,7 +3270,7 @@ void glSeparableFilter2DEXT( GLenum target, GLenum internalformat, GLsizei width
 bool isGL_EXT_coordinate_frame()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_coordinate_frame;
-	
+
 	return isSupported;
 }
 
@@ -3411,7 +3411,7 @@ void glBinormalPointerEXT( GLenum type, GLsizei stride, const GLvoid *pointer )
 bool isGL_EXT_copy_texture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_copy_texture;
-	
+
 	return isSupported;
 }
 
@@ -3450,7 +3450,7 @@ void glCopyTexSubImage3DEXT( GLenum target, GLint level, GLint xoffset, GLint yo
 bool isGL_EXT_cull_vertex()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_cull_vertex;
-	
+
 	return isSupported;
 }
 
@@ -3471,7 +3471,7 @@ void glCullParameterfvEXT( GLenum pname, GLfloat *params )
 bool isGL_EXT_depth_bounds_test()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_depth_bounds_test;
-	
+
 	return isSupported;
 }
 
@@ -3486,7 +3486,7 @@ void glDepthBoundsEXT( GLclampd zmin, GLclampd zmax )
 bool isGL_EXT_direct_state_access()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_direct_state_access;
-	
+
 	return isSupported;
 }
 
@@ -4611,7 +4611,7 @@ void glMultiTexRenderbufferEXT( GLenum texunit, GLenum target, GLuint renderbuff
 bool isGL_EXT_draw_buffers2()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_draw_buffers2;
-	
+
 	return isSupported;
 }
 
@@ -4656,7 +4656,7 @@ GLboolean glIsEnabledIndexedEXT( GLenum target, GLuint index )
 bool isGL_EXT_draw_instanced()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_draw_instanced;
-	
+
 	return isSupported;
 }
 
@@ -4677,7 +4677,7 @@ void glDrawElementsInstancedEXT( GLenum mode, GLsizei count, GLenum type, const 
 bool isGL_EXT_draw_range_elements()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_draw_range_elements;
-	
+
 	return isSupported;
 }
 
@@ -4692,7 +4692,7 @@ void glDrawRangeElementsEXT( GLenum mode, GLuint start, GLuint end, GLsizei coun
 bool isGL_EXT_fog_coord()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_fog_coord;
-	
+
 	return isSupported;
 }
 
@@ -4731,7 +4731,7 @@ void glFogCoordPointerEXT( GLenum type, GLsizei stride, const GLvoid *pointer )
 bool isGL_EXT_framebuffer_blit()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_framebuffer_blit;
-	
+
 	return isSupported;
 }
 
@@ -4746,7 +4746,7 @@ void glBlitFramebufferEXT( GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, G
 bool isGL_EXT_framebuffer_multisample()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_framebuffer_multisample;
-	
+
 	return isSupported;
 }
 
@@ -4761,7 +4761,7 @@ void glRenderbufferStorageMultisampleEXT( GLenum target, GLsizei samples, GLenum
 bool isGL_EXT_framebuffer_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_framebuffer_object;
-	
+
 	return isSupported;
 }
 
@@ -4872,7 +4872,7 @@ void glGenerateMipmapEXT( GLenum target )
 bool isGL_EXT_framebuffer_sRGB()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_framebuffer_sRGB;
-	
+
 	return isSupported;
 }
 
@@ -4881,7 +4881,7 @@ bool isGL_EXT_framebuffer_sRGB()
 bool isGL_EXT_geometry_shader4()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_geometry_shader4;
-	
+
 	return isSupported;
 }
 
@@ -4896,7 +4896,7 @@ void glProgramParameteriEXT( GLuint program, GLenum pname, GLint value )
 bool isGL_EXT_gpu_program_parameters()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_gpu_program_parameters;
-	
+
 	return isSupported;
 }
 
@@ -4917,7 +4917,7 @@ void glProgramLocalParameters4fvEXT( GLenum target, GLuint index, GLsizei count,
 bool isGL_EXT_gpu_shader4()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_gpu_shader4;
-	
+
 	return isSupported;
 }
 
@@ -4992,7 +4992,7 @@ void glUniform4uivEXT( GLint location, GLsizei count, const GLuint *value )
 bool isGL_EXT_histogram()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_histogram;
-	
+
 	return isSupported;
 }
 
@@ -5061,7 +5061,7 @@ void glResetMinmaxEXT( GLenum target )
 bool isGL_EXT_index_array_formats()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_index_array_formats;
-	
+
 	return isSupported;
 }
 
@@ -5070,7 +5070,7 @@ bool isGL_EXT_index_array_formats()
 bool isGL_EXT_index_func()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_index_func;
-	
+
 	return isSupported;
 }
 
@@ -5085,7 +5085,7 @@ void glIndexFuncEXT( GLenum func, GLclampf ref )
 bool isGL_EXT_index_material()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_index_material;
-	
+
 	return isSupported;
 }
 
@@ -5100,7 +5100,7 @@ void glIndexMaterialEXT( GLenum face, GLenum mode )
 bool isGL_EXT_index_texture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_index_texture;
-	
+
 	return isSupported;
 }
 
@@ -5109,7 +5109,7 @@ bool isGL_EXT_index_texture()
 bool isGL_EXT_light_texture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_light_texture;
-	
+
 	return isSupported;
 }
 
@@ -5136,7 +5136,7 @@ void glTextureMaterialEXT( GLenum face, GLenum mode )
 bool isGL_EXT_misc_attribute()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_misc_attribute;
-	
+
 	return isSupported;
 }
 
@@ -5145,7 +5145,7 @@ bool isGL_EXT_misc_attribute()
 bool isGL_EXT_multi_draw_arrays()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_multi_draw_arrays;
-	
+
 	return isSupported;
 }
 
@@ -5166,7 +5166,7 @@ void glMultiDrawElementsEXT( GLenum mode, const GLsizei *count, GLenum type, con
 bool isGL_EXT_multisample()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_multisample;
-	
+
 	return isSupported;
 }
 
@@ -5187,7 +5187,7 @@ void glSamplePatternEXT( GLenum pattern )
 bool isGL_EXT_packed_depth_stencil()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_packed_depth_stencil;
-	
+
 	return isSupported;
 }
 
@@ -5196,7 +5196,7 @@ bool isGL_EXT_packed_depth_stencil()
 bool isGL_EXT_packed_float()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_packed_float;
-	
+
 	return isSupported;
 }
 
@@ -5205,7 +5205,7 @@ bool isGL_EXT_packed_float()
 bool isGL_EXT_packed_pixels()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_packed_pixels;
-	
+
 	return isSupported;
 }
 
@@ -5214,7 +5214,7 @@ bool isGL_EXT_packed_pixels()
 bool isGL_EXT_paletted_texture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_paletted_texture;
-	
+
 	return isSupported;
 }
 
@@ -5247,7 +5247,7 @@ void glGetColorTableParameterfvEXT( GLenum target, GLenum pname, GLfloat *params
 bool isGL_EXT_pixel_buffer_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_pixel_buffer_object;
-	
+
 	return isSupported;
 }
 
@@ -5256,7 +5256,7 @@ bool isGL_EXT_pixel_buffer_object()
 bool isGL_EXT_pixel_transform()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_pixel_transform;
-	
+
 	return isSupported;
 }
 
@@ -5289,7 +5289,7 @@ void glPixelTransformParameterfvEXT( GLenum target, GLenum pname, const GLfloat 
 bool isGL_EXT_pixel_transform_color_table()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_pixel_transform_color_table;
-	
+
 	return isSupported;
 }
 
@@ -5298,7 +5298,7 @@ bool isGL_EXT_pixel_transform_color_table()
 bool isGL_EXT_point_parameters()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_point_parameters;
-	
+
 	return isSupported;
 }
 
@@ -5319,7 +5319,7 @@ void glPointParameterfvEXT( GLenum pname, const GLfloat *params )
 bool isGL_EXT_polygon_offset()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_polygon_offset;
-	
+
 	return isSupported;
 }
 
@@ -5334,7 +5334,7 @@ void glPolygonOffsetEXT( GLfloat factor, GLfloat bias )
 bool isGL_EXT_provoking_vertex()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_provoking_vertex;
-	
+
 	return isSupported;
 }
 
@@ -5349,7 +5349,7 @@ void glProvokingVertexEXT( GLenum mode )
 bool isGL_EXT_rescale_normal()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_rescale_normal;
-	
+
 	return isSupported;
 }
 
@@ -5358,7 +5358,7 @@ bool isGL_EXT_rescale_normal()
 bool isGL_EXT_secondary_color()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_secondary_color;
-	
+
 	return isSupported;
 }
 
@@ -5469,7 +5469,7 @@ void glSecondaryColorPointerEXT( GLint size, GLenum type, GLsizei stride, const 
 bool isGL_EXT_separate_specular_color()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_separate_specular_color;
-	
+
 	return isSupported;
 }
 
@@ -5478,7 +5478,7 @@ bool isGL_EXT_separate_specular_color()
 bool isGL_EXT_shadow_funcs()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_shadow_funcs;
-	
+
 	return isSupported;
 }
 
@@ -5487,7 +5487,7 @@ bool isGL_EXT_shadow_funcs()
 bool isGL_EXT_shared_texture_palette()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_shared_texture_palette;
-	
+
 	return isSupported;
 }
 
@@ -5496,7 +5496,7 @@ bool isGL_EXT_shared_texture_palette()
 bool isGL_EXT_stencil_clear_tag()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_stencil_clear_tag;
-	
+
 	return isSupported;
 }
 
@@ -5511,7 +5511,7 @@ void glStencilClearTagEXT( GLsizei stencilTagBits, GLuint stencilClearTag )
 bool isGL_EXT_stencil_two_side()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_stencil_two_side;
-	
+
 	return isSupported;
 }
 
@@ -5526,7 +5526,7 @@ void glActiveStencilFaceEXT( GLenum face )
 bool isGL_EXT_stencil_wrap()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_stencil_wrap;
-	
+
 	return isSupported;
 }
 
@@ -5535,7 +5535,7 @@ bool isGL_EXT_stencil_wrap()
 bool isGL_EXT_subtexture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_subtexture;
-	
+
 	return isSupported;
 }
 
@@ -5556,7 +5556,7 @@ void glTexSubImage2DEXT( GLenum target, GLint level, GLint xoffset, GLint yoffse
 bool isGL_EXT_texture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture;
-	
+
 	return isSupported;
 }
 
@@ -5565,7 +5565,7 @@ bool isGL_EXT_texture()
 bool isGL_EXT_texture3D()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture3D;
-	
+
 	return isSupported;
 }
 
@@ -5586,7 +5586,7 @@ void glTexSubImage3DEXT( GLenum target, GLint level, GLint xoffset, GLint yoffse
 bool isGL_EXT_texture_array()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_array;
-	
+
 	return isSupported;
 }
 
@@ -5595,7 +5595,7 @@ bool isGL_EXT_texture_array()
 bool isGL_EXT_texture_buffer_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_buffer_object;
-	
+
 	return isSupported;
 }
 
@@ -5610,7 +5610,7 @@ void glTexBufferEXT( GLenum target, GLenum internalformat, GLuint buffer )
 bool isGL_EXT_texture_compression_latc()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_compression_latc;
-	
+
 	return isSupported;
 }
 
@@ -5619,7 +5619,7 @@ bool isGL_EXT_texture_compression_latc()
 bool isGL_EXT_texture_compression_rgtc()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_compression_rgtc;
-	
+
 	return isSupported;
 }
 
@@ -5628,7 +5628,7 @@ bool isGL_EXT_texture_compression_rgtc()
 bool isGL_EXT_texture_compression_s3tc()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_compression_s3tc;
-	
+
 	return isSupported;
 }
 
@@ -5637,7 +5637,7 @@ bool isGL_EXT_texture_compression_s3tc()
 bool isGL_EXT_texture_cube_map()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_cube_map;
-	
+
 	return isSupported;
 }
 
@@ -5646,7 +5646,7 @@ bool isGL_EXT_texture_cube_map()
 bool isGL_EXT_texture_env_add()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_env_add;
-	
+
 	return isSupported;
 }
 
@@ -5655,7 +5655,7 @@ bool isGL_EXT_texture_env_add()
 bool isGL_EXT_texture_env_combine()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_env_combine;
-	
+
 	return isSupported;
 }
 
@@ -5664,7 +5664,7 @@ bool isGL_EXT_texture_env_combine()
 bool isGL_EXT_texture_env_dot3()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_env_dot3;
-	
+
 	return isSupported;
 }
 
@@ -5673,7 +5673,7 @@ bool isGL_EXT_texture_env_dot3()
 bool isGL_EXT_texture_filter_anisotropic()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_filter_anisotropic;
-	
+
 	return isSupported;
 }
 
@@ -5682,7 +5682,7 @@ bool isGL_EXT_texture_filter_anisotropic()
 bool isGL_EXT_texture_integer()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_integer;
-	
+
 	return isSupported;
 }
 
@@ -5727,7 +5727,7 @@ void glClearColorIuiEXT( GLuint red, GLuint green, GLuint blue, GLuint alpha )
 bool isGL_EXT_texture_lod_bias()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_lod_bias;
-	
+
 	return isSupported;
 }
 
@@ -5736,7 +5736,7 @@ bool isGL_EXT_texture_lod_bias()
 bool isGL_EXT_texture_mirror_clamp()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_mirror_clamp;
-	
+
 	return isSupported;
 }
 
@@ -5745,7 +5745,7 @@ bool isGL_EXT_texture_mirror_clamp()
 bool isGL_EXT_texture_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_object;
-	
+
 	return isSupported;
 }
 
@@ -5790,7 +5790,7 @@ void glPrioritizeTexturesEXT( GLsizei n, const GLuint *textures, const GLclampf 
 bool isGL_EXT_texture_perturb_normal()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_perturb_normal;
-	
+
 	return isSupported;
 }
 
@@ -5805,7 +5805,7 @@ void glTextureNormalEXT( GLenum mode )
 bool isGL_EXT_texture_sRGB()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_sRGB;
-	
+
 	return isSupported;
 }
 
@@ -5814,7 +5814,7 @@ bool isGL_EXT_texture_sRGB()
 bool isGL_EXT_texture_shared_exponent()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_shared_exponent;
-	
+
 	return isSupported;
 }
 
@@ -5823,7 +5823,7 @@ bool isGL_EXT_texture_shared_exponent()
 bool isGL_EXT_texture_swizzle()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_swizzle;
-	
+
 	return isSupported;
 }
 
@@ -5832,7 +5832,7 @@ bool isGL_EXT_texture_swizzle()
 bool isGL_EXT_timer_query()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_timer_query;
-	
+
 	return isSupported;
 }
 
@@ -5853,7 +5853,7 @@ void glGetQueryObjectui64vEXT( GLuint id, GLenum pname, GLuint64EXT *params )
 bool isGL_EXT_transform_feedback()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_transform_feedback;
-	
+
 	return isSupported;
 }
 
@@ -5904,7 +5904,7 @@ void glGetTransformFeedbackVaryingEXT( GLuint program, GLuint index, GLsizei buf
 bool isGL_EXT_vertex_array()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_vertex_array;
-	
+
 	return isSupported;
 }
 
@@ -5967,7 +5967,7 @@ void glVertexPointerEXT( GLint size, GLenum type, GLsizei stride, GLsizei count,
 bool isGL_EXT_vertex_array_bgra()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_vertex_array_bgra;
-	
+
 	return isSupported;
 }
 
@@ -5976,7 +5976,7 @@ bool isGL_EXT_vertex_array_bgra()
 bool isGL_EXT_vertex_shader()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_vertex_shader;
-	
+
 	return isSupported;
 }
 
@@ -6237,7 +6237,7 @@ void glGetLocalConstantFloatvEXT( GLuint id, GLenum value, GLfloat *data )
 bool isGL_EXT_vertex_weighting()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_vertex_weighting;
-	
+
 	return isSupported;
 }
 
@@ -6264,7 +6264,7 @@ void glVertexWeightPointerEXT( GLsizei size, GLenum type, GLsizei stride, const 
 bool isGL_FfdMaskSGIX()
 {
 	const bool isSupported = gleGetCurrent()->isGL_FfdMaskSGIX;
-	
+
 	return isSupported;
 }
 
@@ -6273,7 +6273,7 @@ bool isGL_FfdMaskSGIX()
 bool isGL_GREMEDY_frame_terminator()
 {
 	const bool isSupported = gleGetCurrent()->isGL_GREMEDY_frame_terminator;
-	
+
 	return isSupported;
 }
 
@@ -6288,7 +6288,7 @@ void glFrameTerminatorGREMEDY( void )
 bool isGL_GREMEDY_string_marker()
 {
 	const bool isSupported = gleGetCurrent()->isGL_GREMEDY_string_marker;
-	
+
 	return isSupported;
 }
 
@@ -6303,7 +6303,7 @@ void glStringMarkerGREMEDY( GLsizei len, const GLvoid *string )
 bool isGL_HP_convolution_border_modes()
 {
 	const bool isSupported = gleGetCurrent()->isGL_HP_convolution_border_modes;
-	
+
 	return isSupported;
 }
 
@@ -6312,7 +6312,7 @@ bool isGL_HP_convolution_border_modes()
 bool isGL_HP_image_transform()
 {
 	const bool isSupported = gleGetCurrent()->isGL_HP_image_transform;
-	
+
 	return isSupported;
 }
 
@@ -6357,7 +6357,7 @@ void glGetImageTransformParameterfvHP( GLenum target, GLenum pname, GLfloat *par
 bool isGL_HP_occlusion_test()
 {
 	const bool isSupported = gleGetCurrent()->isGL_HP_occlusion_test;
-	
+
 	return isSupported;
 }
 
@@ -6366,7 +6366,7 @@ bool isGL_HP_occlusion_test()
 bool isGL_HP_texture_lighting()
 {
 	const bool isSupported = gleGetCurrent()->isGL_HP_texture_lighting;
-	
+
 	return isSupported;
 }
 
@@ -6375,7 +6375,7 @@ bool isGL_HP_texture_lighting()
 bool isGL_IBM_cull_vertex()
 {
 	const bool isSupported = gleGetCurrent()->isGL_IBM_cull_vertex;
-	
+
 	return isSupported;
 }
 
@@ -6384,7 +6384,7 @@ bool isGL_IBM_cull_vertex()
 bool isGL_IBM_multimode_draw_arrays()
 {
 	const bool isSupported = gleGetCurrent()->isGL_IBM_multimode_draw_arrays;
-	
+
 	return isSupported;
 }
 
@@ -6405,7 +6405,7 @@ void glMultiModeDrawElementsIBM( const GLenum *mode, const GLsizei *count, GLenu
 bool isGL_IBM_rasterpos_clip()
 {
 	const bool isSupported = gleGetCurrent()->isGL_IBM_rasterpos_clip;
-	
+
 	return isSupported;
 }
 
@@ -6414,7 +6414,7 @@ bool isGL_IBM_rasterpos_clip()
 bool isGL_IBM_texture_mirrored_repeat()
 {
 	const bool isSupported = gleGetCurrent()->isGL_IBM_texture_mirrored_repeat;
-	
+
 	return isSupported;
 }
 
@@ -6423,7 +6423,7 @@ bool isGL_IBM_texture_mirrored_repeat()
 bool isGL_IBM_vertex_array_lists()
 {
 	const bool isSupported = gleGetCurrent()->isGL_IBM_vertex_array_lists;
-	
+
 	return isSupported;
 }
 
@@ -6480,7 +6480,7 @@ void glVertexPointerListIBM( GLint size, GLenum type, GLint stride, const GLvoid
 bool isGL_INGR_blend_func_separate()
 {
 	const bool isSupported = gleGetCurrent()->isGL_INGR_blend_func_separate;
-	
+
 	return isSupported;
 }
 
@@ -6495,7 +6495,7 @@ void glBlendFuncSeparateINGR( GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfact
 bool isGL_INGR_color_clamp()
 {
 	const bool isSupported = gleGetCurrent()->isGL_INGR_color_clamp;
-	
+
 	return isSupported;
 }
 
@@ -6504,7 +6504,7 @@ bool isGL_INGR_color_clamp()
 bool isGL_INGR_interlace_read()
 {
 	const bool isSupported = gleGetCurrent()->isGL_INGR_interlace_read;
-	
+
 	return isSupported;
 }
 
@@ -6513,7 +6513,7 @@ bool isGL_INGR_interlace_read()
 bool isGL_INGR_palette_buffer()
 {
 	const bool isSupported = gleGetCurrent()->isGL_INGR_palette_buffer;
-	
+
 	return isSupported;
 }
 
@@ -6522,7 +6522,7 @@ bool isGL_INGR_palette_buffer()
 bool isGL_INTEL_parallel_arrays()
 {
 	const bool isSupported = gleGetCurrent()->isGL_INTEL_parallel_arrays;
-	
+
 	return isSupported;
 }
 
@@ -6555,7 +6555,7 @@ void glTexCoordPointervINTEL( GLint size, GLenum type, const GLvoid* *pointer )
 bool isGL_INTEL_texture_scissor()
 {
 	const bool isSupported = gleGetCurrent()->isGL_INTEL_texture_scissor;
-	
+
 	return isSupported;
 }
 
@@ -6564,7 +6564,7 @@ bool isGL_INTEL_texture_scissor()
 bool isGL_MESA_pack_invert()
 {
 	const bool isSupported = gleGetCurrent()->isGL_MESA_pack_invert;
-	
+
 	return isSupported;
 }
 
@@ -6573,7 +6573,7 @@ bool isGL_MESA_pack_invert()
 bool isGL_MESA_resize_buffers()
 {
 	const bool isSupported = gleGetCurrent()->isGL_MESA_resize_buffers;
-	
+
 	return isSupported;
 }
 
@@ -6588,7 +6588,7 @@ void glResizeBuffersMESA( void )
 bool isGL_MESA_window_pos()
 {
 	const bool isSupported = gleGetCurrent()->isGL_MESA_window_pos;
-	
+
 	return isSupported;
 }
 
@@ -6741,7 +6741,7 @@ void glWindowPos4svMESA( const GLshort *v )
 bool isGL_MESA_ycbcr_texture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_MESA_ycbcr_texture;
-	
+
 	return isSupported;
 }
 
@@ -6750,7 +6750,7 @@ bool isGL_MESA_ycbcr_texture()
 bool isGL_MESAX_texture_stack()
 {
 	const bool isSupported = gleGetCurrent()->isGL_MESAX_texture_stack;
-	
+
 	return isSupported;
 }
 
@@ -6759,7 +6759,7 @@ bool isGL_MESAX_texture_stack()
 bool isGL_NV_blend_square()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_blend_square;
-	
+
 	return isSupported;
 }
 
@@ -6768,7 +6768,7 @@ bool isGL_NV_blend_square()
 bool isGL_NV_conditional_render()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_conditional_render;
-	
+
 	return isSupported;
 }
 
@@ -6789,7 +6789,7 @@ void glEndConditionalRenderNV( void )
 bool isGL_NV_copy_depth_to_color()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_copy_depth_to_color;
-	
+
 	return isSupported;
 }
 
@@ -6798,7 +6798,7 @@ bool isGL_NV_copy_depth_to_color()
 bool isGL_NV_depth_buffer_float()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_depth_buffer_float;
-	
+
 	return isSupported;
 }
 
@@ -6825,7 +6825,7 @@ void glDepthBoundsdNV( GLdouble zmin, GLdouble zmax )
 bool isGL_NV_depth_clamp()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_depth_clamp;
-	
+
 	return isSupported;
 }
 
@@ -6834,7 +6834,7 @@ bool isGL_NV_depth_clamp()
 bool isGL_NV_evaluators()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_evaluators;
-	
+
 	return isSupported;
 }
 
@@ -6897,7 +6897,7 @@ void glEvalMapsNV( GLenum target, GLenum mode )
 bool isGL_NV_explicit_multisample()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_explicit_multisample;
-	
+
 	return isSupported;
 }
 
@@ -6924,7 +6924,7 @@ void glTexRenderbufferNV( GLenum target, GLuint renderbuffer )
 bool isGL_NV_fence()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_fence;
-	
+
 	return isSupported;
 }
 
@@ -6975,7 +6975,7 @@ void glSetFenceNV( GLuint fence, GLenum condition )
 bool isGL_NV_float_buffer()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_float_buffer;
-	
+
 	return isSupported;
 }
 
@@ -6984,7 +6984,7 @@ bool isGL_NV_float_buffer()
 bool isGL_NV_fog_distance()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_fog_distance;
-	
+
 	return isSupported;
 }
 
@@ -6993,7 +6993,7 @@ bool isGL_NV_fog_distance()
 bool isGL_NV_fragment_program()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_fragment_program;
-	
+
 	return isSupported;
 }
 
@@ -7038,7 +7038,7 @@ void glGetProgramNamedParameterdvNV( GLuint id, GLsizei len, const GLubyte *name
 bool isGL_NV_fragment_program2()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_fragment_program2;
-	
+
 	return isSupported;
 }
 
@@ -7047,7 +7047,7 @@ bool isGL_NV_fragment_program2()
 bool isGL_NV_fragment_program4()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_fragment_program4;
-	
+
 	return isSupported;
 }
 
@@ -7056,7 +7056,7 @@ bool isGL_NV_fragment_program4()
 bool isGL_NV_fragment_program_option()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_fragment_program_option;
-	
+
 	return isSupported;
 }
 
@@ -7065,7 +7065,7 @@ bool isGL_NV_fragment_program_option()
 bool isGL_NV_framebuffer_multisample_coverage()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_framebuffer_multisample_coverage;
-	
+
 	return isSupported;
 }
 
@@ -7080,7 +7080,7 @@ void glRenderbufferStorageMultisampleCoverageNV( GLenum target, GLsizei coverage
 bool isGL_NV_geometry_program4()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_geometry_program4;
-	
+
 	return isSupported;
 }
 
@@ -7113,7 +7113,7 @@ void glFramebufferTextureFaceEXT( GLenum target, GLenum attachment, GLuint textu
 bool isGL_NV_geometry_shader4()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_geometry_shader4;
-	
+
 	return isSupported;
 }
 
@@ -7122,7 +7122,7 @@ bool isGL_NV_geometry_shader4()
 bool isGL_NV_gpu_program4()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_gpu_program4;
-	
+
 	return isSupported;
 }
 
@@ -7227,7 +7227,7 @@ void glGetProgramEnvParameterIuivNV( GLenum target, GLuint index, GLuint *params
 bool isGL_NV_half_float()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_half_float;
-	
+
 	return isSupported;
 }
 
@@ -7512,7 +7512,7 @@ void glVertexAttribs4hvNV( GLuint index, GLsizei n, const GLhalfNV *v )
 bool isGL_NV_light_max_exponent()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_light_max_exponent;
-	
+
 	return isSupported;
 }
 
@@ -7521,7 +7521,7 @@ bool isGL_NV_light_max_exponent()
 bool isGL_NV_multisample_filter_hint()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_multisample_filter_hint;
-	
+
 	return isSupported;
 }
 
@@ -7530,7 +7530,7 @@ bool isGL_NV_multisample_filter_hint()
 bool isGL_NV_occlusion_query()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_occlusion_query;
-	
+
 	return isSupported;
 }
 
@@ -7581,7 +7581,7 @@ void glGetOcclusionQueryuivNV( GLuint id, GLenum pname, GLuint *params )
 bool isGL_NV_packed_depth_stencil()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_packed_depth_stencil;
-	
+
 	return isSupported;
 }
 
@@ -7590,7 +7590,7 @@ bool isGL_NV_packed_depth_stencil()
 bool isGL_NV_parameter_buffer_object()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_parameter_buffer_object;
-	
+
 	return isSupported;
 }
 
@@ -7617,7 +7617,7 @@ void glProgramBufferParametersIuivNV( GLenum target, GLuint buffer, GLuint index
 bool isGL_NV_pixel_data_range()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_pixel_data_range;
-	
+
 	return isSupported;
 }
 
@@ -7638,7 +7638,7 @@ void glFlushPixelDataRangeNV( GLenum target )
 bool isGL_NV_point_sprite()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_point_sprite;
-	
+
 	return isSupported;
 }
 
@@ -7659,7 +7659,7 @@ void glPointParameterivNV( GLenum pname, const GLint *params )
 bool isGL_NV_present_video()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_present_video;
-	
+
 	return isSupported;
 }
 
@@ -7704,7 +7704,7 @@ void glGetVideoui64vNV( GLuint video_slot, GLenum pname, GLuint64EXT *params )
 bool isGL_NV_primitive_restart()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_primitive_restart;
-	
+
 	return isSupported;
 }
 
@@ -7725,7 +7725,7 @@ void glPrimitiveRestartIndexNV( GLuint index )
 bool isGL_NV_register_combiners()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_register_combiners;
-	
+
 	return isSupported;
 }
 
@@ -7812,7 +7812,7 @@ void glGetFinalCombinerInputParameterivNV( GLenum variable, GLenum pname, GLint 
 bool isGL_NV_register_combiners2()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_register_combiners2;
-	
+
 	return isSupported;
 }
 
@@ -7833,7 +7833,7 @@ void glGetCombinerStageParameterfvNV( GLenum stage, GLenum pname, GLfloat *param
 bool isGL_NV_texgen_emboss()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_texgen_emboss;
-	
+
 	return isSupported;
 }
 
@@ -7842,7 +7842,7 @@ bool isGL_NV_texgen_emboss()
 bool isGL_NV_texgen_reflection()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_texgen_reflection;
-	
+
 	return isSupported;
 }
 
@@ -7851,7 +7851,7 @@ bool isGL_NV_texgen_reflection()
 bool isGL_NV_texture_compression_vtc()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_texture_compression_vtc;
-	
+
 	return isSupported;
 }
 
@@ -7860,7 +7860,7 @@ bool isGL_NV_texture_compression_vtc()
 bool isGL_NV_texture_env_combine4()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_texture_env_combine4;
-	
+
 	return isSupported;
 }
 
@@ -7869,7 +7869,7 @@ bool isGL_NV_texture_env_combine4()
 bool isGL_NV_texture_expand_normal()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_texture_expand_normal;
-	
+
 	return isSupported;
 }
 
@@ -7878,7 +7878,7 @@ bool isGL_NV_texture_expand_normal()
 bool isGL_NV_texture_rectangle()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_texture_rectangle;
-	
+
 	return isSupported;
 }
 
@@ -7887,7 +7887,7 @@ bool isGL_NV_texture_rectangle()
 bool isGL_NV_texture_shader()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_texture_shader;
-	
+
 	return isSupported;
 }
 
@@ -7896,7 +7896,7 @@ bool isGL_NV_texture_shader()
 bool isGL_NV_texture_shader2()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_texture_shader2;
-	
+
 	return isSupported;
 }
 
@@ -7905,7 +7905,7 @@ bool isGL_NV_texture_shader2()
 bool isGL_NV_texture_shader3()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_texture_shader3;
-	
+
 	return isSupported;
 }
 
@@ -7914,7 +7914,7 @@ bool isGL_NV_texture_shader3()
 bool isGL_NV_transform_feedback()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_transform_feedback;
-	
+
 	return isSupported;
 }
 
@@ -7989,7 +7989,7 @@ void glGetTransformFeedbackVaryingNV( GLuint program, GLuint index, GLint *locat
 bool isGL_NV_transform_feedback2()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_transform_feedback2;
-	
+
 	return isSupported;
 }
 
@@ -8040,7 +8040,7 @@ void glDrawTransformFeedbackNV( GLenum mode, GLuint id )
 bool isGL_NV_vertex_array_range()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_vertex_array_range;
-	
+
 	return isSupported;
 }
 
@@ -8061,7 +8061,7 @@ void glVertexArrayRangeNV( GLsizei length, const GLvoid *pointer )
 bool isGL_NV_vertex_array_range2()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_vertex_array_range2;
-	
+
 	return isSupported;
 }
 
@@ -8070,7 +8070,7 @@ bool isGL_NV_vertex_array_range2()
 bool isGL_NV_vertex_program()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_vertex_program;
-	
+
 	return isSupported;
 }
 
@@ -8463,7 +8463,7 @@ void glVertexAttribs4ubvNV( GLuint index, GLsizei count, const GLubyte *v )
 bool isGL_NV_vertex_program1_1()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_vertex_program1_1;
-	
+
 	return isSupported;
 }
 
@@ -8472,7 +8472,7 @@ bool isGL_NV_vertex_program1_1()
 bool isGL_NV_vertex_program2()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_vertex_program2;
-	
+
 	return isSupported;
 }
 
@@ -8481,7 +8481,7 @@ bool isGL_NV_vertex_program2()
 bool isGL_NV_vertex_program2_option()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_vertex_program2_option;
-	
+
 	return isSupported;
 }
 
@@ -8490,7 +8490,7 @@ bool isGL_NV_vertex_program2_option()
 bool isGL_NV_vertex_program3()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_vertex_program3;
-	
+
 	return isSupported;
 }
 
@@ -8499,7 +8499,7 @@ bool isGL_NV_vertex_program3()
 bool isGL_NV_vertex_program4()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_vertex_program4;
-	
+
 	return isSupported;
 }
 
@@ -8646,7 +8646,7 @@ void glGetVertexAttribIuivEXT( GLuint index, GLenum pname, GLuint *params )
 bool isGL_OES_read_format()
 {
 	const bool isSupported = gleGetCurrent()->isGL_OES_read_format;
-	
+
 	return isSupported;
 }
 
@@ -8655,7 +8655,7 @@ bool isGL_OES_read_format()
 bool isGL_OML_interlace()
 {
 	const bool isSupported = gleGetCurrent()->isGL_OML_interlace;
-	
+
 	return isSupported;
 }
 
@@ -8664,7 +8664,7 @@ bool isGL_OML_interlace()
 bool isGL_OML_resample()
 {
 	const bool isSupported = gleGetCurrent()->isGL_OML_resample;
-	
+
 	return isSupported;
 }
 
@@ -8673,7 +8673,7 @@ bool isGL_OML_resample()
 bool isGL_OML_subsample()
 {
 	const bool isSupported = gleGetCurrent()->isGL_OML_subsample;
-	
+
 	return isSupported;
 }
 
@@ -8682,7 +8682,7 @@ bool isGL_OML_subsample()
 bool isGL_PGI_misc_hints()
 {
 	const bool isSupported = gleGetCurrent()->isGL_PGI_misc_hints;
-	
+
 	return isSupported;
 }
 
@@ -8697,7 +8697,7 @@ void glHintPGI( GLenum target, GLint mode )
 bool isGL_PGI_vertex_hints()
 {
 	const bool isSupported = gleGetCurrent()->isGL_PGI_vertex_hints;
-	
+
 	return isSupported;
 }
 
@@ -8706,7 +8706,7 @@ bool isGL_PGI_vertex_hints()
 bool isGL_REND_screen_coordinates()
 {
 	const bool isSupported = gleGetCurrent()->isGL_REND_screen_coordinates;
-	
+
 	return isSupported;
 }
 
@@ -8715,7 +8715,7 @@ bool isGL_REND_screen_coordinates()
 bool isGL_S3_s3tc()
 {
 	const bool isSupported = gleGetCurrent()->isGL_S3_s3tc;
-	
+
 	return isSupported;
 }
 
@@ -8724,7 +8724,7 @@ bool isGL_S3_s3tc()
 bool isGL_SGI_color_matrix()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGI_color_matrix;
-	
+
 	return isSupported;
 }
 
@@ -8733,7 +8733,7 @@ bool isGL_SGI_color_matrix()
 bool isGL_SGI_color_table()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGI_color_table;
-	
+
 	return isSupported;
 }
 
@@ -8784,7 +8784,7 @@ void glGetColorTableParameterivSGI( GLenum target, GLenum pname, GLint *params )
 bool isGL_SGI_depth_pass_instrument()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGI_depth_pass_instrument;
-	
+
 	return isSupported;
 }
 
@@ -8793,7 +8793,7 @@ bool isGL_SGI_depth_pass_instrument()
 bool isGL_SGI_texture_color_table()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGI_texture_color_table;
-	
+
 	return isSupported;
 }
 
@@ -8802,7 +8802,7 @@ bool isGL_SGI_texture_color_table()
 bool isGL_SGIS_detail_texture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_detail_texture;
-	
+
 	return isSupported;
 }
 
@@ -8823,7 +8823,7 @@ void glGetDetailTexFuncSGIS( GLenum target, GLfloat *points )
 bool isGL_SGIS_fog_function()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_fog_function;
-	
+
 	return isSupported;
 }
 
@@ -8844,7 +8844,7 @@ void glGetFogFuncSGIS( GLfloat *points )
 bool isGL_SGIS_generate_mipmap()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_generate_mipmap;
-	
+
 	return isSupported;
 }
 
@@ -8853,7 +8853,7 @@ bool isGL_SGIS_generate_mipmap()
 bool isGL_SGIS_multisample()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_multisample;
-	
+
 	return isSupported;
 }
 
@@ -8874,7 +8874,7 @@ void glSamplePatternSGIS( GLenum pattern )
 bool isGL_SGIS_pixel_texture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_pixel_texture;
-	
+
 	return isSupported;
 }
 
@@ -8919,7 +8919,7 @@ void glGetPixelTexGenParameterfvSGIS( GLenum pname, GLfloat *params )
 bool isGL_SGIS_point_line_texgen()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_point_line_texgen;
-	
+
 	return isSupported;
 }
 
@@ -8928,7 +8928,7 @@ bool isGL_SGIS_point_line_texgen()
 bool isGL_SGIS_point_parameters()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_point_parameters;
-	
+
 	return isSupported;
 }
 
@@ -8949,7 +8949,7 @@ void glPointParameterfvSGIS( GLenum pname, const GLfloat *params )
 bool isGL_SGIS_sharpen_texture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_sharpen_texture;
-	
+
 	return isSupported;
 }
 
@@ -8970,7 +8970,7 @@ void glGetSharpenTexFuncSGIS( GLenum target, GLfloat *points )
 bool isGL_SGIS_texture4D()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_texture4D;
-	
+
 	return isSupported;
 }
 
@@ -8991,7 +8991,7 @@ void glTexSubImage4DSGIS( GLenum target, GLint level, GLint xoffset, GLint yoffs
 bool isGL_SGIS_texture_border_clamp()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_texture_border_clamp;
-	
+
 	return isSupported;
 }
 
@@ -9000,7 +9000,7 @@ bool isGL_SGIS_texture_border_clamp()
 bool isGL_SGIS_texture_color_mask()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_texture_color_mask;
-	
+
 	return isSupported;
 }
 
@@ -9015,7 +9015,7 @@ void glTextureColorMaskSGIS( GLboolean red, GLboolean green, GLboolean blue, GLb
 bool isGL_SGIS_texture_edge_clamp()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_texture_edge_clamp;
-	
+
 	return isSupported;
 }
 
@@ -9024,7 +9024,7 @@ bool isGL_SGIS_texture_edge_clamp()
 bool isGL_SGIS_texture_filter4()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_texture_filter4;
-	
+
 	return isSupported;
 }
 
@@ -9045,7 +9045,7 @@ void glTexFilterFuncSGIS( GLenum target, GLenum filter, GLsizei n, const GLfloat
 bool isGL_SGIS_texture_lod()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_texture_lod;
-	
+
 	return isSupported;
 }
 
@@ -9054,7 +9054,7 @@ bool isGL_SGIS_texture_lod()
 bool isGL_SGIS_texture_select()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIS_texture_select;
-	
+
 	return isSupported;
 }
 
@@ -9063,7 +9063,7 @@ bool isGL_SGIS_texture_select()
 bool isGL_SGIX_async()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_async;
-	
+
 	return isSupported;
 }
 
@@ -9108,7 +9108,7 @@ GLboolean glIsAsyncMarkerSGIX( GLuint marker )
 bool isGL_SGIX_async_histogram()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_async_histogram;
-	
+
 	return isSupported;
 }
 
@@ -9117,7 +9117,7 @@ bool isGL_SGIX_async_histogram()
 bool isGL_SGIX_async_pixel()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_async_pixel;
-	
+
 	return isSupported;
 }
 
@@ -9126,7 +9126,7 @@ bool isGL_SGIX_async_pixel()
 bool isGL_SGIX_blend_alpha_minmax()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_blend_alpha_minmax;
-	
+
 	return isSupported;
 }
 
@@ -9135,7 +9135,7 @@ bool isGL_SGIX_blend_alpha_minmax()
 bool isGL_SGIX_calligraphic_fragment()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_calligraphic_fragment;
-	
+
 	return isSupported;
 }
 
@@ -9144,7 +9144,7 @@ bool isGL_SGIX_calligraphic_fragment()
 bool isGL_SGIX_clipmap()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_clipmap;
-	
+
 	return isSupported;
 }
 
@@ -9153,7 +9153,7 @@ bool isGL_SGIX_clipmap()
 bool isGL_SGIX_convolution_accuracy()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_convolution_accuracy;
-	
+
 	return isSupported;
 }
 
@@ -9162,7 +9162,7 @@ bool isGL_SGIX_convolution_accuracy()
 bool isGL_SGIX_depth_pass_instrument()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_depth_pass_instrument;
-	
+
 	return isSupported;
 }
 
@@ -9171,7 +9171,7 @@ bool isGL_SGIX_depth_pass_instrument()
 bool isGL_SGIX_depth_texture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_depth_texture;
-	
+
 	return isSupported;
 }
 
@@ -9180,7 +9180,7 @@ bool isGL_SGIX_depth_texture()
 bool isGL_SGIX_flush_raster()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_flush_raster;
-	
+
 	return isSupported;
 }
 
@@ -9195,7 +9195,7 @@ void glFlushRasterSGIX( void )
 bool isGL_SGIX_fog_offset()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_fog_offset;
-	
+
 	return isSupported;
 }
 
@@ -9204,7 +9204,7 @@ bool isGL_SGIX_fog_offset()
 bool isGL_SGIX_fog_scale()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_fog_scale;
-	
+
 	return isSupported;
 }
 
@@ -9213,7 +9213,7 @@ bool isGL_SGIX_fog_scale()
 bool isGL_SGIX_fragment_lighting()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_fragment_lighting;
-	
+
 	return isSupported;
 }
 
@@ -9330,7 +9330,7 @@ void glLightEnviSGIX( GLenum pname, GLint param )
 bool isGL_SGIX_framezoom()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_framezoom;
-	
+
 	return isSupported;
 }
 
@@ -9345,7 +9345,7 @@ void glFrameZoomSGIX( GLint factor )
 bool isGL_SGIX_igloo_interface()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_igloo_interface;
-	
+
 	return isSupported;
 }
 
@@ -9360,7 +9360,7 @@ void glIglooInterfaceSGIX( GLenum pname, const GLvoid *params )
 bool isGL_SGIX_impact_pixel_texture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_impact_pixel_texture;
-	
+
 	return isSupported;
 }
 
@@ -9369,7 +9369,7 @@ bool isGL_SGIX_impact_pixel_texture()
 bool isGL_SGIX_instruments()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_instruments;
-	
+
 	return isSupported;
 }
 
@@ -9414,7 +9414,7 @@ void glStopInstrumentsSGIX( GLint marker )
 bool isGL_SGIX_interlace()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_interlace;
-	
+
 	return isSupported;
 }
 
@@ -9423,7 +9423,7 @@ bool isGL_SGIX_interlace()
 bool isGL_SGIX_ir_instrument1()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_ir_instrument1;
-	
+
 	return isSupported;
 }
 
@@ -9432,7 +9432,7 @@ bool isGL_SGIX_ir_instrument1()
 bool isGL_SGIX_list_priority()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_list_priority;
-	
+
 	return isSupported;
 }
 
@@ -9477,7 +9477,7 @@ void glListParameterivSGIX( GLuint list, GLenum pname, const GLint *params )
 bool isGL_SGIX_pixel_texture()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_pixel_texture;
-	
+
 	return isSupported;
 }
 
@@ -9492,7 +9492,7 @@ void glPixelTexGenSGIX( GLenum mode )
 bool isGL_SGIX_pixel_tiles()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_pixel_tiles;
-	
+
 	return isSupported;
 }
 
@@ -9501,7 +9501,7 @@ bool isGL_SGIX_pixel_tiles()
 bool isGL_SGIX_polynomial_ffd()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_polynomial_ffd;
-	
+
 	return isSupported;
 }
 
@@ -9534,7 +9534,7 @@ void glLoadIdentityDeformationMapSGIX( GLbitfield mask )
 bool isGL_SGIX_reference_plane()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_reference_plane;
-	
+
 	return isSupported;
 }
 
@@ -9549,7 +9549,7 @@ void glReferencePlaneSGIX( const GLdouble *equation )
 bool isGL_SGIX_resample()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_resample;
-	
+
 	return isSupported;
 }
 
@@ -9558,7 +9558,7 @@ bool isGL_SGIX_resample()
 bool isGL_SGIX_scalebias_hint()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_scalebias_hint;
-	
+
 	return isSupported;
 }
 
@@ -9567,7 +9567,7 @@ bool isGL_SGIX_scalebias_hint()
 bool isGL_SGIX_shadow()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_shadow;
-	
+
 	return isSupported;
 }
 
@@ -9576,7 +9576,7 @@ bool isGL_SGIX_shadow()
 bool isGL_SGIX_shadow_ambient()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_shadow_ambient;
-	
+
 	return isSupported;
 }
 
@@ -9585,7 +9585,7 @@ bool isGL_SGIX_shadow_ambient()
 bool isGL_SGIX_sprite()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_sprite;
-	
+
 	return isSupported;
 }
 
@@ -9618,7 +9618,7 @@ void glSpriteParameterivSGIX( GLenum pname, const GLint *params )
 bool isGL_SGIX_subsample()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_subsample;
-	
+
 	return isSupported;
 }
 
@@ -9627,7 +9627,7 @@ bool isGL_SGIX_subsample()
 bool isGL_SGIX_tag_sample_buffer()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_tag_sample_buffer;
-	
+
 	return isSupported;
 }
 
@@ -9642,7 +9642,7 @@ void glTagSampleBufferSGIX( void )
 bool isGL_SGIX_texture_add_env()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_texture_add_env;
-	
+
 	return isSupported;
 }
 
@@ -9651,7 +9651,7 @@ bool isGL_SGIX_texture_add_env()
 bool isGL_SGIX_texture_coordinate_clamp()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_texture_coordinate_clamp;
-	
+
 	return isSupported;
 }
 
@@ -9660,7 +9660,7 @@ bool isGL_SGIX_texture_coordinate_clamp()
 bool isGL_SGIX_texture_lod_bias()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_texture_lod_bias;
-	
+
 	return isSupported;
 }
 
@@ -9669,7 +9669,7 @@ bool isGL_SGIX_texture_lod_bias()
 bool isGL_SGIX_texture_multi_buffer()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_texture_multi_buffer;
-	
+
 	return isSupported;
 }
 
@@ -9678,7 +9678,7 @@ bool isGL_SGIX_texture_multi_buffer()
 bool isGL_SGIX_texture_scale_bias()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_texture_scale_bias;
-	
+
 	return isSupported;
 }
 
@@ -9687,7 +9687,7 @@ bool isGL_SGIX_texture_scale_bias()
 bool isGL_SGIX_texture_select()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_texture_select;
-	
+
 	return isSupported;
 }
 
@@ -9696,7 +9696,7 @@ bool isGL_SGIX_texture_select()
 bool isGL_SGIX_vertex_preclip()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_vertex_preclip;
-	
+
 	return isSupported;
 }
 
@@ -9705,7 +9705,7 @@ bool isGL_SGIX_vertex_preclip()
 bool isGL_SGIX_ycrcb()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_ycrcb;
-	
+
 	return isSupported;
 }
 
@@ -9714,7 +9714,7 @@ bool isGL_SGIX_ycrcb()
 bool isGL_SGIX_ycrcb_subsample()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_ycrcb_subsample;
-	
+
 	return isSupported;
 }
 
@@ -9723,7 +9723,7 @@ bool isGL_SGIX_ycrcb_subsample()
 bool isGL_SGIX_ycrcba()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SGIX_ycrcba;
-	
+
 	return isSupported;
 }
 
@@ -9732,7 +9732,7 @@ bool isGL_SGIX_ycrcba()
 bool isGL_SUN_convolution_border_modes()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SUN_convolution_border_modes;
-	
+
 	return isSupported;
 }
 
@@ -9741,7 +9741,7 @@ bool isGL_SUN_convolution_border_modes()
 bool isGL_SUN_global_alpha()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SUN_global_alpha;
-	
+
 	return isSupported;
 }
 
@@ -9798,7 +9798,7 @@ void glGlobalAlphaFactoruiSUN( GLuint factor )
 bool isGL_SUN_mesh_array()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SUN_mesh_array;
-	
+
 	return isSupported;
 }
 
@@ -9813,7 +9813,7 @@ void glDrawMeshArraysSUN( GLenum mode, GLint first, GLsizei count, GLsizei width
 bool isGL_SUN_slice_accum()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SUN_slice_accum;
-	
+
 	return isSupported;
 }
 
@@ -9822,7 +9822,7 @@ bool isGL_SUN_slice_accum()
 bool isGL_SUN_triangle_list()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SUN_triangle_list;
-	
+
 	return isSupported;
 }
 
@@ -9873,7 +9873,7 @@ void glReplacementCodePointerSUN( GLenum type, GLsizei stride, const GLvoid* *po
 bool isGL_SUN_vertex()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SUN_vertex;
-	
+
 	return isSupported;
 }
 
@@ -10122,7 +10122,7 @@ void glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN( const GLuint *rc,
 bool isGL_SUNX_constant_data()
 {
 	const bool isSupported = gleGetCurrent()->isGL_SUNX_constant_data;
-	
+
 	return isSupported;
 }
 
@@ -10137,7 +10137,7 @@ void glFinishTextureSUNX( void )
 bool isGL_VERSION_1_2()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_1_2;
-	
+
 	return isSupported;
 }
 
@@ -10182,7 +10182,7 @@ void glCopyTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLint yoffs
 bool isGL_VERSION_1_2_DEPRECATED()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_1_2_DEPRECATED;
-	
+
 	return isSupported;
 }
 
@@ -10383,7 +10383,7 @@ void glResetMinmax( GLenum target )
 bool isGL_VERSION_1_3()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_1_3;
-	
+
 	return isSupported;
 }
 
@@ -10446,7 +10446,7 @@ void glGetCompressedTexImage( GLenum target, GLint level, GLvoid *img )
 bool isGL_VERSION_1_3_DEPRECATED()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_1_3_DEPRECATED;
-	
+
 	return isSupported;
 }
 
@@ -10677,7 +10677,7 @@ void glMultTransposeMatrixd( const GLdouble *m )
 bool isGL_VERSION_1_4()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_1_4;
-	
+
 	return isSupported;
 }
 
@@ -10728,7 +10728,7 @@ void glPointParameteriv( GLenum pname, const GLint *params )
 bool isGL_VERSION_1_4_DEPRECATED()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_1_4_DEPRECATED;
-	
+
 	return isSupported;
 }
 
@@ -10965,7 +10965,7 @@ void glWindowPos3sv( const GLshort *v )
 bool isGL_VERSION_1_5()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_1_5;
-	
+
 	return isSupported;
 }
 
@@ -11088,7 +11088,7 @@ void glGetBufferPointerv( GLenum target, GLenum pname, GLvoid* *params )
 bool isGL_VERSION_1_5_DEPRECATED()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_1_5_DEPRECATED;
-	
+
 	return isSupported;
 }
 
@@ -11097,7 +11097,7 @@ bool isGL_VERSION_1_5_DEPRECATED()
 bool isGL_VERSION_2_0()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_2_0;
-	
+
 	return isSupported;
 }
 
@@ -11664,7 +11664,7 @@ void glVertexAttribPointer( GLuint index, GLint size, GLenum type, GLboolean nor
 bool isGL_VERSION_2_0_DEPRECATED()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_2_0_DEPRECATED;
-	
+
 	return isSupported;
 }
 
@@ -11673,7 +11673,7 @@ bool isGL_VERSION_2_0_DEPRECATED()
 bool isGL_VERSION_2_1()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_2_1;
-	
+
 	return isSupported;
 }
 
@@ -11718,7 +11718,7 @@ void glUniformMatrix4x3fv( GLint location, GLsizei count, GLboolean transpose, c
 bool isGL_VERSION_2_1_DEPRECATED()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_2_1_DEPRECATED;
-	
+
 	return isSupported;
 }
 
@@ -11727,7 +11727,7 @@ bool isGL_VERSION_2_1_DEPRECATED()
 bool isGL_VERSION_3_0()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_3_0;
-	
+
 	return isSupported;
 }
 
@@ -11964,7 +11964,7 @@ const GLubyte * glGetStringi( GLenum name, GLuint index )
 bool isGL_VERSION_3_0_DEPRECATED()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_3_0_DEPRECATED;
-	
+
 	return isSupported;
 }
 
@@ -12093,7 +12093,7 @@ void glVertexAttribI4usv( GLuint index, const GLushort *v )
 bool isGL_VERSION_3_1()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_3_1;
-	
+
 	return isSupported;
 }
 
@@ -12126,7 +12126,7 @@ void glPrimitiveRestartIndex( GLuint index )
 bool isGL_WIN_phong_shading()
 {
 	const bool isSupported = gleGetCurrent()->isGL_WIN_phong_shading;
-	
+
 	return isSupported;
 }
 
@@ -12135,7 +12135,1157 @@ bool isGL_WIN_phong_shading()
 bool isGL_WIN_specular_fog()
 {
 	const bool isSupported = gleGetCurrent()->isGL_WIN_specular_fog;
-	
+
 	return isSupported;
 }
+
+
+
+#ifdef WIN32
+
+// ********* WGL_3DFX_multisample *********
+bool isWGL_3DFX_multisample()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_3DFX_multisample;
+
+	return isSupported;
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_3DL_stereo_control *********
+bool isWGL_3DL_stereo_control()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_3DL_stereo_control;
+
+	return isSupported;
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_AMD_gpu_association *********
+bool isWGL_AMD_gpu_association()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_AMD_gpu_association;
+
+	return isSupported;
+}
+
+					
+UINT  wglGetGPUIDsAMD( UINT maxCount, UINT *ids )
+{
+	return ( gleGetCurrent()->wglGetGPUIDsAMD( maxCount, ids) );
+}
+
+					
+INT  wglGetGPUInfoAMD( UINT id, int property, GLenum dataType, UINT size, void *data )
+{
+	return ( gleGetCurrent()->wglGetGPUInfoAMD( id, property, dataType, size, data) );
+}
+
+					
+UINT  wglGetContextGPUIDAMD( HGLRC hglrc )
+{
+	return ( gleGetCurrent()->wglGetContextGPUIDAMD( hglrc) );
+}
+
+					
+HGLRC  wglCreateAssociatedContextAMD( UINT id )
+{
+	return ( gleGetCurrent()->wglCreateAssociatedContextAMD( id) );
+}
+
+					
+HGLRC  wglCreateAssociatedContextAttribsAMD( UINT id, HGLRC hShareContext, const int *attribList )
+{
+	return ( gleGetCurrent()->wglCreateAssociatedContextAttribsAMD( id, hShareContext, attribList) );
+}
+
+					
+BOOL  wglDeleteAssociatedContextAMD( HGLRC hglrc )
+{
+	return ( gleGetCurrent()->wglDeleteAssociatedContextAMD( hglrc) );
+}
+
+					
+BOOL  wglMakeAssociatedContextCurrentAMD( HGLRC hglrc )
+{
+	return ( gleGetCurrent()->wglMakeAssociatedContextCurrentAMD( hglrc) );
+}
+
+					
+HGLRC  wglGetCurrentAssociatedContextAMD( void )
+{
+	return ( gleGetCurrent()->wglGetCurrentAssociatedContextAMD( ) );
+}
+
+					
+VOID  wglBlitContextFramebufferAMD( HGLRC dstCtx, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter )
+{
+	return ( gleGetCurrent()->wglBlitContextFramebufferAMD( dstCtx, srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_ARB_buffer_region *********
+bool isWGL_ARB_buffer_region()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_ARB_buffer_region;
+
+	return isSupported;
+}
+
+					
+HANDLE  wglCreateBufferRegionARB( HDC hDC, int iLayerPlane, UINT uType )
+{
+	return ( gleGetCurrent()->wglCreateBufferRegionARB( hDC, iLayerPlane, uType) );
+}
+
+					
+VOID  wglDeleteBufferRegionARB( HANDLE hRegion )
+{
+	return ( gleGetCurrent()->wglDeleteBufferRegionARB( hRegion) );
+}
+
+					
+BOOL  wglSaveBufferRegionARB( HANDLE hRegion, int x, int y, int width, int height )
+{
+	return ( gleGetCurrent()->wglSaveBufferRegionARB( hRegion, x, y, width, height) );
+}
+
+					
+BOOL  wglRestoreBufferRegionARB( HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc )
+{
+	return ( gleGetCurrent()->wglRestoreBufferRegionARB( hRegion, x, y, width, height, xSrc, ySrc) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_ARB_create_context *********
+bool isWGL_ARB_create_context()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_ARB_create_context;
+
+	return isSupported;
+}
+
+					
+HGLRC  wglCreateContextAttribsARB( HDC hDC, HGLRC hShareContext, const int *attribList )
+{
+	return ( gleGetCurrent()->wglCreateContextAttribsARB( hDC, hShareContext, attribList) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_ARB_extensions_string *********
+bool isWGL_ARB_extensions_string()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_ARB_extensions_string;
+
+	return isSupported;
+}
+
+					
+const char *  wglGetExtensionsStringARB( HDC hdc )
+{
+	return ( gleGetCurrent()->wglGetExtensionsStringARB( hdc) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_ARB_make_current_read *********
+bool isWGL_ARB_make_current_read()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_ARB_make_current_read;
+
+	return isSupported;
+}
+
+					
+BOOL  wglMakeContextCurrentARB( HDC hDrawDC, HDC hReadDC, HGLRC hglrc )
+{
+	return ( gleGetCurrent()->wglMakeContextCurrentARB( hDrawDC, hReadDC, hglrc) );
+}
+
+					
+HDC  wglGetCurrentReadDCARB( void )
+{
+	return ( gleGetCurrent()->wglGetCurrentReadDCARB( ) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_ARB_multisample *********
+bool isWGL_ARB_multisample()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_ARB_multisample;
+
+	return isSupported;
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_ARB_pbuffer *********
+bool isWGL_ARB_pbuffer()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_ARB_pbuffer;
+
+	return isSupported;
+}
+
+					
+HPBUFFERARB  wglCreatePbufferARB( HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList )
+{
+	return ( gleGetCurrent()->wglCreatePbufferARB( hDC, iPixelFormat, iWidth, iHeight, piAttribList) );
+}
+
+					
+HDC  wglGetPbufferDCARB( HPBUFFERARB hPbuffer )
+{
+	return ( gleGetCurrent()->wglGetPbufferDCARB( hPbuffer) );
+}
+
+					
+int  wglReleasePbufferDCARB( HPBUFFERARB hPbuffer, HDC hDC )
+{
+	return ( gleGetCurrent()->wglReleasePbufferDCARB( hPbuffer, hDC) );
+}
+
+					
+BOOL  wglDestroyPbufferARB( HPBUFFERARB hPbuffer )
+{
+	return ( gleGetCurrent()->wglDestroyPbufferARB( hPbuffer) );
+}
+
+					
+BOOL  wglQueryPbufferARB( HPBUFFERARB hPbuffer, int iAttribute, int *piValue )
+{
+	return ( gleGetCurrent()->wglQueryPbufferARB( hPbuffer, iAttribute, piValue) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_ARB_pixel_format *********
+bool isWGL_ARB_pixel_format()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_ARB_pixel_format;
+
+	return isSupported;
+}
+
+					
+BOOL  wglGetPixelFormatAttribivARB( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, int *piValues )
+{
+	return ( gleGetCurrent()->wglGetPixelFormatAttribivARB( hdc, iPixelFormat, iLayerPlane, nAttributes, piAttributes, piValues) );
+}
+
+					
+BOOL  wglGetPixelFormatAttribfvARB( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, FLOAT *pfValues )
+{
+	return ( gleGetCurrent()->wglGetPixelFormatAttribfvARB( hdc, iPixelFormat, iLayerPlane, nAttributes, piAttributes, pfValues) );
+}
+
+					
+BOOL  wglChoosePixelFormatARB( HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats )
+{
+	return ( gleGetCurrent()->wglChoosePixelFormatARB( hdc, piAttribIList, pfAttribFList, nMaxFormats, piFormats, nNumFormats) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_ARB_pixel_format_float *********
+bool isWGL_ARB_pixel_format_float()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_ARB_pixel_format_float;
+
+	return isSupported;
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_ARB_render_texture *********
+bool isWGL_ARB_render_texture()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_ARB_render_texture;
+
+	return isSupported;
+}
+
+					
+BOOL  wglBindTexImageARB( HPBUFFERARB hPbuffer, int iBuffer )
+{
+	return ( gleGetCurrent()->wglBindTexImageARB( hPbuffer, iBuffer) );
+}
+
+					
+BOOL  wglReleaseTexImageARB( HPBUFFERARB hPbuffer, int iBuffer )
+{
+	return ( gleGetCurrent()->wglReleaseTexImageARB( hPbuffer, iBuffer) );
+}
+
+					
+BOOL  wglSetPbufferAttribARB( HPBUFFERARB hPbuffer, const int *piAttribList )
+{
+	return ( gleGetCurrent()->wglSetPbufferAttribARB( hPbuffer, piAttribList) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_ATI_pixel_format_float *********
+bool isWGL_ATI_pixel_format_float()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_ATI_pixel_format_float;
+
+	return isSupported;
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_EXT_depth_float *********
+bool isWGL_EXT_depth_float()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_EXT_depth_float;
+
+	return isSupported;
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_EXT_display_color_table *********
+bool isWGL_EXT_display_color_table()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_EXT_display_color_table;
+
+	return isSupported;
+}
+
+					
+GLboolean  wglCreateDisplayColorTableEXT( GLushort id )
+{
+	return ( gleGetCurrent()->wglCreateDisplayColorTableEXT( id) );
+}
+
+					
+GLboolean  wglLoadDisplayColorTableEXT( const GLushort *table, GLuint length )
+{
+	return ( gleGetCurrent()->wglLoadDisplayColorTableEXT( table, length) );
+}
+
+					
+GLboolean  wglBindDisplayColorTableEXT( GLushort id )
+{
+	return ( gleGetCurrent()->wglBindDisplayColorTableEXT( id) );
+}
+
+					
+VOID  wglDestroyDisplayColorTableEXT( GLushort id )
+{
+	return ( gleGetCurrent()->wglDestroyDisplayColorTableEXT( id) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_EXT_extensions_string *********
+bool isWGL_EXT_extensions_string()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_EXT_extensions_string;
+
+	return isSupported;
+}
+
+					
+const char *  wglGetExtensionsStringEXT( void )
+{
+	return ( gleGetCurrent()->wglGetExtensionsStringEXT( ) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_EXT_framebuffer_sRGB *********
+bool isWGL_EXT_framebuffer_sRGB()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_EXT_framebuffer_sRGB;
+
+	return isSupported;
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_EXT_make_current_read *********
+bool isWGL_EXT_make_current_read()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_EXT_make_current_read;
+
+	return isSupported;
+}
+
+					
+BOOL  wglMakeContextCurrentEXT( HDC hDrawDC, HDC hReadDC, HGLRC hglrc )
+{
+	return ( gleGetCurrent()->wglMakeContextCurrentEXT( hDrawDC, hReadDC, hglrc) );
+}
+
+					
+HDC  wglGetCurrentReadDCEXT( void )
+{
+	return ( gleGetCurrent()->wglGetCurrentReadDCEXT( ) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_EXT_multisample *********
+bool isWGL_EXT_multisample()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_EXT_multisample;
+
+	return isSupported;
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_EXT_pbuffer *********
+bool isWGL_EXT_pbuffer()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_EXT_pbuffer;
+
+	return isSupported;
+}
+
+					
+HPBUFFEREXT  wglCreatePbufferEXT( HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList )
+{
+	return ( gleGetCurrent()->wglCreatePbufferEXT( hDC, iPixelFormat, iWidth, iHeight, piAttribList) );
+}
+
+					
+HDC  wglGetPbufferDCEXT( HPBUFFEREXT hPbuffer )
+{
+	return ( gleGetCurrent()->wglGetPbufferDCEXT( hPbuffer) );
+}
+
+					
+int  wglReleasePbufferDCEXT( HPBUFFEREXT hPbuffer, HDC hDC )
+{
+	return ( gleGetCurrent()->wglReleasePbufferDCEXT( hPbuffer, hDC) );
+}
+
+					
+BOOL  wglDestroyPbufferEXT( HPBUFFEREXT hPbuffer )
+{
+	return ( gleGetCurrent()->wglDestroyPbufferEXT( hPbuffer) );
+}
+
+					
+BOOL  wglQueryPbufferEXT( HPBUFFEREXT hPbuffer, int iAttribute, int *piValue )
+{
+	return ( gleGetCurrent()->wglQueryPbufferEXT( hPbuffer, iAttribute, piValue) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_EXT_pixel_format *********
+bool isWGL_EXT_pixel_format()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_EXT_pixel_format;
+
+	return isSupported;
+}
+
+					
+BOOL  wglGetPixelFormatAttribivEXT( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, int *piValues )
+{
+	return ( gleGetCurrent()->wglGetPixelFormatAttribivEXT( hdc, iPixelFormat, iLayerPlane, nAttributes, piAttributes, piValues) );
+}
+
+					
+BOOL  wglGetPixelFormatAttribfvEXT( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, FLOAT *pfValues )
+{
+	return ( gleGetCurrent()->wglGetPixelFormatAttribfvEXT( hdc, iPixelFormat, iLayerPlane, nAttributes, piAttributes, pfValues) );
+}
+
+					
+BOOL  wglChoosePixelFormatEXT( HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats )
+{
+	return ( gleGetCurrent()->wglChoosePixelFormatEXT( hdc, piAttribIList, pfAttribFList, nMaxFormats, piFormats, nNumFormats) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_EXT_pixel_format_packed_float *********
+bool isWGL_EXT_pixel_format_packed_float()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_EXT_pixel_format_packed_float;
+
+	return isSupported;
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_EXT_swap_control *********
+bool isWGL_EXT_swap_control()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_EXT_swap_control;
+
+	return isSupported;
+}
+
+					
+BOOL  wglSwapIntervalEXT( int interval )
+{
+	return ( gleGetCurrent()->wglSwapIntervalEXT( interval) );
+}
+
+					
+int  wglGetSwapIntervalEXT( void )
+{
+	return ( gleGetCurrent()->wglGetSwapIntervalEXT( ) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_I3D_digital_video_control *********
+bool isWGL_I3D_digital_video_control()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_I3D_digital_video_control;
+
+	return isSupported;
+}
+
+					
+BOOL  wglGetDigitalVideoParametersI3D( HDC hDC, int iAttribute, int *piValue )
+{
+	return ( gleGetCurrent()->wglGetDigitalVideoParametersI3D( hDC, iAttribute, piValue) );
+}
+
+					
+BOOL  wglSetDigitalVideoParametersI3D( HDC hDC, int iAttribute, const int *piValue )
+{
+	return ( gleGetCurrent()->wglSetDigitalVideoParametersI3D( hDC, iAttribute, piValue) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_I3D_gamma *********
+bool isWGL_I3D_gamma()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_I3D_gamma;
+
+	return isSupported;
+}
+
+					
+BOOL  wglGetGammaTableParametersI3D( HDC hDC, int iAttribute, int *piValue )
+{
+	return ( gleGetCurrent()->wglGetGammaTableParametersI3D( hDC, iAttribute, piValue) );
+}
+
+					
+BOOL  wglSetGammaTableParametersI3D( HDC hDC, int iAttribute, const int *piValue )
+{
+	return ( gleGetCurrent()->wglSetGammaTableParametersI3D( hDC, iAttribute, piValue) );
+}
+
+					
+BOOL  wglGetGammaTableI3D( HDC hDC, int iEntries, USHORT *puRed, USHORT *puGreen, USHORT *puBlue )
+{
+	return ( gleGetCurrent()->wglGetGammaTableI3D( hDC, iEntries, puRed, puGreen, puBlue) );
+}
+
+					
+BOOL  wglSetGammaTableI3D( HDC hDC, int iEntries, const USHORT *puRed, const USHORT *puGreen, const USHORT *puBlue )
+{
+	return ( gleGetCurrent()->wglSetGammaTableI3D( hDC, iEntries, puRed, puGreen, puBlue) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_I3D_genlock *********
+bool isWGL_I3D_genlock()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_I3D_genlock;
+
+	return isSupported;
+}
+
+					
+BOOL  wglEnableGenlockI3D( HDC hDC )
+{
+	return ( gleGetCurrent()->wglEnableGenlockI3D( hDC) );
+}
+
+					
+BOOL  wglDisableGenlockI3D( HDC hDC )
+{
+	return ( gleGetCurrent()->wglDisableGenlockI3D( hDC) );
+}
+
+					
+BOOL  wglIsEnabledGenlockI3D( HDC hDC, BOOL *pFlag )
+{
+	return ( gleGetCurrent()->wglIsEnabledGenlockI3D( hDC, pFlag) );
+}
+
+					
+BOOL  wglGenlockSourceI3D( HDC hDC, UINT uSource )
+{
+	return ( gleGetCurrent()->wglGenlockSourceI3D( hDC, uSource) );
+}
+
+					
+BOOL  wglGetGenlockSourceI3D( HDC hDC, UINT *uSource )
+{
+	return ( gleGetCurrent()->wglGetGenlockSourceI3D( hDC, uSource) );
+}
+
+					
+BOOL  wglGenlockSourceEdgeI3D( HDC hDC, UINT uEdge )
+{
+	return ( gleGetCurrent()->wglGenlockSourceEdgeI3D( hDC, uEdge) );
+}
+
+					
+BOOL  wglGetGenlockSourceEdgeI3D( HDC hDC, UINT *uEdge )
+{
+	return ( gleGetCurrent()->wglGetGenlockSourceEdgeI3D( hDC, uEdge) );
+}
+
+					
+BOOL  wglGenlockSampleRateI3D( HDC hDC, UINT uRate )
+{
+	return ( gleGetCurrent()->wglGenlockSampleRateI3D( hDC, uRate) );
+}
+
+					
+BOOL  wglGetGenlockSampleRateI3D( HDC hDC, UINT *uRate )
+{
+	return ( gleGetCurrent()->wglGetGenlockSampleRateI3D( hDC, uRate) );
+}
+
+					
+BOOL  wglGenlockSourceDelayI3D( HDC hDC, UINT uDelay )
+{
+	return ( gleGetCurrent()->wglGenlockSourceDelayI3D( hDC, uDelay) );
+}
+
+					
+BOOL  wglGetGenlockSourceDelayI3D( HDC hDC, UINT *uDelay )
+{
+	return ( gleGetCurrent()->wglGetGenlockSourceDelayI3D( hDC, uDelay) );
+}
+
+					
+BOOL  wglQueryGenlockMaxSourceDelayI3D( HDC hDC, UINT *uMaxLineDelay, UINT *uMaxPixelDelay )
+{
+	return ( gleGetCurrent()->wglQueryGenlockMaxSourceDelayI3D( hDC, uMaxLineDelay, uMaxPixelDelay) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_I3D_image_buffer *********
+bool isWGL_I3D_image_buffer()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_I3D_image_buffer;
+
+	return isSupported;
+}
+
+					
+LPVOID  wglCreateImageBufferI3D( HDC hDC, DWORD dwSize, UINT uFlags )
+{
+	return ( gleGetCurrent()->wglCreateImageBufferI3D( hDC, dwSize, uFlags) );
+}
+
+					
+BOOL  wglDestroyImageBufferI3D( HDC hDC, LPVOID pAddress )
+{
+	return ( gleGetCurrent()->wglDestroyImageBufferI3D( hDC, pAddress) );
+}
+
+					
+BOOL  wglAssociateImageBufferEventsI3D( HDC hDC, const HANDLE *pEvent, const LPVOID *pAddress, const DWORD *pSize, UINT count )
+{
+	return ( gleGetCurrent()->wglAssociateImageBufferEventsI3D( hDC, pEvent, pAddress, pSize, count) );
+}
+
+					
+BOOL  wglReleaseImageBufferEventsI3D( HDC hDC, const LPVOID *pAddress, UINT count )
+{
+	return ( gleGetCurrent()->wglReleaseImageBufferEventsI3D( hDC, pAddress, count) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_I3D_swap_frame_lock *********
+bool isWGL_I3D_swap_frame_lock()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_I3D_swap_frame_lock;
+
+	return isSupported;
+}
+
+					
+BOOL  wglEnableFrameLockI3D( void )
+{
+	return ( gleGetCurrent()->wglEnableFrameLockI3D( ) );
+}
+
+					
+BOOL  wglDisableFrameLockI3D( void )
+{
+	return ( gleGetCurrent()->wglDisableFrameLockI3D( ) );
+}
+
+					
+BOOL  wglIsEnabledFrameLockI3D( BOOL *pFlag )
+{
+	return ( gleGetCurrent()->wglIsEnabledFrameLockI3D( pFlag) );
+}
+
+					
+BOOL  wglQueryFrameLockMasterI3D( BOOL *pFlag )
+{
+	return ( gleGetCurrent()->wglQueryFrameLockMasterI3D( pFlag) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_I3D_swap_frame_usage *********
+bool isWGL_I3D_swap_frame_usage()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_I3D_swap_frame_usage;
+
+	return isSupported;
+}
+
+					
+BOOL  wglGetFrameUsageI3D( float *pUsage )
+{
+	return ( gleGetCurrent()->wglGetFrameUsageI3D( pUsage) );
+}
+
+					
+BOOL  wglBeginFrameTrackingI3D( void )
+{
+	return ( gleGetCurrent()->wglBeginFrameTrackingI3D( ) );
+}
+
+					
+BOOL  wglEndFrameTrackingI3D( void )
+{
+	return ( gleGetCurrent()->wglEndFrameTrackingI3D( ) );
+}
+
+					
+BOOL  wglQueryFrameTrackingI3D( DWORD *pFrameCount, DWORD *pMissedFrames, float *pLastMissedUsage )
+{
+	return ( gleGetCurrent()->wglQueryFrameTrackingI3D( pFrameCount, pMissedFrames, pLastMissedUsage) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_NV_float_buffer *********
+bool isWGL_NV_float_buffer()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_float_buffer;
+
+	return isSupported;
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_NV_gpu_affinity *********
+bool isWGL_NV_gpu_affinity()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_gpu_affinity;
+
+	return isSupported;
+}
+
+					
+BOOL  wglEnumGpusNV( UINT iGpuIndex, HGPUNV *phGpu )
+{
+	return ( gleGetCurrent()->wglEnumGpusNV( iGpuIndex, phGpu) );
+}
+
+					
+BOOL  wglEnumGpuDevicesNV( HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice )
+{
+	return ( gleGetCurrent()->wglEnumGpuDevicesNV( hGpu, iDeviceIndex, lpGpuDevice) );
+}
+
+					
+HDC  wglCreateAffinityDCNV( const HGPUNV *phGpuList )
+{
+	return ( gleGetCurrent()->wglCreateAffinityDCNV( phGpuList) );
+}
+
+					
+BOOL  wglEnumGpusFromAffinityDCNV( HDC hAffinityDC, UINT iGpuIndex, HGPUNV *hGpu )
+{
+	return ( gleGetCurrent()->wglEnumGpusFromAffinityDCNV( hAffinityDC, iGpuIndex, hGpu) );
+}
+
+					
+BOOL  wglDeleteDCNV( HDC hdc )
+{
+	return ( gleGetCurrent()->wglDeleteDCNV( hdc) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_NV_present_video *********
+bool isWGL_NV_present_video()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_present_video;
+
+	return isSupported;
+}
+
+					
+int  wglEnumerateVideoDevicesNV( HDC hDC, HVIDEOOUTPUTDEVICENV *phDeviceList )
+{
+	return ( gleGetCurrent()->wglEnumerateVideoDevicesNV( hDC, phDeviceList) );
+}
+
+					
+BOOL  wglBindVideoDeviceNV( HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, const int *piAttribList )
+{
+	return ( gleGetCurrent()->wglBindVideoDeviceNV( hDC, uVideoSlot, hVideoDevice, piAttribList) );
+}
+
+					
+BOOL  wglQueryCurrentContextNV( int iAttribute, int *piValue )
+{
+	return ( gleGetCurrent()->wglQueryCurrentContextNV( iAttribute, piValue) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_NV_render_depth_texture *********
+bool isWGL_NV_render_depth_texture()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_render_depth_texture;
+
+	return isSupported;
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_NV_render_texture_rectangle *********
+bool isWGL_NV_render_texture_rectangle()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_render_texture_rectangle;
+
+	return isSupported;
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_NV_swap_group *********
+bool isWGL_NV_swap_group()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_swap_group;
+
+	return isSupported;
+}
+
+					
+BOOL  wglJoinSwapGroupNV( HDC hDC, GLuint group )
+{
+	return ( gleGetCurrent()->wglJoinSwapGroupNV( hDC, group) );
+}
+
+					
+BOOL  wglBindSwapBarrierNV( GLuint group, GLuint barrier )
+{
+	return ( gleGetCurrent()->wglBindSwapBarrierNV( group, barrier) );
+}
+
+					
+BOOL  wglQuerySwapGroupNV( HDC hDC, GLuint *group, GLuint *barrier )
+{
+	return ( gleGetCurrent()->wglQuerySwapGroupNV( hDC, group, barrier) );
+}
+
+					
+BOOL  wglQueryMaxSwapGroupsNV( HDC hDC, GLuint *maxGroups, GLuint *maxBarriers )
+{
+	return ( gleGetCurrent()->wglQueryMaxSwapGroupsNV( hDC, maxGroups, maxBarriers) );
+}
+
+					
+BOOL  wglQueryFrameCountNV( HDC hDC, GLuint *count )
+{
+	return ( gleGetCurrent()->wglQueryFrameCountNV( hDC, count) );
+}
+
+					
+BOOL  wglResetFrameCountNV( HDC hDC )
+{
+	return ( gleGetCurrent()->wglResetFrameCountNV( hDC) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_NV_vertex_array_range *********
+bool isWGL_NV_vertex_array_range()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_vertex_array_range;
+
+	return isSupported;
+}
+
+					
+void*  wglAllocateMemoryNV( GLsizei size, GLfloat readfreq, GLfloat writefreq, GLfloat priority )
+{
+	return ( gleGetCurrent()->wglAllocateMemoryNV( size, readfreq, writefreq, priority) );
+}
+
+					
+void  wglFreeMemoryNV( void *pointer )
+{
+	gleGetCurrent()->wglFreeMemoryNV( pointer );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_NV_video_out *********
+bool isWGL_NV_video_out()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_video_out;
+
+	return isSupported;
+}
+
+					
+BOOL  wglGetVideoDeviceNV( HDC hDC, int numDevices, HPVIDEODEV *hVideoDevice )
+{
+	return ( gleGetCurrent()->wglGetVideoDeviceNV( hDC, numDevices, hVideoDevice) );
+}
+
+					
+BOOL  wglReleaseVideoDeviceNV( HPVIDEODEV hVideoDevice )
+{
+	return ( gleGetCurrent()->wglReleaseVideoDeviceNV( hVideoDevice) );
+}
+
+					
+BOOL  wglBindVideoImageNV( HPVIDEODEV hVideoDevice, HPBUFFERARB hPbuffer, int iVideoBuffer )
+{
+	return ( gleGetCurrent()->wglBindVideoImageNV( hVideoDevice, hPbuffer, iVideoBuffer) );
+}
+
+					
+BOOL  wglReleaseVideoImageNV( HPBUFFERARB hPbuffer, int iVideoBuffer )
+{
+	return ( gleGetCurrent()->wglReleaseVideoImageNV( hPbuffer, iVideoBuffer) );
+}
+
+					
+BOOL  wglSendPbufferToVideoNV( HPBUFFERARB hPbuffer, int iBufferType, unsigned long *pulCounterPbuffer, BOOL bBlock )
+{
+	return ( gleGetCurrent()->wglSendPbufferToVideoNV( hPbuffer, iBufferType, pulCounterPbuffer, bBlock) );
+}
+
+					
+BOOL  wglGetVideoInfoNV( HPVIDEODEV hpVideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo )
+{
+	return ( gleGetCurrent()->wglGetVideoInfoNV( hpVideoDevice, pulCounterOutputPbuffer, pulCounterOutputVideo) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_OML_sync_control *********
+bool isWGL_OML_sync_control()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_OML_sync_control;
+
+	return isSupported;
+}
+
+					
+BOOL  wglGetSyncValuesOML( HDC hdc, INT64 *ust, INT64 *msc, INT64 *sbc )
+{
+	return ( gleGetCurrent()->wglGetSyncValuesOML( hdc, ust, msc, sbc) );
+}
+
+					
+BOOL  wglGetMscRateOML( HDC hdc, INT32 *numerator, INT32 *denominator )
+{
+	return ( gleGetCurrent()->wglGetMscRateOML( hdc, numerator, denominator) );
+}
+
+					
+INT64  wglSwapBuffersMscOML( HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder )
+{
+	return ( gleGetCurrent()->wglSwapBuffersMscOML( hdc, target_msc, divisor, remainder) );
+}
+
+					
+INT64  wglSwapLayerBuffersMscOML( HDC hdc, int fuPlanes, INT64 target_msc, INT64 divisor, INT64 remainder )
+{
+	return ( gleGetCurrent()->wglSwapLayerBuffersMscOML( hdc, fuPlanes, target_msc, divisor, remainder) );
+}
+
+					
+BOOL  wglWaitForMscOML( HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder, INT64 *ust, INT64 *msc, INT64 *sbc )
+{
+	return ( gleGetCurrent()->wglWaitForMscOML( hdc, target_msc, divisor, remainder, ust, msc, sbc) );
+}
+
+					
+BOOL  wglWaitForSbcOML( HDC hdc, INT64 target_sbc, INT64 *ust, INT64 *msc, INT64 *sbc )
+{
+	return ( gleGetCurrent()->wglWaitForSbcOML( hdc, target_sbc, ust, msc, sbc) );
+}
+
+#endif // WIN32
 

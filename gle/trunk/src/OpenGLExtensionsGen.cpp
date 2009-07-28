@@ -1,6 +1,6 @@
-// This file was generated at Mon May 11 10:51:03 2009 with gle, please do not modify.
+// This file was generated at Wed Jun 10 14:51:44 2009 with gle, please do not modify.
 
-// GLE - Copyright (C) 2004, 2005, 2007, 2008, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -17,8 +17,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 333;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 1522;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 371;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 1625;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS ) :
@@ -3010,6 +3010,322 @@ void OpenGLExtensionsGen::clear()
 	// ****** GL_WIN_specular_fog ******
 	isGL_WIN_specular_fog                                         = false;
 
+#ifdef WIN32
+	// ****** WGL_3DFX_multisample ******
+	isWGL_3DFX_multisample                                        = false;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_3DL_stereo_control ******
+	isWGL_3DL_stereo_control                                      = false;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_AMD_gpu_association ******
+	isWGL_AMD_gpu_association                                     = false;
+
+	wglGetGPUIDsAMD                                               = 0;
+	wglGetGPUInfoAMD                                              = 0;
+	wglGetContextGPUIDAMD                                         = 0;
+	wglCreateAssociatedContextAMD                                 = 0;
+	wglCreateAssociatedContextAttribsAMD                          = 0;
+	wglDeleteAssociatedContextAMD                                 = 0;
+	wglMakeAssociatedContextCurrentAMD                            = 0;
+	wglGetCurrentAssociatedContextAMD                             = 0;
+	wglBlitContextFramebufferAMD                                  = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_ARB_buffer_region ******
+	isWGL_ARB_buffer_region                                       = false;
+
+	wglCreateBufferRegionARB                                      = 0;
+	wglDeleteBufferRegionARB                                      = 0;
+	wglSaveBufferRegionARB                                        = 0;
+	wglRestoreBufferRegionARB                                     = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_ARB_create_context ******
+	isWGL_ARB_create_context                                      = false;
+	wglCreateContextAttribsARB                                    = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_ARB_extensions_string ******
+	isWGL_ARB_extensions_string                                   = false;
+	wglGetExtensionsStringARB                                     = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_ARB_make_current_read ******
+	isWGL_ARB_make_current_read                                   = false;
+
+	wglMakeContextCurrentARB                                      = 0;
+	wglGetCurrentReadDCARB                                        = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_ARB_multisample ******
+	isWGL_ARB_multisample                                         = false;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_ARB_pbuffer ******
+	isWGL_ARB_pbuffer                                             = false;
+
+	wglCreatePbufferARB                                           = 0;
+	wglGetPbufferDCARB                                            = 0;
+	wglReleasePbufferDCARB                                        = 0;
+	wglDestroyPbufferARB                                          = 0;
+	wglQueryPbufferARB                                            = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_ARB_pixel_format ******
+	isWGL_ARB_pixel_format                                        = false;
+
+	wglGetPixelFormatAttribivARB                                  = 0;
+	wglGetPixelFormatAttribfvARB                                  = 0;
+	wglChoosePixelFormatARB                                       = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_ARB_pixel_format_float ******
+	isWGL_ARB_pixel_format_float                                  = false;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_ARB_render_texture ******
+	isWGL_ARB_render_texture                                      = false;
+
+	wglBindTexImageARB                                            = 0;
+	wglReleaseTexImageARB                                         = 0;
+	wglSetPbufferAttribARB                                        = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_ATI_pixel_format_float ******
+	isWGL_ATI_pixel_format_float                                  = false;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_EXT_depth_float ******
+	isWGL_EXT_depth_float                                         = false;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_EXT_display_color_table ******
+	isWGL_EXT_display_color_table                                 = false;
+
+	wglCreateDisplayColorTableEXT                                 = 0;
+	wglLoadDisplayColorTableEXT                                   = 0;
+	wglBindDisplayColorTableEXT                                   = 0;
+	wglDestroyDisplayColorTableEXT                                = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_EXT_extensions_string ******
+	isWGL_EXT_extensions_string                                   = false;
+	wglGetExtensionsStringEXT                                     = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_EXT_framebuffer_sRGB ******
+	isWGL_EXT_framebuffer_sRGB                                    = false;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_EXT_make_current_read ******
+	isWGL_EXT_make_current_read                                   = false;
+
+	wglMakeContextCurrentEXT                                      = 0;
+	wglGetCurrentReadDCEXT                                        = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_EXT_multisample ******
+	isWGL_EXT_multisample                                         = false;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_EXT_pbuffer ******
+	isWGL_EXT_pbuffer                                             = false;
+
+	wglCreatePbufferEXT                                           = 0;
+	wglGetPbufferDCEXT                                            = 0;
+	wglReleasePbufferDCEXT                                        = 0;
+	wglDestroyPbufferEXT                                          = 0;
+	wglQueryPbufferEXT                                            = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_EXT_pixel_format ******
+	isWGL_EXT_pixel_format                                        = false;
+
+	wglGetPixelFormatAttribivEXT                                  = 0;
+	wglGetPixelFormatAttribfvEXT                                  = 0;
+	wglChoosePixelFormatEXT                                       = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_EXT_pixel_format_packed_float ******
+	isWGL_EXT_pixel_format_packed_float                           = false;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_EXT_swap_control ******
+	isWGL_EXT_swap_control                                        = false;
+
+	wglSwapIntervalEXT                                            = 0;
+	wglGetSwapIntervalEXT                                         = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_I3D_digital_video_control ******
+	isWGL_I3D_digital_video_control                               = false;
+
+	wglGetDigitalVideoParametersI3D                               = 0;
+	wglSetDigitalVideoParametersI3D                               = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_I3D_gamma ******
+	isWGL_I3D_gamma                                               = false;
+
+	wglGetGammaTableParametersI3D                                 = 0;
+	wglSetGammaTableParametersI3D                                 = 0;
+	wglGetGammaTableI3D                                           = 0;
+	wglSetGammaTableI3D                                           = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_I3D_genlock ******
+	isWGL_I3D_genlock                                             = false;
+
+	wglEnableGenlockI3D                                           = 0;
+	wglDisableGenlockI3D                                          = 0;
+	wglIsEnabledGenlockI3D                                        = 0;
+	wglGenlockSourceI3D                                           = 0;
+	wglGetGenlockSourceI3D                                        = 0;
+	wglGenlockSourceEdgeI3D                                       = 0;
+	wglGetGenlockSourceEdgeI3D                                    = 0;
+	wglGenlockSampleRateI3D                                       = 0;
+	wglGetGenlockSampleRateI3D                                    = 0;
+	wglGenlockSourceDelayI3D                                      = 0;
+	wglGetGenlockSourceDelayI3D                                   = 0;
+	wglQueryGenlockMaxSourceDelayI3D                              = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_I3D_image_buffer ******
+	isWGL_I3D_image_buffer                                        = false;
+
+	wglCreateImageBufferI3D                                       = 0;
+	wglDestroyImageBufferI3D                                      = 0;
+	wglAssociateImageBufferEventsI3D                              = 0;
+	wglReleaseImageBufferEventsI3D                                = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_I3D_swap_frame_lock ******
+	isWGL_I3D_swap_frame_lock                                     = false;
+
+	wglEnableFrameLockI3D                                         = 0;
+	wglDisableFrameLockI3D                                        = 0;
+	wglIsEnabledFrameLockI3D                                      = 0;
+	wglQueryFrameLockMasterI3D                                    = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_I3D_swap_frame_usage ******
+	isWGL_I3D_swap_frame_usage                                    = false;
+
+	wglGetFrameUsageI3D                                           = 0;
+	wglBeginFrameTrackingI3D                                      = 0;
+	wglEndFrameTrackingI3D                                        = 0;
+	wglQueryFrameTrackingI3D                                      = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_NV_float_buffer ******
+	isWGL_NV_float_buffer                                         = false;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_NV_gpu_affinity ******
+	isWGL_NV_gpu_affinity                                         = false;
+
+	wglEnumGpusNV                                                 = 0;
+	wglEnumGpuDevicesNV                                           = 0;
+	wglCreateAffinityDCNV                                         = 0;
+	wglEnumGpusFromAffinityDCNV                                   = 0;
+	wglDeleteDCNV                                                 = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_NV_present_video ******
+	isWGL_NV_present_video                                        = false;
+
+	wglEnumerateVideoDevicesNV                                    = 0;
+	wglBindVideoDeviceNV                                          = 0;
+	wglQueryCurrentContextNV                                      = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_NV_render_depth_texture ******
+	isWGL_NV_render_depth_texture                                 = false;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_NV_render_texture_rectangle ******
+	isWGL_NV_render_texture_rectangle                             = false;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_NV_swap_group ******
+	isWGL_NV_swap_group                                           = false;
+
+	wglJoinSwapGroupNV                                            = 0;
+	wglBindSwapBarrierNV                                          = 0;
+	wglQuerySwapGroupNV                                           = 0;
+	wglQueryMaxSwapGroupsNV                                       = 0;
+	wglQueryFrameCountNV                                          = 0;
+	wglResetFrameCountNV                                          = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_NV_vertex_array_range ******
+	isWGL_NV_vertex_array_range                                   = false;
+
+	wglAllocateMemoryNV                                           = 0;
+	wglFreeMemoryNV                                               = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_NV_video_out ******
+	isWGL_NV_video_out                                            = false;
+
+	wglGetVideoDeviceNV                                           = 0;
+	wglReleaseVideoDeviceNV                                       = 0;
+	wglBindVideoImageNV                                           = 0;
+	wglReleaseVideoImageNV                                        = 0;
+	wglSendPbufferToVideoNV                                       = 0;
+	wglGetVideoInfoNV                                             = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_OML_sync_control ******
+	isWGL_OML_sync_control                                        = false;
+
+	wglGetSyncValuesOML                                           = 0;
+	wglGetMscRateOML                                              = 0;
+	wglSwapBuffersMscOML                                          = 0;
+	wglSwapLayerBuffersMscOML                                     = 0;
+	wglWaitForMscOML                                              = 0;
+	wglWaitForSbcOML                                              = 0;
+#endif // WIN32
+
 } // clear()
 
 
@@ -3115,6 +3431,33 @@ void OpenGLExtensionsGen::initialize()
 
 	initializeNot_in_OpenGL_Extension_Registry();
 
+
+	initializeWGL_3DFX();
+
+
+	initializeWGL_3DL();
+
+
+	initializeWGL_AMD();
+
+
+	initializeWGL_ARB();
+
+
+	initializeWGL_ATI();
+
+
+	initializeWGL_EXT();
+
+
+	initializeWGL_I3D();
+
+
+	initializeWGL_NV();
+
+
+	initializeWGL_OML();
+
 	logEndl("");
 	logEndl("gle informations :");
 	
@@ -3134,7 +3477,7 @@ void OpenGLExtensionsGen::initialize()
 	
 	std::stable_sort( gleInitializedExtensions.begin(), gleInitializedExtensions.end() );
 
-	logEndl("Initialized extensions :");	
+	logEndl("Initialized extensions :");
 	log( gleInitializedExtensions );
 	logEndl("");
 
@@ -19266,6 +19609,1833 @@ void OpenGLExtensionsGen::initializeNot_in_OpenGL_Extension_Registry()
 {
 	int	localSupportedProcCount 	= 0;
 	int	localInitializedProcCount	= 0;
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeWGL_3DFX()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef WIN32
+	
+	// ****** WGL_3DFX_multisample ******
+	
+	isWGL_3DFX_multisample = isWExtensionSupported("WGL_3DFX_multisample");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isWGL_3DFX_multisample )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_3DFX_multisample                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_3DFX_multisample                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_3DFX_multisample") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_3DFX_multisample                                        : not detected." );
+	}
+#endif // WIN32
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeWGL_3DL()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef WIN32
+	
+	// ****** WGL_3DL_stereo_control ******
+	
+	isWGL_3DL_stereo_control = isWExtensionSupported("WGL_3DL_stereo_control");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isWGL_3DL_stereo_control )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_3DL_stereo_control                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_3DL_stereo_control                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_3DL_stereo_control") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_3DL_stereo_control                                      : not detected." );
+	}
+#endif // WIN32
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeWGL_AMD()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef WIN32
+	
+	// ****** WGL_AMD_gpu_association ******
+	
+	isWGL_AMD_gpu_association = isWExtensionSupported("WGL_AMD_gpu_association");
+	
+	localSupportedProcCount		= 9;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_AMD_gpu_association ) // || isSEDEnable()
+	{
+
+		wglGetGPUIDsAMD = (PFNWGLGETGPUIDSAMDPROC) getExtensionPtr( "wglGetGPUIDsAMD" );
+		if ( wglGetGPUIDsAMD != 0 )	++localInitializedProcCount;
+
+		wglGetGPUInfoAMD = (PFNWGLGETGPUINFOAMDPROC) getExtensionPtr( "wglGetGPUInfoAMD" );
+		if ( wglGetGPUInfoAMD != 0 )	++localInitializedProcCount;
+
+		wglGetContextGPUIDAMD = (PFNWGLGETCONTEXTGPUIDAMDPROC) getExtensionPtr( "wglGetContextGPUIDAMD" );
+		if ( wglGetContextGPUIDAMD != 0 )	++localInitializedProcCount;
+
+		wglCreateAssociatedContextAMD = (PFNWGLCREATEASSOCIATEDCONTEXTAMDPROC) getExtensionPtr( "wglCreateAssociatedContextAMD" );
+		if ( wglCreateAssociatedContextAMD != 0 )	++localInitializedProcCount;
+
+		wglCreateAssociatedContextAttribsAMD = (PFNWGLCREATEASSOCIATEDCONTEXTATTRIBSAMDPROC) getExtensionPtr( "wglCreateAssociatedContextAttribsAMD" );
+		if ( wglCreateAssociatedContextAttribsAMD != 0 )	++localInitializedProcCount;
+
+		wglDeleteAssociatedContextAMD = (PFNWGLDELETEASSOCIATEDCONTEXTAMDPROC) getExtensionPtr( "wglDeleteAssociatedContextAMD" );
+		if ( wglDeleteAssociatedContextAMD != 0 )	++localInitializedProcCount;
+
+		wglMakeAssociatedContextCurrentAMD = (PFNWGLMAKEASSOCIATEDCONTEXTCURRENTAMDPROC) getExtensionPtr( "wglMakeAssociatedContextCurrentAMD" );
+		if ( wglMakeAssociatedContextCurrentAMD != 0 )	++localInitializedProcCount;
+
+		wglGetCurrentAssociatedContextAMD = (PFNWGLGETCURRENTASSOCIATEDCONTEXTAMDPROC) getExtensionPtr( "wglGetCurrentAssociatedContextAMD" );
+		if ( wglGetCurrentAssociatedContextAMD != 0 )	++localInitializedProcCount;
+
+		wglBlitContextFramebufferAMD = (PFNWGLBLITCONTEXTFRAMEBUFFERAMDPROC) getExtensionPtr( "wglBlitContextFramebufferAMD" );
+		if ( wglBlitContextFramebufferAMD != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_AMD_gpu_association || isSEDEnable() )
+	
+	if ( isWGL_AMD_gpu_association )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_AMD_gpu_association                                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_AMD_gpu_association                                     : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_AMD_gpu_association") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_AMD_gpu_association                                     : not detected." );
+	}
+#endif // WIN32
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeWGL_ARB()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef WIN32
+	
+	// ****** WGL_ARB_buffer_region ******
+	
+	isWGL_ARB_buffer_region = isWExtensionSupported("WGL_ARB_buffer_region");
+	
+	localSupportedProcCount		= 4;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_ARB_buffer_region ) // || isSEDEnable()
+	{
+
+		wglCreateBufferRegionARB = (PFNWGLCREATEBUFFERREGIONARBPROC) getExtensionPtr( "wglCreateBufferRegionARB" );
+		if ( wglCreateBufferRegionARB != 0 )	++localInitializedProcCount;
+
+		wglDeleteBufferRegionARB = (PFNWGLDELETEBUFFERREGIONARBPROC) getExtensionPtr( "wglDeleteBufferRegionARB" );
+		if ( wglDeleteBufferRegionARB != 0 )	++localInitializedProcCount;
+
+		wglSaveBufferRegionARB = (PFNWGLSAVEBUFFERREGIONARBPROC) getExtensionPtr( "wglSaveBufferRegionARB" );
+		if ( wglSaveBufferRegionARB != 0 )	++localInitializedProcCount;
+
+		wglRestoreBufferRegionARB = (PFNWGLRESTOREBUFFERREGIONARBPROC) getExtensionPtr( "wglRestoreBufferRegionARB" );
+		if ( wglRestoreBufferRegionARB != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_ARB_buffer_region || isSEDEnable() )
+	
+	if ( isWGL_ARB_buffer_region )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_ARB_buffer_region                                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_ARB_buffer_region                                       : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_ARB_buffer_region") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_ARB_buffer_region                                       : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_ARB_create_context ******
+	
+	isWGL_ARB_create_context = isWExtensionSupported("WGL_ARB_create_context");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_ARB_create_context ) // || isSEDEnable()
+	{
+
+		wglCreateContextAttribsARB = (PFNWGLCREATECONTEXTATTRIBSARBPROC) getExtensionPtr( "wglCreateContextAttribsARB" );
+		if ( wglCreateContextAttribsARB != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_ARB_create_context || isSEDEnable() )
+	
+	if ( isWGL_ARB_create_context )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_ARB_create_context                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_ARB_create_context                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_ARB_create_context") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_ARB_create_context                                      : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_ARB_extensions_string ******
+	
+	isWGL_ARB_extensions_string = isWExtensionSupported("WGL_ARB_extensions_string");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_ARB_extensions_string ) // || isSEDEnable()
+	{
+
+		wglGetExtensionsStringARB = (PFNWGLGETEXTENSIONSSTRINGARBPROC) getExtensionPtr( "wglGetExtensionsStringARB" );
+		if ( wglGetExtensionsStringARB != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_ARB_extensions_string || isSEDEnable() )
+	
+	if ( isWGL_ARB_extensions_string )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_ARB_extensions_string                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_ARB_extensions_string                                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_ARB_extensions_string") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_ARB_extensions_string                                   : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_ARB_make_current_read ******
+	
+	isWGL_ARB_make_current_read = isWExtensionSupported("WGL_ARB_make_current_read");
+	
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_ARB_make_current_read ) // || isSEDEnable()
+	{
+
+		wglMakeContextCurrentARB = (PFNWGLMAKECONTEXTCURRENTARBPROC) getExtensionPtr( "wglMakeContextCurrentARB" );
+		if ( wglMakeContextCurrentARB != 0 )	++localInitializedProcCount;
+
+		wglGetCurrentReadDCARB = (PFNWGLGETCURRENTREADDCARBPROC) getExtensionPtr( "wglGetCurrentReadDCARB" );
+		if ( wglGetCurrentReadDCARB != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_ARB_make_current_read || isSEDEnable() )
+	
+	if ( isWGL_ARB_make_current_read )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_ARB_make_current_read                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_ARB_make_current_read                                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_ARB_make_current_read") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_ARB_make_current_read                                   : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_ARB_multisample ******
+	
+	isWGL_ARB_multisample = isWExtensionSupported("WGL_ARB_multisample");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isWGL_ARB_multisample )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_ARB_multisample                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_ARB_multisample                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_ARB_multisample") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_ARB_multisample                                         : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_ARB_pbuffer ******
+	
+	isWGL_ARB_pbuffer = isWExtensionSupported("WGL_ARB_pbuffer");
+	
+	localSupportedProcCount		= 5;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_ARB_pbuffer ) // || isSEDEnable()
+	{
+
+		wglCreatePbufferARB = (PFNWGLCREATEPBUFFERARBPROC) getExtensionPtr( "wglCreatePbufferARB" );
+		if ( wglCreatePbufferARB != 0 )	++localInitializedProcCount;
+
+		wglGetPbufferDCARB = (PFNWGLGETPBUFFERDCARBPROC) getExtensionPtr( "wglGetPbufferDCARB" );
+		if ( wglGetPbufferDCARB != 0 )	++localInitializedProcCount;
+
+		wglReleasePbufferDCARB = (PFNWGLRELEASEPBUFFERDCARBPROC) getExtensionPtr( "wglReleasePbufferDCARB" );
+		if ( wglReleasePbufferDCARB != 0 )	++localInitializedProcCount;
+
+		wglDestroyPbufferARB = (PFNWGLDESTROYPBUFFERARBPROC) getExtensionPtr( "wglDestroyPbufferARB" );
+		if ( wglDestroyPbufferARB != 0 )	++localInitializedProcCount;
+
+		wglQueryPbufferARB = (PFNWGLQUERYPBUFFERARBPROC) getExtensionPtr( "wglQueryPbufferARB" );
+		if ( wglQueryPbufferARB != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_ARB_pbuffer || isSEDEnable() )
+	
+	if ( isWGL_ARB_pbuffer )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_ARB_pbuffer                                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_ARB_pbuffer                                             : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_ARB_pbuffer") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_ARB_pbuffer                                             : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_ARB_pixel_format ******
+	
+	isWGL_ARB_pixel_format = isWExtensionSupported("WGL_ARB_pixel_format");
+	
+	localSupportedProcCount		= 3;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_ARB_pixel_format ) // || isSEDEnable()
+	{
+
+		wglGetPixelFormatAttribivARB = (PFNWGLGETPIXELFORMATATTRIBIVARBPROC) getExtensionPtr( "wglGetPixelFormatAttribivARB" );
+		if ( wglGetPixelFormatAttribivARB != 0 )	++localInitializedProcCount;
+
+		wglGetPixelFormatAttribfvARB = (PFNWGLGETPIXELFORMATATTRIBFVARBPROC) getExtensionPtr( "wglGetPixelFormatAttribfvARB" );
+		if ( wglGetPixelFormatAttribfvARB != 0 )	++localInitializedProcCount;
+
+		wglChoosePixelFormatARB = (PFNWGLCHOOSEPIXELFORMATARBPROC) getExtensionPtr( "wglChoosePixelFormatARB" );
+		if ( wglChoosePixelFormatARB != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_ARB_pixel_format || isSEDEnable() )
+	
+	if ( isWGL_ARB_pixel_format )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_ARB_pixel_format                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_ARB_pixel_format                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_ARB_pixel_format") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_ARB_pixel_format                                        : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_ARB_pixel_format_float ******
+	
+	isWGL_ARB_pixel_format_float = isWExtensionSupported("WGL_ARB_pixel_format_float");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isWGL_ARB_pixel_format_float )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_ARB_pixel_format_float                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_ARB_pixel_format_float                                  : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_ARB_pixel_format_float") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_ARB_pixel_format_float                                  : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_ARB_render_texture ******
+	
+	isWGL_ARB_render_texture = isWExtensionSupported("WGL_ARB_render_texture");
+	
+	localSupportedProcCount		= 3;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_ARB_render_texture ) // || isSEDEnable()
+	{
+
+		wglBindTexImageARB = (PFNWGLBINDTEXIMAGEARBPROC) getExtensionPtr( "wglBindTexImageARB" );
+		if ( wglBindTexImageARB != 0 )	++localInitializedProcCount;
+
+		wglReleaseTexImageARB = (PFNWGLRELEASETEXIMAGEARBPROC) getExtensionPtr( "wglReleaseTexImageARB" );
+		if ( wglReleaseTexImageARB != 0 )	++localInitializedProcCount;
+
+		wglSetPbufferAttribARB = (PFNWGLSETPBUFFERATTRIBARBPROC) getExtensionPtr( "wglSetPbufferAttribARB" );
+		if ( wglSetPbufferAttribARB != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_ARB_render_texture || isSEDEnable() )
+	
+	if ( isWGL_ARB_render_texture )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_ARB_render_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_ARB_render_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_ARB_render_texture") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_ARB_render_texture                                      : not detected." );
+	}
+#endif // WIN32
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeWGL_ATI()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef WIN32
+	
+	// ****** WGL_ATI_pixel_format_float ******
+	
+	isWGL_ATI_pixel_format_float = isWExtensionSupported("WGL_ATI_pixel_format_float");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isWGL_ATI_pixel_format_float )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_ATI_pixel_format_float                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_ATI_pixel_format_float                                  : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_ATI_pixel_format_float") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_ATI_pixel_format_float                                  : not detected." );
+	}
+#endif // WIN32
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeWGL_EXT()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef WIN32
+	
+	// ****** WGL_EXT_depth_float ******
+	
+	isWGL_EXT_depth_float = isWExtensionSupported("WGL_EXT_depth_float");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isWGL_EXT_depth_float )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_EXT_depth_float                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_EXT_depth_float                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_EXT_depth_float") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_EXT_depth_float                                         : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_EXT_display_color_table ******
+	
+	isWGL_EXT_display_color_table = isWExtensionSupported("WGL_EXT_display_color_table");
+	
+	localSupportedProcCount		= 4;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_EXT_display_color_table ) // || isSEDEnable()
+	{
+
+		wglCreateDisplayColorTableEXT = (PFNWGLCREATEDISPLAYCOLORTABLEEXTPROC) getExtensionPtr( "wglCreateDisplayColorTableEXT" );
+		if ( wglCreateDisplayColorTableEXT != 0 )	++localInitializedProcCount;
+
+		wglLoadDisplayColorTableEXT = (PFNWGLLOADDISPLAYCOLORTABLEEXTPROC) getExtensionPtr( "wglLoadDisplayColorTableEXT" );
+		if ( wglLoadDisplayColorTableEXT != 0 )	++localInitializedProcCount;
+
+		wglBindDisplayColorTableEXT = (PFNWGLBINDDISPLAYCOLORTABLEEXTPROC) getExtensionPtr( "wglBindDisplayColorTableEXT" );
+		if ( wglBindDisplayColorTableEXT != 0 )	++localInitializedProcCount;
+
+		wglDestroyDisplayColorTableEXT = (PFNWGLDESTROYDISPLAYCOLORTABLEEXTPROC) getExtensionPtr( "wglDestroyDisplayColorTableEXT" );
+		if ( wglDestroyDisplayColorTableEXT != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_EXT_display_color_table || isSEDEnable() )
+	
+	if ( isWGL_EXT_display_color_table )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_EXT_display_color_table                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_EXT_display_color_table                                 : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_EXT_display_color_table") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_EXT_display_color_table                                 : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_EXT_extensions_string ******
+	
+	isWGL_EXT_extensions_string = isWExtensionSupported("WGL_EXT_extensions_string");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_EXT_extensions_string ) // || isSEDEnable()
+	{
+
+		wglGetExtensionsStringEXT = (PFNWGLGETEXTENSIONSSTRINGEXTPROC) getExtensionPtr( "wglGetExtensionsStringEXT" );
+		if ( wglGetExtensionsStringEXT != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_EXT_extensions_string || isSEDEnable() )
+	
+	if ( isWGL_EXT_extensions_string )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_EXT_extensions_string                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_EXT_extensions_string                                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_EXT_extensions_string") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_EXT_extensions_string                                   : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_EXT_framebuffer_sRGB ******
+	
+	isWGL_EXT_framebuffer_sRGB = isWExtensionSupported("WGL_EXT_framebuffer_sRGB");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isWGL_EXT_framebuffer_sRGB )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_EXT_framebuffer_sRGB                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_EXT_framebuffer_sRGB                                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_EXT_framebuffer_sRGB") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_EXT_framebuffer_sRGB                                    : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_EXT_make_current_read ******
+	
+	isWGL_EXT_make_current_read = isWExtensionSupported("WGL_EXT_make_current_read");
+	
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_EXT_make_current_read ) // || isSEDEnable()
+	{
+
+		wglMakeContextCurrentEXT = (PFNWGLMAKECONTEXTCURRENTEXTPROC) getExtensionPtr( "wglMakeContextCurrentEXT" );
+		if ( wglMakeContextCurrentEXT != 0 )	++localInitializedProcCount;
+
+		wglGetCurrentReadDCEXT = (PFNWGLGETCURRENTREADDCEXTPROC) getExtensionPtr( "wglGetCurrentReadDCEXT" );
+		if ( wglGetCurrentReadDCEXT != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_EXT_make_current_read || isSEDEnable() )
+	
+	if ( isWGL_EXT_make_current_read )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_EXT_make_current_read                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_EXT_make_current_read                                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_EXT_make_current_read") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_EXT_make_current_read                                   : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_EXT_multisample ******
+	
+	isWGL_EXT_multisample = isWExtensionSupported("WGL_EXT_multisample");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isWGL_EXT_multisample )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_EXT_multisample                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_EXT_multisample                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_EXT_multisample") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_EXT_multisample                                         : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_EXT_pbuffer ******
+	
+	isWGL_EXT_pbuffer = isWExtensionSupported("WGL_EXT_pbuffer");
+	
+	localSupportedProcCount		= 5;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_EXT_pbuffer ) // || isSEDEnable()
+	{
+
+		wglCreatePbufferEXT = (PFNWGLCREATEPBUFFEREXTPROC) getExtensionPtr( "wglCreatePbufferEXT" );
+		if ( wglCreatePbufferEXT != 0 )	++localInitializedProcCount;
+
+		wglGetPbufferDCEXT = (PFNWGLGETPBUFFERDCEXTPROC) getExtensionPtr( "wglGetPbufferDCEXT" );
+		if ( wglGetPbufferDCEXT != 0 )	++localInitializedProcCount;
+
+		wglReleasePbufferDCEXT = (PFNWGLRELEASEPBUFFERDCEXTPROC) getExtensionPtr( "wglReleasePbufferDCEXT" );
+		if ( wglReleasePbufferDCEXT != 0 )	++localInitializedProcCount;
+
+		wglDestroyPbufferEXT = (PFNWGLDESTROYPBUFFEREXTPROC) getExtensionPtr( "wglDestroyPbufferEXT" );
+		if ( wglDestroyPbufferEXT != 0 )	++localInitializedProcCount;
+
+		wglQueryPbufferEXT = (PFNWGLQUERYPBUFFEREXTPROC) getExtensionPtr( "wglQueryPbufferEXT" );
+		if ( wglQueryPbufferEXT != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_EXT_pbuffer || isSEDEnable() )
+	
+	if ( isWGL_EXT_pbuffer )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_EXT_pbuffer                                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_EXT_pbuffer                                             : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_EXT_pbuffer") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_EXT_pbuffer                                             : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_EXT_pixel_format ******
+	
+	isWGL_EXT_pixel_format = isWExtensionSupported("WGL_EXT_pixel_format");
+	
+	localSupportedProcCount		= 3;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_EXT_pixel_format ) // || isSEDEnable()
+	{
+
+		wglGetPixelFormatAttribivEXT = (PFNWGLGETPIXELFORMATATTRIBIVEXTPROC) getExtensionPtr( "wglGetPixelFormatAttribivEXT" );
+		if ( wglGetPixelFormatAttribivEXT != 0 )	++localInitializedProcCount;
+
+		wglGetPixelFormatAttribfvEXT = (PFNWGLGETPIXELFORMATATTRIBFVEXTPROC) getExtensionPtr( "wglGetPixelFormatAttribfvEXT" );
+		if ( wglGetPixelFormatAttribfvEXT != 0 )	++localInitializedProcCount;
+
+		wglChoosePixelFormatEXT = (PFNWGLCHOOSEPIXELFORMATEXTPROC) getExtensionPtr( "wglChoosePixelFormatEXT" );
+		if ( wglChoosePixelFormatEXT != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_EXT_pixel_format || isSEDEnable() )
+	
+	if ( isWGL_EXT_pixel_format )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_EXT_pixel_format                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_EXT_pixel_format                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_EXT_pixel_format") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_EXT_pixel_format                                        : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_EXT_pixel_format_packed_float ******
+	
+	isWGL_EXT_pixel_format_packed_float = isWExtensionSupported("WGL_EXT_pixel_format_packed_float");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isWGL_EXT_pixel_format_packed_float )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_EXT_pixel_format_packed_float                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_EXT_pixel_format_packed_float                           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_EXT_pixel_format_packed_float") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_EXT_pixel_format_packed_float                           : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_EXT_swap_control ******
+	
+	isWGL_EXT_swap_control = isWExtensionSupported("WGL_EXT_swap_control");
+	
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_EXT_swap_control ) // || isSEDEnable()
+	{
+
+		wglSwapIntervalEXT = (PFNWGLSWAPINTERVALEXTPROC) getExtensionPtr( "wglSwapIntervalEXT" );
+		if ( wglSwapIntervalEXT != 0 )	++localInitializedProcCount;
+
+		wglGetSwapIntervalEXT = (PFNWGLGETSWAPINTERVALEXTPROC) getExtensionPtr( "wglGetSwapIntervalEXT" );
+		if ( wglGetSwapIntervalEXT != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_EXT_swap_control || isSEDEnable() )
+	
+	if ( isWGL_EXT_swap_control )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_EXT_swap_control                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_EXT_swap_control                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_EXT_swap_control") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_EXT_swap_control                                        : not detected." );
+	}
+#endif // WIN32
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeWGL_I3D()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef WIN32
+	
+	// ****** WGL_I3D_digital_video_control ******
+	
+	isWGL_I3D_digital_video_control = isWExtensionSupported("WGL_I3D_digital_video_control");
+	
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_I3D_digital_video_control ) // || isSEDEnable()
+	{
+
+		wglGetDigitalVideoParametersI3D = (PFNWGLGETDIGITALVIDEOPARAMETERSI3DPROC) getExtensionPtr( "wglGetDigitalVideoParametersI3D" );
+		if ( wglGetDigitalVideoParametersI3D != 0 )	++localInitializedProcCount;
+
+		wglSetDigitalVideoParametersI3D = (PFNWGLSETDIGITALVIDEOPARAMETERSI3DPROC) getExtensionPtr( "wglSetDigitalVideoParametersI3D" );
+		if ( wglSetDigitalVideoParametersI3D != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_I3D_digital_video_control || isSEDEnable() )
+	
+	if ( isWGL_I3D_digital_video_control )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_I3D_digital_video_control                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_I3D_digital_video_control                               : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_I3D_digital_video_control") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_I3D_digital_video_control                               : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_I3D_gamma ******
+	
+	isWGL_I3D_gamma = isWExtensionSupported("WGL_I3D_gamma");
+	
+	localSupportedProcCount		= 4;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_I3D_gamma ) // || isSEDEnable()
+	{
+
+		wglGetGammaTableParametersI3D = (PFNWGLGETGAMMATABLEPARAMETERSI3DPROC) getExtensionPtr( "wglGetGammaTableParametersI3D" );
+		if ( wglGetGammaTableParametersI3D != 0 )	++localInitializedProcCount;
+
+		wglSetGammaTableParametersI3D = (PFNWGLSETGAMMATABLEPARAMETERSI3DPROC) getExtensionPtr( "wglSetGammaTableParametersI3D" );
+		if ( wglSetGammaTableParametersI3D != 0 )	++localInitializedProcCount;
+
+		wglGetGammaTableI3D = (PFNWGLGETGAMMATABLEI3DPROC) getExtensionPtr( "wglGetGammaTableI3D" );
+		if ( wglGetGammaTableI3D != 0 )	++localInitializedProcCount;
+
+		wglSetGammaTableI3D = (PFNWGLSETGAMMATABLEI3DPROC) getExtensionPtr( "wglSetGammaTableI3D" );
+		if ( wglSetGammaTableI3D != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_I3D_gamma || isSEDEnable() )
+	
+	if ( isWGL_I3D_gamma )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_I3D_gamma                                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_I3D_gamma                                               : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_I3D_gamma") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_I3D_gamma                                               : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_I3D_genlock ******
+	
+	isWGL_I3D_genlock = isWExtensionSupported("WGL_I3D_genlock");
+	
+	localSupportedProcCount		= 12;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_I3D_genlock ) // || isSEDEnable()
+	{
+
+		wglEnableGenlockI3D = (PFNWGLENABLEGENLOCKI3DPROC) getExtensionPtr( "wglEnableGenlockI3D" );
+		if ( wglEnableGenlockI3D != 0 )	++localInitializedProcCount;
+
+		wglDisableGenlockI3D = (PFNWGLDISABLEGENLOCKI3DPROC) getExtensionPtr( "wglDisableGenlockI3D" );
+		if ( wglDisableGenlockI3D != 0 )	++localInitializedProcCount;
+
+		wglIsEnabledGenlockI3D = (PFNWGLISENABLEDGENLOCKI3DPROC) getExtensionPtr( "wglIsEnabledGenlockI3D" );
+		if ( wglIsEnabledGenlockI3D != 0 )	++localInitializedProcCount;
+
+		wglGenlockSourceI3D = (PFNWGLGENLOCKSOURCEI3DPROC) getExtensionPtr( "wglGenlockSourceI3D" );
+		if ( wglGenlockSourceI3D != 0 )	++localInitializedProcCount;
+
+		wglGetGenlockSourceI3D = (PFNWGLGETGENLOCKSOURCEI3DPROC) getExtensionPtr( "wglGetGenlockSourceI3D" );
+		if ( wglGetGenlockSourceI3D != 0 )	++localInitializedProcCount;
+
+		wglGenlockSourceEdgeI3D = (PFNWGLGENLOCKSOURCEEDGEI3DPROC) getExtensionPtr( "wglGenlockSourceEdgeI3D" );
+		if ( wglGenlockSourceEdgeI3D != 0 )	++localInitializedProcCount;
+
+		wglGetGenlockSourceEdgeI3D = (PFNWGLGETGENLOCKSOURCEEDGEI3DPROC) getExtensionPtr( "wglGetGenlockSourceEdgeI3D" );
+		if ( wglGetGenlockSourceEdgeI3D != 0 )	++localInitializedProcCount;
+
+		wglGenlockSampleRateI3D = (PFNWGLGENLOCKSAMPLERATEI3DPROC) getExtensionPtr( "wglGenlockSampleRateI3D" );
+		if ( wglGenlockSampleRateI3D != 0 )	++localInitializedProcCount;
+
+		wglGetGenlockSampleRateI3D = (PFNWGLGETGENLOCKSAMPLERATEI3DPROC) getExtensionPtr( "wglGetGenlockSampleRateI3D" );
+		if ( wglGetGenlockSampleRateI3D != 0 )	++localInitializedProcCount;
+
+		wglGenlockSourceDelayI3D = (PFNWGLGENLOCKSOURCEDELAYI3DPROC) getExtensionPtr( "wglGenlockSourceDelayI3D" );
+		if ( wglGenlockSourceDelayI3D != 0 )	++localInitializedProcCount;
+
+		wglGetGenlockSourceDelayI3D = (PFNWGLGETGENLOCKSOURCEDELAYI3DPROC) getExtensionPtr( "wglGetGenlockSourceDelayI3D" );
+		if ( wglGetGenlockSourceDelayI3D != 0 )	++localInitializedProcCount;
+
+		wglQueryGenlockMaxSourceDelayI3D = (PFNWGLQUERYGENLOCKMAXSOURCEDELAYI3DPROC) getExtensionPtr( "wglQueryGenlockMaxSourceDelayI3D" );
+		if ( wglQueryGenlockMaxSourceDelayI3D != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_I3D_genlock || isSEDEnable() )
+	
+	if ( isWGL_I3D_genlock )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_I3D_genlock                                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_I3D_genlock                                             : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_I3D_genlock") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_I3D_genlock                                             : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_I3D_image_buffer ******
+	
+	isWGL_I3D_image_buffer = isWExtensionSupported("WGL_I3D_image_buffer");
+	
+	localSupportedProcCount		= 4;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_I3D_image_buffer ) // || isSEDEnable()
+	{
+
+		wglCreateImageBufferI3D = (PFNWGLCREATEIMAGEBUFFERI3DPROC) getExtensionPtr( "wglCreateImageBufferI3D" );
+		if ( wglCreateImageBufferI3D != 0 )	++localInitializedProcCount;
+
+		wglDestroyImageBufferI3D = (PFNWGLDESTROYIMAGEBUFFERI3DPROC) getExtensionPtr( "wglDestroyImageBufferI3D" );
+		if ( wglDestroyImageBufferI3D != 0 )	++localInitializedProcCount;
+
+		wglAssociateImageBufferEventsI3D = (PFNWGLASSOCIATEIMAGEBUFFEREVENTSI3DPROC) getExtensionPtr( "wglAssociateImageBufferEventsI3D" );
+		if ( wglAssociateImageBufferEventsI3D != 0 )	++localInitializedProcCount;
+
+		wglReleaseImageBufferEventsI3D = (PFNWGLRELEASEIMAGEBUFFEREVENTSI3DPROC) getExtensionPtr( "wglReleaseImageBufferEventsI3D" );
+		if ( wglReleaseImageBufferEventsI3D != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_I3D_image_buffer || isSEDEnable() )
+	
+	if ( isWGL_I3D_image_buffer )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_I3D_image_buffer                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_I3D_image_buffer                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_I3D_image_buffer") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_I3D_image_buffer                                        : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_I3D_swap_frame_lock ******
+	
+	isWGL_I3D_swap_frame_lock = isWExtensionSupported("WGL_I3D_swap_frame_lock");
+	
+	localSupportedProcCount		= 4;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_I3D_swap_frame_lock ) // || isSEDEnable()
+	{
+
+		wglEnableFrameLockI3D = (PFNWGLENABLEFRAMELOCKI3DPROC) getExtensionPtr( "wglEnableFrameLockI3D" );
+		if ( wglEnableFrameLockI3D != 0 )	++localInitializedProcCount;
+
+		wglDisableFrameLockI3D = (PFNWGLDISABLEFRAMELOCKI3DPROC) getExtensionPtr( "wglDisableFrameLockI3D" );
+		if ( wglDisableFrameLockI3D != 0 )	++localInitializedProcCount;
+
+		wglIsEnabledFrameLockI3D = (PFNWGLISENABLEDFRAMELOCKI3DPROC) getExtensionPtr( "wglIsEnabledFrameLockI3D" );
+		if ( wglIsEnabledFrameLockI3D != 0 )	++localInitializedProcCount;
+
+		wglQueryFrameLockMasterI3D = (PFNWGLQUERYFRAMELOCKMASTERI3DPROC) getExtensionPtr( "wglQueryFrameLockMasterI3D" );
+		if ( wglQueryFrameLockMasterI3D != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_I3D_swap_frame_lock || isSEDEnable() )
+	
+	if ( isWGL_I3D_swap_frame_lock )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_I3D_swap_frame_lock                                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_I3D_swap_frame_lock                                     : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_I3D_swap_frame_lock") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_I3D_swap_frame_lock                                     : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_I3D_swap_frame_usage ******
+	
+	isWGL_I3D_swap_frame_usage = isWExtensionSupported("WGL_I3D_swap_frame_usage");
+	
+	localSupportedProcCount		= 4;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_I3D_swap_frame_usage ) // || isSEDEnable()
+	{
+
+		wglGetFrameUsageI3D = (PFNWGLGETFRAMEUSAGEI3DPROC) getExtensionPtr( "wglGetFrameUsageI3D" );
+		if ( wglGetFrameUsageI3D != 0 )	++localInitializedProcCount;
+
+		wglBeginFrameTrackingI3D = (PFNWGLBEGINFRAMETRACKINGI3DPROC) getExtensionPtr( "wglBeginFrameTrackingI3D" );
+		if ( wglBeginFrameTrackingI3D != 0 )	++localInitializedProcCount;
+
+		wglEndFrameTrackingI3D = (PFNWGLENDFRAMETRACKINGI3DPROC) getExtensionPtr( "wglEndFrameTrackingI3D" );
+		if ( wglEndFrameTrackingI3D != 0 )	++localInitializedProcCount;
+
+		wglQueryFrameTrackingI3D = (PFNWGLQUERYFRAMETRACKINGI3DPROC) getExtensionPtr( "wglQueryFrameTrackingI3D" );
+		if ( wglQueryFrameTrackingI3D != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_I3D_swap_frame_usage || isSEDEnable() )
+	
+	if ( isWGL_I3D_swap_frame_usage )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_I3D_swap_frame_usage                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_I3D_swap_frame_usage                                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_I3D_swap_frame_usage") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_I3D_swap_frame_usage                                    : not detected." );
+	}
+#endif // WIN32
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeWGL_NV()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef WIN32
+	
+	// ****** WGL_NV_float_buffer ******
+	
+	isWGL_NV_float_buffer = isWExtensionSupported("WGL_NV_float_buffer");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isWGL_NV_float_buffer )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_NV_float_buffer                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_NV_float_buffer                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_NV_float_buffer") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_NV_float_buffer                                         : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_NV_gpu_affinity ******
+	
+	isWGL_NV_gpu_affinity = isWExtensionSupported("WGL_NV_gpu_affinity");
+	
+	localSupportedProcCount		= 5;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_NV_gpu_affinity ) // || isSEDEnable()
+	{
+
+		wglEnumGpusNV = (PFNWGLENUMGPUSNVPROC) getExtensionPtr( "wglEnumGpusNV" );
+		if ( wglEnumGpusNV != 0 )	++localInitializedProcCount;
+
+		wglEnumGpuDevicesNV = (PFNWGLENUMGPUDEVICESNVPROC) getExtensionPtr( "wglEnumGpuDevicesNV" );
+		if ( wglEnumGpuDevicesNV != 0 )	++localInitializedProcCount;
+
+		wglCreateAffinityDCNV = (PFNWGLCREATEAFFINITYDCNVPROC) getExtensionPtr( "wglCreateAffinityDCNV" );
+		if ( wglCreateAffinityDCNV != 0 )	++localInitializedProcCount;
+
+		wglEnumGpusFromAffinityDCNV = (PFNWGLENUMGPUSFROMAFFINITYDCNVPROC) getExtensionPtr( "wglEnumGpusFromAffinityDCNV" );
+		if ( wglEnumGpusFromAffinityDCNV != 0 )	++localInitializedProcCount;
+
+		wglDeleteDCNV = (PFNWGLDELETEDCNVPROC) getExtensionPtr( "wglDeleteDCNV" );
+		if ( wglDeleteDCNV != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_NV_gpu_affinity || isSEDEnable() )
+	
+	if ( isWGL_NV_gpu_affinity )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_NV_gpu_affinity                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_NV_gpu_affinity                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_NV_gpu_affinity") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_NV_gpu_affinity                                         : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_NV_present_video ******
+	
+	isWGL_NV_present_video = isWExtensionSupported("WGL_NV_present_video");
+	
+	localSupportedProcCount		= 3;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_NV_present_video ) // || isSEDEnable()
+	{
+
+		wglEnumerateVideoDevicesNV = (PFNWGLENUMERATEVIDEODEVICESNVPROC) getExtensionPtr( "wglEnumerateVideoDevicesNV" );
+		if ( wglEnumerateVideoDevicesNV != 0 )	++localInitializedProcCount;
+
+		wglBindVideoDeviceNV = (PFNWGLBINDVIDEODEVICENVPROC) getExtensionPtr( "wglBindVideoDeviceNV" );
+		if ( wglBindVideoDeviceNV != 0 )	++localInitializedProcCount;
+
+		wglQueryCurrentContextNV = (PFNWGLQUERYCURRENTCONTEXTNVPROC) getExtensionPtr( "wglQueryCurrentContextNV" );
+		if ( wglQueryCurrentContextNV != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_NV_present_video || isSEDEnable() )
+	
+	if ( isWGL_NV_present_video )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_NV_present_video                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_NV_present_video                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_NV_present_video") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_NV_present_video                                        : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_NV_render_depth_texture ******
+	
+	isWGL_NV_render_depth_texture = isWExtensionSupported("WGL_NV_render_depth_texture");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isWGL_NV_render_depth_texture )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_NV_render_depth_texture                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_NV_render_depth_texture                                 : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_NV_render_depth_texture") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_NV_render_depth_texture                                 : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_NV_render_texture_rectangle ******
+	
+	isWGL_NV_render_texture_rectangle = isWExtensionSupported("WGL_NV_render_texture_rectangle");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isWGL_NV_render_texture_rectangle )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_NV_render_texture_rectangle                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_NV_render_texture_rectangle                             : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_NV_render_texture_rectangle") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_NV_render_texture_rectangle                             : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_NV_swap_group ******
+	
+	isWGL_NV_swap_group = isWExtensionSupported("WGL_NV_swap_group");
+	
+	localSupportedProcCount		= 6;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_NV_swap_group ) // || isSEDEnable()
+	{
+
+		wglJoinSwapGroupNV = (PFNWGLJOINSWAPGROUPNVPROC) getExtensionPtr( "wglJoinSwapGroupNV" );
+		if ( wglJoinSwapGroupNV != 0 )	++localInitializedProcCount;
+
+		wglBindSwapBarrierNV = (PFNWGLBINDSWAPBARRIERNVPROC) getExtensionPtr( "wglBindSwapBarrierNV" );
+		if ( wglBindSwapBarrierNV != 0 )	++localInitializedProcCount;
+
+		wglQuerySwapGroupNV = (PFNWGLQUERYSWAPGROUPNVPROC) getExtensionPtr( "wglQuerySwapGroupNV" );
+		if ( wglQuerySwapGroupNV != 0 )	++localInitializedProcCount;
+
+		wglQueryMaxSwapGroupsNV = (PFNWGLQUERYMAXSWAPGROUPSNVPROC) getExtensionPtr( "wglQueryMaxSwapGroupsNV" );
+		if ( wglQueryMaxSwapGroupsNV != 0 )	++localInitializedProcCount;
+
+		wglQueryFrameCountNV = (PFNWGLQUERYFRAMECOUNTNVPROC) getExtensionPtr( "wglQueryFrameCountNV" );
+		if ( wglQueryFrameCountNV != 0 )	++localInitializedProcCount;
+
+		wglResetFrameCountNV = (PFNWGLRESETFRAMECOUNTNVPROC) getExtensionPtr( "wglResetFrameCountNV" );
+		if ( wglResetFrameCountNV != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_NV_swap_group || isSEDEnable() )
+	
+	if ( isWGL_NV_swap_group )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_NV_swap_group                                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_NV_swap_group                                           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_NV_swap_group") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_NV_swap_group                                           : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_NV_vertex_array_range ******
+	
+	isWGL_NV_vertex_array_range = isWExtensionSupported("WGL_NV_vertex_array_range");
+	
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_NV_vertex_array_range ) // || isSEDEnable()
+	{
+
+		wglAllocateMemoryNV = (PFNWGLALLOCATEMEMORYNVPROC) getExtensionPtr( "wglAllocateMemoryNV" );
+		if ( wglAllocateMemoryNV != 0 )	++localInitializedProcCount;
+
+		wglFreeMemoryNV = (PFNWGLFREEMEMORYNVPROC) getExtensionPtr( "wglFreeMemoryNV" );
+		if ( wglFreeMemoryNV != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_NV_vertex_array_range || isSEDEnable() )
+	
+	if ( isWGL_NV_vertex_array_range )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_NV_vertex_array_range                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_NV_vertex_array_range                                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_NV_vertex_array_range") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_NV_vertex_array_range                                   : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_NV_video_out ******
+	
+	isWGL_NV_video_out = isWExtensionSupported("WGL_NV_video_out");
+	
+	localSupportedProcCount		= 6;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_NV_video_out ) // || isSEDEnable()
+	{
+
+		wglGetVideoDeviceNV = (PFNWGLGETVIDEODEVICENVPROC) getExtensionPtr( "wglGetVideoDeviceNV" );
+		if ( wglGetVideoDeviceNV != 0 )	++localInitializedProcCount;
+
+		wglReleaseVideoDeviceNV = (PFNWGLRELEASEVIDEODEVICENVPROC) getExtensionPtr( "wglReleaseVideoDeviceNV" );
+		if ( wglReleaseVideoDeviceNV != 0 )	++localInitializedProcCount;
+
+		wglBindVideoImageNV = (PFNWGLBINDVIDEOIMAGENVPROC) getExtensionPtr( "wglBindVideoImageNV" );
+		if ( wglBindVideoImageNV != 0 )	++localInitializedProcCount;
+
+		wglReleaseVideoImageNV = (PFNWGLRELEASEVIDEOIMAGENVPROC) getExtensionPtr( "wglReleaseVideoImageNV" );
+		if ( wglReleaseVideoImageNV != 0 )	++localInitializedProcCount;
+
+		wglSendPbufferToVideoNV = (PFNWGLSENDPBUFFERTOVIDEONVPROC) getExtensionPtr( "wglSendPbufferToVideoNV" );
+		if ( wglSendPbufferToVideoNV != 0 )	++localInitializedProcCount;
+
+		wglGetVideoInfoNV = (PFNWGLGETVIDEOINFONVPROC) getExtensionPtr( "wglGetVideoInfoNV" );
+		if ( wglGetVideoInfoNV != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_NV_video_out || isSEDEnable() )
+	
+	if ( isWGL_NV_video_out )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_NV_video_out                                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_NV_video_out                                            : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_NV_video_out") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_NV_video_out                                            : not detected." );
+	}
+#endif // WIN32
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeWGL_OML()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef WIN32
+	
+	// ****** WGL_OML_sync_control ******
+	
+	isWGL_OML_sync_control = isWExtensionSupported("WGL_OML_sync_control");
+	
+	localSupportedProcCount		= 6;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_OML_sync_control ) // || isSEDEnable()
+	{
+
+		wglGetSyncValuesOML = (PFNWGLGETSYNCVALUESOMLPROC) getExtensionPtr( "wglGetSyncValuesOML" );
+		if ( wglGetSyncValuesOML != 0 )	++localInitializedProcCount;
+
+		wglGetMscRateOML = (PFNWGLGETMSCRATEOMLPROC) getExtensionPtr( "wglGetMscRateOML" );
+		if ( wglGetMscRateOML != 0 )	++localInitializedProcCount;
+
+		wglSwapBuffersMscOML = (PFNWGLSWAPBUFFERSMSCOMLPROC) getExtensionPtr( "wglSwapBuffersMscOML" );
+		if ( wglSwapBuffersMscOML != 0 )	++localInitializedProcCount;
+
+		wglSwapLayerBuffersMscOML = (PFNWGLSWAPLAYERBUFFERSMSCOMLPROC) getExtensionPtr( "wglSwapLayerBuffersMscOML" );
+		if ( wglSwapLayerBuffersMscOML != 0 )	++localInitializedProcCount;
+
+		wglWaitForMscOML = (PFNWGLWAITFORMSCOMLPROC) getExtensionPtr( "wglWaitForMscOML" );
+		if ( wglWaitForMscOML != 0 )	++localInitializedProcCount;
+
+		wglWaitForSbcOML = (PFNWGLWAITFORSBCOMLPROC) getExtensionPtr( "wglWaitForSbcOML" );
+		if ( wglWaitForSbcOML != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_OML_sync_control || isSEDEnable() )
+	
+	if ( isWGL_OML_sync_control )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_OML_sync_control                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_OML_sync_control                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_OML_sync_control") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_OML_sync_control                                        : not detected." );
+	}
+#endif // WIN32
 
 } // initialize()
 

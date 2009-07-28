@@ -1,4 +1,4 @@
-# GLE - Copyright (C) 2004, 2005, 2007, Nicolas Papier.
+# GLE - Copyright (C) 2004, 2005, 2007, 2009, Nicolas Papier.
 # Distributed under the terms of the GNU Library General Public License (LGPL)
 # as published by the Free Software Foundation.
 # Author Nicolas Papier
@@ -43,7 +43,7 @@ sub new
 ##################################################
 sub generate
 {
-	my $self		= shift;
+	my $self	= shift;
 	my $parser	= shift;
 
 	$self->{	TOKENS_TABLE		}	= $parser->getTokensTable();
@@ -277,10 +277,28 @@ EOF
 	foreach my $extension (@extensions)
 	{
 		my $extension_name		= $extension->name();
+		my $extension_OSTag		= $extension->OSTag();
 		my $extension_group		= $extension->getGroup();
 
 		my $extension_docLinks	= $OGLRegistryTable->extensionURL( $extension_name );
 		my $extension_ID		= $OGLRegistryTable->extensionId( $extension_name );
+
+
+		if ( $extension_OSTag ne "" )
+		{
+			print FH <<EOF;
+#ifdef $extension_OSTag
+
+
+EOF
+			print WFH <<EOF;
+
+
+
+#ifdef $extension_OSTag
+EOF
+		}
+
 
 		if ( $OGLRegistryTable->exist( $extension_name ) )
 		{
@@ -384,9 +402,25 @@ GLE_API $proto_str
 EOF
 		}
 
-		print FH "\n\n\n";		
+		print FH "\n\n\n";
 #		print FH "	//@}\n\n\n";
 		print WFH "//@}\n";
+
+		if ( $extension_OSTag ne "" )
+		{
+			print FH <<EOF;
+#endif // $extension_OSTag
+
+
+
+EOF
+			print WFH <<EOF;
+
+
+#endif // $extension_OSTag
+EOF
+		}
+
 	}
 
 
@@ -510,7 +544,11 @@ EOF
 	{
 		my $extension_name		= $extension->name();
 		my $extension_name_norm	= normalizeString( $extension->name(), 58 );
-
+		my $extension_OSTag		= $extension->OSTag();
+		if ( !($extension_OSTag eq "") )
+		{
+			print FCPP "#ifdef $extension_OSTag";
+		}
 
 		print FCPP <<EOF;
 
@@ -536,6 +574,10 @@ EOF
 EOF
 
 
+		}
+		if ( !($extension->OSTag() eq "") )
+		{
+			print FCPP "#endif // $extension_OSTag\n";
 		}
 		print FCPP "\n";
 	}
@@ -573,7 +615,7 @@ EOF
 	### Call initializeXXX() for each group of extensions.
 	foreach my $group (@groups)
 	{
-	
+
 
 		print FCPP <<EOF;
 
@@ -605,7 +647,7 @@ EOF
 	
 	std::stable_sort( gleInitializedExtensions.begin(), gleInitializedExtensions.end() );
 
-	logEndl("Initialized extensions :");	
+	logEndl("Initialized extensions :");
 	log( gleInitializedExtensions );
 	logEndl("");
 
@@ -653,22 +695,29 @@ EOF
 	 	foreach my $extension (@extensions)
 	 	{
 	 		my $extension_name			= $extension->name();
+			my $extension_OSTag			= $extension->OSTag();
 	 		my $extension_name_norm		= normalizeString( $extension->name(), 58 );
 	 		my $group					= $extension->getGroup();
-	 		
+
 			if ( $group ne $current_group )
 	 		{
 	 			# Don't process extension from any other group.
 	 			next;
 	 		}
 
-		print WFCPP <<EOF;
+			if ( $extension_OSTag ne "" )
+			{
+				print WFCPP "\n\n#ifdef $extension_OSTag\n";
+			}
+
+
+			print WFCPP <<EOF;
 
 // ********* $extension_name *********
 bool is$extension_name()
 {
 	const bool isSupported = gleGetCurrent()->is$extension_name;
-	
+
 	return isSupported;
 }
 
@@ -684,9 +733,9 @@ EOF
 			else
 			{
 				$core_extension = 0;
-			}		
-	
-	
+			}
+
+
 	 		my $extension_getter;
 	 		if ( $extension_name =~ /^GL_.+$/ )
 	 		{
@@ -695,16 +744,17 @@ EOF
 	 		else
 			{
 	 			$extension_getter = "isWExtensionSupported";
-	 		}	
-	 		
+	 		}
+
+
 			my @protos = $extension->getPrototypes();
 			my $proto_count = @protos;
-	
+
 			if ( $core_extension == 1 )
 			{
 				### Process differently core extension (from GL_VERSION* group) ###
-				
-				
+
+
 		 		print FCPP <<EOF;
 
 	// ****** $extension_name ******
@@ -809,7 +859,11 @@ EOF
 			{
 				### This is normal group (not a GL_VERSION* group) ###
 				
-				
+				if ( $extension_OSTag ne "" )
+				{
+					print FCPP "#ifdef $extension_OSTag\n";
+				}
+
 		 		print FCPP <<EOF;
 	
 	// ****** $extension_name ******
@@ -857,7 +911,7 @@ EOF
 					my @paramsName	= $proto->getParamsName();
 					
 					my $isReturnedValue = ( $proto->retVal() !~ /^\s*void\s*$/ );
-					
+
 					print WFCPP <<EOF;
 					
 $retVal $procName( $param )
@@ -896,6 +950,11 @@ EOF
 
 
 				} # foreach proto
+
+				if ( $extension_OSTag ne "" )
+				{
+					print WFCPP "#endif // $extension_OSTag\n\n";
+				}
 
 				if ( $proto_count > 0 )
 				{
@@ -937,7 +996,10 @@ EOF
 		logEndl( "$extension_name_norm : not detected." );
 	}
 EOF
-
+			if ( $extension_OSTag ne "" )
+			{
+				print FCPP "#endif // $extension_OSTag\n\n";
+			}
 			
 			} # else
 

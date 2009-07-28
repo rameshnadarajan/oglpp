@@ -18,7 +18,7 @@
 
 	#include <GL/gl.h>
 	#include <GL/glext.h>
-	//#include <GL/wglext.h>
+	#include <GL/wglext.h>
 	//#include <GL/glu.h>
 
 #elif __MACOSX__

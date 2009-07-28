@@ -1,4 +1,4 @@
-# GLE - Copyright (C) 2004, 2005, 2007, Nicolas Papier.
+# GLE - Copyright (C) 2004, 2005, 2007, 2009, Nicolas Papier.
 # Distributed under the terms of the GNU Library General Public License (LGPL)
 # as published by the Free Software Foundation.
 # Author Nicolas Papier
@@ -44,6 +44,29 @@ sub name
 	}
 
 	return $self->{NAME};
+}
+
+
+
+##################################################
+# Method
+##################################################
+sub OSTag
+{
+	my $self	= shift;
+
+	if ( $self->{NAME} =~ /^WGL_.+$/ )
+	{
+		return "WIN32";
+	}
+	elsif ( $self->{NAME} =~ /^GLX_.+$/ )
+	{
+		return "POSIX";
+	}
+	else
+	{
+		return "";
+	}
 }
 
 
