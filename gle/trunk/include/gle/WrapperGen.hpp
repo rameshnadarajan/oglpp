@@ -1,4 +1,4 @@
-// This file was generated at Wed Jun 10 14:51:44 2009 with gle, please do not modify.
+// This file was generated at Tue Jul 28 15:59:18 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -34,17 +34,17 @@
  */
 
 /** 
- * @defgroup g_GL_AMD		GL_AMD (2 extensions found)
+ * @defgroup g_GL_AMD		GL_AMD (3 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_APPLE		GL_APPLE (9 extensions found)
+ * @defgroup g_GL_APPLE		GL_APPLE (15 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_ARB		GL_ARB (49 extensions found)
+ * @defgroup g_GL_ARB		GL_ARB (51 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -54,7 +54,7 @@
  */
 
 /** 
- * @defgroup g_GL_EXT		GL_EXT (83 extensions found)
+ * @defgroup g_GL_EXT		GL_EXT (84 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -154,7 +154,7 @@
  */
 
 /** 
- * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (49 extensions found)
+ * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (48 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -249,6 +249,42 @@ GLE_API void glTbufferMask3DFX( GLuint mask );
  * @return Returns \c true if \b GL_3DFX_texture_compression_FXT1 is supported, false otherwise.
  */
 GLE_API bool isGL_3DFX_texture_compression_FXT1();
+
+//@}
+
+
+/**
+ * @defgroup GL_AMD_draw_buffers_blend GL_AMD_draw_buffers_blend
+ * Extension number in OpenGL registry : 366
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/draw_buffers_blend.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_AMD_draw_buffers_blend is supported.
+ * @return Returns \c true if \b GL_AMD_draw_buffers_blend is supported, false otherwise.
+ */
+GLE_API bool isGL_AMD_draw_buffers_blend();
+
+/**
+ * @brief void glBlendFuncIndexedAMD( GLuint buf, GLenum src, GLenum dst );
+ */
+GLE_API void glBlendFuncIndexedAMD( GLuint buf, GLenum src, GLenum dst );
+
+/**
+ * @brief void glBlendFuncSeparateIndexedAMD( GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha );
+ */
+GLE_API void glBlendFuncSeparateIndexedAMD( GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha );
+
+/**
+ * @brief void glBlendEquationIndexedAMD( GLuint buf, GLenum mode );
+ */
+GLE_API void glBlendEquationIndexedAMD( GLuint buf, GLenum mode );
+
+/**
+ * @brief void glBlendEquationSeparateIndexedAMD( GLuint buf, GLenum modeRGB, GLenum modeAlpha );
+ */
+GLE_API void glBlendEquationSeparateIndexedAMD( GLuint buf, GLenum modeRGB, GLenum modeAlpha );
 
 //@}
 
@@ -361,6 +397,22 @@ GLE_API void glTessellationFactorAMD( GLfloat factor );
  * @brief void glTessellationModeAMD( GLenum mode );
  */
 GLE_API void glTessellationModeAMD( GLenum mode );
+
+//@}
+
+
+/**
+ * @defgroup GL_APPLE_aux_depth_stencil GL_APPLE_aux_depth_stencil
+ * Extension number in OpenGL registry : 370
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/aux_depth_stencil.txt
+ * @ingroup g_GL_APPLE g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_APPLE_aux_depth_stencil is supported.
+ * @return Returns \c true if \b GL_APPLE_aux_depth_stencil is supported, false otherwise.
+ */
+GLE_API bool isGL_APPLE_aux_depth_stencil();
 
 //@}
 
@@ -479,6 +531,22 @@ GLE_API void glFinishObjectAPPLE( GLenum object, GLint name );
 
 
 /**
+ * @defgroup GL_APPLE_float_pixels GL_APPLE_float_pixels
+ * Extension number in OpenGL registry : 368
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/float_pixels.txt
+ * @ingroup g_GL_APPLE g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_APPLE_float_pixels is supported.
+ * @return Returns \c true if \b GL_APPLE_float_pixels is supported, false otherwise.
+ */
+GLE_API bool isGL_APPLE_float_pixels();
+
+//@}
+
+
+/**
  * @defgroup GL_APPLE_flush_buffer_range GL_APPLE_flush_buffer_range
  * Extension number in OpenGL registry : 321
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/flush_buffer_range.txt
@@ -505,6 +573,53 @@ GLE_API void glFlushMappedBufferRangeAPPLE( GLenum target, GLintptr offset, GLsi
 
 
 /**
+ * @defgroup GL_APPLE_object_purgeable GL_APPLE_object_purgeable
+ * Extension number in OpenGL registry : 371
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/object_purgeable.txt
+ * @ingroup g_GL_APPLE g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_APPLE_object_purgeable is supported.
+ * @return Returns \c true if \b GL_APPLE_object_purgeable is supported, false otherwise.
+ */
+GLE_API bool isGL_APPLE_object_purgeable();
+
+/**
+ * @brief GLenum glObjectPurgeableAPPLE( GLenum objectType, GLuint name, GLenum option );
+ */
+GLE_API GLenum glObjectPurgeableAPPLE( GLenum objectType, GLuint name, GLenum option );
+
+/**
+ * @brief GLenum glObjectUnpurgeableAPPLE( GLenum objectType, GLuint name, GLenum option );
+ */
+GLE_API GLenum glObjectUnpurgeableAPPLE( GLenum objectType, GLuint name, GLenum option );
+
+/**
+ * @brief void glGetObjectParameterivAPPLE( GLenum objectType, GLuint name, GLenum pname, GLint *params );
+ */
+GLE_API void glGetObjectParameterivAPPLE( GLenum objectType, GLuint name, GLenum pname, GLint *params );
+
+//@}
+
+
+/**
+ * @defgroup GL_APPLE_row_bytes GL_APPLE_row_bytes
+ * Extension number in OpenGL registry : 372
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/row_bytes.txt
+ * @ingroup g_GL_APPLE g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_APPLE_row_bytes is supported.
+ * @return Returns \c true if \b GL_APPLE_row_bytes is supported, false otherwise.
+ */
+GLE_API bool isGL_APPLE_row_bytes();
+
+//@}
+
+
+/**
  * @defgroup GL_APPLE_specular_vector GL_APPLE_specular_vector
  * Extension number in OpenGL registry : 159
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/specular_vector.txt
@@ -516,6 +631,32 @@ GLE_API void glFlushMappedBufferRangeAPPLE( GLenum target, GLintptr offset, GLsi
  * @return Returns \c true if \b GL_APPLE_specular_vector is supported, false otherwise.
  */
 GLE_API bool isGL_APPLE_specular_vector();
+
+//@}
+
+
+/**
+ * @defgroup GL_APPLE_texture_range GL_APPLE_texture_range
+ * Extension number in OpenGL registry : 367
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/texture_range.txt
+ * @ingroup g_GL_APPLE g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_APPLE_texture_range is supported.
+ * @return Returns \c true if \b GL_APPLE_texture_range is supported, false otherwise.
+ */
+GLE_API bool isGL_APPLE_texture_range();
+
+/**
+ * @brief void glTextureRangeAPPLE( GLenum target, GLsizei length, const GLvoid *pointer );
+ */
+GLE_API void glTextureRangeAPPLE( GLenum target, GLsizei length, const GLvoid *pointer );
+
+/**
+ * @brief void glGetTexParameterPointervAPPLE( GLenum target, GLenum pname, GLvoid* *params );
+ */
+GLE_API void glGetTexParameterPointervAPPLE( GLenum target, GLenum pname, GLvoid* *params );
 
 //@}
 
@@ -604,6 +745,57 @@ GLE_API void glVertexArrayParameteriAPPLE( GLenum pname, GLint param );
 
 
 /**
+ * @defgroup GL_APPLE_vertex_program_evaluators GL_APPLE_vertex_program_evaluators
+ * Extension number in OpenGL registry : 369
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/vertex_program_evaluators.txt
+ * @ingroup g_GL_APPLE g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_APPLE_vertex_program_evaluators is supported.
+ * @return Returns \c true if \b GL_APPLE_vertex_program_evaluators is supported, false otherwise.
+ */
+GLE_API bool isGL_APPLE_vertex_program_evaluators();
+
+/**
+ * @brief void glEnableVertexAttribAPPLE( GLuint index, GLenum pname );
+ */
+GLE_API void glEnableVertexAttribAPPLE( GLuint index, GLenum pname );
+
+/**
+ * @brief void glDisableVertexAttribAPPLE( GLuint index, GLenum pname );
+ */
+GLE_API void glDisableVertexAttribAPPLE( GLuint index, GLenum pname );
+
+/**
+ * @brief GLboolean glIsVertexAttribEnabledAPPLE( GLuint index, GLenum pname );
+ */
+GLE_API GLboolean glIsVertexAttribEnabledAPPLE( GLuint index, GLenum pname );
+
+/**
+ * @brief void glMapVertexAttrib1dAPPLE( GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint stride, GLint order, const GLdouble *points );
+ */
+GLE_API void glMapVertexAttrib1dAPPLE( GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint stride, GLint order, const GLdouble *points );
+
+/**
+ * @brief void glMapVertexAttrib1fAPPLE( GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint stride, GLint order, const GLfloat *points );
+ */
+GLE_API void glMapVertexAttrib1fAPPLE( GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint stride, GLint order, const GLfloat *points );
+
+/**
+ * @brief void glMapVertexAttrib2dAPPLE( GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, const GLdouble *points );
+ */
+GLE_API void glMapVertexAttrib2dAPPLE( GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, const GLdouble *points );
+
+/**
+ * @brief void glMapVertexAttrib2fAPPLE( GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, const GLfloat *points );
+ */
+GLE_API void glMapVertexAttrib2fAPPLE( GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, const GLfloat *points );
+
+//@}
+
+
+/**
  * @defgroup GL_APPLE_ycbcr_422 GL_APPLE_ycbcr_422
  * Extension number in OpenGL registry : 275
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/ycbcr_422.txt
@@ -655,11 +847,12 @@ GLE_API bool isGL_ARB_compatibility();
 
 //@}
 
-			
-/**	
+
+/**
  * @defgroup GL_ARB_copy_buffer GL_ARB_copy_buffer
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : 59
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/copy_buffer.txt
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
 /**
@@ -1664,6 +1857,22 @@ GLE_API void glGetUniformivARB( GLhandleARB programObj, GLint location, GLint *p
  * @brief void glGetShaderSourceARB( GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *source );
  */
 GLE_API void glGetShaderSourceARB( GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *source );
+
+//@}
+
+
+/**
+ * @defgroup GL_ARB_shader_texture_lod GL_ARB_shader_texture_lod
+ * Extension number in OpenGL registry : 60
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/shader_texture_lod.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_shader_texture_lod is supported.
+ * @return Returns \c true if \b GL_ARB_shader_texture_lod is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_shader_texture_lod();
 
 //@}
 
@@ -6405,6 +6614,22 @@ GLE_API bool isGL_EXT_texture_sRGB();
  * @return Returns \c true if \b GL_EXT_texture_shared_exponent is supported, false otherwise.
  */
 GLE_API bool isGL_EXT_texture_shared_exponent();
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_texture_snorm GL_EXT_texture_snorm
+ * Extension number in OpenGL registry : 365
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_snorm.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_texture_snorm is supported.
+ * @return Returns \c true if \b GL_EXT_texture_snorm is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_texture_snorm();
 
 //@}
 
@@ -13120,6 +13345,11 @@ GLE_API bool isWGL_3DFX_multisample();
  * @return Returns \c true if \b WGL_3DL_stereo_control is supported, false otherwise.
  */
 GLE_API bool isWGL_3DL_stereo_control();
+
+/**
+ * @brief BOOL  wglSetStereoEmitterState3DL( HDC hDC, UINT uState );
+ */
+GLE_API BOOL  wglSetStereoEmitterState3DL( HDC hDC, UINT uState );
 
 //@}
 

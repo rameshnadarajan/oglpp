@@ -1,4 +1,4 @@
-// This file was generated at Wed Jun 10 14:51:44 2009 with gle, please do not modify.
+// This file was generated at Tue Jul 28 15:59:18 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,11 +17,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Wed Jun 10 14:51:44 2009 with gle, please do not modify.
+ * - Stamp = // This file was generated at Tue Jul 28 15:59:18 2009 with gle, please do not modify.
  * - Number of tokens					= 0
- * - Number of functions				= 1625
- * - Number of extensions found(in headers)	= 371
- * - Number of extensions in OpenGL registry	= 369
+ * - Number of functions				= 1642
+ * - Number of extensions found(in headers)	= 380
+ * - Number of extensions in OpenGL registry	= 379
  */
 
 
@@ -288,6 +288,35 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_AMD_draw_buffers_blend is supported, false otherwise.
+	 */
+	bool isGL_AMD_draw_buffers_blend;
+
+	/**
+	* @brief void glBlendFuncIndexedAMD( GLuint buf, GLenum src, GLenum dst );
+	*/
+	PFNGLBLENDFUNCINDEXEDAMDPROC                                  glBlendFuncIndexedAMD;
+
+	/**
+	* @brief void glBlendFuncSeparateIndexedAMD( GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha );
+	*/
+	PFNGLBLENDFUNCSEPARATEINDEXEDAMDPROC                          glBlendFuncSeparateIndexedAMD;
+
+	/**
+	* @brief void glBlendEquationIndexedAMD( GLuint buf, GLenum mode );
+	*/
+	PFNGLBLENDEQUATIONINDEXEDAMDPROC                              glBlendEquationIndexedAMD;
+
+	/**
+	* @brief void glBlendEquationSeparateIndexedAMD( GLuint buf, GLenum modeRGB, GLenum modeAlpha );
+	*/
+	PFNGLBLENDEQUATIONSEPARATEINDEXEDAMDPROC                      glBlendEquationSeparateIndexedAMD;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_AMD_performance_monitor is supported, false otherwise.
 	 */
 	bool isGL_AMD_performance_monitor;
@@ -374,6 +403,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glTessellationModeAMD( GLenum mode );
 	*/
 	PFNGLTESSELLATIONMODEAMDPROC                                  glTessellationModeAMD;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_APPLE_aux_depth_stencil is supported, false otherwise.
+	 */
+	bool isGL_APPLE_aux_depth_stencil;
 
 
 
@@ -472,6 +510,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_APPLE_float_pixels is supported, false otherwise.
+	 */
+	bool isGL_APPLE_float_pixels;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_APPLE_flush_buffer_range is supported, false otherwise.
 	 */
 	bool isGL_APPLE_flush_buffer_range;
@@ -491,9 +538,61 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_APPLE_object_purgeable is supported, false otherwise.
+	 */
+	bool isGL_APPLE_object_purgeable;
+
+	/**
+	* @brief GLenum glObjectPurgeableAPPLE( GLenum objectType, GLuint name, GLenum option );
+	*/
+	PFNGLOBJECTPURGEABLEAPPLEPROC                                 glObjectPurgeableAPPLE;
+
+	/**
+	* @brief GLenum glObjectUnpurgeableAPPLE( GLenum objectType, GLuint name, GLenum option );
+	*/
+	PFNGLOBJECTUNPURGEABLEAPPLEPROC                               glObjectUnpurgeableAPPLE;
+
+	/**
+	* @brief void glGetObjectParameterivAPPLE( GLenum objectType, GLuint name, GLenum pname, GLint *params );
+	*/
+	PFNGLGETOBJECTPARAMETERIVAPPLEPROC                            glGetObjectParameterivAPPLE;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_APPLE_row_bytes is supported, false otherwise.
+	 */
+	bool isGL_APPLE_row_bytes;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_APPLE_specular_vector is supported, false otherwise.
 	 */
 	bool isGL_APPLE_specular_vector;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_APPLE_texture_range is supported, false otherwise.
+	 */
+	bool isGL_APPLE_texture_range;
+
+	/**
+	* @brief void glTextureRangeAPPLE( GLenum target, GLsizei length, const GLvoid *pointer );
+	*/
+	PFNGLTEXTURERANGEAPPLEPROC                                    glTextureRangeAPPLE;
+
+	/**
+	* @brief void glGetTexParameterPointervAPPLE( GLenum target, GLenum pname, GLvoid* *params );
+	*/
+	PFNGLGETTEXPARAMETERPOINTERVAPPLEPROC                         glGetTexParameterPointervAPPLE;
 
 
 
@@ -556,6 +655,50 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glVertexArrayParameteriAPPLE( GLenum pname, GLint param );
 	*/
 	PFNGLVERTEXARRAYPARAMETERIAPPLEPROC                           glVertexArrayParameteriAPPLE;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_APPLE_vertex_program_evaluators is supported, false otherwise.
+	 */
+	bool isGL_APPLE_vertex_program_evaluators;
+
+	/**
+	* @brief void glEnableVertexAttribAPPLE( GLuint index, GLenum pname );
+	*/
+	PFNGLENABLEVERTEXATTRIBAPPLEPROC                              glEnableVertexAttribAPPLE;
+
+	/**
+	* @brief void glDisableVertexAttribAPPLE( GLuint index, GLenum pname );
+	*/
+	PFNGLDISABLEVERTEXATTRIBAPPLEPROC                             glDisableVertexAttribAPPLE;
+
+	/**
+	* @brief GLboolean glIsVertexAttribEnabledAPPLE( GLuint index, GLenum pname );
+	*/
+	PFNGLISVERTEXATTRIBENABLEDAPPLEPROC                           glIsVertexAttribEnabledAPPLE;
+
+	/**
+	* @brief void glMapVertexAttrib1dAPPLE( GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint stride, GLint order, const GLdouble *points );
+	*/
+	PFNGLMAPVERTEXATTRIB1DAPPLEPROC                               glMapVertexAttrib1dAPPLE;
+
+	/**
+	* @brief void glMapVertexAttrib1fAPPLE( GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint stride, GLint order, const GLfloat *points );
+	*/
+	PFNGLMAPVERTEXATTRIB1FAPPLEPROC                               glMapVertexAttrib1fAPPLE;
+
+	/**
+	* @brief void glMapVertexAttrib2dAPPLE( GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, const GLdouble *points );
+	*/
+	PFNGLMAPVERTEXATTRIB2DAPPLEPROC                               glMapVertexAttrib2dAPPLE;
+
+	/**
+	* @brief void glMapVertexAttrib2fAPPLE( GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, const GLfloat *points );
+	*/
+	PFNGLMAPVERTEXATTRIB2FAPPLEPROC                               glMapVertexAttrib2fAPPLE;
 
 
 
@@ -1422,6 +1565,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glGetShaderSourceARB( GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *source );
 	*/
 	PFNGLGETSHADERSOURCEARBPROC                                   glGetShaderSourceARB;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_shader_texture_lod is supported, false otherwise.
+	 */
+	bool isGL_ARB_shader_texture_lod;
 
 
 
@@ -5333,6 +5485,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_EXT_texture_shared_exponent is supported, false otherwise.
 	 */
 	bool isGL_EXT_texture_shared_exponent;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_EXT_texture_snorm is supported, false otherwise.
+	 */
+	bool isGL_EXT_texture_snorm;
 
 
 
@@ -10885,6 +11046,11 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b WGL_3DL_stereo_control is supported, false otherwise.
 	 */
 	bool isWGL_3DL_stereo_control;
+
+	/**
+	* @brief BOOL  wglSetStereoEmitterState3DL( HDC hDC, UINT uState );
+	*/
+	PFNWGLSETSTEREOEMITTERSTATE3DLPROC                            wglSetStereoEmitterState3DL;
 
 
 

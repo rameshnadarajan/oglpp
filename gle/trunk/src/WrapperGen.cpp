@@ -1,4 +1,4 @@
-// This file was generated at Wed Jun 10 14:51:44 2009 with gle, please do not modify.
+// This file was generated at Tue Jul 28 15:59:18 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -41,6 +41,39 @@ bool isGL_3DFX_texture_compression_FXT1()
 	const bool isSupported = gleGetCurrent()->isGL_3DFX_texture_compression_FXT1;
 
 	return isSupported;
+}
+
+
+// ********* GL_AMD_draw_buffers_blend *********
+bool isGL_AMD_draw_buffers_blend()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_draw_buffers_blend;
+
+	return isSupported;
+}
+
+					
+void glBlendFuncIndexedAMD( GLuint buf, GLenum src, GLenum dst )
+{
+	gleGetCurrent()->glBlendFuncIndexedAMD( buf, src, dst );
+}
+
+					
+void glBlendFuncSeparateIndexedAMD( GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha )
+{
+	gleGetCurrent()->glBlendFuncSeparateIndexedAMD( buf, srcRGB, dstRGB, srcAlpha, dstAlpha );
+}
+
+					
+void glBlendEquationIndexedAMD( GLuint buf, GLenum mode )
+{
+	gleGetCurrent()->glBlendEquationIndexedAMD( buf, mode );
+}
+
+					
+void glBlendEquationSeparateIndexedAMD( GLuint buf, GLenum modeRGB, GLenum modeAlpha )
+{
+	gleGetCurrent()->glBlendEquationSeparateIndexedAMD( buf, modeRGB, modeAlpha );
 }
 
 
@@ -149,6 +182,15 @@ void glTessellationModeAMD( GLenum mode )
 }
 
 
+// ********* GL_APPLE_aux_depth_stencil *********
+bool isGL_APPLE_aux_depth_stencil()
+{
+	const bool isSupported = gleGetCurrent()->isGL_APPLE_aux_depth_stencil;
+
+	return isSupported;
+}
+
+
 // ********* GL_APPLE_client_storage *********
 bool isGL_APPLE_client_storage()
 {
@@ -254,6 +296,15 @@ void glFinishObjectAPPLE( GLenum object, GLint name )
 }
 
 
+// ********* GL_APPLE_float_pixels *********
+bool isGL_APPLE_float_pixels()
+{
+	const bool isSupported = gleGetCurrent()->isGL_APPLE_float_pixels;
+
+	return isSupported;
+}
+
+
 // ********* GL_APPLE_flush_buffer_range *********
 bool isGL_APPLE_flush_buffer_range()
 {
@@ -275,12 +326,69 @@ void glFlushMappedBufferRangeAPPLE( GLenum target, GLintptr offset, GLsizeiptr s
 }
 
 
+// ********* GL_APPLE_object_purgeable *********
+bool isGL_APPLE_object_purgeable()
+{
+	const bool isSupported = gleGetCurrent()->isGL_APPLE_object_purgeable;
+
+	return isSupported;
+}
+
+					
+GLenum glObjectPurgeableAPPLE( GLenum objectType, GLuint name, GLenum option )
+{
+	return ( gleGetCurrent()->glObjectPurgeableAPPLE( objectType, name, option) );
+}
+
+					
+GLenum glObjectUnpurgeableAPPLE( GLenum objectType, GLuint name, GLenum option )
+{
+	return ( gleGetCurrent()->glObjectUnpurgeableAPPLE( objectType, name, option) );
+}
+
+					
+void glGetObjectParameterivAPPLE( GLenum objectType, GLuint name, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetObjectParameterivAPPLE( objectType, name, pname, params );
+}
+
+
+// ********* GL_APPLE_row_bytes *********
+bool isGL_APPLE_row_bytes()
+{
+	const bool isSupported = gleGetCurrent()->isGL_APPLE_row_bytes;
+
+	return isSupported;
+}
+
+
 // ********* GL_APPLE_specular_vector *********
 bool isGL_APPLE_specular_vector()
 {
 	const bool isSupported = gleGetCurrent()->isGL_APPLE_specular_vector;
 
 	return isSupported;
+}
+
+
+// ********* GL_APPLE_texture_range *********
+bool isGL_APPLE_texture_range()
+{
+	const bool isSupported = gleGetCurrent()->isGL_APPLE_texture_range;
+
+	return isSupported;
+}
+
+					
+void glTextureRangeAPPLE( GLenum target, GLsizei length, const GLvoid *pointer )
+{
+	gleGetCurrent()->glTextureRangeAPPLE( target, length, pointer );
+}
+
+					
+void glGetTexParameterPointervAPPLE( GLenum target, GLenum pname, GLvoid* *params )
+{
+	gleGetCurrent()->glGetTexParameterPointervAPPLE( target, pname, params );
 }
 
 
@@ -350,6 +458,57 @@ void glFlushVertexArrayRangeAPPLE( GLsizei length, GLvoid *pointer )
 void glVertexArrayParameteriAPPLE( GLenum pname, GLint param )
 {
 	gleGetCurrent()->glVertexArrayParameteriAPPLE( pname, param );
+}
+
+
+// ********* GL_APPLE_vertex_program_evaluators *********
+bool isGL_APPLE_vertex_program_evaluators()
+{
+	const bool isSupported = gleGetCurrent()->isGL_APPLE_vertex_program_evaluators;
+
+	return isSupported;
+}
+
+					
+void glEnableVertexAttribAPPLE( GLuint index, GLenum pname )
+{
+	gleGetCurrent()->glEnableVertexAttribAPPLE( index, pname );
+}
+
+					
+void glDisableVertexAttribAPPLE( GLuint index, GLenum pname )
+{
+	gleGetCurrent()->glDisableVertexAttribAPPLE( index, pname );
+}
+
+					
+GLboolean glIsVertexAttribEnabledAPPLE( GLuint index, GLenum pname )
+{
+	return ( gleGetCurrent()->glIsVertexAttribEnabledAPPLE( index, pname) );
+}
+
+					
+void glMapVertexAttrib1dAPPLE( GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint stride, GLint order, const GLdouble *points )
+{
+	gleGetCurrent()->glMapVertexAttrib1dAPPLE( index, size, u1, u2, stride, order, points );
+}
+
+					
+void glMapVertexAttrib1fAPPLE( GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint stride, GLint order, const GLfloat *points )
+{
+	gleGetCurrent()->glMapVertexAttrib1fAPPLE( index, size, u1, u2, stride, order, points );
+}
+
+					
+void glMapVertexAttrib2dAPPLE( GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, const GLdouble *points )
+{
+	gleGetCurrent()->glMapVertexAttrib2dAPPLE( index, size, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points );
+}
+
+					
+void glMapVertexAttrib2fAPPLE( GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, const GLfloat *points )
+{
+	gleGetCurrent()->glMapVertexAttrib2fAPPLE( index, size, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points );
 }
 
 
@@ -1337,6 +1496,15 @@ void glGetUniformivARB( GLhandleARB programObj, GLint location, GLint *params )
 void glGetShaderSourceARB( GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *source )
 {
 	gleGetCurrent()->glGetShaderSourceARB( obj, maxLength, length, source );
+}
+
+
+// ********* GL_ARB_shader_texture_lod *********
+bool isGL_ARB_shader_texture_lod()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_shader_texture_lod;
+
+	return isSupported;
 }
 
 
@@ -5814,6 +5982,15 @@ bool isGL_EXT_texture_sRGB()
 bool isGL_EXT_texture_shared_exponent()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_shared_exponent;
+
+	return isSupported;
+}
+
+
+// ********* GL_EXT_texture_snorm *********
+bool isGL_EXT_texture_snorm()
+{
+	const bool isSupported = gleGetCurrent()->isGL_EXT_texture_snorm;
 
 	return isSupported;
 }
@@ -12163,6 +12340,12 @@ bool isWGL_3DL_stereo_control()
 	const bool isSupported = gleGetCurrent()->isWGL_3DL_stereo_control;
 
 	return isSupported;
+}
+
+					
+BOOL  wglSetStereoEmitterState3DL( HDC hDC, UINT uState )
+{
+	return ( gleGetCurrent()->wglSetStereoEmitterState3DL( hDC, uState) );
 }
 
 #endif // WIN32

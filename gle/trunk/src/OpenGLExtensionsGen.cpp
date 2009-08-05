@@ -1,4 +1,4 @@
-// This file was generated at Wed Jun 10 14:51:44 2009 with gle, please do not modify.
+// This file was generated at Tue Jul 28 15:59:18 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,8 +17,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 371;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 1625;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 380;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 1642;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS ) :
@@ -48,6 +48,15 @@ void OpenGLExtensionsGen::clear()
 	isGL_3DFX_texture_compression_FXT1                            = false;
 
 
+	// ****** GL_AMD_draw_buffers_blend ******
+	isGL_AMD_draw_buffers_blend                                   = false;
+
+	glBlendFuncIndexedAMD                                         = 0;
+	glBlendFuncSeparateIndexedAMD                                 = 0;
+	glBlendEquationIndexedAMD                                     = 0;
+	glBlendEquationSeparateIndexedAMD                             = 0;
+
+
 	// ****** GL_AMD_performance_monitor ******
 	isGL_AMD_performance_monitor                                  = false;
 
@@ -73,6 +82,10 @@ void OpenGLExtensionsGen::clear()
 
 	glTessellationFactorAMD                                       = 0;
 	glTessellationModeAMD                                         = 0;
+
+
+	// ****** GL_APPLE_aux_depth_stencil ******
+	isGL_APPLE_aux_depth_stencil                                  = false;
 
 
 	// ****** GL_APPLE_client_storage ******
@@ -102,6 +115,10 @@ void OpenGLExtensionsGen::clear()
 	glFinishObjectAPPLE                                           = 0;
 
 
+	// ****** GL_APPLE_float_pixels ******
+	isGL_APPLE_float_pixels                                       = false;
+
+
 	// ****** GL_APPLE_flush_buffer_range ******
 	isGL_APPLE_flush_buffer_range                                 = false;
 
@@ -109,8 +126,27 @@ void OpenGLExtensionsGen::clear()
 	glFlushMappedBufferRangeAPPLE                                 = 0;
 
 
+	// ****** GL_APPLE_object_purgeable ******
+	isGL_APPLE_object_purgeable                                   = false;
+
+	glObjectPurgeableAPPLE                                        = 0;
+	glObjectUnpurgeableAPPLE                                      = 0;
+	glGetObjectParameterivAPPLE                                   = 0;
+
+
+	// ****** GL_APPLE_row_bytes ******
+	isGL_APPLE_row_bytes                                          = false;
+
+
 	// ****** GL_APPLE_specular_vector ******
 	isGL_APPLE_specular_vector                                    = false;
+
+
+	// ****** GL_APPLE_texture_range ******
+	isGL_APPLE_texture_range                                      = false;
+
+	glTextureRangeAPPLE                                           = 0;
+	glGetTexParameterPointervAPPLE                                = 0;
 
 
 	// ****** GL_APPLE_transform_hint ******
@@ -132,6 +168,18 @@ void OpenGLExtensionsGen::clear()
 	glVertexArrayRangeAPPLE                                       = 0;
 	glFlushVertexArrayRangeAPPLE                                  = 0;
 	glVertexArrayParameteriAPPLE                                  = 0;
+
+
+	// ****** GL_APPLE_vertex_program_evaluators ******
+	isGL_APPLE_vertex_program_evaluators                          = false;
+
+	glEnableVertexAttribAPPLE                                     = 0;
+	glDisableVertexAttribAPPLE                                    = 0;
+	glIsVertexAttribEnabledAPPLE                                  = 0;
+	glMapVertexAttrib1dAPPLE                                      = 0;
+	glMapVertexAttrib1fAPPLE                                      = 0;
+	glMapVertexAttrib2dAPPLE                                      = 0;
+	glMapVertexAttrib2fAPPLE                                      = 0;
 
 
 	// ****** GL_APPLE_ycbcr_422 ******
@@ -378,6 +426,10 @@ void OpenGLExtensionsGen::clear()
 	glGetUniformfvARB                                             = 0;
 	glGetUniformivARB                                             = 0;
 	glGetShaderSourceARB                                          = 0;
+
+
+	// ****** GL_ARB_shader_texture_lod ******
+	isGL_ARB_shader_texture_lod                                   = false;
 
 
 	// ****** GL_ARB_shading_language_100 ******
@@ -1466,6 +1518,10 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_EXT_texture_shared_exponent ******
 	isGL_EXT_texture_shared_exponent                              = false;
+
+
+	// ****** GL_EXT_texture_snorm ******
+	isGL_EXT_texture_snorm                                        = false;
 
 
 	// ****** GL_EXT_texture_swizzle ******
@@ -3018,6 +3074,7 @@ void OpenGLExtensionsGen::clear()
 #ifdef WIN32
 	// ****** WGL_3DL_stereo_control ******
 	isWGL_3DL_stereo_control                                      = false;
+	wglSetStereoEmitterState3DL                                   = 0;
 #endif // WIN32
 
 #ifdef WIN32
@@ -3623,6 +3680,54 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	int	localInitializedProcCount	= 0;
 
 	
+	// ****** GL_AMD_draw_buffers_blend ******
+	
+	isGL_AMD_draw_buffers_blend = isExtensionSupported("GL_AMD_draw_buffers_blend");
+	
+	localSupportedProcCount		= 4;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_AMD_draw_buffers_blend ) // || isSEDEnable()
+	{
+
+		glBlendFuncIndexedAMD = (PFNGLBLENDFUNCINDEXEDAMDPROC) getExtensionPtr( "glBlendFuncIndexedAMD" );
+		if ( glBlendFuncIndexedAMD != 0 )	++localInitializedProcCount;
+
+		glBlendFuncSeparateIndexedAMD = (PFNGLBLENDFUNCSEPARATEINDEXEDAMDPROC) getExtensionPtr( "glBlendFuncSeparateIndexedAMD" );
+		if ( glBlendFuncSeparateIndexedAMD != 0 )	++localInitializedProcCount;
+
+		glBlendEquationIndexedAMD = (PFNGLBLENDEQUATIONINDEXEDAMDPROC) getExtensionPtr( "glBlendEquationIndexedAMD" );
+		if ( glBlendEquationIndexedAMD != 0 )	++localInitializedProcCount;
+
+		glBlendEquationSeparateIndexedAMD = (PFNGLBLENDEQUATIONSEPARATEINDEXEDAMDPROC) getExtensionPtr( "glBlendEquationSeparateIndexedAMD" );
+		if ( glBlendEquationSeparateIndexedAMD != 0 )	++localInitializedProcCount;
+	} // if ( isGL_AMD_draw_buffers_blend || isSEDEnable() )
+	
+	if ( isGL_AMD_draw_buffers_blend )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_draw_buffers_blend                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_draw_buffers_blend                                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_draw_buffers_blend") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_draw_buffers_blend                                   : not detected." );
+	}
+	
 	// ****** GL_AMD_performance_monitor ******
 	
 	isGL_AMD_performance_monitor = isExtensionSupported("GL_AMD_performance_monitor");
@@ -3775,6 +3880,39 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	int	localInitializedProcCount	= 0;
 
 	
+	// ****** GL_APPLE_aux_depth_stencil ******
+	
+	isGL_APPLE_aux_depth_stencil = isExtensionSupported("GL_APPLE_aux_depth_stencil");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_APPLE_aux_depth_stencil )
+	{
+		std::stringstream strStream;
+		strStream << "GL_APPLE_aux_depth_stencil                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_APPLE_aux_depth_stencil                                  : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_APPLE_aux_depth_stencil") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_APPLE_aux_depth_stencil                                  : not detected." );
+	}
+	
 	// ****** GL_APPLE_client_storage ******
 	
 	isGL_APPLE_client_storage = isExtensionSupported("GL_APPLE_client_storage");
@@ -3919,6 +4057,39 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 		logEndl( "GL_APPLE_fence                                              : not detected." );
 	}
 	
+	// ****** GL_APPLE_float_pixels ******
+	
+	isGL_APPLE_float_pixels = isExtensionSupported("GL_APPLE_float_pixels");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_APPLE_float_pixels )
+	{
+		std::stringstream strStream;
+		strStream << "GL_APPLE_float_pixels                                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_APPLE_float_pixels                                       : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_APPLE_float_pixels") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_APPLE_float_pixels                                       : not detected." );
+	}
+	
 	// ****** GL_APPLE_flush_buffer_range ******
 	
 	isGL_APPLE_flush_buffer_range = isExtensionSupported("GL_APPLE_flush_buffer_range");
@@ -3961,6 +4132,84 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 		logEndl( "GL_APPLE_flush_buffer_range                                 : not detected." );
 	}
 	
+	// ****** GL_APPLE_object_purgeable ******
+	
+	isGL_APPLE_object_purgeable = isExtensionSupported("GL_APPLE_object_purgeable");
+	
+	localSupportedProcCount		= 3;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_APPLE_object_purgeable ) // || isSEDEnable()
+	{
+
+		glObjectPurgeableAPPLE = (PFNGLOBJECTPURGEABLEAPPLEPROC) getExtensionPtr( "glObjectPurgeableAPPLE" );
+		if ( glObjectPurgeableAPPLE != 0 )	++localInitializedProcCount;
+
+		glObjectUnpurgeableAPPLE = (PFNGLOBJECTUNPURGEABLEAPPLEPROC) getExtensionPtr( "glObjectUnpurgeableAPPLE" );
+		if ( glObjectUnpurgeableAPPLE != 0 )	++localInitializedProcCount;
+
+		glGetObjectParameterivAPPLE = (PFNGLGETOBJECTPARAMETERIVAPPLEPROC) getExtensionPtr( "glGetObjectParameterivAPPLE" );
+		if ( glGetObjectParameterivAPPLE != 0 )	++localInitializedProcCount;
+	} // if ( isGL_APPLE_object_purgeable || isSEDEnable() )
+	
+	if ( isGL_APPLE_object_purgeable )
+	{
+		std::stringstream strStream;
+		strStream << "GL_APPLE_object_purgeable                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_APPLE_object_purgeable                                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_APPLE_object_purgeable") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_APPLE_object_purgeable                                   : not detected." );
+	}
+	
+	// ****** GL_APPLE_row_bytes ******
+	
+	isGL_APPLE_row_bytes = isExtensionSupported("GL_APPLE_row_bytes");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_APPLE_row_bytes )
+	{
+		std::stringstream strStream;
+		strStream << "GL_APPLE_row_bytes                                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_APPLE_row_bytes                                          : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_APPLE_row_bytes") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_APPLE_row_bytes                                          : not detected." );
+	}
+	
 	// ****** GL_APPLE_specular_vector ******
 	
 	isGL_APPLE_specular_vector = isExtensionSupported("GL_APPLE_specular_vector");
@@ -3992,6 +4241,48 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	else
 	{
 		logEndl( "GL_APPLE_specular_vector                                    : not detected." );
+	}
+	
+	// ****** GL_APPLE_texture_range ******
+	
+	isGL_APPLE_texture_range = isExtensionSupported("GL_APPLE_texture_range");
+	
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_APPLE_texture_range ) // || isSEDEnable()
+	{
+
+		glTextureRangeAPPLE = (PFNGLTEXTURERANGEAPPLEPROC) getExtensionPtr( "glTextureRangeAPPLE" );
+		if ( glTextureRangeAPPLE != 0 )	++localInitializedProcCount;
+
+		glGetTexParameterPointervAPPLE = (PFNGLGETTEXPARAMETERPOINTERVAPPLEPROC) getExtensionPtr( "glGetTexParameterPointervAPPLE" );
+		if ( glGetTexParameterPointervAPPLE != 0 )	++localInitializedProcCount;
+	} // if ( isGL_APPLE_texture_range || isSEDEnable() )
+	
+	if ( isGL_APPLE_texture_range )
+	{
+		std::stringstream strStream;
+		strStream << "GL_APPLE_texture_range                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_APPLE_texture_range                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_APPLE_texture_range") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_APPLE_texture_range                                      : not detected." );
 	}
 	
 	// ****** GL_APPLE_transform_hint ******
@@ -4118,6 +4409,63 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	else
 	{
 		logEndl( "GL_APPLE_vertex_array_range                                 : not detected." );
+	}
+	
+	// ****** GL_APPLE_vertex_program_evaluators ******
+	
+	isGL_APPLE_vertex_program_evaluators = isExtensionSupported("GL_APPLE_vertex_program_evaluators");
+	
+	localSupportedProcCount		= 7;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_APPLE_vertex_program_evaluators ) // || isSEDEnable()
+	{
+
+		glEnableVertexAttribAPPLE = (PFNGLENABLEVERTEXATTRIBAPPLEPROC) getExtensionPtr( "glEnableVertexAttribAPPLE" );
+		if ( glEnableVertexAttribAPPLE != 0 )	++localInitializedProcCount;
+
+		glDisableVertexAttribAPPLE = (PFNGLDISABLEVERTEXATTRIBAPPLEPROC) getExtensionPtr( "glDisableVertexAttribAPPLE" );
+		if ( glDisableVertexAttribAPPLE != 0 )	++localInitializedProcCount;
+
+		glIsVertexAttribEnabledAPPLE = (PFNGLISVERTEXATTRIBENABLEDAPPLEPROC) getExtensionPtr( "glIsVertexAttribEnabledAPPLE" );
+		if ( glIsVertexAttribEnabledAPPLE != 0 )	++localInitializedProcCount;
+
+		glMapVertexAttrib1dAPPLE = (PFNGLMAPVERTEXATTRIB1DAPPLEPROC) getExtensionPtr( "glMapVertexAttrib1dAPPLE" );
+		if ( glMapVertexAttrib1dAPPLE != 0 )	++localInitializedProcCount;
+
+		glMapVertexAttrib1fAPPLE = (PFNGLMAPVERTEXATTRIB1FAPPLEPROC) getExtensionPtr( "glMapVertexAttrib1fAPPLE" );
+		if ( glMapVertexAttrib1fAPPLE != 0 )	++localInitializedProcCount;
+
+		glMapVertexAttrib2dAPPLE = (PFNGLMAPVERTEXATTRIB2DAPPLEPROC) getExtensionPtr( "glMapVertexAttrib2dAPPLE" );
+		if ( glMapVertexAttrib2dAPPLE != 0 )	++localInitializedProcCount;
+
+		glMapVertexAttrib2fAPPLE = (PFNGLMAPVERTEXATTRIB2FAPPLEPROC) getExtensionPtr( "glMapVertexAttrib2fAPPLE" );
+		if ( glMapVertexAttrib2fAPPLE != 0 )	++localInitializedProcCount;
+	} // if ( isGL_APPLE_vertex_program_evaluators || isSEDEnable() )
+	
+	if ( isGL_APPLE_vertex_program_evaluators )
+	{
+		std::stringstream strStream;
+		strStream << "GL_APPLE_vertex_program_evaluators                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_APPLE_vertex_program_evaluators                          : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_APPLE_vertex_program_evaluators") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_APPLE_vertex_program_evaluators                          : not detected." );
 	}
 	
 	// ****** GL_APPLE_ycbcr_422 ******
@@ -5488,6 +5836,39 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	else
 	{
 		logEndl( "GL_ARB_shader_objects                                       : not detected." );
+	}
+	
+	// ****** GL_ARB_shader_texture_lod ******
+	
+	isGL_ARB_shader_texture_lod = isExtensionSupported("GL_ARB_shader_texture_lod");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_ARB_shader_texture_lod )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_shader_texture_lod                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_shader_texture_lod                                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_shader_texture_lod") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_shader_texture_lod                                   : not detected." );
 	}
 	
 	// ****** GL_ARB_shading_language_100 ******
@@ -11324,6 +11705,39 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	else
 	{
 		logEndl( "GL_EXT_texture_shared_exponent                              : not detected." );
+	}
+	
+	// ****** GL_EXT_texture_snorm ******
+	
+	isGL_EXT_texture_snorm = isExtensionSupported("GL_EXT_texture_snorm");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_EXT_texture_snorm )
+	{
+		std::stringstream strStream;
+		strStream << "GL_EXT_texture_snorm                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_EXT_texture_snorm                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_EXT_texture_snorm") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_EXT_texture_snorm                                        : not detected." );
 	}
 	
 	// ****** GL_EXT_texture_swizzle ******
@@ -19668,9 +20082,15 @@ void OpenGLExtensionsGen::initializeWGL_3DL()
 	
 	isWGL_3DL_stereo_control = isWExtensionSupported("WGL_3DL_stereo_control");
 	
-	localSupportedProcCount		= 0;
+	localSupportedProcCount		= 1;
 	localInitializedProcCount	= 0;
 	
+	if ( isWGL_3DL_stereo_control ) // || isSEDEnable()
+	{
+
+		wglSetStereoEmitterState3DL = (PFNWGLSETSTEREOEMITTERSTATE3DLPROC) getExtensionPtr( "wglSetStereoEmitterState3DL" );
+		if ( wglSetStereoEmitterState3DL != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_3DL_stereo_control || isSEDEnable() )
 	
 	if ( isWGL_3DL_stereo_control )
 	{

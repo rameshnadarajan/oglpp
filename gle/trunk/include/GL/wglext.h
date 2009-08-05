@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 /*
-** Copyright (c) 2007 The Khronos Group Inc.
+** Copyright (c) 2007-2009 The Khronos Group Inc.
 ** 
 ** Permission is hereby granted, free of charge, to any person obtaining a
 ** copy of this software and/or associated documentation files (the
@@ -28,6 +28,8 @@ extern "C" {
 ** MATERIALS OR THE USE OR OTHER DEALINGS IN THE MATERIALS.
 */
 
+/* Function declaration macros - to move into glplatform.h */
+
 #if defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__) && !defined(__SCITECH_SNAP__)
 #define WIN32_LEAN_AND_MEAN 1
 #include <windows.h>
@@ -46,9 +48,9 @@ extern "C" {
 /*************************************************************/
 
 /* Header file version number */
-/* wglext.h last updated 2009/03/03 */
+/* wglext.h last updated 2009/06/23 */
 /* Current version at http://www.opengl.org/registry/ */
-#define WGL_WGLEXT_VERSION 12
+#define WGL_WGLEXT_VERSION 13
 
 #ifndef WGL_ARB_buffer_region
 #define WGL_FRONT_COLOR_BUFFER_BIT_ARB 0x00000001
@@ -707,6 +709,14 @@ typedef BOOL (WINAPI * PFNWGLQUERYFRAMETRACKINGI3DPROC) (DWORD *pFrameCount, DWO
 
 #ifndef WGL_NV_float_buffer
 #define WGL_NV_float_buffer 1
+#endif
+
+#ifndef WGL_3DL_stereo_control
+#define WGL_3DL_stereo_control 1
+#ifdef WGL_WGLEXT_PROTOTYPES
+extern BOOL WINAPI wglSetStereoEmitterState3DL (HDC, UINT);
+#endif /* WGL_WGLEXT_PROTOTYPES */
+typedef BOOL (WINAPI * PFNWGLSETSTEREOEMITTERSTATE3DLPROC) (HDC hDC, UINT uState);
 #endif
 
 #ifndef WGL_EXT_pixel_format_packed_float
