@@ -1,4 +1,4 @@
-// This file was generated at Tue Jul 28 15:59:18 2009 with gle, please do not modify.
+// This file was generated at Wed Aug 12 13:28:23 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,8 +17,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 380;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 1642;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 394;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 1668;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS ) :
@@ -204,6 +204,10 @@ void OpenGLExtensionsGen::clear()
 	isGL_ARB_depth_buffer_float                                   = false;
 
 
+	// ****** GL_ARB_depth_clamp ******
+	isGL_ARB_depth_clamp                                          = false;
+
+
 	// ****** GL_ARB_depth_texture ******
 	isGL_ARB_depth_texture                                        = false;
 
@@ -213,11 +217,33 @@ void OpenGLExtensionsGen::clear()
 	glDrawBuffersARB                                              = 0;
 
 
+	// ****** GL_ARB_draw_buffers_blend ******
+	isGL_ARB_draw_buffers_blend                                   = false;
+
+	glBlendEquationi                                              = 0;
+	glBlendEquationSeparatei                                      = 0;
+	glBlendFunci                                                  = 0;
+	glBlendFuncSeparatei                                          = 0;
+
+
+	// ****** GL_ARB_draw_elements_base_vertex ******
+	isGL_ARB_draw_elements_base_vertex                            = false;
+
+	glDrawElementsBaseVertex                                      = 0;
+	glDrawRangeElementsBaseVertex                                 = 0;
+	glDrawElementsInstancedBaseVertex                             = 0;
+	glMultiDrawElementsBaseVertex                                 = 0;
+
+
 	// ****** GL_ARB_draw_instanced ******
 	isGL_ARB_draw_instanced                                       = false;
 
 	glDrawArraysInstancedARB                                      = 0;
 	glDrawElementsInstancedARB                                    = 0;
+
+
+	// ****** GL_ARB_fragment_coord_conventions ******
+	isGL_ARB_fragment_coord_conventions                           = false;
 
 
 	// ****** GL_ARB_fragment_program ******
@@ -384,6 +410,20 @@ void OpenGLExtensionsGen::clear()
 	isGL_ARB_point_sprite                                         = false;
 
 
+	// ****** GL_ARB_provoking_vertex ******
+	isGL_ARB_provoking_vertex                                     = false;
+	glProvokingVertex                                             = 0;
+
+
+	// ****** GL_ARB_sample_shading ******
+	isGL_ARB_sample_shading                                       = false;
+	glMinSampleShading                                            = 0;
+
+
+	// ****** GL_ARB_seamless_cube_map ******
+	isGL_ARB_seamless_cube_map                                    = false;
+
+
 	// ****** GL_ARB_shader_objects ******
 	isGL_ARB_shader_objects                                       = false;
 
@@ -444,6 +484,18 @@ void OpenGLExtensionsGen::clear()
 	isGL_ARB_shadow_ambient                                       = false;
 
 
+	// ****** GL_ARB_sync ******
+	isGL_ARB_sync                                                 = false;
+
+	glFenceSync                                                   = 0;
+	glIsSync                                                      = 0;
+	glDeleteSync                                                  = 0;
+	glClientWaitSync                                              = 0;
+	glWaitSync                                                    = 0;
+	glGetInteger64v                                               = 0;
+	glGetSynciv                                                   = 0;
+
+
 	// ****** GL_ARB_texture_border_clamp ******
 	isGL_ARB_texture_border_clamp                                 = false;
 
@@ -473,6 +525,10 @@ void OpenGLExtensionsGen::clear()
 	isGL_ARB_texture_cube_map                                     = false;
 
 
+	// ****** GL_ARB_texture_cube_map_array ******
+	isGL_ARB_texture_cube_map_array                               = false;
+
+
 	// ****** GL_ARB_texture_env_add ******
 	isGL_ARB_texture_env_add                                      = false;
 
@@ -493,12 +549,29 @@ void OpenGLExtensionsGen::clear()
 	isGL_ARB_texture_float                                        = false;
 
 
+	// ****** GL_ARB_texture_gather ******
+	isGL_ARB_texture_gather                                       = false;
+
+
 	// ****** GL_ARB_texture_mirrored_repeat ******
 	isGL_ARB_texture_mirrored_repeat                              = false;
 
 
+	// ****** GL_ARB_texture_multisample ******
+	isGL_ARB_texture_multisample                                  = false;
+
+	glTexImage2DMultisample                                       = 0;
+	glTexImage3DMultisample                                       = 0;
+	glGetMultisamplefv                                            = 0;
+	glSampleMaski                                                 = 0;
+
+
 	// ****** GL_ARB_texture_non_power_of_two ******
 	isGL_ARB_texture_non_power_of_two                             = false;
+
+
+	// ****** GL_ARB_texture_query_lod ******
+	isGL_ARB_texture_query_lod                                    = false;
 
 
 	// ****** GL_ARB_texture_rectangle ******
@@ -528,6 +601,10 @@ void OpenGLExtensionsGen::clear()
 	glGetActiveUniformBlockiv                                     = 0;
 	glGetActiveUniformBlockName                                   = 0;
 	glUniformBlockBinding                                         = 0;
+
+
+	// ****** GL_ARB_vertex_array_bgra ******
+	isGL_ARB_vertex_array_bgra                                    = false;
 
 
 	// ****** GL_ARB_vertex_array_object ******
@@ -3003,6 +3080,26 @@ void OpenGLExtensionsGen::clear()
 	glVertexAttribIPointer                                        = 0;
 	glGetVertexAttribIiv                                          = 0;
 	glGetVertexAttribIuiv                                         = 0;
+	glVertexAttribI1i                                             = 0;
+	glVertexAttribI2i                                             = 0;
+	glVertexAttribI3i                                             = 0;
+	glVertexAttribI4i                                             = 0;
+	glVertexAttribI1ui                                            = 0;
+	glVertexAttribI2ui                                            = 0;
+	glVertexAttribI3ui                                            = 0;
+	glVertexAttribI4ui                                            = 0;
+	glVertexAttribI1iv                                            = 0;
+	glVertexAttribI2iv                                            = 0;
+	glVertexAttribI3iv                                            = 0;
+	glVertexAttribI4iv                                            = 0;
+	glVertexAttribI1uiv                                           = 0;
+	glVertexAttribI2uiv                                           = 0;
+	glVertexAttribI3uiv                                           = 0;
+	glVertexAttribI4uiv                                           = 0;
+	glVertexAttribI4bv                                            = 0;
+	glVertexAttribI4sv                                            = 0;
+	glVertexAttribI4ubv                                           = 0;
+	glVertexAttribI4usv                                           = 0;
 	glGetUniformuiv                                               = 0;
 	glBindFragDataLocation                                        = 0;
 	glGetFragDataLocation                                         = 0;
@@ -3028,27 +3125,6 @@ void OpenGLExtensionsGen::clear()
 	// ****** GL_VERSION_3_0_DEPRECATED ******
 	isGL_VERSION_3_0_DEPRECATED                                   = false;
 
-	glVertexAttribI1i                                             = 0;
-	glVertexAttribI2i                                             = 0;
-	glVertexAttribI3i                                             = 0;
-	glVertexAttribI4i                                             = 0;
-	glVertexAttribI1ui                                            = 0;
-	glVertexAttribI2ui                                            = 0;
-	glVertexAttribI3ui                                            = 0;
-	glVertexAttribI4ui                                            = 0;
-	glVertexAttribI1iv                                            = 0;
-	glVertexAttribI2iv                                            = 0;
-	glVertexAttribI3iv                                            = 0;
-	glVertexAttribI4iv                                            = 0;
-	glVertexAttribI1uiv                                           = 0;
-	glVertexAttribI2uiv                                           = 0;
-	glVertexAttribI3uiv                                           = 0;
-	glVertexAttribI4uiv                                           = 0;
-	glVertexAttribI4bv                                            = 0;
-	glVertexAttribI4sv                                            = 0;
-	glVertexAttribI4ubv                                           = 0;
-	glVertexAttribI4usv                                           = 0;
-
 
 	// ****** GL_VERSION_3_1 ******
 	isGL_VERSION_3_1                                              = false;
@@ -3057,6 +3133,16 @@ void OpenGLExtensionsGen::clear()
 	glDrawElementsInstanced                                       = 0;
 	glTexBuffer                                                   = 0;
 	glPrimitiveRestartIndex                                       = 0;
+
+
+	// ****** GL_VERSION_3_2 ******
+	isGL_VERSION_3_2                                              = false;
+
+	glGetInteger64i_v                                             = 0;
+	glGetBufferParameteri64v                                      = 0;
+	glProgramParameteri                                           = 0;
+	glFramebufferTexture                                          = 0;
+	glFramebufferTextureFace                                      = 0;
 
 
 	// ****** GL_WIN_phong_shading ******
@@ -4653,6 +4739,39 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 		logEndl( "GL_ARB_depth_buffer_float                                   : not detected." );
 	}
 	
+	// ****** GL_ARB_depth_clamp ******
+	
+	isGL_ARB_depth_clamp = isExtensionSupported("GL_ARB_depth_clamp");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_ARB_depth_clamp )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_depth_clamp                                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_depth_clamp                                          : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_depth_clamp") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_depth_clamp                                          : not detected." );
+	}
+	
 	// ****** GL_ARB_depth_texture ******
 	
 	isGL_ARB_depth_texture = isExtensionSupported("GL_ARB_depth_texture");
@@ -4725,6 +4844,102 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 		logEndl( "GL_ARB_draw_buffers                                         : not detected." );
 	}
 	
+	// ****** GL_ARB_draw_buffers_blend ******
+	
+	isGL_ARB_draw_buffers_blend = isExtensionSupported("GL_ARB_draw_buffers_blend");
+	
+	localSupportedProcCount		= 4;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_ARB_draw_buffers_blend ) // || isSEDEnable()
+	{
+
+		glBlendEquationi = (PFNGLBLENDEQUATIONIPROC) getExtensionPtr( "glBlendEquationi" );
+		if ( glBlendEquationi != 0 )	++localInitializedProcCount;
+
+		glBlendEquationSeparatei = (PFNGLBLENDEQUATIONSEPARATEIPROC) getExtensionPtr( "glBlendEquationSeparatei" );
+		if ( glBlendEquationSeparatei != 0 )	++localInitializedProcCount;
+
+		glBlendFunci = (PFNGLBLENDFUNCIPROC) getExtensionPtr( "glBlendFunci" );
+		if ( glBlendFunci != 0 )	++localInitializedProcCount;
+
+		glBlendFuncSeparatei = (PFNGLBLENDFUNCSEPARATEIPROC) getExtensionPtr( "glBlendFuncSeparatei" );
+		if ( glBlendFuncSeparatei != 0 )	++localInitializedProcCount;
+	} // if ( isGL_ARB_draw_buffers_blend || isSEDEnable() )
+	
+	if ( isGL_ARB_draw_buffers_blend )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_draw_buffers_blend                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_draw_buffers_blend                                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_draw_buffers_blend") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_draw_buffers_blend                                   : not detected." );
+	}
+	
+	// ****** GL_ARB_draw_elements_base_vertex ******
+	
+	isGL_ARB_draw_elements_base_vertex = isExtensionSupported("GL_ARB_draw_elements_base_vertex");
+	
+	localSupportedProcCount		= 4;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_ARB_draw_elements_base_vertex ) // || isSEDEnable()
+	{
+
+		glDrawElementsBaseVertex = (PFNGLDRAWELEMENTSBASEVERTEXPROC) getExtensionPtr( "glDrawElementsBaseVertex" );
+		if ( glDrawElementsBaseVertex != 0 )	++localInitializedProcCount;
+
+		glDrawRangeElementsBaseVertex = (PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC) getExtensionPtr( "glDrawRangeElementsBaseVertex" );
+		if ( glDrawRangeElementsBaseVertex != 0 )	++localInitializedProcCount;
+
+		glDrawElementsInstancedBaseVertex = (PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC) getExtensionPtr( "glDrawElementsInstancedBaseVertex" );
+		if ( glDrawElementsInstancedBaseVertex != 0 )	++localInitializedProcCount;
+
+		glMultiDrawElementsBaseVertex = (PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC) getExtensionPtr( "glMultiDrawElementsBaseVertex" );
+		if ( glMultiDrawElementsBaseVertex != 0 )	++localInitializedProcCount;
+	} // if ( isGL_ARB_draw_elements_base_vertex || isSEDEnable() )
+	
+	if ( isGL_ARB_draw_elements_base_vertex )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_draw_elements_base_vertex                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_draw_elements_base_vertex                            : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_draw_elements_base_vertex") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_draw_elements_base_vertex                            : not detected." );
+	}
+	
 	// ****** GL_ARB_draw_instanced ******
 	
 	isGL_ARB_draw_instanced = isExtensionSupported("GL_ARB_draw_instanced");
@@ -4765,6 +4980,39 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	else
 	{
 		logEndl( "GL_ARB_draw_instanced                                       : not detected." );
+	}
+	
+	// ****** GL_ARB_fragment_coord_conventions ******
+	
+	isGL_ARB_fragment_coord_conventions = isExtensionSupported("GL_ARB_fragment_coord_conventions");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_ARB_fragment_coord_conventions )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_fragment_coord_conventions                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_fragment_coord_conventions                           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_fragment_coord_conventions") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_fragment_coord_conventions                           : not detected." );
 	}
 	
 	// ****** GL_ARB_fragment_program ******
@@ -5685,6 +5933,117 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 		logEndl( "GL_ARB_point_sprite                                         : not detected." );
 	}
 	
+	// ****** GL_ARB_provoking_vertex ******
+	
+	isGL_ARB_provoking_vertex = isExtensionSupported("GL_ARB_provoking_vertex");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_ARB_provoking_vertex ) // || isSEDEnable()
+	{
+
+		glProvokingVertex = (PFNGLPROVOKINGVERTEXPROC) getExtensionPtr( "glProvokingVertex" );
+		if ( glProvokingVertex != 0 )	++localInitializedProcCount;
+	} // if ( isGL_ARB_provoking_vertex || isSEDEnable() )
+	
+	if ( isGL_ARB_provoking_vertex )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_provoking_vertex                                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_provoking_vertex                                     : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_provoking_vertex") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_provoking_vertex                                     : not detected." );
+	}
+	
+	// ****** GL_ARB_sample_shading ******
+	
+	isGL_ARB_sample_shading = isExtensionSupported("GL_ARB_sample_shading");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_ARB_sample_shading ) // || isSEDEnable()
+	{
+
+		glMinSampleShading = (PFNGLMINSAMPLESHADINGPROC) getExtensionPtr( "glMinSampleShading" );
+		if ( glMinSampleShading != 0 )	++localInitializedProcCount;
+	} // if ( isGL_ARB_sample_shading || isSEDEnable() )
+	
+	if ( isGL_ARB_sample_shading )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_sample_shading                                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_sample_shading                                       : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_sample_shading") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_sample_shading                                       : not detected." );
+	}
+	
+	// ****** GL_ARB_seamless_cube_map ******
+	
+	isGL_ARB_seamless_cube_map = isExtensionSupported("GL_ARB_seamless_cube_map");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_ARB_seamless_cube_map )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_seamless_cube_map                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_seamless_cube_map                                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_seamless_cube_map") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_seamless_cube_map                                    : not detected." );
+	}
+	
 	// ****** GL_ARB_shader_objects ******
 	
 	isGL_ARB_shader_objects = isExtensionSupported("GL_ARB_shader_objects");
@@ -5970,6 +6329,63 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 		logEndl( "GL_ARB_shadow_ambient                                       : not detected." );
 	}
 	
+	// ****** GL_ARB_sync ******
+	
+	isGL_ARB_sync = isExtensionSupported("GL_ARB_sync");
+	
+	localSupportedProcCount		= 7;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_ARB_sync ) // || isSEDEnable()
+	{
+
+		glFenceSync = (PFNGLFENCESYNCPROC) getExtensionPtr( "glFenceSync" );
+		if ( glFenceSync != 0 )	++localInitializedProcCount;
+
+		glIsSync = (PFNGLISSYNCPROC) getExtensionPtr( "glIsSync" );
+		if ( glIsSync != 0 )	++localInitializedProcCount;
+
+		glDeleteSync = (PFNGLDELETESYNCPROC) getExtensionPtr( "glDeleteSync" );
+		if ( glDeleteSync != 0 )	++localInitializedProcCount;
+
+		glClientWaitSync = (PFNGLCLIENTWAITSYNCPROC) getExtensionPtr( "glClientWaitSync" );
+		if ( glClientWaitSync != 0 )	++localInitializedProcCount;
+
+		glWaitSync = (PFNGLWAITSYNCPROC) getExtensionPtr( "glWaitSync" );
+		if ( glWaitSync != 0 )	++localInitializedProcCount;
+
+		glGetInteger64v = (PFNGLGETINTEGER64VPROC) getExtensionPtr( "glGetInteger64v" );
+		if ( glGetInteger64v != 0 )	++localInitializedProcCount;
+
+		glGetSynciv = (PFNGLGETSYNCIVPROC) getExtensionPtr( "glGetSynciv" );
+		if ( glGetSynciv != 0 )	++localInitializedProcCount;
+	} // if ( isGL_ARB_sync || isSEDEnable() )
+	
+	if ( isGL_ARB_sync )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_sync                                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_sync                                                 : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_sync") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_sync                                                 : not detected." );
+	}
+	
 	// ****** GL_ARB_texture_border_clamp ******
 	
 	isGL_ARB_texture_border_clamp = isExtensionSupported("GL_ARB_texture_border_clamp");
@@ -6165,6 +6581,39 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 		logEndl( "GL_ARB_texture_cube_map                                     : not detected." );
 	}
 	
+	// ****** GL_ARB_texture_cube_map_array ******
+	
+	isGL_ARB_texture_cube_map_array = isExtensionSupported("GL_ARB_texture_cube_map_array");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_ARB_texture_cube_map_array )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_texture_cube_map_array                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_texture_cube_map_array                               : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_texture_cube_map_array") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_texture_cube_map_array                               : not detected." );
+	}
+	
 	// ****** GL_ARB_texture_env_add ******
 	
 	isGL_ARB_texture_env_add = isExtensionSupported("GL_ARB_texture_env_add");
@@ -6330,6 +6779,39 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 		logEndl( "GL_ARB_texture_float                                        : not detected." );
 	}
 	
+	// ****** GL_ARB_texture_gather ******
+	
+	isGL_ARB_texture_gather = isExtensionSupported("GL_ARB_texture_gather");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_ARB_texture_gather )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_texture_gather                                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_texture_gather                                       : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_texture_gather") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_texture_gather                                       : not detected." );
+	}
+	
 	// ****** GL_ARB_texture_mirrored_repeat ******
 	
 	isGL_ARB_texture_mirrored_repeat = isExtensionSupported("GL_ARB_texture_mirrored_repeat");
@@ -6363,6 +6845,54 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 		logEndl( "GL_ARB_texture_mirrored_repeat                              : not detected." );
 	}
 	
+	// ****** GL_ARB_texture_multisample ******
+	
+	isGL_ARB_texture_multisample = isExtensionSupported("GL_ARB_texture_multisample");
+	
+	localSupportedProcCount		= 4;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_ARB_texture_multisample ) // || isSEDEnable()
+	{
+
+		glTexImage2DMultisample = (PFNGLTEXIMAGE2DMULTISAMPLEPROC) getExtensionPtr( "glTexImage2DMultisample" );
+		if ( glTexImage2DMultisample != 0 )	++localInitializedProcCount;
+
+		glTexImage3DMultisample = (PFNGLTEXIMAGE3DMULTISAMPLEPROC) getExtensionPtr( "glTexImage3DMultisample" );
+		if ( glTexImage3DMultisample != 0 )	++localInitializedProcCount;
+
+		glGetMultisamplefv = (PFNGLGETMULTISAMPLEFVPROC) getExtensionPtr( "glGetMultisamplefv" );
+		if ( glGetMultisamplefv != 0 )	++localInitializedProcCount;
+
+		glSampleMaski = (PFNGLSAMPLEMASKIPROC) getExtensionPtr( "glSampleMaski" );
+		if ( glSampleMaski != 0 )	++localInitializedProcCount;
+	} // if ( isGL_ARB_texture_multisample || isSEDEnable() )
+	
+	if ( isGL_ARB_texture_multisample )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_texture_multisample                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_texture_multisample                                  : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_texture_multisample") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_texture_multisample                                  : not detected." );
+	}
+	
 	// ****** GL_ARB_texture_non_power_of_two ******
 	
 	isGL_ARB_texture_non_power_of_two = isExtensionSupported("GL_ARB_texture_non_power_of_two");
@@ -6394,6 +6924,39 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	else
 	{
 		logEndl( "GL_ARB_texture_non_power_of_two                             : not detected." );
+	}
+	
+	// ****** GL_ARB_texture_query_lod ******
+	
+	isGL_ARB_texture_query_lod = isExtensionSupported("GL_ARB_texture_query_lod");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_ARB_texture_query_lod )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_texture_query_lod                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_texture_query_lod                                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_texture_query_lod") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_texture_query_lod                                    : not detected." );
 	}
 	
 	// ****** GL_ARB_texture_rectangle ******
@@ -6565,6 +7128,39 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	else
 	{
 		logEndl( "GL_ARB_uniform_buffer_object                                : not detected." );
+	}
+	
+	// ****** GL_ARB_vertex_array_bgra ******
+	
+	isGL_ARB_vertex_array_bgra = isExtensionSupported("GL_ARB_vertex_array_bgra");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_ARB_vertex_array_bgra )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_vertex_array_bgra                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_vertex_array_bgra                                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_vertex_array_bgra") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_vertex_array_bgra                                    : not detected." );
 	}
 	
 	// ****** GL_ARB_vertex_array_object ******
@@ -19686,7 +20282,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	
 	isGL_VERSION_3_0 = false;
 	
-	localSupportedProcCount		= 38;
+	localSupportedProcCount		= 58;
 	localInitializedProcCount	= 0;
 					
 	glColorMaski = (PFNGLCOLORMASKIPROC) getExtensionPtr( "glColorMaski" );
@@ -19742,6 +20338,66 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 					
 	glGetVertexAttribIuiv = (PFNGLGETVERTEXATTRIBIUIVPROC) getExtensionPtr( "glGetVertexAttribIuiv" );
 	if ( glGetVertexAttribIuiv != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI1i = (PFNGLVERTEXATTRIBI1IPROC) getExtensionPtr( "glVertexAttribI1i" );
+	if ( glVertexAttribI1i != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI2i = (PFNGLVERTEXATTRIBI2IPROC) getExtensionPtr( "glVertexAttribI2i" );
+	if ( glVertexAttribI2i != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI3i = (PFNGLVERTEXATTRIBI3IPROC) getExtensionPtr( "glVertexAttribI3i" );
+	if ( glVertexAttribI3i != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI4i = (PFNGLVERTEXATTRIBI4IPROC) getExtensionPtr( "glVertexAttribI4i" );
+	if ( glVertexAttribI4i != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI1ui = (PFNGLVERTEXATTRIBI1UIPROC) getExtensionPtr( "glVertexAttribI1ui" );
+	if ( glVertexAttribI1ui != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI2ui = (PFNGLVERTEXATTRIBI2UIPROC) getExtensionPtr( "glVertexAttribI2ui" );
+	if ( glVertexAttribI2ui != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI3ui = (PFNGLVERTEXATTRIBI3UIPROC) getExtensionPtr( "glVertexAttribI3ui" );
+	if ( glVertexAttribI3ui != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI4ui = (PFNGLVERTEXATTRIBI4UIPROC) getExtensionPtr( "glVertexAttribI4ui" );
+	if ( glVertexAttribI4ui != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI1iv = (PFNGLVERTEXATTRIBI1IVPROC) getExtensionPtr( "glVertexAttribI1iv" );
+	if ( glVertexAttribI1iv != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI2iv = (PFNGLVERTEXATTRIBI2IVPROC) getExtensionPtr( "glVertexAttribI2iv" );
+	if ( glVertexAttribI2iv != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI3iv = (PFNGLVERTEXATTRIBI3IVPROC) getExtensionPtr( "glVertexAttribI3iv" );
+	if ( glVertexAttribI3iv != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI4iv = (PFNGLVERTEXATTRIBI4IVPROC) getExtensionPtr( "glVertexAttribI4iv" );
+	if ( glVertexAttribI4iv != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI1uiv = (PFNGLVERTEXATTRIBI1UIVPROC) getExtensionPtr( "glVertexAttribI1uiv" );
+	if ( glVertexAttribI1uiv != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI2uiv = (PFNGLVERTEXATTRIBI2UIVPROC) getExtensionPtr( "glVertexAttribI2uiv" );
+	if ( glVertexAttribI2uiv != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI3uiv = (PFNGLVERTEXATTRIBI3UIVPROC) getExtensionPtr( "glVertexAttribI3uiv" );
+	if ( glVertexAttribI3uiv != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI4uiv = (PFNGLVERTEXATTRIBI4UIVPROC) getExtensionPtr( "glVertexAttribI4uiv" );
+	if ( glVertexAttribI4uiv != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI4bv = (PFNGLVERTEXATTRIBI4BVPROC) getExtensionPtr( "glVertexAttribI4bv" );
+	if ( glVertexAttribI4bv != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI4sv = (PFNGLVERTEXATTRIBI4SVPROC) getExtensionPtr( "glVertexAttribI4sv" );
+	if ( glVertexAttribI4sv != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI4ubv = (PFNGLVERTEXATTRIBI4UBVPROC) getExtensionPtr( "glVertexAttribI4ubv" );
+	if ( glVertexAttribI4ubv != 0 )	localInitializedProcCount++;
+					
+	glVertexAttribI4usv = (PFNGLVERTEXATTRIBI4USVPROC) getExtensionPtr( "glVertexAttribI4usv" );
+	if ( glVertexAttribI4usv != 0 )	localInitializedProcCount++;
 					
 	glGetUniformuiv = (PFNGLGETUNIFORMUIVPROC) getExtensionPtr( "glGetUniformuiv" );
 	if ( glGetUniformuiv != 0 )	localInitializedProcCount++;
@@ -19825,68 +20481,8 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	
 	isGL_VERSION_3_0_DEPRECATED = false;
 	
-	localSupportedProcCount		= 20;
+	localSupportedProcCount		= 0;
 	localInitializedProcCount	= 0;
-					
-	glVertexAttribI1i = (PFNGLVERTEXATTRIBI1IPROC) getExtensionPtr( "glVertexAttribI1i" );
-	if ( glVertexAttribI1i != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI2i = (PFNGLVERTEXATTRIBI2IPROC) getExtensionPtr( "glVertexAttribI2i" );
-	if ( glVertexAttribI2i != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI3i = (PFNGLVERTEXATTRIBI3IPROC) getExtensionPtr( "glVertexAttribI3i" );
-	if ( glVertexAttribI3i != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI4i = (PFNGLVERTEXATTRIBI4IPROC) getExtensionPtr( "glVertexAttribI4i" );
-	if ( glVertexAttribI4i != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI1ui = (PFNGLVERTEXATTRIBI1UIPROC) getExtensionPtr( "glVertexAttribI1ui" );
-	if ( glVertexAttribI1ui != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI2ui = (PFNGLVERTEXATTRIBI2UIPROC) getExtensionPtr( "glVertexAttribI2ui" );
-	if ( glVertexAttribI2ui != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI3ui = (PFNGLVERTEXATTRIBI3UIPROC) getExtensionPtr( "glVertexAttribI3ui" );
-	if ( glVertexAttribI3ui != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI4ui = (PFNGLVERTEXATTRIBI4UIPROC) getExtensionPtr( "glVertexAttribI4ui" );
-	if ( glVertexAttribI4ui != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI1iv = (PFNGLVERTEXATTRIBI1IVPROC) getExtensionPtr( "glVertexAttribI1iv" );
-	if ( glVertexAttribI1iv != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI2iv = (PFNGLVERTEXATTRIBI2IVPROC) getExtensionPtr( "glVertexAttribI2iv" );
-	if ( glVertexAttribI2iv != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI3iv = (PFNGLVERTEXATTRIBI3IVPROC) getExtensionPtr( "glVertexAttribI3iv" );
-	if ( glVertexAttribI3iv != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI4iv = (PFNGLVERTEXATTRIBI4IVPROC) getExtensionPtr( "glVertexAttribI4iv" );
-	if ( glVertexAttribI4iv != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI1uiv = (PFNGLVERTEXATTRIBI1UIVPROC) getExtensionPtr( "glVertexAttribI1uiv" );
-	if ( glVertexAttribI1uiv != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI2uiv = (PFNGLVERTEXATTRIBI2UIVPROC) getExtensionPtr( "glVertexAttribI2uiv" );
-	if ( glVertexAttribI2uiv != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI3uiv = (PFNGLVERTEXATTRIBI3UIVPROC) getExtensionPtr( "glVertexAttribI3uiv" );
-	if ( glVertexAttribI3uiv != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI4uiv = (PFNGLVERTEXATTRIBI4UIVPROC) getExtensionPtr( "glVertexAttribI4uiv" );
-	if ( glVertexAttribI4uiv != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI4bv = (PFNGLVERTEXATTRIBI4BVPROC) getExtensionPtr( "glVertexAttribI4bv" );
-	if ( glVertexAttribI4bv != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI4sv = (PFNGLVERTEXATTRIBI4SVPROC) getExtensionPtr( "glVertexAttribI4sv" );
-	if ( glVertexAttribI4sv != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI4ubv = (PFNGLVERTEXATTRIBI4UBVPROC) getExtensionPtr( "glVertexAttribI4ubv" );
-	if ( glVertexAttribI4ubv != 0 )	localInitializedProcCount++;
-					
-	glVertexAttribI4usv = (PFNGLVERTEXATTRIBI4USVPROC) getExtensionPtr( "glVertexAttribI4usv" );
-	if ( glVertexAttribI4usv != 0 )	localInitializedProcCount++;
 
 	isGL_VERSION_3_0_DEPRECATED = (localInitializedProcCount == localSupportedProcCount);
 
@@ -19940,6 +20536,46 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	{
 		std::stringstream strStream;
 		strStream << "GL_VERSION_3_1                                              : virtual extension not detected, only " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::endl;
+		log( strStream.str() );
+	}
+
+	// ****** GL_VERSION_3_2 ******
+	
+	isGL_VERSION_3_2 = false;
+	
+	localSupportedProcCount		= 5;
+	localInitializedProcCount	= 0;
+					
+	glGetInteger64i_v = (PFNGLGETINTEGER64I_VPROC) getExtensionPtr( "glGetInteger64i_v" );
+	if ( glGetInteger64i_v != 0 )	localInitializedProcCount++;
+					
+	glGetBufferParameteri64v = (PFNGLGETBUFFERPARAMETERI64VPROC) getExtensionPtr( "glGetBufferParameteri64v" );
+	if ( glGetBufferParameteri64v != 0 )	localInitializedProcCount++;
+					
+	glProgramParameteri = (PFNGLPROGRAMPARAMETERIPROC) getExtensionPtr( "glProgramParameteri" );
+	if ( glProgramParameteri != 0 )	localInitializedProcCount++;
+					
+	glFramebufferTexture = (PFNGLFRAMEBUFFERTEXTUREPROC) getExtensionPtr( "glFramebufferTexture" );
+	if ( glFramebufferTexture != 0 )	localInitializedProcCount++;
+					
+	glFramebufferTextureFace = (PFNGLFRAMEBUFFERTEXTUREFACEPROC) getExtensionPtr( "glFramebufferTextureFace" );
+	if ( glFramebufferTextureFace != 0 )	localInitializedProcCount++;
+
+	isGL_VERSION_3_2 = (localInitializedProcCount == localSupportedProcCount);
+
+	if ( isGL_VERSION_3_2 )
+	{
+		std::stringstream strStream;
+		strStream << "GL_VERSION_3_2                                              : virtual extension detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::endl;
+		log( strStream.str() );
+		
+		++m_initializedExtensionCount;
+		m_initializedProcCount += localInitializedProcCount;
+	}
+	else
+	{
+		std::stringstream strStream;
+		strStream << "GL_VERSION_3_2                                              : virtual extension not detected, only " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::endl;
 		log( strStream.str() );
 	}
 } // initialize()

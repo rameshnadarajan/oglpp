@@ -497,17 +497,17 @@ sub parseOGLRegistry
 	my $stop = 0;
 	until ( $stop == 1 )
 	{
-		my $line  = <INFILE>;
+		my $line = <INFILE>;
 
-		if ( $line =~ /<ol>/ )
+		if ( $line =~ /<OL>/ )
 		{
 			# Start a list of extensions.
-			while ( ($line = <INFILE>) !~ /<\/ol>/ )
+			while ( ($line = <INFILE>) !~ /<\/OL>/ )
 			{
-				# <li value="1"> <a href="http://www.opengl.org/registry/specs/ARB/multitexture.txt">GL_ARB_multitexture</a>
-				if ( ($line =~ /<li value="(.+)">\s*<a href="(.+)">(.+)<\/a>/ ) )
+				# <LI value="1"> <A href="http://www.opengl.org/registry/specs/ARB/multitexture.txt">GL_ARB_multitexture</A>
+				#</LI>
+				if ( $line =~ /\s*<LI\s+value="(.+)">\s*<A\s+href\s*=\s*"(.+)">\s*(.+)<\/A>\s*/ )
 				{
-					# $1, $2, $3 = $id, $url, $name
 					$self->getOGLRegistryTable()->add( $3, $1, $2 ); # name, id, url
 					print "$1|$2|$3\n";
 				}

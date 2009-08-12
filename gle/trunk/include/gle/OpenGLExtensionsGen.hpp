@@ -1,4 +1,4 @@
-// This file was generated at Tue Jul 28 15:59:18 2009 with gle, please do not modify.
+// This file was generated at Wed Aug 12 13:28:23 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,11 +17,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Tue Jul 28 15:59:18 2009 with gle, please do not modify.
+ * - Stamp = // This file was generated at Wed Aug 12 13:28:23 2009 with gle, please do not modify.
  * - Number of tokens					= 0
- * - Number of functions				= 1642
- * - Number of extensions found(in headers)	= 380
- * - Number of extensions in OpenGL registry	= 379
+ * - Number of functions				= 1668
+ * - Number of extensions found(in headers)	= 394
+ * - Number of extensions in OpenGL registry	= 392
  */
 
 
@@ -760,6 +760,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_depth_clamp is supported, false otherwise.
+	 */
+	bool isGL_ARB_depth_clamp;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_depth_texture is supported, false otherwise.
 	 */
 	bool isGL_ARB_depth_texture;
@@ -783,6 +792,64 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_draw_buffers_blend is supported, false otherwise.
+	 */
+	bool isGL_ARB_draw_buffers_blend;
+
+	/**
+	* @brief void glBlendEquationi( GLuint buf, GLenum mode );
+	*/
+	PFNGLBLENDEQUATIONIPROC                                       glBlendEquationi;
+
+	/**
+	* @brief void glBlendEquationSeparatei( GLuint buf, GLenum modeRGB, GLenum modeAlpha );
+	*/
+	PFNGLBLENDEQUATIONSEPARATEIPROC                               glBlendEquationSeparatei;
+
+	/**
+	* @brief void glBlendFunci( GLuint buf, GLenum src, GLenum dst );
+	*/
+	PFNGLBLENDFUNCIPROC                                           glBlendFunci;
+
+	/**
+	* @brief void glBlendFuncSeparatei( GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha );
+	*/
+	PFNGLBLENDFUNCSEPARATEIPROC                                   glBlendFuncSeparatei;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_draw_elements_base_vertex is supported, false otherwise.
+	 */
+	bool isGL_ARB_draw_elements_base_vertex;
+
+	/**
+	* @brief void glDrawElementsBaseVertex( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex );
+	*/
+	PFNGLDRAWELEMENTSBASEVERTEXPROC                               glDrawElementsBaseVertex;
+
+	/**
+	* @brief void glDrawRangeElementsBaseVertex( GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex );
+	*/
+	PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC                          glDrawRangeElementsBaseVertex;
+
+	/**
+	* @brief void glDrawElementsInstancedBaseVertex( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount, GLint basevertex );
+	*/
+	PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC                      glDrawElementsInstancedBaseVertex;
+
+	/**
+	* @brief void glMultiDrawElementsBaseVertex( GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount, const GLint *basevertex );
+	*/
+	PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC                          glMultiDrawElementsBaseVertex;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_draw_instanced is supported, false otherwise.
 	 */
 	bool isGL_ARB_draw_instanced;
@@ -796,6 +863,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glDrawElementsInstancedARB( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount );
 	*/
 	PFNGLDRAWELEMENTSINSTANCEDARBPROC                             glDrawElementsInstancedARB;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_fragment_coord_conventions is supported, false otherwise.
+	 */
+	bool isGL_ARB_fragment_coord_conventions;
 
 
 
@@ -1367,6 +1443,43 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_provoking_vertex is supported, false otherwise.
+	 */
+	bool isGL_ARB_provoking_vertex;
+
+	/**
+	* @brief void glProvokingVertex( GLenum mode );
+	*/
+	PFNGLPROVOKINGVERTEXPROC                                      glProvokingVertex;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_sample_shading is supported, false otherwise.
+	 */
+	bool isGL_ARB_sample_shading;
+
+	/**
+	* @brief void glMinSampleShading( GLclampf value );
+	*/
+	PFNGLMINSAMPLESHADINGPROC                                     glMinSampleShading;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_seamless_cube_map is supported, false otherwise.
+	 */
+	bool isGL_ARB_seamless_cube_map;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_shader_objects is supported, false otherwise.
 	 */
 	bool isGL_ARB_shader_objects;
@@ -1607,6 +1720,50 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_sync is supported, false otherwise.
+	 */
+	bool isGL_ARB_sync;
+
+	/**
+	* @brief GLsync glFenceSync( GLenum condition, GLbitfield flags );
+	*/
+	PFNGLFENCESYNCPROC                                            glFenceSync;
+
+	/**
+	* @brief GLboolean glIsSync( GLsync sync );
+	*/
+	PFNGLISSYNCPROC                                               glIsSync;
+
+	/**
+	* @brief void glDeleteSync( GLsync sync );
+	*/
+	PFNGLDELETESYNCPROC                                           glDeleteSync;
+
+	/**
+	* @brief GLenum glClientWaitSync( GLsync sync, GLbitfield flags, GLuint64 timeout );
+	*/
+	PFNGLCLIENTWAITSYNCPROC                                       glClientWaitSync;
+
+	/**
+	* @brief void glWaitSync( GLsync sync, GLbitfield flags, GLuint64 timeout );
+	*/
+	PFNGLWAITSYNCPROC                                             glWaitSync;
+
+	/**
+	* @brief void glGetInteger64v( GLenum pname, GLint64 *params );
+	*/
+	PFNGLGETINTEGER64VPROC                                        glGetInteger64v;
+
+	/**
+	* @brief void glGetSynciv( GLsync sync, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values );
+	*/
+	PFNGLGETSYNCIVPROC                                            glGetSynciv;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_texture_border_clamp is supported, false otherwise.
 	 */
 	bool isGL_ARB_texture_border_clamp;
@@ -1692,6 +1849,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_texture_cube_map_array is supported, false otherwise.
+	 */
+	bool isGL_ARB_texture_cube_map_array;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_texture_env_add is supported, false otherwise.
 	 */
 	bool isGL_ARB_texture_env_add;
@@ -1737,6 +1903,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_texture_gather is supported, false otherwise.
+	 */
+	bool isGL_ARB_texture_gather;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_texture_mirrored_repeat is supported, false otherwise.
 	 */
 	bool isGL_ARB_texture_mirrored_repeat;
@@ -1746,9 +1921,47 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_texture_multisample is supported, false otherwise.
+	 */
+	bool isGL_ARB_texture_multisample;
+
+	/**
+	* @brief void glTexImage2DMultisample( GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations );
+	*/
+	PFNGLTEXIMAGE2DMULTISAMPLEPROC                                glTexImage2DMultisample;
+
+	/**
+	* @brief void glTexImage3DMultisample( GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations );
+	*/
+	PFNGLTEXIMAGE3DMULTISAMPLEPROC                                glTexImage3DMultisample;
+
+	/**
+	* @brief void glGetMultisamplefv( GLenum pname, GLuint index, GLfloat *val );
+	*/
+	PFNGLGETMULTISAMPLEFVPROC                                     glGetMultisamplefv;
+
+	/**
+	* @brief void glSampleMaski( GLuint index, GLbitfield mask );
+	*/
+	PFNGLSAMPLEMASKIPROC                                          glSampleMaski;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_texture_non_power_of_two is supported, false otherwise.
 	 */
 	bool isGL_ARB_texture_non_power_of_two;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_texture_query_lod is supported, false otherwise.
+	 */
+	bool isGL_ARB_texture_query_lod;
 
 
 
@@ -1840,6 +2053,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glUniformBlockBinding( GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding );
 	*/
 	PFNGLUNIFORMBLOCKBINDINGPROC                                  glUniformBlockBinding;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_vertex_array_bgra is supported, false otherwise.
+	 */
+	bool isGL_ARB_vertex_array_bgra;
 
 
 
@@ -7381,7 +7603,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLBINDBUFFERBASENVPROC                                     glBindBufferBaseNV;
 
 	/**
-	* @brief void glTransformFeedbackVaryingsNV( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode );
+	* @brief void glTransformFeedbackVaryingsNV( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
 	*/
 	PFNGLTRANSFORMFEEDBACKVARYINGSNVPROC                          glTransformFeedbackVaryingsNV;
 
@@ -10764,6 +10986,106 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLGETVERTEXATTRIBIUIVPROC                                  glGetVertexAttribIuiv;
 
 	/**
+	* @brief void glVertexAttribI1i( GLuint index, GLint x );
+	*/
+	PFNGLVERTEXATTRIBI1IPROC                                      glVertexAttribI1i;
+
+	/**
+	* @brief void glVertexAttribI2i( GLuint index, GLint x, GLint y );
+	*/
+	PFNGLVERTEXATTRIBI2IPROC                                      glVertexAttribI2i;
+
+	/**
+	* @brief void glVertexAttribI3i( GLuint index, GLint x, GLint y, GLint z );
+	*/
+	PFNGLVERTEXATTRIBI3IPROC                                      glVertexAttribI3i;
+
+	/**
+	* @brief void glVertexAttribI4i( GLuint index, GLint x, GLint y, GLint z, GLint w );
+	*/
+	PFNGLVERTEXATTRIBI4IPROC                                      glVertexAttribI4i;
+
+	/**
+	* @brief void glVertexAttribI1ui( GLuint index, GLuint x );
+	*/
+	PFNGLVERTEXATTRIBI1UIPROC                                     glVertexAttribI1ui;
+
+	/**
+	* @brief void glVertexAttribI2ui( GLuint index, GLuint x, GLuint y );
+	*/
+	PFNGLVERTEXATTRIBI2UIPROC                                     glVertexAttribI2ui;
+
+	/**
+	* @brief void glVertexAttribI3ui( GLuint index, GLuint x, GLuint y, GLuint z );
+	*/
+	PFNGLVERTEXATTRIBI3UIPROC                                     glVertexAttribI3ui;
+
+	/**
+	* @brief void glVertexAttribI4ui( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+	*/
+	PFNGLVERTEXATTRIBI4UIPROC                                     glVertexAttribI4ui;
+
+	/**
+	* @brief void glVertexAttribI1iv( GLuint index, const GLint *v );
+	*/
+	PFNGLVERTEXATTRIBI1IVPROC                                     glVertexAttribI1iv;
+
+	/**
+	* @brief void glVertexAttribI2iv( GLuint index, const GLint *v );
+	*/
+	PFNGLVERTEXATTRIBI2IVPROC                                     glVertexAttribI2iv;
+
+	/**
+	* @brief void glVertexAttribI3iv( GLuint index, const GLint *v );
+	*/
+	PFNGLVERTEXATTRIBI3IVPROC                                     glVertexAttribI3iv;
+
+	/**
+	* @brief void glVertexAttribI4iv( GLuint index, const GLint *v );
+	*/
+	PFNGLVERTEXATTRIBI4IVPROC                                     glVertexAttribI4iv;
+
+	/**
+	* @brief void glVertexAttribI1uiv( GLuint index, const GLuint *v );
+	*/
+	PFNGLVERTEXATTRIBI1UIVPROC                                    glVertexAttribI1uiv;
+
+	/**
+	* @brief void glVertexAttribI2uiv( GLuint index, const GLuint *v );
+	*/
+	PFNGLVERTEXATTRIBI2UIVPROC                                    glVertexAttribI2uiv;
+
+	/**
+	* @brief void glVertexAttribI3uiv( GLuint index, const GLuint *v );
+	*/
+	PFNGLVERTEXATTRIBI3UIVPROC                                    glVertexAttribI3uiv;
+
+	/**
+	* @brief void glVertexAttribI4uiv( GLuint index, const GLuint *v );
+	*/
+	PFNGLVERTEXATTRIBI4UIVPROC                                    glVertexAttribI4uiv;
+
+	/**
+	* @brief void glVertexAttribI4bv( GLuint index, const GLbyte *v );
+	*/
+	PFNGLVERTEXATTRIBI4BVPROC                                     glVertexAttribI4bv;
+
+	/**
+	* @brief void glVertexAttribI4sv( GLuint index, const GLshort *v );
+	*/
+	PFNGLVERTEXATTRIBI4SVPROC                                     glVertexAttribI4sv;
+
+	/**
+	* @brief void glVertexAttribI4ubv( GLuint index, const GLubyte *v );
+	*/
+	PFNGLVERTEXATTRIBI4UBVPROC                                    glVertexAttribI4ubv;
+
+	/**
+	* @brief void glVertexAttribI4usv( GLuint index, const GLushort *v );
+	*/
+	PFNGLVERTEXATTRIBI4USVPROC                                    glVertexAttribI4usv;
+
+	/**
 	* @brief void glGetUniformuiv( GLuint program, GLint location, GLuint *params );
 	*/
 	PFNGLGETUNIFORMUIVPROC                                        glGetUniformuiv;
@@ -10872,106 +11194,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 */
 	bool isGL_VERSION_3_0_DEPRECATED;
 
-	/**
-	* @brief void glVertexAttribI1i( GLuint index, GLint x );
-	*/
-	PFNGLVERTEXATTRIBI1IPROC                                      glVertexAttribI1i;
-
-	/**
-	* @brief void glVertexAttribI2i( GLuint index, GLint x, GLint y );
-	*/
-	PFNGLVERTEXATTRIBI2IPROC                                      glVertexAttribI2i;
-
-	/**
-	* @brief void glVertexAttribI3i( GLuint index, GLint x, GLint y, GLint z );
-	*/
-	PFNGLVERTEXATTRIBI3IPROC                                      glVertexAttribI3i;
-
-	/**
-	* @brief void glVertexAttribI4i( GLuint index, GLint x, GLint y, GLint z, GLint w );
-	*/
-	PFNGLVERTEXATTRIBI4IPROC                                      glVertexAttribI4i;
-
-	/**
-	* @brief void glVertexAttribI1ui( GLuint index, GLuint x );
-	*/
-	PFNGLVERTEXATTRIBI1UIPROC                                     glVertexAttribI1ui;
-
-	/**
-	* @brief void glVertexAttribI2ui( GLuint index, GLuint x, GLuint y );
-	*/
-	PFNGLVERTEXATTRIBI2UIPROC                                     glVertexAttribI2ui;
-
-	/**
-	* @brief void glVertexAttribI3ui( GLuint index, GLuint x, GLuint y, GLuint z );
-	*/
-	PFNGLVERTEXATTRIBI3UIPROC                                     glVertexAttribI3ui;
-
-	/**
-	* @brief void glVertexAttribI4ui( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
-	*/
-	PFNGLVERTEXATTRIBI4UIPROC                                     glVertexAttribI4ui;
-
-	/**
-	* @brief void glVertexAttribI1iv( GLuint index, const GLint *v );
-	*/
-	PFNGLVERTEXATTRIBI1IVPROC                                     glVertexAttribI1iv;
-
-	/**
-	* @brief void glVertexAttribI2iv( GLuint index, const GLint *v );
-	*/
-	PFNGLVERTEXATTRIBI2IVPROC                                     glVertexAttribI2iv;
-
-	/**
-	* @brief void glVertexAttribI3iv( GLuint index, const GLint *v );
-	*/
-	PFNGLVERTEXATTRIBI3IVPROC                                     glVertexAttribI3iv;
-
-	/**
-	* @brief void glVertexAttribI4iv( GLuint index, const GLint *v );
-	*/
-	PFNGLVERTEXATTRIBI4IVPROC                                     glVertexAttribI4iv;
-
-	/**
-	* @brief void glVertexAttribI1uiv( GLuint index, const GLuint *v );
-	*/
-	PFNGLVERTEXATTRIBI1UIVPROC                                    glVertexAttribI1uiv;
-
-	/**
-	* @brief void glVertexAttribI2uiv( GLuint index, const GLuint *v );
-	*/
-	PFNGLVERTEXATTRIBI2UIVPROC                                    glVertexAttribI2uiv;
-
-	/**
-	* @brief void glVertexAttribI3uiv( GLuint index, const GLuint *v );
-	*/
-	PFNGLVERTEXATTRIBI3UIVPROC                                    glVertexAttribI3uiv;
-
-	/**
-	* @brief void glVertexAttribI4uiv( GLuint index, const GLuint *v );
-	*/
-	PFNGLVERTEXATTRIBI4UIVPROC                                    glVertexAttribI4uiv;
-
-	/**
-	* @brief void glVertexAttribI4bv( GLuint index, const GLbyte *v );
-	*/
-	PFNGLVERTEXATTRIBI4BVPROC                                     glVertexAttribI4bv;
-
-	/**
-	* @brief void glVertexAttribI4sv( GLuint index, const GLshort *v );
-	*/
-	PFNGLVERTEXATTRIBI4SVPROC                                     glVertexAttribI4sv;
-
-	/**
-	* @brief void glVertexAttribI4ubv( GLuint index, const GLubyte *v );
-	*/
-	PFNGLVERTEXATTRIBI4UBVPROC                                    glVertexAttribI4ubv;
-
-	/**
-	* @brief void glVertexAttribI4usv( GLuint index, const GLushort *v );
-	*/
-	PFNGLVERTEXATTRIBI4USVPROC                                    glVertexAttribI4usv;
-
 
 
 
@@ -11000,6 +11222,40 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glPrimitiveRestartIndex( GLuint index );
 	*/
 	PFNGLPRIMITIVERESTARTINDEXPROC                                glPrimitiveRestartIndex;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_VERSION_3_2 is supported, false otherwise.
+	 */
+	bool isGL_VERSION_3_2;
+
+	/**
+	* @brief void glGetInteger64i_v( GLenum target, GLuint index, GLint64 *data );
+	*/
+	PFNGLGETINTEGER64I_VPROC                                      glGetInteger64i_v;
+
+	/**
+	* @brief void glGetBufferParameteri64v( GLenum target, GLenum pname, GLint64 *params );
+	*/
+	PFNGLGETBUFFERPARAMETERI64VPROC                               glGetBufferParameteri64v;
+
+	/**
+	* @brief void glProgramParameteri( GLuint program, GLenum pname, GLint value );
+	*/
+	PFNGLPROGRAMPARAMETERIPROC                                    glProgramParameteri;
+
+	/**
+	* @brief void glFramebufferTexture( GLenum target, GLenum attachment, GLuint texture, GLint level );
+	*/
+	PFNGLFRAMEBUFFERTEXTUREPROC                                   glFramebufferTexture;
+
+	/**
+	* @brief void glFramebufferTextureFace( GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face );
+	*/
+	PFNGLFRAMEBUFFERTEXTUREFACEPROC                               glFramebufferTextureFace;
 
 
 

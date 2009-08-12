@@ -1,4 +1,4 @@
-// This file was generated at Tue Jul 28 15:59:18 2009 with gle, please do not modify.
+// This file was generated at Wed Aug 12 13:28:23 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -44,7 +44,7 @@
  */
 
 /** 
- * @defgroup g_GL_ARB		GL_ARB (51 extensions found)
+ * @defgroup g_GL_ARB		GL_ARB (64 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -154,7 +154,7 @@
  */
 
 /** 
- * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (48 extensions found)
+ * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (49 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -886,6 +886,22 @@ GLE_API bool isGL_ARB_depth_buffer_float();
 
 
 /**
+ * @defgroup GL_ARB_depth_clamp GL_ARB_depth_clamp
+ * Extension number in OpenGL registry : 61
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/depth_clamp.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_depth_clamp is supported.
+ * @return Returns \c true if \b GL_ARB_depth_clamp is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_depth_clamp();
+
+//@}
+
+
+/**
  * @defgroup GL_ARB_depth_texture GL_ARB_depth_texture
  * Extension number in OpenGL registry : 22
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/depth_texture.txt
@@ -923,6 +939,78 @@ GLE_API void glDrawBuffersARB( GLsizei n, const GLenum *bufs );
 
 
 /**
+ * @defgroup GL_ARB_draw_buffers_blend GL_ARB_draw_buffers_blend
+ * Extension number in OpenGL registry : 69
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/draw_buffers_blend.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_draw_buffers_blend is supported.
+ * @return Returns \c true if \b GL_ARB_draw_buffers_blend is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_draw_buffers_blend();
+
+/**
+ * @brief void glBlendEquationi( GLuint buf, GLenum mode );
+ */
+GLE_API void glBlendEquationi( GLuint buf, GLenum mode );
+
+/**
+ * @brief void glBlendEquationSeparatei( GLuint buf, GLenum modeRGB, GLenum modeAlpha );
+ */
+GLE_API void glBlendEquationSeparatei( GLuint buf, GLenum modeRGB, GLenum modeAlpha );
+
+/**
+ * @brief void glBlendFunci( GLuint buf, GLenum src, GLenum dst );
+ */
+GLE_API void glBlendFunci( GLuint buf, GLenum src, GLenum dst );
+
+/**
+ * @brief void glBlendFuncSeparatei( GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha );
+ */
+GLE_API void glBlendFuncSeparatei( GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha );
+
+//@}
+
+
+/**
+ * @defgroup GL_ARB_draw_elements_base_vertex GL_ARB_draw_elements_base_vertex
+ * Extension number in OpenGL registry : 62
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/draw_elements_base_vertex.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_draw_elements_base_vertex is supported.
+ * @return Returns \c true if \b GL_ARB_draw_elements_base_vertex is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_draw_elements_base_vertex();
+
+/**
+ * @brief void glDrawElementsBaseVertex( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex );
+ */
+GLE_API void glDrawElementsBaseVertex( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex );
+
+/**
+ * @brief void glDrawRangeElementsBaseVertex( GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex );
+ */
+GLE_API void glDrawRangeElementsBaseVertex( GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex );
+
+/**
+ * @brief void glDrawElementsInstancedBaseVertex( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount, GLint basevertex );
+ */
+GLE_API void glDrawElementsInstancedBaseVertex( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount, GLint basevertex );
+
+/**
+ * @brief void glMultiDrawElementsBaseVertex( GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount, const GLint *basevertex );
+ */
+GLE_API void glMultiDrawElementsBaseVertex( GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount, const GLint *basevertex );
+
+//@}
+
+
+/**
  * @defgroup GL_ARB_draw_instanced GL_ARB_draw_instanced
  * Extension number in OpenGL registry : 44
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/draw_instanced.txt
@@ -944,6 +1032,22 @@ GLE_API void glDrawArraysInstancedARB( GLenum mode, GLint first, GLsizei count, 
  * @brief void glDrawElementsInstancedARB( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount );
  */
 GLE_API void glDrawElementsInstancedARB( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount );
+
+//@}
+
+
+/**
+ * @defgroup GL_ARB_fragment_coord_conventions GL_ARB_fragment_coord_conventions
+ * Extension number in OpenGL registry : 63
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/fragment_coord_conventions.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_fragment_coord_conventions is supported.
+ * @return Returns \c true if \b GL_ARB_fragment_coord_conventions is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_fragment_coord_conventions();
 
 //@}
 
@@ -1651,6 +1755,64 @@ GLE_API bool isGL_ARB_point_sprite();
 
 
 /**
+ * @defgroup GL_ARB_provoking_vertex GL_ARB_provoking_vertex
+ * Extension number in OpenGL registry : 64
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/provoking_vertex.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_provoking_vertex is supported.
+ * @return Returns \c true if \b GL_ARB_provoking_vertex is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_provoking_vertex();
+
+/**
+ * @brief void glProvokingVertex( GLenum mode );
+ */
+GLE_API void glProvokingVertex( GLenum mode );
+
+//@}
+
+
+/**
+ * @defgroup GL_ARB_sample_shading GL_ARB_sample_shading
+ * Extension number in OpenGL registry : 70
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/sample_shading.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_sample_shading is supported.
+ * @return Returns \c true if \b GL_ARB_sample_shading is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_sample_shading();
+
+/**
+ * @brief void glMinSampleShading( GLclampf value );
+ */
+GLE_API void glMinSampleShading( GLclampf value );
+
+//@}
+
+
+/**
+ * @defgroup GL_ARB_seamless_cube_map GL_ARB_seamless_cube_map
+ * Extension number in OpenGL registry : 65
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/seamless_cube_map.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_seamless_cube_map is supported.
+ * @return Returns \c true if \b GL_ARB_seamless_cube_map is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_seamless_cube_map();
+
+//@}
+
+
+/**
  * @defgroup GL_ARB_shader_objects GL_ARB_shader_objects
  * Extension number in OpenGL registry : 30
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/shader_objects.txt
@@ -1926,6 +2088,57 @@ GLE_API bool isGL_ARB_shadow_ambient();
 
 
 /**
+ * @defgroup GL_ARB_sync GL_ARB_sync
+ * Extension number in OpenGL registry : 66
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/sync.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_sync is supported.
+ * @return Returns \c true if \b GL_ARB_sync is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_sync();
+
+/**
+ * @brief GLsync glFenceSync( GLenum condition, GLbitfield flags );
+ */
+GLE_API GLsync glFenceSync( GLenum condition, GLbitfield flags );
+
+/**
+ * @brief GLboolean glIsSync( GLsync sync );
+ */
+GLE_API GLboolean glIsSync( GLsync sync );
+
+/**
+ * @brief void glDeleteSync( GLsync sync );
+ */
+GLE_API void glDeleteSync( GLsync sync );
+
+/**
+ * @brief GLenum glClientWaitSync( GLsync sync, GLbitfield flags, GLuint64 timeout );
+ */
+GLE_API GLenum glClientWaitSync( GLsync sync, GLbitfield flags, GLuint64 timeout );
+
+/**
+ * @brief void glWaitSync( GLsync sync, GLbitfield flags, GLuint64 timeout );
+ */
+GLE_API void glWaitSync( GLsync sync, GLbitfield flags, GLuint64 timeout );
+
+/**
+ * @brief void glGetInteger64v( GLenum pname, GLint64 *params );
+ */
+GLE_API void glGetInteger64v( GLenum pname, GLint64 *params );
+
+/**
+ * @brief void glGetSynciv( GLsync sync, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values );
+ */
+GLE_API void glGetSynciv( GLsync sync, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values );
+
+//@}
+
+
+/**
  * @defgroup GL_ARB_texture_border_clamp GL_ARB_texture_border_clamp
  * Extension number in OpenGL registry : 13
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_border_clamp.txt
@@ -2046,6 +2259,22 @@ GLE_API bool isGL_ARB_texture_cube_map();
 
 
 /**
+ * @defgroup GL_ARB_texture_cube_map_array GL_ARB_texture_cube_map_array
+ * Extension number in OpenGL registry : 71
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_cube_map_array.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_texture_cube_map_array is supported.
+ * @return Returns \c true if \b GL_ARB_texture_cube_map_array is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_texture_cube_map_array();
+
+//@}
+
+
+/**
  * @defgroup GL_ARB_texture_env_add GL_ARB_texture_env_add
  * Extension number in OpenGL registry : 6
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_env_add.txt
@@ -2126,6 +2355,22 @@ GLE_API bool isGL_ARB_texture_float();
 
 
 /**
+ * @defgroup GL_ARB_texture_gather GL_ARB_texture_gather
+ * Extension number in OpenGL registry : 72
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_gather.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_texture_gather is supported.
+ * @return Returns \c true if \b GL_ARB_texture_gather is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_texture_gather();
+
+//@}
+
+
+/**
  * @defgroup GL_ARB_texture_mirrored_repeat GL_ARB_texture_mirrored_repeat
  * Extension number in OpenGL registry : 21
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_mirrored_repeat.txt
@@ -2142,6 +2387,42 @@ GLE_API bool isGL_ARB_texture_mirrored_repeat();
 
 
 /**
+ * @defgroup GL_ARB_texture_multisample GL_ARB_texture_multisample
+ * Extension number in OpenGL registry : 67
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_multisample.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_texture_multisample is supported.
+ * @return Returns \c true if \b GL_ARB_texture_multisample is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_texture_multisample();
+
+/**
+ * @brief void glTexImage2DMultisample( GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations );
+ */
+GLE_API void glTexImage2DMultisample( GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations );
+
+/**
+ * @brief void glTexImage3DMultisample( GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations );
+ */
+GLE_API void glTexImage3DMultisample( GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations );
+
+/**
+ * @brief void glGetMultisamplefv( GLenum pname, GLuint index, GLfloat *val );
+ */
+GLE_API void glGetMultisamplefv( GLenum pname, GLuint index, GLfloat *val );
+
+/**
+ * @brief void glSampleMaski( GLuint index, GLbitfield mask );
+ */
+GLE_API void glSampleMaski( GLuint index, GLbitfield mask );
+
+//@}
+
+
+/**
  * @defgroup GL_ARB_texture_non_power_of_two GL_ARB_texture_non_power_of_two
  * Extension number in OpenGL registry : 34
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_non_power_of_two.txt
@@ -2153,6 +2434,22 @@ GLE_API bool isGL_ARB_texture_mirrored_repeat();
  * @return Returns \c true if \b GL_ARB_texture_non_power_of_two is supported, false otherwise.
  */
 GLE_API bool isGL_ARB_texture_non_power_of_two();
+
+//@}
+
+
+/**
+ * @defgroup GL_ARB_texture_query_lod GL_ARB_texture_query_lod
+ * Extension number in OpenGL registry : 73
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_query_lod.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_texture_query_lod is supported.
+ * @return Returns \c true if \b GL_ARB_texture_query_lod is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_texture_query_lod();
 
 //@}
 
@@ -2272,6 +2569,22 @@ GLE_API void glGetActiveUniformBlockName( GLuint program, GLuint uniformBlockInd
  * @brief void glUniformBlockBinding( GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding );
  */
 GLE_API void glUniformBlockBinding( GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding );
+
+//@}
+
+
+/**
+ * @defgroup GL_ARB_vertex_array_bgra GL_ARB_vertex_array_bgra
+ * Extension number in OpenGL registry : 68
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/vertex_array_bgra.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_ARB_vertex_array_bgra is supported.
+ * @return Returns \c true if \b GL_ARB_vertex_array_bgra is supported, false otherwise.
+ */
+GLE_API bool isGL_ARB_vertex_array_bgra();
 
 //@}
 
@@ -9004,9 +9317,9 @@ GLE_API void glBindBufferOffsetNV( GLenum target, GLuint index, GLuint buffer, G
 GLE_API void glBindBufferBaseNV( GLenum target, GLuint index, GLuint buffer );
 
 /**
- * @brief void glTransformFeedbackVaryingsNV( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode );
+ * @brief void glTransformFeedbackVaryingsNV( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
  */
-GLE_API void glTransformFeedbackVaryingsNV( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode );
+GLE_API void glTransformFeedbackVaryingsNV( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
 
 /**
  * @brief void glActiveVaryingNV( GLuint program, const GLchar *name );
@@ -13025,6 +13338,106 @@ GLE_API void glGetVertexAttribIiv( GLuint index, GLenum pname, GLint *params );
 GLE_API void glGetVertexAttribIuiv( GLuint index, GLenum pname, GLuint *params );
 
 /**
+ * @brief void glVertexAttribI1i( GLuint index, GLint x );
+ */
+GLE_API void glVertexAttribI1i( GLuint index, GLint x );
+
+/**
+ * @brief void glVertexAttribI2i( GLuint index, GLint x, GLint y );
+ */
+GLE_API void glVertexAttribI2i( GLuint index, GLint x, GLint y );
+
+/**
+ * @brief void glVertexAttribI3i( GLuint index, GLint x, GLint y, GLint z );
+ */
+GLE_API void glVertexAttribI3i( GLuint index, GLint x, GLint y, GLint z );
+
+/**
+ * @brief void glVertexAttribI4i( GLuint index, GLint x, GLint y, GLint z, GLint w );
+ */
+GLE_API void glVertexAttribI4i( GLuint index, GLint x, GLint y, GLint z, GLint w );
+
+/**
+ * @brief void glVertexAttribI1ui( GLuint index, GLuint x );
+ */
+GLE_API void glVertexAttribI1ui( GLuint index, GLuint x );
+
+/**
+ * @brief void glVertexAttribI2ui( GLuint index, GLuint x, GLuint y );
+ */
+GLE_API void glVertexAttribI2ui( GLuint index, GLuint x, GLuint y );
+
+/**
+ * @brief void glVertexAttribI3ui( GLuint index, GLuint x, GLuint y, GLuint z );
+ */
+GLE_API void glVertexAttribI3ui( GLuint index, GLuint x, GLuint y, GLuint z );
+
+/**
+ * @brief void glVertexAttribI4ui( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+ */
+GLE_API void glVertexAttribI4ui( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+
+/**
+ * @brief void glVertexAttribI1iv( GLuint index, const GLint *v );
+ */
+GLE_API void glVertexAttribI1iv( GLuint index, const GLint *v );
+
+/**
+ * @brief void glVertexAttribI2iv( GLuint index, const GLint *v );
+ */
+GLE_API void glVertexAttribI2iv( GLuint index, const GLint *v );
+
+/**
+ * @brief void glVertexAttribI3iv( GLuint index, const GLint *v );
+ */
+GLE_API void glVertexAttribI3iv( GLuint index, const GLint *v );
+
+/**
+ * @brief void glVertexAttribI4iv( GLuint index, const GLint *v );
+ */
+GLE_API void glVertexAttribI4iv( GLuint index, const GLint *v );
+
+/**
+ * @brief void glVertexAttribI1uiv( GLuint index, const GLuint *v );
+ */
+GLE_API void glVertexAttribI1uiv( GLuint index, const GLuint *v );
+
+/**
+ * @brief void glVertexAttribI2uiv( GLuint index, const GLuint *v );
+ */
+GLE_API void glVertexAttribI2uiv( GLuint index, const GLuint *v );
+
+/**
+ * @brief void glVertexAttribI3uiv( GLuint index, const GLuint *v );
+ */
+GLE_API void glVertexAttribI3uiv( GLuint index, const GLuint *v );
+
+/**
+ * @brief void glVertexAttribI4uiv( GLuint index, const GLuint *v );
+ */
+GLE_API void glVertexAttribI4uiv( GLuint index, const GLuint *v );
+
+/**
+ * @brief void glVertexAttribI4bv( GLuint index, const GLbyte *v );
+ */
+GLE_API void glVertexAttribI4bv( GLuint index, const GLbyte *v );
+
+/**
+ * @brief void glVertexAttribI4sv( GLuint index, const GLshort *v );
+ */
+GLE_API void glVertexAttribI4sv( GLuint index, const GLshort *v );
+
+/**
+ * @brief void glVertexAttribI4ubv( GLuint index, const GLubyte *v );
+ */
+GLE_API void glVertexAttribI4ubv( GLuint index, const GLubyte *v );
+
+/**
+ * @brief void glVertexAttribI4usv( GLuint index, const GLushort *v );
+ */
+GLE_API void glVertexAttribI4usv( GLuint index, const GLushort *v );
+
+/**
  * @brief void glGetUniformuiv( GLuint program, GLint location, GLuint *params );
  */
 GLE_API void glGetUniformuiv( GLuint program, GLint location, GLuint *params );
@@ -13138,106 +13551,6 @@ GLE_API const GLubyte * glGetStringi( GLenum name, GLuint index );
  */
 GLE_API bool isGL_VERSION_3_0_DEPRECATED();
 
-/**
- * @brief void glVertexAttribI1i( GLuint index, GLint x );
- */
-GLE_API void glVertexAttribI1i( GLuint index, GLint x );
-
-/**
- * @brief void glVertexAttribI2i( GLuint index, GLint x, GLint y );
- */
-GLE_API void glVertexAttribI2i( GLuint index, GLint x, GLint y );
-
-/**
- * @brief void glVertexAttribI3i( GLuint index, GLint x, GLint y, GLint z );
- */
-GLE_API void glVertexAttribI3i( GLuint index, GLint x, GLint y, GLint z );
-
-/**
- * @brief void glVertexAttribI4i( GLuint index, GLint x, GLint y, GLint z, GLint w );
- */
-GLE_API void glVertexAttribI4i( GLuint index, GLint x, GLint y, GLint z, GLint w );
-
-/**
- * @brief void glVertexAttribI1ui( GLuint index, GLuint x );
- */
-GLE_API void glVertexAttribI1ui( GLuint index, GLuint x );
-
-/**
- * @brief void glVertexAttribI2ui( GLuint index, GLuint x, GLuint y );
- */
-GLE_API void glVertexAttribI2ui( GLuint index, GLuint x, GLuint y );
-
-/**
- * @brief void glVertexAttribI3ui( GLuint index, GLuint x, GLuint y, GLuint z );
- */
-GLE_API void glVertexAttribI3ui( GLuint index, GLuint x, GLuint y, GLuint z );
-
-/**
- * @brief void glVertexAttribI4ui( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
- */
-GLE_API void glVertexAttribI4ui( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
-
-/**
- * @brief void glVertexAttribI1iv( GLuint index, const GLint *v );
- */
-GLE_API void glVertexAttribI1iv( GLuint index, const GLint *v );
-
-/**
- * @brief void glVertexAttribI2iv( GLuint index, const GLint *v );
- */
-GLE_API void glVertexAttribI2iv( GLuint index, const GLint *v );
-
-/**
- * @brief void glVertexAttribI3iv( GLuint index, const GLint *v );
- */
-GLE_API void glVertexAttribI3iv( GLuint index, const GLint *v );
-
-/**
- * @brief void glVertexAttribI4iv( GLuint index, const GLint *v );
- */
-GLE_API void glVertexAttribI4iv( GLuint index, const GLint *v );
-
-/**
- * @brief void glVertexAttribI1uiv( GLuint index, const GLuint *v );
- */
-GLE_API void glVertexAttribI1uiv( GLuint index, const GLuint *v );
-
-/**
- * @brief void glVertexAttribI2uiv( GLuint index, const GLuint *v );
- */
-GLE_API void glVertexAttribI2uiv( GLuint index, const GLuint *v );
-
-/**
- * @brief void glVertexAttribI3uiv( GLuint index, const GLuint *v );
- */
-GLE_API void glVertexAttribI3uiv( GLuint index, const GLuint *v );
-
-/**
- * @brief void glVertexAttribI4uiv( GLuint index, const GLuint *v );
- */
-GLE_API void glVertexAttribI4uiv( GLuint index, const GLuint *v );
-
-/**
- * @brief void glVertexAttribI4bv( GLuint index, const GLbyte *v );
- */
-GLE_API void glVertexAttribI4bv( GLuint index, const GLbyte *v );
-
-/**
- * @brief void glVertexAttribI4sv( GLuint index, const GLshort *v );
- */
-GLE_API void glVertexAttribI4sv( GLuint index, const GLshort *v );
-
-/**
- * @brief void glVertexAttribI4ubv( GLuint index, const GLubyte *v );
- */
-GLE_API void glVertexAttribI4ubv( GLuint index, const GLubyte *v );
-
-/**
- * @brief void glVertexAttribI4usv( GLuint index, const GLushort *v );
- */
-GLE_API void glVertexAttribI4usv( GLuint index, const GLushort *v );
-
 //@}
 
 
@@ -13271,6 +13584,45 @@ GLE_API void glTexBuffer( GLenum target, GLenum internalformat, GLuint buffer );
  * @brief void glPrimitiveRestartIndex( GLuint index );
  */
 GLE_API void glPrimitiveRestartIndex( GLuint index );
+
+//@}
+
+
+/**
+ * @defgroup GL_VERSION_3_2 GL_VERSION_3_2
+ * @ingroup g_virtualExtensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_VERSION_3_2 is supported.
+ * @return Returns \c true if \b GL_VERSION_3_2 is supported, false otherwise.
+ */
+GLE_API bool isGL_VERSION_3_2();
+
+/**
+ * @brief void glGetInteger64i_v( GLenum target, GLuint index, GLint64 *data );
+ */
+GLE_API void glGetInteger64i_v( GLenum target, GLuint index, GLint64 *data );
+
+/**
+ * @brief void glGetBufferParameteri64v( GLenum target, GLenum pname, GLint64 *params );
+ */
+GLE_API void glGetBufferParameteri64v( GLenum target, GLenum pname, GLint64 *params );
+
+/**
+ * @brief void glProgramParameteri( GLuint program, GLenum pname, GLint value );
+ */
+GLE_API void glProgramParameteri( GLuint program, GLenum pname, GLint value );
+
+/**
+ * @brief void glFramebufferTexture( GLenum target, GLenum attachment, GLuint texture, GLint level );
+ */
+GLE_API void glFramebufferTexture( GLenum target, GLenum attachment, GLuint texture, GLint level );
+
+/**
+ * @brief void glFramebufferTextureFace( GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face );
+ */
+GLE_API void glFramebufferTextureFace( GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face );
 
 //@}
 

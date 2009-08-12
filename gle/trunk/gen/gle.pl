@@ -22,7 +22,7 @@ use		gleWrapperGenerator;
 #
 my $parser = gleParser->new();
 
-$parser->parseOGLRegistry( "OpenGLExtensionRegistry.html" );
+$parser->parseOGLRegistry( "OpenGLRegistry.htm" );
 
 #@todo Parse -> Enumerant and Function Registry (http://www.opengl.org/registry/) instead of gl.h for example
 $parser->parse( "../include/GL/glext.h" );

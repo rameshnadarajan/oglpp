@@ -1,4 +1,4 @@
-// This file was generated at Tue Jul 28 15:59:18 2009 with gle, please do not modify.
+// This file was generated at Wed Aug 12 13:28:23 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -569,6 +569,15 @@ bool isGL_ARB_depth_buffer_float()
 }
 
 
+// ********* GL_ARB_depth_clamp *********
+bool isGL_ARB_depth_clamp()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_depth_clamp;
+
+	return isSupported;
+}
+
+
 // ********* GL_ARB_depth_texture *********
 bool isGL_ARB_depth_texture()
 {
@@ -593,6 +602,72 @@ void glDrawBuffersARB( GLsizei n, const GLenum *bufs )
 }
 
 
+// ********* GL_ARB_draw_buffers_blend *********
+bool isGL_ARB_draw_buffers_blend()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_draw_buffers_blend;
+
+	return isSupported;
+}
+
+					
+void glBlendEquationi( GLuint buf, GLenum mode )
+{
+	gleGetCurrent()->glBlendEquationi( buf, mode );
+}
+
+					
+void glBlendEquationSeparatei( GLuint buf, GLenum modeRGB, GLenum modeAlpha )
+{
+	gleGetCurrent()->glBlendEquationSeparatei( buf, modeRGB, modeAlpha );
+}
+
+					
+void glBlendFunci( GLuint buf, GLenum src, GLenum dst )
+{
+	gleGetCurrent()->glBlendFunci( buf, src, dst );
+}
+
+					
+void glBlendFuncSeparatei( GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha )
+{
+	gleGetCurrent()->glBlendFuncSeparatei( buf, srcRGB, dstRGB, srcAlpha, dstAlpha );
+}
+
+
+// ********* GL_ARB_draw_elements_base_vertex *********
+bool isGL_ARB_draw_elements_base_vertex()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_draw_elements_base_vertex;
+
+	return isSupported;
+}
+
+					
+void glDrawElementsBaseVertex( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex )
+{
+	gleGetCurrent()->glDrawElementsBaseVertex( mode, count, type, indices, basevertex );
+}
+
+					
+void glDrawRangeElementsBaseVertex( GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex )
+{
+	gleGetCurrent()->glDrawRangeElementsBaseVertex( mode, start, end, count, type, indices, basevertex );
+}
+
+					
+void glDrawElementsInstancedBaseVertex( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount, GLint basevertex )
+{
+	gleGetCurrent()->glDrawElementsInstancedBaseVertex( mode, count, type, indices, primcount, basevertex );
+}
+
+					
+void glMultiDrawElementsBaseVertex( GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount, const GLint *basevertex )
+{
+	gleGetCurrent()->glMultiDrawElementsBaseVertex( mode, count, type, indices, primcount, basevertex );
+}
+
+
 // ********* GL_ARB_draw_instanced *********
 bool isGL_ARB_draw_instanced()
 {
@@ -611,6 +686,15 @@ void glDrawArraysInstancedARB( GLenum mode, GLint first, GLsizei count, GLsizei 
 void glDrawElementsInstancedARB( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount )
 {
 	gleGetCurrent()->glDrawElementsInstancedARB( mode, count, type, indices, primcount );
+}
+
+
+// ********* GL_ARB_fragment_coord_conventions *********
+bool isGL_ARB_fragment_coord_conventions()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_fragment_coord_conventions;
+
+	return isSupported;
 }
 
 
@@ -1256,6 +1340,45 @@ bool isGL_ARB_point_sprite()
 }
 
 
+// ********* GL_ARB_provoking_vertex *********
+bool isGL_ARB_provoking_vertex()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_provoking_vertex;
+
+	return isSupported;
+}
+
+					
+void glProvokingVertex( GLenum mode )
+{
+	gleGetCurrent()->glProvokingVertex( mode );
+}
+
+
+// ********* GL_ARB_sample_shading *********
+bool isGL_ARB_sample_shading()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_sample_shading;
+
+	return isSupported;
+}
+
+					
+void glMinSampleShading( GLclampf value )
+{
+	gleGetCurrent()->glMinSampleShading( value );
+}
+
+
+// ********* GL_ARB_seamless_cube_map *********
+bool isGL_ARB_seamless_cube_map()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_seamless_cube_map;
+
+	return isSupported;
+}
+
+
 // ********* GL_ARB_shader_objects *********
 bool isGL_ARB_shader_objects()
 {
@@ -1535,6 +1658,57 @@ bool isGL_ARB_shadow_ambient()
 }
 
 
+// ********* GL_ARB_sync *********
+bool isGL_ARB_sync()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_sync;
+
+	return isSupported;
+}
+
+					
+GLsync glFenceSync( GLenum condition, GLbitfield flags )
+{
+	return ( gleGetCurrent()->glFenceSync( condition, flags) );
+}
+
+					
+GLboolean glIsSync( GLsync sync )
+{
+	return ( gleGetCurrent()->glIsSync( sync) );
+}
+
+					
+void glDeleteSync( GLsync sync )
+{
+	gleGetCurrent()->glDeleteSync( sync );
+}
+
+					
+GLenum glClientWaitSync( GLsync sync, GLbitfield flags, GLuint64 timeout )
+{
+	return ( gleGetCurrent()->glClientWaitSync( sync, flags, timeout) );
+}
+
+					
+void glWaitSync( GLsync sync, GLbitfield flags, GLuint64 timeout )
+{
+	gleGetCurrent()->glWaitSync( sync, flags, timeout );
+}
+
+					
+void glGetInteger64v( GLenum pname, GLint64 *params )
+{
+	gleGetCurrent()->glGetInteger64v( pname, params );
+}
+
+					
+void glGetSynciv( GLsync sync, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values )
+{
+	gleGetCurrent()->glGetSynciv( sync, pname, bufSize, length, values );
+}
+
+
 // ********* GL_ARB_texture_border_clamp *********
 bool isGL_ARB_texture_border_clamp()
 {
@@ -1628,6 +1802,15 @@ bool isGL_ARB_texture_cube_map()
 }
 
 
+// ********* GL_ARB_texture_cube_map_array *********
+bool isGL_ARB_texture_cube_map_array()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_cube_map_array;
+
+	return isSupported;
+}
+
+
 // ********* GL_ARB_texture_env_add *********
 bool isGL_ARB_texture_env_add()
 {
@@ -1673,6 +1856,15 @@ bool isGL_ARB_texture_float()
 }
 
 
+// ********* GL_ARB_texture_gather *********
+bool isGL_ARB_texture_gather()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_gather;
+
+	return isSupported;
+}
+
+
 // ********* GL_ARB_texture_mirrored_repeat *********
 bool isGL_ARB_texture_mirrored_repeat()
 {
@@ -1682,10 +1874,52 @@ bool isGL_ARB_texture_mirrored_repeat()
 }
 
 
+// ********* GL_ARB_texture_multisample *********
+bool isGL_ARB_texture_multisample()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_multisample;
+
+	return isSupported;
+}
+
+					
+void glTexImage2DMultisample( GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations )
+{
+	gleGetCurrent()->glTexImage2DMultisample( target, samples, internalformat, width, height, fixedsamplelocations );
+}
+
+					
+void glTexImage3DMultisample( GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations )
+{
+	gleGetCurrent()->glTexImage3DMultisample( target, samples, internalformat, width, height, depth, fixedsamplelocations );
+}
+
+					
+void glGetMultisamplefv( GLenum pname, GLuint index, GLfloat *val )
+{
+	gleGetCurrent()->glGetMultisamplefv( pname, index, val );
+}
+
+					
+void glSampleMaski( GLuint index, GLbitfield mask )
+{
+	gleGetCurrent()->glSampleMaski( index, mask );
+}
+
+
 // ********* GL_ARB_texture_non_power_of_two *********
 bool isGL_ARB_texture_non_power_of_two()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_non_power_of_two;
+
+	return isSupported;
+}
+
+
+// ********* GL_ARB_texture_query_lod *********
+bool isGL_ARB_texture_query_lod()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_query_lod;
 
 	return isSupported;
 }
@@ -1790,6 +2024,15 @@ void glGetActiveUniformBlockName( GLuint program, GLuint uniformBlockIndex, GLsi
 void glUniformBlockBinding( GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding )
 {
 	gleGetCurrent()->glUniformBlockBinding( program, uniformBlockIndex, uniformBlockBinding );
+}
+
+
+// ********* GL_ARB_vertex_array_bgra *********
+bool isGL_ARB_vertex_array_bgra()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_vertex_array_bgra;
+
+	return isSupported;
 }
 
 
@@ -8132,9 +8375,9 @@ void glBindBufferBaseNV( GLenum target, GLuint index, GLuint buffer )
 }
 
 					
-void glTransformFeedbackVaryingsNV( GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode )
+void glTransformFeedbackVaryingsNV( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode )
 {
-	gleGetCurrent()->glTransformFeedbackVaryingsNV( program, count, locations, bufferMode );
+	gleGetCurrent()->glTransformFeedbackVaryingsNV( program, count, varyings, bufferMode );
 }
 
 					
@@ -12017,6 +12260,126 @@ void glGetVertexAttribIuiv( GLuint index, GLenum pname, GLuint *params )
 }
 
 					
+void glVertexAttribI1i( GLuint index, GLint x )
+{
+	gleGetCurrent()->glVertexAttribI1i( index, x );
+}
+
+					
+void glVertexAttribI2i( GLuint index, GLint x, GLint y )
+{
+	gleGetCurrent()->glVertexAttribI2i( index, x, y );
+}
+
+					
+void glVertexAttribI3i( GLuint index, GLint x, GLint y, GLint z )
+{
+	gleGetCurrent()->glVertexAttribI3i( index, x, y, z );
+}
+
+					
+void glVertexAttribI4i( GLuint index, GLint x, GLint y, GLint z, GLint w )
+{
+	gleGetCurrent()->glVertexAttribI4i( index, x, y, z, w );
+}
+
+					
+void glVertexAttribI1ui( GLuint index, GLuint x )
+{
+	gleGetCurrent()->glVertexAttribI1ui( index, x );
+}
+
+					
+void glVertexAttribI2ui( GLuint index, GLuint x, GLuint y )
+{
+	gleGetCurrent()->glVertexAttribI2ui( index, x, y );
+}
+
+					
+void glVertexAttribI3ui( GLuint index, GLuint x, GLuint y, GLuint z )
+{
+	gleGetCurrent()->glVertexAttribI3ui( index, x, y, z );
+}
+
+					
+void glVertexAttribI4ui( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w )
+{
+	gleGetCurrent()->glVertexAttribI4ui( index, x, y, z, w );
+}
+
+					
+void glVertexAttribI1iv( GLuint index, const GLint *v )
+{
+	gleGetCurrent()->glVertexAttribI1iv( index, v );
+}
+
+					
+void glVertexAttribI2iv( GLuint index, const GLint *v )
+{
+	gleGetCurrent()->glVertexAttribI2iv( index, v );
+}
+
+					
+void glVertexAttribI3iv( GLuint index, const GLint *v )
+{
+	gleGetCurrent()->glVertexAttribI3iv( index, v );
+}
+
+					
+void glVertexAttribI4iv( GLuint index, const GLint *v )
+{
+	gleGetCurrent()->glVertexAttribI4iv( index, v );
+}
+
+					
+void glVertexAttribI1uiv( GLuint index, const GLuint *v )
+{
+	gleGetCurrent()->glVertexAttribI1uiv( index, v );
+}
+
+					
+void glVertexAttribI2uiv( GLuint index, const GLuint *v )
+{
+	gleGetCurrent()->glVertexAttribI2uiv( index, v );
+}
+
+					
+void glVertexAttribI3uiv( GLuint index, const GLuint *v )
+{
+	gleGetCurrent()->glVertexAttribI3uiv( index, v );
+}
+
+					
+void glVertexAttribI4uiv( GLuint index, const GLuint *v )
+{
+	gleGetCurrent()->glVertexAttribI4uiv( index, v );
+}
+
+					
+void glVertexAttribI4bv( GLuint index, const GLbyte *v )
+{
+	gleGetCurrent()->glVertexAttribI4bv( index, v );
+}
+
+					
+void glVertexAttribI4sv( GLuint index, const GLshort *v )
+{
+	gleGetCurrent()->glVertexAttribI4sv( index, v );
+}
+
+					
+void glVertexAttribI4ubv( GLuint index, const GLubyte *v )
+{
+	gleGetCurrent()->glVertexAttribI4ubv( index, v );
+}
+
+					
+void glVertexAttribI4usv( GLuint index, const GLushort *v )
+{
+	gleGetCurrent()->glVertexAttribI4usv( index, v );
+}
+
+					
 void glGetUniformuiv( GLuint program, GLint location, GLuint *params )
 {
 	gleGetCurrent()->glGetUniformuiv( program, location, params );
@@ -12145,126 +12508,6 @@ bool isGL_VERSION_3_0_DEPRECATED()
 	return isSupported;
 }
 
-					
-void glVertexAttribI1i( GLuint index, GLint x )
-{
-	gleGetCurrent()->glVertexAttribI1i( index, x );
-}
-
-					
-void glVertexAttribI2i( GLuint index, GLint x, GLint y )
-{
-	gleGetCurrent()->glVertexAttribI2i( index, x, y );
-}
-
-					
-void glVertexAttribI3i( GLuint index, GLint x, GLint y, GLint z )
-{
-	gleGetCurrent()->glVertexAttribI3i( index, x, y, z );
-}
-
-					
-void glVertexAttribI4i( GLuint index, GLint x, GLint y, GLint z, GLint w )
-{
-	gleGetCurrent()->glVertexAttribI4i( index, x, y, z, w );
-}
-
-					
-void glVertexAttribI1ui( GLuint index, GLuint x )
-{
-	gleGetCurrent()->glVertexAttribI1ui( index, x );
-}
-
-					
-void glVertexAttribI2ui( GLuint index, GLuint x, GLuint y )
-{
-	gleGetCurrent()->glVertexAttribI2ui( index, x, y );
-}
-
-					
-void glVertexAttribI3ui( GLuint index, GLuint x, GLuint y, GLuint z )
-{
-	gleGetCurrent()->glVertexAttribI3ui( index, x, y, z );
-}
-
-					
-void glVertexAttribI4ui( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w )
-{
-	gleGetCurrent()->glVertexAttribI4ui( index, x, y, z, w );
-}
-
-					
-void glVertexAttribI1iv( GLuint index, const GLint *v )
-{
-	gleGetCurrent()->glVertexAttribI1iv( index, v );
-}
-
-					
-void glVertexAttribI2iv( GLuint index, const GLint *v )
-{
-	gleGetCurrent()->glVertexAttribI2iv( index, v );
-}
-
-					
-void glVertexAttribI3iv( GLuint index, const GLint *v )
-{
-	gleGetCurrent()->glVertexAttribI3iv( index, v );
-}
-
-					
-void glVertexAttribI4iv( GLuint index, const GLint *v )
-{
-	gleGetCurrent()->glVertexAttribI4iv( index, v );
-}
-
-					
-void glVertexAttribI1uiv( GLuint index, const GLuint *v )
-{
-	gleGetCurrent()->glVertexAttribI1uiv( index, v );
-}
-
-					
-void glVertexAttribI2uiv( GLuint index, const GLuint *v )
-{
-	gleGetCurrent()->glVertexAttribI2uiv( index, v );
-}
-
-					
-void glVertexAttribI3uiv( GLuint index, const GLuint *v )
-{
-	gleGetCurrent()->glVertexAttribI3uiv( index, v );
-}
-
-					
-void glVertexAttribI4uiv( GLuint index, const GLuint *v )
-{
-	gleGetCurrent()->glVertexAttribI4uiv( index, v );
-}
-
-					
-void glVertexAttribI4bv( GLuint index, const GLbyte *v )
-{
-	gleGetCurrent()->glVertexAttribI4bv( index, v );
-}
-
-					
-void glVertexAttribI4sv( GLuint index, const GLshort *v )
-{
-	gleGetCurrent()->glVertexAttribI4sv( index, v );
-}
-
-					
-void glVertexAttribI4ubv( GLuint index, const GLubyte *v )
-{
-	gleGetCurrent()->glVertexAttribI4ubv( index, v );
-}
-
-					
-void glVertexAttribI4usv( GLuint index, const GLushort *v )
-{
-	gleGetCurrent()->glVertexAttribI4usv( index, v );
-}
-
 
 // ********* GL_VERSION_3_1 *********
 bool isGL_VERSION_3_1()
@@ -12296,6 +12539,45 @@ void glTexBuffer( GLenum target, GLenum internalformat, GLuint buffer )
 void glPrimitiveRestartIndex( GLuint index )
 {
 	gleGetCurrent()->glPrimitiveRestartIndex( index );
+}
+
+
+// ********* GL_VERSION_3_2 *********
+bool isGL_VERSION_3_2()
+{
+	const bool isSupported = gleGetCurrent()->isGL_VERSION_3_2;
+
+	return isSupported;
+}
+
+					
+void glGetInteger64i_v( GLenum target, GLuint index, GLint64 *data )
+{
+	gleGetCurrent()->glGetInteger64i_v( target, index, data );
+}
+
+					
+void glGetBufferParameteri64v( GLenum target, GLenum pname, GLint64 *params )
+{
+	gleGetCurrent()->glGetBufferParameteri64v( target, pname, params );
+}
+
+					
+void glProgramParameteri( GLuint program, GLenum pname, GLint value )
+{
+	gleGetCurrent()->glProgramParameteri( program, pname, value );
+}
+
+					
+void glFramebufferTexture( GLenum target, GLenum attachment, GLuint texture, GLint level )
+{
+	gleGetCurrent()->glFramebufferTexture( target, attachment, texture, level );
+}
+
+					
+void glFramebufferTextureFace( GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face )
+{
+	gleGetCurrent()->glFramebufferTextureFace( target, attachment, texture, level, face );
 }
 
 
