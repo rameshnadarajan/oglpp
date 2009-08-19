@@ -1,4 +1,4 @@
-// This file was generated at Wed Aug 12 13:28:23 2009 with gle, please do not modify.
+// This file was generated at Wed Aug 19 12:19:43 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -12754,6 +12754,20 @@ bool isWGL_ARB_create_context()
 HGLRC  wglCreateContextAttribsARB( HDC hDC, HGLRC hShareContext, const int *attribList )
 {
 	return ( gleGetCurrent()->wglCreateContextAttribsARB( hDC, hShareContext, attribList) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_ARB_create_context_profile *********
+bool isWGL_ARB_create_context_profile()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_ARB_create_context_profile;
+
+	return isSupported;
 }
 
 #endif // WIN32
