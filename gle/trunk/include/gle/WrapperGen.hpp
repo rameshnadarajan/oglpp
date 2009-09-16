@@ -1,4 +1,4 @@
-// This file was generated at Wed Aug 19 12:19:43 2009 with gle, please do not modify.
+// This file was generated at Tue Sep 15 15:00:34 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -39,7 +39,7 @@
  */
 
 /** 
- * @defgroup g_GL_APPLE		GL_APPLE (15 extensions found)
+ * @defgroup g_GL_APPLE		GL_APPLE (16 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -54,7 +54,7 @@
  */
 
 /** 
- * @defgroup g_GL_EXT		GL_EXT (84 extensions found)
+ * @defgroup g_GL_EXT		GL_EXT (85 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -94,7 +94,7 @@
  */
 
 /** 
- * @defgroup g_GL_NV		GL_NV (49 extensions found)
+ * @defgroup g_GL_NV		GL_NV (55 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -154,7 +154,7 @@
  */
 
 /** 
- * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (50 extensions found)
+ * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (53 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -599,6 +599,22 @@ GLE_API GLenum glObjectUnpurgeableAPPLE( GLenum objectType, GLuint name, GLenum 
  * @brief void glGetObjectParameterivAPPLE( GLenum objectType, GLuint name, GLenum pname, GLint *params );
  */
 GLE_API void glGetObjectParameterivAPPLE( GLenum objectType, GLuint name, GLenum pname, GLint *params );
+
+//@}
+
+
+/**
+ * @defgroup GL_APPLE_rgb_422 GL_APPLE_rgb_422
+ * Extension number in OpenGL registry : 373
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/APPLE/rgb_422.txt
+ * @ingroup g_GL_APPLE g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_APPLE_rgb_422 is supported.
+ * @return Returns \c true if \b GL_APPLE_rgb_422 is supported, false otherwise.
+ */
+GLE_API bool isGL_APPLE_rgb_422();
 
 //@}
 
@@ -6417,6 +6433,37 @@ GLE_API void glSecondaryColorPointerEXT( GLint size, GLenum type, GLsizei stride
 
 
 /**
+ * @defgroup GL_EXT_separate_shader_objects GL_EXT_separate_shader_objects
+ * Extension number in OpenGL registry : 377
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/separate_shader_objects.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_separate_shader_objects is supported.
+ * @return Returns \c true if \b GL_EXT_separate_shader_objects is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_separate_shader_objects();
+
+/**
+ * @brief void glUseShaderProgramEXT( GLenum type, GLuint program );
+ */
+GLE_API void glUseShaderProgramEXT( GLenum type, GLuint program );
+
+/**
+ * @brief void glActiveProgramEXT( GLuint program );
+ */
+GLE_API void glActiveProgramEXT( GLuint program );
+
+/**
+ * @brief GLuint glCreateShaderProgramEXT( GLenum type, const GLchar *string );
+ */
+GLE_API GLuint glCreateShaderProgramEXT( GLenum type, const GLchar *string );
+
+//@}
+
+
+/**
  * @defgroup GL_EXT_separate_specular_color GL_EXT_separate_specular_color
  * Extension number in OpenGL registry : 144
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/separate_specular_color.txt
@@ -8038,6 +8085,27 @@ GLE_API bool isGL_NV_copy_depth_to_color();
 
 
 /**
+ * @defgroup GL_NV_copy_image GL_NV_copy_image
+ * Extension number in OpenGL registry : 376
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/copy_image.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_copy_image is supported.
+ * @return Returns \c true if \b GL_NV_copy_image is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_copy_image();
+
+/**
+ * @brief void glCopyImageSubDataNV( GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth );
+ */
+GLE_API void glCopyImageSubDataNV( GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth );
+
+//@}
+
+
+/**
  * @defgroup GL_NV_depth_buffer_float GL_NV_depth_buffer_float
  * Extension number in OpenGL registry : 334
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/depth_buffer_float.txt
@@ -8899,6 +8967,22 @@ GLE_API void glProgramBufferParametersIuivNV( GLenum target, GLuint buffer, GLui
 
 
 /**
+ * @defgroup GL_NV_parameter_buffer_object2 GL_NV_parameter_buffer_object2
+ * Extension number in OpenGL registry : 378
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/parameter_buffer_object2.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_parameter_buffer_object2 is supported.
+ * @return Returns \c true if \b GL_NV_parameter_buffer_object2 is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_parameter_buffer_object2();
+
+//@}
+
+
+/**
  * @defgroup GL_NV_pixel_data_range GL_NV_pixel_data_range
  * Extension number in OpenGL registry : 284
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/pixel_data_range.txt
@@ -9130,6 +9214,92 @@ GLE_API void glGetCombinerStageParameterfvNV( GLenum stage, GLenum pname, GLfloa
 
 
 /**
+ * @defgroup GL_NV_shader_buffer_load GL_NV_shader_buffer_load
+ * Extension number in OpenGL registry : 379
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/shader_buffer_load.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_shader_buffer_load is supported.
+ * @return Returns \c true if \b GL_NV_shader_buffer_load is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_shader_buffer_load();
+
+/**
+ * @brief void glMakeBufferResidentNV( GLenum target, GLenum access );
+ */
+GLE_API void glMakeBufferResidentNV( GLenum target, GLenum access );
+
+/**
+ * @brief void glMakeBufferNonResidentNV( GLenum target );
+ */
+GLE_API void glMakeBufferNonResidentNV( GLenum target );
+
+/**
+ * @brief GLboolean glIsBufferResidentNV( GLenum target );
+ */
+GLE_API GLboolean glIsBufferResidentNV( GLenum target );
+
+/**
+ * @brief void glNamedMakeBufferResidentNV( GLuint buffer, GLenum access );
+ */
+GLE_API void glNamedMakeBufferResidentNV( GLuint buffer, GLenum access );
+
+/**
+ * @brief void glNamedMakeBufferNonResidentNV( GLuint buffer );
+ */
+GLE_API void glNamedMakeBufferNonResidentNV( GLuint buffer );
+
+/**
+ * @brief GLboolean glIsNamedBufferResidentNV( GLuint buffer );
+ */
+GLE_API GLboolean glIsNamedBufferResidentNV( GLuint buffer );
+
+/**
+ * @brief void glGetBufferParameterui64vNV( GLenum target, GLenum pname, GLuint64EXT *params );
+ */
+GLE_API void glGetBufferParameterui64vNV( GLenum target, GLenum pname, GLuint64EXT *params );
+
+/**
+ * @brief void glGetNamedBufferParameterui64vNV( GLuint buffer, GLenum pname, GLuint64EXT *params );
+ */
+GLE_API void glGetNamedBufferParameterui64vNV( GLuint buffer, GLenum pname, GLuint64EXT *params );
+
+/**
+ * @brief void glGetIntegerui64vNV( GLenum value, GLuint64EXT *result );
+ */
+GLE_API void glGetIntegerui64vNV( GLenum value, GLuint64EXT *result );
+
+/**
+ * @brief void glUniformui64NV( GLint location, GLuint64EXT value );
+ */
+GLE_API void glUniformui64NV( GLint location, GLuint64EXT value );
+
+/**
+ * @brief void glUniformui64vNV( GLint location, GLsizei count, const GLuint64EXT *value );
+ */
+GLE_API void glUniformui64vNV( GLint location, GLsizei count, const GLuint64EXT *value );
+
+/**
+ * @brief void glGetUniformui64vNV( GLuint program, GLint location, GLuint64EXT *params );
+ */
+GLE_API void glGetUniformui64vNV( GLuint program, GLint location, GLuint64EXT *params );
+
+/**
+ * @brief void glProgramUniformui64NV( GLuint program, GLint location, GLuint64EXT value );
+ */
+GLE_API void glProgramUniformui64NV( GLuint program, GLint location, GLuint64EXT value );
+
+/**
+ * @brief void glProgramUniformui64vNV( GLuint program, GLint location, GLsizei count, const GLuint64EXT *value );
+ */
+GLE_API void glProgramUniformui64vNV( GLuint program, GLint location, GLsizei count, const GLuint64EXT *value );
+
+//@}
+
+
+/**
  * @defgroup GL_NV_texgen_emboss GL_NV_texgen_emboss
  * Extension number in OpenGL registry : 193
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/texgen_emboss.txt
@@ -9157,6 +9327,27 @@ GLE_API bool isGL_NV_texgen_emboss();
  * @return Returns \c true if \b GL_NV_texgen_reflection is supported, false otherwise.
  */
 GLE_API bool isGL_NV_texgen_reflection();
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_texture_barrier GL_NV_texture_barrier
+ * Extension number in OpenGL registry : 381
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/texture_barrier.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_texture_barrier is supported.
+ * @return Returns \c true if \b GL_NV_texture_barrier is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_texture_barrier();
+
+/**
+ * @brief void glTextureBarrierNV( void );
+ */
+GLE_API void glTextureBarrierNV( void );
 
 //@}
 
@@ -9433,6 +9624,82 @@ GLE_API void glVertexArrayRangeNV( GLsizei length, const GLvoid *pointer );
  * @return Returns \c true if \b GL_NV_vertex_array_range2 is supported, false otherwise.
  */
 GLE_API bool isGL_NV_vertex_array_range2();
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_vertex_buffer_unified_memory GL_NV_vertex_buffer_unified_memory
+ * Extension number in OpenGL registry : 380
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/vertex_buffer_unified_memory.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_vertex_buffer_unified_memory is supported.
+ * @return Returns \c true if \b GL_NV_vertex_buffer_unified_memory is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_vertex_buffer_unified_memory();
+
+/**
+ * @brief void glBufferAddressRangeNV( GLenum pname, GLuint index, GLuint64EXT address, GLsizeiptr length );
+ */
+GLE_API void glBufferAddressRangeNV( GLenum pname, GLuint index, GLuint64EXT address, GLsizeiptr length );
+
+/**
+ * @brief void glVertexFormatNV( GLint size, GLenum type, GLsizei stride );
+ */
+GLE_API void glVertexFormatNV( GLint size, GLenum type, GLsizei stride );
+
+/**
+ * @brief void glNormalFormatNV( GLenum type, GLsizei stride );
+ */
+GLE_API void glNormalFormatNV( GLenum type, GLsizei stride );
+
+/**
+ * @brief void glColorFormatNV( GLint size, GLenum type, GLsizei stride );
+ */
+GLE_API void glColorFormatNV( GLint size, GLenum type, GLsizei stride );
+
+/**
+ * @brief void glIndexFormatNV( GLenum type, GLsizei stride );
+ */
+GLE_API void glIndexFormatNV( GLenum type, GLsizei stride );
+
+/**
+ * @brief void glTexCoordFormatNV( GLint size, GLenum type, GLsizei stride );
+ */
+GLE_API void glTexCoordFormatNV( GLint size, GLenum type, GLsizei stride );
+
+/**
+ * @brief void glEdgeFlagFormatNV( GLsizei stride );
+ */
+GLE_API void glEdgeFlagFormatNV( GLsizei stride );
+
+/**
+ * @brief void glSecondaryColorFormatNV( GLint size, GLenum type, GLsizei stride );
+ */
+GLE_API void glSecondaryColorFormatNV( GLint size, GLenum type, GLsizei stride );
+
+/**
+ * @brief void glFogCoordFormatNV( GLenum type, GLsizei stride );
+ */
+GLE_API void glFogCoordFormatNV( GLenum type, GLsizei stride );
+
+/**
+ * @brief void glVertexAttribFormatNV( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride );
+ */
+GLE_API void glVertexAttribFormatNV( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride );
+
+/**
+ * @brief void glVertexAttribIFormatNV( GLuint index, GLint size, GLenum type, GLsizei stride );
+ */
+GLE_API void glVertexAttribIFormatNV( GLuint index, GLint size, GLenum type, GLsizei stride );
+
+/**
+ * @brief void glGetIntegerui64i_vNV( GLenum value, GLuint index, GLuint64EXT *result );
+ */
+GLE_API void glGetIntegerui64i_vNV( GLenum value, GLuint index, GLuint64EXT *result );
 
 //@}
 
@@ -9964,6 +10231,82 @@ GLE_API void glGetVertexAttribIivEXT( GLuint index, GLenum pname, GLint *params 
  * @brief void glGetVertexAttribIuivEXT( GLuint index, GLenum pname, GLuint *params );
  */
 GLE_API void glGetVertexAttribIuivEXT( GLuint index, GLenum pname, GLuint *params );
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_video_capture GL_NV_video_capture
+ * Extension number in OpenGL registry : 374
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/video_capture.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_video_capture is supported.
+ * @return Returns \c true if \b GL_NV_video_capture is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_video_capture();
+
+/**
+ * @brief void glBeginVideoCaptureNV( GLuint video_capture_slot );
+ */
+GLE_API void glBeginVideoCaptureNV( GLuint video_capture_slot );
+
+/**
+ * @brief void glBindVideoCaptureStreamBufferNV( GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLintptrARB offset );
+ */
+GLE_API void glBindVideoCaptureStreamBufferNV( GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLintptrARB offset );
+
+/**
+ * @brief void glBindVideoCaptureStreamTextureNV( GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLenum target, GLuint texture );
+ */
+GLE_API void glBindVideoCaptureStreamTextureNV( GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLenum target, GLuint texture );
+
+/**
+ * @brief void glEndVideoCaptureNV( GLuint video_capture_slot );
+ */
+GLE_API void glEndVideoCaptureNV( GLuint video_capture_slot );
+
+/**
+ * @brief void glGetVideoCaptureivNV( GLuint video_capture_slot, GLenum pname, GLint *params );
+ */
+GLE_API void glGetVideoCaptureivNV( GLuint video_capture_slot, GLenum pname, GLint *params );
+
+/**
+ * @brief void glGetVideoCaptureStreamivNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLint *params );
+ */
+GLE_API void glGetVideoCaptureStreamivNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLint *params );
+
+/**
+ * @brief void glGetVideoCaptureStreamfvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLfloat *params );
+ */
+GLE_API void glGetVideoCaptureStreamfvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLfloat *params );
+
+/**
+ * @brief void glGetVideoCaptureStreamdvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLdouble *params );
+ */
+GLE_API void glGetVideoCaptureStreamdvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLdouble *params );
+
+/**
+ * @brief GLenum glVideoCaptureNV( GLuint video_capture_slot, GLuint *sequence_num, GLuint64EXT *capture_time );
+ */
+GLE_API GLenum glVideoCaptureNV( GLuint video_capture_slot, GLuint *sequence_num, GLuint64EXT *capture_time );
+
+/**
+ * @brief void glVideoCaptureStreamParameterivNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLint *params );
+ */
+GLE_API void glVideoCaptureStreamParameterivNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLint *params );
+
+/**
+ * @brief void glVideoCaptureStreamParameterfvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLfloat *params );
+ */
+GLE_API void glVideoCaptureStreamParameterfvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLfloat *params );
+
+/**
+ * @brief void glVideoCaptureStreamParameterdvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLdouble *params );
+ */
+GLE_API void glVideoCaptureStreamParameterdvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLdouble *params );
 
 //@}
 
@@ -14728,6 +15071,33 @@ GLE_API BOOL  wglQueryFrameTrackingI3D( DWORD *pFrameCount, DWORD *pMissedFrames
 
 			
 /**	
+ * @defgroup WGL_NV_copy_image WGL_NV_copy_image
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_NV_copy_image is supported.
+ * @return Returns \c true if \b WGL_NV_copy_image is supported, false otherwise.
+ */
+GLE_API bool isWGL_NV_copy_image();
+
+/**
+ * @brief BOOL  wglCopyImageSubDataNV( HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth );
+ */
+GLE_API BOOL  wglCopyImageSubDataNV( HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+			
+/**	
  * @defgroup WGL_NV_float_buffer WGL_NV_float_buffer
  * Extension not found in OpenGL extensions registry !!!
  * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
@@ -14964,12 +15334,58 @@ GLE_API void  wglFreeMemoryNV( void *pointer );
 
 #ifdef WIN32
 
+			
+/**	
+ * @defgroup WGL_NV_video_capture WGL_NV_video_capture
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_NV_video_capture is supported.
+ * @return Returns \c true if \b WGL_NV_video_capture is supported, false otherwise.
+ */
+GLE_API bool isWGL_NV_video_capture();
 
 /**
+ * @brief BOOL  wglBindVideoCaptureDeviceNV( UINT uVideoSlot, HVIDEOINPUTDEVICENV hDevice );
+ */
+GLE_API BOOL  wglBindVideoCaptureDeviceNV( UINT uVideoSlot, HVIDEOINPUTDEVICENV hDevice );
+
+/**
+ * @brief UINT  wglEnumerateVideoCaptureDevicesNV( HDC hDc, HVIDEOINPUTDEVICENV *phDeviceList );
+ */
+GLE_API UINT  wglEnumerateVideoCaptureDevicesNV( HDC hDc, HVIDEOINPUTDEVICENV *phDeviceList );
+
+/**
+ * @brief BOOL  wglLockVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice );
+ */
+GLE_API BOOL  wglLockVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice );
+
+/**
+ * @brief BOOL  wglQueryVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice, int iAttribute, int *piValue );
+ */
+GLE_API BOOL  wglQueryVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice, int iAttribute, int *piValue );
+
+/**
+ * @brief BOOL  wglReleaseVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice );
+ */
+GLE_API BOOL  wglReleaseVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+			
+/**	
  * @defgroup WGL_NV_video_out WGL_NV_video_out
- * Extension number in OpenGL registry : 349
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/wgl_video_out.txt
- * @ingroup g_WGL_NV g_extensions
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
  */
 //@{
 /**
@@ -14977,6 +15393,29 @@ GLE_API void  wglFreeMemoryNV( void *pointer );
  * @return Returns \c true if \b WGL_NV_video_out is supported, false otherwise.
  */
 GLE_API bool isWGL_NV_video_out();
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+/**
+ * @defgroup WGL_NV_video_output WGL_NV_video_output
+ * Extension number in OpenGL registry : 349
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/wgl_video_out.txt
+ * @ingroup g_WGL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_NV_video_output is supported.
+ * @return Returns \c true if \b WGL_NV_video_output is supported, false otherwise.
+ */
+GLE_API bool isWGL_NV_video_output();
 
 /**
  * @brief BOOL  wglGetVideoDeviceNV( HDC hDC, int numDevices, HPVIDEODEV *hVideoDevice );

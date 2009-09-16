@@ -1,4 +1,4 @@
-// This file was generated at Wed Aug 19 12:19:43 2009 with gle, please do not modify.
+// This file was generated at Tue Sep 15 15:00:34 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,11 +17,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Wed Aug 19 12:19:43 2009 with gle, please do not modify.
+ * - Stamp = // This file was generated at Tue Sep 15 15:00:34 2009 with gle, please do not modify.
  * - Number of tokens					= 0
- * - Number of functions				= 1668
- * - Number of extensions found(in headers)	= 395
- * - Number of extensions in OpenGL registry	= 392
+ * - Number of functions				= 1717
+ * - Number of extensions found(in headers)	= 406
+ * - Number of extensions in OpenGL registry	= 400
  */
 
 
@@ -556,6 +556,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glGetObjectParameterivAPPLE( GLenum objectType, GLuint name, GLenum pname, GLint *params );
 	*/
 	PFNGLGETOBJECTPARAMETERIVAPPLEPROC                            glGetObjectParameterivAPPLE;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_APPLE_rgb_422 is supported, false otherwise.
+	 */
+	bool isGL_APPLE_rgb_422;
 
 
 
@@ -5379,6 +5388,30 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_EXT_separate_shader_objects is supported, false otherwise.
+	 */
+	bool isGL_EXT_separate_shader_objects;
+
+	/**
+	* @brief void glUseShaderProgramEXT( GLenum type, GLuint program );
+	*/
+	PFNGLUSESHADERPROGRAMEXTPROC                                  glUseShaderProgramEXT;
+
+	/**
+	* @brief void glActiveProgramEXT( GLuint program );
+	*/
+	PFNGLACTIVEPROGRAMEXTPROC                                     glActiveProgramEXT;
+
+	/**
+	* @brief GLuint glCreateShaderProgramEXT( GLenum type, const GLchar *string );
+	*/
+	PFNGLCREATESHADERPROGRAMEXTPROC                               glCreateShaderProgramEXT;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_EXT_separate_specular_color is supported, false otherwise.
 	 */
 	bool isGL_EXT_separate_specular_color;
@@ -6584,6 +6617,20 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_NV_copy_image is supported, false otherwise.
+	 */
+	bool isGL_NV_copy_image;
+
+	/**
+	* @brief void glCopyImageSubDataNV( GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth );
+	*/
+	PFNGLCOPYIMAGESUBDATANVPROC                                   glCopyImageSubDataNV;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_NV_depth_buffer_float is supported, false otherwise.
 	 */
 	bool isGL_NV_depth_buffer_float;
@@ -7298,6 +7345,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_NV_parameter_buffer_object2 is supported, false otherwise.
+	 */
+	bool isGL_NV_parameter_buffer_object2;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_NV_pixel_data_range is supported, false otherwise.
 	 */
 	bool isGL_NV_pixel_data_range;
@@ -7487,6 +7543,85 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_NV_shader_buffer_load is supported, false otherwise.
+	 */
+	bool isGL_NV_shader_buffer_load;
+
+	/**
+	* @brief void glMakeBufferResidentNV( GLenum target, GLenum access );
+	*/
+	PFNGLMAKEBUFFERRESIDENTNVPROC                                 glMakeBufferResidentNV;
+
+	/**
+	* @brief void glMakeBufferNonResidentNV( GLenum target );
+	*/
+	PFNGLMAKEBUFFERNONRESIDENTNVPROC                              glMakeBufferNonResidentNV;
+
+	/**
+	* @brief GLboolean glIsBufferResidentNV( GLenum target );
+	*/
+	PFNGLISBUFFERRESIDENTNVPROC                                   glIsBufferResidentNV;
+
+	/**
+	* @brief void glNamedMakeBufferResidentNV( GLuint buffer, GLenum access );
+	*/
+	PFNGLNAMEDMAKEBUFFERRESIDENTNVPROC                            glNamedMakeBufferResidentNV;
+
+	/**
+	* @brief void glNamedMakeBufferNonResidentNV( GLuint buffer );
+	*/
+	PFNGLNAMEDMAKEBUFFERNONRESIDENTNVPROC                         glNamedMakeBufferNonResidentNV;
+
+	/**
+	* @brief GLboolean glIsNamedBufferResidentNV( GLuint buffer );
+	*/
+	PFNGLISNAMEDBUFFERRESIDENTNVPROC                              glIsNamedBufferResidentNV;
+
+	/**
+	* @brief void glGetBufferParameterui64vNV( GLenum target, GLenum pname, GLuint64EXT *params );
+	*/
+	PFNGLGETBUFFERPARAMETERUI64VNVPROC                            glGetBufferParameterui64vNV;
+
+	/**
+	* @brief void glGetNamedBufferParameterui64vNV( GLuint buffer, GLenum pname, GLuint64EXT *params );
+	*/
+	PFNGLGETNAMEDBUFFERPARAMETERUI64VNVPROC                       glGetNamedBufferParameterui64vNV;
+
+	/**
+	* @brief void glGetIntegerui64vNV( GLenum value, GLuint64EXT *result );
+	*/
+	PFNGLGETINTEGERUI64VNVPROC                                    glGetIntegerui64vNV;
+
+	/**
+	* @brief void glUniformui64NV( GLint location, GLuint64EXT value );
+	*/
+	PFNGLUNIFORMUI64NVPROC                                        glUniformui64NV;
+
+	/**
+	* @brief void glUniformui64vNV( GLint location, GLsizei count, const GLuint64EXT *value );
+	*/
+	PFNGLUNIFORMUI64VNVPROC                                       glUniformui64vNV;
+
+	/**
+	* @brief void glGetUniformui64vNV( GLuint program, GLint location, GLuint64EXT *params );
+	*/
+	PFNGLGETUNIFORMUI64VNVPROC                                    glGetUniformui64vNV;
+
+	/**
+	* @brief void glProgramUniformui64NV( GLuint program, GLint location, GLuint64EXT value );
+	*/
+	PFNGLPROGRAMUNIFORMUI64NVPROC                                 glProgramUniformui64NV;
+
+	/**
+	* @brief void glProgramUniformui64vNV( GLuint program, GLint location, GLsizei count, const GLuint64EXT *value );
+	*/
+	PFNGLPROGRAMUNIFORMUI64VNVPROC                                glProgramUniformui64vNV;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_NV_texgen_emboss is supported, false otherwise.
 	 */
 	bool isGL_NV_texgen_emboss;
@@ -7499,6 +7634,20 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_NV_texgen_reflection is supported, false otherwise.
 	 */
 	bool isGL_NV_texgen_reflection;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_texture_barrier is supported, false otherwise.
+	 */
+	bool isGL_NV_texture_barrier;
+
+	/**
+	* @brief void glTextureBarrierNV( void );
+	*/
+	PFNGLTEXTUREBARRIERNVPROC                                     glTextureBarrierNV;
 
 
 
@@ -7698,6 +7847,75 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_NV_vertex_array_range2 is supported, false otherwise.
 	 */
 	bool isGL_NV_vertex_array_range2;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_vertex_buffer_unified_memory is supported, false otherwise.
+	 */
+	bool isGL_NV_vertex_buffer_unified_memory;
+
+	/**
+	* @brief void glBufferAddressRangeNV( GLenum pname, GLuint index, GLuint64EXT address, GLsizeiptr length );
+	*/
+	PFNGLBUFFERADDRESSRANGENVPROC                                 glBufferAddressRangeNV;
+
+	/**
+	* @brief void glVertexFormatNV( GLint size, GLenum type, GLsizei stride );
+	*/
+	PFNGLVERTEXFORMATNVPROC                                       glVertexFormatNV;
+
+	/**
+	* @brief void glNormalFormatNV( GLenum type, GLsizei stride );
+	*/
+	PFNGLNORMALFORMATNVPROC                                       glNormalFormatNV;
+
+	/**
+	* @brief void glColorFormatNV( GLint size, GLenum type, GLsizei stride );
+	*/
+	PFNGLCOLORFORMATNVPROC                                        glColorFormatNV;
+
+	/**
+	* @brief void glIndexFormatNV( GLenum type, GLsizei stride );
+	*/
+	PFNGLINDEXFORMATNVPROC                                        glIndexFormatNV;
+
+	/**
+	* @brief void glTexCoordFormatNV( GLint size, GLenum type, GLsizei stride );
+	*/
+	PFNGLTEXCOORDFORMATNVPROC                                     glTexCoordFormatNV;
+
+	/**
+	* @brief void glEdgeFlagFormatNV( GLsizei stride );
+	*/
+	PFNGLEDGEFLAGFORMATNVPROC                                     glEdgeFlagFormatNV;
+
+	/**
+	* @brief void glSecondaryColorFormatNV( GLint size, GLenum type, GLsizei stride );
+	*/
+	PFNGLSECONDARYCOLORFORMATNVPROC                               glSecondaryColorFormatNV;
+
+	/**
+	* @brief void glFogCoordFormatNV( GLenum type, GLsizei stride );
+	*/
+	PFNGLFOGCOORDFORMATNVPROC                                     glFogCoordFormatNV;
+
+	/**
+	* @brief void glVertexAttribFormatNV( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride );
+	*/
+	PFNGLVERTEXATTRIBFORMATNVPROC                                 glVertexAttribFormatNV;
+
+	/**
+	* @brief void glVertexAttribIFormatNV( GLuint index, GLint size, GLenum type, GLsizei stride );
+	*/
+	PFNGLVERTEXATTRIBIFORMATNVPROC                                glVertexAttribIFormatNV;
+
+	/**
+	* @brief void glGetIntegerui64i_vNV( GLenum value, GLuint index, GLuint64EXT *result );
+	*/
+	PFNGLGETINTEGERUI64I_VNVPROC                                  glGetIntegerui64i_vNV;
 
 
 
@@ -8187,6 +8405,75 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glGetVertexAttribIuivEXT( GLuint index, GLenum pname, GLuint *params );
 	*/
 	PFNGLGETVERTEXATTRIBIUIVEXTPROC                               glGetVertexAttribIuivEXT;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_video_capture is supported, false otherwise.
+	 */
+	bool isGL_NV_video_capture;
+
+	/**
+	* @brief void glBeginVideoCaptureNV( GLuint video_capture_slot );
+	*/
+	PFNGLBEGINVIDEOCAPTURENVPROC                                  glBeginVideoCaptureNV;
+
+	/**
+	* @brief void glBindVideoCaptureStreamBufferNV( GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLintptrARB offset );
+	*/
+	PFNGLBINDVIDEOCAPTURESTREAMBUFFERNVPROC                       glBindVideoCaptureStreamBufferNV;
+
+	/**
+	* @brief void glBindVideoCaptureStreamTextureNV( GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLenum target, GLuint texture );
+	*/
+	PFNGLBINDVIDEOCAPTURESTREAMTEXTURENVPROC                      glBindVideoCaptureStreamTextureNV;
+
+	/**
+	* @brief void glEndVideoCaptureNV( GLuint video_capture_slot );
+	*/
+	PFNGLENDVIDEOCAPTURENVPROC                                    glEndVideoCaptureNV;
+
+	/**
+	* @brief void glGetVideoCaptureivNV( GLuint video_capture_slot, GLenum pname, GLint *params );
+	*/
+	PFNGLGETVIDEOCAPTUREIVNVPROC                                  glGetVideoCaptureivNV;
+
+	/**
+	* @brief void glGetVideoCaptureStreamivNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLint *params );
+	*/
+	PFNGLGETVIDEOCAPTURESTREAMIVNVPROC                            glGetVideoCaptureStreamivNV;
+
+	/**
+	* @brief void glGetVideoCaptureStreamfvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLfloat *params );
+	*/
+	PFNGLGETVIDEOCAPTURESTREAMFVNVPROC                            glGetVideoCaptureStreamfvNV;
+
+	/**
+	* @brief void glGetVideoCaptureStreamdvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLdouble *params );
+	*/
+	PFNGLGETVIDEOCAPTURESTREAMDVNVPROC                            glGetVideoCaptureStreamdvNV;
+
+	/**
+	* @brief GLenum glVideoCaptureNV( GLuint video_capture_slot, GLuint *sequence_num, GLuint64EXT *capture_time );
+	*/
+	PFNGLVIDEOCAPTURENVPROC                                       glVideoCaptureNV;
+
+	/**
+	* @brief void glVideoCaptureStreamParameterivNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLint *params );
+	*/
+	PFNGLVIDEOCAPTURESTREAMPARAMETERIVNVPROC                      glVideoCaptureStreamParameterivNV;
+
+	/**
+	* @brief void glVideoCaptureStreamParameterfvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLfloat *params );
+	*/
+	PFNGLVIDEOCAPTURESTREAMPARAMETERFVNVPROC                      glVideoCaptureStreamParameterfvNV;
+
+	/**
+	* @brief void glVideoCaptureStreamParameterdvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLdouble *params );
+	*/
+	PFNGLVIDEOCAPTURESTREAMPARAMETERDVNVPROC                      glVideoCaptureStreamParameterdvNV;
 
 
 
@@ -12143,6 +12430,27 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b WGL_NV_copy_image is supported, false otherwise.
+	 */
+	bool isWGL_NV_copy_image;
+
+	/**
+	* @brief BOOL  wglCopyImageSubDataNV( HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth );
+	*/
+	PFNWGLCOPYIMAGESUBDATANVPROC                                  wglCopyImageSubDataNV;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
 	 * @brief Returns \c true if \b WGL_NV_float_buffer is supported, false otherwise.
 	 */
 	bool isWGL_NV_float_buffer;
@@ -12335,9 +12643,66 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b WGL_NV_video_capture is supported, false otherwise.
+	 */
+	bool isWGL_NV_video_capture;
+
+	/**
+	* @brief BOOL  wglBindVideoCaptureDeviceNV( UINT uVideoSlot, HVIDEOINPUTDEVICENV hDevice );
+	*/
+	PFNWGLBINDVIDEOCAPTUREDEVICENVPROC                            wglBindVideoCaptureDeviceNV;
+
+	/**
+	* @brief UINT  wglEnumerateVideoCaptureDevicesNV( HDC hDc, HVIDEOINPUTDEVICENV *phDeviceList );
+	*/
+	PFNWGLENUMERATEVIDEOCAPTUREDEVICESNVPROC                      wglEnumerateVideoCaptureDevicesNV;
+
+	/**
+	* @brief BOOL  wglLockVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice );
+	*/
+	PFNWGLLOCKVIDEOCAPTUREDEVICENVPROC                            wglLockVideoCaptureDeviceNV;
+
+	/**
+	* @brief BOOL  wglQueryVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice, int iAttribute, int *piValue );
+	*/
+	PFNWGLQUERYVIDEOCAPTUREDEVICENVPROC                           wglQueryVideoCaptureDeviceNV;
+
+	/**
+	* @brief BOOL  wglReleaseVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice );
+	*/
+	PFNWGLRELEASEVIDEOCAPTUREDEVICENVPROC                         wglReleaseVideoCaptureDeviceNV;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
 	 * @brief Returns \c true if \b WGL_NV_video_out is supported, false otherwise.
 	 */
 	bool isWGL_NV_video_out;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_NV_video_output is supported, false otherwise.
+	 */
+	bool isWGL_NV_video_output;
 
 	/**
 	* @brief BOOL  wglGetVideoDeviceNV( HDC hDC, int numDevices, HPVIDEODEV *hVideoDevice );

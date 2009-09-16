@@ -1,4 +1,4 @@
-// This file was generated at Wed Aug 19 12:19:43 2009 with gle, please do not modify.
+// This file was generated at Tue Sep 15 15:00:34 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -350,6 +350,15 @@ GLenum glObjectUnpurgeableAPPLE( GLenum objectType, GLuint name, GLenum option )
 void glGetObjectParameterivAPPLE( GLenum objectType, GLuint name, GLenum pname, GLint *params )
 {
 	gleGetCurrent()->glGetObjectParameterivAPPLE( objectType, name, pname, params );
+}
+
+
+// ********* GL_APPLE_rgb_422 *********
+bool isGL_APPLE_rgb_422()
+{
+	const bool isSupported = gleGetCurrent()->isGL_APPLE_rgb_422;
+
+	return isSupported;
 }
 
 
@@ -5876,6 +5885,33 @@ void glSecondaryColorPointerEXT( GLint size, GLenum type, GLsizei stride, const 
 }
 
 
+// ********* GL_EXT_separate_shader_objects *********
+bool isGL_EXT_separate_shader_objects()
+{
+	const bool isSupported = gleGetCurrent()->isGL_EXT_separate_shader_objects;
+
+	return isSupported;
+}
+
+					
+void glUseShaderProgramEXT( GLenum type, GLuint program )
+{
+	gleGetCurrent()->glUseShaderProgramEXT( type, program );
+}
+
+					
+void glActiveProgramEXT( GLuint program )
+{
+	gleGetCurrent()->glActiveProgramEXT( program );
+}
+
+					
+GLuint glCreateShaderProgramEXT( GLenum type, const GLchar *string )
+{
+	return ( gleGetCurrent()->glCreateShaderProgramEXT( type, string) );
+}
+
+
 // ********* GL_EXT_separate_specular_color *********
 bool isGL_EXT_separate_specular_color()
 {
@@ -7214,6 +7250,21 @@ bool isGL_NV_copy_depth_to_color()
 }
 
 
+// ********* GL_NV_copy_image *********
+bool isGL_NV_copy_image()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_copy_image;
+
+	return isSupported;
+}
+
+					
+void glCopyImageSubDataNV( GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth )
+{
+	gleGetCurrent()->glCopyImageSubDataNV( srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, width, height, depth );
+}
+
+
 // ********* GL_NV_depth_buffer_float *********
 bool isGL_NV_depth_buffer_float()
 {
@@ -8033,6 +8084,15 @@ void glProgramBufferParametersIuivNV( GLenum target, GLuint buffer, GLuint index
 }
 
 
+// ********* GL_NV_parameter_buffer_object2 *********
+bool isGL_NV_parameter_buffer_object2()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_parameter_buffer_object2;
+
+	return isSupported;
+}
+
+
 // ********* GL_NV_pixel_data_range *********
 bool isGL_NV_pixel_data_range()
 {
@@ -8249,6 +8309,99 @@ void glGetCombinerStageParameterfvNV( GLenum stage, GLenum pname, GLfloat *param
 }
 
 
+// ********* GL_NV_shader_buffer_load *********
+bool isGL_NV_shader_buffer_load()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_shader_buffer_load;
+
+	return isSupported;
+}
+
+					
+void glMakeBufferResidentNV( GLenum target, GLenum access )
+{
+	gleGetCurrent()->glMakeBufferResidentNV( target, access );
+}
+
+					
+void glMakeBufferNonResidentNV( GLenum target )
+{
+	gleGetCurrent()->glMakeBufferNonResidentNV( target );
+}
+
+					
+GLboolean glIsBufferResidentNV( GLenum target )
+{
+	return ( gleGetCurrent()->glIsBufferResidentNV( target) );
+}
+
+					
+void glNamedMakeBufferResidentNV( GLuint buffer, GLenum access )
+{
+	gleGetCurrent()->glNamedMakeBufferResidentNV( buffer, access );
+}
+
+					
+void glNamedMakeBufferNonResidentNV( GLuint buffer )
+{
+	gleGetCurrent()->glNamedMakeBufferNonResidentNV( buffer );
+}
+
+					
+GLboolean glIsNamedBufferResidentNV( GLuint buffer )
+{
+	return ( gleGetCurrent()->glIsNamedBufferResidentNV( buffer) );
+}
+
+					
+void glGetBufferParameterui64vNV( GLenum target, GLenum pname, GLuint64EXT *params )
+{
+	gleGetCurrent()->glGetBufferParameterui64vNV( target, pname, params );
+}
+
+					
+void glGetNamedBufferParameterui64vNV( GLuint buffer, GLenum pname, GLuint64EXT *params )
+{
+	gleGetCurrent()->glGetNamedBufferParameterui64vNV( buffer, pname, params );
+}
+
+					
+void glGetIntegerui64vNV( GLenum value, GLuint64EXT *result )
+{
+	gleGetCurrent()->glGetIntegerui64vNV( value, result );
+}
+
+					
+void glUniformui64NV( GLint location, GLuint64EXT value )
+{
+	gleGetCurrent()->glUniformui64NV( location, value );
+}
+
+					
+void glUniformui64vNV( GLint location, GLsizei count, const GLuint64EXT *value )
+{
+	gleGetCurrent()->glUniformui64vNV( location, count, value );
+}
+
+					
+void glGetUniformui64vNV( GLuint program, GLint location, GLuint64EXT *params )
+{
+	gleGetCurrent()->glGetUniformui64vNV( program, location, params );
+}
+
+					
+void glProgramUniformui64NV( GLuint program, GLint location, GLuint64EXT value )
+{
+	gleGetCurrent()->glProgramUniformui64NV( program, location, value );
+}
+
+					
+void glProgramUniformui64vNV( GLuint program, GLint location, GLsizei count, const GLuint64EXT *value )
+{
+	gleGetCurrent()->glProgramUniformui64vNV( program, location, count, value );
+}
+
+
 // ********* GL_NV_texgen_emboss *********
 bool isGL_NV_texgen_emboss()
 {
@@ -8264,6 +8417,21 @@ bool isGL_NV_texgen_reflection()
 	const bool isSupported = gleGetCurrent()->isGL_NV_texgen_reflection;
 
 	return isSupported;
+}
+
+
+// ********* GL_NV_texture_barrier *********
+bool isGL_NV_texture_barrier()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_texture_barrier;
+
+	return isSupported;
+}
+
+					
+void glTextureBarrierNV( void )
+{
+	gleGetCurrent()->glTextureBarrierNV(  );
 }
 
 
@@ -8483,6 +8651,87 @@ bool isGL_NV_vertex_array_range2()
 	const bool isSupported = gleGetCurrent()->isGL_NV_vertex_array_range2;
 
 	return isSupported;
+}
+
+
+// ********* GL_NV_vertex_buffer_unified_memory *********
+bool isGL_NV_vertex_buffer_unified_memory()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_vertex_buffer_unified_memory;
+
+	return isSupported;
+}
+
+					
+void glBufferAddressRangeNV( GLenum pname, GLuint index, GLuint64EXT address, GLsizeiptr length )
+{
+	gleGetCurrent()->glBufferAddressRangeNV( pname, index, address, length );
+}
+
+					
+void glVertexFormatNV( GLint size, GLenum type, GLsizei stride )
+{
+	gleGetCurrent()->glVertexFormatNV( size, type, stride );
+}
+
+					
+void glNormalFormatNV( GLenum type, GLsizei stride )
+{
+	gleGetCurrent()->glNormalFormatNV( type, stride );
+}
+
+					
+void glColorFormatNV( GLint size, GLenum type, GLsizei stride )
+{
+	gleGetCurrent()->glColorFormatNV( size, type, stride );
+}
+
+					
+void glIndexFormatNV( GLenum type, GLsizei stride )
+{
+	gleGetCurrent()->glIndexFormatNV( type, stride );
+}
+
+					
+void glTexCoordFormatNV( GLint size, GLenum type, GLsizei stride )
+{
+	gleGetCurrent()->glTexCoordFormatNV( size, type, stride );
+}
+
+					
+void glEdgeFlagFormatNV( GLsizei stride )
+{
+	gleGetCurrent()->glEdgeFlagFormatNV( stride );
+}
+
+					
+void glSecondaryColorFormatNV( GLint size, GLenum type, GLsizei stride )
+{
+	gleGetCurrent()->glSecondaryColorFormatNV( size, type, stride );
+}
+
+					
+void glFogCoordFormatNV( GLenum type, GLsizei stride )
+{
+	gleGetCurrent()->glFogCoordFormatNV( type, stride );
+}
+
+					
+void glVertexAttribFormatNV( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride )
+{
+	gleGetCurrent()->glVertexAttribFormatNV( index, size, type, normalized, stride );
+}
+
+					
+void glVertexAttribIFormatNV( GLuint index, GLint size, GLenum type, GLsizei stride )
+{
+	gleGetCurrent()->glVertexAttribIFormatNV( index, size, type, stride );
+}
+
+					
+void glGetIntegerui64i_vNV( GLenum value, GLuint index, GLuint64EXT *result )
+{
+	gleGetCurrent()->glGetIntegerui64i_vNV( value, index, result );
 }
 
 
@@ -9059,6 +9308,87 @@ void glGetVertexAttribIivEXT( GLuint index, GLenum pname, GLint *params )
 void glGetVertexAttribIuivEXT( GLuint index, GLenum pname, GLuint *params )
 {
 	gleGetCurrent()->glGetVertexAttribIuivEXT( index, pname, params );
+}
+
+
+// ********* GL_NV_video_capture *********
+bool isGL_NV_video_capture()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_video_capture;
+
+	return isSupported;
+}
+
+					
+void glBeginVideoCaptureNV( GLuint video_capture_slot )
+{
+	gleGetCurrent()->glBeginVideoCaptureNV( video_capture_slot );
+}
+
+					
+void glBindVideoCaptureStreamBufferNV( GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLintptrARB offset )
+{
+	gleGetCurrent()->glBindVideoCaptureStreamBufferNV( video_capture_slot, stream, frame_region, offset );
+}
+
+					
+void glBindVideoCaptureStreamTextureNV( GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLenum target, GLuint texture )
+{
+	gleGetCurrent()->glBindVideoCaptureStreamTextureNV( video_capture_slot, stream, frame_region, target, texture );
+}
+
+					
+void glEndVideoCaptureNV( GLuint video_capture_slot )
+{
+	gleGetCurrent()->glEndVideoCaptureNV( video_capture_slot );
+}
+
+					
+void glGetVideoCaptureivNV( GLuint video_capture_slot, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetVideoCaptureivNV( video_capture_slot, pname, params );
+}
+
+					
+void glGetVideoCaptureStreamivNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLint *params )
+{
+	gleGetCurrent()->glGetVideoCaptureStreamivNV( video_capture_slot, stream, pname, params );
+}
+
+					
+void glGetVideoCaptureStreamfvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLfloat *params )
+{
+	gleGetCurrent()->glGetVideoCaptureStreamfvNV( video_capture_slot, stream, pname, params );
+}
+
+					
+void glGetVideoCaptureStreamdvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLdouble *params )
+{
+	gleGetCurrent()->glGetVideoCaptureStreamdvNV( video_capture_slot, stream, pname, params );
+}
+
+					
+GLenum glVideoCaptureNV( GLuint video_capture_slot, GLuint *sequence_num, GLuint64EXT *capture_time )
+{
+	return ( gleGetCurrent()->glVideoCaptureNV( video_capture_slot, sequence_num, capture_time) );
+}
+
+					
+void glVideoCaptureStreamParameterivNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLint *params )
+{
+	gleGetCurrent()->glVideoCaptureStreamParameterivNV( video_capture_slot, stream, pname, params );
+}
+
+					
+void glVideoCaptureStreamParameterfvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLfloat *params )
+{
+	gleGetCurrent()->glVideoCaptureStreamParameterfvNV( video_capture_slot, stream, pname, params );
+}
+
+					
+void glVideoCaptureStreamParameterdvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLdouble *params )
+{
+	gleGetCurrent()->glVideoCaptureStreamParameterdvNV( video_capture_slot, stream, pname, params );
 }
 
 
@@ -13478,6 +13808,26 @@ BOOL  wglQueryFrameTrackingI3D( DWORD *pFrameCount, DWORD *pMissedFrames, float 
 
 #ifdef WIN32
 
+// ********* WGL_NV_copy_image *********
+bool isWGL_NV_copy_image()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_copy_image;
+
+	return isSupported;
+}
+
+					
+BOOL  wglCopyImageSubDataNV( HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth )
+{
+	return ( gleGetCurrent()->wglCopyImageSubDataNV( hSrcRC, srcName, srcTarget, srcLevel, srcX, srcY, srcZ, hDstRC, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, width, height, depth) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
 // ********* WGL_NV_float_buffer *********
 bool isWGL_NV_float_buffer()
 {
@@ -13672,10 +14022,68 @@ void  wglFreeMemoryNV( void *pointer )
 
 #ifdef WIN32
 
+// ********* WGL_NV_video_capture *********
+bool isWGL_NV_video_capture()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_video_capture;
+
+	return isSupported;
+}
+
+					
+BOOL  wglBindVideoCaptureDeviceNV( UINT uVideoSlot, HVIDEOINPUTDEVICENV hDevice )
+{
+	return ( gleGetCurrent()->wglBindVideoCaptureDeviceNV( uVideoSlot, hDevice) );
+}
+
+					
+UINT  wglEnumerateVideoCaptureDevicesNV( HDC hDc, HVIDEOINPUTDEVICENV *phDeviceList )
+{
+	return ( gleGetCurrent()->wglEnumerateVideoCaptureDevicesNV( hDc, phDeviceList) );
+}
+
+					
+BOOL  wglLockVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice )
+{
+	return ( gleGetCurrent()->wglLockVideoCaptureDeviceNV( hDc, hDevice) );
+}
+
+					
+BOOL  wglQueryVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice, int iAttribute, int *piValue )
+{
+	return ( gleGetCurrent()->wglQueryVideoCaptureDeviceNV( hDc, hDevice, iAttribute, piValue) );
+}
+
+					
+BOOL  wglReleaseVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice )
+{
+	return ( gleGetCurrent()->wglReleaseVideoCaptureDeviceNV( hDc, hDevice) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
 // ********* WGL_NV_video_out *********
 bool isWGL_NV_video_out()
 {
 	const bool isSupported = gleGetCurrent()->isWGL_NV_video_out;
+
+	return isSupported;
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_NV_video_output *********
+bool isWGL_NV_video_output()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_video_output;
 
 	return isSupported;
 }

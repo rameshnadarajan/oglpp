@@ -1,4 +1,4 @@
-// This file was generated at Wed Aug 19 12:19:43 2009 with gle, please do not modify.
+// This file was generated at Tue Sep 15 15:00:34 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,8 +17,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 395;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 1668;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 406;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 1717;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS ) :
@@ -132,6 +132,10 @@ void OpenGLExtensionsGen::clear()
 	glObjectPurgeableAPPLE                                        = 0;
 	glObjectUnpurgeableAPPLE                                      = 0;
 	glGetObjectParameterivAPPLE                                   = 0;
+
+
+	// ****** GL_APPLE_rgb_422 ******
+	isGL_APPLE_rgb_422                                            = false;
 
 
 	// ****** GL_APPLE_row_bytes ******
@@ -1469,6 +1473,14 @@ void OpenGLExtensionsGen::clear()
 	glSecondaryColorPointerEXT                                    = 0;
 
 
+	// ****** GL_EXT_separate_shader_objects ******
+	isGL_EXT_separate_shader_objects                              = false;
+
+	glUseShaderProgramEXT                                         = 0;
+	glActiveProgramEXT                                            = 0;
+	glCreateShaderProgramEXT                                      = 0;
+
+
 	// ****** GL_EXT_separate_specular_color ******
 	isGL_EXT_separate_specular_color                              = false;
 
@@ -1857,6 +1869,11 @@ void OpenGLExtensionsGen::clear()
 	isGL_NV_copy_depth_to_color                                   = false;
 
 
+	// ****** GL_NV_copy_image ******
+	isGL_NV_copy_image                                            = false;
+	glCopyImageSubDataNV                                          = 0;
+
+
 	// ****** GL_NV_depth_buffer_float ******
 	isGL_NV_depth_buffer_float                                    = false;
 
@@ -2056,6 +2073,10 @@ void OpenGLExtensionsGen::clear()
 	glProgramBufferParametersIuivNV                               = 0;
 
 
+	// ****** GL_NV_parameter_buffer_object2 ******
+	isGL_NV_parameter_buffer_object2                              = false;
+
+
 	// ****** GL_NV_pixel_data_range ******
 	isGL_NV_pixel_data_range                                      = false;
 
@@ -2113,12 +2134,36 @@ void OpenGLExtensionsGen::clear()
 	glGetCombinerStageParameterfvNV                               = 0;
 
 
+	// ****** GL_NV_shader_buffer_load ******
+	isGL_NV_shader_buffer_load                                    = false;
+
+	glMakeBufferResidentNV                                        = 0;
+	glMakeBufferNonResidentNV                                     = 0;
+	glIsBufferResidentNV                                          = 0;
+	glNamedMakeBufferResidentNV                                   = 0;
+	glNamedMakeBufferNonResidentNV                                = 0;
+	glIsNamedBufferResidentNV                                     = 0;
+	glGetBufferParameterui64vNV                                   = 0;
+	glGetNamedBufferParameterui64vNV                              = 0;
+	glGetIntegerui64vNV                                           = 0;
+	glUniformui64NV                                               = 0;
+	glUniformui64vNV                                              = 0;
+	glGetUniformui64vNV                                           = 0;
+	glProgramUniformui64NV                                        = 0;
+	glProgramUniformui64vNV                                       = 0;
+
+
 	// ****** GL_NV_texgen_emboss ******
 	isGL_NV_texgen_emboss                                         = false;
 
 
 	// ****** GL_NV_texgen_reflection ******
 	isGL_NV_texgen_reflection                                     = false;
+
+
+	// ****** GL_NV_texture_barrier ******
+	isGL_NV_texture_barrier                                       = false;
+	glTextureBarrierNV                                            = 0;
 
 
 	// ****** GL_NV_texture_compression_vtc ******
@@ -2186,6 +2231,23 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_NV_vertex_array_range2 ******
 	isGL_NV_vertex_array_range2                                   = false;
+
+
+	// ****** GL_NV_vertex_buffer_unified_memory ******
+	isGL_NV_vertex_buffer_unified_memory                          = false;
+
+	glBufferAddressRangeNV                                        = 0;
+	glVertexFormatNV                                              = 0;
+	glNormalFormatNV                                              = 0;
+	glColorFormatNV                                               = 0;
+	glIndexFormatNV                                               = 0;
+	glTexCoordFormatNV                                            = 0;
+	glEdgeFlagFormatNV                                            = 0;
+	glSecondaryColorFormatNV                                      = 0;
+	glFogCoordFormatNV                                            = 0;
+	glVertexAttribFormatNV                                        = 0;
+	glVertexAttribIFormatNV                                       = 0;
+	glGetIntegerui64i_vNV                                         = 0;
 
 
 	// ****** GL_NV_vertex_program ******
@@ -2299,6 +2361,23 @@ void OpenGLExtensionsGen::clear()
 	glVertexAttribIPointerEXT                                     = 0;
 	glGetVertexAttribIivEXT                                       = 0;
 	glGetVertexAttribIuivEXT                                      = 0;
+
+
+	// ****** GL_NV_video_capture ******
+	isGL_NV_video_capture                                         = false;
+
+	glBeginVideoCaptureNV                                         = 0;
+	glBindVideoCaptureStreamBufferNV                              = 0;
+	glBindVideoCaptureStreamTextureNV                             = 0;
+	glEndVideoCaptureNV                                           = 0;
+	glGetVideoCaptureivNV                                         = 0;
+	glGetVideoCaptureStreamivNV                                   = 0;
+	glGetVideoCaptureStreamfvNV                                   = 0;
+	glGetVideoCaptureStreamdvNV                                   = 0;
+	glVideoCaptureNV                                              = 0;
+	glVideoCaptureStreamParameterivNV                             = 0;
+	glVideoCaptureStreamParameterfvNV                             = 0;
+	glVideoCaptureStreamParameterdvNV                             = 0;
 
 
 	// ****** GL_OES_read_format ******
@@ -3396,6 +3475,12 @@ void OpenGLExtensionsGen::clear()
 #endif // WIN32
 
 #ifdef WIN32
+	// ****** WGL_NV_copy_image ******
+	isWGL_NV_copy_image                                           = false;
+	wglCopyImageSubDataNV                                         = 0;
+#endif // WIN32
+
+#ifdef WIN32
 	// ****** WGL_NV_float_buffer ******
 	isWGL_NV_float_buffer                                         = false;
 #endif // WIN32
@@ -3451,8 +3536,24 @@ void OpenGLExtensionsGen::clear()
 #endif // WIN32
 
 #ifdef WIN32
+	// ****** WGL_NV_video_capture ******
+	isWGL_NV_video_capture                                        = false;
+
+	wglBindVideoCaptureDeviceNV                                   = 0;
+	wglEnumerateVideoCaptureDevicesNV                             = 0;
+	wglLockVideoCaptureDeviceNV                                   = 0;
+	wglQueryVideoCaptureDeviceNV                                  = 0;
+	wglReleaseVideoCaptureDeviceNV                                = 0;
+#endif // WIN32
+
+#ifdef WIN32
 	// ****** WGL_NV_video_out ******
 	isWGL_NV_video_out                                            = false;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_NV_video_output ******
+	isWGL_NV_video_output                                         = false;
 
 	wglGetVideoDeviceNV                                           = 0;
 	wglReleaseVideoDeviceNV                                       = 0;
@@ -4266,6 +4367,39 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	else
 	{
 		logEndl( "GL_APPLE_object_purgeable                                   : not detected." );
+	}
+	
+	// ****** GL_APPLE_rgb_422 ******
+	
+	isGL_APPLE_rgb_422 = isExtensionSupported("GL_APPLE_rgb_422");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_APPLE_rgb_422 )
+	{
+		std::stringstream strStream;
+		strStream << "GL_APPLE_rgb_422                                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_APPLE_rgb_422                                            : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_APPLE_rgb_422") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_APPLE_rgb_422                                            : not detected." );
 	}
 	
 	// ****** GL_APPLE_row_bytes ******
@@ -11366,6 +11500,51 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 		logEndl( "GL_EXT_secondary_color                                      : not detected." );
 	}
 	
+	// ****** GL_EXT_separate_shader_objects ******
+	
+	isGL_EXT_separate_shader_objects = isExtensionSupported("GL_EXT_separate_shader_objects");
+	
+	localSupportedProcCount		= 3;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_EXT_separate_shader_objects ) // || isSEDEnable()
+	{
+
+		glUseShaderProgramEXT = (PFNGLUSESHADERPROGRAMEXTPROC) getExtensionPtr( "glUseShaderProgramEXT" );
+		if ( glUseShaderProgramEXT != 0 )	++localInitializedProcCount;
+
+		glActiveProgramEXT = (PFNGLACTIVEPROGRAMEXTPROC) getExtensionPtr( "glActiveProgramEXT" );
+		if ( glActiveProgramEXT != 0 )	++localInitializedProcCount;
+
+		glCreateShaderProgramEXT = (PFNGLCREATESHADERPROGRAMEXTPROC) getExtensionPtr( "glCreateShaderProgramEXT" );
+		if ( glCreateShaderProgramEXT != 0 )	++localInitializedProcCount;
+	} // if ( isGL_EXT_separate_shader_objects || isSEDEnable() )
+	
+	if ( isGL_EXT_separate_shader_objects )
+	{
+		std::stringstream strStream;
+		strStream << "GL_EXT_separate_shader_objects                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_EXT_separate_shader_objects                              : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_EXT_separate_shader_objects") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_EXT_separate_shader_objects                              : not detected." );
+	}
+	
 	// ****** GL_EXT_separate_specular_color ******
 	
 	isGL_EXT_separate_specular_color = isExtensionSupported("GL_EXT_separate_specular_color");
@@ -13886,6 +14065,45 @@ void OpenGLExtensionsGen::initializeGL_NV()
 		logEndl( "GL_NV_copy_depth_to_color                                   : not detected." );
 	}
 	
+	// ****** GL_NV_copy_image ******
+	
+	isGL_NV_copy_image = isExtensionSupported("GL_NV_copy_image");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_NV_copy_image ) // || isSEDEnable()
+	{
+
+		glCopyImageSubDataNV = (PFNGLCOPYIMAGESUBDATANVPROC) getExtensionPtr( "glCopyImageSubDataNV" );
+		if ( glCopyImageSubDataNV != 0 )	++localInitializedProcCount;
+	} // if ( isGL_NV_copy_image || isSEDEnable() )
+	
+	if ( isGL_NV_copy_image )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_copy_image                                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_copy_image                                            : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_copy_image") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_copy_image                                            : not detected." );
+	}
+	
 	// ****** GL_NV_depth_buffer_float ******
 	
 	isGL_NV_depth_buffer_float = isExtensionSupported("GL_NV_depth_buffer_float");
@@ -14927,6 +15145,39 @@ void OpenGLExtensionsGen::initializeGL_NV()
 		logEndl( "GL_NV_parameter_buffer_object                               : not detected." );
 	}
 	
+	// ****** GL_NV_parameter_buffer_object2 ******
+	
+	isGL_NV_parameter_buffer_object2 = isExtensionSupported("GL_NV_parameter_buffer_object2");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_NV_parameter_buffer_object2 )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_parameter_buffer_object2                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_parameter_buffer_object2                              : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_parameter_buffer_object2") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_parameter_buffer_object2                              : not detected." );
+	}
+	
 	// ****** GL_NV_pixel_data_range ******
 	
 	isGL_NV_pixel_data_range = isExtensionSupported("GL_NV_pixel_data_range");
@@ -15224,6 +15475,84 @@ void OpenGLExtensionsGen::initializeGL_NV()
 		logEndl( "GL_NV_register_combiners2                                   : not detected." );
 	}
 	
+	// ****** GL_NV_shader_buffer_load ******
+	
+	isGL_NV_shader_buffer_load = isExtensionSupported("GL_NV_shader_buffer_load");
+	
+	localSupportedProcCount		= 14;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_NV_shader_buffer_load ) // || isSEDEnable()
+	{
+
+		glMakeBufferResidentNV = (PFNGLMAKEBUFFERRESIDENTNVPROC) getExtensionPtr( "glMakeBufferResidentNV" );
+		if ( glMakeBufferResidentNV != 0 )	++localInitializedProcCount;
+
+		glMakeBufferNonResidentNV = (PFNGLMAKEBUFFERNONRESIDENTNVPROC) getExtensionPtr( "glMakeBufferNonResidentNV" );
+		if ( glMakeBufferNonResidentNV != 0 )	++localInitializedProcCount;
+
+		glIsBufferResidentNV = (PFNGLISBUFFERRESIDENTNVPROC) getExtensionPtr( "glIsBufferResidentNV" );
+		if ( glIsBufferResidentNV != 0 )	++localInitializedProcCount;
+
+		glNamedMakeBufferResidentNV = (PFNGLNAMEDMAKEBUFFERRESIDENTNVPROC) getExtensionPtr( "glNamedMakeBufferResidentNV" );
+		if ( glNamedMakeBufferResidentNV != 0 )	++localInitializedProcCount;
+
+		glNamedMakeBufferNonResidentNV = (PFNGLNAMEDMAKEBUFFERNONRESIDENTNVPROC) getExtensionPtr( "glNamedMakeBufferNonResidentNV" );
+		if ( glNamedMakeBufferNonResidentNV != 0 )	++localInitializedProcCount;
+
+		glIsNamedBufferResidentNV = (PFNGLISNAMEDBUFFERRESIDENTNVPROC) getExtensionPtr( "glIsNamedBufferResidentNV" );
+		if ( glIsNamedBufferResidentNV != 0 )	++localInitializedProcCount;
+
+		glGetBufferParameterui64vNV = (PFNGLGETBUFFERPARAMETERUI64VNVPROC) getExtensionPtr( "glGetBufferParameterui64vNV" );
+		if ( glGetBufferParameterui64vNV != 0 )	++localInitializedProcCount;
+
+		glGetNamedBufferParameterui64vNV = (PFNGLGETNAMEDBUFFERPARAMETERUI64VNVPROC) getExtensionPtr( "glGetNamedBufferParameterui64vNV" );
+		if ( glGetNamedBufferParameterui64vNV != 0 )	++localInitializedProcCount;
+
+		glGetIntegerui64vNV = (PFNGLGETINTEGERUI64VNVPROC) getExtensionPtr( "glGetIntegerui64vNV" );
+		if ( glGetIntegerui64vNV != 0 )	++localInitializedProcCount;
+
+		glUniformui64NV = (PFNGLUNIFORMUI64NVPROC) getExtensionPtr( "glUniformui64NV" );
+		if ( glUniformui64NV != 0 )	++localInitializedProcCount;
+
+		glUniformui64vNV = (PFNGLUNIFORMUI64VNVPROC) getExtensionPtr( "glUniformui64vNV" );
+		if ( glUniformui64vNV != 0 )	++localInitializedProcCount;
+
+		glGetUniformui64vNV = (PFNGLGETUNIFORMUI64VNVPROC) getExtensionPtr( "glGetUniformui64vNV" );
+		if ( glGetUniformui64vNV != 0 )	++localInitializedProcCount;
+
+		glProgramUniformui64NV = (PFNGLPROGRAMUNIFORMUI64NVPROC) getExtensionPtr( "glProgramUniformui64NV" );
+		if ( glProgramUniformui64NV != 0 )	++localInitializedProcCount;
+
+		glProgramUniformui64vNV = (PFNGLPROGRAMUNIFORMUI64VNVPROC) getExtensionPtr( "glProgramUniformui64vNV" );
+		if ( glProgramUniformui64vNV != 0 )	++localInitializedProcCount;
+	} // if ( isGL_NV_shader_buffer_load || isSEDEnable() )
+	
+	if ( isGL_NV_shader_buffer_load )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_shader_buffer_load                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_shader_buffer_load                                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_shader_buffer_load") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_shader_buffer_load                                    : not detected." );
+	}
+	
 	// ****** GL_NV_texgen_emboss ******
 	
 	isGL_NV_texgen_emboss = isExtensionSupported("GL_NV_texgen_emboss");
@@ -15288,6 +15617,45 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	else
 	{
 		logEndl( "GL_NV_texgen_reflection                                     : not detected." );
+	}
+	
+	// ****** GL_NV_texture_barrier ******
+	
+	isGL_NV_texture_barrier = isExtensionSupported("GL_NV_texture_barrier");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_NV_texture_barrier ) // || isSEDEnable()
+	{
+
+		glTextureBarrierNV = (PFNGLTEXTUREBARRIERNVPROC) getExtensionPtr( "glTextureBarrierNV" );
+		if ( glTextureBarrierNV != 0 )	++localInitializedProcCount;
+	} // if ( isGL_NV_texture_barrier || isSEDEnable() )
+	
+	if ( isGL_NV_texture_barrier )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_texture_barrier                                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_texture_barrier                                       : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_texture_barrier") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_texture_barrier                                       : not detected." );
 	}
 	
 	// ****** GL_NV_texture_compression_vtc ******
@@ -15720,6 +16088,78 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	else
 	{
 		logEndl( "GL_NV_vertex_array_range2                                   : not detected." );
+	}
+	
+	// ****** GL_NV_vertex_buffer_unified_memory ******
+	
+	isGL_NV_vertex_buffer_unified_memory = isExtensionSupported("GL_NV_vertex_buffer_unified_memory");
+	
+	localSupportedProcCount		= 12;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_NV_vertex_buffer_unified_memory ) // || isSEDEnable()
+	{
+
+		glBufferAddressRangeNV = (PFNGLBUFFERADDRESSRANGENVPROC) getExtensionPtr( "glBufferAddressRangeNV" );
+		if ( glBufferAddressRangeNV != 0 )	++localInitializedProcCount;
+
+		glVertexFormatNV = (PFNGLVERTEXFORMATNVPROC) getExtensionPtr( "glVertexFormatNV" );
+		if ( glVertexFormatNV != 0 )	++localInitializedProcCount;
+
+		glNormalFormatNV = (PFNGLNORMALFORMATNVPROC) getExtensionPtr( "glNormalFormatNV" );
+		if ( glNormalFormatNV != 0 )	++localInitializedProcCount;
+
+		glColorFormatNV = (PFNGLCOLORFORMATNVPROC) getExtensionPtr( "glColorFormatNV" );
+		if ( glColorFormatNV != 0 )	++localInitializedProcCount;
+
+		glIndexFormatNV = (PFNGLINDEXFORMATNVPROC) getExtensionPtr( "glIndexFormatNV" );
+		if ( glIndexFormatNV != 0 )	++localInitializedProcCount;
+
+		glTexCoordFormatNV = (PFNGLTEXCOORDFORMATNVPROC) getExtensionPtr( "glTexCoordFormatNV" );
+		if ( glTexCoordFormatNV != 0 )	++localInitializedProcCount;
+
+		glEdgeFlagFormatNV = (PFNGLEDGEFLAGFORMATNVPROC) getExtensionPtr( "glEdgeFlagFormatNV" );
+		if ( glEdgeFlagFormatNV != 0 )	++localInitializedProcCount;
+
+		glSecondaryColorFormatNV = (PFNGLSECONDARYCOLORFORMATNVPROC) getExtensionPtr( "glSecondaryColorFormatNV" );
+		if ( glSecondaryColorFormatNV != 0 )	++localInitializedProcCount;
+
+		glFogCoordFormatNV = (PFNGLFOGCOORDFORMATNVPROC) getExtensionPtr( "glFogCoordFormatNV" );
+		if ( glFogCoordFormatNV != 0 )	++localInitializedProcCount;
+
+		glVertexAttribFormatNV = (PFNGLVERTEXATTRIBFORMATNVPROC) getExtensionPtr( "glVertexAttribFormatNV" );
+		if ( glVertexAttribFormatNV != 0 )	++localInitializedProcCount;
+
+		glVertexAttribIFormatNV = (PFNGLVERTEXATTRIBIFORMATNVPROC) getExtensionPtr( "glVertexAttribIFormatNV" );
+		if ( glVertexAttribIFormatNV != 0 )	++localInitializedProcCount;
+
+		glGetIntegerui64i_vNV = (PFNGLGETINTEGERUI64I_VNVPROC) getExtensionPtr( "glGetIntegerui64i_vNV" );
+		if ( glGetIntegerui64i_vNV != 0 )	++localInitializedProcCount;
+	} // if ( isGL_NV_vertex_buffer_unified_memory || isSEDEnable() )
+	
+	if ( isGL_NV_vertex_buffer_unified_memory )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_vertex_buffer_unified_memory                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_vertex_buffer_unified_memory                          : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_vertex_buffer_unified_memory") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_vertex_buffer_unified_memory                          : not detected." );
 	}
 	
 	// ****** GL_NV_vertex_program ******
@@ -16185,6 +16625,78 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	else
 	{
 		logEndl( "GL_NV_vertex_program4                                       : not detected." );
+	}
+	
+	// ****** GL_NV_video_capture ******
+	
+	isGL_NV_video_capture = isExtensionSupported("GL_NV_video_capture");
+	
+	localSupportedProcCount		= 12;
+	localInitializedProcCount	= 0;
+	
+	if ( isGL_NV_video_capture ) // || isSEDEnable()
+	{
+
+		glBeginVideoCaptureNV = (PFNGLBEGINVIDEOCAPTURENVPROC) getExtensionPtr( "glBeginVideoCaptureNV" );
+		if ( glBeginVideoCaptureNV != 0 )	++localInitializedProcCount;
+
+		glBindVideoCaptureStreamBufferNV = (PFNGLBINDVIDEOCAPTURESTREAMBUFFERNVPROC) getExtensionPtr( "glBindVideoCaptureStreamBufferNV" );
+		if ( glBindVideoCaptureStreamBufferNV != 0 )	++localInitializedProcCount;
+
+		glBindVideoCaptureStreamTextureNV = (PFNGLBINDVIDEOCAPTURESTREAMTEXTURENVPROC) getExtensionPtr( "glBindVideoCaptureStreamTextureNV" );
+		if ( glBindVideoCaptureStreamTextureNV != 0 )	++localInitializedProcCount;
+
+		glEndVideoCaptureNV = (PFNGLENDVIDEOCAPTURENVPROC) getExtensionPtr( "glEndVideoCaptureNV" );
+		if ( glEndVideoCaptureNV != 0 )	++localInitializedProcCount;
+
+		glGetVideoCaptureivNV = (PFNGLGETVIDEOCAPTUREIVNVPROC) getExtensionPtr( "glGetVideoCaptureivNV" );
+		if ( glGetVideoCaptureivNV != 0 )	++localInitializedProcCount;
+
+		glGetVideoCaptureStreamivNV = (PFNGLGETVIDEOCAPTURESTREAMIVNVPROC) getExtensionPtr( "glGetVideoCaptureStreamivNV" );
+		if ( glGetVideoCaptureStreamivNV != 0 )	++localInitializedProcCount;
+
+		glGetVideoCaptureStreamfvNV = (PFNGLGETVIDEOCAPTURESTREAMFVNVPROC) getExtensionPtr( "glGetVideoCaptureStreamfvNV" );
+		if ( glGetVideoCaptureStreamfvNV != 0 )	++localInitializedProcCount;
+
+		glGetVideoCaptureStreamdvNV = (PFNGLGETVIDEOCAPTURESTREAMDVNVPROC) getExtensionPtr( "glGetVideoCaptureStreamdvNV" );
+		if ( glGetVideoCaptureStreamdvNV != 0 )	++localInitializedProcCount;
+
+		glVideoCaptureNV = (PFNGLVIDEOCAPTURENVPROC) getExtensionPtr( "glVideoCaptureNV" );
+		if ( glVideoCaptureNV != 0 )	++localInitializedProcCount;
+
+		glVideoCaptureStreamParameterivNV = (PFNGLVIDEOCAPTURESTREAMPARAMETERIVNVPROC) getExtensionPtr( "glVideoCaptureStreamParameterivNV" );
+		if ( glVideoCaptureStreamParameterivNV != 0 )	++localInitializedProcCount;
+
+		glVideoCaptureStreamParameterfvNV = (PFNGLVIDEOCAPTURESTREAMPARAMETERFVNVPROC) getExtensionPtr( "glVideoCaptureStreamParameterfvNV" );
+		if ( glVideoCaptureStreamParameterfvNV != 0 )	++localInitializedProcCount;
+
+		glVideoCaptureStreamParameterdvNV = (PFNGLVIDEOCAPTURESTREAMPARAMETERDVNVPROC) getExtensionPtr( "glVideoCaptureStreamParameterdvNV" );
+		if ( glVideoCaptureStreamParameterdvNV != 0 )	++localInitializedProcCount;
+	} // if ( isGL_NV_video_capture || isSEDEnable() )
+	
+	if ( isGL_NV_video_capture )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_video_capture                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_video_capture                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_video_capture") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_video_capture                                         : not detected." );
 	}
 } // initialize()
 
@@ -22102,6 +22614,48 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 
 #ifdef WIN32
 	
+	// ****** WGL_NV_copy_image ******
+	
+	isWGL_NV_copy_image = isWExtensionSupported("WGL_NV_copy_image");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_NV_copy_image ) // || isSEDEnable()
+	{
+
+		wglCopyImageSubDataNV = (PFNWGLCOPYIMAGESUBDATANVPROC) getExtensionPtr( "wglCopyImageSubDataNV" );
+		if ( wglCopyImageSubDataNV != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_NV_copy_image || isSEDEnable() )
+	
+	if ( isWGL_NV_copy_image )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_NV_copy_image                                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_NV_copy_image                                           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_NV_copy_image") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_NV_copy_image                                           : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
 	// ****** WGL_NV_float_buffer ******
 	
 	isWGL_NV_float_buffer = isWExtensionSupported("WGL_NV_float_buffer");
@@ -22414,34 +22968,67 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 
 #ifdef WIN32
 	
+	// ****** WGL_NV_video_capture ******
+	
+	isWGL_NV_video_capture = isWExtensionSupported("WGL_NV_video_capture");
+	
+	localSupportedProcCount		= 5;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_NV_video_capture ) // || isSEDEnable()
+	{
+
+		wglBindVideoCaptureDeviceNV = (PFNWGLBINDVIDEOCAPTUREDEVICENVPROC) getExtensionPtr( "wglBindVideoCaptureDeviceNV" );
+		if ( wglBindVideoCaptureDeviceNV != 0 )	++localInitializedProcCount;
+
+		wglEnumerateVideoCaptureDevicesNV = (PFNWGLENUMERATEVIDEOCAPTUREDEVICESNVPROC) getExtensionPtr( "wglEnumerateVideoCaptureDevicesNV" );
+		if ( wglEnumerateVideoCaptureDevicesNV != 0 )	++localInitializedProcCount;
+
+		wglLockVideoCaptureDeviceNV = (PFNWGLLOCKVIDEOCAPTUREDEVICENVPROC) getExtensionPtr( "wglLockVideoCaptureDeviceNV" );
+		if ( wglLockVideoCaptureDeviceNV != 0 )	++localInitializedProcCount;
+
+		wglQueryVideoCaptureDeviceNV = (PFNWGLQUERYVIDEOCAPTUREDEVICENVPROC) getExtensionPtr( "wglQueryVideoCaptureDeviceNV" );
+		if ( wglQueryVideoCaptureDeviceNV != 0 )	++localInitializedProcCount;
+
+		wglReleaseVideoCaptureDeviceNV = (PFNWGLRELEASEVIDEOCAPTUREDEVICENVPROC) getExtensionPtr( "wglReleaseVideoCaptureDeviceNV" );
+		if ( wglReleaseVideoCaptureDeviceNV != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_NV_video_capture || isSEDEnable() )
+	
+	if ( isWGL_NV_video_capture )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_NV_video_capture                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_NV_video_capture                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_NV_video_capture") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_NV_video_capture                                        : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
 	// ****** WGL_NV_video_out ******
 	
 	isWGL_NV_video_out = isWExtensionSupported("WGL_NV_video_out");
 	
-	localSupportedProcCount		= 6;
+	localSupportedProcCount		= 0;
 	localInitializedProcCount	= 0;
 	
-	if ( isWGL_NV_video_out ) // || isSEDEnable()
-	{
-
-		wglGetVideoDeviceNV = (PFNWGLGETVIDEODEVICENVPROC) getExtensionPtr( "wglGetVideoDeviceNV" );
-		if ( wglGetVideoDeviceNV != 0 )	++localInitializedProcCount;
-
-		wglReleaseVideoDeviceNV = (PFNWGLRELEASEVIDEODEVICENVPROC) getExtensionPtr( "wglReleaseVideoDeviceNV" );
-		if ( wglReleaseVideoDeviceNV != 0 )	++localInitializedProcCount;
-
-		wglBindVideoImageNV = (PFNWGLBINDVIDEOIMAGENVPROC) getExtensionPtr( "wglBindVideoImageNV" );
-		if ( wglBindVideoImageNV != 0 )	++localInitializedProcCount;
-
-		wglReleaseVideoImageNV = (PFNWGLRELEASEVIDEOIMAGENVPROC) getExtensionPtr( "wglReleaseVideoImageNV" );
-		if ( wglReleaseVideoImageNV != 0 )	++localInitializedProcCount;
-
-		wglSendPbufferToVideoNV = (PFNWGLSENDPBUFFERTOVIDEONVPROC) getExtensionPtr( "wglSendPbufferToVideoNV" );
-		if ( wglSendPbufferToVideoNV != 0 )	++localInitializedProcCount;
-
-		wglGetVideoInfoNV = (PFNWGLGETVIDEOINFONVPROC) getExtensionPtr( "wglGetVideoInfoNV" );
-		if ( wglGetVideoInfoNV != 0 )	++localInitializedProcCount;
-	} // if ( isWGL_NV_video_out || isSEDEnable() )
 	
 	if ( isWGL_NV_video_out )
 	{
@@ -22466,6 +23053,63 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	else
 	{
 		logEndl( "WGL_NV_video_out                                            : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_NV_video_output ******
+	
+	isWGL_NV_video_output = isWExtensionSupported("WGL_NV_video_output");
+	
+	localSupportedProcCount		= 6;
+	localInitializedProcCount	= 0;
+	
+	if ( isWGL_NV_video_output ) // || isSEDEnable()
+	{
+
+		wglGetVideoDeviceNV = (PFNWGLGETVIDEODEVICENVPROC) getExtensionPtr( "wglGetVideoDeviceNV" );
+		if ( wglGetVideoDeviceNV != 0 )	++localInitializedProcCount;
+
+		wglReleaseVideoDeviceNV = (PFNWGLRELEASEVIDEODEVICENVPROC) getExtensionPtr( "wglReleaseVideoDeviceNV" );
+		if ( wglReleaseVideoDeviceNV != 0 )	++localInitializedProcCount;
+
+		wglBindVideoImageNV = (PFNWGLBINDVIDEOIMAGENVPROC) getExtensionPtr( "wglBindVideoImageNV" );
+		if ( wglBindVideoImageNV != 0 )	++localInitializedProcCount;
+
+		wglReleaseVideoImageNV = (PFNWGLRELEASEVIDEOIMAGENVPROC) getExtensionPtr( "wglReleaseVideoImageNV" );
+		if ( wglReleaseVideoImageNV != 0 )	++localInitializedProcCount;
+
+		wglSendPbufferToVideoNV = (PFNWGLSENDPBUFFERTOVIDEONVPROC) getExtensionPtr( "wglSendPbufferToVideoNV" );
+		if ( wglSendPbufferToVideoNV != 0 )	++localInitializedProcCount;
+
+		wglGetVideoInfoNV = (PFNWGLGETVIDEOINFONVPROC) getExtensionPtr( "wglGetVideoInfoNV" );
+		if ( wglGetVideoInfoNV != 0 )	++localInitializedProcCount;
+	} // if ( isWGL_NV_video_output || isSEDEnable() )
+	
+	if ( isWGL_NV_video_output )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_NV_video_output                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_NV_video_output                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_NV_video_output") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_NV_video_output                                         : not detected." );
 	}
 #endif // WIN32
 
