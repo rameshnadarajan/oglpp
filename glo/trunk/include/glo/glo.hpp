@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2006, 2007, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2006, 2007, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -17,13 +17,12 @@
  * \b glo is open source (LGPL).
  */
 
-#include <gle/Wrapper.hpp>
-#include <gle/WrapperGen.hpp>
-#include <gle/OpenGLExtensionsGen.hpp>
+#include <gle/gl.h>
 
 // @todo remove me
-typedef long int32;
-typedef unsigned long uint32;   // @todo fixme use int and uint, test if sizeof (uint32) == 4
+#include <boost/cstdint.hpp>
+typedef boost::int32_t		int32;
+typedef boost::uint32_t		uint32;
 
 
 #ifdef _WIN32
