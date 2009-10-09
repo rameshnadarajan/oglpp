@@ -1,4 +1,4 @@
-// This file was generated at Tue Sep 15 15:00:34 2009 with gle, please do not modify.
+// This file was generated at Fri Oct  9 11:18:10 2009 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -54,7 +54,7 @@
  */
 
 /** 
- * @defgroup g_GL_EXT		GL_EXT (85 extensions found)
+ * @defgroup g_GL_EXT		GL_EXT (86 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -154,7 +154,7 @@
  */
 
 /** 
- * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (53 extensions found)
+ * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (44 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -169,7 +169,7 @@
  */
 
 /** 
- * @defgroup g_WGL_ARB		WGL_ARB (7 extensions found)
+ * @defgroup g_WGL_ARB		WGL_ARB (9 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -179,7 +179,7 @@
  */
 
 /** 
- * @defgroup g_WGL_EXT		WGL_EXT (8 extensions found)
+ * @defgroup g_WGL_EXT		WGL_EXT (10 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -189,7 +189,7 @@
  */
 
 /** 
- * @defgroup g_WGL_NV		WGL_NV (5 extensions found)
+ * @defgroup g_WGL_NV		WGL_NV (9 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -6069,11 +6069,12 @@ GLE_API void glMultiDrawElementsEXT( GLenum mode, const GLsizei *count, GLenum t
 
 //@}
 
-			
-/**	
+
+/**
  * @defgroup GL_EXT_multisample GL_EXT_multisample
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : 209
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/wgl_multisample.txt
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
 /**
@@ -14277,11 +14278,12 @@ GLE_API HDC  wglGetCurrentReadDCARB( void );
 
 #ifdef WIN32
 
-			
-/**	
+
+/**
  * @defgroup WGL_ARB_multisample WGL_ARB_multisample
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : 5
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/multisample.txt
+ * @ingroup g_WGL_ARB g_extensions
  */
 //@{
 /**
@@ -14385,11 +14387,12 @@ GLE_API BOOL  wglChoosePixelFormatARB( HDC hdc, const int *piAttribIList, const 
 
 #ifdef WIN32
 
-			
-/**	
+
+/**
  * @defgroup WGL_ARB_pixel_format_float WGL_ARB_pixel_format_float
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : 39
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/color_buffer_float.txt
+ * @ingroup g_WGL_ARB g_extensions
  */
 //@{
 /**
@@ -14562,11 +14565,12 @@ GLE_API const char *  wglGetExtensionsStringEXT( void );
 
 #ifdef WIN32
 
-			
-/**	
+
+/**
  * @defgroup WGL_EXT_framebuffer_sRGB WGL_EXT_framebuffer_sRGB
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : 337
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/framebuffer_sRGB.txt
+ * @ingroup g_WGL_EXT g_extensions
  */
 //@{
 /**
@@ -14726,11 +14730,12 @@ GLE_API BOOL  wglChoosePixelFormatEXT( HDC hdc, const int *piAttribIList, const 
 
 #ifdef WIN32
 
-			
-/**	
+
+/**
  * @defgroup WGL_EXT_pixel_format_packed_float WGL_EXT_pixel_format_packed_float
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : 328
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/packed_float.txt
+ * @ingroup g_WGL_EXT g_extensions
  */
 //@{
 /**
@@ -15069,11 +15074,12 @@ GLE_API BOOL  wglQueryFrameTrackingI3D( DWORD *pFrameCount, DWORD *pMissedFrames
 
 #ifdef WIN32
 
-			
-/**	
+
+/**
  * @defgroup WGL_NV_copy_image WGL_NV_copy_image
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : 376
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/copy_image.txt
+ * @ingroup g_WGL_NV g_extensions
  */
 //@{
 /**
@@ -15096,11 +15102,12 @@ GLE_API BOOL  wglCopyImageSubDataNV( HGLRC hSrcRC, GLuint srcName, GLenum srcTar
 
 #ifdef WIN32
 
-			
-/**	
+
+/**
  * @defgroup WGL_NV_float_buffer WGL_NV_float_buffer
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : 281
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/float_buffer.txt
+ * @ingroup g_WGL_NV g_extensions
  */
 //@{
 /**
@@ -15166,11 +15173,12 @@ GLE_API BOOL  wglDeleteDCNV( HDC hdc );
 
 #ifdef WIN32
 
-			
-/**	
+
+/**
  * @defgroup WGL_NV_present_video WGL_NV_present_video
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : 347
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/present_video.txt
+ * @ingroup g_WGL_NV g_extensions
  */
 //@{
 /**
@@ -15334,11 +15342,12 @@ GLE_API void  wglFreeMemoryNV( void *pointer );
 
 #ifdef WIN32
 
-			
-/**	
+
+/**
  * @defgroup WGL_NV_video_capture WGL_NV_video_capture
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : 374
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/video_capture.txt
+ * @ingroup g_WGL_NV g_extensions
  */
 //@{
 /**

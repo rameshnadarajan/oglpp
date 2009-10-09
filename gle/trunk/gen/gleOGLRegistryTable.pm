@@ -32,7 +32,7 @@ sub add
 
 	my $extensionName	= shift;
 	my $extensionId		= shift;
-	my $extensionURL	= shift;
+	my $extensionURL	= "http://www.opengl.org/registry/" . shift;
 
 	# check if name of extension already in hash.
 	if ( defined $self->{$extensionName} )

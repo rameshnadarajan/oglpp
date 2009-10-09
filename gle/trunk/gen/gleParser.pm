@@ -1,4 +1,4 @@
-# GLE - Copyright (C) 2004, 2005, 2007, Nicolas Papier.
+# GLE - Copyright (C) 2004, 2005, 2007, 2009, Nicolas Papier.
 # Distributed under the terms of the GNU Library General Public License (LGPL)
 # as published by the Free Software Foundation.
 # Author Nicolas Papier
@@ -499,17 +499,34 @@ sub parseOGLRegistry
 	{
 		my $line = <INFILE>;
 
-		if ( $line =~ /<OL>/ )
+		if ( $line =~ /<ol>/ )
 		{
 			# Start a list of extensions.
-			while ( ($line = <INFILE>) !~ /<\/OL>/ )
+			my $id;
+			while ( ($line = <INFILE>) !~ /<\/ol>/ )
 			{
-				# <LI value="1"> <A href="http://www.opengl.org/registry/specs/ARB/multitexture.txt">GL_ARB_multitexture</A>
-				#</LI>
-				if ( $line =~ /\s*<LI\s+value="(.+)">\s*<A\s+href\s*=\s*"(.+)">\s*(.+)<\/A>\s*/ )
+#<li value=1> <a href="specs/ARB/multitexture.txt">GL_ARB_multitexture</a>
+#</li>
+
+#<li value=5> <a href="specs/ARB/multisample.txt">GL_ARB_multisample</a>
+#     <br> <a href="specs/ARB/multisample.txt">GLX_ARB_multisample</a>
+#     <br> <a href="specs/ARB/multisample.txt">WGL_ARB_multisample</a>
+#</li>
+
+				if ( $line =~ /\s*<li\s+value="?(.+)"?>\s*<a\s+href\s*=\s*"(.+)">\s*(.+)<\/a>/ ) # see previous regex
 				{
-					$self->getOGLRegistryTable()->add( $3, $1, $2 ); # name, id, url
-					print "$1|$2|$3\n";
+					$id = $1;
+					my $name = $3;
+					my $url = $2;
+					$self->getOGLRegistryTable()->add( $name, $id, $url );
+					print "$id|$name|$url\n";
+				}
+				elsif ( $line =~ /.*<a\s+href\s*=\s*"(.+)">\s*(.+)<\/a>\s*/ ) # see previous regex
+				{
+					my $name = $2;
+					my $url = $1;
+					$self->getOGLRegistryTable()->add( $name, $id, $url );
+					print "$id|$name|$url\n";
 				}
 				else
 				{
