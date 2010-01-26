@@ -1,4 +1,4 @@
-// This file was generated at Fri Oct  9 11:18:10 2009 with gle, please do not modify.
+// This file was generated at Tue Jan 26 11:20:50 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -34,7 +34,7 @@
  */
 
 /** 
- * @defgroup g_GL_AMD		GL_AMD (3 extensions found)
+ * @defgroup g_GL_AMD		GL_AMD (5 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -154,7 +154,7 @@
  */
 
 /** 
- * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (44 extensions found)
+ * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (43 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -169,7 +169,7 @@
  */
 
 /** 
- * @defgroup g_WGL_ARB		WGL_ARB (9 extensions found)
+ * @defgroup g_WGL_ARB		WGL_ARB (10 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -356,6 +356,38 @@ GLE_API void glEndPerfMonitorAMD( GLuint monitor );
  * @brief void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten );
  */
 GLE_API void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten );
+
+//@}
+
+
+/**
+ * @defgroup GL_AMD_seamless_cubemap_per_texture GL_AMD_seamless_cubemap_per_texture
+ * Extension number in OpenGL registry : 383
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/seamless_cubemap_per_texture.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_AMD_seamless_cubemap_per_texture is supported.
+ * @return Returns \c true if \b GL_AMD_seamless_cubemap_per_texture is supported, false otherwise.
+ */
+GLE_API bool isGL_AMD_seamless_cubemap_per_texture();
+
+//@}
+
+
+/**
+ * @defgroup GL_AMD_shader_stencil_export GL_AMD_shader_stencil_export
+ * Extension number in OpenGL registry : 382
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/shader_stencil_export.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_AMD_shader_stencil_export is supported.
+ * @return Returns \c true if \b GL_AMD_shader_stencil_export is supported, false otherwise.
+ */
+GLE_API bool isGL_AMD_shader_stencil_export();
 
 //@}
 
@@ -14195,11 +14227,12 @@ GLE_API HGLRC  wglCreateContextAttribsARB( HDC hDC, HGLRC hShareContext, const i
 
 #ifdef WIN32
 
-			
-/**	
+
+/**
  * @defgroup WGL_ARB_create_context_profile WGL_ARB_create_context_profile
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : 74
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/wgl_create_context.txt
+ * @ingroup g_WGL_ARB g_extensions
  */
 //@{
 /**

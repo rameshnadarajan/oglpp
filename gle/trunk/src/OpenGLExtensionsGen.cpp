@@ -1,4 +1,4 @@
-// This file was generated at Fri Oct  9 11:18:10 2009 with gle, please do not modify.
+// This file was generated at Tue Jan 26 11:20:50 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,7 +17,7 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 406;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 408;
 const int	OpenGLExtensionsGen::m_supportedProcCount		= 1717;
 
 
@@ -71,6 +71,14 @@ void OpenGLExtensionsGen::clear()
 	glBeginPerfMonitorAMD                                         = 0;
 	glEndPerfMonitorAMD                                           = 0;
 	glGetPerfMonitorCounterDataAMD                                = 0;
+
+
+	// ****** GL_AMD_seamless_cubemap_per_texture ******
+	isGL_AMD_seamless_cubemap_per_texture                         = false;
+
+
+	// ****** GL_AMD_shader_stencil_export ******
+	isGL_AMD_shader_stencil_export                                = false;
 
 
 	// ****** GL_AMD_texture_texture4 ******
@@ -3987,6 +3995,72 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	else
 	{
 		logEndl( "GL_AMD_performance_monitor                                  : not detected." );
+	}
+	
+	// ****** GL_AMD_seamless_cubemap_per_texture ******
+	
+	isGL_AMD_seamless_cubemap_per_texture = isExtensionSupported("GL_AMD_seamless_cubemap_per_texture");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_AMD_seamless_cubemap_per_texture )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_seamless_cubemap_per_texture                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_seamless_cubemap_per_texture                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_seamless_cubemap_per_texture") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_seamless_cubemap_per_texture                         : not detected." );
+	}
+	
+	// ****** GL_AMD_shader_stencil_export ******
+	
+	isGL_AMD_shader_stencil_export = isExtensionSupported("GL_AMD_shader_stencil_export");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_AMD_shader_stencil_export )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_shader_stencil_export                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_shader_stencil_export                                : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_shader_stencil_export") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_shader_stencil_export                                : not detected." );
 	}
 	
 	// ****** GL_AMD_texture_texture4 ******

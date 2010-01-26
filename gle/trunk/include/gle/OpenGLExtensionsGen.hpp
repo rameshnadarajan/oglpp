@@ -1,4 +1,4 @@
-// This file was generated at Fri Oct  9 11:18:10 2009 with gle, please do not modify.
+// This file was generated at Tue Jan 26 11:20:50 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,11 +17,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Fri Oct  9 11:18:10 2009 with gle, please do not modify.
+ * - Stamp = // This file was generated at Tue Jan 26 11:20:50 2010 with gle, please do not modify.
  * - Number of tokens					= 0
  * - Number of functions				= 1717
- * - Number of extensions found(in headers)	= 406
- * - Number of extensions in OpenGL registry	= 424
+ * - Number of extensions found(in headers)	= 408
+ * - Number of extensions in OpenGL registry	= 429
  */
 
 
@@ -375,6 +375,24 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten );
 	*/
 	PFNGLGETPERFMONITORCOUNTERDATAAMDPROC                         glGetPerfMonitorCounterDataAMD;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_seamless_cubemap_per_texture is supported, false otherwise.
+	 */
+	bool isGL_AMD_seamless_cubemap_per_texture;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_shader_stencil_export is supported, false otherwise.
+	 */
+	bool isGL_AMD_shader_stencil_export;
 
 
 
