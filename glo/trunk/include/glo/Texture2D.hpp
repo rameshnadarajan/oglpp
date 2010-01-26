@@ -14,7 +14,7 @@ namespace glo
 {
 
 /**
- * @brief Encapsulation of a texture 2D object.
+ * @brief Encapsulation of a 2D texture object.
  */
 struct GLO_API Texture2D : public Texture1D
 {

@@ -67,7 +67,7 @@ public:
 	/**
 	 * @brief Deletes the texture name.
 	 */
-	void release();
+	virtual void release();
 
 	/**
 	 * @brief Activates the desired texture unit.
@@ -215,6 +215,11 @@ public:
 	void			setScaleFactors( const float x, const float y, const float z );
 	//@}
 
+
+	/**
+	 * @brief Returns the name of the OpenGL object
+	 */
+	GLuint getName();
 
 
 protected:

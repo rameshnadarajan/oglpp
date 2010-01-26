@@ -221,4 +221,11 @@ void Texture::setScaleFactors( const float x, const float y, const float z )
 
 
 
+GLuint Texture::getName()
+{
+	return m_texture;
+}
+
+
+
 } // namespace glo
