@@ -53,6 +53,7 @@ bool DisplayList::begin( GLsizei range )
 
 	assert( glIsList( m_index ) == GL_TRUE );
 	glNewList( m_index, GL_COMPILE );
+	//glNewList( m_index, GL_COMPILE_AND_EXECUTE );
 
 	m_current = m_index;
 	
@@ -114,7 +115,7 @@ void DisplayList::release()
 	if ( !isEmpty() )
 	{
 		// @todo FIXME
-		assert( glIsList( m_index ) == GL_TRUE ); // I should test all others display lists, but it is not very useful.
+		//assert( glIsList( m_index ) == GL_TRUE ); // I should test all others display lists, but it is not very useful.
 		glDeleteLists( m_index, m_count );
 		
 		m_index	= 0;
