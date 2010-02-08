@@ -1,4 +1,4 @@
-// This file was generated at Tue Jan 26 11:20:50 2010 with gle, please do not modify.
+// This file was generated at Mon Feb  8 12:38:41 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,7 +17,7 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Tue Jan 26 11:20:50 2010 with gle, please do not modify.
+ * - Stamp = // This file was generated at Mon Feb  8 12:38:41 2010 with gle, please do not modify.
  * - Number of tokens					= 0
  * - Number of functions				= 1717
  * - Number of extensions found(in headers)	= 408
@@ -7581,14 +7581,14 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLISBUFFERRESIDENTNVPROC                                   glIsBufferResidentNV;
 
 	/**
-	* @brief void glNamedMakeBufferResidentNV( GLuint buffer, GLenum access );
+	* @brief void glMakeNamedBufferResidentNV( GLuint buffer, GLenum access );
 	*/
-	PFNGLNAMEDMAKEBUFFERRESIDENTNVPROC                            glNamedMakeBufferResidentNV;
+	PFNGLMAKENAMEDBUFFERRESIDENTNVPROC                            glMakeNamedBufferResidentNV;
 
 	/**
-	* @brief void glNamedMakeBufferNonResidentNV( GLuint buffer );
+	* @brief void glMakeNamedBufferNonResidentNV( GLuint buffer );
 	*/
-	PFNGLNAMEDMAKEBUFFERNONRESIDENTNVPROC                         glNamedMakeBufferNonResidentNV;
+	PFNGLMAKENAMEDBUFFERNONRESIDENTNVPROC                         glMakeNamedBufferNonResidentNV;
 
 	/**
 	* @brief GLboolean glIsNamedBufferResidentNV( GLuint buffer );

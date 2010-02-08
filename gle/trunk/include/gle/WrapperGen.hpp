@@ -1,4 +1,4 @@
-// This file was generated at Tue Jan 26 11:20:50 2010 with gle, please do not modify.
+// This file was generated at Mon Feb  8 12:38:41 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -9275,14 +9275,14 @@ GLE_API void glMakeBufferNonResidentNV( GLenum target );
 GLE_API GLboolean glIsBufferResidentNV( GLenum target );
 
 /**
- * @brief void glNamedMakeBufferResidentNV( GLuint buffer, GLenum access );
+ * @brief void glMakeNamedBufferResidentNV( GLuint buffer, GLenum access );
  */
-GLE_API void glNamedMakeBufferResidentNV( GLuint buffer, GLenum access );
+GLE_API void glMakeNamedBufferResidentNV( GLuint buffer, GLenum access );
 
 /**
- * @brief void glNamedMakeBufferNonResidentNV( GLuint buffer );
+ * @brief void glMakeNamedBufferNonResidentNV( GLuint buffer );
  */
-GLE_API void glNamedMakeBufferNonResidentNV( GLuint buffer );
+GLE_API void glMakeNamedBufferNonResidentNV( GLuint buffer );
 
 /**
  * @brief GLboolean glIsNamedBufferResidentNV( GLuint buffer );

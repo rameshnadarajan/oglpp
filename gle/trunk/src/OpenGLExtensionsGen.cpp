@@ -1,4 +1,4 @@
-// This file was generated at Tue Jan 26 11:20:50 2010 with gle, please do not modify.
+// This file was generated at Mon Feb  8 12:38:41 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -2148,8 +2148,8 @@ void OpenGLExtensionsGen::clear()
 	glMakeBufferResidentNV                                        = 0;
 	glMakeBufferNonResidentNV                                     = 0;
 	glIsBufferResidentNV                                          = 0;
-	glNamedMakeBufferResidentNV                                   = 0;
-	glNamedMakeBufferNonResidentNV                                = 0;
+	glMakeNamedBufferResidentNV                                   = 0;
+	glMakeNamedBufferNonResidentNV                                = 0;
 	glIsNamedBufferResidentNV                                     = 0;
 	glGetBufferParameterui64vNV                                   = 0;
 	glGetNamedBufferParameterui64vNV                              = 0;
@@ -15568,11 +15568,11 @@ void OpenGLExtensionsGen::initializeGL_NV()
 		glIsBufferResidentNV = (PFNGLISBUFFERRESIDENTNVPROC) getExtensionPtr( "glIsBufferResidentNV" );
 		if ( glIsBufferResidentNV != 0 )	++localInitializedProcCount;
 
-		glNamedMakeBufferResidentNV = (PFNGLNAMEDMAKEBUFFERRESIDENTNVPROC) getExtensionPtr( "glNamedMakeBufferResidentNV" );
-		if ( glNamedMakeBufferResidentNV != 0 )	++localInitializedProcCount;
+		glMakeNamedBufferResidentNV = (PFNGLMAKENAMEDBUFFERRESIDENTNVPROC) getExtensionPtr( "glMakeNamedBufferResidentNV" );
+		if ( glMakeNamedBufferResidentNV != 0 )	++localInitializedProcCount;
 
-		glNamedMakeBufferNonResidentNV = (PFNGLNAMEDMAKEBUFFERNONRESIDENTNVPROC) getExtensionPtr( "glNamedMakeBufferNonResidentNV" );
-		if ( glNamedMakeBufferNonResidentNV != 0 )	++localInitializedProcCount;
+		glMakeNamedBufferNonResidentNV = (PFNGLMAKENAMEDBUFFERNONRESIDENTNVPROC) getExtensionPtr( "glMakeNamedBufferNonResidentNV" );
+		if ( glMakeNamedBufferNonResidentNV != 0 )	++localInitializedProcCount;
 
 		glIsNamedBufferResidentNV = (PFNGLISNAMEDBUFFERRESIDENTNVPROC) getExtensionPtr( "glIsNamedBufferResidentNV" );
 		if ( glIsNamedBufferResidentNV != 0 )	++localInitializedProcCount;
