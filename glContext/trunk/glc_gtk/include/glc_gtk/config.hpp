@@ -7,8 +7,8 @@
 #define _GLC_GTK_CONFIG_HPP
 
 /** 
- * @defgroup glc_gtk Open(GL) (C)context management for (gtk)
- * 
+ * @defgroup g_glc_gtk Open(GL) (C)context management for (gtk)
+ * @ingroup g_glc
  * This library provides the needed cross-platform API to add OpenGL capabilities to gtk.
  *
  * @sa http://www.gtk.org/

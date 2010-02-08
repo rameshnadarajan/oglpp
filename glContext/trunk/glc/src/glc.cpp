@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2008, Nicolas Papier.
+// GLC - Copyright (C) 2008, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -15,10 +15,141 @@
 void glc_drawable_destroy( glc_drawable_t * drawable )
 {
 	assert( drawable != 0 && "Calls glc_drawable_destroy() with an null drawable." );
+	assert( drawable->backend != 0 && "Calls glc_drawable_destroy() with an null backend." );
 	// @todo drawable_status()
 
 	drawable->backend->destroy( drawable );
 }
+
+
+
+glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscreen )
+{
+	// Find drawable window and top level window
+	HWND current	= context->drawable->window;
+	HWND topLevel	= GetAncestor( current, GA_ROOT );
+
+	// Find the device where the drawable is located (this is for multi-monitor setups)
+	HMONITOR hMonitor = MonitorFromWindow( topLevel, MONITOR_DEFAULTTOPRIMARY );
+	MONITORINFOEX monInfo;
+	memset(&monInfo, 0, sizeof(MONITORINFOEX));
+	monInfo.cbSize = sizeof(MONITORINFOEX);
+	GetMonitorInfo(hMonitor, &monInfo);
+
+	if ( wantFullscreen )
+	{
+		const int desiredWidth		= monInfo.rcMonitor.right - monInfo.rcMonitor.left;
+		const int desiredHeight		= monInfo.rcMonitor.bottom - monInfo.rcMonitor.top;
+		const int desiredBpp		= 32; // @todo not very robust
+
+		// Find the requested device mode
+		DEVMODE dmode;
+		memset(&dmode, 0, sizeof(DEVMODE));
+		dmode.dmSize = sizeof(DEVMODE);
+
+		bool foundMode = false;
+		for( int i=0 ; EnumDisplaySettings(monInfo.szDevice, i, &dmode) && !foundMode ; ++i)
+		{
+			foundMode =	(dmode.dmPelsWidth==(DWORD)desiredWidth) &&
+						(dmode.dmPelsHeight==(DWORD)desiredHeight) &&
+						(dmode.dmBitsPerPel==(DWORD) desiredBpp);
+		}
+		if (!foundMode) return 0;
+
+		dmode.dmFields = /*DM_BITSPERPEL |*/ DM_PELSWIDTH | DM_PELSHEIGHT;
+
+		// If we're switching from a windowed mode to this fullscreen
+		// mode, save some information about the window so that it can
+		// be restored when switching back to windowed mode
+		DWORD style=0, exstyle=0;
+		//RECT rect;
+		// Save the current window position/size
+		//GetWindowRect( topLevel, &rect);
+		//m_windowedX = rect.left;
+		//m_windowedY = rect.top;
+		//m_windowedWidth = rect.right - rect.left;
+		//m_windowedHeight = rect.bottom - rect.top;
+
+		// Save the window style and set it for fullscreen mode
+		//style = GetWindowLongPtr(topLevel, GWL_STYLE);
+		//exstyle = GetWindowLongPtr(topLevel, GWL_EXSTYLE);
+		//style |= WS_POPUP;// | WS_MAXIMIZE;
+		//style &= ~WS_SIZEBOX;
+		//style &= ~WS_BORDER | ~WS_CAPTION | ~WS_SYSMENU |  | ~WS_OVERLAPPEDWINDOW | ~WS_OVERLAPPED;
+		//SetWindowLongPtr(topLevel, GWL_STYLE, style | WS_CAPTION); //| WS_POPUP & (~WS_CAPTION) );
+		//SetWindowLongPtr(topLevel, GWL_STYLE, style & (~WS_BORDER | ~WS_CAPTION | ~WS_OVERLAPPEDWINDOW));
+		//SetWindowLongPtr(topLevel, GWL_EXSTYLE, exstyle | WS_EX_APPWINDOW | WS_EX_TOPMOST);
+		//BOOL success;
+		//success = SetWindowPos( topLevel, NULL, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER | SWP_FRAMECHANGED );
+
+		// Attempt to change the resolution
+		LONG retVal = ChangeDisplaySettingsEx(monInfo.szDevice, &dmode, NULL, CDS_FULLSCREEN, NULL);
+		//LONG ret = ChangeDisplaySettings(&dmode, CDS_FULLSCREEN);
+
+		const bool ok = (retVal == DISP_CHANGE_SUCCESSFUL);
+
+		context->drawable->isFullscreen = ok ? 1 : 0;
+
+		// If all was good resize & reposition the window
+		// to match the new resolution on the correct monitor
+		//if(ok)
+		//{
+			// We need to call GetMonitorInfo() again because
+			// details may have changed with the resolution
+			//GetMonitorInfo(hMonitor, &monInfo);
+
+			/*WINDOWPLACEMENT windowPlacement;
+			windowPlacement.length = sizeof(WINDOWPLACEMENT);
+			windowPlacement.rcNormalPosition = monInfo.rcMonitor;
+			SetWindowPlacement( topLevel, &windowPlacement );*/
+
+			// Set the window's size and position so that it covers the entire screen
+			//SetWindowPos(topLevel, 0, 0, 0,(int)desiredWidth, (int)desiredHeight, SWP_NOZORDER);
+			//SetWindowPos(	topLevel, NULL, monInfo.rcMonitor.left, monInfo.rcMonitor.top, (int)desiredWidth, (int)desiredHeight,
+			//				SWP_NOACTIVATE | SWP_NOCOPYBITS | SWP_NOOWNERZORDER | SWP_NOREPOSITION | SWP_NOZORDER);
+			//SetWindowPos(topLevel, 0, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOZORDER);
+		//}
+		// If the attempt failed and we weren't already
+		// in fullscreen mode, restore the window styles
+		//else if(!m_fullscreen)
+		//{
+			//SetWindowLongPtr(m_handle->hWnd, GWL_STYLE, style);
+			//SetWindowLongPtr(m_handle->hWnd, GWL_EXSTYLE, exstyle);
+		//}
+	}
+	else
+	{
+		// Restore the display resolution
+		LONG retVal = ChangeDisplaySettingsEx( monInfo.szDevice, NULL, NULL, 0, NULL );
+		//ChangeDisplaySettings(NULL, 0);
+
+		// Restore the window styles
+		//DWORD style = GetWindowLongPtr(topLevel, GWL_STYLE);
+		//DWORD exstyle = GetWindowLongPtr(topLevel, GWL_EXSTYLE);
+		//SetWindowLongPtr(topLevel, GWL_STYLE, style | WS_OVERLAPPEDWINDOW);
+		//SetWindowLongPtr(topLevel, GWL_EXSTYLE, exstyle & (~(WS_EX_APPWINDOW | WS_EX_TOPMOST)));
+
+		// Restore the window size/position
+		//SetPosition(m_windowedX, m_windowedY);
+		//SetSize(m_windowedWidth, m_windowedHeight);
+
+		const bool ok = (retVal == DISP_CHANGE_SUCCESSFUL);
+		context->drawable->isFullscreen = ok ? 0 : 1;
+	}
+
+	return context->drawable->isFullscreen;
+}
+
+
+
+glc_bool_t glc_drawable_is_fullscreen( glc_t * context )
+{
+	assert( context != 0 && "Calls glc_destroy() on a null glc context.");
+	// @todo glc_status()
+
+	return context->drawable->isFullscreen;
+}
+
 
 
 glc_t *glc_create( glc_drawable_t *drawable )
@@ -31,6 +162,7 @@ glc_t *glc_create( glc_drawable_t *drawable )
 	retVal->context		= 0;
 	retVal->drawable	= drawable;
 
+#ifdef WIN32
 	// Initializes the pixel format descriptor with the desired format.
 	PIXELFORMATDESCRIPTOR pfd;
 
@@ -47,11 +179,30 @@ glc_t *glc_create( glc_drawable_t *drawable )
 	pfd.iLayerType		= PFD_MAIN_PLANE;
 
 	// @todo Initializes WGL_ARB_pixel_format attributes with the desired format.
-	int attributes[64];
-	int *iAttributes;
-	//float fAttributes[1] = { 0 };
 
-	iAttributes = &attributes[0];
+#elif __MACOSX__
+#else // POSIX
+	int attributes[64];
+	int *iAttributes = &attributes[0];
+
+	iAttributes++ = GLX_RGBA;
+
+	assert( drawable->colorSize == 24 ); // ???
+	iAttributes++ = GLX_RED_SIZE;
+	iAttributes++ = 8;
+	iAttributes++ = GLX_GREEN_SIZE;
+	iAttributes++ = 8;
+	iAttributes++ = GLX_BLUE_SIZE;
+	iAttributes++ = 8;
+
+	iAttributes++ = GLX_DOUBLEBUFFER;
+
+	iAttributes++ = GLX_DEPTH_SIZE;
+	iAttributes++ = drawable->depthSize;
+
+	iAttributes++ = GLX_STENCIL_SIZE;
+	iAttributes++ = drawable->stencilSize;
+#endif
 
 	/**iAttributes++ = WGL_DRAW_TO_WINDOW_ARB;
 	*iAttributes++ = GL_TRUE;
@@ -121,8 +272,17 @@ glc_t *glc_create( glc_drawable_t *drawable )
 		*iAttributes++ = (this->gl_config.accelerated ? WGL_GENERIC_ACCELERATION_ARB : WGL_NO_ACCELERATION_ARB);
 	}*/
 
-	*iAttributes = 0;
+	//*iAttributes = 0;
 
+// int ChoosePixelFormat( HDC hdc,const PIXELFORMATDESCRIPTOR *ppfd );
+// XVisualInfo* glXChooseVisual( Display * dpy, int screen, int * attribList ); => XFree( to delete XVisualInfo* )
+///     Display* display = (Display*) wxGetDisplay();
+//	GDK_DISPLAY();
+
+// GLXContext glXCreateContext( Display * dpy, XVisualInfo * vis, GLXContext shareList, Bool direct);
+// HGLRC wglCreateContext( HDC hdc );
+
+#ifdef WIN32
 	// Chooses and sets the closest available pixel format.
 	int		iPixelFormat;
 	BOOL	bResult;
@@ -151,7 +311,39 @@ glc_t *glc_create( glc_drawable_t *drawable )
 	{
 		retVal->context = context;
 	}
+#else
+	// Checks for supports the GLX extension
+	if ( !glXQueryExtension( drawable->display, 0, 0 ) )
+	{
+		// no glx extension
+		fprintf( stderr, "In glc_create, GLX extension is missing.\n" );
+		return retVal;
+	}
 
+	// Chooses and sets the closest available visual.
+	XVisualInfo * visual = glXChooseVisual( drawable->display, drawable->screen, &attributes[0] );
+
+	if ( !visual )
+	{
+		fprintf( stderr, "In glc_create, Unable to choose a visual.\n" );
+		return retVal;
+	}
+	else
+	{
+		retVal->visual = visual;
+	}
+
+	// Creates the OpenGL rendering context.
+	GLC_GLRC_HANDLE context = glxCreateContext( drawable->display, visual, None, GL_TRUE );
+	if ( context == NULL )
+	{
+		fprintf( stderr, "In glc_create(), wglCreateContext() fails." );
+	}
+	else
+	{
+		retVal->context = context;
+	}
+#endif
 	return retVal;
 }
 
@@ -163,15 +355,22 @@ void glc_destroy( glc_t * context )
 
 	if ( context->context != 0 )
 	{
+#ifdef _WIN32
 		// Deletes the OpenGL rendering context.
 		wglDeleteContext( context->context );
 		context->context = 0;
+#else
+		// Deletes the OpenGL rendering context.
+		glXDestroyContext( context->drawable->display, context->context );
+		context->context = 0;
+#endif
 	}
 
 	if ( context->drawable != 0 )
 	{
 		// Deletes the associated drawable.
-		glc_drawable_destroy( context->drawable );
+		context->drawable->backend->destroy( context->drawable );
+		//glc_drawable_destroy( context->drawable );
 		context->drawable = 0;
 	}
 
@@ -212,10 +411,18 @@ glc_bool_t glc_set_current( glc_t * context )
 
 	assert( context->drawable != 0 && "Calls glc_set_current() with a context associated with a null drawable." );
 	// @todo drawable_status()
-
+#ifdef GLC_USE_WGL
 	BOOL success = wglMakeCurrent( context->drawable->dc, context->context );
 
 	return success == TRUE ? 1 : 0;
+#elif GLC_USE_GLX
+	Bool success = glXMakeCurrent(
+		context->drawable->display,
+		context->drawable-> window or drawable,
+		context->context );
+
+	return success == True ? 1 : 0;
+#endif
 }
 
 
@@ -227,9 +434,18 @@ glc_bool_t glc_unset_current( glc_t * context )
 	assert( context->drawable != 0 && "Calls glc_unset_current() with a context associated with a null drawable." );
 	// @todo drawable_status()
 
-	BOOL success = wglMakeCurrent( context->drawable->dc, NULL );
+#ifdef GLC_USE_WGL
+	BOOL success = wglMakeCurrent( 0/*context->drawable->dc*/, NULL );
 
 	return success == TRUE ? 1 : 0;
+#elif GLC_USE_GLX
+	Bool success = glXMakeCurrent(
+		context->drawable->display,
+		None,
+		NULL );
+
+	return success == True ? 1 : 0;
+#endif
 }
 
 
@@ -241,14 +457,17 @@ glc_bool_t glc_is_current( glc_t * context )
 	assert( context->drawable != 0 && "Calls glc_is_current() with a context associated with a null drawable." );
 	// @todo drawable_status()
 
+#ifdef GLC_USE_WGL
 	GLC_GLRC_HANDLE glrc = wglGetCurrentContext();
 
-	assert(	( glrc == 0 )					||					// no current context		=> is not current 
+	/*assert(	( glrc == 0 )					||					// no current context		=> is not current 
 			( glrc != context->context )	||					// another context is current	=> is not current
 			(	(glrc == context->context) &&					// is current
 				(wglGetCurrentDC() == context->drawable->dc) )	// and for the good drawable/dc
-			&& "The context is current, but not for its associated drawable/graphical context !" );
-
+			&& "The context is current, but not for its associated drawable/graphical context !" );*/
+#elif GLC_USE_GLX
+// @todo FIXME
+#endif
 	return glrc == context->context ? 1 : 0;
 }
 

@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2008, Nicolas Papier.
+// GLC - Copyright (C) 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -7,8 +7,25 @@
 #define _GLC_GLC_HPP
 
 #include "glc/config.hpp"
+// #include "glc/type.hpp" ???
 
-// @todo Hides private stuffs and platform dependant definitions/declarations
+/** 
+ * @defgroup g_glc glc - Open(GL) (C)context management
+ * 
+ * This library provides the needed cross-platform API to add OpenGL capabilities to any user interface toolkits (gtk/gtkmm, wxWidgets, qt and so on).
+ *
+ * \b glc is open source (LGPL).
+ */
+
+/**
+ * @todo POSIX support
+ * @todo MacOSX support
+ * @todo Hides private stuffs and platform dependant definitions/declarations
+ * @todo wxWidgets bindings :
+pWindow is a wxWindow*
+HWND hwnd = (HWND) pWindow->GetHWND();
+HDC hDC = GetDC( hwnd );
+*/
 
 // Several platform dependant definitions
 // Definition of an handle to a window
@@ -16,6 +33,7 @@
 // Definition of an handle to an OpenGL rendering context
 
 #ifdef WIN32
+	#define GLC_USE_WGL
 
 	#if defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__)
 	#define WIN32_LEAN_AND_MEAN 1
@@ -27,22 +45,34 @@
 
 	typedef HGLRC	GLC_GLRC_HANDLE;
 
-/* @todo wxWidgets bindings :
-pWindow is a wxWindow*
-HWND hwnd = (HWND) pWindow->GetHWND();
-HDC hDC = GetDC( hwnd );
-*/
 #elif __MACOSX__
-	// @todo MacOSX support
+
 	#error "MacOSX not yet supported."
 
+//	typedef ?	GLC_WINDOW_HANDLE;
+//	typedef ?	GLC_DC_HANDLE;
+
 	typedef GLXContext GLC_GLRC_HANDLE;
+
 #else // POSIX
-	// @todo POSIX support
-	#error "Posix platform not yet supported."
+///
+	#define GLC_USE_GLX
+//	typedef HWND		GLC_WINDOW_HANDLE;
+//	typedef HDC			GLC_DC_HANDLE;
+
+//glXSwapBuffers(	Display * dpy,  GLXDrawable drawable);
+	typedef GLXContext	GLC_GLRC_HANDLE;
+
 #endif
 
 
+
+/**
+ * @defgroup g_glc_type Basic type definitions
+ *
+ * @ingroup g_glc
+ */
+//@{
 
 /**
  * @brief glc_bool_t is used for boolean values.
@@ -51,9 +81,10 @@ HDC hDC = GetDC( hwnd );
  */
 typedef int glc_bool_t;
 
-
+// Internal declaration
 struct _glc_drawable_t;
 
+// Internal declaration
 typedef struct _drawable_backend_t 
 {
 	void (*destroy)( _glc_drawable_t * drawable ); ///< See glc_*_drawable_destroy()
@@ -62,9 +93,10 @@ typedef struct _drawable_backend_t
 /**
  * @brief A glc_drawable_t contains informations about an object that can be drawn onto (a window or an offscreen buffer).
  *
- * @todo offscreen rendering.
+ * @todo offscreen rendering
  */
-typedef struct _glc_drawable_t {
+typedef struct _glc_drawable_t
+{
 	GLC_WINDOW_HANDLE	window;
 	GLC_DC_HANDLE		dc;
 
@@ -74,21 +106,15 @@ typedef struct _glc_drawable_t {
 	int colorSize;
 	int depthSize;
 	int stencilSize;
+
+	//
+	int isFullscreen;
 } glc_drawable_t;
 
 
-/**
- * @brief Deletes the given drawable.
- *
- * @param drawable	the drawable that must be deleted.
- *
- * The given drawable is deleted and all associated resources are freed.
- */
-GLC_API void glc_drawable_destroy( glc_drawable_t * drawable );
-
 
 /**
- * @brief A glc context, as glc_t objects are named, are central to glc library.
+ * @brief A glc context, as glc_t objects are named, are central to this library.
  *
  * A glc_t contains informations about an OpenGL context and its associated drawable.
  */
@@ -113,13 +139,47 @@ typedef enum _glc_status_t
 	GLC_STATUS_NO_OPENGL_CONTEXT
 } glc_status_t;
 
+/**
+ * @brief Deletes the given drawable.
+ *
+ * @param drawable	the drawable that must be deleted.
+ *
+ * The given drawable is deleted and all associated resources are freed.
+ *
+ * @remark This is a private helper function.
+ */
+GLC_API void glc_drawable_destroy( glc_drawable_t * drawable );
+//@}
+
+
 
 /**
- * @name Core glc api
+ * @defgroup g_glc_core Core glc API
+ *
+ * @ingroup g_glc
  */
 //@{
 
 //extern "C" {
+
+
+
+/**
+ * @brief Enables/disables fullscreen mode.
+ *
+ * @param wantFullscreen	true to enable fullscreen mode, false to disable fullscreen mode.
+ */
+GLC_API glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscreen );
+
+/**
+ * @brief Returns the fullscreen state.
+ *
+ * @return true if in fullscreen mode, false otherwise.
+ */
+GLC_API glc_bool_t glc_drawable_is_fullscreen( glc_t * context );
+
+
+
 
 /**
  * @brief Creates a new glc context for the given drawable.
@@ -155,6 +215,8 @@ GLC_API glc_status_t glc_status( glc_t * context );
 // @todo GLC_API glc_bool_t	glc_share	( glc_t *context1, glc_t *context2 );
 // @todo FontBitmaps, FontOutlines
 
+
+
 /**
  * @brief Sets the given glc context current for the calling thread.
  *
@@ -184,6 +246,8 @@ GLC_API glc_bool_t	glc_unset_current( glc_t * context );
  * @return A non-zero value if the glc context is current, or zero if the glc context is not current.
  */
 GLC_API glc_bool_t	glc_is_current( glc_t * context );
+
+
 
 /**
  * @brief Exchanges the front and back buffers.

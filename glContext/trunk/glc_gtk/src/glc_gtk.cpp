@@ -36,6 +36,9 @@ glc_drawable_t * glc_gtk_drawable_create( GtkDrawingArea * drawingArea )
 	gtk_widget_set_double_buffered( GTK_WIDGET(drawingArea), FALSE );
 
 	// Initializes the drawable
+#ifdef WIN32
+// @todo FIXME
+#endif
 	drawable->window	= (GLC_WINDOW_HANDLE) GDK_WINDOW_HWND( gdkWindow );
 	drawable->dc		= GetDC( drawable->window );
 
@@ -45,6 +48,8 @@ glc_drawable_t * glc_gtk_drawable_create( GtkDrawingArea * drawingArea )
 	drawable->colorSize		= 24;
 	drawable->depthSize		= 32;
 	drawable->stencilSize	= 8;
+
+	drawable->isFullscreen = 0;
 
 	// @todo glc_gtk_drawable_status()
 	assert( drawable->window != 0 );
@@ -65,6 +70,9 @@ void glc_gtk_drawable_destroy( glc_drawable_t * drawable )
 		if (	(drawable->window != 0)	&&
 				(drawable->dc != 0)	)
 		{
+#ifdef WIN32
+// @todo FIXME
+#endif
 			int retVal = ReleaseDC( drawable->window, drawable->dc );
 			assert( retVal == 1 && "The device context was not released." );
 			drawable->window	= 0;

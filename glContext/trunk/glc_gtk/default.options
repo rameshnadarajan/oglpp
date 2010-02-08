@@ -1,3 +1,4 @@
+description	= 'Open(GL) (C)context management for (gtk)'
 vcsUse		= 'no'
 type		= 'shared'
 version		= '0-0'

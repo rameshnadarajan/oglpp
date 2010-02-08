@@ -1,18 +1,10 @@
-// GLE - Copyright (C) 2008, Nicolas Papier.
+// GLC - Copyright (C) 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
 #ifndef _GLC_CONFIG_HPP
 #define _GLC_CONFIG_HPP
-
-/** 
- * @defgroup glc Open(GL) (C)context management
- * 
- * This library provides the needed cross-platform API to add OpenGL capabilities to any user interface toolkits (gtk/gtkmm, wxWidgets, qt and so on).
- *
- * \b glc is open source (LGPL).
- */
 
 #ifdef WIN32
 
