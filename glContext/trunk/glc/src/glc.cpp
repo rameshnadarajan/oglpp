@@ -10,6 +10,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifdef _WIN32
+	#include <dwmapi.h>
+#endif
 
 
 void glc_drawable_destroy( glc_drawable_t * drawable )
@@ -25,6 +28,7 @@ void glc_drawable_destroy( glc_drawable_t * drawable )
 
 glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscreen )
 {
+#ifdef _WIN32
 	// Find drawable window and top level window
 	HWND current	= context->drawable->window;
 	HWND topLevel	= GetAncestor( current, GA_ROOT );
@@ -36,32 +40,70 @@ glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscre
 	monInfo.cbSize = sizeof(MONITORINFOEX);
 	GetMonitorInfo(hMonitor, &monInfo);
 
+	// Desktop Window Manager
+	HMODULE dwmLibrary = ::LoadLibrary("dwmapi.dll");
+	if ( dwmLibrary )
+	{
+		typedef HRESULT (WINAPI*DwmEnableCompositionProcType)(UINT);
+		DwmEnableCompositionProcType DwmIsCompositionEnabledPtr = 
+			(DwmEnableCompositionProcType)::GetProcAddress( dwmLibrary, "DwmEnableComposition");
+
+		if ( DwmIsCompositionEnabledPtr )
+		{
+			HRESULT retVal = DwmIsCompositionEnabledPtr( wantFullscreen != 0 ? DWM_EC_DISABLECOMPOSITION : DWM_EC_ENABLECOMPOSITION );
+			// if ( retVal == S_OK )
+		}
+		else
+		{
+			assert( false && "Found dwmapi.dll, but not DwmEnableComposition() !" );
+		}
+		::FreeLibrary(dwmLibrary);
+	}
+	// else no dwm (XP and earlier version of windows).
+
 	if ( wantFullscreen )
 	{
-		const int desiredWidth		= monInfo.rcMonitor.right - monInfo.rcMonitor.left;
-		const int desiredHeight		= monInfo.rcMonitor.bottom - monInfo.rcMonitor.top;
-		const int desiredBpp		= 32; // @todo not very robust
-
-		// Find the requested device mode
+		// Find the current device mode
 		DEVMODE dmode;
 		memset(&dmode, 0, sizeof(DEVMODE));
 		dmode.dmSize = sizeof(DEVMODE);
 
-		bool foundMode = false;
-		for( int i=0 ; EnumDisplaySettings(monInfo.szDevice, i, &dmode) && !foundMode ; ++i)
-		{
-			foundMode =	(dmode.dmPelsWidth==(DWORD)desiredWidth) &&
-						(dmode.dmPelsHeight==(DWORD)desiredHeight) &&
-						(dmode.dmBitsPerPel==(DWORD) desiredBpp);
-		}
-		if (!foundMode) return 0;
+		const BOOL retValEDS = EnumDisplaySettings(monInfo.szDevice, ENUM_CURRENT_SETTINGS, &dmode);
+		if ( retValEDS == false )	return 0;
+		assert( retValEDS == TRUE );
 
-		dmode.dmFields = /*DM_BITSPERPEL |*/ DM_PELSWIDTH | DM_PELSHEIGHT;
+		// @todo adds a new parameter to this function to request a mode (or adds a new function).
+		// Request the current mode
+		const int desiredWidth		= dmode.dmPelsWidth;
+		const int desiredHeight		= dmode.dmPelsHeight;
+		const int desiredBpp		= dmode.dmBitsPerPel;
+		const int desiredFrequency	= dmode.dmDisplayFrequency;
+/*		// Find the requested device mode
+		bool foundMode = false;
+		for( int i=0 ; !foundMode ; ++i)
+		{
+			const BOOL retValEDS = EnumDisplaySettings(monInfo.szDevice, i, &dmode);
+			if ( retValEDS == 0 )
+			{
+				// all of a display device's graphics modes enumerate
+				break;
+			}
+			else
+			{
+				foundMode =	(dmode.dmPelsWidth==(DWORD)desiredWidth) &&
+							(dmode.dmPelsHeight==(DWORD)desiredHeight) &&
+							(dmode.dmBitsPerPel==(DWORD) desiredBpp) &&
+							(dmode.dmDisplayFrequency==(DWORD)desiredFrequency);
+			}
+		}
+		if ( !foundMode ) return 0;*/
+
+		dmode.dmFields = DM_BITSPERPEL | DM_PELSWIDTH | DM_PELSHEIGHT;
 
 		// If we're switching from a windowed mode to this fullscreen
 		// mode, save some information about the window so that it can
 		// be restored when switching back to windowed mode
-		DWORD style=0, exstyle=0;
+		//DWORD style=0, exstyle=0;
 		//RECT rect;
 		// Save the current window position/size
 		//GetWindowRect( topLevel, &rect);
@@ -138,6 +180,9 @@ glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscre
 	}
 
 	return context->drawable->isFullscreen;
+#elif __MACOSX__
+#else // POSIX
+#endif
 }
 
 
