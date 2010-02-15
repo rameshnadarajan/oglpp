@@ -74,7 +74,7 @@ void glc_gtk_drawable_destroy( glc_drawable_t * drawable )
 // @todo FIXME
 #endif
 			int retVal = ReleaseDC( drawable->window, drawable->dc );
-			assert( retVal == 1 && "The device context was not released." );
+			// assert( retVal == 1 && "The device context was not released." );
 			drawable->window	= 0;
 			drawable->dc		= 0;
 		}
