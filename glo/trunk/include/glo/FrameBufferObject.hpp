@@ -128,12 +128,18 @@ struct FrameBufferObject : public Object
 	//@{
 
 	// texture->isEmpty() == false
+	// isBound()
 	GLO_API void attachColor( glo::Texture2D * texture );
+	// isBound()	
+	GLO_API void detachColor();
 
 	// texture->isEmpty() == false
+	// isBound()
 	GLO_API void attachDepth( glo::Texture2D * texture );
+	// isBound()
+	GLO_API void detachDepth();
 
-	// @todo attatchStencil()
+	// @todo attachStencil()
 
 	//@}
 

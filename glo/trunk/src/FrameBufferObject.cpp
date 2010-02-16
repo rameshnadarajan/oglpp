@@ -6,6 +6,7 @@
 #include "glo/FrameBufferObject.hpp"
 
 #include "glo/Texture2D.hpp"
+#include <iostream>
 
 
 
@@ -21,7 +22,14 @@ FrameBufferObject::FrameBufferObject()
 
 FrameBufferObject::~FrameBufferObject()
 {
-	release();
+	if ( gleGetCurrent() )
+	{
+		release();
+	}
+	else
+	{
+		std::cerr << "Unable to release frame buffer object " << m_object << "." << std::endl;
+	}
 }
 
 
@@ -41,6 +49,11 @@ void FrameBufferObject::release()
 {
 	if ( !isEmpty() )
 	{
+		bind();
+
+		detachColor();
+		detachDepth();
+
 		glDeleteFramebuffers(1, &m_object);
 		
 		m_object = 0;
@@ -55,7 +68,7 @@ void FrameBufferObject::bind() const
 {
 	assert( !isEmpty() );
 	
-	glBindFramebuffer(GL_FRAMEBUFFER, m_object);
+	glBindFramebuffer( GL_FRAMEBUFFER, m_object );
 }
 
 
@@ -134,6 +147,7 @@ const GLenum FrameBufferObject::getStatus() const
 void FrameBufferObject::attachColor( glo::Texture2D * texture )
 {
 	assert( !texture->isEmpty() && "Texture object is not initialized." );
+	assert( isBound() && "Must call FBO:bind() before attachColor()" );
 
 	// Attach color texture to the frame buffer object
 	glFramebufferTexture2D( GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0,
@@ -142,13 +156,33 @@ void FrameBufferObject::attachColor( glo::Texture2D * texture )
 
 
 
+void FrameBufferObject::detachColor()
+{
+	assert( isBound() && "Must call FBO:bind() before detachColor()" );
+
+	// Detach the color texture from the frame buffer object
+	glFramebufferTexture2D( GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, 0, 0 );
+}
+
+
+
 void FrameBufferObject::attachDepth( glo::Texture2D * texture )
 {
 	assert( !texture->isEmpty() && "Texture object is not initialized." );
-
+	assert( isBound() && "Must call FBO:bind() before attachDepth()" );
 	// Attach depth texture to the frame buffer object
 	glFramebufferTexture2D( GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT,
 		GL_TEXTURE_2D, texture->getName(), 0 );
+}
+
+
+
+void FrameBufferObject::detachDepth()
+{
+	assert( isBound() && "Must call FBO:bind() before detachDepth()" );
+
+	// Detach the depth texture from the frame buffer object
+	glFramebufferTexture2D( GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, 0, 0 );
 }
 
 
@@ -172,3 +206,24 @@ void FrameBufferObject::renderDepthOnly( const bool depthOnly )
 
 
 } // namespace glo
+
+/*void deleteFrameBufferObject()
+{
+  if(!frameBufferObject)
+    return;
+
+  //Activate the frame buffer objcet
+  glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, frameBufferObject);
+  //Detach our depth texture from the frame buffer object
+  glFramebufferTexture2DEXT(GL_FRAMEBUFFER_EXT,
+                            GL_DEPTH_ATTACHMENT_EXT,
+                            GL_TEXTURE_2D, 
+                            0,
+                            0);
+  //DeActivate the frame buffer objcet
+  glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
+  //Delete the frame buffer object
+  glDeleteFramebuffersEXT(1, &frameBufferObject);
+  frameBufferObject = 0;
+
+}*/
