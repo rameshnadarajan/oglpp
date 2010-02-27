@@ -1,4 +1,4 @@
-// This file was generated at Mon Feb  8 12:38:41 2010 with gle, please do not modify.
+// This file was generated at Sat Feb 27 15:51:21 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,10 +17,10 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Mon Feb  8 12:38:41 2010 with gle, please do not modify.
+ * - Stamp = // This file was generated at Sat Feb 27 15:51:21 2010 with gle, please do not modify.
  * - Number of tokens					= 0
- * - Number of functions				= 1717
- * - Number of extensions found(in headers)	= 408
+ * - Number of functions				= 1813
+ * - Number of extensions found(in headers)	= 455
  * - Number of extensions in OpenGL registry	= 429
  */
 
@@ -64,6 +64,66 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 	//@}
 
+
+	/** 
+	 * @brief Initialize the GLX_3DFX extension group.
+	 */
+	void initializeGLX_3DFX();
+
+	/** 
+	 * @brief Initialize the GLX_ARB extension group.
+	 */
+	void initializeGLX_ARB();
+
+	/** 
+	 * @brief Initialize the GLX_EXT extension group.
+	 */
+	void initializeGLX_EXT();
+
+	/** 
+	 * @brief Initialize the GLX_INTEL extension group.
+	 */
+	void initializeGLX_INTEL();
+
+	/** 
+	 * @brief Initialize the GLX_MESA extension group.
+	 */
+	void initializeGLX_MESA();
+
+	/** 
+	 * @brief Initialize the GLX_NV extension group.
+	 */
+	void initializeGLX_NV();
+
+	/** 
+	 * @brief Initialize the GLX_OML extension group.
+	 */
+	void initializeGLX_OML();
+
+	/** 
+	 * @brief Initialize the GLX_SGI extension group.
+	 */
+	void initializeGLX_SGI();
+
+	/** 
+	 * @brief Initialize the GLX_SGIS extension group.
+	 */
+	void initializeGLX_SGIS();
+
+	/** 
+	 * @brief Initialize the GLX_SGIX extension group.
+	 */
+	void initializeGLX_SGIX();
+
+	/** 
+	 * @brief Initialize the GLX_SUN extension group.
+	 */
+	void initializeGLX_SUN();
+
+	/** 
+	 * @brief Initialize the GLX_VERSION extension group.
+	 */
+	void initializeGLX_VERSION();
 
 	/** 
 	 * @brief Initialize the GL_3DFX extension group.
@@ -251,6 +311,1238 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	void initializeWGL_OML();
 
 
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_3DFX_multisample is supported, false otherwise.
+	 */
+	bool isGLX_3DFX_multisample;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_ARB_create_context is supported, false otherwise.
+	 */
+	bool isGLX_ARB_create_context;
+
+	/**
+	* @brief GLXContext glXCreateContextAttribsARB( Display *dpy, GLXFBConfig config, GLXContext share_context, Bool direct, const int *attrib_list );
+	*/
+	PFNGLXCREATECONTEXTATTRIBSARBPROC                             glXCreateContextAttribsARB;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_ARB_create_context_profile is supported, false otherwise.
+	 */
+	bool isGLX_ARB_create_context_profile;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_ARB_fbconfig_float is supported, false otherwise.
+	 */
+	bool isGLX_ARB_fbconfig_float;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_ARB_get_proc_address is supported, false otherwise.
+	 */
+	bool isGLX_ARB_get_proc_address;
+
+	/**
+	* @brief __GLXextFuncPtr glXGetProcAddressARB( const GLubyte *procName );
+	*/
+	PFNGLXGETPROCADDRESSARBPROC                                   glXGetProcAddressARB;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_ARB_multisample is supported, false otherwise.
+	 */
+	bool isGLX_ARB_multisample;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_EXT_fbconfig_packed_float is supported, false otherwise.
+	 */
+	bool isGLX_EXT_fbconfig_packed_float;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_EXT_framebuffer_sRGB is supported, false otherwise.
+	 */
+	bool isGLX_EXT_framebuffer_sRGB;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_EXT_import_context is supported, false otherwise.
+	 */
+	bool isGLX_EXT_import_context;
+
+	/**
+	* @brief Display * glXGetCurrentDisplayEXT( void );
+	*/
+	PFNGLXGETCURRENTDISPLAYEXTPROC                                glXGetCurrentDisplayEXT;
+
+	/**
+	* @brief int glXQueryContextInfoEXT( Display *dpy, GLXContext context, int attribute, int *value );
+	*/
+	PFNGLXQUERYCONTEXTINFOEXTPROC                                 glXQueryContextInfoEXT;
+
+	/**
+	* @brief GLXContextID glXGetContextIDEXT( const GLXContext context );
+	*/
+	PFNGLXGETCONTEXTIDEXTPROC                                     glXGetContextIDEXT;
+
+	/**
+	* @brief GLXContext glXImportContextEXT( Display *dpy, GLXContextID contextID );
+	*/
+	PFNGLXIMPORTCONTEXTEXTPROC                                    glXImportContextEXT;
+
+	/**
+	* @brief void glXFreeContextEXT( Display *dpy, GLXContext context );
+	*/
+	PFNGLXFREECONTEXTEXTPROC                                      glXFreeContextEXT;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_EXT_swap_control is supported, false otherwise.
+	 */
+	bool isGLX_EXT_swap_control;
+
+	/**
+	* @brief int glXSwapIntervalEXT( Display *dpy, GLXDrawable drawable, int interval );
+	*/
+	PFNGLXSWAPINTERVALEXTPROC                                     glXSwapIntervalEXT;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_EXT_texture_from_pixmap is supported, false otherwise.
+	 */
+	bool isGLX_EXT_texture_from_pixmap;
+
+	/**
+	* @brief void glXBindTexImageEXT( Display *dpy, GLXDrawable drawable, int buffer, const int *attrib_list );
+	*/
+	PFNGLXBINDTEXIMAGEEXTPROC                                     glXBindTexImageEXT;
+
+	/**
+	* @brief void glXReleaseTexImageEXT( Display *dpy, GLXDrawable drawable, int buffer );
+	*/
+	PFNGLXRELEASETEXIMAGEEXTPROC                                  glXReleaseTexImageEXT;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_EXT_visual_info is supported, false otherwise.
+	 */
+	bool isGLX_EXT_visual_info;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_EXT_visual_rating is supported, false otherwise.
+	 */
+	bool isGLX_EXT_visual_rating;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_INTEL_swap_event is supported, false otherwise.
+	 */
+	bool isGLX_INTEL_swap_event;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_MESA_agp_offset is supported, false otherwise.
+	 */
+	bool isGLX_MESA_agp_offset;
+
+	/**
+	* @brief unsigned int glXGetAGPOffsetMESA( const void *pointer );
+	*/
+	PFNGLXGETAGPOFFSETMESAPROC                                    glXGetAGPOffsetMESA;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_MESA_copy_sub_buffer is supported, false otherwise.
+	 */
+	bool isGLX_MESA_copy_sub_buffer;
+
+	/**
+	* @brief void glXCopySubBufferMESA( Display *dpy, GLXDrawable drawable, int x, int y, int width, int height );
+	*/
+	PFNGLXCOPYSUBBUFFERMESAPROC                                   glXCopySubBufferMESA;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_MESA_pixmap_colormap is supported, false otherwise.
+	 */
+	bool isGLX_MESA_pixmap_colormap;
+
+	/**
+	* @brief GLXPixmap glXCreateGLXPixmapMESA( Display *dpy, XVisualInfo *visual, Pixmap pixmap, Colormap cmap );
+	*/
+	PFNGLXCREATEGLXPIXMAPMESAPROC                                 glXCreateGLXPixmapMESA;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_MESA_release_buffers is supported, false otherwise.
+	 */
+	bool isGLX_MESA_release_buffers;
+
+	/**
+	* @brief Bool glXReleaseBuffersMESA( Display *dpy, GLXDrawable drawable );
+	*/
+	PFNGLXRELEASEBUFFERSMESAPROC                                  glXReleaseBuffersMESA;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_MESA_set_3dfx_mode is supported, false otherwise.
+	 */
+	bool isGLX_MESA_set_3dfx_mode;
+
+	/**
+	* @brief Bool glXSet3DfxModeMESA( int mode );
+	*/
+	PFNGLXSET3DFXMODEMESAPROC                                     glXSet3DfxModeMESA;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_NV_copy_image is supported, false otherwise.
+	 */
+	bool isGLX_NV_copy_image;
+
+	/**
+	* @brief void glXCopyImageSubDataNV( Display *dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth );
+	*/
+	PFNGLXCOPYIMAGESUBDATANVPROC                                  glXCopyImageSubDataNV;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_NV_float_buffer is supported, false otherwise.
+	 */
+	bool isGLX_NV_float_buffer;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_NV_present_video is supported, false otherwise.
+	 */
+	bool isGLX_NV_present_video;
+
+	/**
+	* @brief unsigned int * glXEnumerateVideoDevicesNV( Display *dpy, int screen, int *nelements );
+	*/
+	PFNGLXENUMERATEVIDEODEVICESNVPROC                             glXEnumerateVideoDevicesNV;
+
+	/**
+	* @brief int glXBindVideoDeviceNV( Display *dpy, unsigned int video_slot, unsigned int video_device, const int *attrib_list );
+	*/
+	PFNGLXBINDVIDEODEVICENVPROC                                   glXBindVideoDeviceNV;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_NV_swap_group is supported, false otherwise.
+	 */
+	bool isGLX_NV_swap_group;
+
+	/**
+	* @brief Bool glXJoinSwapGroupNV( Display *dpy, GLXDrawable drawable, GLuint group );
+	*/
+	PFNGLXJOINSWAPGROUPNVPROC                                     glXJoinSwapGroupNV;
+
+	/**
+	* @brief Bool glXBindSwapBarrierNV( Display *dpy, GLuint group, GLuint barrier );
+	*/
+	PFNGLXBINDSWAPBARRIERNVPROC                                   glXBindSwapBarrierNV;
+
+	/**
+	* @brief Bool glXQuerySwapGroupNV( Display *dpy, GLXDrawable drawable, GLuint *group, GLuint *barrier );
+	*/
+	PFNGLXQUERYSWAPGROUPNVPROC                                    glXQuerySwapGroupNV;
+
+	/**
+	* @brief Bool glXQueryMaxSwapGroupsNV( Display *dpy, int screen, GLuint *maxGroups, GLuint *maxBarriers );
+	*/
+	PFNGLXQUERYMAXSWAPGROUPSNVPROC                                glXQueryMaxSwapGroupsNV;
+
+	/**
+	* @brief Bool glXQueryFrameCountNV( Display *dpy, int screen, GLuint *count );
+	*/
+	PFNGLXQUERYFRAMECOUNTNVPROC                                   glXQueryFrameCountNV;
+
+	/**
+	* @brief Bool glXResetFrameCountNV( Display *dpy, int screen );
+	*/
+	PFNGLXRESETFRAMECOUNTNVPROC                                   glXResetFrameCountNV;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_NV_video_capture is supported, false otherwise.
+	 */
+	bool isGLX_NV_video_capture;
+
+	/**
+	* @brief int glXBindVideoCaptureDeviceNV( Display *dpy, unsigned int video_capture_slot, GLXVideoCaptureDeviceNV device );
+	*/
+	PFNGLXBINDVIDEOCAPTUREDEVICENVPROC                            glXBindVideoCaptureDeviceNV;
+
+	/**
+	* @brief GLXVideoCaptureDeviceNV * glXEnumerateVideoCaptureDevicesNV( Display *dpy, int screen, int *nelements );
+	*/
+	PFNGLXENUMERATEVIDEOCAPTUREDEVICESNVPROC                      glXEnumerateVideoCaptureDevicesNV;
+
+	/**
+	* @brief void glXLockVideoCaptureDeviceNV( Display *dpy, GLXVideoCaptureDeviceNV device );
+	*/
+	PFNGLXLOCKVIDEOCAPTUREDEVICENVPROC                            glXLockVideoCaptureDeviceNV;
+
+	/**
+	* @brief int glXQueryVideoCaptureDeviceNV( Display *dpy, GLXVideoCaptureDeviceNV device, int attribute, int *value );
+	*/
+	PFNGLXQUERYVIDEOCAPTUREDEVICENVPROC                           glXQueryVideoCaptureDeviceNV;
+
+	/**
+	* @brief void glXReleaseVideoCaptureDeviceNV( Display *dpy, GLXVideoCaptureDeviceNV device );
+	*/
+	PFNGLXRELEASEVIDEOCAPTUREDEVICENVPROC                         glXReleaseVideoCaptureDeviceNV;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_NV_video_out is supported, false otherwise.
+	 */
+	bool isGLX_NV_video_out;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_NV_video_output is supported, false otherwise.
+	 */
+	bool isGLX_NV_video_output;
+
+	/**
+	* @brief int glXGetVideoDeviceNV( Display *dpy, int screen, int numVideoDevices, GLXVideoDeviceNV *pVideoDevice );
+	*/
+	PFNGLXGETVIDEODEVICENVPROC                                    glXGetVideoDeviceNV;
+
+	/**
+	* @brief int glXReleaseVideoDeviceNV( Display *dpy, int screen, GLXVideoDeviceNV VideoDevice );
+	*/
+	PFNGLXRELEASEVIDEODEVICENVPROC                                glXReleaseVideoDeviceNV;
+
+	/**
+	* @brief int glXBindVideoImageNV( Display *dpy, GLXVideoDeviceNV VideoDevice, GLXPbuffer pbuf, int iVideoBuffer );
+	*/
+	PFNGLXBINDVIDEOIMAGENVPROC                                    glXBindVideoImageNV;
+
+	/**
+	* @brief int glXReleaseVideoImageNV( Display *dpy, GLXPbuffer pbuf );
+	*/
+	PFNGLXRELEASEVIDEOIMAGENVPROC                                 glXReleaseVideoImageNV;
+
+	/**
+	* @brief int glXSendPbufferToVideoNV( Display *dpy, GLXPbuffer pbuf, int iBufferType, unsigned long *pulCounterPbuffer, GLboolean bBlock );
+	*/
+	PFNGLXSENDPBUFFERTOVIDEONVPROC                                glXSendPbufferToVideoNV;
+
+	/**
+	* @brief int glXGetVideoInfoNV( Display *dpy, int screen, GLXVideoDeviceNV VideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo );
+	*/
+	PFNGLXGETVIDEOINFONVPROC                                      glXGetVideoInfoNV;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_OML_swap_method is supported, false otherwise.
+	 */
+	bool isGLX_OML_swap_method;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_OML_sync_control is supported, false otherwise.
+	 */
+	bool isGLX_OML_sync_control;
+
+	/**
+	* @brief Bool glXGetSyncValuesOML( Display *dpy, GLXDrawable drawable, int64_t *ust, int64_t *msc, int64_t *sbc );
+	*/
+	PFNGLXGETSYNCVALUESOMLPROC                                    glXGetSyncValuesOML;
+
+	/**
+	* @brief Bool glXGetMscRateOML( Display *dpy, GLXDrawable drawable, int32_t *numerator, int32_t *denominator );
+	*/
+	PFNGLXGETMSCRATEOMLPROC                                       glXGetMscRateOML;
+
+	/**
+	* @brief int64_t glXSwapBuffersMscOML( Display *dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder );
+	*/
+	PFNGLXSWAPBUFFERSMSCOMLPROC                                   glXSwapBuffersMscOML;
+
+	/**
+	* @brief Bool glXWaitForMscOML( Display *dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder, int64_t *ust, int64_t *msc, int64_t *sbc );
+	*/
+	PFNGLXWAITFORMSCOMLPROC                                       glXWaitForMscOML;
+
+	/**
+	* @brief Bool glXWaitForSbcOML( Display *dpy, GLXDrawable drawable, int64_t target_sbc, int64_t *ust, int64_t *msc, int64_t *sbc );
+	*/
+	PFNGLXWAITFORSBCOMLPROC                                       glXWaitForSbcOML;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGIS_blended_overlay is supported, false otherwise.
+	 */
+	bool isGLX_SGIS_blended_overlay;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGIS_multisample is supported, false otherwise.
+	 */
+	bool isGLX_SGIS_multisample;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGIS_shared_multisample is supported, false otherwise.
+	 */
+	bool isGLX_SGIS_shared_multisample;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGIX_dmbuffer is supported, false otherwise.
+	 */
+	bool isGLX_SGIX_dmbuffer;
+
+	/**
+	* @brief Bool glXAssociateDMPbufferSGIX( Display *dpy, GLXPbufferSGIX pbuffer, DMparams *params, DMbuffer dmbuffer );
+	*/
+	PFNGLXASSOCIATEDMPBUFFERSGIXPROC                              glXAssociateDMPbufferSGIX;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGIX_fbconfig is supported, false otherwise.
+	 */
+	bool isGLX_SGIX_fbconfig;
+
+	/**
+	* @brief int glXGetFBConfigAttribSGIX( Display *dpy, GLXFBConfigSGIX config, int attribute, int *value );
+	*/
+	PFNGLXGETFBCONFIGATTRIBSGIXPROC                               glXGetFBConfigAttribSGIX;
+
+	/**
+	* @brief GLXFBConfigSGIX * glXChooseFBConfigSGIX( Display *dpy, int screen, int *attrib_list, int *nelements );
+	*/
+	PFNGLXCHOOSEFBCONFIGSGIXPROC                                  glXChooseFBConfigSGIX;
+
+	/**
+	* @brief GLXPixmap glXCreateGLXPixmapWithConfigSGIX( Display *dpy, GLXFBConfigSGIX config, Pixmap pixmap );
+	*/
+	PFNGLXCREATEGLXPIXMAPWITHCONFIGSGIXPROC                       glXCreateGLXPixmapWithConfigSGIX;
+
+	/**
+	* @brief GLXContext glXCreateContextWithConfigSGIX( Display *dpy, GLXFBConfigSGIX config, int render_type, GLXContext share_list, Bool direct );
+	*/
+	PFNGLXCREATECONTEXTWITHCONFIGSGIXPROC                         glXCreateContextWithConfigSGIX;
+
+	/**
+	* @brief XVisualInfo * glXGetVisualFromFBConfigSGIX( Display *dpy, GLXFBConfigSGIX config );
+	*/
+	PFNGLXGETVISUALFROMFBCONFIGSGIXPROC                           glXGetVisualFromFBConfigSGIX;
+
+	/**
+	* @brief GLXFBConfigSGIX glXGetFBConfigFromVisualSGIX( Display *dpy, XVisualInfo *vis );
+	*/
+	PFNGLXGETFBCONFIGFROMVISUALSGIXPROC                           glXGetFBConfigFromVisualSGIX;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGIX_hyperpipe is supported, false otherwise.
+	 */
+	bool isGLX_SGIX_hyperpipe;
+
+	/**
+	* @brief GLXHyperpipeNetworkSGIX * glXQueryHyperpipeNetworkSGIX( Display *dpy, int *npipes );
+	*/
+	PFNGLXQUERYHYPERPIPENETWORKSGIXPROC                           glXQueryHyperpipeNetworkSGIX;
+
+	/**
+	* @brief int glXHyperpipeConfigSGIX( Display *dpy, int networkId, int npipes, GLXHyperpipeConfigSGIX *cfg, int *hpId );
+	*/
+	PFNGLXHYPERPIPECONFIGSGIXPROC                                 glXHyperpipeConfigSGIX;
+
+	/**
+	* @brief GLXHyperpipeConfigSGIX * glXQueryHyperpipeConfigSGIX( Display *dpy, int hpId, int *npipes );
+	*/
+	PFNGLXQUERYHYPERPIPECONFIGSGIXPROC                            glXQueryHyperpipeConfigSGIX;
+
+	/**
+	* @brief int glXDestroyHyperpipeConfigSGIX( Display *dpy, int hpId );
+	*/
+	PFNGLXDESTROYHYPERPIPECONFIGSGIXPROC                          glXDestroyHyperpipeConfigSGIX;
+
+	/**
+	* @brief int glXBindHyperpipeSGIX( Display *dpy, int hpId );
+	*/
+	PFNGLXBINDHYPERPIPESGIXPROC                                   glXBindHyperpipeSGIX;
+
+	/**
+	* @brief int glXQueryHyperpipeBestAttribSGIX( Display *dpy, int timeSlice, int attrib, int size, void *attribList, void *returnAttribList );
+	*/
+	PFNGLXQUERYHYPERPIPEBESTATTRIBSGIXPROC                        glXQueryHyperpipeBestAttribSGIX;
+
+	/**
+	* @brief int glXHyperpipeAttribSGIX( Display *dpy, int timeSlice, int attrib, int size, void *attribList );
+	*/
+	PFNGLXHYPERPIPEATTRIBSGIXPROC                                 glXHyperpipeAttribSGIX;
+
+	/**
+	* @brief int glXQueryHyperpipeAttribSGIX( Display *dpy, int timeSlice, int attrib, int size, void *returnAttribList );
+	*/
+	PFNGLXQUERYHYPERPIPEATTRIBSGIXPROC                            glXQueryHyperpipeAttribSGIX;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGIX_pbuffer is supported, false otherwise.
+	 */
+	bool isGLX_SGIX_pbuffer;
+
+	/**
+	* @brief GLXPbufferSGIX glXCreateGLXPbufferSGIX( Display *dpy, GLXFBConfigSGIX config, unsigned int width, unsigned int height, int *attrib_list );
+	*/
+	PFNGLXCREATEGLXPBUFFERSGIXPROC                                glXCreateGLXPbufferSGIX;
+
+	/**
+	* @brief void glXDestroyGLXPbufferSGIX( Display *dpy, GLXPbufferSGIX pbuf );
+	*/
+	PFNGLXDESTROYGLXPBUFFERSGIXPROC                               glXDestroyGLXPbufferSGIX;
+
+	/**
+	* @brief int glXQueryGLXPbufferSGIX( Display *dpy, GLXPbufferSGIX pbuf, int attribute, unsigned int *value );
+	*/
+	PFNGLXQUERYGLXPBUFFERSGIXPROC                                 glXQueryGLXPbufferSGIX;
+
+	/**
+	* @brief void glXSelectEventSGIX( Display *dpy, GLXDrawable drawable, unsigned long mask );
+	*/
+	PFNGLXSELECTEVENTSGIXPROC                                     glXSelectEventSGIX;
+
+	/**
+	* @brief void glXGetSelectedEventSGIX( Display *dpy, GLXDrawable drawable, unsigned long *mask );
+	*/
+	PFNGLXGETSELECTEDEVENTSGIXPROC                                glXGetSelectedEventSGIX;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGIX_swap_barrier is supported, false otherwise.
+	 */
+	bool isGLX_SGIX_swap_barrier;
+
+	/**
+	* @brief void glXBindSwapBarrierSGIX( Display *dpy, GLXDrawable drawable, int barrier );
+	*/
+	PFNGLXBINDSWAPBARRIERSGIXPROC                                 glXBindSwapBarrierSGIX;
+
+	/**
+	* @brief Bool glXQueryMaxSwapBarriersSGIX( Display *dpy, int screen, int *max );
+	*/
+	PFNGLXQUERYMAXSWAPBARRIERSSGIXPROC                            glXQueryMaxSwapBarriersSGIX;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGIX_swap_group is supported, false otherwise.
+	 */
+	bool isGLX_SGIX_swap_group;
+
+	/**
+	* @brief void glXJoinSwapGroupSGIX( Display *dpy, GLXDrawable drawable, GLXDrawable member );
+	*/
+	PFNGLXJOINSWAPGROUPSGIXPROC                                   glXJoinSwapGroupSGIX;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGIX_video_resize is supported, false otherwise.
+	 */
+	bool isGLX_SGIX_video_resize;
+
+	/**
+	* @brief int glXBindChannelToWindowSGIX( Display *display, int screen, int channel, Window window );
+	*/
+	PFNGLXBINDCHANNELTOWINDOWSGIXPROC                             glXBindChannelToWindowSGIX;
+
+	/**
+	* @brief int glXChannelRectSGIX( Display *display, int screen, int channel, int x, int y, int w, int h );
+	*/
+	PFNGLXCHANNELRECTSGIXPROC                                     glXChannelRectSGIX;
+
+	/**
+	* @brief int glXQueryChannelRectSGIX( Display *display, int screen, int channel, int *dx, int *dy, int *dw, int *dh );
+	*/
+	PFNGLXQUERYCHANNELRECTSGIXPROC                                glXQueryChannelRectSGIX;
+
+	/**
+	* @brief int glXQueryChannelDeltasSGIX( Display *display, int screen, int channel, int *x, int *y, int *w, int *h );
+	*/
+	PFNGLXQUERYCHANNELDELTASSGIXPROC                              glXQueryChannelDeltasSGIX;
+
+	/**
+	* @brief int glXChannelRectSyncSGIX( Display *display, int screen, int channel, GLenum synctype );
+	*/
+	PFNGLXCHANNELRECTSYNCSGIXPROC                                 glXChannelRectSyncSGIX;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGIX_video_source is supported, false otherwise.
+	 */
+	bool isGLX_SGIX_video_source;
+
+	/**
+	* @brief GLXVideoSourceSGIX glXCreateGLXVideoSourceSGIX( Display *display, int screen, VLServer server, VLPath path, int nodeClass, VLNode drainNode );
+	*/
+	PFNGLXCREATEGLXVIDEOSOURCESGIXPROC                            glXCreateGLXVideoSourceSGIX;
+
+	/**
+	* @brief void glXDestroyGLXVideoSourceSGIX( Display *dpy, GLXVideoSourceSGIX glxvideosource );
+	*/
+	PFNGLXDESTROYGLXVIDEOSOURCESGIXPROC                           glXDestroyGLXVideoSourceSGIX;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGIX_visual_select_group is supported, false otherwise.
+	 */
+	bool isGLX_SGIX_visual_select_group;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGI_cushion is supported, false otherwise.
+	 */
+	bool isGLX_SGI_cushion;
+
+	/**
+	* @brief void glXCushionSGI( Display *dpy, Window window, float cushion );
+	*/
+	PFNGLXCUSHIONSGIPROC                                          glXCushionSGI;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGI_make_current_read is supported, false otherwise.
+	 */
+	bool isGLX_SGI_make_current_read;
+
+	/**
+	* @brief Bool glXMakeCurrentReadSGI( Display *dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx );
+	*/
+	PFNGLXMAKECURRENTREADSGIPROC                                  glXMakeCurrentReadSGI;
+
+	/**
+	* @brief GLXDrawable glXGetCurrentReadDrawableSGI( void );
+	*/
+	PFNGLXGETCURRENTREADDRAWABLESGIPROC                           glXGetCurrentReadDrawableSGI;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGI_swap_control is supported, false otherwise.
+	 */
+	bool isGLX_SGI_swap_control;
+
+	/**
+	* @brief int glXSwapIntervalSGI( int interval );
+	*/
+	PFNGLXSWAPINTERVALSGIPROC                                     glXSwapIntervalSGI;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SGI_video_sync is supported, false otherwise.
+	 */
+	bool isGLX_SGI_video_sync;
+
+	/**
+	* @brief int glXGetVideoSyncSGI( unsigned int *count );
+	*/
+	PFNGLXGETVIDEOSYNCSGIPROC                                     glXGetVideoSyncSGI;
+
+	/**
+	* @brief int glXWaitVideoSyncSGI( int divisor, int remainder, unsigned int *count );
+	*/
+	PFNGLXWAITVIDEOSYNCSGIPROC                                    glXWaitVideoSyncSGI;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_SUN_get_transparent_index is supported, false otherwise.
+	 */
+	bool isGLX_SUN_get_transparent_index;
+
+	/**
+	* @brief Status glXGetTransparentIndexSUN( Display *dpy, Window overlay, Window underlay, long *pTransparentIndex );
+	*/
+	PFNGLXGETTRANSPARENTINDEXSUNPROC                              glXGetTransparentIndexSUN;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_VERSION_1_3 is supported, false otherwise.
+	 */
+	bool isGLX_VERSION_1_3;
+
+	/**
+	* @brief GLXFBConfig * glXGetFBConfigs( Display *dpy, int screen, int *nelements );
+	*/
+	PFNGLXGETFBCONFIGSPROC                                        glXGetFBConfigs;
+
+	/**
+	* @brief GLXFBConfig * glXChooseFBConfig( Display *dpy, int screen, const int *attrib_list, int *nelements );
+	*/
+	PFNGLXCHOOSEFBCONFIGPROC                                      glXChooseFBConfig;
+
+	/**
+	* @brief int glXGetFBConfigAttrib( Display *dpy, GLXFBConfig config, int attribute, int *value );
+	*/
+	PFNGLXGETFBCONFIGATTRIBPROC                                   glXGetFBConfigAttrib;
+
+	/**
+	* @brief XVisualInfo * glXGetVisualFromFBConfig( Display *dpy, GLXFBConfig config );
+	*/
+	PFNGLXGETVISUALFROMFBCONFIGPROC                               glXGetVisualFromFBConfig;
+
+	/**
+	* @brief GLXWindow glXCreateWindow( Display *dpy, GLXFBConfig config, Window win, const int *attrib_list );
+	*/
+	PFNGLXCREATEWINDOWPROC                                        glXCreateWindow;
+
+	/**
+	* @brief void glXDestroyWindow( Display *dpy, GLXWindow win );
+	*/
+	PFNGLXDESTROYWINDOWPROC                                       glXDestroyWindow;
+
+	/**
+	* @brief GLXPixmap glXCreatePixmap( Display *dpy, GLXFBConfig config, Pixmap pixmap, const int *attrib_list );
+	*/
+	PFNGLXCREATEPIXMAPPROC                                        glXCreatePixmap;
+
+	/**
+	* @brief void glXDestroyPixmap( Display *dpy, GLXPixmap pixmap );
+	*/
+	PFNGLXDESTROYPIXMAPPROC                                       glXDestroyPixmap;
+
+	/**
+	* @brief GLXPbuffer glXCreatePbuffer( Display *dpy, GLXFBConfig config, const int *attrib_list );
+	*/
+	PFNGLXCREATEPBUFFERPROC                                       glXCreatePbuffer;
+
+	/**
+	* @brief void glXDestroyPbuffer( Display *dpy, GLXPbuffer pbuf );
+	*/
+	PFNGLXDESTROYPBUFFERPROC                                      glXDestroyPbuffer;
+
+	/**
+	* @brief void glXQueryDrawable( Display *dpy, GLXDrawable draw, int attribute, unsigned int *value );
+	*/
+	PFNGLXQUERYDRAWABLEPROC                                       glXQueryDrawable;
+
+	/**
+	* @brief GLXContext glXCreateNewContext( Display *dpy, GLXFBConfig config, int render_type, GLXContext share_list, Bool direct );
+	*/
+	PFNGLXCREATENEWCONTEXTPROC                                    glXCreateNewContext;
+
+	/**
+	* @brief Bool glXMakeContextCurrent( Display *dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx );
+	*/
+	PFNGLXMAKECONTEXTCURRENTPROC                                  glXMakeContextCurrent;
+
+	/**
+	* @brief GLXDrawable glXGetCurrentReadDrawable( void );
+	*/
+	PFNGLXGETCURRENTREADDRAWABLEPROC                              glXGetCurrentReadDrawable;
+
+	/**
+	* @brief Display * glXGetCurrentDisplay( void );
+	*/
+	PFNGLXGETCURRENTDISPLAYPROC                                   glXGetCurrentDisplay;
+
+	/**
+	* @brief int glXQueryContext( Display *dpy, GLXContext ctx, int attribute, int *value );
+	*/
+	PFNGLXQUERYCONTEXTPROC                                        glXQueryContext;
+
+	/**
+	* @brief void glXSelectEvent( Display *dpy, GLXDrawable draw, unsigned long event_mask );
+	*/
+	PFNGLXSELECTEVENTPROC                                         glXSelectEvent;
+
+	/**
+	* @brief void glXGetSelectedEvent( Display *dpy, GLXDrawable draw, unsigned long *event_mask );
+	*/
+	PFNGLXGETSELECTEDEVENTPROC                                    glXGetSelectedEvent;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_VERSION_1_4 is supported, false otherwise.
+	 */
+	bool isGLX_VERSION_1_4;
+
+	/**
+	* @brief __GLXextFuncPtr glXGetProcAddress( const GLubyte *procName );
+	*/
+	PFNGLXGETPROCADDRESSPROC                                      glXGetProcAddress;
+
+
+
+
+#endif // POSIX
 
 
 

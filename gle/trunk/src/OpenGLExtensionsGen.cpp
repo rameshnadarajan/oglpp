@@ -1,4 +1,4 @@
-// This file was generated at Mon Feb  8 12:38:41 2010 with gle, please do not modify.
+// This file was generated at Sat Feb 27 15:51:21 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,8 +17,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 408;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 1717;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 455;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 1813;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS ) :
@@ -34,6 +34,353 @@ void OpenGLExtensionsGen::clear()
 	m_initializedExtensionCount	= 0;
 	m_initializedProcCount		= 0;
 	m_initializedExtensions.clear();
+#ifdef POSIX
+	// ****** GLX_3DFX_multisample ******
+	isGLX_3DFX_multisample                                        = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_ARB_create_context ******
+	isGLX_ARB_create_context                                      = false;
+	glXCreateContextAttribsARB                                    = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_ARB_create_context_profile ******
+	isGLX_ARB_create_context_profile                              = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_ARB_fbconfig_float ******
+	isGLX_ARB_fbconfig_float                                      = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_ARB_get_proc_address ******
+	isGLX_ARB_get_proc_address                                    = false;
+	glXGetProcAddressARB                                          = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_ARB_multisample ******
+	isGLX_ARB_multisample                                         = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_EXT_fbconfig_packed_float ******
+	isGLX_EXT_fbconfig_packed_float                               = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_EXT_framebuffer_sRGB ******
+	isGLX_EXT_framebuffer_sRGB                                    = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_EXT_import_context ******
+	isGLX_EXT_import_context                                      = false;
+
+	glXGetCurrentDisplayEXT                                       = 0;
+	glXQueryContextInfoEXT                                        = 0;
+	glXGetContextIDEXT                                            = 0;
+	glXImportContextEXT                                           = 0;
+	glXFreeContextEXT                                             = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_EXT_swap_control ******
+	isGLX_EXT_swap_control                                        = false;
+	glXSwapIntervalEXT                                            = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_EXT_texture_from_pixmap ******
+	isGLX_EXT_texture_from_pixmap                                 = false;
+
+	glXBindTexImageEXT                                            = 0;
+	glXReleaseTexImageEXT                                         = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_EXT_visual_info ******
+	isGLX_EXT_visual_info                                         = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_EXT_visual_rating ******
+	isGLX_EXT_visual_rating                                       = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_INTEL_swap_event ******
+	isGLX_INTEL_swap_event                                        = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_MESA_agp_offset ******
+	isGLX_MESA_agp_offset                                         = false;
+	glXGetAGPOffsetMESA                                           = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_MESA_copy_sub_buffer ******
+	isGLX_MESA_copy_sub_buffer                                    = false;
+	glXCopySubBufferMESA                                          = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_MESA_pixmap_colormap ******
+	isGLX_MESA_pixmap_colormap                                    = false;
+	glXCreateGLXPixmapMESA                                        = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_MESA_release_buffers ******
+	isGLX_MESA_release_buffers                                    = false;
+	glXReleaseBuffersMESA                                         = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_MESA_set_3dfx_mode ******
+	isGLX_MESA_set_3dfx_mode                                      = false;
+	glXSet3DfxModeMESA                                            = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_NV_copy_image ******
+	isGLX_NV_copy_image                                           = false;
+	glXCopyImageSubDataNV                                         = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_NV_float_buffer ******
+	isGLX_NV_float_buffer                                         = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_NV_present_video ******
+	isGLX_NV_present_video                                        = false;
+
+	glXEnumerateVideoDevicesNV                                    = 0;
+	glXBindVideoDeviceNV                                          = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_NV_swap_group ******
+	isGLX_NV_swap_group                                           = false;
+
+	glXJoinSwapGroupNV                                            = 0;
+	glXBindSwapBarrierNV                                          = 0;
+	glXQuerySwapGroupNV                                           = 0;
+	glXQueryMaxSwapGroupsNV                                       = 0;
+	glXQueryFrameCountNV                                          = 0;
+	glXResetFrameCountNV                                          = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_NV_video_capture ******
+	isGLX_NV_video_capture                                        = false;
+
+	glXBindVideoCaptureDeviceNV                                   = 0;
+	glXEnumerateVideoCaptureDevicesNV                             = 0;
+	glXLockVideoCaptureDeviceNV                                   = 0;
+	glXQueryVideoCaptureDeviceNV                                  = 0;
+	glXReleaseVideoCaptureDeviceNV                                = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_NV_video_out ******
+	isGLX_NV_video_out                                            = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_NV_video_output ******
+	isGLX_NV_video_output                                         = false;
+
+	glXGetVideoDeviceNV                                           = 0;
+	glXReleaseVideoDeviceNV                                       = 0;
+	glXBindVideoImageNV                                           = 0;
+	glXReleaseVideoImageNV                                        = 0;
+	glXSendPbufferToVideoNV                                       = 0;
+	glXGetVideoInfoNV                                             = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_OML_swap_method ******
+	isGLX_OML_swap_method                                         = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_OML_sync_control ******
+	isGLX_OML_sync_control                                        = false;
+
+	glXGetSyncValuesOML                                           = 0;
+	glXGetMscRateOML                                              = 0;
+	glXSwapBuffersMscOML                                          = 0;
+	glXWaitForMscOML                                              = 0;
+	glXWaitForSbcOML                                              = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGIS_blended_overlay ******
+	isGLX_SGIS_blended_overlay                                    = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGIS_multisample ******
+	isGLX_SGIS_multisample                                        = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGIS_shared_multisample ******
+	isGLX_SGIS_shared_multisample                                 = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGIX_dmbuffer ******
+	isGLX_SGIX_dmbuffer                                           = false;
+	glXAssociateDMPbufferSGIX                                     = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGIX_fbconfig ******
+	isGLX_SGIX_fbconfig                                           = false;
+
+	glXGetFBConfigAttribSGIX                                      = 0;
+	glXChooseFBConfigSGIX                                         = 0;
+	glXCreateGLXPixmapWithConfigSGIX                              = 0;
+	glXCreateContextWithConfigSGIX                                = 0;
+	glXGetVisualFromFBConfigSGIX                                  = 0;
+	glXGetFBConfigFromVisualSGIX                                  = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGIX_hyperpipe ******
+	isGLX_SGIX_hyperpipe                                          = false;
+
+	glXQueryHyperpipeNetworkSGIX                                  = 0;
+	glXHyperpipeConfigSGIX                                        = 0;
+	glXQueryHyperpipeConfigSGIX                                   = 0;
+	glXDestroyHyperpipeConfigSGIX                                 = 0;
+	glXBindHyperpipeSGIX                                          = 0;
+	glXQueryHyperpipeBestAttribSGIX                               = 0;
+	glXHyperpipeAttribSGIX                                        = 0;
+	glXQueryHyperpipeAttribSGIX                                   = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGIX_pbuffer ******
+	isGLX_SGIX_pbuffer                                            = false;
+
+	glXCreateGLXPbufferSGIX                                       = 0;
+	glXDestroyGLXPbufferSGIX                                      = 0;
+	glXQueryGLXPbufferSGIX                                        = 0;
+	glXSelectEventSGIX                                            = 0;
+	glXGetSelectedEventSGIX                                       = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGIX_swap_barrier ******
+	isGLX_SGIX_swap_barrier                                       = false;
+
+	glXBindSwapBarrierSGIX                                        = 0;
+	glXQueryMaxSwapBarriersSGIX                                   = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGIX_swap_group ******
+	isGLX_SGIX_swap_group                                         = false;
+	glXJoinSwapGroupSGIX                                          = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGIX_video_resize ******
+	isGLX_SGIX_video_resize                                       = false;
+
+	glXBindChannelToWindowSGIX                                    = 0;
+	glXChannelRectSGIX                                            = 0;
+	glXQueryChannelRectSGIX                                       = 0;
+	glXQueryChannelDeltasSGIX                                     = 0;
+	glXChannelRectSyncSGIX                                        = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGIX_video_source ******
+	isGLX_SGIX_video_source                                       = false;
+
+	glXCreateGLXVideoSourceSGIX                                   = 0;
+	glXDestroyGLXVideoSourceSGIX                                  = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGIX_visual_select_group ******
+	isGLX_SGIX_visual_select_group                                = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGI_cushion ******
+	isGLX_SGI_cushion                                             = false;
+	glXCushionSGI                                                 = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGI_make_current_read ******
+	isGLX_SGI_make_current_read                                   = false;
+
+	glXMakeCurrentReadSGI                                         = 0;
+	glXGetCurrentReadDrawableSGI                                  = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGI_swap_control ******
+	isGLX_SGI_swap_control                                        = false;
+	glXSwapIntervalSGI                                            = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SGI_video_sync ******
+	isGLX_SGI_video_sync                                          = false;
+
+	glXGetVideoSyncSGI                                            = 0;
+	glXWaitVideoSyncSGI                                           = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_SUN_get_transparent_index ******
+	isGLX_SUN_get_transparent_index                               = false;
+	glXGetTransparentIndexSUN                                     = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_VERSION_1_3 ******
+	isGLX_VERSION_1_3                                             = false;
+
+	glXGetFBConfigs                                               = 0;
+	glXChooseFBConfig                                             = 0;
+	glXGetFBConfigAttrib                                          = 0;
+	glXGetVisualFromFBConfig                                      = 0;
+	glXCreateWindow                                               = 0;
+	glXDestroyWindow                                              = 0;
+	glXCreatePixmap                                               = 0;
+	glXDestroyPixmap                                              = 0;
+	glXCreatePbuffer                                              = 0;
+	glXDestroyPbuffer                                             = 0;
+	glXQueryDrawable                                              = 0;
+	glXCreateNewContext                                           = 0;
+	glXMakeContextCurrent                                         = 0;
+	glXGetCurrentReadDrawable                                     = 0;
+	glXGetCurrentDisplay                                          = 0;
+	glXQueryContext                                               = 0;
+	glXSelectEvent                                                = 0;
+	glXGetSelectedEvent                                           = 0;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_VERSION_1_4 ******
+	isGLX_VERSION_1_4                                             = false;
+	glXGetProcAddress                                             = 0;
+#endif // POSIX
+
 
 	// ****** GL_3DFX_multisample ******
 	isGL_3DFX_multisample                                         = false;
@@ -3605,6 +3952,42 @@ void OpenGLExtensionsGen::initialize()
 	logEndl("gle detailed informations :");
 
 
+	initializeGLX_3DFX();
+
+
+	initializeGLX_ARB();
+
+
+	initializeGLX_EXT();
+
+
+	initializeGLX_INTEL();
+
+
+	initializeGLX_MESA();
+
+
+	initializeGLX_NV();
+
+
+	initializeGLX_OML();
+
+
+	initializeGLX_SGI();
+
+
+	initializeGLX_SGIS();
+
+
+	initializeGLX_SGIX();
+
+
+	initializeGLX_SUN();
+
+
+	initializeGLX_VERSION();
+
+
 	initializeGL_3DFX();
 
 
@@ -3759,6 +4142,2175 @@ void OpenGLExtensionsGen::initialize()
 	log( difference );
 	logEndl("");
 }
+
+
+void OpenGLExtensionsGen::initializeGLX_3DFX()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+	
+	// ****** GLX_3DFX_multisample ******
+	
+	isGLX_3DFX_multisample = isWExtensionSupported("GLX_3DFX_multisample");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_3DFX_multisample )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_3DFX_multisample                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_3DFX_multisample                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_3DFX_multisample") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_3DFX_multisample                                        : not detected." );
+	}
+#endif // POSIX
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeGLX_ARB()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+	
+	// ****** GLX_ARB_create_context ******
+	
+	isGLX_ARB_create_context = isWExtensionSupported("GLX_ARB_create_context");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_ARB_create_context ) // || isSEDEnable()
+	{
+
+		glXCreateContextAttribsARB = (PFNGLXCREATECONTEXTATTRIBSARBPROC) getExtensionPtr( "glXCreateContextAttribsARB" );
+		if ( glXCreateContextAttribsARB != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_ARB_create_context || isSEDEnable() )
+	
+	if ( isGLX_ARB_create_context )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_ARB_create_context                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_ARB_create_context                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_ARB_create_context") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_ARB_create_context                                      : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_ARB_create_context_profile ******
+	
+	isGLX_ARB_create_context_profile = isWExtensionSupported("GLX_ARB_create_context_profile");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_ARB_create_context_profile )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_ARB_create_context_profile                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_ARB_create_context_profile                              : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_ARB_create_context_profile") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_ARB_create_context_profile                              : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_ARB_fbconfig_float ******
+	
+	isGLX_ARB_fbconfig_float = isWExtensionSupported("GLX_ARB_fbconfig_float");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_ARB_fbconfig_float )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_ARB_fbconfig_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_ARB_fbconfig_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_ARB_fbconfig_float") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_ARB_fbconfig_float                                      : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_ARB_get_proc_address ******
+	
+	isGLX_ARB_get_proc_address = isWExtensionSupported("GLX_ARB_get_proc_address");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_ARB_get_proc_address ) // || isSEDEnable()
+	{
+
+		glXGetProcAddressARB = (PFNGLXGETPROCADDRESSARBPROC) getExtensionPtr( "glXGetProcAddressARB" );
+		if ( glXGetProcAddressARB != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_ARB_get_proc_address || isSEDEnable() )
+	
+	if ( isGLX_ARB_get_proc_address )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_ARB_get_proc_address                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_ARB_get_proc_address                                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_ARB_get_proc_address") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_ARB_get_proc_address                                    : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_ARB_multisample ******
+	
+	isGLX_ARB_multisample = isWExtensionSupported("GLX_ARB_multisample");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_ARB_multisample )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_ARB_multisample                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_ARB_multisample                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_ARB_multisample") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_ARB_multisample                                         : not detected." );
+	}
+#endif // POSIX
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeGLX_EXT()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+	
+	// ****** GLX_EXT_fbconfig_packed_float ******
+	
+	isGLX_EXT_fbconfig_packed_float = isWExtensionSupported("GLX_EXT_fbconfig_packed_float");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_EXT_fbconfig_packed_float )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_EXT_fbconfig_packed_float                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_EXT_fbconfig_packed_float                               : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_EXT_fbconfig_packed_float") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_EXT_fbconfig_packed_float                               : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_EXT_framebuffer_sRGB ******
+	
+	isGLX_EXT_framebuffer_sRGB = isWExtensionSupported("GLX_EXT_framebuffer_sRGB");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_EXT_framebuffer_sRGB )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_EXT_framebuffer_sRGB                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_EXT_framebuffer_sRGB                                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_EXT_framebuffer_sRGB") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_EXT_framebuffer_sRGB                                    : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_EXT_import_context ******
+	
+	isGLX_EXT_import_context = isWExtensionSupported("GLX_EXT_import_context");
+	
+	localSupportedProcCount		= 5;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_EXT_import_context ) // || isSEDEnable()
+	{
+
+		glXGetCurrentDisplayEXT = (PFNGLXGETCURRENTDISPLAYEXTPROC) getExtensionPtr( "glXGetCurrentDisplayEXT" );
+		if ( glXGetCurrentDisplayEXT != 0 )	++localInitializedProcCount;
+
+		glXQueryContextInfoEXT = (PFNGLXQUERYCONTEXTINFOEXTPROC) getExtensionPtr( "glXQueryContextInfoEXT" );
+		if ( glXQueryContextInfoEXT != 0 )	++localInitializedProcCount;
+
+		glXGetContextIDEXT = (PFNGLXGETCONTEXTIDEXTPROC) getExtensionPtr( "glXGetContextIDEXT" );
+		if ( glXGetContextIDEXT != 0 )	++localInitializedProcCount;
+
+		glXImportContextEXT = (PFNGLXIMPORTCONTEXTEXTPROC) getExtensionPtr( "glXImportContextEXT" );
+		if ( glXImportContextEXT != 0 )	++localInitializedProcCount;
+
+		glXFreeContextEXT = (PFNGLXFREECONTEXTEXTPROC) getExtensionPtr( "glXFreeContextEXT" );
+		if ( glXFreeContextEXT != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_EXT_import_context || isSEDEnable() )
+	
+	if ( isGLX_EXT_import_context )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_EXT_import_context                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_EXT_import_context                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_EXT_import_context") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_EXT_import_context                                      : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_EXT_swap_control ******
+	
+	isGLX_EXT_swap_control = isWExtensionSupported("GLX_EXT_swap_control");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_EXT_swap_control ) // || isSEDEnable()
+	{
+
+		glXSwapIntervalEXT = (PFNGLXSWAPINTERVALEXTPROC) getExtensionPtr( "glXSwapIntervalEXT" );
+		if ( glXSwapIntervalEXT != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_EXT_swap_control || isSEDEnable() )
+	
+	if ( isGLX_EXT_swap_control )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_EXT_swap_control                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_EXT_swap_control                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_EXT_swap_control") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_EXT_swap_control                                        : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_EXT_texture_from_pixmap ******
+	
+	isGLX_EXT_texture_from_pixmap = isWExtensionSupported("GLX_EXT_texture_from_pixmap");
+	
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_EXT_texture_from_pixmap ) // || isSEDEnable()
+	{
+
+		glXBindTexImageEXT = (PFNGLXBINDTEXIMAGEEXTPROC) getExtensionPtr( "glXBindTexImageEXT" );
+		if ( glXBindTexImageEXT != 0 )	++localInitializedProcCount;
+
+		glXReleaseTexImageEXT = (PFNGLXRELEASETEXIMAGEEXTPROC) getExtensionPtr( "glXReleaseTexImageEXT" );
+		if ( glXReleaseTexImageEXT != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_EXT_texture_from_pixmap || isSEDEnable() )
+	
+	if ( isGLX_EXT_texture_from_pixmap )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_EXT_texture_from_pixmap                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_EXT_texture_from_pixmap                                 : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_EXT_texture_from_pixmap") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_EXT_texture_from_pixmap                                 : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_EXT_visual_info ******
+	
+	isGLX_EXT_visual_info = isWExtensionSupported("GLX_EXT_visual_info");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_EXT_visual_info )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_EXT_visual_info                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_EXT_visual_info                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_EXT_visual_info") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_EXT_visual_info                                         : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_EXT_visual_rating ******
+	
+	isGLX_EXT_visual_rating = isWExtensionSupported("GLX_EXT_visual_rating");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_EXT_visual_rating )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_EXT_visual_rating                                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_EXT_visual_rating                                       : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_EXT_visual_rating") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_EXT_visual_rating                                       : not detected." );
+	}
+#endif // POSIX
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeGLX_INTEL()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+	
+	// ****** GLX_INTEL_swap_event ******
+	
+	isGLX_INTEL_swap_event = isWExtensionSupported("GLX_INTEL_swap_event");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_INTEL_swap_event )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_INTEL_swap_event                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_INTEL_swap_event                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_INTEL_swap_event") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_INTEL_swap_event                                        : not detected." );
+	}
+#endif // POSIX
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeGLX_MESA()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+	
+	// ****** GLX_MESA_agp_offset ******
+	
+	isGLX_MESA_agp_offset = isWExtensionSupported("GLX_MESA_agp_offset");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_MESA_agp_offset ) // || isSEDEnable()
+	{
+
+		glXGetAGPOffsetMESA = (PFNGLXGETAGPOFFSETMESAPROC) getExtensionPtr( "glXGetAGPOffsetMESA" );
+		if ( glXGetAGPOffsetMESA != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_MESA_agp_offset || isSEDEnable() )
+	
+	if ( isGLX_MESA_agp_offset )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_MESA_agp_offset                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_MESA_agp_offset                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_MESA_agp_offset") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_MESA_agp_offset                                         : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_MESA_copy_sub_buffer ******
+	
+	isGLX_MESA_copy_sub_buffer = isWExtensionSupported("GLX_MESA_copy_sub_buffer");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_MESA_copy_sub_buffer ) // || isSEDEnable()
+	{
+
+		glXCopySubBufferMESA = (PFNGLXCOPYSUBBUFFERMESAPROC) getExtensionPtr( "glXCopySubBufferMESA" );
+		if ( glXCopySubBufferMESA != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_MESA_copy_sub_buffer || isSEDEnable() )
+	
+	if ( isGLX_MESA_copy_sub_buffer )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_MESA_copy_sub_buffer                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_MESA_copy_sub_buffer                                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_MESA_copy_sub_buffer") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_MESA_copy_sub_buffer                                    : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_MESA_pixmap_colormap ******
+	
+	isGLX_MESA_pixmap_colormap = isWExtensionSupported("GLX_MESA_pixmap_colormap");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_MESA_pixmap_colormap ) // || isSEDEnable()
+	{
+
+		glXCreateGLXPixmapMESA = (PFNGLXCREATEGLXPIXMAPMESAPROC) getExtensionPtr( "glXCreateGLXPixmapMESA" );
+		if ( glXCreateGLXPixmapMESA != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_MESA_pixmap_colormap || isSEDEnable() )
+	
+	if ( isGLX_MESA_pixmap_colormap )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_MESA_pixmap_colormap                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_MESA_pixmap_colormap                                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_MESA_pixmap_colormap") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_MESA_pixmap_colormap                                    : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_MESA_release_buffers ******
+	
+	isGLX_MESA_release_buffers = isWExtensionSupported("GLX_MESA_release_buffers");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_MESA_release_buffers ) // || isSEDEnable()
+	{
+
+		glXReleaseBuffersMESA = (PFNGLXRELEASEBUFFERSMESAPROC) getExtensionPtr( "glXReleaseBuffersMESA" );
+		if ( glXReleaseBuffersMESA != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_MESA_release_buffers || isSEDEnable() )
+	
+	if ( isGLX_MESA_release_buffers )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_MESA_release_buffers                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_MESA_release_buffers                                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_MESA_release_buffers") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_MESA_release_buffers                                    : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_MESA_set_3dfx_mode ******
+	
+	isGLX_MESA_set_3dfx_mode = isWExtensionSupported("GLX_MESA_set_3dfx_mode");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_MESA_set_3dfx_mode ) // || isSEDEnable()
+	{
+
+		glXSet3DfxModeMESA = (PFNGLXSET3DFXMODEMESAPROC) getExtensionPtr( "glXSet3DfxModeMESA" );
+		if ( glXSet3DfxModeMESA != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_MESA_set_3dfx_mode || isSEDEnable() )
+	
+	if ( isGLX_MESA_set_3dfx_mode )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_MESA_set_3dfx_mode                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_MESA_set_3dfx_mode                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_MESA_set_3dfx_mode") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_MESA_set_3dfx_mode                                      : not detected." );
+	}
+#endif // POSIX
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeGLX_NV()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+	
+	// ****** GLX_NV_copy_image ******
+	
+	isGLX_NV_copy_image = isWExtensionSupported("GLX_NV_copy_image");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_NV_copy_image ) // || isSEDEnable()
+	{
+
+		glXCopyImageSubDataNV = (PFNGLXCOPYIMAGESUBDATANVPROC) getExtensionPtr( "glXCopyImageSubDataNV" );
+		if ( glXCopyImageSubDataNV != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_NV_copy_image || isSEDEnable() )
+	
+	if ( isGLX_NV_copy_image )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_NV_copy_image                                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_NV_copy_image                                           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_NV_copy_image") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_NV_copy_image                                           : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_NV_float_buffer ******
+	
+	isGLX_NV_float_buffer = isWExtensionSupported("GLX_NV_float_buffer");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_NV_float_buffer )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_NV_float_buffer                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_NV_float_buffer                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_NV_float_buffer") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_NV_float_buffer                                         : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_NV_present_video ******
+	
+	isGLX_NV_present_video = isWExtensionSupported("GLX_NV_present_video");
+	
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_NV_present_video ) // || isSEDEnable()
+	{
+
+		glXEnumerateVideoDevicesNV = (PFNGLXENUMERATEVIDEODEVICESNVPROC) getExtensionPtr( "glXEnumerateVideoDevicesNV" );
+		if ( glXEnumerateVideoDevicesNV != 0 )	++localInitializedProcCount;
+
+		glXBindVideoDeviceNV = (PFNGLXBINDVIDEODEVICENVPROC) getExtensionPtr( "glXBindVideoDeviceNV" );
+		if ( glXBindVideoDeviceNV != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_NV_present_video || isSEDEnable() )
+	
+	if ( isGLX_NV_present_video )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_NV_present_video                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_NV_present_video                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_NV_present_video") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_NV_present_video                                        : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_NV_swap_group ******
+	
+	isGLX_NV_swap_group = isWExtensionSupported("GLX_NV_swap_group");
+	
+	localSupportedProcCount		= 6;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_NV_swap_group ) // || isSEDEnable()
+	{
+
+		glXJoinSwapGroupNV = (PFNGLXJOINSWAPGROUPNVPROC) getExtensionPtr( "glXJoinSwapGroupNV" );
+		if ( glXJoinSwapGroupNV != 0 )	++localInitializedProcCount;
+
+		glXBindSwapBarrierNV = (PFNGLXBINDSWAPBARRIERNVPROC) getExtensionPtr( "glXBindSwapBarrierNV" );
+		if ( glXBindSwapBarrierNV != 0 )	++localInitializedProcCount;
+
+		glXQuerySwapGroupNV = (PFNGLXQUERYSWAPGROUPNVPROC) getExtensionPtr( "glXQuerySwapGroupNV" );
+		if ( glXQuerySwapGroupNV != 0 )	++localInitializedProcCount;
+
+		glXQueryMaxSwapGroupsNV = (PFNGLXQUERYMAXSWAPGROUPSNVPROC) getExtensionPtr( "glXQueryMaxSwapGroupsNV" );
+		if ( glXQueryMaxSwapGroupsNV != 0 )	++localInitializedProcCount;
+
+		glXQueryFrameCountNV = (PFNGLXQUERYFRAMECOUNTNVPROC) getExtensionPtr( "glXQueryFrameCountNV" );
+		if ( glXQueryFrameCountNV != 0 )	++localInitializedProcCount;
+
+		glXResetFrameCountNV = (PFNGLXRESETFRAMECOUNTNVPROC) getExtensionPtr( "glXResetFrameCountNV" );
+		if ( glXResetFrameCountNV != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_NV_swap_group || isSEDEnable() )
+	
+	if ( isGLX_NV_swap_group )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_NV_swap_group                                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_NV_swap_group                                           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_NV_swap_group") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_NV_swap_group                                           : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_NV_video_capture ******
+	
+	isGLX_NV_video_capture = isWExtensionSupported("GLX_NV_video_capture");
+	
+	localSupportedProcCount		= 5;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_NV_video_capture ) // || isSEDEnable()
+	{
+
+		glXBindVideoCaptureDeviceNV = (PFNGLXBINDVIDEOCAPTUREDEVICENVPROC) getExtensionPtr( "glXBindVideoCaptureDeviceNV" );
+		if ( glXBindVideoCaptureDeviceNV != 0 )	++localInitializedProcCount;
+
+		glXEnumerateVideoCaptureDevicesNV = (PFNGLXENUMERATEVIDEOCAPTUREDEVICESNVPROC) getExtensionPtr( "glXEnumerateVideoCaptureDevicesNV" );
+		if ( glXEnumerateVideoCaptureDevicesNV != 0 )	++localInitializedProcCount;
+
+		glXLockVideoCaptureDeviceNV = (PFNGLXLOCKVIDEOCAPTUREDEVICENVPROC) getExtensionPtr( "glXLockVideoCaptureDeviceNV" );
+		if ( glXLockVideoCaptureDeviceNV != 0 )	++localInitializedProcCount;
+
+		glXQueryVideoCaptureDeviceNV = (PFNGLXQUERYVIDEOCAPTUREDEVICENVPROC) getExtensionPtr( "glXQueryVideoCaptureDeviceNV" );
+		if ( glXQueryVideoCaptureDeviceNV != 0 )	++localInitializedProcCount;
+
+		glXReleaseVideoCaptureDeviceNV = (PFNGLXRELEASEVIDEOCAPTUREDEVICENVPROC) getExtensionPtr( "glXReleaseVideoCaptureDeviceNV" );
+		if ( glXReleaseVideoCaptureDeviceNV != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_NV_video_capture || isSEDEnable() )
+	
+	if ( isGLX_NV_video_capture )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_NV_video_capture                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_NV_video_capture                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_NV_video_capture") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_NV_video_capture                                        : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_NV_video_out ******
+	
+	isGLX_NV_video_out = isWExtensionSupported("GLX_NV_video_out");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_NV_video_out )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_NV_video_out                                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_NV_video_out                                            : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_NV_video_out") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_NV_video_out                                            : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_NV_video_output ******
+	
+	isGLX_NV_video_output = isWExtensionSupported("GLX_NV_video_output");
+	
+	localSupportedProcCount		= 6;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_NV_video_output ) // || isSEDEnable()
+	{
+
+		glXGetVideoDeviceNV = (PFNGLXGETVIDEODEVICENVPROC) getExtensionPtr( "glXGetVideoDeviceNV" );
+		if ( glXGetVideoDeviceNV != 0 )	++localInitializedProcCount;
+
+		glXReleaseVideoDeviceNV = (PFNGLXRELEASEVIDEODEVICENVPROC) getExtensionPtr( "glXReleaseVideoDeviceNV" );
+		if ( glXReleaseVideoDeviceNV != 0 )	++localInitializedProcCount;
+
+		glXBindVideoImageNV = (PFNGLXBINDVIDEOIMAGENVPROC) getExtensionPtr( "glXBindVideoImageNV" );
+		if ( glXBindVideoImageNV != 0 )	++localInitializedProcCount;
+
+		glXReleaseVideoImageNV = (PFNGLXRELEASEVIDEOIMAGENVPROC) getExtensionPtr( "glXReleaseVideoImageNV" );
+		if ( glXReleaseVideoImageNV != 0 )	++localInitializedProcCount;
+
+		glXSendPbufferToVideoNV = (PFNGLXSENDPBUFFERTOVIDEONVPROC) getExtensionPtr( "glXSendPbufferToVideoNV" );
+		if ( glXSendPbufferToVideoNV != 0 )	++localInitializedProcCount;
+
+		glXGetVideoInfoNV = (PFNGLXGETVIDEOINFONVPROC) getExtensionPtr( "glXGetVideoInfoNV" );
+		if ( glXGetVideoInfoNV != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_NV_video_output || isSEDEnable() )
+	
+	if ( isGLX_NV_video_output )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_NV_video_output                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_NV_video_output                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_NV_video_output") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_NV_video_output                                         : not detected." );
+	}
+#endif // POSIX
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeGLX_OML()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+	
+	// ****** GLX_OML_swap_method ******
+	
+	isGLX_OML_swap_method = isWExtensionSupported("GLX_OML_swap_method");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_OML_swap_method )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_OML_swap_method                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_OML_swap_method                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_OML_swap_method") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_OML_swap_method                                         : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_OML_sync_control ******
+	
+	isGLX_OML_sync_control = isWExtensionSupported("GLX_OML_sync_control");
+	
+	localSupportedProcCount		= 5;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_OML_sync_control ) // || isSEDEnable()
+	{
+
+		glXGetSyncValuesOML = (PFNGLXGETSYNCVALUESOMLPROC) getExtensionPtr( "glXGetSyncValuesOML" );
+		if ( glXGetSyncValuesOML != 0 )	++localInitializedProcCount;
+
+		glXGetMscRateOML = (PFNGLXGETMSCRATEOMLPROC) getExtensionPtr( "glXGetMscRateOML" );
+		if ( glXGetMscRateOML != 0 )	++localInitializedProcCount;
+
+		glXSwapBuffersMscOML = (PFNGLXSWAPBUFFERSMSCOMLPROC) getExtensionPtr( "glXSwapBuffersMscOML" );
+		if ( glXSwapBuffersMscOML != 0 )	++localInitializedProcCount;
+
+		glXWaitForMscOML = (PFNGLXWAITFORMSCOMLPROC) getExtensionPtr( "glXWaitForMscOML" );
+		if ( glXWaitForMscOML != 0 )	++localInitializedProcCount;
+
+		glXWaitForSbcOML = (PFNGLXWAITFORSBCOMLPROC) getExtensionPtr( "glXWaitForSbcOML" );
+		if ( glXWaitForSbcOML != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_OML_sync_control || isSEDEnable() )
+	
+	if ( isGLX_OML_sync_control )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_OML_sync_control                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_OML_sync_control                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_OML_sync_control") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_OML_sync_control                                        : not detected." );
+	}
+#endif // POSIX
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeGLX_SGI()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+	
+	// ****** GLX_SGI_cushion ******
+	
+	isGLX_SGI_cushion = isWExtensionSupported("GLX_SGI_cushion");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_SGI_cushion ) // || isSEDEnable()
+	{
+
+		glXCushionSGI = (PFNGLXCUSHIONSGIPROC) getExtensionPtr( "glXCushionSGI" );
+		if ( glXCushionSGI != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_SGI_cushion || isSEDEnable() )
+	
+	if ( isGLX_SGI_cushion )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGI_cushion                                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGI_cushion                                             : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGI_cushion") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGI_cushion                                             : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_SGI_make_current_read ******
+	
+	isGLX_SGI_make_current_read = isWExtensionSupported("GLX_SGI_make_current_read");
+	
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_SGI_make_current_read ) // || isSEDEnable()
+	{
+
+		glXMakeCurrentReadSGI = (PFNGLXMAKECURRENTREADSGIPROC) getExtensionPtr( "glXMakeCurrentReadSGI" );
+		if ( glXMakeCurrentReadSGI != 0 )	++localInitializedProcCount;
+
+		glXGetCurrentReadDrawableSGI = (PFNGLXGETCURRENTREADDRAWABLESGIPROC) getExtensionPtr( "glXGetCurrentReadDrawableSGI" );
+		if ( glXGetCurrentReadDrawableSGI != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_SGI_make_current_read || isSEDEnable() )
+	
+	if ( isGLX_SGI_make_current_read )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGI_make_current_read                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGI_make_current_read                                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGI_make_current_read") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGI_make_current_read                                   : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_SGI_swap_control ******
+	
+	isGLX_SGI_swap_control = isWExtensionSupported("GLX_SGI_swap_control");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_SGI_swap_control ) // || isSEDEnable()
+	{
+
+		glXSwapIntervalSGI = (PFNGLXSWAPINTERVALSGIPROC) getExtensionPtr( "glXSwapIntervalSGI" );
+		if ( glXSwapIntervalSGI != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_SGI_swap_control || isSEDEnable() )
+	
+	if ( isGLX_SGI_swap_control )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGI_swap_control                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGI_swap_control                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGI_swap_control") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGI_swap_control                                        : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_SGI_video_sync ******
+	
+	isGLX_SGI_video_sync = isWExtensionSupported("GLX_SGI_video_sync");
+	
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_SGI_video_sync ) // || isSEDEnable()
+	{
+
+		glXGetVideoSyncSGI = (PFNGLXGETVIDEOSYNCSGIPROC) getExtensionPtr( "glXGetVideoSyncSGI" );
+		if ( glXGetVideoSyncSGI != 0 )	++localInitializedProcCount;
+
+		glXWaitVideoSyncSGI = (PFNGLXWAITVIDEOSYNCSGIPROC) getExtensionPtr( "glXWaitVideoSyncSGI" );
+		if ( glXWaitVideoSyncSGI != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_SGI_video_sync || isSEDEnable() )
+	
+	if ( isGLX_SGI_video_sync )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGI_video_sync                                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGI_video_sync                                          : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGI_video_sync") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGI_video_sync                                          : not detected." );
+	}
+#endif // POSIX
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeGLX_SGIS()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+	
+	// ****** GLX_SGIS_blended_overlay ******
+	
+	isGLX_SGIS_blended_overlay = isWExtensionSupported("GLX_SGIS_blended_overlay");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_SGIS_blended_overlay )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGIS_blended_overlay                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGIS_blended_overlay                                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGIS_blended_overlay") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGIS_blended_overlay                                    : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_SGIS_multisample ******
+	
+	isGLX_SGIS_multisample = isWExtensionSupported("GLX_SGIS_multisample");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_SGIS_multisample )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGIS_multisample                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGIS_multisample                                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGIS_multisample") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGIS_multisample                                        : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_SGIS_shared_multisample ******
+	
+	isGLX_SGIS_shared_multisample = isWExtensionSupported("GLX_SGIS_shared_multisample");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_SGIS_shared_multisample )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGIS_shared_multisample                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGIS_shared_multisample                                 : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGIS_shared_multisample") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGIS_shared_multisample                                 : not detected." );
+	}
+#endif // POSIX
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeGLX_SGIX()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+	
+	// ****** GLX_SGIX_dmbuffer ******
+	
+	isGLX_SGIX_dmbuffer = isWExtensionSupported("GLX_SGIX_dmbuffer");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_SGIX_dmbuffer ) // || isSEDEnable()
+	{
+
+		glXAssociateDMPbufferSGIX = (PFNGLXASSOCIATEDMPBUFFERSGIXPROC) getExtensionPtr( "glXAssociateDMPbufferSGIX" );
+		if ( glXAssociateDMPbufferSGIX != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_SGIX_dmbuffer || isSEDEnable() )
+	
+	if ( isGLX_SGIX_dmbuffer )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGIX_dmbuffer                                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGIX_dmbuffer                                           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGIX_dmbuffer") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGIX_dmbuffer                                           : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_SGIX_fbconfig ******
+	
+	isGLX_SGIX_fbconfig = isWExtensionSupported("GLX_SGIX_fbconfig");
+	
+	localSupportedProcCount		= 6;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_SGIX_fbconfig ) // || isSEDEnable()
+	{
+
+		glXGetFBConfigAttribSGIX = (PFNGLXGETFBCONFIGATTRIBSGIXPROC) getExtensionPtr( "glXGetFBConfigAttribSGIX" );
+		if ( glXGetFBConfigAttribSGIX != 0 )	++localInitializedProcCount;
+
+		glXChooseFBConfigSGIX = (PFNGLXCHOOSEFBCONFIGSGIXPROC) getExtensionPtr( "glXChooseFBConfigSGIX" );
+		if ( glXChooseFBConfigSGIX != 0 )	++localInitializedProcCount;
+
+		glXCreateGLXPixmapWithConfigSGIX = (PFNGLXCREATEGLXPIXMAPWITHCONFIGSGIXPROC) getExtensionPtr( "glXCreateGLXPixmapWithConfigSGIX" );
+		if ( glXCreateGLXPixmapWithConfigSGIX != 0 )	++localInitializedProcCount;
+
+		glXCreateContextWithConfigSGIX = (PFNGLXCREATECONTEXTWITHCONFIGSGIXPROC) getExtensionPtr( "glXCreateContextWithConfigSGIX" );
+		if ( glXCreateContextWithConfigSGIX != 0 )	++localInitializedProcCount;
+
+		glXGetVisualFromFBConfigSGIX = (PFNGLXGETVISUALFROMFBCONFIGSGIXPROC) getExtensionPtr( "glXGetVisualFromFBConfigSGIX" );
+		if ( glXGetVisualFromFBConfigSGIX != 0 )	++localInitializedProcCount;
+
+		glXGetFBConfigFromVisualSGIX = (PFNGLXGETFBCONFIGFROMVISUALSGIXPROC) getExtensionPtr( "glXGetFBConfigFromVisualSGIX" );
+		if ( glXGetFBConfigFromVisualSGIX != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_SGIX_fbconfig || isSEDEnable() )
+	
+	if ( isGLX_SGIX_fbconfig )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGIX_fbconfig                                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGIX_fbconfig                                           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGIX_fbconfig") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGIX_fbconfig                                           : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_SGIX_hyperpipe ******
+	
+	isGLX_SGIX_hyperpipe = isWExtensionSupported("GLX_SGIX_hyperpipe");
+	
+	localSupportedProcCount		= 8;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_SGIX_hyperpipe ) // || isSEDEnable()
+	{
+
+		glXQueryHyperpipeNetworkSGIX = (PFNGLXQUERYHYPERPIPENETWORKSGIXPROC) getExtensionPtr( "glXQueryHyperpipeNetworkSGIX" );
+		if ( glXQueryHyperpipeNetworkSGIX != 0 )	++localInitializedProcCount;
+
+		glXHyperpipeConfigSGIX = (PFNGLXHYPERPIPECONFIGSGIXPROC) getExtensionPtr( "glXHyperpipeConfigSGIX" );
+		if ( glXHyperpipeConfigSGIX != 0 )	++localInitializedProcCount;
+
+		glXQueryHyperpipeConfigSGIX = (PFNGLXQUERYHYPERPIPECONFIGSGIXPROC) getExtensionPtr( "glXQueryHyperpipeConfigSGIX" );
+		if ( glXQueryHyperpipeConfigSGIX != 0 )	++localInitializedProcCount;
+
+		glXDestroyHyperpipeConfigSGIX = (PFNGLXDESTROYHYPERPIPECONFIGSGIXPROC) getExtensionPtr( "glXDestroyHyperpipeConfigSGIX" );
+		if ( glXDestroyHyperpipeConfigSGIX != 0 )	++localInitializedProcCount;
+
+		glXBindHyperpipeSGIX = (PFNGLXBINDHYPERPIPESGIXPROC) getExtensionPtr( "glXBindHyperpipeSGIX" );
+		if ( glXBindHyperpipeSGIX != 0 )	++localInitializedProcCount;
+
+		glXQueryHyperpipeBestAttribSGIX = (PFNGLXQUERYHYPERPIPEBESTATTRIBSGIXPROC) getExtensionPtr( "glXQueryHyperpipeBestAttribSGIX" );
+		if ( glXQueryHyperpipeBestAttribSGIX != 0 )	++localInitializedProcCount;
+
+		glXHyperpipeAttribSGIX = (PFNGLXHYPERPIPEATTRIBSGIXPROC) getExtensionPtr( "glXHyperpipeAttribSGIX" );
+		if ( glXHyperpipeAttribSGIX != 0 )	++localInitializedProcCount;
+
+		glXQueryHyperpipeAttribSGIX = (PFNGLXQUERYHYPERPIPEATTRIBSGIXPROC) getExtensionPtr( "glXQueryHyperpipeAttribSGIX" );
+		if ( glXQueryHyperpipeAttribSGIX != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_SGIX_hyperpipe || isSEDEnable() )
+	
+	if ( isGLX_SGIX_hyperpipe )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGIX_hyperpipe                                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGIX_hyperpipe                                          : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGIX_hyperpipe") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGIX_hyperpipe                                          : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_SGIX_pbuffer ******
+	
+	isGLX_SGIX_pbuffer = isWExtensionSupported("GLX_SGIX_pbuffer");
+	
+	localSupportedProcCount		= 5;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_SGIX_pbuffer ) // || isSEDEnable()
+	{
+
+		glXCreateGLXPbufferSGIX = (PFNGLXCREATEGLXPBUFFERSGIXPROC) getExtensionPtr( "glXCreateGLXPbufferSGIX" );
+		if ( glXCreateGLXPbufferSGIX != 0 )	++localInitializedProcCount;
+
+		glXDestroyGLXPbufferSGIX = (PFNGLXDESTROYGLXPBUFFERSGIXPROC) getExtensionPtr( "glXDestroyGLXPbufferSGIX" );
+		if ( glXDestroyGLXPbufferSGIX != 0 )	++localInitializedProcCount;
+
+		glXQueryGLXPbufferSGIX = (PFNGLXQUERYGLXPBUFFERSGIXPROC) getExtensionPtr( "glXQueryGLXPbufferSGIX" );
+		if ( glXQueryGLXPbufferSGIX != 0 )	++localInitializedProcCount;
+
+		glXSelectEventSGIX = (PFNGLXSELECTEVENTSGIXPROC) getExtensionPtr( "glXSelectEventSGIX" );
+		if ( glXSelectEventSGIX != 0 )	++localInitializedProcCount;
+
+		glXGetSelectedEventSGIX = (PFNGLXGETSELECTEDEVENTSGIXPROC) getExtensionPtr( "glXGetSelectedEventSGIX" );
+		if ( glXGetSelectedEventSGIX != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_SGIX_pbuffer || isSEDEnable() )
+	
+	if ( isGLX_SGIX_pbuffer )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGIX_pbuffer                                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGIX_pbuffer                                            : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGIX_pbuffer") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGIX_pbuffer                                            : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_SGIX_swap_barrier ******
+	
+	isGLX_SGIX_swap_barrier = isWExtensionSupported("GLX_SGIX_swap_barrier");
+	
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_SGIX_swap_barrier ) // || isSEDEnable()
+	{
+
+		glXBindSwapBarrierSGIX = (PFNGLXBINDSWAPBARRIERSGIXPROC) getExtensionPtr( "glXBindSwapBarrierSGIX" );
+		if ( glXBindSwapBarrierSGIX != 0 )	++localInitializedProcCount;
+
+		glXQueryMaxSwapBarriersSGIX = (PFNGLXQUERYMAXSWAPBARRIERSSGIXPROC) getExtensionPtr( "glXQueryMaxSwapBarriersSGIX" );
+		if ( glXQueryMaxSwapBarriersSGIX != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_SGIX_swap_barrier || isSEDEnable() )
+	
+	if ( isGLX_SGIX_swap_barrier )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGIX_swap_barrier                                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGIX_swap_barrier                                       : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGIX_swap_barrier") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGIX_swap_barrier                                       : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_SGIX_swap_group ******
+	
+	isGLX_SGIX_swap_group = isWExtensionSupported("GLX_SGIX_swap_group");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_SGIX_swap_group ) // || isSEDEnable()
+	{
+
+		glXJoinSwapGroupSGIX = (PFNGLXJOINSWAPGROUPSGIXPROC) getExtensionPtr( "glXJoinSwapGroupSGIX" );
+		if ( glXJoinSwapGroupSGIX != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_SGIX_swap_group || isSEDEnable() )
+	
+	if ( isGLX_SGIX_swap_group )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGIX_swap_group                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGIX_swap_group                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGIX_swap_group") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGIX_swap_group                                         : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_SGIX_video_resize ******
+	
+	isGLX_SGIX_video_resize = isWExtensionSupported("GLX_SGIX_video_resize");
+	
+	localSupportedProcCount		= 5;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_SGIX_video_resize ) // || isSEDEnable()
+	{
+
+		glXBindChannelToWindowSGIX = (PFNGLXBINDCHANNELTOWINDOWSGIXPROC) getExtensionPtr( "glXBindChannelToWindowSGIX" );
+		if ( glXBindChannelToWindowSGIX != 0 )	++localInitializedProcCount;
+
+		glXChannelRectSGIX = (PFNGLXCHANNELRECTSGIXPROC) getExtensionPtr( "glXChannelRectSGIX" );
+		if ( glXChannelRectSGIX != 0 )	++localInitializedProcCount;
+
+		glXQueryChannelRectSGIX = (PFNGLXQUERYCHANNELRECTSGIXPROC) getExtensionPtr( "glXQueryChannelRectSGIX" );
+		if ( glXQueryChannelRectSGIX != 0 )	++localInitializedProcCount;
+
+		glXQueryChannelDeltasSGIX = (PFNGLXQUERYCHANNELDELTASSGIXPROC) getExtensionPtr( "glXQueryChannelDeltasSGIX" );
+		if ( glXQueryChannelDeltasSGIX != 0 )	++localInitializedProcCount;
+
+		glXChannelRectSyncSGIX = (PFNGLXCHANNELRECTSYNCSGIXPROC) getExtensionPtr( "glXChannelRectSyncSGIX" );
+		if ( glXChannelRectSyncSGIX != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_SGIX_video_resize || isSEDEnable() )
+	
+	if ( isGLX_SGIX_video_resize )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGIX_video_resize                                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGIX_video_resize                                       : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGIX_video_resize") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGIX_video_resize                                       : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_SGIX_video_source ******
+	
+	isGLX_SGIX_video_source = isWExtensionSupported("GLX_SGIX_video_source");
+	
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_SGIX_video_source ) // || isSEDEnable()
+	{
+
+		glXCreateGLXVideoSourceSGIX = (PFNGLXCREATEGLXVIDEOSOURCESGIXPROC) getExtensionPtr( "glXCreateGLXVideoSourceSGIX" );
+		if ( glXCreateGLXVideoSourceSGIX != 0 )	++localInitializedProcCount;
+
+		glXDestroyGLXVideoSourceSGIX = (PFNGLXDESTROYGLXVIDEOSOURCESGIXPROC) getExtensionPtr( "glXDestroyGLXVideoSourceSGIX" );
+		if ( glXDestroyGLXVideoSourceSGIX != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_SGIX_video_source || isSEDEnable() )
+	
+	if ( isGLX_SGIX_video_source )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGIX_video_source                                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGIX_video_source                                       : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGIX_video_source") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGIX_video_source                                       : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_SGIX_visual_select_group ******
+	
+	isGLX_SGIX_visual_select_group = isWExtensionSupported("GLX_SGIX_visual_select_group");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_SGIX_visual_select_group )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SGIX_visual_select_group                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SGIX_visual_select_group                                : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SGIX_visual_select_group") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SGIX_visual_select_group                                : not detected." );
+	}
+#endif // POSIX
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeGLX_SUN()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+	
+	// ****** GLX_SUN_get_transparent_index ******
+	
+	isGLX_SUN_get_transparent_index = isWExtensionSupported("GLX_SUN_get_transparent_index");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_SUN_get_transparent_index ) // || isSEDEnable()
+	{
+
+		glXGetTransparentIndexSUN = (PFNGLXGETTRANSPARENTINDEXSUNPROC) getExtensionPtr( "glXGetTransparentIndexSUN" );
+		if ( glXGetTransparentIndexSUN != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_SUN_get_transparent_index || isSEDEnable() )
+	
+	if ( isGLX_SUN_get_transparent_index )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_SUN_get_transparent_index                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_SUN_get_transparent_index                               : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_SUN_get_transparent_index") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_SUN_get_transparent_index                               : not detected." );
+	}
+#endif // POSIX
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeGLX_VERSION()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+	
+	// ****** GLX_VERSION_1_3 ******
+	
+	isGLX_VERSION_1_3 = isWExtensionSupported("GLX_VERSION_1_3");
+	
+	localSupportedProcCount		= 18;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_VERSION_1_3 ) // || isSEDEnable()
+	{
+
+		glXGetFBConfigs = (PFNGLXGETFBCONFIGSPROC) getExtensionPtr( "glXGetFBConfigs" );
+		if ( glXGetFBConfigs != 0 )	++localInitializedProcCount;
+
+		glXChooseFBConfig = (PFNGLXCHOOSEFBCONFIGPROC) getExtensionPtr( "glXChooseFBConfig" );
+		if ( glXChooseFBConfig != 0 )	++localInitializedProcCount;
+
+		glXGetFBConfigAttrib = (PFNGLXGETFBCONFIGATTRIBPROC) getExtensionPtr( "glXGetFBConfigAttrib" );
+		if ( glXGetFBConfigAttrib != 0 )	++localInitializedProcCount;
+
+		glXGetVisualFromFBConfig = (PFNGLXGETVISUALFROMFBCONFIGPROC) getExtensionPtr( "glXGetVisualFromFBConfig" );
+		if ( glXGetVisualFromFBConfig != 0 )	++localInitializedProcCount;
+
+		glXCreateWindow = (PFNGLXCREATEWINDOWPROC) getExtensionPtr( "glXCreateWindow" );
+		if ( glXCreateWindow != 0 )	++localInitializedProcCount;
+
+		glXDestroyWindow = (PFNGLXDESTROYWINDOWPROC) getExtensionPtr( "glXDestroyWindow" );
+		if ( glXDestroyWindow != 0 )	++localInitializedProcCount;
+
+		glXCreatePixmap = (PFNGLXCREATEPIXMAPPROC) getExtensionPtr( "glXCreatePixmap" );
+		if ( glXCreatePixmap != 0 )	++localInitializedProcCount;
+
+		glXDestroyPixmap = (PFNGLXDESTROYPIXMAPPROC) getExtensionPtr( "glXDestroyPixmap" );
+		if ( glXDestroyPixmap != 0 )	++localInitializedProcCount;
+
+		glXCreatePbuffer = (PFNGLXCREATEPBUFFERPROC) getExtensionPtr( "glXCreatePbuffer" );
+		if ( glXCreatePbuffer != 0 )	++localInitializedProcCount;
+
+		glXDestroyPbuffer = (PFNGLXDESTROYPBUFFERPROC) getExtensionPtr( "glXDestroyPbuffer" );
+		if ( glXDestroyPbuffer != 0 )	++localInitializedProcCount;
+
+		glXQueryDrawable = (PFNGLXQUERYDRAWABLEPROC) getExtensionPtr( "glXQueryDrawable" );
+		if ( glXQueryDrawable != 0 )	++localInitializedProcCount;
+
+		glXCreateNewContext = (PFNGLXCREATENEWCONTEXTPROC) getExtensionPtr( "glXCreateNewContext" );
+		if ( glXCreateNewContext != 0 )	++localInitializedProcCount;
+
+		glXMakeContextCurrent = (PFNGLXMAKECONTEXTCURRENTPROC) getExtensionPtr( "glXMakeContextCurrent" );
+		if ( glXMakeContextCurrent != 0 )	++localInitializedProcCount;
+
+		glXGetCurrentReadDrawable = (PFNGLXGETCURRENTREADDRAWABLEPROC) getExtensionPtr( "glXGetCurrentReadDrawable" );
+		if ( glXGetCurrentReadDrawable != 0 )	++localInitializedProcCount;
+
+		glXGetCurrentDisplay = (PFNGLXGETCURRENTDISPLAYPROC) getExtensionPtr( "glXGetCurrentDisplay" );
+		if ( glXGetCurrentDisplay != 0 )	++localInitializedProcCount;
+
+		glXQueryContext = (PFNGLXQUERYCONTEXTPROC) getExtensionPtr( "glXQueryContext" );
+		if ( glXQueryContext != 0 )	++localInitializedProcCount;
+
+		glXSelectEvent = (PFNGLXSELECTEVENTPROC) getExtensionPtr( "glXSelectEvent" );
+		if ( glXSelectEvent != 0 )	++localInitializedProcCount;
+
+		glXGetSelectedEvent = (PFNGLXGETSELECTEDEVENTPROC) getExtensionPtr( "glXGetSelectedEvent" );
+		if ( glXGetSelectedEvent != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_VERSION_1_3 || isSEDEnable() )
+	
+	if ( isGLX_VERSION_1_3 )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_VERSION_1_3                                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_VERSION_1_3                                             : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_VERSION_1_3") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_VERSION_1_3                                             : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_VERSION_1_4 ******
+	
+	isGLX_VERSION_1_4 = isWExtensionSupported("GLX_VERSION_1_4");
+	
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+	
+	if ( isGLX_VERSION_1_4 ) // || isSEDEnable()
+	{
+
+		glXGetProcAddress = (PFNGLXGETPROCADDRESSPROC) getExtensionPtr( "glXGetProcAddress" );
+		if ( glXGetProcAddress != 0 )	++localInitializedProcCount;
+	} // if ( isGLX_VERSION_1_4 || isSEDEnable() )
+	
+	if ( isGLX_VERSION_1_4 )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_VERSION_1_4                                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_VERSION_1_4                                             : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_VERSION_1_4") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_VERSION_1_4                                             : not detected." );
+	}
+#endif // POSIX
+
+} // initialize()
 
 
 void OpenGLExtensionsGen::initializeGL_3DFX()
