@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2007, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2007, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -218,6 +218,36 @@ struct GLE_API OpenGLExtensions
 	 */
 	void reportGLErrors();
 	//@}
+
+
+
+	/**
+	 * @name Hardware/driver identification accessors
+	 *
+	 * @todo getModel()
+	 */
+	//@{
+	enum DriverProviderType
+	{
+		ATI_DRIVERS,
+		NVIDIA_DRIVERS,
+		UNKNOWN_DRIVERS
+	};
+
+	/**
+	 * @brief Returns the provider of the current driver.
+	 *
+	 * @return the provider of the current driver
+	 */
+	const DriverProviderType getDriverProvider() const;
+
+	/**
+	 * @brief Returns the provider of the current driver.
+	 *
+	 * @return the provider of the current driver
+	 */
+	const std::string getDriverProviderString() const;
+	//}
 
 
 

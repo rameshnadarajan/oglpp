@@ -483,6 +483,57 @@ void OpenGLExtensions::reportGLErrors()
 
 
 
+// @todo Must be more robust (case insensitive, match complete word only...)
+const OpenGLExtensions::DriverProviderType OpenGLExtensions::getDriverProvider() const
+{
+	std::string vendor = getVendor();
+
+	// Full match
+	if ( strstr(vendor.c_str(), "ATI Technologies Inc.")  != 0 )
+	{
+		return ATI_DRIVERS;
+	}
+	else if ( strstr(vendor.c_str(), "NVIDIA Corporation")  != 0 )
+	{
+		return NVIDIA_DRIVERS;
+	}
+	// Patrial match
+	else if ( strstr(vendor.c_str(), "NVIDIA")  != 0 )
+	{
+		return NVIDIA_DRIVERS;
+	}
+	if ( strstr(vendor.c_str(), "ATI")  != 0 )
+	{
+		return ATI_DRIVERS;
+	}
+	else
+	{
+		return UNKNOWN_DRIVERS;
+	}
+}
+
+
+
+const std::string OpenGLExtensions::getDriverProviderString() const
+{
+	const DriverProviderType provider = getDriverProvider();
+
+	switch ( provider )
+	{
+		case ATI_DRIVERS:
+			return std::string("ATI");
+
+		case NVIDIA_DRIVERS:
+			return std::string("NVIDIA");
+
+		case UNKNOWN_DRIVERS:
+		default:
+			return std::string("UNKNOWN");
+	}
+}
+
+
+
 std::string OpenGLExtensions::replaceSpaceByEndl( const std::string& strString, const int skipNumElement )
 {
 	std::string strRetString(strString);
@@ -574,12 +625,10 @@ const bool OpenGLExtensions::checkExtension( const char *extName, const char *ex
 	 ** other extension names.  Could use strtok() but the constant
 	 ** string returned by glGetString can be in read-only memory.
 	 */
-	char *p = (char *) extensionString;
-	char *pend;
-	std::string::size_type extNameLen;
+	std::string::size_type extNameLen = std::strlen(extName);
 
-	extNameLen = std::strlen(extName);
-	pend = p + strlen(p);
+	char *p = (char *) extensionString;
+	char *pend = p + strlen(p);
 
 	while (p < pend) 
 	{
