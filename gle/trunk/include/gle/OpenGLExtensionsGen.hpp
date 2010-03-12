@@ -1,4 +1,4 @@
-// This file was generated at Sat Feb 27 15:51:21 2010 with gle, please do not modify.
+// This file was generated at Fri Mar 12 09:48:21 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,11 +17,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Sat Feb 27 15:51:21 2010 with gle, please do not modify.
+ * - Stamp = // This file was generated at Fri Mar 12 09:48:21 2010 with gle, please do not modify.
  * - Number of tokens					= 0
- * - Number of functions				= 1813
- * - Number of extensions found(in headers)	= 455
- * - Number of extensions in OpenGL registry	= 429
+ * - Number of functions				= 1933
+ * - Number of extensions found(in headers)	= 476
+ * - Number of extensions in OpenGL registry	= 448
  */
 
 
@@ -2033,6 +2033,25 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_blend_func_extended is supported, false otherwise.
+	 */
+	bool isGL_ARB_blend_func_extended;
+
+	/**
+	* @brief void glBindFragDataLocationIndexed( GLuint program, GLuint colorNumber, GLuint index, const GLchar *name );
+	*/
+	PFNGLBINDFRAGDATALOCATIONINDEXEDPROC                          glBindFragDataLocationIndexed;
+
+	/**
+	* @brief GLint glGetFragDataIndex( GLuint program, const GLchar *name );
+	*/
+	PFNGLGETFRAGDATAINDEXPROC                                     glGetFragDataIndex;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_color_buffer_float is supported, false otherwise.
 	 */
 	bool isGL_ARB_color_buffer_float;
@@ -2169,6 +2188,25 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_draw_indirect is supported, false otherwise.
+	 */
+	bool isGL_ARB_draw_indirect;
+
+	/**
+	* @brief void glDrawArraysIndirect( GLenum mode, const GLvoid *indirect );
+	*/
+	PFNGLDRAWARRAYSINDIRECTPROC                                   glDrawArraysIndirect;
+
+	/**
+	* @brief void glDrawElementsIndirect( GLenum mode, GLenum type, const GLvoid *indirect );
+	*/
+	PFNGLDRAWELEMENTSINDIRECTPROC                                 glDrawElementsIndirect;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_draw_instanced is supported, false otherwise.
 	 */
 	bool isGL_ARB_draw_instanced;
@@ -2182,6 +2220,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glDrawElementsInstancedARB( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount );
 	*/
 	PFNGLDRAWELEMENTSINSTANCEDARBPROC                             glDrawElementsInstancedARB;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_explicit_attrib_location is supported, false otherwise.
+	 */
+	bool isGL_ARB_explicit_attrib_location;
 
 
 
@@ -2374,6 +2421,199 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glFramebufferTextureFaceARB( GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face );
 	*/
 	PFNGLFRAMEBUFFERTEXTUREFACEARBPROC                            glFramebufferTextureFaceARB;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_gpu_shader5 is supported, false otherwise.
+	 */
+	bool isGL_ARB_gpu_shader5;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_gpu_shader_fp64 is supported, false otherwise.
+	 */
+	bool isGL_ARB_gpu_shader_fp64;
+
+	/**
+	* @brief void glUniform1d( GLint location, GLdouble x );
+	*/
+	PFNGLUNIFORM1DPROC                                            glUniform1d;
+
+	/**
+	* @brief void glUniform2d( GLint location, GLdouble x, GLdouble y );
+	*/
+	PFNGLUNIFORM2DPROC                                            glUniform2d;
+
+	/**
+	* @brief void glUniform3d( GLint location, GLdouble x, GLdouble y, GLdouble z );
+	*/
+	PFNGLUNIFORM3DPROC                                            glUniform3d;
+
+	/**
+	* @brief void glUniform4d( GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+	*/
+	PFNGLUNIFORM4DPROC                                            glUniform4d;
+
+	/**
+	* @brief void glUniform1dv( GLint location, GLsizei count, const GLdouble *value );
+	*/
+	PFNGLUNIFORM1DVPROC                                           glUniform1dv;
+
+	/**
+	* @brief void glUniform2dv( GLint location, GLsizei count, const GLdouble *value );
+	*/
+	PFNGLUNIFORM2DVPROC                                           glUniform2dv;
+
+	/**
+	* @brief void glUniform3dv( GLint location, GLsizei count, const GLdouble *value );
+	*/
+	PFNGLUNIFORM3DVPROC                                           glUniform3dv;
+
+	/**
+	* @brief void glUniform4dv( GLint location, GLsizei count, const GLdouble *value );
+	*/
+	PFNGLUNIFORM4DVPROC                                           glUniform4dv;
+
+	/**
+	* @brief void glUniformMatrix2dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLUNIFORMMATRIX2DVPROC                                     glUniformMatrix2dv;
+
+	/**
+	* @brief void glUniformMatrix3dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLUNIFORMMATRIX3DVPROC                                     glUniformMatrix3dv;
+
+	/**
+	* @brief void glUniformMatrix4dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLUNIFORMMATRIX4DVPROC                                     glUniformMatrix4dv;
+
+	/**
+	* @brief void glUniformMatrix2x3dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLUNIFORMMATRIX2X3DVPROC                                   glUniformMatrix2x3dv;
+
+	/**
+	* @brief void glUniformMatrix2x4dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLUNIFORMMATRIX2X4DVPROC                                   glUniformMatrix2x4dv;
+
+	/**
+	* @brief void glUniformMatrix3x2dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLUNIFORMMATRIX3X2DVPROC                                   glUniformMatrix3x2dv;
+
+	/**
+	* @brief void glUniformMatrix3x4dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLUNIFORMMATRIX3X4DVPROC                                   glUniformMatrix3x4dv;
+
+	/**
+	* @brief void glUniformMatrix4x2dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLUNIFORMMATRIX4X2DVPROC                                   glUniformMatrix4x2dv;
+
+	/**
+	* @brief void glUniformMatrix4x3dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLUNIFORMMATRIX4X3DVPROC                                   glUniformMatrix4x3dv;
+
+	/**
+	* @brief void glGetUniformdv( GLuint program, GLint location, GLdouble *params );
+	*/
+	PFNGLGETUNIFORMDVPROC                                         glGetUniformdv;
+
+	/**
+	* @brief void glProgramUniform1dEXT( GLuint program, GLint location, GLdouble x );
+	*/
+	PFNGLPROGRAMUNIFORM1DEXTPROC                                  glProgramUniform1dEXT;
+
+	/**
+	* @brief void glProgramUniform2dEXT( GLuint program, GLint location, GLdouble x, GLdouble y );
+	*/
+	PFNGLPROGRAMUNIFORM2DEXTPROC                                  glProgramUniform2dEXT;
+
+	/**
+	* @brief void glProgramUniform3dEXT( GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z );
+	*/
+	PFNGLPROGRAMUNIFORM3DEXTPROC                                  glProgramUniform3dEXT;
+
+	/**
+	* @brief void glProgramUniform4dEXT( GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+	*/
+	PFNGLPROGRAMUNIFORM4DEXTPROC                                  glProgramUniform4dEXT;
+
+	/**
+	* @brief void glProgramUniform1dvEXT( GLuint program, GLint location, GLsizei count, const GLdouble *value );
+	*/
+	PFNGLPROGRAMUNIFORM1DVEXTPROC                                 glProgramUniform1dvEXT;
+
+	/**
+	* @brief void glProgramUniform2dvEXT( GLuint program, GLint location, GLsizei count, const GLdouble *value );
+	*/
+	PFNGLPROGRAMUNIFORM2DVEXTPROC                                 glProgramUniform2dvEXT;
+
+	/**
+	* @brief void glProgramUniform3dvEXT( GLuint program, GLint location, GLsizei count, const GLdouble *value );
+	*/
+	PFNGLPROGRAMUNIFORM3DVEXTPROC                                 glProgramUniform3dvEXT;
+
+	/**
+	* @brief void glProgramUniform4dvEXT( GLuint program, GLint location, GLsizei count, const GLdouble *value );
+	*/
+	PFNGLPROGRAMUNIFORM4DVEXTPROC                                 glProgramUniform4dvEXT;
+
+	/**
+	* @brief void glProgramUniformMatrix2dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLPROGRAMUNIFORMMATRIX2DVEXTPROC                           glProgramUniformMatrix2dvEXT;
+
+	/**
+	* @brief void glProgramUniformMatrix3dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLPROGRAMUNIFORMMATRIX3DVEXTPROC                           glProgramUniformMatrix3dvEXT;
+
+	/**
+	* @brief void glProgramUniformMatrix4dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLPROGRAMUNIFORMMATRIX4DVEXTPROC                           glProgramUniformMatrix4dvEXT;
+
+	/**
+	* @brief void glProgramUniformMatrix2x3dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLPROGRAMUNIFORMMATRIX2X3DVEXTPROC                         glProgramUniformMatrix2x3dvEXT;
+
+	/**
+	* @brief void glProgramUniformMatrix2x4dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLPROGRAMUNIFORMMATRIX2X4DVEXTPROC                         glProgramUniformMatrix2x4dvEXT;
+
+	/**
+	* @brief void glProgramUniformMatrix3x2dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLPROGRAMUNIFORMMATRIX3X2DVEXTPROC                         glProgramUniformMatrix3x2dvEXT;
+
+	/**
+	* @brief void glProgramUniformMatrix3x4dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLPROGRAMUNIFORMMATRIX3X4DVEXTPROC                         glProgramUniformMatrix3x4dvEXT;
+
+	/**
+	* @brief void glProgramUniformMatrix4x2dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLPROGRAMUNIFORMMATRIX4X2DVEXTPROC                         glProgramUniformMatrix4x2dvEXT;
+
+	/**
+	* @brief void glProgramUniformMatrix4x3dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+	*/
+	PFNGLPROGRAMUNIFORMMATRIX4X3DVEXTPROC                         glProgramUniformMatrix4x3dvEXT;
 
 
 
@@ -2725,6 +2965,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_occlusion_query2 is supported, false otherwise.
+	 */
+	bool isGL_ARB_occlusion_query2;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_pixel_buffer_object is supported, false otherwise.
 	 */
 	bool isGL_ARB_pixel_buffer_object;
@@ -2790,9 +3039,97 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_sampler_objects is supported, false otherwise.
+	 */
+	bool isGL_ARB_sampler_objects;
+
+	/**
+	* @brief void glGenSamplers( GLsizei count, GLuint *samplers );
+	*/
+	PFNGLGENSAMPLERSPROC                                          glGenSamplers;
+
+	/**
+	* @brief void glDeleteSamplers( GLsizei count, const GLuint *samplers );
+	*/
+	PFNGLDELETESAMPLERSPROC                                       glDeleteSamplers;
+
+	/**
+	* @brief GLboolean glIsSampler( GLuint sampler );
+	*/
+	PFNGLISSAMPLERPROC                                            glIsSampler;
+
+	/**
+	* @brief void glBindSampler( GLenum unit, GLuint sampler );
+	*/
+	PFNGLBINDSAMPLERPROC                                          glBindSampler;
+
+	/**
+	* @brief void glSamplerParameteri( GLuint sampler, GLenum pname, GLint param );
+	*/
+	PFNGLSAMPLERPARAMETERIPROC                                    glSamplerParameteri;
+
+	/**
+	* @brief void glSamplerParameteriv( GLuint sampler, GLenum pname, const GLint *param );
+	*/
+	PFNGLSAMPLERPARAMETERIVPROC                                   glSamplerParameteriv;
+
+	/**
+	* @brief void glSamplerParameterf( GLuint sampler, GLenum pname, GLfloat param );
+	*/
+	PFNGLSAMPLERPARAMETERFPROC                                    glSamplerParameterf;
+
+	/**
+	* @brief void glSamplerParameterfv( GLuint sampler, GLenum pname, const GLfloat *param );
+	*/
+	PFNGLSAMPLERPARAMETERFVPROC                                   glSamplerParameterfv;
+
+	/**
+	* @brief void glSamplerParameterIiv( GLuint sampler, GLenum pname, const GLint *param );
+	*/
+	PFNGLSAMPLERPARAMETERIIVPROC                                  glSamplerParameterIiv;
+
+	/**
+	* @brief void glSamplerParameterIuiv( GLuint sampler, GLenum pname, const GLuint *param );
+	*/
+	PFNGLSAMPLERPARAMETERIUIVPROC                                 glSamplerParameterIuiv;
+
+	/**
+	* @brief void glGetSamplerParameteriv( GLuint sampler, GLenum pname, GLint *params );
+	*/
+	PFNGLGETSAMPLERPARAMETERIVPROC                                glGetSamplerParameteriv;
+
+	/**
+	* @brief void glGetSamplerParameterIiv( GLuint sampler, GLenum pname, GLint *params );
+	*/
+	PFNGLGETSAMPLERPARAMETERIIVPROC                               glGetSamplerParameterIiv;
+
+	/**
+	* @brief void glGetSamplerParameterfv( GLuint sampler, GLenum pname, GLfloat *params );
+	*/
+	PFNGLGETSAMPLERPARAMETERFVPROC                                glGetSamplerParameterfv;
+
+	/**
+	* @brief void glGetSamplerParameterIfv( GLuint sampler, GLenum pname, GLfloat *params );
+	*/
+	PFNGLGETSAMPLERPARAMETERIFVPROC                               glGetSamplerParameterIfv;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_seamless_cube_map is supported, false otherwise.
 	 */
 	bool isGL_ARB_seamless_cube_map;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_shader_bit_encoding is supported, false otherwise.
+	 */
+	bool isGL_ARB_shader_bit_encoding;
 
 
 
@@ -3003,6 +3340,55 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_shader_subroutine is supported, false otherwise.
+	 */
+	bool isGL_ARB_shader_subroutine;
+
+	/**
+	* @brief GLint glGetSubroutineUniformLocation( GLuint program, GLenum shadertype, const GLchar *name );
+	*/
+	PFNGLGETSUBROUTINEUNIFORMLOCATIONPROC                         glGetSubroutineUniformLocation;
+
+	/**
+	* @brief GLuint glGetSubroutineIndex( GLuint program, GLenum shadertype, const GLchar *name );
+	*/
+	PFNGLGETSUBROUTINEINDEXPROC                                   glGetSubroutineIndex;
+
+	/**
+	* @brief void glGetActiveSubroutineUniformiv( GLuint program, GLenum shadertype, GLuint index, GLenum pname, GLint *values );
+	*/
+	PFNGLGETACTIVESUBROUTINEUNIFORMIVPROC                         glGetActiveSubroutineUniformiv;
+
+	/**
+	* @brief void glGetActiveSubroutineUniformName( GLuint program, GLenum shadertype, GLuint index, GLsizei bufsize, GLsizei *length, GLchar *name );
+	*/
+	PFNGLGETACTIVESUBROUTINEUNIFORMNAMEPROC                       glGetActiveSubroutineUniformName;
+
+	/**
+	* @brief void glGetActiveSubroutineName( GLuint program, GLenum shadertype, GLuint index, GLsizei bufsize, GLsizei *length, GLchar *name );
+	*/
+	PFNGLGETACTIVESUBROUTINENAMEPROC                              glGetActiveSubroutineName;
+
+	/**
+	* @brief void glUniformSubroutinesuiv( GLenum shadertype, GLsizei count, const GLuint *indices );
+	*/
+	PFNGLUNIFORMSUBROUTINESUIVPROC                                glUniformSubroutinesuiv;
+
+	/**
+	* @brief void glGetUniformSubroutineuiv( GLenum shadertype, GLint location, GLuint *params );
+	*/
+	PFNGLGETUNIFORMSUBROUTINEUIVPROC                              glGetUniformSubroutineuiv;
+
+	/**
+	* @brief void glGetProgramStageiv( GLuint program, GLenum shadertype, GLenum pname, GLint *values );
+	*/
+	PFNGLGETPROGRAMSTAGEIVPROC                                    glGetProgramStageiv;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_shader_texture_lod is supported, false otherwise.
 	 */
 	bool isGL_ARB_shader_texture_lod;
@@ -3015,6 +3401,45 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_ARB_shading_language_100 is supported, false otherwise.
 	 */
 	bool isGL_ARB_shading_language_100;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_shading_language_include is supported, false otherwise.
+	 */
+	bool isGL_ARB_shading_language_include;
+
+	/**
+	* @brief void glNamedStringARB( GLenum type, GLint namelen, const GLchar *name, GLint stringlen, const GLchar *string );
+	*/
+	PFNGLNAMEDSTRINGARBPROC                                       glNamedStringARB;
+
+	/**
+	* @brief void glDeleteNamedStringARB( GLint namelen, const GLchar *name );
+	*/
+	PFNGLDELETENAMEDSTRINGARBPROC                                 glDeleteNamedStringARB;
+
+	/**
+	* @brief void glCompileShaderIncludeARB( GLuint shader, GLsizei count, const GLchar* *path, const GLint *length );
+	*/
+	PFNGLCOMPILESHADERINCLUDEARBPROC                              glCompileShaderIncludeARB;
+
+	/**
+	* @brief GLboolean glIsNamedStringARB( GLint namelen, const GLchar *name );
+	*/
+	PFNGLISNAMEDSTRINGARBPROC                                     glIsNamedStringARB;
+
+	/**
+	* @brief void glGetNamedStringARB( GLint namelen, const GLchar *name, GLsizei bufSize, GLint *stringlen, GLchar *string );
+	*/
+	PFNGLGETNAMEDSTRINGARBPROC                                    glGetNamedStringARB;
+
+	/**
+	* @brief void glGetNamedStringivARB( GLint namelen, const GLchar *name, GLenum pname, GLint *params );
+	*/
+	PFNGLGETNAMEDSTRINGIVARBPROC                                  glGetNamedStringivARB;
 
 
 
@@ -3083,6 +3508,25 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_ARB_tessellation_shader is supported, false otherwise.
+	 */
+	bool isGL_ARB_tessellation_shader;
+
+	/**
+	* @brief void glPatchParameteri( GLenum pname, GLint value );
+	*/
+	PFNGLPATCHPARAMETERIPROC                                      glPatchParameteri;
+
+	/**
+	* @brief void glPatchParameterfv( GLenum pname, const GLfloat *values );
+	*/
+	PFNGLPATCHPARAMETERFVPROC                                     glPatchParameterfv;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_ARB_texture_border_clamp is supported, false otherwise.
 	 */
 	bool isGL_ARB_texture_border_clamp;
@@ -3100,6 +3544,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glTexBufferARB( GLenum target, GLenum internalformat, GLuint buffer );
 	*/
 	PFNGLTEXBUFFERARBPROC                                         glTexBufferARB;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_texture_buffer_object_rgb32 is supported, false otherwise.
+	 */
+	bool isGL_ARB_texture_buffer_object_rgb32;
 
 
 
@@ -3144,6 +3597,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glGetCompressedTexImageARB( GLenum target, GLint level, GLvoid *img );
 	*/
 	PFNGLGETCOMPRESSEDTEXIMAGEARBPROC                             glGetCompressedTexImageARB;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_texture_compression_bptc is supported, false otherwise.
+	 */
+	bool isGL_ARB_texture_compression_bptc;
 
 
 
@@ -3299,6 +3761,121 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_ARB_texture_rg is supported, false otherwise.
 	 */
 	bool isGL_ARB_texture_rg;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_texture_rgb10_a2ui is supported, false otherwise.
+	 */
+	bool isGL_ARB_texture_rgb10_a2ui;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_texture_swizzle is supported, false otherwise.
+	 */
+	bool isGL_ARB_texture_swizzle;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_timer_query is supported, false otherwise.
+	 */
+	bool isGL_ARB_timer_query;
+
+	/**
+	* @brief void glQueryCounter( GLuint id, GLenum target );
+	*/
+	PFNGLQUERYCOUNTERPROC                                         glQueryCounter;
+
+	/**
+	* @brief void glGetQueryObjecti64v( GLuint id, GLenum pname, GLint64 *params );
+	*/
+	PFNGLGETQUERYOBJECTI64VPROC                                   glGetQueryObjecti64v;
+
+	/**
+	* @brief void glGetQueryObjectui64v( GLuint id, GLenum pname, GLuint64 *params );
+	*/
+	PFNGLGETQUERYOBJECTUI64VPROC                                  glGetQueryObjectui64v;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_transform_feedback2 is supported, false otherwise.
+	 */
+	bool isGL_ARB_transform_feedback2;
+
+	/**
+	* @brief void glBindTransformFeedback( GLenum target, GLuint id );
+	*/
+	PFNGLBINDTRANSFORMFEEDBACKPROC                                glBindTransformFeedback;
+
+	/**
+	* @brief void glDeleteTransformFeedbacks( GLsizei n, const GLuint *ids );
+	*/
+	PFNGLDELETETRANSFORMFEEDBACKSPROC                             glDeleteTransformFeedbacks;
+
+	/**
+	* @brief void glGenTransformFeedbacks( GLsizei n, GLuint *ids );
+	*/
+	PFNGLGENTRANSFORMFEEDBACKSPROC                                glGenTransformFeedbacks;
+
+	/**
+	* @brief GLboolean glIsTransformFeedback( GLuint id );
+	*/
+	PFNGLISTRANSFORMFEEDBACKPROC                                  glIsTransformFeedback;
+
+	/**
+	* @brief void glPauseTransformFeedback( void );
+	*/
+	PFNGLPAUSETRANSFORMFEEDBACKPROC                               glPauseTransformFeedback;
+
+	/**
+	* @brief void glResumeTransformFeedback( void );
+	*/
+	PFNGLRESUMETRANSFORMFEEDBACKPROC                              glResumeTransformFeedback;
+
+	/**
+	* @brief void glDrawTransformFeedback( GLenum mode, GLuint id );
+	*/
+	PFNGLDRAWTRANSFORMFEEDBACKPROC                                glDrawTransformFeedback;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_transform_feedback3 is supported, false otherwise.
+	 */
+	bool isGL_ARB_transform_feedback3;
+
+	/**
+	* @brief void glDrawTransformFeedbackStream( GLenum mode, GLuint id, GLuint stream );
+	*/
+	PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC                          glDrawTransformFeedbackStream;
+
+	/**
+	* @brief void glBeginQueryIndexed( GLenum target, GLuint index, GLuint id );
+	*/
+	PFNGLBEGINQUERYINDEXEDPROC                                    glBeginQueryIndexed;
+
+	/**
+	* @brief void glEndQueryIndexed( GLenum target, GLuint index );
+	*/
+	PFNGLENDQUERYINDEXEDPROC                                      glEndQueryIndexed;
+
+	/**
+	* @brief void glGetQueryIndexediv( GLenum target, GLuint index, GLenum pname, GLint *params );
+	*/
+	PFNGLGETQUERYINDEXEDIVPROC                                    glGetQueryIndexediv;
 
 
 
@@ -3876,6 +4453,205 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief GLint glGetAttribLocationARB( GLhandleARB programObj, const GLcharARB *name );
 	*/
 	PFNGLGETATTRIBLOCATIONARBPROC                                 glGetAttribLocationARB;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_vertex_type_2_10_10_10_rev is supported, false otherwise.
+	 */
+	bool isGL_ARB_vertex_type_2_10_10_10_rev;
+
+	/**
+	* @brief void glVertexP2ui( GLenum type, GLuint value );
+	*/
+	PFNGLVERTEXP2UIPROC                                           glVertexP2ui;
+
+	/**
+	* @brief void glVertexP2uiv( GLenum type, const GLuint *value );
+	*/
+	PFNGLVERTEXP2UIVPROC                                          glVertexP2uiv;
+
+	/**
+	* @brief void glVertexP3ui( GLenum type, GLuint value );
+	*/
+	PFNGLVERTEXP3UIPROC                                           glVertexP3ui;
+
+	/**
+	* @brief void glVertexP3uiv( GLenum type, const GLuint *value );
+	*/
+	PFNGLVERTEXP3UIVPROC                                          glVertexP3uiv;
+
+	/**
+	* @brief void glVertexP4ui( GLenum type, GLuint value );
+	*/
+	PFNGLVERTEXP4UIPROC                                           glVertexP4ui;
+
+	/**
+	* @brief void glVertexP4uiv( GLenum type, const GLuint *value );
+	*/
+	PFNGLVERTEXP4UIVPROC                                          glVertexP4uiv;
+
+	/**
+	* @brief void glTexCoordP1ui( GLenum type, GLuint coords );
+	*/
+	PFNGLTEXCOORDP1UIPROC                                         glTexCoordP1ui;
+
+	/**
+	* @brief void glTexCoordP1uiv( GLenum type, const GLuint *coords );
+	*/
+	PFNGLTEXCOORDP1UIVPROC                                        glTexCoordP1uiv;
+
+	/**
+	* @brief void glTexCoordP2ui( GLenum type, GLuint coords );
+	*/
+	PFNGLTEXCOORDP2UIPROC                                         glTexCoordP2ui;
+
+	/**
+	* @brief void glTexCoordP2uiv( GLenum type, const GLuint *coords );
+	*/
+	PFNGLTEXCOORDP2UIVPROC                                        glTexCoordP2uiv;
+
+	/**
+	* @brief void glTexCoordP3ui( GLenum type, GLuint coords );
+	*/
+	PFNGLTEXCOORDP3UIPROC                                         glTexCoordP3ui;
+
+	/**
+	* @brief void glTexCoordP3uiv( GLenum type, const GLuint *coords );
+	*/
+	PFNGLTEXCOORDP3UIVPROC                                        glTexCoordP3uiv;
+
+	/**
+	* @brief void glTexCoordP4ui( GLenum type, GLuint coords );
+	*/
+	PFNGLTEXCOORDP4UIPROC                                         glTexCoordP4ui;
+
+	/**
+	* @brief void glTexCoordP4uiv( GLenum type, const GLuint *coords );
+	*/
+	PFNGLTEXCOORDP4UIVPROC                                        glTexCoordP4uiv;
+
+	/**
+	* @brief void glMultiTexCoordP1ui( GLenum texture, GLenum type, GLuint coords );
+	*/
+	PFNGLMULTITEXCOORDP1UIPROC                                    glMultiTexCoordP1ui;
+
+	/**
+	* @brief void glMultiTexCoordP1uiv( GLenum texture, GLenum type, const GLuint *coords );
+	*/
+	PFNGLMULTITEXCOORDP1UIVPROC                                   glMultiTexCoordP1uiv;
+
+	/**
+	* @brief void glMultiTexCoordP2ui( GLenum texture, GLenum type, GLuint coords );
+	*/
+	PFNGLMULTITEXCOORDP2UIPROC                                    glMultiTexCoordP2ui;
+
+	/**
+	* @brief void glMultiTexCoordP2uiv( GLenum texture, GLenum type, const GLuint *coords );
+	*/
+	PFNGLMULTITEXCOORDP2UIVPROC                                   glMultiTexCoordP2uiv;
+
+	/**
+	* @brief void glMultiTexCoordP3ui( GLenum texture, GLenum type, GLuint coords );
+	*/
+	PFNGLMULTITEXCOORDP3UIPROC                                    glMultiTexCoordP3ui;
+
+	/**
+	* @brief void glMultiTexCoordP3uiv( GLenum texture, GLenum type, const GLuint *coords );
+	*/
+	PFNGLMULTITEXCOORDP3UIVPROC                                   glMultiTexCoordP3uiv;
+
+	/**
+	* @brief void glMultiTexCoordP4ui( GLenum texture, GLenum type, GLuint coords );
+	*/
+	PFNGLMULTITEXCOORDP4UIPROC                                    glMultiTexCoordP4ui;
+
+	/**
+	* @brief void glMultiTexCoordP4uiv( GLenum texture, GLenum type, const GLuint *coords );
+	*/
+	PFNGLMULTITEXCOORDP4UIVPROC                                   glMultiTexCoordP4uiv;
+
+	/**
+	* @brief void glNormalP3ui( GLenum type, GLuint coords );
+	*/
+	PFNGLNORMALP3UIPROC                                           glNormalP3ui;
+
+	/**
+	* @brief void glNormalP3uiv( GLenum type, const GLuint *coords );
+	*/
+	PFNGLNORMALP3UIVPROC                                          glNormalP3uiv;
+
+	/**
+	* @brief void glColorP3ui( GLenum type, GLuint color );
+	*/
+	PFNGLCOLORP3UIPROC                                            glColorP3ui;
+
+	/**
+	* @brief void glColorP3uiv( GLenum type, const GLuint *color );
+	*/
+	PFNGLCOLORP3UIVPROC                                           glColorP3uiv;
+
+	/**
+	* @brief void glColorP4ui( GLenum type, GLuint color );
+	*/
+	PFNGLCOLORP4UIPROC                                            glColorP4ui;
+
+	/**
+	* @brief void glColorP4uiv( GLenum type, const GLuint *color );
+	*/
+	PFNGLCOLORP4UIVPROC                                           glColorP4uiv;
+
+	/**
+	* @brief void glSecondaryColorP3ui( GLenum type, GLuint color );
+	*/
+	PFNGLSECONDARYCOLORP3UIPROC                                   glSecondaryColorP3ui;
+
+	/**
+	* @brief void glSecondaryColorP3uiv( GLenum type, const GLuint *color );
+	*/
+	PFNGLSECONDARYCOLORP3UIVPROC                                  glSecondaryColorP3uiv;
+
+	/**
+	* @brief void glVertexAttribP1ui( GLuint index, GLenum type, GLboolean normalized, GLuint value );
+	*/
+	PFNGLVERTEXATTRIBP1UIPROC                                     glVertexAttribP1ui;
+
+	/**
+	* @brief void glVertexAttribP1uiv( GLuint index, GLenum type, GLboolean normalized, const GLuint *value );
+	*/
+	PFNGLVERTEXATTRIBP1UIVPROC                                    glVertexAttribP1uiv;
+
+	/**
+	* @brief void glVertexAttribP2ui( GLuint index, GLenum type, GLboolean normalized, GLuint value );
+	*/
+	PFNGLVERTEXATTRIBP2UIPROC                                     glVertexAttribP2ui;
+
+	/**
+	* @brief void glVertexAttribP2uiv( GLuint index, GLenum type, GLboolean normalized, const GLuint *value );
+	*/
+	PFNGLVERTEXATTRIBP2UIVPROC                                    glVertexAttribP2uiv;
+
+	/**
+	* @brief void glVertexAttribP3ui( GLuint index, GLenum type, GLboolean normalized, GLuint value );
+	*/
+	PFNGLVERTEXATTRIBP3UIPROC                                     glVertexAttribP3ui;
+
+	/**
+	* @brief void glVertexAttribP3uiv( GLuint index, GLenum type, GLboolean normalized, const GLuint *value );
+	*/
+	PFNGLVERTEXATTRIBP3UIVPROC                                    glVertexAttribP3uiv;
+
+	/**
+	* @brief void glVertexAttribP4ui( GLuint index, GLenum type, GLboolean normalized, GLuint value );
+	*/
+	PFNGLVERTEXATTRIBP4UIPROC                                     glVertexAttribP4ui;
+
+	/**
+	* @brief void glVertexAttribP4uiv( GLuint index, GLenum type, GLboolean normalized, const GLuint *value );
+	*/
+	PFNGLVERTEXATTRIBP4UIVPROC                                    glVertexAttribP4uiv;
 
 
 
@@ -12849,10 +13625,23 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	*/
 	PFNGLFRAMEBUFFERTEXTUREPROC                                   glFramebufferTexture;
 
+
+
+
+
 	/**
-	* @brief void glFramebufferTextureFace( GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face );
-	*/
-	PFNGLFRAMEBUFFERTEXTUREFACEPROC                               glFramebufferTextureFace;
+	 * @brief Returns \c true if \b GL_VERSION_3_3 is supported, false otherwise.
+	 */
+	bool isGL_VERSION_3_3;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_VERSION_4_0 is supported, false otherwise.
+	 */
+	bool isGL_VERSION_4_0;
 
 
 
