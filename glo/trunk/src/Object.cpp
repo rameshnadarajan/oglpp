@@ -11,10 +11,12 @@ namespace glo
 {
 
 
+
 Object::Object()
 :	m_object(0)
 {
 }
+
 
 
 Object::~Object()
@@ -22,10 +24,19 @@ Object::~Object()
 }
 
 
+
 const bool Object::isEmpty() const
 {
 	return m_object == 0;
 }
+
+
+
+const GLuint Object::getName()
+{
+	return m_object;
+}
+
 
 
 } // namespace glo

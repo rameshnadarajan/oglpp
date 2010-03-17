@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -6,7 +6,7 @@
 #ifndef _GLO_TEXTURE_HPP
 #define _GLO_TEXTURE_HPP
 
-#include "glo/IResource.hpp"
+#include "glo/Object.hpp"
 
 
 
@@ -14,13 +14,14 @@ namespace glo
 {
 
 /**
- * @brief Encapsulation of a texture object.
+ * @brief Encapsulation of a texture object
  * 
+ * @todo uses isBound() (assert at the beginning of mehtod).
  * @todo adds cache of opengl accessors used in getSize()
  * 
  * @todo Improve documentation, error handling.
  */
-struct GLO_API Texture : public IResource
+struct Texture : public Object
 {
 	/**
 	 * @name Constructor and destructor
@@ -28,13 +29,6 @@ struct GLO_API Texture : public IResource
 	//@{
 
 protected:
-	/**
-	 * brief Constructor
-	 * 
-	 * post getScaleFactors() == ( 1.f, 1.f, 1.f )
-	 */
-	//Texture( GLenum target );
-
 	/**
 	 * @brief Constructor
 	 * 
@@ -47,7 +41,7 @@ public:
 	/**
 	 * @brief Destructor
 	 */
-	virtual ~Texture();
+	GLO_API virtual ~Texture();
 	//@}
 
 
@@ -57,50 +51,34 @@ public:
 	 */
 	//@{
 
-	/**
-	 * @brief Generates the texture name.
-	 * 
-	 * @pre isEmpty() must return true.
-	 */
-	void generate();
+	GLO_API void generate();
+
+	GLO_API void release();
+
+	GLO_API void bind() const;
+
+	//@}
+
+
 
 	/**
-	 * @brief Deletes the texture name.
+	 * @name Texture unit accessor
 	 */
-	virtual void release();
+	//@{
 
 	/**
 	 * @brief Activates the desired texture unit.
+	 *
+	 * @param unit		texture unit selector. Its value ranges from GL_TEXTURE0_ARB to GL_TEXTURE31_ARB
 	 */
-	static void active( GLenum unit );
+	GLO_API static void active( const GLenum unit );
+
+	//@}
+
+
 
 	/**
-	 * @brief Binds the texture name to the appropriate texture target.
-	 * 
-	 * @pre !isEmpty()
-	 */
-	void bind();
-
-	/**
-	 * @brief glTexImage (1D or 2D or 3D)
-	 */
-	virtual void texImage(	const GLint level, const GLint internalFormat,
-							const GLsizei width, const GLsizei height, const GLsizei depth,
-							const GLint border,
-							const GLenum format, const GLenum type,
-							const GLvoid *pixels = 0 ) const = 0;
-
-	/**
-	 * @brief glTexSubImage (1D or 2D or 3D)
-	 */
-	virtual void texSubImage(	const GLint level,
-								const GLint xoffset, const GLint yoffset, const GLint zoffset,
-								const GLsizei width, const GLsizei height, const GLsizei depth,
-								const GLenum format, const GLenum type,
-								const GLvoid *pixels = 0 ) const = 0;
-
-	/**
-	 * @todo glCopyTexImage (1D or 2D)
+	 * @todo Equivalent to glCopyTexImage (1D or 2D)
 	 * @remarks not in 3D
 	 */
 	/*virtual void copyTexImage(	const GLint level, const GLenum internalFormat,
@@ -109,7 +87,7 @@ public:
 							const GLint border ) const = 0;*/
 
 	/**
-	 * @todo glCopyTexSubImage (1D or 2D or 3D)
+	 * @todo Equivalent to glCopyTexSubImage (1D or 2D or 3D)
 	 */
 	/*virtual void copyTexSubImage(	const GLint level,
 							const GLint xoffset, const GLint yoffset, const GLint zoffset,
@@ -118,58 +96,131 @@ public:
 							const GLvoid *pixels = 0 ) const = 0;*/
 
 
-	void parameter( GLenum pname, GLint i );
+	/**
+	 * @name Texture image specification
+	 */
+	//@{
 
-	void parameter( GLenum pname, GLfloat f );
+	/**
+	 * @brief Equivalent to glTexImage (1D or 2D or 3D)
+	 */
+	GLO_API virtual void texImage(	const GLint level, const GLint internalFormat,
+									const GLsizei width, const GLsizei height, const GLsizei depth,
+									const GLint border,
+									const GLenum format, const GLenum type,
+									const GLvoid *pixels = 0 ) const = 0;
 
-	void parameter( GLenum pname, GLint * ip );
+	/**
+	 * @brief Equivalent to glTexSubImage (1D or 2D or 3D)
+	 */
+	GLO_API virtual void texSubImage(	const GLint level,
+										const GLint xoffset, const GLint yoffset, const GLint zoffset,
+										const GLsizei width, const GLsizei height, const GLsizei depth,
+										const GLenum format, const GLenum type,
+										const GLvoid *pixels = 0 ) const = 0;
 
-	void parameter( GLenum pname, GLfloat * fp );
-
-
-
-	void env( GLenum pname, GLfloat f );
-
-	void env( GLenum pname, GLint i );
-
-	void env( GLenum pname, GLfloat *f );
-
-	void env( GLenum pname, GLint *i );
-
-
-
-	void enable();
-
-	void disable();
 	//@}
 
 
 
 	/**
-	 * @name Accessors
+	 * @name Texture parameters
+	 */
+	//@{
+
+	GLO_API void parameter( const GLenum pname, const GLint i );
+
+	GLO_API void parameter( const GLenum pname, const GLfloat f );
+
+	GLO_API void parameter( const GLenum pname, GLint * ip );
+
+	GLO_API void parameter( const GLenum pname, GLfloat * fp );
+
+	//@}
+
+
+
+	/**
+	 * @name Mipmap generation
 	 */
 	//@{
 
 	/**
-	 * @brief Tests if this class stored a texture.
+	 * @brief Enables or disables the automatic mipmap generation depending on the value of the parameter isEnabled.
 	 *
-	 * @return true this class stored a texture, false if not.
+	 * @param isEnabled		true when the mipmap generation must be enabled, false otherwise
+	 *
+	 * When enabled, this method introduces a side effect to any modification of the levelbase of a mipmap array, wherein all higher levels of
+	 * the mipmap pyramid are recomputed automatically by successive filtering of the base level array.
 	 */
-	bool isEmpty() const;
+	GLO_API void setAutomaticMipmapGenerationEnabled( const bool isEnabled = true );
+
+	/**
+	 * @brief Generates a complete set of mipmaps for a texture object.
+	 */
+	GLO_API void generateMipmap();
+	//@}
+
+
+
+	/**
+	 * @name Texture environments and texture functions
+	 */
+	//@{
+	GLO_API void env( const GLenum pname, const GLfloat f );
+
+	GLO_API void env( const GLenum pname, const GLint i );
+
+	GLO_API void env( const GLenum pname, GLfloat *f );
+
+	GLO_API void env( const GLenum pname, GLint *i );
+	//@}
+
+
+
+	/**
+	 * @name Texture application
+	 */
+	//@{
+
+	/**
+	 * @brief Enables or disables the texture application depending on the value of the parameter isEnabled.
+	 *
+	 * @param isEnabled		true when texture application must be enabled, false otherwise
+	 */
+	GLO_API void enable( const bool isEnabled );
+
+	/**
+	 * @brief Enables texture application
+	 */
+	GLO_API void enable();
+
+	/**
+	 * @brief Disables texture application
+	 */	
+	GLO_API void disable();
+	//@}
+
+
+
+	/**
+	 * @name Texture queries
+	 */
+	//@{
 
 	/**
 	 * @brief Returns the width of the texture border.
 	 *
 	 * @return the width of the border
 	 */
-	const GLint getBorderWidth() const;
+	GLO_API const GLint getBorderWidth() const;
 	
 	/**
 	 * @brief Returns the width of the texture.
 	 *
 	 * @return the width of the texture
 	 */
-	const GLint getWidth() const;
+	GLO_API const GLint getWidth() const;
 
 	/**
 	 * @brief Returns the size of the texture and the width of the texture border.
@@ -184,7 +235,7 @@ public:
 	 *
 	 * @todo adds isBinded() and uses it
 	 */
-	virtual const GLint getSize( int32& width, int32& height, int32& depth ) const = 0;
+	GLO_API virtual const GLint getSize( int32& width, int32& height, int32& depth ) const = 0;
 
 	//@}
 
@@ -202,8 +253,8 @@ public:
 	 * 
 	 * @return the scale factors (3 values).
 	 */
-	const float*	getScaleFactors() const;
-	void			getScaleFactors( float& x, float& y, float& z) const;
+	GLO_API const float*	getScaleFactors() const;
+	GLO_API void			getScaleFactors( float& x, float& y, float& z) const;
 	
 	/**
 	 * @brief Sets the scale factors.
@@ -212,14 +263,9 @@ public:
 	 * @param y		new scale factor
 	 * @param z		new scale factor
 	 */
-	void			setScaleFactors( const float x, const float y, const float z );
+	GLO_API void			setScaleFactors( const float x, const float y, const float z );
 	//@}
 
-
-	/**
-	 * @brief Returns the name of the OpenGL object
-	 */
-	GLuint getName();
 
 
 protected:
@@ -228,11 +274,6 @@ protected:
 	 */
 	GLenum	m_target;
 
-	/**
-	 * @brief Name of the texture.
-	 */	
-	GLuint	m_texture;
-	
 	/**
 	 * @brief Scale factors.
 	 */

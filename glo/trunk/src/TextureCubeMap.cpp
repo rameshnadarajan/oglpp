@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -15,6 +15,18 @@ namespace glo
 TextureCubeMap::TextureCubeMap()
 {
 	m_target = getTarget(0);
+}
+
+
+
+const bool TextureCubeMap::isBound() const
+{
+	assert( !isEmpty() );
+
+	GLint currentBinding;
+	glGetIntegerv( GL_TEXTURE_BINDING_CUBE_MAP, &currentBinding );
+
+	return ( currentBinding == m_object );
 }
 
 

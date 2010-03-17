@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -33,6 +33,9 @@ struct GLO_API TextureCubeMap : public Texture2D
 	//@}
 
 
+
+	// Overridden	
+	const bool isBound() const;
 
 	// Overridden
 	void texImage(	const GLint level, const GLint internalFormat,

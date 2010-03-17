@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2009, Nicolas Papier.
+// GLE - Copyright (C) 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -30,6 +30,13 @@ struct GLO_API Texture2DRect : public Texture2D
 	 */
 	Texture2DRect();
 
+	//@}
+
+	/**
+	 * @name Accessors
+	 */
+	//@{
+	const bool isBound() const;
 	//@}
 };
 

@@ -96,6 +96,11 @@ struct Object : public IResource
 	 * @return true if the underlying OpenGL object is bound, false otherwise.
 	 */
 	GLO_API virtual const bool isBound() const=0;
+
+	/**
+	 * @brief Returns the name of the underlying OpenGL object
+	 */
+	GLO_API const GLuint getName();
 	//@}
 
 
