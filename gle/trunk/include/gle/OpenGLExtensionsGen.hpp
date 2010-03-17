@@ -1,4 +1,4 @@
-// This file was generated at Fri Mar 12 09:48:21 2010 with gle, please do not modify.
+// This file was generated at Wed Mar 17 10:14:23 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,7 +17,7 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Fri Mar 12 09:48:21 2010 with gle, please do not modify.
+ * - Stamp = // This file was generated at Wed Mar 17 10:14:23 2010 with gle, please do not modify.
  * - Number of tokens					= 0
  * - Number of functions				= 1933
  * - Number of extensions found(in headers)	= 476
