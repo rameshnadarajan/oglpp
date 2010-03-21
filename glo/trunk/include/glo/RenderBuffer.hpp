@@ -39,7 +39,7 @@ struct RenderBuffer : public Object, public IFrameBufferAttachableImage
 	 * @brief Destructor
 	 */
 	GLO_API ~RenderBuffer();
-	
+
 	//@}
 
 
@@ -113,6 +113,13 @@ struct RenderBuffer : public Object, public IFrameBufferAttachableImage
 	// @todo boolean IsRenderbuffer(uint renderbuffer);
 
 	//@}
+
+protected:
+	// Overridden
+	void attach( FrameBufferObject * fbo, const GLenum attachment );
+
+	// Overridden
+	void detach( FrameBufferObject * fbo, const GLenum attachment );
 };
 
 

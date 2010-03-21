@@ -31,6 +31,18 @@ struct IFrameBufferAttachableImage
 	//@{
 
 	/**
+	 * @brief Tests if this object is attached to the given frame buffer object
+	 *
+	 * @param fbo			the framebuffer object where attachement must be tested
+	 *
+	 * @return true if this object is attached to the frame buffer object, false otherwise.
+	 */
+	GLO_API const bool isAttached( FrameBufferObject * fbo );
+
+protected:
+	friend struct FrameBufferObject;
+
+	/**
 	 * @brief Attaches this object to the given frame buffer object
 	 *
 	 * @param fbo			the framebuffer object where this attachable image would be attached
@@ -46,7 +58,11 @@ struct IFrameBufferAttachableImage
 	 */
 	GLO_API virtual void detach( FrameBufferObject * fbo, const GLenum attachment );
 
+
 	//@}
+
+
+	
 
 protected:
 	typedef std::list< FrameBufferObject * > FBOListType;

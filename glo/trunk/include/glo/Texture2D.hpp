@@ -6,6 +6,7 @@
 #ifndef _GLO_TEXTURE2D_HPP
 #define _GLO_TEXTURE2D_HPP
 
+#include "glo/IFrameBufferAttachableImage.hpp"
 #include "glo/Texture1D.hpp"
 
 
@@ -16,7 +17,7 @@ namespace glo
 /**
  * @brief Encapsulation of a 2D texture object.
  */
-struct GLO_API Texture2D : public Texture1D
+struct GLO_API Texture2D : public Texture1D, public IFrameBufferAttachableImage
 {
 	/**
 	 * @name Constructor/Destructor
@@ -67,6 +68,12 @@ struct GLO_API Texture2D : public Texture1D
 						const GLvoid *pixels = 0 ) const;
 
 protected:
+
+	// Overridden
+	void attach( FrameBufferObject * fbo, const GLenum attachment );
+	// Overridden
+	void detach( FrameBufferObject * fbo, const GLenum attachment );
+
 	/**
 	 * @name Cache for OpenGL accessors
 	 */

@@ -7,10 +7,16 @@
 #define _GLO_FRAMEBUFFEROBJECT_HPP
 
 #include <string>
+#include <vector>
 
 #include "glo/Object.hpp"
 
-namespace glo { struct Texture2D; }
+namespace glo 
+{
+	struct IFrameBufferAttachableImage;
+	struct RenderBuffer;
+	struct Texture2D; 
+}
 
 
 
@@ -20,7 +26,7 @@ namespace glo
 /**
  * @brief Frame buffer object (FBO) class
  * 
- * This class is an encapsulation of the OpenGL extension named GL_EXT_framebuffer_object
+ * This class is an encapsulation of the OpenGL extension named GL_ARB_framebuffer_object
  */
 struct FrameBufferObject : public Object
 {
@@ -95,7 +101,7 @@ struct FrameBufferObject : public Object
 
 
 	/**
-	 * @name Specific fbo accessors
+	 * @name Framebuffer completeness
 	 */
 	//@{
 	
@@ -116,34 +122,97 @@ struct FrameBufferObject : public Object
 	 * @return the frame buffer object status
 	 */
 	GLO_API const GLenum getStatus() const;
+
 	//@}
 
 
 
 	/**
-	 * @name Attachements
+	 * @name Attaching images
 	 *
-	 * @todo attach Renderbuffer
+	 * @todo depthAndStencil
 	 */
 	//@{
 
-	// texture->isEmpty() == false
-	// isBound()
-	GLO_API void attachColor( glo::Texture2D * texture );
-	// isBound()	
-	GLO_API void detachColor();
+	/**
+	 * @brief Attaches the given object to one of the color buffer of the framebuffer.
+	 *
+	 * @param attachableObject	the object to attach
+	 * @param index				a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
+	 *
+	 * @pre isBound()
+	 * @pre !attachableObject->isEmpty()
+	 */
+	GLO_API void attachColor( glo::IFrameBufferAttachableImage * attachableObject, const int index = 0 );
 
-	// texture->isEmpty() == false
-	// isBound()
-	GLO_API void attachDepth( glo::Texture2D * texture );
-	// isBound()
+	/**
+	 * @brief Detaches an object to one of the color buffer of the framebuffer.
+	 *
+	 * @param index				a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
+	 *
+	 * @pre isBound()
+	 */
+	GLO_API void detachColor( const int index = 0 );
+
+	/**
+	 * @brief Detaches objects to all color buffers of the framebuffer.
+	 *
+	 * @pre isBound()
+	 */
+	GLO_API void detachColors();
+
+
+	/**
+	 * @brief Attaches the given object to depth buffer of the framebuffer.
+	 *
+	 * @param attachableObject	the object to attach
+	 *
+	 * @pre isBound()
+	 * @pre !attachableObject->isEmpty()
+	 */
+	GLO_API void attachDepth( glo::IFrameBufferAttachableImage * attachableObject );
+
+	/**
+	 * @brief Detaches an object to the depth buffer of the framebuffer.
+	 *
+	 * @pre isBound()
+	 */
 	GLO_API void detachDepth();
 
-	// @todo attachStencil()
+
+	/**
+	 * @brief Attaches the given object to stencil buffer of the framebuffer.
+	 *
+	 * @param attachableObject	the object to attach
+	 *
+	 * @pre isBound()
+	 * @pre !attachableObject->isEmpty()
+	 */
+	GLO_API void attachStencil( glo::IFrameBufferAttachableImage * attachableObject );
+
+	/**
+	 * @brief Detaches an object to the stencil buffer of the framebuffer.
+	 *
+	 * @pre isBound()
+	 */
+	GLO_API void detachStencil();	
+
+
+	/**
+	 * @brief Detaches objects to all buffers of the framebuffer.
+	 *
+	 * @pre isBound()
+	 */
+	GLO_API void detach();
 
 	//@}
 
 
+
+	/**
+	 * @name Selecting a buffer for writing
+	 */
+	//@{
 
 	/**
 	 * @brief Sets rendering to depth only.
@@ -154,6 +223,18 @@ struct FrameBufferObject : public Object
 	 *						Sets DrawBuffer and ReadBuffer to first color attachement when depthOnly is false.
 	 */
 	GLO_API void renderDepthOnly( const bool depthOnly = true );
+
+	//@}
+
+	// @todo query for MAX_COLOR_ATTACHMENTS
+
+private:
+	std::vector< glo::IFrameBufferAttachableImage * > m_color;		///< array of color buffer attachments
+	glo::IFrameBufferAttachableImage * m_depth;						///< depth buffer attachment
+	glo::IFrameBufferAttachableImage * m_stencil;					///< stencil buffer attachment
+
+	// @todo 8 is the GL_MAX_COLOR_ATTACHMENTS
+	static const int m_maxColorAttachments = 8;								///< the maximum number of color attachments
 };
 
 

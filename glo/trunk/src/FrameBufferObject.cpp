@@ -5,6 +5,7 @@
 
 #include "glo/FrameBufferObject.hpp"
 
+#include "glo/RenderBuffer.hpp"
 #include "glo/Texture2D.hpp"
 #include <iostream>
 
@@ -16,7 +17,11 @@ namespace glo
 
 
 FrameBufferObject::FrameBufferObject()
-{}
+:	m_color( m_maxColorAttachments, 0 ),
+	m_depth(0),
+	m_stencil(0)
+{
+}
 
 
 
@@ -51,8 +56,7 @@ void FrameBufferObject::release()
 	{
 		bind();
 
-		detachColor();
-		detachDepth();
+		detach();
 
 		glDeleteFramebuffers(1, &m_object);
 		
@@ -144,45 +148,100 @@ const GLenum FrameBufferObject::getStatus() const
 
 
 
-void FrameBufferObject::attachColor( glo::Texture2D * texture )
+void FrameBufferObject::attachColor( glo::IFrameBufferAttachableImage * attachableObject, const int index  )
 {
-	assert( !texture->isEmpty() && "Texture object is not initialized." );
-	assert( isBound() && "Must call FBO:bind() before attachColor()" );
+	attachableObject->attach( this, GL_COLOR_ATTACHMENT0 + index );
 
-	// Attach color texture to the frame buffer object
-	glFramebufferTexture2D( GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0,
-		GL_TEXTURE_2D, texture->getName(), 0 );
+	assert( m_color[index] == 0 && "Color attachment point not empty." );
+	m_color[index] = attachableObject;
 }
 
 
 
-void FrameBufferObject::detachColor()
+void FrameBufferObject::detachColor( const int index )
 {
-	assert( isBound() && "Must call FBO:bind() before detachColor()" );
-
-	// Detach the color texture from the frame buffer object
-	glFramebufferTexture2D( GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, 0, 0 );
+	if ( m_color[index] )
+	{
+		glo::IFrameBufferAttachableImage * attachableObject = m_color[index];
+		m_color[index] = 0;
+		attachableObject->detach( this, GL_COLOR_ATTACHMENT0 + index );
+	}
+	else
+	{
+		assert( "Color attachment point is empty." );
+	}
 }
 
 
 
-void FrameBufferObject::attachDepth( glo::Texture2D * texture )
+void FrameBufferObject::detachColors()
 {
-	assert( !texture->isEmpty() && "Texture object is not initialized." );
-	assert( isBound() && "Must call FBO:bind() before attachDepth()" );
-	// Attach depth texture to the frame buffer object
-	glFramebufferTexture2D( GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT,
-		GL_TEXTURE_2D, texture->getName(), 0 );
+	for( int i=0; i < static_cast< int >(m_color.size()); ++i )
+	{
+		if ( m_color[i] )
+		{
+			detachColor(i);
+		}
+	}
+}
+
+
+
+void FrameBufferObject::attachDepth( glo::IFrameBufferAttachableImage * attachableObject )
+{
+	attachableObject->attach( this, GL_DEPTH_ATTACHMENT );
+
+	assert( m_depth == 0 && "Depth attachment point not empty." );
+	m_depth = attachableObject;
 }
 
 
 
 void FrameBufferObject::detachDepth()
 {
-	assert( isBound() && "Must call FBO:bind() before detachDepth()" );
+	if ( m_depth )
+	{
+		m_depth->detach( this, GL_DEPTH_ATTACHMENT );
+		m_depth = 0;
+	}
+	else
+	{
+		assert( "Depth attachment point is empty." );
+	}
+}
 
-	// Detach the depth texture from the frame buffer object
-	glFramebufferTexture2D( GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, 0, 0 );
+
+
+void FrameBufferObject::attachStencil( glo::IFrameBufferAttachableImage * attachableObject )
+{
+	attachableObject->attach( this, GL_STENCIL_ATTACHMENT );
+
+	assert( m_stencil == 0 && "Stencil attachment point not empty." );
+	m_stencil = attachableObject;
+}
+
+
+
+void FrameBufferObject::detachStencil()
+{
+	if ( m_stencil )
+	{
+		m_stencil->detach( this, GL_STENCIL_ATTACHMENT );
+		m_stencil = 0;
+	}
+	else
+	{
+		assert( "Stencil attachment point is empty." );
+	}
+}
+
+
+
+void FrameBufferObject::detach()
+{
+	detachColors();
+	detachDepth();
+	detachStencil();
 }
 
 

@@ -14,6 +14,17 @@ namespace glo
 
 
 
+const bool IFrameBufferAttachableImage::isAttached( FrameBufferObject * fbo )
+{
+	FBOListType::iterator result = std::find( m_attachedTo.begin(), m_attachedTo.end(), fbo );
+
+	const bool retVal = ( result != m_attachedTo.end() );
+
+	return retVal;
+}
+
+
+
 void IFrameBufferAttachableImage::attach( FrameBufferObject * fbo, const GLenum attachment )
 {
 	FBOListType::iterator result = std::find( m_attachedTo.begin(), m_attachedTo.end(), fbo );

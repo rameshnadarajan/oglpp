@@ -5,6 +5,9 @@
 
 #include "glo/Texture2D.hpp"
 
+#include "glo/FrameBufferObject.hpp"
+#include "glo/IFrameBufferAttachableImage.hpp"
+
 
 
 namespace glo
@@ -85,6 +88,45 @@ void Texture2D::texSubImage(	const GLint level,
 								const GLvoid *pixels ) const
 {
 	glTexSubImage2D( m_target, level, xoffset, yoffset, width, height, format, type, pixels );
+}
+
+
+
+void Texture2D::attach( FrameBufferObject * fbo, const GLenum attachment )
+{
+	assert( !isEmpty() && "Texture object is not initialized." );
+	assert( fbo->isBound() && "Must bind FBO before calling attach()." );
+
+	if ( isAttached( fbo ) == false )
+	{
+		// Attach texture to the frame buffer object
+		glFramebufferTexture2D( GL_FRAMEBUFFER, attachment, GL_TEXTURE_2D, getName(), 0 );
+
+		IFrameBufferAttachableImage::attach( fbo, attachment );
+	}
+	else
+	{
+		assert( false && "This texture 2D is already attached to the FBO." );
+	}
+}
+
+
+
+void Texture2D::detach( FrameBufferObject * fbo, const GLenum attachment )
+{
+	assert( fbo->isBound() && "Must bind FBO before calling detach()." );
+
+	if ( isAttached( fbo ) )
+	{
+		// Detach the texture from the frame buffer object
+		glFramebufferTexture2D( GL_FRAMEBUFFER, attachment, GL_TEXTURE_2D, 0, 0 );
+
+		IFrameBufferAttachableImage::detach( fbo, attachment );
+	}
+	else
+	{
+		assert( false && "This texture 2D is not attached to the FBO." );
+	}
 }
 
 
