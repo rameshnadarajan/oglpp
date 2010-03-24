@@ -57,6 +57,7 @@ public:
 
 	GLO_API void bind() const;
 
+	GLO_API void unbind() const;
 	//@}
 
 

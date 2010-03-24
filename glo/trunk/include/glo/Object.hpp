@@ -72,6 +72,13 @@ struct Object : public IResource
 	 */
 	GLO_API virtual void bind() const=0;
 
+	/**
+	 * @brief Unbinds the underlying OpenGL object
+	 * 
+	 * @pre isEmpty() must return false
+	 * @pre isBound() must return true
+	 */
+	GLO_API virtual void unbind() const=0;
 	//@}
 
 

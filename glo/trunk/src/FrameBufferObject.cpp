@@ -77,6 +77,16 @@ void FrameBufferObject::bind() const
 
 
 
+void FrameBufferObject::unbind() const
+{
+	assert( !isEmpty() );
+	assert( isBound() );	
+	
+	glBindFramebuffer( GL_FRAMEBUFFER, 0 );
+}
+
+
+
 const bool FrameBufferObject::isBound() const
 {
 	assert( !isEmpty() );

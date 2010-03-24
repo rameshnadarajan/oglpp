@@ -71,6 +71,16 @@ void RenderBuffer::bind() const
 
 
 
+void RenderBuffer::unbind() const
+{
+	assert( !isEmpty() );
+	assert( isBound() );
+	
+	glBindRenderbuffer( GL_RENDERBUFFER, 0 );
+}
+
+
+
 const bool RenderBuffer::isBound() const
 {
 	assert( !isEmpty() );

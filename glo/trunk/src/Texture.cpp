@@ -71,6 +71,16 @@ void Texture::bind() const
 
 
 
+void Texture::unbind() const
+{
+	assert( !isEmpty() );
+	assert( isBound() );
+
+	glBindTexture( m_target, 0 );
+}
+
+
+
 void Texture::active( const GLenum unit )
 {
 	assert( unit >= GL_TEXTURE0_ARB && "Unexpected value" );

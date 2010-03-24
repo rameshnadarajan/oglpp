@@ -71,6 +71,14 @@ struct RenderBuffer : public Object, public IFrameBufferAttachableImage
 	 */
 	GLO_API void bind() const;
 
+	/**
+	 * @brief Unbinds the render buffer object
+	 * 
+	 * @pre isEmpty() must return false
+	 * @pre isBound() must return true
+	 */
+	GLO_API void unbind() const;
+
 	//@}
 
 

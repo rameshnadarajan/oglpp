@@ -78,6 +78,14 @@ struct FrameBufferObject : public Object
 	 */
 	GLO_API void bind() const;
 
+	/**
+	 * @brief Unbinds the frame buffer object
+	 * 
+	 * @pre isEmpty() must return false
+	 * @pre isBound() must return true
+	 */
+	GLO_API void unbind() const;
+
 	//@}
 
 
