@@ -499,21 +499,21 @@ sub parseOGLRegistry
 	{
 		my $line = <INFILE>;
 
-		if ( $line =~ /<ol>/ )
+		if ( $line =~ /<OL>/ )
 		{
 			# Start a list of extensions.
 			my $id;
-			while ( ($line = <INFILE>) !~ /<\/ol>/ )
+			while ( ($line = <INFILE>) !~ /<\/OL>/ )
 			{
-#<li value=1> <a href="specs/ARB/multitexture.txt">GL_ARB_multitexture</a>
-#</li>
+#<LI value="1"> <A href="http://www.opengl.org/registry/specs/ARB/multitexture.txt">GL_ARB_multitexture</A>
+#</LI>
 
-#<li value=5> <a href="specs/ARB/multisample.txt">GL_ARB_multisample</a>
-#     <br> <a href="specs/ARB/multisample.txt">GLX_ARB_multisample</a>
-#     <br> <a href="specs/ARB/multisample.txt">WGL_ARB_multisample</a>
-#</li>
+#<LI value="5"> <A href="http://www.opengl.org/registry/specs/ARB/multisample.txt">GL_ARB_multisample</A>
+#     <BR> <A href="http://www.opengl.org/registry/specs/ARB/multisample.txt">GLX_ARB_multisample</A>
+#     <BR> <A href="http://www.opengl.org/registry/specs/ARB/multisample.txt">WGL_ARB_multisample</A>
+#</LI>
 
-				if ( $line =~ /\s*<li\s+value="?(.+)"?>\s*<a\s+href\s*=\s*"(.+)">\s*(.+)<\/a>/ ) # see previous regex
+				if ( $line =~ /\s*<LI\s+value="(.+)">\s*<A\s+href\s*=\s*"(.+)">\s*(.+)<\/A>/i ) # see previous regex
 				{
 					$id = $1;
 					my $name = $3;
@@ -521,7 +521,7 @@ sub parseOGLRegistry
 					$self->getOGLRegistryTable()->add( $name, $id, $url );
 					print "$id|$name|$url\n";
 				}
-				elsif ( $line =~ /.*<a\s+href\s*=\s*"(.+)">\s*(.+)<\/a>\s*/ ) # see previous regex
+				elsif ( $line =~ /.*<A\s+href\s*=\s*"(.+)">\s*(.+)<\/A>\s*/i ) # see previous regex
 				{
 					my $name = $2;
 					my $url = $1;

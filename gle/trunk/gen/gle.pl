@@ -27,7 +27,7 @@ $parser->parseOGLRegistry( "OpenGLRegistry.htm" );
 #@todo Parse -> Enumerant and Function Registry (http://www.opengl.org/registry/) instead of gl.h for example
 $parser->parse( "../include/GL/glext.h" );
 $parser->parse( "../include/GL/wglext.h" );
-#$parser->parse( "glxext.h" );
+$parser->parse( "../include/GL/glxext.h" );
 
 
 
