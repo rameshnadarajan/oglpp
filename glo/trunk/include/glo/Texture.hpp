@@ -238,6 +238,12 @@ public:
 	 */
 	GLO_API virtual const GLint getSize( int32& width, int32& height, int32& depth ) const = 0;
 
+	/**
+	 * @brief Returns the internal format of the texture.
+	 *
+	 * @return the internal format of the texture
+	 */
+	GLO_API virtual const GLint getInternalFormat() const;
 	//@}
 
 
@@ -286,6 +292,8 @@ protected:
 	//@{
 	mutable GLint m_border;
 	mutable GLint m_width;
+
+	mutable GLint m_internalFormat;
 	//@}
 };
 

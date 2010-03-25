@@ -57,6 +57,8 @@ void TextureCubeMap::texImage(	const GLuint targetIndex,
 		m_border	= border;
 		m_width		= width;
 		m_height	= height;
+
+		m_internalFormat = internalFormat;		
 	}
 }
 

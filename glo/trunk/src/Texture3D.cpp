@@ -76,6 +76,8 @@ void Texture3D::texImage(	const GLint level, const GLint internalFormat,
 	m_width		= width;
 	m_height	= height;
 	m_depth		= depth;
+
+	m_internalFormat = internalFormat;
 }
 
 

@@ -77,6 +77,8 @@ void Texture2D::texImage(	const GLint level, const GLint internalFormat,
 	m_border	= border;
 	m_width		= width;
 	m_height	= height;
+
+	m_internalFormat = internalFormat;
 }
 
 

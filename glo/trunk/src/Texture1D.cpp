@@ -55,6 +55,8 @@ void Texture1D::texImage(	const GLint level, const GLint internalFormat,
 	// Updates cache
 	m_border	= border;	
 	m_width		= width;
+
+	m_internalFormat = internalFormat;
 }
 
 
