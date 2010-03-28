@@ -1,4 +1,0 @@
-USE		= ['opengl']
-TYPE	= 'shared'
-VERSION = '0-3'
-USEVISIBILITY='no'
