@@ -17,9 +17,7 @@ namespace glo
 
 
 FrameBufferObject::FrameBufferObject()
-:	m_color( m_maxColorAttachments, 0 ),
-	m_depth(0),
-	m_stencil(0)
+:	m_color( m_maxColorAttachments )
 {
 }
 
@@ -55,9 +53,9 @@ void FrameBufferObject::release()
 	if ( !isEmpty() )
 	{
 		bind();
-
 		detach();
 
+		unbind();
 		glDeleteFramebuffers(1, &m_object);
 		
 		m_object = 0;
@@ -158,7 +156,7 @@ const GLenum FrameBufferObject::getStatus() const
 
 
 
-void FrameBufferObject::attachColor( glo::IFrameBufferAttachableImage * attachableObject, const int index  )
+void FrameBufferObject::attachColor( boost::shared_ptr< glo::IFrameBufferAttachableImage > attachableObject, const int index  )
 {
 	attachableObject->attach( this, GL_COLOR_ATTACHMENT0 + index );
 
@@ -172,14 +170,11 @@ void FrameBufferObject::detachColor( const int index )
 {
 	if ( m_color[index] )
 	{
-		glo::IFrameBufferAttachableImage * attachableObject = m_color[index];
-		m_color[index] = 0;
+		boost::shared_ptr< glo::IFrameBufferAttachableImage > attachableObject = m_color[index];
+		m_color[index].reset();
 		attachableObject->detach( this, GL_COLOR_ATTACHMENT0 + index );
 	}
-	else
-	{
-		assert( "Color attachment point is empty." );
-	}
+	// else Color attachment point is empty
 }
 
 
@@ -197,7 +192,7 @@ void FrameBufferObject::detachColors()
 
 
 
-void FrameBufferObject::attachDepth( glo::IFrameBufferAttachableImage * attachableObject )
+void FrameBufferObject::attachDepth( boost::shared_ptr< glo::IFrameBufferAttachableImage > attachableObject )
 {
 	attachableObject->attach( this, GL_DEPTH_ATTACHMENT );
 
@@ -212,17 +207,14 @@ void FrameBufferObject::detachDepth()
 	if ( m_depth )
 	{
 		m_depth->detach( this, GL_DEPTH_ATTACHMENT );
-		m_depth = 0;
+		m_depth.reset();
 	}
-	else
-	{
-		assert( "Depth attachment point is empty." );
-	}
+	// else Depth attachment point is empty
 }
 
 
 
-void FrameBufferObject::attachStencil( glo::IFrameBufferAttachableImage * attachableObject )
+void FrameBufferObject::attachStencil( boost::shared_ptr< glo::IFrameBufferAttachableImage > attachableObject )
 {
 	attachableObject->attach( this, GL_STENCIL_ATTACHMENT );
 
@@ -237,12 +229,9 @@ void FrameBufferObject::detachStencil()
 	if ( m_stencil )
 	{
 		m_stencil->detach( this, GL_STENCIL_ATTACHMENT );
-		m_stencil = 0;
+		m_stencil.reset();
 	}
-	else
-	{
-		assert( "Stencil attachment point is empty." );
-	}
+	// else Stencil attachment point is empty.
 }
 
 
@@ -275,24 +264,3 @@ void FrameBufferObject::renderDepthOnly( const bool depthOnly )
 
 
 } // namespace glo
-
-/*void deleteFrameBufferObject()
-{
-  if(!frameBufferObject)
-    return;
-
-  //Activate the frame buffer objcet
-  glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, frameBufferObject);
-  //Detach our depth texture from the frame buffer object
-  glFramebufferTexture2DEXT(GL_FRAMEBUFFER_EXT,
-                            GL_DEPTH_ATTACHMENT_EXT,
-                            GL_TEXTURE_2D, 
-                            0,
-                            0);
-  //DeActivate the frame buffer objcet
-  glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
-  //Delete the frame buffer object
-  glDeleteFramebuffersEXT(1, &frameBufferObject);
-  frameBufferObject = 0;
-
-}*/

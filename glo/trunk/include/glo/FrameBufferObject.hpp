@@ -6,6 +6,7 @@
 #ifndef _GLO_FRAMEBUFFEROBJECT_HPP
 #define _GLO_FRAMEBUFFEROBJECT_HPP
 
+#include <boost/shared_ptr.hpp>
 #include <string>
 #include <vector>
 
@@ -151,7 +152,7 @@ struct FrameBufferObject : public Object
 	 * @pre isBound()
 	 * @pre !attachableObject->isEmpty()
 	 */
-	GLO_API void attachColor( glo::IFrameBufferAttachableImage * attachableObject, const int index = 0 );
+	GLO_API void attachColor( boost::shared_ptr< glo::IFrameBufferAttachableImage > attachableObject, const int index = 0 );
 
 	/**
 	 * @brief Detaches an object to one of the color buffer of the framebuffer.
@@ -178,7 +179,7 @@ struct FrameBufferObject : public Object
 	 * @pre isBound()
 	 * @pre !attachableObject->isEmpty()
 	 */
-	GLO_API void attachDepth( glo::IFrameBufferAttachableImage * attachableObject );
+	GLO_API void attachDepth( boost::shared_ptr< glo::IFrameBufferAttachableImage > attachableObject );
 
 	/**
 	 * @brief Detaches an object to the depth buffer of the framebuffer.
@@ -196,7 +197,7 @@ struct FrameBufferObject : public Object
 	 * @pre isBound()
 	 * @pre !attachableObject->isEmpty()
 	 */
-	GLO_API void attachStencil( glo::IFrameBufferAttachableImage * attachableObject );
+	GLO_API void attachStencil( boost::shared_ptr< glo::IFrameBufferAttachableImage > attachableObject );
 
 	/**
 	 * @brief Detaches an object to the stencil buffer of the framebuffer.
@@ -237,9 +238,9 @@ struct FrameBufferObject : public Object
 	// @todo query for MAX_COLOR_ATTACHMENTS
 
 private:
-	std::vector< glo::IFrameBufferAttachableImage * > m_color;		///< array of color buffer attachments
-	glo::IFrameBufferAttachableImage * m_depth;						///< depth buffer attachment
-	glo::IFrameBufferAttachableImage * m_stencil;					///< stencil buffer attachment
+	std::vector< boost::shared_ptr< glo::IFrameBufferAttachableImage > >	m_color;		///< array of color buffer attachments
+	boost::shared_ptr< glo::IFrameBufferAttachableImage > 					m_depth;		///< depth buffer attachment
+	boost::shared_ptr< glo::IFrameBufferAttachableImage >					m_stencil;		///< stencil buffer attachment
 
 	// @todo 8 is the GL_MAX_COLOR_ATTACHMENTS
 	static const int m_maxColorAttachments = 8;								///< the maximum number of color attachments
