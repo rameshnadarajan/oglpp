@@ -1,4 +1,4 @@
-// This file was generated at Wed Mar 17 10:19:28 2010 with gle, please do not modify.
+// This file was generated at Mon Apr 19 11:55:36 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -1273,6 +1273,15 @@ void glTbufferMask3DFX( GLuint mask )
 bool isGL_3DFX_texture_compression_FXT1()
 {
 	const bool isSupported = gleGetCurrent()->isGL_3DFX_texture_compression_FXT1;
+
+	return isSupported;
+}
+
+
+// ********* GL_AMD_conservative_depth *********
+bool isGL_AMD_conservative_depth()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_conservative_depth;
 
 	return isSupported;
 }

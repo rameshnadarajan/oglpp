@@ -1,4 +1,4 @@
-// This file was generated at Wed Mar 17 10:19:28 2010 with gle, please do not modify.
+// This file was generated at Mon Apr 19 11:55:36 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,11 +17,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Wed Mar 17 10:19:28 2010 with gle, please do not modify.
+ * - Stamp = // This file was generated at Mon Apr 19 11:55:36 2010 with gle, please do not modify.
  * - Number of tokens					= 0
  * - Number of functions				= 1933
- * - Number of extensions found(in headers)	= 476
- * - Number of extensions in OpenGL registry	= 448
+ * - Number of extensions found(in headers)	= 477
+ * - Number of extensions in OpenGL registry	= 456
  */
 
 
@@ -1574,6 +1574,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_3DFX_texture_compression_FXT1 is supported, false otherwise.
 	 */
 	bool isGL_3DFX_texture_compression_FXT1;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_conservative_depth is supported, false otherwise.
+	 */
+	bool isGL_AMD_conservative_depth;
 
 
 

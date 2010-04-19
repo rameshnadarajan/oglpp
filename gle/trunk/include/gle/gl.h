@@ -7,7 +7,7 @@
 #define _GLE_GL_H
 
 #include "gle/gle.hpp"
-#include "gle/Wrapper.hpp"
+#include "gle/Wrapper.hpp"		// for gleSetCurrent(), gleGetCurrent()
 #include "gle/WrapperGen.hpp"
 
 #endif //#ifndef _GLE_GL_H

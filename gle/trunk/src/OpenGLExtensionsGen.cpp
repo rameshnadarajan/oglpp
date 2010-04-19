@@ -1,4 +1,4 @@
-// This file was generated at Wed Mar 17 10:19:28 2010 with gle, please do not modify.
+// This file was generated at Mon Apr 19 11:55:36 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,7 +17,7 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 476;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 477;
 const int	OpenGLExtensionsGen::m_supportedProcCount		= 1933;
 
 
@@ -393,6 +393,10 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_3DFX_texture_compression_FXT1 ******
 	isGL_3DFX_texture_compression_FXT1                            = false;
+
+
+	// ****** GL_AMD_conservative_depth ******
+	isGL_AMD_conservative_depth                                   = false;
 
 
 	// ****** GL_AMD_draw_buffers_blend ******
@@ -6646,6 +6650,39 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	int	localSupportedProcCount 	= 0;
 	int	localInitializedProcCount	= 0;
 
+	
+	// ****** GL_AMD_conservative_depth ******
+	
+	isGL_AMD_conservative_depth = isExtensionSupported("GL_AMD_conservative_depth");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_AMD_conservative_depth )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_conservative_depth                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_conservative_depth                                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_conservative_depth") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_conservative_depth                                   : not detected." );
+	}
 	
 	// ****** GL_AMD_draw_buffers_blend ******
 	

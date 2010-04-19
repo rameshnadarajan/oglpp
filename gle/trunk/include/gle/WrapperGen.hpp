@@ -1,4 +1,4 @@
-// This file was generated at Wed Mar 17 10:19:28 2010 with gle, please do not modify.
+// This file was generated at Mon Apr 19 11:55:36 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -84,7 +84,7 @@
  */
 
 /** 
- * @defgroup g_GL_AMD		GL_AMD (5 extensions found)
+ * @defgroup g_GL_AMD		GL_AMD (6 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -1852,6 +1852,22 @@ GLE_API void glTbufferMask3DFX( GLuint mask );
  * @return Returns \c true if \b GL_3DFX_texture_compression_FXT1 is supported, false otherwise.
  */
 GLE_API bool isGL_3DFX_texture_compression_FXT1();
+
+//@}
+
+
+/**
+ * @defgroup GL_AMD_conservative_depth GL_AMD_conservative_depth
+ * Extension number in OpenGL registry : 385
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/conservative_depth.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_AMD_conservative_depth is supported.
+ * @return Returns \c true if \b GL_AMD_conservative_depth is supported, false otherwise.
+ */
+GLE_API bool isGL_AMD_conservative_depth();
 
 //@}
 
