@@ -107,7 +107,7 @@ struct Object : public IResource
 	/**
 	 * @brief Returns the name of the underlying OpenGL object
 	 */
-	GLO_API const GLuint getName();
+	GLO_API const GLuint getName() const;
 	//@}
 
 

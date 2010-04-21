@@ -219,9 +219,64 @@ struct FrameBufferObject : public Object
 
 
 	/**
-	 * @name Selecting a buffer for writing
+	 * @name Selecting buffer(s) for reading and writing operations
+	 *
+	 * @todo GLO_API void drawBuffers( std::vector< uint > buffers );
 	 */
 	//@{
+
+	/**
+	 * @brief Sets all readback operations to the default framebuffer.
+	 */
+	GLO_API static void setReadBufferToDefaultFrameBuffer();
+
+	/**
+	 * @brief Sets all readback operations to this framebuffer.
+	 */
+	GLO_API void setReadBuffer() const;
+
+	/**
+	 * @brief Inhibits the writing of fragment color to any buffer.
+	 *
+	 * @pre isBound()
+	 */
+	GLO_API void disableReadBuffer() const;
+
+
+
+	/**
+	 * @brief Sets all drawing operations to the default framebuffer.
+	 */
+	GLO_API static void setDrawBufferToDefaultFrameBuffer();
+
+	/**
+	 * @brief Sets all drawing operations to this framebuffer.
+	 */
+	GLO_API void setDrawBuffer() const;
+
+	/**
+	 * @brief Sets the draw buffers to which all fragment colors are written.
+	 *
+	 * @param buf0		zero-based index specifying the buffer to which each fragment color is written
+	 * @param buf1		zero-based index specifying the buffer to which each fragment color is written
+	 * @param buf2		zero-based index specifying the buffer to which each fragment color is written
+	 * @param buf3		zero-based index specifying the buffer to which each fragment color is written
+	 *
+	 * @pre isBound()
+	 *
+	 * @todo setDrawBuffers( ... buf8 )
+	 */
+	GLO_API void setDrawBuffers( const int buf0, const int buf1 = -1, const int buf2 = -1, const int buf3 = -1 ) const;
+
+	/**
+	 * @brief Inhibits the writing of fragment color to any buffer.
+	 *
+	 * @pre isBound()
+	 *
+	 */
+	GLO_API void disableDrawBuffers() const;
+
+
 
 	/**
 	 * @brief Sets rendering to depth only.
@@ -232,18 +287,31 @@ struct FrameBufferObject : public Object
 	 *						Sets DrawBuffer and ReadBuffer to first color attachement when depthOnly is false.
 	 */
 	GLO_API void renderDepthOnly( const bool depthOnly = true );
+	
+	//@}
+
+
+
+	/**
+	 * @name Queries
+	 */
+	//@{
+
+	/**
+	 * @brief Returns the maximum number of FBO attachment points for color buffers
+	 *
+	 * @return the maximum number of FBO attachment points for color buffers.
+	 */
+	const int getMaxColorAttachements() const;
 
 	//@}
 
-	// @todo query for MAX_COLOR_ATTACHMENTS
+
 
 private:
 	std::vector< boost::shared_ptr< glo::IFrameBufferAttachableImage > >	m_color;		///< array of color buffer attachments
 	boost::shared_ptr< glo::IFrameBufferAttachableImage > 					m_depth;		///< depth buffer attachment
 	boost::shared_ptr< glo::IFrameBufferAttachableImage >					m_stencil;		///< stencil buffer attachment
-
-	// @todo 8 is the GL_MAX_COLOR_ATTACHMENTS
-	static const int m_maxColorAttachments = 8;								///< the maximum number of color attachments
 };
 
 

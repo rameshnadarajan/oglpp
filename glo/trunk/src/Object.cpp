@@ -32,7 +32,7 @@ const bool Object::isEmpty() const
 
 
 
-const GLuint Object::getName()
+const GLuint Object::getName() const
 {
 	return m_object;
 }

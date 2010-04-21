@@ -10,6 +10,9 @@
 #include <iostream>
 
 
+#include "glo/detail/helpers.hpp"
+
+
 
 namespace glo
 {
@@ -17,7 +20,6 @@ namespace glo
 
 
 FrameBufferObject::FrameBufferObject()
-:	m_color( m_maxColorAttachments )
 {
 }
 
@@ -42,6 +44,8 @@ void FrameBufferObject::generate()
 	assert( isEmpty() );
 	
 	glGenFramebuffers(1, &m_object);
+
+	m_color.resize( getMaxColorAttachements() );
 
 	assert( !isEmpty() );
 }
@@ -245,6 +249,69 @@ void FrameBufferObject::detach()
 
 
 
+void FrameBufferObject::setReadBufferToDefaultFrameBuffer()
+{
+	glBindFramebuffer( GL_READ_FRAMEBUFFER, 0 );
+}
+
+
+
+void FrameBufferObject::setReadBuffer() const
+{
+	glBindFramebuffer( GL_READ_FRAMEBUFFER, getName() );
+}
+
+
+
+void FrameBufferObject::disableReadBuffer() const
+{
+	assert( isBound() && "FBO must be bound before calling FrameBufferObject::disableReadBuffer()");
+
+	glReadBuffer( GL_NONE );
+}
+
+
+
+void FrameBufferObject::setDrawBufferToDefaultFrameBuffer()
+{
+	glBindFramebuffer( GL_DRAW_FRAMEBUFFER, 0 );
+}
+
+
+
+void FrameBufferObject::setDrawBuffer() const
+{
+	glBindFramebuffer( GL_DRAW_FRAMEBUFFER, getName() );
+}
+
+
+
+void FrameBufferObject::setDrawBuffers( const int buf0, const int buf1, const int buf2, const int buf3 ) const
+{
+	assert( isBound() && "FBO must be bound before calling FrameBufferObject::drawBuffers()");
+
+	GLenum	buffers[]	= { 0, 0, 0, 0 };
+	int		count		= 0;
+
+	if ( buf0 >= 0 )	buffers[count] = GL_COLOR_ATTACHMENT0 + buf0, ++count;
+	if ( buf1 >= 0 )	buffers[count] = GL_COLOR_ATTACHMENT0 + buf1, ++count;
+	if ( buf2 >= 0 )	buffers[count] = GL_COLOR_ATTACHMENT0 + buf2, ++count;
+	if ( buf3 >= 0 )	buffers[count] = GL_COLOR_ATTACHMENT0 + buf3, ++count;
+
+	glDrawBuffers( count, buffers );
+}
+
+
+
+void FrameBufferObject::disableDrawBuffers() const
+{
+	assert( isBound() && "FBO must be bound before calling FrameBufferObject::disableDrawBuffers()");
+
+	glDrawBuffer( GL_NONE );
+}
+
+
+
 void FrameBufferObject::renderDepthOnly( const bool depthOnly )
 {
 	assert( isBound() && "FBO must be bound before calling FrameBufferObject::renderDepthOnly()");
@@ -259,6 +326,13 @@ void FrameBufferObject::renderDepthOnly( const bool depthOnly )
 		glDrawBuffer( GL_COLOR_ATTACHMENT0 );
 		glReadBuffer( GL_COLOR_ATTACHMENT0 );
 	}
+}
+
+
+
+const int FrameBufferObject::getMaxColorAttachements() const
+{
+	gloGetIntegerv( m_maxColorAttachments, GL_MAX_COLOR_ATTACHMENTS );
 }
 
 
