@@ -304,6 +304,20 @@ struct FrameBufferObject : public Object
 	 */
 	const int getMaxColorAttachements() const;
 
+	/**
+	 * @brief Returns the maximum width and height of renderbuffers supported by the implementation
+	 *
+	 * @return the maximum width and height of renderbuffers supported by the implementation
+	 */
+	const int getMaxRenderBufferSize() const;
+
+	/**
+	 * @brief Returns the maximum number of samples supported for multisampling.
+	 *
+	 * @return the maximum number of samples supported for multisampling
+	 */
+	const int getMaxSamples() const;
+
 	//@}
 
 

@@ -337,4 +337,18 @@ const int FrameBufferObject::getMaxColorAttachements() const
 
 
 
+const int FrameBufferObject::getMaxRenderBufferSize() const
+{
+	gloGetIntegerv( m_maxRenderBufferSize, GL_MAX_RENDERBUFFER_SIZE );
+}
+
+
+
+const int FrameBufferObject::getMaxSamples() const
+{
+	gloGetIntegerv( m_maxSamples, GL_MAX_SAMPLES );
+}
+
+
+
 } // namespace glo
