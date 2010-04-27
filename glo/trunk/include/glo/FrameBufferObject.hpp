@@ -219,6 +219,71 @@ struct FrameBufferObject : public Object
 
 
 	/**
+	 * @name Buffers accessors
+	 */
+	//@{
+
+	/**
+	 * @brief Returns the desired color buffer of the framebuffer.
+	 *
+	 * @param index				a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
+	 *
+	 * @pre 0 <= index <= getNumOfColors()
+	 *
+	 * @return the desired color buffer of the framebuffer
+	 */
+	GLO_API boost::shared_ptr< glo::IFrameBufferAttachableImage > getColor( const int index = 0 );
+
+	/**
+	 * @brief Returns the desired color buffer of the framebuffer.
+	 *
+	 * @param index				a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
+	 *
+	 * @pre 0 <= index <= getNumOfColors()
+	 *
+	 * @return the desired color buffer of the framebuffer
+	 */
+	GLO_API boost::shared_ptr< glo::Texture2D > getColorAsTexture2D( const int index = 0 );
+
+	/**
+	 * @brief Returns the number of attached color buffers.
+	 *
+	 * @return the number of attached color buffers
+	 */
+	GLO_API const int getNumOfColors() const;
+
+	/**
+	 * @brief Returns the depth buffer of the framebuffer.
+	 *
+	 * @return the depth buffer of the framebuffer
+	 */
+	GLO_API boost::shared_ptr< glo::IFrameBufferAttachableImage > getDepth();
+
+	/**
+	 * @brief Returns the depth buffer of the framebuffer.
+	 *
+	 * @return the depth buffer of the framebuffer
+	 */
+	GLO_API boost::shared_ptr< glo::Texture2D > getDepthAsTexture2D();
+
+	/**
+	 * @brief Returns the stencil buffer of the framebuffer.
+	 *
+	 * @return the stencil buffer of the framebuffer
+	 */
+	GLO_API boost::shared_ptr< glo::IFrameBufferAttachableImage > getStencil();
+
+	/**
+	 * @brief Returns the stencil buffer of the framebuffer.
+	 *
+	 * @return the stencil buffer of the framebuffer
+	 */
+	GLO_API boost::shared_ptr< glo::Texture2D > getStencilAsTexture2D();
+	//@}
+
+
+
+	/**
 	 * @name Selecting buffer(s) for reading and writing operations
 	 *
 	 * @todo GLO_API void drawBuffers( std::vector< uint > buffers );
@@ -232,8 +297,10 @@ struct FrameBufferObject : public Object
 
 	/**
 	 * @brief Sets all readback operations to this framebuffer.
+	 *
+	 * @param index				a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
 	 */
-	GLO_API void setReadBuffer() const;
+	GLO_API void setReadBuffer( const int index = 0 ) const;
 
 	/**
 	 * @brief Inhibits the writing of fragment color to any buffer.

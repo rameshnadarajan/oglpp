@@ -249,6 +249,58 @@ void FrameBufferObject::detach()
 
 
 
+boost::shared_ptr< glo::IFrameBufferAttachableImage > FrameBufferObject::getColor( const int index )
+{
+	assert( index >= 0 );
+	assert( index < getNumOfColors() );
+
+	return m_color[index];
+}
+
+
+
+boost::shared_ptr< glo::Texture2D > FrameBufferObject::getColorAsTexture2D( const int index )
+{
+	return boost::dynamic_pointer_cast< glo::Texture2D >( getColor(index) );
+}
+
+
+
+const int FrameBufferObject::getNumOfColors() const
+{
+	return m_color.size();
+}
+
+
+
+boost::shared_ptr< glo::IFrameBufferAttachableImage > FrameBufferObject::getDepth()
+{
+	return m_depth;
+}
+
+
+
+boost::shared_ptr< glo::Texture2D > FrameBufferObject::getDepthAsTexture2D()
+{
+	return boost::dynamic_pointer_cast< glo::Texture2D >( getDepth() );
+}
+
+
+
+boost::shared_ptr< glo::IFrameBufferAttachableImage > FrameBufferObject::getStencil()
+{
+	return m_stencil;
+}
+
+
+
+boost::shared_ptr< glo::Texture2D > FrameBufferObject::getStencilAsTexture2D()
+{
+	return boost::dynamic_pointer_cast< glo::Texture2D >( getStencil() );
+}
+
+
+
 void FrameBufferObject::setReadBufferToDefaultFrameBuffer()
 {
 	glBindFramebuffer( GL_READ_FRAMEBUFFER, 0 );
@@ -256,9 +308,14 @@ void FrameBufferObject::setReadBufferToDefaultFrameBuffer()
 
 
 
-void FrameBufferObject::setReadBuffer() const
+void FrameBufferObject::setReadBuffer( const int index ) const
 {
 	glBindFramebuffer( GL_READ_FRAMEBUFFER, getName() );
+
+	if ( index >= 0 )
+	{
+		glReadBuffer( GL_COLOR_ATTACHMENT0 + index );
+	}
 }
 
 
