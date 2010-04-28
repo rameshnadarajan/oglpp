@@ -5,6 +5,12 @@
 
 #include "gle/Wrapper.hpp"
 
+// Forward declaration for glXGetCurrentContext()
+// Remark : glXGetCurrentContext is declared in GL/glx.h, but glx.h includes XLib.h that must be included after any glibmm, gdkmm, or gtkmm headers.
+// The error message "/usr/include/glibmm-2.4/glibmm/object.h:25:3: error: #error "X11/Xlib.h seems to have been included before this header. Due to some commonly-named macros in X11/Xlib.h, it may only be included after any glibmm, gdkmm, or gtkmm headers.".
+typedef struct __GLXcontextRec *GLXContext;
+extern GLXContext glXGetCurrentContext( void );
+
 
 
 namespace
