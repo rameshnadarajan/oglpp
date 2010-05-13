@@ -96,7 +96,7 @@ const bool FrameBufferObject::isBound() const
 	GLint currentBinding;
 	glGetIntegerv( GL_FRAMEBUFFER_BINDING, &currentBinding );
 	
-	return ( currentBinding == m_object );
+	return ( static_cast<GLuint>(currentBinding) == m_object );
 }
 
 

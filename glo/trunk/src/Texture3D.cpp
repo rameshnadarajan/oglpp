@@ -27,7 +27,7 @@ const bool Texture3D::isBound() const
 	GLint currentBinding;
 	glGetIntegerv( GL_TEXTURE_BINDING_3D, &currentBinding );
 
-	return ( currentBinding == m_object );
+	return ( static_cast<GLuint>(currentBinding) == m_object );
 }
 
 

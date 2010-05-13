@@ -199,7 +199,7 @@ const bool GLSLProgram::isInUse() const
 	GLint currentProgram;
 	glGetIntegerv( GL_CURRENT_PROGRAM, &currentProgram );
 
-	return currentProgram == getProgramObject();
+	return ( static_cast<GLuint>(currentProgram) == getProgramObject() );
 }
 
 

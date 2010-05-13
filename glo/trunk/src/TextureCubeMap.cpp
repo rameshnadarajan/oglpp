@@ -26,7 +26,7 @@ const bool TextureCubeMap::isBound() const
 	GLint currentBinding;
 	glGetIntegerv( GL_TEXTURE_BINDING_CUBE_MAP, &currentBinding );
 
-	return ( currentBinding == m_object );
+	return ( static_cast<GLuint>(currentBinding) == m_object );
 }
 
 

@@ -26,7 +26,7 @@ const bool Texture2DRect::isBound() const
 	GLint currentBinding;
 	glGetIntegerv( GL_TEXTURE_BINDING_RECTANGLE, &currentBinding );
 
-	return ( currentBinding == m_object );
+	return ( static_cast<GLuint>(currentBinding) == m_object );
 }
 
 
