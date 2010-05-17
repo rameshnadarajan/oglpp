@@ -345,17 +345,59 @@ void FrameBufferObject::setDrawBuffer() const
 
 void FrameBufferObject::setDrawBuffers( const int buf0, const int buf1, const int buf2, const int buf3 ) const
 {
-	assert( isBound() && "FBO must be bound before calling FrameBufferObject::drawBuffers()");
+	assert( isBound() && "FBO must be bound before calling FrameBufferObject::setDrawBuffers()" );
 
-	GLenum	buffers[]	= { 0, 0, 0, 0 };
-	int		count		= 0;
+	m_drawBuffers.clear();
 
-	if ( buf0 >= 0 )	buffers[count] = GL_COLOR_ATTACHMENT0 + buf0, ++count;
-	if ( buf1 >= 0 )	buffers[count] = GL_COLOR_ATTACHMENT0 + buf1, ++count;
-	if ( buf2 >= 0 )	buffers[count] = GL_COLOR_ATTACHMENT0 + buf2, ++count;
-	if ( buf3 >= 0 )	buffers[count] = GL_COLOR_ATTACHMENT0 + buf3, ++count;
+	if ( buf0 >= 0 )	m_drawBuffers.push_back( buf0 );
+	if ( buf1 >= 0 )	m_drawBuffers.push_back( buf1 );
+	if ( buf2 >= 0 )	m_drawBuffers.push_back( buf2 );
+	if ( buf3 >= 0 )	m_drawBuffers.push_back( buf3 );
 
-	glDrawBuffers( count, buffers );
+	// Applies
+	setDrawBuffers();
+}
+
+
+
+void FrameBufferObject::setDrawBuffers( const std::vector< int >& buffers ) const
+{
+	assert( isBound() && "FBO must be bound before calling FrameBufferObject::setDrawBuffers()" );
+
+	m_drawBuffers = buffers;
+
+	// Applies
+	setDrawBuffers();
+}
+
+
+
+void FrameBufferObject::setDrawBuffersToAll() const
+{
+	assert( isBound() && "FBO must be bound before calling FrameBufferObject::setDrawBuffersToAll()" );
+
+	m_drawBuffers.clear();
+	int j=0;
+	for(	ColorContainer::const_iterator i = m_color.begin(), iEnd = m_color.end();
+			i != iEnd;
+			++i, ++j )
+	{
+		if ( i->get() )
+		{
+			m_drawBuffers.push_back(j);
+		}
+		// else nothing to do
+	}
+
+	// Applies
+	setDrawBuffers();
+}
+
+
+
+const std::vector< int >& FrameBufferObject::getDrawBuffers() const
+{
+	return m_drawBuffers;
 }
 
 
@@ -363,6 +405,8 @@ void FrameBufferObject::setDrawBuffers( const int buf0, const int buf1, const in
 void FrameBufferObject::disableDrawBuffers() const
 {
 	assert( isBound() && "FBO must be bound before calling FrameBufferObject::disableDrawBuffers()");
+
+	m_drawBuffers.clear();
 
 	glDrawBuffer( GL_NONE );
 }
@@ -375,12 +419,12 @@ void FrameBufferObject::renderDepthOnly( const bool depthOnly )
 
 	if ( depthOnly )
 	{
-		glDrawBuffer( GL_NONE );
+		disableDrawBuffers();
 		glReadBuffer( GL_NONE );
 	}
 	else
 	{
-		glDrawBuffer( GL_COLOR_ATTACHMENT0 );
+		setDrawBuffers( 0 );
 		glReadBuffer( GL_COLOR_ATTACHMENT0 );
 	}
 }
@@ -404,6 +448,33 @@ const int FrameBufferObject::getMaxRenderBufferSize() const
 const int FrameBufferObject::getMaxSamples() const
 {
 	gloGetIntegerv( m_maxSamples, GL_MAX_SAMPLES );
+}
+
+
+
+/**
+ * @todo tests duplicate
+ * @todo tests if buffers[i] are all valid
+ */
+void FrameBufferObject::setDrawBuffers() const
+{
+	assert( m_drawBuffers.size() >= 1 && "setDrawBuffers() must be called to enable at least one draw buffer." );
+	assert( m_drawBuffers.size() <= static_cast< unsigned int >(getNumOfColors()) && "Not enough color buffers attached compared to the number of desired draw buffers." );
+
+	// Copies m_drawBuffers in drawBuffers and adds GL_COLOR_ATTACHMENT0 at each element
+	std::vector<GLenum> drawBuffers;
+	std::vector<int>::const_iterator	i		= m_drawBuffers.begin(),
+										iEnd	= m_drawBuffers.end();
+	while ( i != iEnd )
+	{
+		const int drawBuffer = *i;
+
+		drawBuffers.push_back( GL_COLOR_ATTACHMENT0 + drawBuffer );
+		++i;
+	}
+
+	// Applies
+	glDrawBuffers( drawBuffers.size(), &drawBuffers[0] );
 }
 
 

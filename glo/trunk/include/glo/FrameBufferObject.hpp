@@ -330,16 +330,36 @@ struct FrameBufferObject : public Object
 	 * @param buf3		zero-based index specifying the buffer to which each fragment color is written
 	 *
 	 * @pre isBound()
-	 *
-	 * @todo setDrawBuffers( ... buf8 )
 	 */
 	GLO_API void setDrawBuffers( const int buf0, const int buf1 = -1, const int buf2 = -1, const int buf3 = -1 ) const;
+
+	/**
+	 * @brief Sets the draw buffers to which all fragment colors are written.
+	 *
+	 * @param buffers	a container of zero-based index specifying buffers to which each fragment color is written
+	 *
+	 * @pre isBound()
+	 */
+	GLO_API void setDrawBuffers( const std::vector< int >& buffers ) const;
+
+	/**
+	 * @brief Sets the draw buffers to which all fragment colors are written to all attachments.
+	 *
+	 * @pre isBound()
+	 */
+	GLO_API void setDrawBuffersToAll() const;
+
+	/**
+	 * @brief Returns the draw buffers to which all fragment colors are written.
+	 *
+	 * @return a container of zero-based index specifying buffers to which each fragment color is written.
+	 */
+	GLO_API const std::vector< int >& getDrawBuffers() const;
 
 	/**
 	 * @brief Inhibits the writing of fragment color to any buffer.
 	 *
 	 * @pre isBound()
-	 *
 	 */
 	GLO_API void disableDrawBuffers() const;
 
@@ -390,9 +410,15 @@ struct FrameBufferObject : public Object
 
 
 private:
-	std::vector< boost::shared_ptr< glo::IFrameBufferAttachableImage > >	m_color;		///< array of color buffer attachments
+	void setDrawBuffers() const;
+
+	typedef std::vector< boost::shared_ptr< glo::IFrameBufferAttachableImage > > ColorContainer;
+
+	ColorContainer															m_color;		///< array of color buffer attachments
 	boost::shared_ptr< glo::IFrameBufferAttachableImage > 					m_depth;		///< depth buffer attachment
 	boost::shared_ptr< glo::IFrameBufferAttachableImage >					m_stencil;		///< stencil buffer attachment
+
+	mutable std::vector< int >												m_drawBuffers;	///< the current draw buffers to which all fragment colors are written
 };
 
 
