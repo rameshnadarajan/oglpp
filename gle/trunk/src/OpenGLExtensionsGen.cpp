@@ -1,4 +1,4 @@
-// This file was generated at Mon Apr 19 11:55:36 2010 with gle, please do not modify.
+// This file was generated at Tue May 18 12:11:38 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,7 +17,7 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 477;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 487;
 const int	OpenGLExtensionsGen::m_supportedProcCount		= 1933;
 
 
@@ -399,6 +399,10 @@ void OpenGLExtensionsGen::clear()
 	isGL_AMD_conservative_depth                                   = false;
 
 
+	// ****** GL_AMD_debug_output ******
+	isGL_AMD_debug_output                                         = false;
+
+
 	// ****** GL_AMD_draw_buffers_blend ******
 	isGL_AMD_draw_buffers_blend                                   = false;
 
@@ -406,6 +410,10 @@ void OpenGLExtensionsGen::clear()
 	glBlendFuncSeparateIndexedAMD                                 = 0;
 	glBlendEquationIndexedAMD                                     = 0;
 	glBlendEquationSeparateIndexedAMD                             = 0;
+
+
+	// ****** GL_AMD_name_gen_delete ******
+	isGL_AMD_name_gen_delete                                      = false;
 
 
 	// ****** GL_AMD_performance_monitor ******
@@ -2052,6 +2060,10 @@ void OpenGLExtensionsGen::clear()
 	isGL_EXT_separate_specular_color                              = false;
 
 
+	// ****** GL_EXT_shader_image_load_store ******
+	isGL_EXT_shader_image_load_store                              = false;
+
+
 	// ****** GL_EXT_shadow_funcs ******
 	isGL_EXT_shadow_funcs                                         = false;
 
@@ -2219,6 +2231,10 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_EXT_vertex_array_bgra ******
 	isGL_EXT_vertex_array_bgra                                    = false;
+
+
+	// ****** GL_EXT_vertex_attrib_64bit ******
+	isGL_EXT_vertex_attrib_64bit                                  = false;
 
 
 	// ****** GL_EXT_vertex_shader ******
@@ -2557,6 +2573,14 @@ void OpenGLExtensionsGen::clear()
 	glGetProgramEnvParameterIuivNV                                = 0;
 
 
+	// ****** GL_NV_gpu_program5 ******
+	isGL_NV_gpu_program5                                          = false;
+
+
+	// ****** GL_NV_gpu_shader5 ******
+	isGL_NV_gpu_shader5                                           = false;
+
+
 	// ****** GL_NV_half_float ******
 	isGL_NV_half_float                                            = false;
 
@@ -2610,6 +2634,10 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_NV_light_max_exponent ******
 	isGL_NV_light_max_exponent                                    = false;
+
+
+	// ****** GL_NV_multisample_coverage ******
+	isGL_NV_multisample_coverage                                  = false;
 
 
 	// ****** GL_NV_multisample_filter_hint ******
@@ -2720,6 +2748,14 @@ void OpenGLExtensionsGen::clear()
 	glProgramUniformui64vNV                                       = 0;
 
 
+	// ****** GL_NV_shader_buffer_store ******
+	isGL_NV_shader_buffer_store                                   = false;
+
+
+	// ****** GL_NV_tessellation_program5 ******
+	isGL_NV_tessellation_program5                                 = false;
+
+
 	// ****** GL_NV_texgen_emboss ******
 	isGL_NV_texgen_emboss                                         = false;
 
@@ -2798,6 +2834,10 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_NV_vertex_array_range2 ******
 	isGL_NV_vertex_array_range2                                   = false;
+
+
+	// ****** GL_NV_vertex_attrib_integer_64bit ******
+	isGL_NV_vertex_attrib_integer_64bit                           = false;
 
 
 	// ****** GL_NV_vertex_buffer_unified_memory ******
@@ -6684,6 +6724,39 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 		logEndl( "GL_AMD_conservative_depth                                   : not detected." );
 	}
 	
+	// ****** GL_AMD_debug_output ******
+	
+	isGL_AMD_debug_output = isExtensionSupported("GL_AMD_debug_output");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_AMD_debug_output )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_debug_output                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_debug_output                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_debug_output") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_debug_output                                         : not detected." );
+	}
+	
 	// ****** GL_AMD_draw_buffers_blend ******
 	
 	isGL_AMD_draw_buffers_blend = isExtensionSupported("GL_AMD_draw_buffers_blend");
@@ -6730,6 +6803,39 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	else
 	{
 		logEndl( "GL_AMD_draw_buffers_blend                                   : not detected." );
+	}
+	
+	// ****** GL_AMD_name_gen_delete ******
+	
+	isGL_AMD_name_gen_delete = isExtensionSupported("GL_AMD_name_gen_delete");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_AMD_name_gen_delete )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_name_gen_delete                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_name_gen_delete                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_name_gen_delete") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_name_gen_delete                                      : not detected." );
 	}
 	
 	// ****** GL_AMD_performance_monitor ******
@@ -15479,6 +15585,39 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 		logEndl( "GL_EXT_separate_specular_color                              : not detected." );
 	}
 	
+	// ****** GL_EXT_shader_image_load_store ******
+	
+	isGL_EXT_shader_image_load_store = isExtensionSupported("GL_EXT_shader_image_load_store");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_EXT_shader_image_load_store )
+	{
+		std::stringstream strStream;
+		strStream << "GL_EXT_shader_image_load_store                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_EXT_shader_image_load_store                              : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_EXT_shader_image_load_store") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_EXT_shader_image_load_store                              : not detected." );
+	}
+	
 	// ****** GL_EXT_shadow_funcs ******
 	
 	isGL_EXT_shadow_funcs = isExtensionSupported("GL_EXT_shadow_funcs");
@@ -16647,6 +16786,39 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	else
 	{
 		logEndl( "GL_EXT_vertex_array_bgra                                    : not detected." );
+	}
+	
+	// ****** GL_EXT_vertex_attrib_64bit ******
+	
+	isGL_EXT_vertex_attrib_64bit = isExtensionSupported("GL_EXT_vertex_attrib_64bit");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_EXT_vertex_attrib_64bit )
+	{
+		std::stringstream strStream;
+		strStream << "GL_EXT_vertex_attrib_64bit                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_EXT_vertex_attrib_64bit                                  : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_EXT_vertex_attrib_64bit") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_EXT_vertex_attrib_64bit                                  : not detected." );
 	}
 	
 	// ****** GL_EXT_vertex_shader ******
@@ -18671,6 +18843,72 @@ void OpenGLExtensionsGen::initializeGL_NV()
 		logEndl( "GL_NV_gpu_program4                                          : not detected." );
 	}
 	
+	// ****** GL_NV_gpu_program5 ******
+	
+	isGL_NV_gpu_program5 = isExtensionSupported("GL_NV_gpu_program5");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_NV_gpu_program5 )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_gpu_program5                                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_gpu_program5                                          : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_gpu_program5") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_gpu_program5                                          : not detected." );
+	}
+	
+	// ****** GL_NV_gpu_shader5 ******
+	
+	isGL_NV_gpu_shader5 = isExtensionSupported("GL_NV_gpu_shader5");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_NV_gpu_shader5 )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_gpu_shader5                                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_gpu_shader5                                           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_gpu_shader5") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_gpu_shader5                                           : not detected." );
+	}
+	
 	// ****** GL_NV_half_float ******
 	
 	isGL_NV_half_float = isExtensionSupported("GL_NV_half_float");
@@ -18876,6 +19114,39 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	else
 	{
 		logEndl( "GL_NV_light_max_exponent                                    : not detected." );
+	}
+	
+	// ****** GL_NV_multisample_coverage ******
+	
+	isGL_NV_multisample_coverage = isExtensionSupported("GL_NV_multisample_coverage");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_NV_multisample_coverage )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_multisample_coverage                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_multisample_coverage                                  : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_multisample_coverage") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_multisample_coverage                                  : not detected." );
 	}
 	
 	// ****** GL_NV_multisample_filter_hint ******
@@ -19454,6 +19725,72 @@ void OpenGLExtensionsGen::initializeGL_NV()
 		logEndl( "GL_NV_shader_buffer_load                                    : not detected." );
 	}
 	
+	// ****** GL_NV_shader_buffer_store ******
+	
+	isGL_NV_shader_buffer_store = isExtensionSupported("GL_NV_shader_buffer_store");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_NV_shader_buffer_store )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_shader_buffer_store                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_shader_buffer_store                                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_shader_buffer_store") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_shader_buffer_store                                   : not detected." );
+	}
+	
+	// ****** GL_NV_tessellation_program5 ******
+	
+	isGL_NV_tessellation_program5 = isExtensionSupported("GL_NV_tessellation_program5");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_NV_tessellation_program5 )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_tessellation_program5                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_tessellation_program5                                 : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_tessellation_program5") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_tessellation_program5                                 : not detected." );
+	}
+	
 	// ****** GL_NV_texgen_emboss ******
 	
 	isGL_NV_texgen_emboss = isExtensionSupported("GL_NV_texgen_emboss");
@@ -19989,6 +20326,39 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	else
 	{
 		logEndl( "GL_NV_vertex_array_range2                                   : not detected." );
+	}
+	
+	// ****** GL_NV_vertex_attrib_integer_64bit ******
+	
+	isGL_NV_vertex_attrib_integer_64bit = isExtensionSupported("GL_NV_vertex_attrib_integer_64bit");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_NV_vertex_attrib_integer_64bit )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_vertex_attrib_integer_64bit                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_vertex_attrib_integer_64bit                           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_vertex_attrib_integer_64bit") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_vertex_attrib_integer_64bit                           : not detected." );
 	}
 	
 	// ****** GL_NV_vertex_buffer_unified_memory ******

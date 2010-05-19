@@ -1,4 +1,4 @@
-// This file was generated at Mon Apr 19 11:55:36 2010 with gle, please do not modify.
+// This file was generated at Tue May 18 12:11:38 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -1287,6 +1287,15 @@ bool isGL_AMD_conservative_depth()
 }
 
 
+// ********* GL_AMD_debug_output *********
+bool isGL_AMD_debug_output()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_debug_output;
+
+	return isSupported;
+}
+
+
 // ********* GL_AMD_draw_buffers_blend *********
 bool isGL_AMD_draw_buffers_blend()
 {
@@ -1317,6 +1326,15 @@ void glBlendEquationIndexedAMD( GLuint buf, GLenum mode )
 void glBlendEquationSeparateIndexedAMD( GLuint buf, GLenum modeRGB, GLenum modeAlpha )
 {
 	gleGetCurrent()->glBlendEquationSeparateIndexedAMD( buf, modeRGB, modeAlpha );
+}
+
+
+// ********* GL_AMD_name_gen_delete *********
+bool isGL_AMD_name_gen_delete()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_name_gen_delete;
+
+	return isSupported;
 }
 
 
@@ -8079,6 +8097,15 @@ bool isGL_EXT_separate_specular_color()
 }
 
 
+// ********* GL_EXT_shader_image_load_store *********
+bool isGL_EXT_shader_image_load_store()
+{
+	const bool isSupported = gleGetCurrent()->isGL_EXT_shader_image_load_store;
+
+	return isSupported;
+}
+
+
 // ********* GL_EXT_shadow_funcs *********
 bool isGL_EXT_shadow_funcs()
 {
@@ -8581,6 +8608,15 @@ void glVertexPointerEXT( GLint size, GLenum type, GLsizei stride, GLsizei count,
 bool isGL_EXT_vertex_array_bgra()
 {
 	const bool isSupported = gleGetCurrent()->isGL_EXT_vertex_array_bgra;
+
+	return isSupported;
+}
+
+
+// ********* GL_EXT_vertex_attrib_64bit *********
+bool isGL_EXT_vertex_attrib_64bit()
+{
+	const bool isSupported = gleGetCurrent()->isGL_EXT_vertex_attrib_64bit;
 
 	return isSupported;
 }
@@ -9852,6 +9888,24 @@ void glGetProgramEnvParameterIuivNV( GLenum target, GLuint index, GLuint *params
 }
 
 
+// ********* GL_NV_gpu_program5 *********
+bool isGL_NV_gpu_program5()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_gpu_program5;
+
+	return isSupported;
+}
+
+
+// ********* GL_NV_gpu_shader5 *********
+bool isGL_NV_gpu_shader5()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_gpu_shader5;
+
+	return isSupported;
+}
+
+
 // ********* GL_NV_half_float *********
 bool isGL_NV_half_float()
 {
@@ -10141,6 +10195,15 @@ void glVertexAttribs4hvNV( GLuint index, GLsizei n, const GLhalfNV *v )
 bool isGL_NV_light_max_exponent()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_light_max_exponent;
+
+	return isSupported;
+}
+
+
+// ********* GL_NV_multisample_coverage *********
+bool isGL_NV_multisample_coverage()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_multisample_coverage;
 
 	return isSupported;
 }
@@ -10560,6 +10623,24 @@ void glProgramUniformui64vNV( GLuint program, GLint location, GLsizei count, con
 }
 
 
+// ********* GL_NV_shader_buffer_store *********
+bool isGL_NV_shader_buffer_store()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_shader_buffer_store;
+
+	return isSupported;
+}
+
+
+// ********* GL_NV_tessellation_program5 *********
+bool isGL_NV_tessellation_program5()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_tessellation_program5;
+
+	return isSupported;
+}
+
+
 // ********* GL_NV_texgen_emboss *********
 bool isGL_NV_texgen_emboss()
 {
@@ -10807,6 +10888,15 @@ void glVertexArrayRangeNV( GLsizei length, const GLvoid *pointer )
 bool isGL_NV_vertex_array_range2()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_vertex_array_range2;
+
+	return isSupported;
+}
+
+
+// ********* GL_NV_vertex_attrib_integer_64bit *********
+bool isGL_NV_vertex_attrib_integer_64bit()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_vertex_attrib_integer_64bit;
 
 	return isSupported;
 }

@@ -1,4 +1,4 @@
-// This file was generated at Mon Apr 19 11:55:36 2010 with gle, please do not modify.
+// This file was generated at Tue May 18 12:11:38 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -84,7 +84,7 @@
  */
 
 /** 
- * @defgroup g_GL_AMD		GL_AMD (6 extensions found)
+ * @defgroup g_GL_AMD		GL_AMD (8 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -104,7 +104,7 @@
  */
 
 /** 
- * @defgroup g_GL_EXT		GL_EXT (86 extensions found)
+ * @defgroup g_GL_EXT		GL_EXT (88 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -144,7 +144,7 @@
  */
 
 /** 
- * @defgroup g_GL_NV		GL_NV (55 extensions found)
+ * @defgroup g_GL_NV		GL_NV (61 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -1873,6 +1873,22 @@ GLE_API bool isGL_AMD_conservative_depth();
 
 
 /**
+ * @defgroup GL_AMD_debug_output GL_AMD_debug_output
+ * Extension number in OpenGL registry : 395
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/debug_output.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_AMD_debug_output is supported.
+ * @return Returns \c true if \b GL_AMD_debug_output is supported, false otherwise.
+ */
+GLE_API bool isGL_AMD_debug_output();
+
+//@}
+
+
+/**
  * @defgroup GL_AMD_draw_buffers_blend GL_AMD_draw_buffers_blend
  * Extension number in OpenGL registry : 366
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/draw_buffers_blend.txt
@@ -1904,6 +1920,22 @@ GLE_API void glBlendEquationIndexedAMD( GLuint buf, GLenum mode );
  * @brief void glBlendEquationSeparateIndexedAMD( GLuint buf, GLenum modeRGB, GLenum modeAlpha );
  */
 GLE_API void glBlendEquationSeparateIndexedAMD( GLuint buf, GLenum modeRGB, GLenum modeAlpha );
+
+//@}
+
+
+/**
+ * @defgroup GL_AMD_name_gen_delete GL_AMD_name_gen_delete
+ * Extension number in OpenGL registry : 394
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/name_gen_delete.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_AMD_name_gen_delete is supported.
+ * @return Returns \c true if \b GL_AMD_name_gen_delete is supported, false otherwise.
+ */
+GLE_API bool isGL_AMD_name_gen_delete();
 
 //@}
 
@@ -9041,6 +9073,22 @@ GLE_API bool isGL_EXT_separate_specular_color();
 
 
 /**
+ * @defgroup GL_EXT_shader_image_load_store GL_EXT_shader_image_load_store
+ * Extension number in OpenGL registry : 386
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/shader_image_load_store.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_shader_image_load_store is supported.
+ * @return Returns \c true if \b GL_EXT_shader_image_load_store is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_shader_image_load_store();
+
+//@}
+
+
+/**
  * @defgroup GL_EXT_shadow_funcs GL_EXT_shadow_funcs
  * Extension number in OpenGL registry : 267
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/shadow_funcs.txt
@@ -9721,6 +9769,22 @@ GLE_API void glVertexPointerEXT( GLint size, GLenum type, GLsizei stride, GLsize
  * @return Returns \c true if \b GL_EXT_vertex_array_bgra is supported, false otherwise.
  */
 GLE_API bool isGL_EXT_vertex_array_bgra();
+
+//@}
+
+
+/**
+ * @defgroup GL_EXT_vertex_attrib_64bit GL_EXT_vertex_attrib_64bit
+ * Extension number in OpenGL registry : 387
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/vertex_attrib_64bit.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_EXT_vertex_attrib_64bit is supported.
+ * @return Returns \c true if \b GL_EXT_vertex_attrib_64bit is supported, false otherwise.
+ */
+GLE_API bool isGL_EXT_vertex_attrib_64bit();
 
 //@}
 
@@ -11152,6 +11216,38 @@ GLE_API void glGetProgramEnvParameterIuivNV( GLenum target, GLuint index, GLuint
 
 
 /**
+ * @defgroup GL_NV_gpu_program5 GL_NV_gpu_program5
+ * Extension number in OpenGL registry : 388
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/gpu_program5.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_gpu_program5 is supported.
+ * @return Returns \c true if \b GL_NV_gpu_program5 is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_gpu_program5();
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_gpu_shader5 GL_NV_gpu_shader5
+ * Extension number in OpenGL registry : 389
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/gpu_shader5.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_gpu_shader5 is supported.
+ * @return Returns \c true if \b GL_NV_gpu_shader5 is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_gpu_shader5();
+
+//@}
+
+
+/**
  * @defgroup GL_NV_half_float GL_NV_half_float
  * Extension number in OpenGL registry : 283
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/half_float.txt
@@ -11409,6 +11505,22 @@ GLE_API void glVertexAttribs4hvNV( GLuint index, GLsizei n, const GLhalfNV *v );
  * @return Returns \c true if \b GL_NV_light_max_exponent is supported, false otherwise.
  */
 GLE_API bool isGL_NV_light_max_exponent();
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_multisample_coverage GL_NV_multisample_coverage
+ * Extension number in OpenGL registry : 393
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/multisample_coverage.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_multisample_coverage is supported.
+ * @return Returns \c true if \b GL_NV_multisample_coverage is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_multisample_coverage();
 
 //@}
 
@@ -11861,6 +11973,38 @@ GLE_API void glProgramUniformui64vNV( GLuint program, GLint location, GLsizei co
 
 
 /**
+ * @defgroup GL_NV_shader_buffer_store GL_NV_shader_buffer_store
+ * Extension number in OpenGL registry : 390
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/shader_buffer_store.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_shader_buffer_store is supported.
+ * @return Returns \c true if \b GL_NV_shader_buffer_store is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_shader_buffer_store();
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_tessellation_program5 GL_NV_tessellation_program5
+ * Extension number in OpenGL registry : 391
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/tessellation_program5.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_tessellation_program5 is supported.
+ * @return Returns \c true if \b GL_NV_tessellation_program5 is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_tessellation_program5();
+
+//@}
+
+
+/**
  * @defgroup GL_NV_texgen_emboss GL_NV_texgen_emboss
  * Extension number in OpenGL registry : 193
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/texgen_emboss.txt
@@ -12185,6 +12329,22 @@ GLE_API void glVertexArrayRangeNV( GLsizei length, const GLvoid *pointer );
  * @return Returns \c true if \b GL_NV_vertex_array_range2 is supported, false otherwise.
  */
 GLE_API bool isGL_NV_vertex_array_range2();
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_vertex_attrib_integer_64bit GL_NV_vertex_attrib_integer_64bit
+ * Extension number in OpenGL registry : 392
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/vertex_attrib_integer_64bit.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_vertex_attrib_integer_64bit is supported.
+ * @return Returns \c true if \b GL_NV_vertex_attrib_integer_64bit is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_vertex_attrib_integer_64bit();
 
 //@}
 

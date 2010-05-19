@@ -1,4 +1,4 @@
-// This file was generated at Mon Apr 19 11:55:36 2010 with gle, please do not modify.
+// This file was generated at Tue May 18 12:11:38 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,11 +17,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Mon Apr 19 11:55:36 2010 with gle, please do not modify.
+ * - Stamp = // This file was generated at Tue May 18 12:11:38 2010 with gle, please do not modify.
  * - Number of tokens					= 0
  * - Number of functions				= 1933
- * - Number of extensions found(in headers)	= 477
- * - Number of extensions in OpenGL registry	= 456
+ * - Number of extensions found(in headers)	= 487
+ * - Number of extensions in OpenGL registry	= 459
  */
 
 
@@ -1589,6 +1589,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_AMD_debug_output is supported, false otherwise.
+	 */
+	bool isGL_AMD_debug_output;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_AMD_draw_buffers_blend is supported, false otherwise.
 	 */
 	bool isGL_AMD_draw_buffers_blend;
@@ -1612,6 +1621,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glBlendEquationSeparateIndexedAMD( GLuint buf, GLenum modeRGB, GLenum modeAlpha );
 	*/
 	PFNGLBLENDEQUATIONSEPARATEINDEXEDAMDPROC                      glBlendEquationSeparateIndexedAMD;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_name_gen_delete is supported, false otherwise.
+	 */
+	bool isGL_AMD_name_gen_delete;
 
 
 
@@ -7516,6 +7534,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_EXT_shader_image_load_store is supported, false otherwise.
+	 */
+	bool isGL_EXT_shader_image_load_store;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_EXT_shadow_funcs is supported, false otherwise.
 	 */
 	bool isGL_EXT_shadow_funcs;
@@ -7979,6 +8006,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_EXT_vertex_array_bgra is supported, false otherwise.
 	 */
 	bool isGL_EXT_vertex_array_bgra;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_EXT_vertex_attrib_64bit is supported, false otherwise.
+	 */
+	bool isGL_EXT_vertex_attrib_64bit;
 
 
 
@@ -9106,6 +9142,24 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_NV_gpu_program5 is supported, false otherwise.
+	 */
+	bool isGL_NV_gpu_program5;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_gpu_shader5 is supported, false otherwise.
+	 */
+	bool isGL_NV_gpu_shader5;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_NV_half_float is supported, false otherwise.
 	 */
 	bool isGL_NV_half_float;
@@ -9348,6 +9402,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_NV_light_max_exponent is supported, false otherwise.
 	 */
 	bool isGL_NV_light_max_exponent;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_multisample_coverage is supported, false otherwise.
+	 */
+	bool isGL_NV_multisample_coverage;
 
 
 
@@ -9717,6 +9780,24 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_NV_shader_buffer_store is supported, false otherwise.
+	 */
+	bool isGL_NV_shader_buffer_store;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_tessellation_program5 is supported, false otherwise.
+	 */
+	bool isGL_NV_tessellation_program5;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_NV_texgen_emboss is supported, false otherwise.
 	 */
 	bool isGL_NV_texgen_emboss;
@@ -9942,6 +10023,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_NV_vertex_array_range2 is supported, false otherwise.
 	 */
 	bool isGL_NV_vertex_array_range2;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_vertex_attrib_integer_64bit is supported, false otherwise.
+	 */
+	bool isGL_NV_vertex_attrib_integer_64bit;
 
 
 
