@@ -1,4 +1,4 @@
-// This file was generated at Tue May 18 12:11:38 2010 with gle, please do not modify.
+// This file was generated at Mon Jun  7 11:44:46 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -204,7 +204,7 @@
  */
 
 /** 
- * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (53 extensions found)
+ * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (54 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -17907,6 +17907,28 @@ GLE_API BOOL  wglEnumGpusFromAffinityDCNV( HDC hAffinityDC, UINT iGpuIndex, HGPU
  * @brief BOOL  wglDeleteDCNV( HDC hdc );
  */
 GLE_API BOOL  wglDeleteDCNV( HDC hdc );
+
+//@}
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+			
+/**	
+ * @defgroup WGL_NV_multisample_coverage WGL_NV_multisample_coverage
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b WGL_NV_multisample_coverage is supported.
+ * @return Returns \c true if \b WGL_NV_multisample_coverage is supported, false otherwise.
+ */
+GLE_API bool isWGL_NV_multisample_coverage();
 
 //@}
 

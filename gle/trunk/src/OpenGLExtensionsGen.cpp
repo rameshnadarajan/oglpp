@@ -1,4 +1,4 @@
-// This file was generated at Tue May 18 12:11:38 2010 with gle, please do not modify.
+// This file was generated at Mon Jun  7 11:44:46 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,7 +17,7 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 487;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 488;
 const int	OpenGLExtensionsGen::m_supportedProcCount		= 1933;
 
 
@@ -4108,6 +4108,11 @@ void OpenGLExtensionsGen::clear()
 	wglCreateAffinityDCNV                                         = 0;
 	wglEnumGpusFromAffinityDCNV                                   = 0;
 	wglDeleteDCNV                                                 = 0;
+#endif // WIN32
+
+#ifdef WIN32
+	// ****** WGL_NV_multisample_coverage ******
+	isWGL_NV_multisample_coverage                                 = false;
 #endif // WIN32
 
 #ifdef WIN32
@@ -27059,6 +27064,42 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	else
 	{
 		logEndl( "WGL_NV_gpu_affinity                                         : not detected." );
+	}
+#endif // WIN32
+
+#ifdef WIN32
+	
+	// ****** WGL_NV_multisample_coverage ******
+	
+	isWGL_NV_multisample_coverage = isWExtensionSupported("WGL_NV_multisample_coverage");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isWGL_NV_multisample_coverage )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_NV_multisample_coverage                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_NV_multisample_coverage                                 : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_NV_multisample_coverage") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_NV_multisample_coverage                                 : not detected." );
 	}
 #endif // WIN32
 

@@ -1,4 +1,4 @@
-// This file was generated at Tue May 18 12:11:38 2010 with gle, please do not modify.
+// This file was generated at Mon Jun  7 11:44:46 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -16138,6 +16138,20 @@ BOOL  wglEnumGpusFromAffinityDCNV( HDC hAffinityDC, UINT iGpuIndex, HGPUNV *hGpu
 BOOL  wglDeleteDCNV( HDC hdc )
 {
 	return ( gleGetCurrent()->wglDeleteDCNV( hdc) );
+}
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+// ********* WGL_NV_multisample_coverage *********
+bool isWGL_NV_multisample_coverage()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_multisample_coverage;
+
+	return isSupported;
 }
 
 #endif // WIN32

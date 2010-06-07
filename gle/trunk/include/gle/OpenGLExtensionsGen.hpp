@@ -1,4 +1,4 @@
-// This file was generated at Tue May 18 12:11:38 2010 with gle, please do not modify.
+// This file was generated at Mon Jun  7 11:44:46 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,10 +17,10 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Tue May 18 12:11:38 2010 with gle, please do not modify.
+ * - Stamp = // This file was generated at Mon Jun  7 11:44:46 2010 with gle, please do not modify.
  * - Number of tokens					= 0
  * - Number of functions				= 1933
- * - Number of extensions found(in headers)	= 487
+ * - Number of extensions found(in headers)	= 488
  * - Number of extensions in OpenGL registry	= 459
  */
 
@@ -14693,6 +14693,22 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief BOOL  wglDeleteDCNV( HDC hdc );
 	*/
 	PFNWGLDELETEDCNVPROC                                          wglDeleteDCNV;
+
+
+
+
+#endif // WIN32
+
+
+
+#ifdef WIN32
+
+
+
+	/**
+	 * @brief Returns \c true if \b WGL_NV_multisample_coverage is supported, false otherwise.
+	 */
+	bool isWGL_NV_multisample_coverage;
 
 
 
