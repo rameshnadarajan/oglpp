@@ -1,4 +1,4 @@
-// This file was generated at Mon Jun  7 11:44:46 2010 with gle, please do not modify.
+// This file was generated at Thu Jun 10 12:41:30 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,10 +17,10 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Mon Jun  7 11:44:46 2010 with gle, please do not modify.
+ * - Stamp = // This file was generated at Thu Jun 10 12:41:30 2010 with gle, please do not modify.
  * - Number of tokens					= 0
  * - Number of functions				= 1933
- * - Number of extensions found(in headers)	= 488
+ * - Number of extensions found(in headers)	= 490
  * - Number of extensions in OpenGL registry	= 459
  */
 
@@ -425,6 +425,22 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GLX_ARB_vertex_buffer_object is supported, false otherwise.
+	 */
+	bool isGLX_ARB_vertex_buffer_object;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
 	 * @brief Returns \c true if \b GLX_EXT_fbconfig_packed_float is supported, false otherwise.
 	 */
 	bool isGLX_EXT_fbconfig_packed_float;
@@ -722,6 +738,22 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GLX_NV_float_buffer is supported, false otherwise.
 	 */
 	bool isGLX_NV_float_buffer;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_NV_multisample_coverage is supported, false otherwise.
+	 */
+	bool isGLX_NV_multisample_coverage;
 
 
 

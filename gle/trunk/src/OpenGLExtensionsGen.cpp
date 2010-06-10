@@ -1,4 +1,4 @@
-// This file was generated at Mon Jun  7 11:44:46 2010 with gle, please do not modify.
+// This file was generated at Thu Jun 10 12:41:30 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,7 +17,7 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 488;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 490;
 const int	OpenGLExtensionsGen::m_supportedProcCount		= 1933;
 
 
@@ -64,6 +64,11 @@ void OpenGLExtensionsGen::clear()
 #ifdef POSIX
 	// ****** GLX_ARB_multisample ******
 	isGLX_ARB_multisample                                         = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_ARB_vertex_buffer_object ******
+	isGLX_ARB_vertex_buffer_object                                = false;
 #endif // POSIX
 
 #ifdef POSIX
@@ -155,6 +160,11 @@ void OpenGLExtensionsGen::clear()
 #ifdef POSIX
 	// ****** GLX_NV_float_buffer ******
 	isGLX_NV_float_buffer                                         = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_NV_multisample_coverage ******
+	isGLX_NV_multisample_coverage                                 = false;
 #endif // POSIX
 
 #ifdef POSIX
@@ -4649,6 +4659,42 @@ void OpenGLExtensionsGen::initializeGLX_ARB()
 	}
 #endif // POSIX
 
+#ifdef POSIX
+	
+	// ****** GLX_ARB_vertex_buffer_object ******
+	
+	isGLX_ARB_vertex_buffer_object = isWExtensionSupported("GLX_ARB_vertex_buffer_object");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_ARB_vertex_buffer_object )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_ARB_vertex_buffer_object                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_ARB_vertex_buffer_object                                : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_ARB_vertex_buffer_object") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_ARB_vertex_buffer_object                                : not detected." );
+	}
+#endif // POSIX
+
 } // initialize()
 
 
@@ -5287,6 +5333,42 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	else
 	{
 		logEndl( "GLX_NV_float_buffer                                         : not detected." );
+	}
+#endif // POSIX
+
+#ifdef POSIX
+	
+	// ****** GLX_NV_multisample_coverage ******
+	
+	isGLX_NV_multisample_coverage = isWExtensionSupported("GLX_NV_multisample_coverage");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_NV_multisample_coverage )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_NV_multisample_coverage                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_NV_multisample_coverage                                 : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_NV_multisample_coverage") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_NV_multisample_coverage                                 : not detected." );
 	}
 #endif // POSIX
 

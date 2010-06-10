@@ -1,4 +1,4 @@
-// This file was generated at Mon Jun  7 11:44:46 2010 with gle, please do not modify.
+// This file was generated at Thu Jun 10 12:41:30 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -204,7 +204,7 @@
  */
 
 /** 
- * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (54 extensions found)
+ * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (56 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -390,6 +390,28 @@ GLE_API __GLXextFuncPtr glXGetProcAddressARB( const GLubyte *procName );
  * @return Returns \c true if \b GLX_ARB_multisample is supported, false otherwise.
  */
 GLE_API bool isGLX_ARB_multisample();
+
+//@}
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+			
+/**	
+ * @defgroup GLX_ARB_vertex_buffer_object GLX_ARB_vertex_buffer_object
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GLX_ARB_vertex_buffer_object is supported.
+ * @return Returns \c true if \b GLX_ARB_vertex_buffer_object is supported, false otherwise.
+ */
+GLE_API bool isGLX_ARB_vertex_buffer_object();
 
 //@}
 
@@ -803,6 +825,28 @@ GLE_API void glXCopyImageSubDataNV( Display *dpy, GLXContext srcCtx, GLuint srcN
  * @return Returns \c true if \b GLX_NV_float_buffer is supported, false otherwise.
  */
 GLE_API bool isGLX_NV_float_buffer();
+
+//@}
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+			
+/**	
+ * @defgroup GLX_NV_multisample_coverage GLX_NV_multisample_coverage
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GLX_NV_multisample_coverage is supported.
+ * @return Returns \c true if \b GLX_NV_multisample_coverage is supported, false otherwise.
+ */
+GLE_API bool isGLX_NV_multisample_coverage();
 
 //@}
 
