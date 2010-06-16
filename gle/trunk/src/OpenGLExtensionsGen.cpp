@@ -1,4 +1,4 @@
-// This file was generated at Thu Jun 10 12:41:30 2010 with gle, please do not modify.
+// This file was generated at Wed Jun 16 11:47:26 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,8 +17,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 490;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 1933;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 492;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 1936;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS ) :
@@ -452,6 +452,10 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_AMD_texture_texture4 ******
 	isGL_AMD_texture_texture4                                     = false;
+
+
+	// ****** GL_AMD_transform_feedback3_lines_triangles ******
+	isGL_AMD_transform_feedback3_lines_triangles                  = false;
 
 
 	// ****** GL_AMD_vertex_shader_tesselator ******
@@ -1793,6 +1797,9 @@ void OpenGLExtensionsGen::clear()
 	glNamedBufferSubDataEXT                                       = 0;
 	glMapNamedBufferEXT                                           = 0;
 	glUnmapNamedBufferEXT                                         = 0;
+	glMapNamedBufferRangeEXT                                      = 0;
+	glFlushMappedNamedBufferRangeEXT                              = 0;
+	glNamedCopyBufferSubDataEXT                                   = 0;
 	glGetNamedBufferParameterivEXT                                = 0;
 	glGetNamedBufferPointervEXT                                   = 0;
 	glGetNamedBufferSubDataEXT                                    = 0;
@@ -2833,6 +2840,10 @@ void OpenGLExtensionsGen::clear()
 	glPauseTransformFeedbackNV                                    = 0;
 	glResumeTransformFeedbackNV                                   = 0;
 	glDrawTransformFeedbackNV                                     = 0;
+
+
+	// ****** GL_NV_vdpau_interop ******
+	isGL_NV_vdpau_interop                                         = false;
 
 
 	// ****** GL_NV_vertex_array_range ******
@@ -7091,6 +7102,39 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	else
 	{
 		logEndl( "GL_AMD_texture_texture4                                     : not detected." );
+	}
+	
+	// ****** GL_AMD_transform_feedback3_lines_triangles ******
+	
+	isGL_AMD_transform_feedback3_lines_triangles = isExtensionSupported("GL_AMD_transform_feedback3_lines_triangles");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_AMD_transform_feedback3_lines_triangles )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_transform_feedback3_lines_triangles                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_transform_feedback3_lines_triangles                  : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_transform_feedback3_lines_triangles") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_transform_feedback3_lines_triangles                  : not detected." );
 	}
 	
 	// ****** GL_AMD_vertex_shader_tesselator ******
@@ -13597,7 +13641,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	
 	isGL_EXT_direct_state_access = isExtensionSupported("GL_EXT_direct_state_access");
 	
-	localSupportedProcCount		= 186;
+	localSupportedProcCount		= 189;
 	localInitializedProcCount	= 0;
 	
 	if ( isGL_EXT_direct_state_access ) // || isSEDEnable()
@@ -14082,6 +14126,15 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 
 		glUnmapNamedBufferEXT = (PFNGLUNMAPNAMEDBUFFEREXTPROC) getExtensionPtr( "glUnmapNamedBufferEXT" );
 		if ( glUnmapNamedBufferEXT != 0 )	++localInitializedProcCount;
+
+		glMapNamedBufferRangeEXT = (PFNGLMAPNAMEDBUFFERRANGEEXTPROC) getExtensionPtr( "glMapNamedBufferRangeEXT" );
+		if ( glMapNamedBufferRangeEXT != 0 )	++localInitializedProcCount;
+
+		glFlushMappedNamedBufferRangeEXT = (PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEEXTPROC) getExtensionPtr( "glFlushMappedNamedBufferRangeEXT" );
+		if ( glFlushMappedNamedBufferRangeEXT != 0 )	++localInitializedProcCount;
+
+		glNamedCopyBufferSubDataEXT = (PFNGLNAMEDCOPYBUFFERSUBDATAEXTPROC) getExtensionPtr( "glNamedCopyBufferSubDataEXT" );
+		if ( glNamedCopyBufferSubDataEXT != 0 )	++localInitializedProcCount;
 
 		glGetNamedBufferParameterivEXT = (PFNGLGETNAMEDBUFFERPARAMETERIVEXTPROC) getExtensionPtr( "glGetNamedBufferParameterivEXT" );
 		if ( glGetNamedBufferParameterivEXT != 0 )	++localInitializedProcCount;
@@ -20338,6 +20391,39 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	else
 	{
 		logEndl( "GL_NV_transform_feedback2                                   : not detected." );
+	}
+	
+	// ****** GL_NV_vdpau_interop ******
+	
+	isGL_NV_vdpau_interop = isExtensionSupported("GL_NV_vdpau_interop");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGL_NV_vdpau_interop )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_vdpau_interop                                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_vdpau_interop                                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_vdpau_interop") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_vdpau_interop                                         : not detected." );
 	}
 	
 	// ****** GL_NV_vertex_array_range ******

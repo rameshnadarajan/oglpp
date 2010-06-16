@@ -1,4 +1,4 @@
-// This file was generated at Thu Jun 10 12:41:30 2010 with gle, please do not modify.
+// This file was generated at Wed Jun 16 11:47:26 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,11 +17,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Thu Jun 10 12:41:30 2010 with gle, please do not modify.
+ * - Stamp = // This file was generated at Wed Jun 16 11:47:26 2010 with gle, please do not modify.
  * - Number of tokens					= 0
- * - Number of functions				= 1933
- * - Number of extensions found(in headers)	= 490
- * - Number of extensions in OpenGL registry	= 459
+ * - Number of functions				= 1936
+ * - Number of extensions found(in headers)	= 492
+ * - Number of extensions in OpenGL registry	= 462
  */
 
 
@@ -1759,6 +1759,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief Returns \c true if \b GL_AMD_transform_feedback3_lines_triangles is supported, false otherwise.
+	 */
+	bool isGL_AMD_transform_feedback3_lines_triangles;
+
+
+
+
+
+	/**
 	 * @brief Returns \c true if \b GL_AMD_vertex_shader_tesselator is supported, false otherwise.
 	 */
 	bool isGL_AMD_vertex_shader_tesselator;
@@ -3118,7 +3127,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLISSAMPLERPROC                                            glIsSampler;
 
 	/**
-	* @brief void glBindSampler( GLenum unit, GLuint sampler );
+	* @brief void glBindSampler( GLuint unit, GLuint sampler );
 	*/
 	PFNGLBINDSAMPLERPROC                                          glBindSampler;
 
@@ -6636,6 +6645,21 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLUNMAPNAMEDBUFFEREXTPROC                                  glUnmapNamedBufferEXT;
 
 	/**
+	* @brief GLvoid* glMapNamedBufferRangeEXT( GLuint buffer, GLintptr offset, GLsizeiptr length, GLbitfield access );
+	*/
+	PFNGLMAPNAMEDBUFFERRANGEEXTPROC                               glMapNamedBufferRangeEXT;
+
+	/**
+	* @brief void glFlushMappedNamedBufferRangeEXT( GLuint buffer, GLintptr offset, GLsizeiptr length );
+	*/
+	PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEEXTPROC                       glFlushMappedNamedBufferRangeEXT;
+
+	/**
+	* @brief void glNamedCopyBufferSubDataEXT( GLuint readBuffer, GLuint writeBuffer, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size );
+	*/
+	PFNGLNAMEDCOPYBUFFERSUBDATAEXTPROC                            glNamedCopyBufferSubDataEXT;
+
+	/**
 	* @brief void glGetNamedBufferParameterivEXT( GLuint buffer, GLenum pname, GLint *params );
 	*/
 	PFNGLGETNAMEDBUFFERPARAMETERIVEXTPROC                         glGetNamedBufferParameterivEXT;
@@ -10027,6 +10051,15 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	* @brief void glDrawTransformFeedbackNV( GLenum mode, GLuint id );
 	*/
 	PFNGLDRAWTRANSFORMFEEDBACKNVPROC                              glDrawTransformFeedbackNV;
+
+
+
+
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_vdpau_interop is supported, false otherwise.
+	 */
+	bool isGL_NV_vdpau_interop;
 
 
 

@@ -1,4 +1,4 @@
-// This file was generated at Thu Jun 10 12:41:30 2010 with gle, please do not modify.
+// This file was generated at Wed Jun 16 11:47:26 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -84,7 +84,7 @@
  */
 
 /** 
- * @defgroup g_GL_AMD		GL_AMD (8 extensions found)
+ * @defgroup g_GL_AMD		GL_AMD (9 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -144,7 +144,7 @@
  */
 
 /** 
- * @defgroup g_GL_NV		GL_NV (61 extensions found)
+ * @defgroup g_GL_NV		GL_NV (62 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -2102,6 +2102,22 @@ GLE_API bool isGL_AMD_texture_texture4();
 
 //@}
 
+
+/**
+ * @defgroup GL_AMD_transform_feedback3_lines_triangles GL_AMD_transform_feedback3_lines_triangles
+ * Extension number in OpenGL registry : 397
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/transform_feedback3_lines_triangles.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_AMD_transform_feedback3_lines_triangles is supported.
+ * @return Returns \c true if \b GL_AMD_transform_feedback3_lines_triangles is supported, false otherwise.
+ */
+GLE_API bool isGL_AMD_transform_feedback3_lines_triangles();
+
+//@}
+
 			
 /**	
  * @defgroup GL_AMD_vertex_shader_tesselator GL_AMD_vertex_shader_tesselator
@@ -3859,9 +3875,9 @@ GLE_API void glDeleteSamplers( GLsizei count, const GLuint *samplers );
 GLE_API GLboolean glIsSampler( GLuint sampler );
 
 /**
- * @brief void glBindSampler( GLenum unit, GLuint sampler );
+ * @brief void glBindSampler( GLuint unit, GLuint sampler );
  */
-GLE_API void glBindSampler( GLenum unit, GLuint sampler );
+GLE_API void glBindSampler( GLuint unit, GLuint sampler );
 
 /**
  * @brief void glSamplerParameteri( GLuint sampler, GLenum pname, GLint param );
@@ -7948,6 +7964,21 @@ GLE_API GLvoid* glMapNamedBufferEXT( GLuint buffer, GLenum access );
  * @brief GLboolean glUnmapNamedBufferEXT( GLuint buffer );
  */
 GLE_API GLboolean glUnmapNamedBufferEXT( GLuint buffer );
+
+/**
+ * @brief GLvoid* glMapNamedBufferRangeEXT( GLuint buffer, GLintptr offset, GLsizeiptr length, GLbitfield access );
+ */
+GLE_API GLvoid* glMapNamedBufferRangeEXT( GLuint buffer, GLintptr offset, GLsizeiptr length, GLbitfield access );
+
+/**
+ * @brief void glFlushMappedNamedBufferRangeEXT( GLuint buffer, GLintptr offset, GLsizeiptr length );
+ */
+GLE_API void glFlushMappedNamedBufferRangeEXT( GLuint buffer, GLintptr offset, GLsizeiptr length );
+
+/**
+ * @brief void glNamedCopyBufferSubDataEXT( GLuint readBuffer, GLuint writeBuffer, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size );
+ */
+GLE_API void glNamedCopyBufferSubDataEXT( GLuint readBuffer, GLuint writeBuffer, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size );
 
 /**
  * @brief void glGetNamedBufferParameterivEXT( GLuint buffer, GLenum pname, GLint *params );
@@ -12331,6 +12362,22 @@ GLE_API void glResumeTransformFeedbackNV( void );
  * @brief void glDrawTransformFeedbackNV( GLenum mode, GLuint id );
  */
 GLE_API void glDrawTransformFeedbackNV( GLenum mode, GLuint id );
+
+//@}
+
+
+/**
+ * @defgroup GL_NV_vdpau_interop GL_NV_vdpau_interop
+ * Extension number in OpenGL registry : 396
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/vdpau_interop.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GL_NV_vdpau_interop is supported.
+ * @return Returns \c true if \b GL_NV_vdpau_interop is supported, false otherwise.
+ */
+GLE_API bool isGL_NV_vdpau_interop();
 
 //@}
 

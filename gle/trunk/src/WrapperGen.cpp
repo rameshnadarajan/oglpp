@@ -1,4 +1,4 @@
-// This file was generated at Thu Jun 10 12:41:30 2010 with gle, please do not modify.
+// This file was generated at Wed Jun 16 11:47:26 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -1463,6 +1463,15 @@ bool isGL_AMD_shader_stencil_export()
 bool isGL_AMD_texture_texture4()
 {
 	const bool isSupported = gleGetCurrent()->isGL_AMD_texture_texture4;
+
+	return isSupported;
+}
+
+
+// ********* GL_AMD_transform_feedback3_lines_triangles *********
+bool isGL_AMD_transform_feedback3_lines_triangles()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_transform_feedback3_lines_triangles;
 
 	return isSupported;
 }
@@ -3001,7 +3010,7 @@ GLboolean glIsSampler( GLuint sampler )
 }
 
 					
-void glBindSampler( GLenum unit, GLuint sampler )
+void glBindSampler( GLuint unit, GLuint sampler )
 {
 	gleGetCurrent()->glBindSampler( unit, sampler );
 }
@@ -7075,6 +7084,24 @@ GLboolean glUnmapNamedBufferEXT( GLuint buffer )
 }
 
 					
+GLvoid* glMapNamedBufferRangeEXT( GLuint buffer, GLintptr offset, GLsizeiptr length, GLbitfield access )
+{
+	return ( gleGetCurrent()->glMapNamedBufferRangeEXT( buffer, offset, length, access) );
+}
+
+					
+void glFlushMappedNamedBufferRangeEXT( GLuint buffer, GLintptr offset, GLsizeiptr length )
+{
+	gleGetCurrent()->glFlushMappedNamedBufferRangeEXT( buffer, offset, length );
+}
+
+					
+void glNamedCopyBufferSubDataEXT( GLuint readBuffer, GLuint writeBuffer, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size )
+{
+	gleGetCurrent()->glNamedCopyBufferSubDataEXT( readBuffer, writeBuffer, readOffset, writeOffset, size );
+}
+
+					
 void glGetNamedBufferParameterivEXT( GLuint buffer, GLenum pname, GLint *params )
 {
 	gleGetCurrent()->glGetNamedBufferParameterivEXT( buffer, pname, params );
@@ -10888,6 +10915,15 @@ void glResumeTransformFeedbackNV( void )
 void glDrawTransformFeedbackNV( GLenum mode, GLuint id )
 {
 	gleGetCurrent()->glDrawTransformFeedbackNV( mode, id );
+}
+
+
+// ********* GL_NV_vdpau_interop *********
+bool isGL_NV_vdpau_interop()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_vdpau_interop;
+
+	return isSupported;
 }
 
 
