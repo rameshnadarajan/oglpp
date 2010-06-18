@@ -1,4 +1,4 @@
-// This file was generated at Wed Jun 16 11:47:26 2010 with gle, please do not modify.
+// This file was generated at Fri Jun 18 07:48:05 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -204,7 +204,7 @@
  */
 
 /** 
- * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (56 extensions found)
+ * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (57 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -612,6 +612,28 @@ GLE_API bool isGLX_EXT_visual_info();
  * @return Returns \c true if \b GLX_EXT_visual_rating is supported, false otherwise.
  */
 GLE_API bool isGLX_EXT_visual_rating();
+
+//@}
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+			
+/**	
+ * @defgroup GLX_GLX_AMD_gpu_association GLX_GLX_AMD_gpu_association
+ * Extension not found in OpenGL extensions registry !!!
+ * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ */
+//@{
+/**
+ * @brief Test if \b GLX_GLX_AMD_gpu_association is supported.
+ * @return Returns \c true if \b GLX_GLX_AMD_gpu_association is supported, false otherwise.
+ */
+GLE_API bool isGLX_GLX_AMD_gpu_association();
 
 //@}
 

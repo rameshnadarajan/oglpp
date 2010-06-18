@@ -1,4 +1,4 @@
-// This file was generated at Wed Jun 16 11:47:26 2010 with gle, please do not modify.
+// This file was generated at Fri Jun 18 07:48:05 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -260,6 +260,20 @@ bool isGLX_EXT_visual_info()
 bool isGLX_EXT_visual_rating()
 {
 	const bool isSupported = gleGetCurrent()->isGLX_EXT_visual_rating;
+
+	return isSupported;
+}
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+// ********* GLX_GLX_AMD_gpu_association *********
+bool isGLX_GLX_AMD_gpu_association()
+{
+	const bool isSupported = gleGetCurrent()->isGLX_GLX_AMD_gpu_association;
 
 	return isSupported;
 }

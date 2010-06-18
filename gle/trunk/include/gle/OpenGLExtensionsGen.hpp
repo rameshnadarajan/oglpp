@@ -1,4 +1,4 @@
-// This file was generated at Wed Jun 16 11:47:26 2010 with gle, please do not modify.
+// This file was generated at Fri Jun 18 07:48:05 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,10 +17,10 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = // This file was generated at Wed Jun 16 11:47:26 2010 with gle, please do not modify.
+ * - Stamp = // This file was generated at Fri Jun 18 07:48:05 2010 with gle, please do not modify.
  * - Number of tokens					= 0
  * - Number of functions				= 1936
- * - Number of extensions found(in headers)	= 492
+ * - Number of extensions found(in headers)	= 493
  * - Number of extensions in OpenGL registry	= 462
  */
 
@@ -79,6 +79,11 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Initialize the GLX_EXT extension group.
 	 */
 	void initializeGLX_EXT();
+
+	/** 
+	 * @brief Initialize the GLX_GLX extension group.
+	 */
+	void initializeGLX_GLX();
 
 	/** 
 	 * @brief Initialize the GLX_INTEL extension group.
@@ -580,6 +585,22 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GLX_EXT_visual_rating is supported, false otherwise.
 	 */
 	bool isGLX_EXT_visual_rating;
+
+
+
+
+#endif // POSIX
+
+
+
+#ifdef POSIX
+
+
+
+	/**
+	 * @brief Returns \c true if \b GLX_GLX_AMD_gpu_association is supported, false otherwise.
+	 */
+	bool isGLX_GLX_AMD_gpu_association;
 
 
 

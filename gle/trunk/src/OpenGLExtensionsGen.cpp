@@ -1,4 +1,4 @@
-// This file was generated at Wed Jun 16 11:47:26 2010 with gle, please do not modify.
+// This file was generated at Fri Jun 18 07:48:05 2010 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -17,7 +17,7 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 492;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 493;
 const int	OpenGLExtensionsGen::m_supportedProcCount		= 1936;
 
 
@@ -114,6 +114,11 @@ void OpenGLExtensionsGen::clear()
 #ifdef POSIX
 	// ****** GLX_EXT_visual_rating ******
 	isGLX_EXT_visual_rating                                       = false;
+#endif // POSIX
+
+#ifdef POSIX
+	// ****** GLX_GLX_AMD_gpu_association ******
+	isGLX_GLX_AMD_gpu_association                                 = false;
 #endif // POSIX
 
 #ifdef POSIX
@@ -4246,6 +4251,9 @@ void OpenGLExtensionsGen::initialize()
 	initializeGLX_EXT();
 
 
+	initializeGLX_GLX();
+
+
 	initializeGLX_INTEL();
 
 
@@ -4996,6 +5004,50 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	else
 	{
 		logEndl( "GLX_EXT_visual_rating                                       : not detected." );
+	}
+#endif // POSIX
+
+} // initialize()
+
+
+void OpenGLExtensionsGen::initializeGLX_GLX()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+	
+	// ****** GLX_GLX_AMD_gpu_association ******
+	
+	isGLX_GLX_AMD_gpu_association = isWExtensionSupported("GLX_GLX_AMD_gpu_association");
+	
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+	
+	
+	if ( isGLX_GLX_AMD_gpu_association )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_GLX_AMD_gpu_association                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_GLX_AMD_gpu_association                                 : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_GLX_AMD_gpu_association") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_GLX_AMD_gpu_association                                 : not detected." );
 	}
 #endif // POSIX
 
