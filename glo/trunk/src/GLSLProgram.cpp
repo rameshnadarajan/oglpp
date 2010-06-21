@@ -473,8 +473,7 @@ const GLint GLSLProgram::getUniformLocation( const std::string& name )
 {
 	const GLint location = glGetUniformLocation( getProgramObject(), name.c_str() );
 
-	// assert( location != -1 && "Name does not correspond to an active uniform" );
-#ifdef _DEBUG
+#ifdef OPENGL_DEBUG
 	if ( location == -1 )
 	{
 		std::cerr << "glo.GLSLProgram: " << name << " does not correspond to an active uniform." << std::endl;
