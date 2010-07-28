@@ -1,9 +1,17 @@
-// This file was generated at Fri Jun 18 07:48:05 2010 with gle, please do not modify.
+// This file was generated at Mon, 26 Jul 2010 15:33:39 +0000 with gle, please do not modify.
 
-// GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
+
+// This file was generated using :
+// /* glext.h last updated $Date: 2010-06-15 23:46:28 -0700 (Tue, 15 Jun 2010) $ */
+// #define GL_GLEXT_VERSION 63
+// /* glxext.h last updated 2010/06/15 */
+// #define GLX_GLXEXT_VERSION 29
+// /* wglext.h last updated 2010/05/17 */
+// #define WGL_WGLEXT_VERSION 19
 
 #ifndef _GLE_WRAPPERGEN_HPP
 #define _GLE_WRAPPERGEN_HPP
@@ -28,254 +36,276 @@
  * @ingroup g_extensionsByVendor g_extensions
  */
 
+
 /** 
- * @defgroup g_GLX_ARB		GLX_ARB (5 extensions found)
+ * @defgroup g_GLX_3DFX			GLX_3DFX (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GLX_EXT		GLX_EXT (6 extensions found)
+ * @defgroup g_GLX_ARB			GLX_ARB (6 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GLX_INTEL		GLX_INTEL (1 extensions found)
+ * @defgroup g_GLX_EXT			GLX_EXT (7 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GLX_MESA		GLX_MESA (5 extensions found)
+ * @defgroup g_GLX_GLX			GLX_GLX (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GLX_NV		GLX_NV (5 extensions found)
+ * @defgroup g_GLX_INTEL			GLX_INTEL (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GLX_OML		GLX_OML (2 extensions found)
+ * @defgroup g_GLX_MESA			GLX_MESA (5 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GLX_SGI		GLX_SGI (4 extensions found)
+ * @defgroup g_GLX_NV			GLX_NV (8 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GLX_SGIS		GLX_SGIS (2 extensions found)
+ * @defgroup g_GLX_OML			GLX_OML (2 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GLX_SGIX		GLX_SGIX (8 extensions found)
+ * @defgroup g_GLX_SGI			GLX_SGI (4 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GLX_SUN		GLX_SUN (1 extensions found)
+ * @defgroup g_GLX_SGIS			GLX_SGIS (3 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_3DFX		GL_3DFX (3 extensions found)
+ * @defgroup g_GLX_SGIX			GLX_SGIX (9 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_AMD		GL_AMD (9 extensions found)
+ * @defgroup g_GLX_SUN			GLX_SUN (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_APPLE		GL_APPLE (16 extensions found)
+ * @defgroup g_GLX_VERSION			GLX_VERSION (2 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_ARB		GL_ARB (83 extensions found)
+ * @defgroup g_GL_3DFX			GL_3DFX (3 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_ATI		GL_ATI (15 extensions found)
+ * @defgroup g_GL_AMD			GL_AMD (10 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_EXT		GL_EXT (88 extensions found)
+ * @defgroup g_GL_APPLE			GL_APPLE (16 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_GREMEDY		GL_GREMEDY (2 extensions found)
+ * @defgroup g_GL_ARB			GL_ARB (86 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_HP		GL_HP (4 extensions found)
+ * @defgroup g_GL_ATI			GL_ATI (16 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_IBM		GL_IBM (5 extensions found)
+ * @defgroup g_GL_EXT			GL_EXT (89 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_INGR		GL_INGR (2 extensions found)
+ * @defgroup g_GL_FfdMaskSGIX			GL_FfdMaskSGIX (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_INTEL		GL_INTEL (2 extensions found)
+ * @defgroup g_GL_GREMEDY			GL_GREMEDY (2 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_MESA		GL_MESA (4 extensions found)
+ * @defgroup g_GL_HP			GL_HP (4 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_MESAX		GL_MESAX (1 extensions found)
+ * @defgroup g_GL_IBM			GL_IBM (5 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_NV		GL_NV (62 extensions found)
+ * @defgroup g_GL_INGR			GL_INGR (4 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_OES		GL_OES (1 extensions found)
+ * @defgroup g_GL_INTEL			GL_INTEL (2 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_OML		GL_OML (3 extensions found)
+ * @defgroup g_GL_MESA			GL_MESA (4 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_PGI		GL_PGI (2 extensions found)
+ * @defgroup g_GL_MESAX			GL_MESAX (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_REND		GL_REND (1 extensions found)
+ * @defgroup g_GL_NV			GL_NV (62 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_S3		GL_S3 (1 extensions found)
+ * @defgroup g_GL_OES			GL_OES (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_SGI		GL_SGI (3 extensions found)
+ * @defgroup g_GL_OML			GL_OML (3 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_SGIS		GL_SGIS (14 extensions found)
+ * @defgroup g_GL_PGI			GL_PGI (2 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_SGIX		GL_SGIX (28 extensions found)
+ * @defgroup g_GL_REND			GL_REND (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_SUN		GL_SUN (6 extensions found)
+ * @defgroup g_GL_S3			GL_S3 (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_SUNX		GL_SUNX (1 extensions found)
+ * @defgroup g_GL_SGI			GL_SGI (4 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_WIN		GL_WIN (2 extensions found)
+ * @defgroup g_GL_SGIS			GL_SGIS (15 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_Not_in_OpenGL_Extension_Registry		Not_in_OpenGL_Extension_Registry (57 extensions found)
+ * @defgroup g_GL_SGIX			GL_SGIX (41 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_WGL_3DL		WGL_3DL (1 extensions found)
+ * @defgroup g_GL_SUN			GL_SUN (6 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_WGL_AMD		WGL_AMD (1 extensions found)
+ * @defgroup g_GL_SUNX			GL_SUNX (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_WGL_ARB		WGL_ARB (10 extensions found)
+ * @defgroup g_GL_VERSION			GL_VERSION (18 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_WGL_ATI		WGL_ATI (1 extensions found)
+ * @defgroup g_GL_WIN			GL_WIN (2 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_WGL_EXT		WGL_EXT (10 extensions found)
+ * @defgroup g_WGL_3DFX			WGL_3DFX (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_WGL_I3D		WGL_I3D (6 extensions found)
+ * @defgroup g_WGL_3DL			WGL_3DL (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_WGL_NV		WGL_NV (9 extensions found)
+ * @defgroup g_WGL_AMD			WGL_AMD (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_WGL_OML		WGL_OML (1 extensions found)
+ * @defgroup g_WGL_ARB			WGL_ARB (10 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
+/** 
+ * @defgroup g_WGL_ATI			WGL_ATI (1 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_WGL_EXT			WGL_EXT (10 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_WGL_I3D			WGL_I3D (6 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_WGL_NV			WGL_NV (12 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_WGL_OML			WGL_OML (1 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
 
 
 
 #ifdef POSIX
-
-			
-/**	
+/**
  * @defgroup GLX_3DFX_multisample GLX_3DFX_multisample
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GLX_3DFX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_3DFX_multisample is supported.
- * @return Returns \c true if \b GLX_3DFX_multisample is supported, false otherwise.
+ * @brief  Tests if \b GLX_3DFX_multisample is supported.
+ * @return Returns \c true if \b GLX_3DFX_multisample is supported, \c false otherwise.
  */
 GLE_API bool isGLX_3DFX_multisample();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_ARB_create_context GLX_ARB_create_context
  * Extension number in OpenGL registry : 56
@@ -283,27 +313,26 @@ GLE_API bool isGLX_3DFX_multisample();
  * @ingroup g_GLX_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_ARB_create_context is supported.
- * @return Returns \c true if \b GLX_ARB_create_context is supported, false otherwise.
+ * @brief  Tests if \b GLX_ARB_create_context is supported.
+ * @return Returns \c true if \b GLX_ARB_create_context is supported, \c false otherwise.
  */
 GLE_API bool isGLX_ARB_create_context();
 
+
+
 /**
- * @brief GLXContext glXCreateContextAttribsARB( Display *dpy, GLXFBConfig config, GLXContext share_context, Bool direct, const int *attrib_list );
+ * @brief GLXContext glXCreateContextAttribsARB(Display *dpy, GLXFBConfig config, GLXContext share_context, Bool direct, const int *attrib_list)
  */
-GLE_API GLXContext glXCreateContextAttribsARB( Display *dpy, GLXFBConfig config, GLXContext share_context, Bool direct, const int *attrib_list );
+GLE_API GLXContext glXCreateContextAttribsARB(Display *dpy, GLXFBConfig config, GLXContext share_context, Bool direct, const int *attrib_list);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_ARB_create_context_profile GLX_ARB_create_context_profile
  * Extension number in OpenGL registry : 75
@@ -311,22 +340,20 @@ GLE_API GLXContext glXCreateContextAttribsARB( Display *dpy, GLXFBConfig config,
  * @ingroup g_GLX_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_ARB_create_context_profile is supported.
- * @return Returns \c true if \b GLX_ARB_create_context_profile is supported, false otherwise.
+ * @brief  Tests if \b GLX_ARB_create_context_profile is supported.
+ * @return Returns \c true if \b GLX_ARB_create_context_profile is supported, \c false otherwise.
  */
 GLE_API bool isGLX_ARB_create_context_profile();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_ARB_fbconfig_float GLX_ARB_fbconfig_float
  * Extension number in OpenGL registry : 39
@@ -334,22 +361,20 @@ GLE_API bool isGLX_ARB_create_context_profile();
  * @ingroup g_GLX_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_ARB_fbconfig_float is supported.
- * @return Returns \c true if \b GLX_ARB_fbconfig_float is supported, false otherwise.
+ * @brief  Tests if \b GLX_ARB_fbconfig_float is supported.
+ * @return Returns \c true if \b GLX_ARB_fbconfig_float is supported, \c false otherwise.
  */
 GLE_API bool isGLX_ARB_fbconfig_float();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_ARB_get_proc_address GLX_ARB_get_proc_address
  * Extension number in OpenGL registry : 2
@@ -357,27 +382,26 @@ GLE_API bool isGLX_ARB_fbconfig_float();
  * @ingroup g_GLX_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_ARB_get_proc_address is supported.
- * @return Returns \c true if \b GLX_ARB_get_proc_address is supported, false otherwise.
+ * @brief  Tests if \b GLX_ARB_get_proc_address is supported.
+ * @return Returns \c true if \b GLX_ARB_get_proc_address is supported, \c false otherwise.
  */
 GLE_API bool isGLX_ARB_get_proc_address();
 
+
+
 /**
- * @brief __GLXextFuncPtr glXGetProcAddressARB( const GLubyte *procName );
+ * @brief __GLXextFuncPtr glXGetProcAddressARB(const GLubyte *procName)
  */
-GLE_API __GLXextFuncPtr glXGetProcAddressARB( const GLubyte *procName );
+GLE_API __GLXextFuncPtr glXGetProcAddressARB(const GLubyte *procName);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_ARB_multisample GLX_ARB_multisample
  * Extension number in OpenGL registry : 5
@@ -385,44 +409,41 @@ GLE_API __GLXextFuncPtr glXGetProcAddressARB( const GLubyte *procName );
  * @ingroup g_GLX_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_ARB_multisample is supported.
- * @return Returns \c true if \b GLX_ARB_multisample is supported, false otherwise.
+ * @brief  Tests if \b GLX_ARB_multisample is supported.
+ * @return Returns \c true if \b GLX_ARB_multisample is supported, \c false otherwise.
  */
 GLE_API bool isGLX_ARB_multisample();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-			
-/**	
+/**
  * @defgroup GLX_ARB_vertex_buffer_object GLX_ARB_vertex_buffer_object
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GLX_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_ARB_vertex_buffer_object is supported.
- * @return Returns \c true if \b GLX_ARB_vertex_buffer_object is supported, false otherwise.
+ * @brief  Tests if \b GLX_ARB_vertex_buffer_object is supported.
+ * @return Returns \c true if \b GLX_ARB_vertex_buffer_object is supported, \c false otherwise.
  */
 GLE_API bool isGLX_ARB_vertex_buffer_object();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_EXT_fbconfig_packed_float GLX_EXT_fbconfig_packed_float
  * Extension number in OpenGL registry : 328
@@ -430,22 +451,20 @@ GLE_API bool isGLX_ARB_vertex_buffer_object();
  * @ingroup g_GLX_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_EXT_fbconfig_packed_float is supported.
- * @return Returns \c true if \b GLX_EXT_fbconfig_packed_float is supported, false otherwise.
+ * @brief  Tests if \b GLX_EXT_fbconfig_packed_float is supported.
+ * @return Returns \c true if \b GLX_EXT_fbconfig_packed_float is supported, \c false otherwise.
  */
 GLE_API bool isGLX_EXT_fbconfig_packed_float();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_EXT_framebuffer_sRGB GLX_EXT_framebuffer_sRGB
  * Extension number in OpenGL registry : 337
@@ -453,22 +472,20 @@ GLE_API bool isGLX_EXT_fbconfig_packed_float();
  * @ingroup g_GLX_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_EXT_framebuffer_sRGB is supported.
- * @return Returns \c true if \b GLX_EXT_framebuffer_sRGB is supported, false otherwise.
+ * @brief  Tests if \b GLX_EXT_framebuffer_sRGB is supported.
+ * @return Returns \c true if \b GLX_EXT_framebuffer_sRGB is supported, \c false otherwise.
  */
 GLE_API bool isGLX_EXT_framebuffer_sRGB();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_EXT_import_context GLX_EXT_import_context
  * Extension number in OpenGL registry : 47
@@ -476,74 +493,73 @@ GLE_API bool isGLX_EXT_framebuffer_sRGB();
  * @ingroup g_GLX_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_EXT_import_context is supported.
- * @return Returns \c true if \b GLX_EXT_import_context is supported, false otherwise.
+ * @brief  Tests if \b GLX_EXT_import_context is supported.
+ * @return Returns \c true if \b GLX_EXT_import_context is supported, \c false otherwise.
  */
 GLE_API bool isGLX_EXT_import_context();
 
-/**
- * @brief Display * glXGetCurrentDisplayEXT( void );
- */
-GLE_API Display * glXGetCurrentDisplayEXT( void );
+
 
 /**
- * @brief int glXQueryContextInfoEXT( Display *dpy, GLXContext context, int attribute, int *value );
+ * @brief void glXFreeContextEXT(Display *dpy, GLXContext context)
  */
-GLE_API int glXQueryContextInfoEXT( Display *dpy, GLXContext context, int attribute, int *value );
+GLE_API void glXFreeContextEXT(Display *dpy, GLXContext context);
 
 /**
- * @brief GLXContextID glXGetContextIDEXT( const GLXContext context );
+ * @brief GLXContextID glXGetContextIDEXT(const GLXContext context)
  */
-GLE_API GLXContextID glXGetContextIDEXT( const GLXContext context );
+GLE_API GLXContextID glXGetContextIDEXT(const GLXContext context);
 
 /**
- * @brief GLXContext glXImportContextEXT( Display *dpy, GLXContextID contextID );
+ * @brief Display * glXGetCurrentDisplayEXT(void)
  */
-GLE_API GLXContext glXImportContextEXT( Display *dpy, GLXContextID contextID );
+GLE_API Display * glXGetCurrentDisplayEXT(void);
 
 /**
- * @brief void glXFreeContextEXT( Display *dpy, GLXContext context );
+ * @brief GLXContext glXImportContextEXT(Display *dpy, GLXContextID contextID)
  */
-GLE_API void glXFreeContextEXT( Display *dpy, GLXContext context );
+GLE_API GLXContext glXImportContextEXT(Display *dpy, GLXContextID contextID);
+
+/**
+ * @brief int glXQueryContextInfoEXT(Display *dpy, GLXContext context, int attribute, int *value)
+ */
+GLE_API int glXQueryContextInfoEXT(Display *dpy, GLXContext context, int attribute, int *value);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-			
-/**	
+/**
  * @defgroup GLX_EXT_swap_control GLX_EXT_swap_control
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GLX_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_EXT_swap_control is supported.
- * @return Returns \c true if \b GLX_EXT_swap_control is supported, false otherwise.
+ * @brief  Tests if \b GLX_EXT_swap_control is supported.
+ * @return Returns \c true if \b GLX_EXT_swap_control is supported, \c false otherwise.
  */
 GLE_API bool isGLX_EXT_swap_control();
 
+
+
 /**
- * @brief int glXSwapIntervalEXT( Display *dpy, GLXDrawable drawable, int interval );
+ * @brief int glXSwapIntervalEXT(Display *dpy, GLXDrawable drawable, int interval)
  */
-GLE_API int glXSwapIntervalEXT( Display *dpy, GLXDrawable drawable, int interval );
+GLE_API int glXSwapIntervalEXT(Display *dpy, GLXDrawable drawable, int interval);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_EXT_texture_from_pixmap GLX_EXT_texture_from_pixmap
  * Extension number in OpenGL registry : 344
@@ -551,32 +567,31 @@ GLE_API int glXSwapIntervalEXT( Display *dpy, GLXDrawable drawable, int interval
  * @ingroup g_GLX_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_EXT_texture_from_pixmap is supported.
- * @return Returns \c true if \b GLX_EXT_texture_from_pixmap is supported, false otherwise.
+ * @brief  Tests if \b GLX_EXT_texture_from_pixmap is supported.
+ * @return Returns \c true if \b GLX_EXT_texture_from_pixmap is supported, \c false otherwise.
  */
 GLE_API bool isGLX_EXT_texture_from_pixmap();
 
-/**
- * @brief void glXBindTexImageEXT( Display *dpy, GLXDrawable drawable, int buffer, const int *attrib_list );
- */
-GLE_API void glXBindTexImageEXT( Display *dpy, GLXDrawable drawable, int buffer, const int *attrib_list );
+
 
 /**
- * @brief void glXReleaseTexImageEXT( Display *dpy, GLXDrawable drawable, int buffer );
+ * @brief void glXBindTexImageEXT(Display *dpy, GLXDrawable drawable, int buffer, const int *attrib_list)
  */
-GLE_API void glXReleaseTexImageEXT( Display *dpy, GLXDrawable drawable, int buffer );
+GLE_API void glXBindTexImageEXT(Display *dpy, GLXDrawable drawable, int buffer, const int *attrib_list);
+
+/**
+ * @brief void glXReleaseTexImageEXT(Display *dpy, GLXDrawable drawable, int buffer)
+ */
+GLE_API void glXReleaseTexImageEXT(Display *dpy, GLXDrawable drawable, int buffer);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_EXT_visual_info GLX_EXT_visual_info
  * Extension number in OpenGL registry : 28
@@ -584,22 +599,20 @@ GLE_API void glXReleaseTexImageEXT( Display *dpy, GLXDrawable drawable, int buff
  * @ingroup g_GLX_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_EXT_visual_info is supported.
- * @return Returns \c true if \b GLX_EXT_visual_info is supported, false otherwise.
+ * @brief  Tests if \b GLX_EXT_visual_info is supported.
+ * @return Returns \c true if \b GLX_EXT_visual_info is supported, \c false otherwise.
  */
 GLE_API bool isGLX_EXT_visual_info();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_EXT_visual_rating GLX_EXT_visual_rating
  * Extension number in OpenGL registry : 44
@@ -607,44 +620,41 @@ GLE_API bool isGLX_EXT_visual_info();
  * @ingroup g_GLX_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_EXT_visual_rating is supported.
- * @return Returns \c true if \b GLX_EXT_visual_rating is supported, false otherwise.
+ * @brief  Tests if \b GLX_EXT_visual_rating is supported.
+ * @return Returns \c true if \b GLX_EXT_visual_rating is supported, \c false otherwise.
  */
 GLE_API bool isGLX_EXT_visual_rating();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-			
-/**	
+/**
  * @defgroup GLX_GLX_AMD_gpu_association GLX_GLX_AMD_gpu_association
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GLX_GLX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_GLX_AMD_gpu_association is supported.
- * @return Returns \c true if \b GLX_GLX_AMD_gpu_association is supported, false otherwise.
+ * @brief  Tests if \b GLX_GLX_AMD_gpu_association is supported.
+ * @return Returns \c true if \b GLX_GLX_AMD_gpu_association is supported, \c false otherwise.
  */
 GLE_API bool isGLX_GLX_AMD_gpu_association();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_INTEL_swap_event GLX_INTEL_swap_event
  * Extension number in OpenGL registry : 384
@@ -652,22 +662,20 @@ GLE_API bool isGLX_GLX_AMD_gpu_association();
  * @ingroup g_GLX_INTEL g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_INTEL_swap_event is supported.
- * @return Returns \c true if \b GLX_INTEL_swap_event is supported, false otherwise.
+ * @brief  Tests if \b GLX_INTEL_swap_event is supported.
+ * @return Returns \c true if \b GLX_INTEL_swap_event is supported, \c false otherwise.
  */
 GLE_API bool isGLX_INTEL_swap_event();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_MESA_agp_offset GLX_MESA_agp_offset
  * Extension number in OpenGL registry : 308
@@ -675,27 +683,26 @@ GLE_API bool isGLX_INTEL_swap_event();
  * @ingroup g_GLX_MESA g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_MESA_agp_offset is supported.
- * @return Returns \c true if \b GLX_MESA_agp_offset is supported, false otherwise.
+ * @brief  Tests if \b GLX_MESA_agp_offset is supported.
+ * @return Returns \c true if \b GLX_MESA_agp_offset is supported, \c false otherwise.
  */
 GLE_API bool isGLX_MESA_agp_offset();
 
+
+
 /**
- * @brief unsigned int glXGetAGPOffsetMESA( const void *pointer );
+ * @brief unsigned int glXGetAGPOffsetMESA(const void *pointer)
  */
-GLE_API unsigned int glXGetAGPOffsetMESA( const void *pointer );
+GLE_API unsigned int glXGetAGPOffsetMESA(const void *pointer);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_MESA_copy_sub_buffer GLX_MESA_copy_sub_buffer
  * Extension number in OpenGL registry : 215
@@ -703,27 +710,26 @@ GLE_API unsigned int glXGetAGPOffsetMESA( const void *pointer );
  * @ingroup g_GLX_MESA g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_MESA_copy_sub_buffer is supported.
- * @return Returns \c true if \b GLX_MESA_copy_sub_buffer is supported, false otherwise.
+ * @brief  Tests if \b GLX_MESA_copy_sub_buffer is supported.
+ * @return Returns \c true if \b GLX_MESA_copy_sub_buffer is supported, \c false otherwise.
  */
 GLE_API bool isGLX_MESA_copy_sub_buffer();
 
+
+
 /**
- * @brief void glXCopySubBufferMESA( Display *dpy, GLXDrawable drawable, int x, int y, int width, int height );
+ * @brief void glXCopySubBufferMESA(Display *dpy, GLXDrawable drawable, int x, int y, int width, int height)
  */
-GLE_API void glXCopySubBufferMESA( Display *dpy, GLXDrawable drawable, int x, int y, int width, int height );
+GLE_API void glXCopySubBufferMESA(Display *dpy, GLXDrawable drawable, int x, int y, int width, int height);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_MESA_pixmap_colormap GLX_MESA_pixmap_colormap
  * Extension number in OpenGL registry : 216
@@ -731,27 +737,26 @@ GLE_API void glXCopySubBufferMESA( Display *dpy, GLXDrawable drawable, int x, in
  * @ingroup g_GLX_MESA g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_MESA_pixmap_colormap is supported.
- * @return Returns \c true if \b GLX_MESA_pixmap_colormap is supported, false otherwise.
+ * @brief  Tests if \b GLX_MESA_pixmap_colormap is supported.
+ * @return Returns \c true if \b GLX_MESA_pixmap_colormap is supported, \c false otherwise.
  */
 GLE_API bool isGLX_MESA_pixmap_colormap();
 
+
+
 /**
- * @brief GLXPixmap glXCreateGLXPixmapMESA( Display *dpy, XVisualInfo *visual, Pixmap pixmap, Colormap cmap );
+ * @brief GLXPixmap glXCreateGLXPixmapMESA(Display *dpy, XVisualInfo *visual, Pixmap pixmap, Colormap cmap)
  */
-GLE_API GLXPixmap glXCreateGLXPixmapMESA( Display *dpy, XVisualInfo *visual, Pixmap pixmap, Colormap cmap );
+GLE_API GLXPixmap glXCreateGLXPixmapMESA(Display *dpy, XVisualInfo *visual, Pixmap pixmap, Colormap cmap);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_MESA_release_buffers GLX_MESA_release_buffers
  * Extension number in OpenGL registry : 217
@@ -759,27 +764,26 @@ GLE_API GLXPixmap glXCreateGLXPixmapMESA( Display *dpy, XVisualInfo *visual, Pix
  * @ingroup g_GLX_MESA g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_MESA_release_buffers is supported.
- * @return Returns \c true if \b GLX_MESA_release_buffers is supported, false otherwise.
+ * @brief  Tests if \b GLX_MESA_release_buffers is supported.
+ * @return Returns \c true if \b GLX_MESA_release_buffers is supported, \c false otherwise.
  */
 GLE_API bool isGLX_MESA_release_buffers();
 
+
+
 /**
- * @brief Bool glXReleaseBuffersMESA( Display *dpy, GLXDrawable drawable );
+ * @brief Bool glXReleaseBuffersMESA(Display *dpy, GLXDrawable drawable)
  */
-GLE_API Bool glXReleaseBuffersMESA( Display *dpy, GLXDrawable drawable );
+GLE_API Bool glXReleaseBuffersMESA(Display *dpy, GLXDrawable drawable);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_MESA_set_3dfx_mode GLX_MESA_set_3dfx_mode
  * Extension number in OpenGL registry : 218
@@ -787,27 +791,26 @@ GLE_API Bool glXReleaseBuffersMESA( Display *dpy, GLXDrawable drawable );
  * @ingroup g_GLX_MESA g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_MESA_set_3dfx_mode is supported.
- * @return Returns \c true if \b GLX_MESA_set_3dfx_mode is supported, false otherwise.
+ * @brief  Tests if \b GLX_MESA_set_3dfx_mode is supported.
+ * @return Returns \c true if \b GLX_MESA_set_3dfx_mode is supported, \c false otherwise.
  */
 GLE_API bool isGLX_MESA_set_3dfx_mode();
 
+
+
 /**
- * @brief Bool glXSet3DfxModeMESA( int mode );
+ * @brief Bool glXSet3DfxModeMESA(int mode)
  */
-GLE_API Bool glXSet3DfxModeMESA( int mode );
+GLE_API Bool glXSet3DfxModeMESA(int mode);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_NV_copy_image GLX_NV_copy_image
  * Extension number in OpenGL registry : 376
@@ -815,71 +818,68 @@ GLE_API Bool glXSet3DfxModeMESA( int mode );
  * @ingroup g_GLX_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_NV_copy_image is supported.
- * @return Returns \c true if \b GLX_NV_copy_image is supported, false otherwise.
+ * @brief  Tests if \b GLX_NV_copy_image is supported.
+ * @return Returns \c true if \b GLX_NV_copy_image is supported, \c false otherwise.
  */
 GLE_API bool isGLX_NV_copy_image();
 
+
+
 /**
- * @brief void glXCopyImageSubDataNV( Display *dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth );
+ * @brief void glXCopyImageSubDataNV(Display *dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth)
  */
-GLE_API void glXCopyImageSubDataNV( Display *dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth );
+GLE_API void glXCopyImageSubDataNV(Display *dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-			
-/**	
+/**
  * @defgroup GLX_NV_float_buffer GLX_NV_float_buffer
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GLX_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_NV_float_buffer is supported.
- * @return Returns \c true if \b GLX_NV_float_buffer is supported, false otherwise.
+ * @brief  Tests if \b GLX_NV_float_buffer is supported.
+ * @return Returns \c true if \b GLX_NV_float_buffer is supported, \c false otherwise.
  */
 GLE_API bool isGLX_NV_float_buffer();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-			
-/**	
+/**
  * @defgroup GLX_NV_multisample_coverage GLX_NV_multisample_coverage
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GLX_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_NV_multisample_coverage is supported.
- * @return Returns \c true if \b GLX_NV_multisample_coverage is supported, false otherwise.
+ * @brief  Tests if \b GLX_NV_multisample_coverage is supported.
+ * @return Returns \c true if \b GLX_NV_multisample_coverage is supported, \c false otherwise.
  */
 GLE_API bool isGLX_NV_multisample_coverage();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_NV_present_video GLX_NV_present_video
  * Extension number in OpenGL registry : 347
@@ -887,32 +887,31 @@ GLE_API bool isGLX_NV_multisample_coverage();
  * @ingroup g_GLX_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_NV_present_video is supported.
- * @return Returns \c true if \b GLX_NV_present_video is supported, false otherwise.
+ * @brief  Tests if \b GLX_NV_present_video is supported.
+ * @return Returns \c true if \b GLX_NV_present_video is supported, \c false otherwise.
  */
 GLE_API bool isGLX_NV_present_video();
 
-/**
- * @brief unsigned int * glXEnumerateVideoDevicesNV( Display *dpy, int screen, int *nelements );
- */
-GLE_API unsigned int * glXEnumerateVideoDevicesNV( Display *dpy, int screen, int *nelements );
+
 
 /**
- * @brief int glXBindVideoDeviceNV( Display *dpy, unsigned int video_slot, unsigned int video_device, const int *attrib_list );
+ * @brief int glXBindVideoDeviceNV(Display *dpy, unsigned int video_slot, unsigned int video_device, const int *attrib_list)
  */
-GLE_API int glXBindVideoDeviceNV( Display *dpy, unsigned int video_slot, unsigned int video_device, const int *attrib_list );
+GLE_API int glXBindVideoDeviceNV(Display *dpy, unsigned int video_slot, unsigned int video_device, const int *attrib_list);
+
+/**
+ * @brief unsigned int * glXEnumerateVideoDevicesNV(Display *dpy, int screen, int *nelements)
+ */
+GLE_API unsigned int * glXEnumerateVideoDevicesNV(Display *dpy, int screen, int *nelements);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_NV_swap_group GLX_NV_swap_group
  * Extension number in OpenGL registry : 350
@@ -920,52 +919,51 @@ GLE_API int glXBindVideoDeviceNV( Display *dpy, unsigned int video_slot, unsigne
  * @ingroup g_GLX_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_NV_swap_group is supported.
- * @return Returns \c true if \b GLX_NV_swap_group is supported, false otherwise.
+ * @brief  Tests if \b GLX_NV_swap_group is supported.
+ * @return Returns \c true if \b GLX_NV_swap_group is supported, \c false otherwise.
  */
 GLE_API bool isGLX_NV_swap_group();
 
-/**
- * @brief Bool glXJoinSwapGroupNV( Display *dpy, GLXDrawable drawable, GLuint group );
- */
-GLE_API Bool glXJoinSwapGroupNV( Display *dpy, GLXDrawable drawable, GLuint group );
+
 
 /**
- * @brief Bool glXBindSwapBarrierNV( Display *dpy, GLuint group, GLuint barrier );
+ * @brief Bool glXBindSwapBarrierNV(Display *dpy, GLuint group, GLuint barrier)
  */
-GLE_API Bool glXBindSwapBarrierNV( Display *dpy, GLuint group, GLuint barrier );
+GLE_API Bool glXBindSwapBarrierNV(Display *dpy, GLuint group, GLuint barrier);
 
 /**
- * @brief Bool glXQuerySwapGroupNV( Display *dpy, GLXDrawable drawable, GLuint *group, GLuint *barrier );
+ * @brief Bool glXJoinSwapGroupNV(Display *dpy, GLXDrawable drawable, GLuint group)
  */
-GLE_API Bool glXQuerySwapGroupNV( Display *dpy, GLXDrawable drawable, GLuint *group, GLuint *barrier );
+GLE_API Bool glXJoinSwapGroupNV(Display *dpy, GLXDrawable drawable, GLuint group);
 
 /**
- * @brief Bool glXQueryMaxSwapGroupsNV( Display *dpy, int screen, GLuint *maxGroups, GLuint *maxBarriers );
+ * @brief Bool glXQueryFrameCountNV(Display *dpy, int screen, GLuint *count)
  */
-GLE_API Bool glXQueryMaxSwapGroupsNV( Display *dpy, int screen, GLuint *maxGroups, GLuint *maxBarriers );
+GLE_API Bool glXQueryFrameCountNV(Display *dpy, int screen, GLuint *count);
 
 /**
- * @brief Bool glXQueryFrameCountNV( Display *dpy, int screen, GLuint *count );
+ * @brief Bool glXQueryMaxSwapGroupsNV(Display *dpy, int screen, GLuint *maxGroups, GLuint *maxBarriers)
  */
-GLE_API Bool glXQueryFrameCountNV( Display *dpy, int screen, GLuint *count );
+GLE_API Bool glXQueryMaxSwapGroupsNV(Display *dpy, int screen, GLuint *maxGroups, GLuint *maxBarriers);
 
 /**
- * @brief Bool glXResetFrameCountNV( Display *dpy, int screen );
+ * @brief Bool glXQuerySwapGroupNV(Display *dpy, GLXDrawable drawable, GLuint *group, GLuint *barrier)
  */
-GLE_API Bool glXResetFrameCountNV( Display *dpy, int screen );
+GLE_API Bool glXQuerySwapGroupNV(Display *dpy, GLXDrawable drawable, GLuint *group, GLuint *barrier);
+
+/**
+ * @brief Bool glXResetFrameCountNV(Display *dpy, int screen)
+ */
+GLE_API Bool glXResetFrameCountNV(Display *dpy, int screen);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_NV_video_capture GLX_NV_video_capture
  * Extension number in OpenGL registry : 374
@@ -973,69 +971,67 @@ GLE_API Bool glXResetFrameCountNV( Display *dpy, int screen );
  * @ingroup g_GLX_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_NV_video_capture is supported.
- * @return Returns \c true if \b GLX_NV_video_capture is supported, false otherwise.
+ * @brief  Tests if \b GLX_NV_video_capture is supported.
+ * @return Returns \c true if \b GLX_NV_video_capture is supported, \c false otherwise.
  */
 GLE_API bool isGLX_NV_video_capture();
 
-/**
- * @brief int glXBindVideoCaptureDeviceNV( Display *dpy, unsigned int video_capture_slot, GLXVideoCaptureDeviceNV device );
- */
-GLE_API int glXBindVideoCaptureDeviceNV( Display *dpy, unsigned int video_capture_slot, GLXVideoCaptureDeviceNV device );
+
 
 /**
- * @brief GLXVideoCaptureDeviceNV * glXEnumerateVideoCaptureDevicesNV( Display *dpy, int screen, int *nelements );
+ * @brief int glXBindVideoCaptureDeviceNV(Display *dpy, unsigned int video_capture_slot, GLXVideoCaptureDeviceNV device)
  */
-GLE_API GLXVideoCaptureDeviceNV * glXEnumerateVideoCaptureDevicesNV( Display *dpy, int screen, int *nelements );
+GLE_API int glXBindVideoCaptureDeviceNV(Display *dpy, unsigned int video_capture_slot, GLXVideoCaptureDeviceNV device);
 
 /**
- * @brief void glXLockVideoCaptureDeviceNV( Display *dpy, GLXVideoCaptureDeviceNV device );
+ * @brief GLXVideoCaptureDeviceNV * glXEnumerateVideoCaptureDevicesNV(Display *dpy, int screen, int *nelements)
  */
-GLE_API void glXLockVideoCaptureDeviceNV( Display *dpy, GLXVideoCaptureDeviceNV device );
+GLE_API GLXVideoCaptureDeviceNV * glXEnumerateVideoCaptureDevicesNV(Display *dpy, int screen, int *nelements);
 
 /**
- * @brief int glXQueryVideoCaptureDeviceNV( Display *dpy, GLXVideoCaptureDeviceNV device, int attribute, int *value );
+ * @brief void glXLockVideoCaptureDeviceNV(Display *dpy, GLXVideoCaptureDeviceNV device)
  */
-GLE_API int glXQueryVideoCaptureDeviceNV( Display *dpy, GLXVideoCaptureDeviceNV device, int attribute, int *value );
+GLE_API void glXLockVideoCaptureDeviceNV(Display *dpy, GLXVideoCaptureDeviceNV device);
 
 /**
- * @brief void glXReleaseVideoCaptureDeviceNV( Display *dpy, GLXVideoCaptureDeviceNV device );
+ * @brief int glXQueryVideoCaptureDeviceNV(Display *dpy, GLXVideoCaptureDeviceNV device, int attribute, int *value)
  */
-GLE_API void glXReleaseVideoCaptureDeviceNV( Display *dpy, GLXVideoCaptureDeviceNV device );
+GLE_API int glXQueryVideoCaptureDeviceNV(Display *dpy, GLXVideoCaptureDeviceNV device, int attribute, int *value);
+
+/**
+ * @brief void glXReleaseVideoCaptureDeviceNV(Display *dpy, GLXVideoCaptureDeviceNV device)
+ */
+GLE_API void glXReleaseVideoCaptureDeviceNV(Display *dpy, GLXVideoCaptureDeviceNV device);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-			
-/**	
+/**
  * @defgroup GLX_NV_video_out GLX_NV_video_out
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GLX_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_NV_video_out is supported.
- * @return Returns \c true if \b GLX_NV_video_out is supported, false otherwise.
+ * @brief  Tests if \b GLX_NV_video_out is supported.
+ * @return Returns \c true if \b GLX_NV_video_out is supported, \c false otherwise.
  */
 GLE_API bool isGLX_NV_video_out();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_NV_video_output GLX_NV_video_output
  * Extension number in OpenGL registry : 348
@@ -1043,52 +1039,51 @@ GLE_API bool isGLX_NV_video_out();
  * @ingroup g_GLX_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_NV_video_output is supported.
- * @return Returns \c true if \b GLX_NV_video_output is supported, false otherwise.
+ * @brief  Tests if \b GLX_NV_video_output is supported.
+ * @return Returns \c true if \b GLX_NV_video_output is supported, \c false otherwise.
  */
 GLE_API bool isGLX_NV_video_output();
 
-/**
- * @brief int glXGetVideoDeviceNV( Display *dpy, int screen, int numVideoDevices, GLXVideoDeviceNV *pVideoDevice );
- */
-GLE_API int glXGetVideoDeviceNV( Display *dpy, int screen, int numVideoDevices, GLXVideoDeviceNV *pVideoDevice );
+
 
 /**
- * @brief int glXReleaseVideoDeviceNV( Display *dpy, int screen, GLXVideoDeviceNV VideoDevice );
+ * @brief int glXBindVideoImageNV(Display *dpy, GLXVideoDeviceNV VideoDevice, GLXPbuffer pbuf, int iVideoBuffer)
  */
-GLE_API int glXReleaseVideoDeviceNV( Display *dpy, int screen, GLXVideoDeviceNV VideoDevice );
+GLE_API int glXBindVideoImageNV(Display *dpy, GLXVideoDeviceNV VideoDevice, GLXPbuffer pbuf, int iVideoBuffer);
 
 /**
- * @brief int glXBindVideoImageNV( Display *dpy, GLXVideoDeviceNV VideoDevice, GLXPbuffer pbuf, int iVideoBuffer );
+ * @brief int glXGetVideoDeviceNV(Display *dpy, int screen, int numVideoDevices, GLXVideoDeviceNV *pVideoDevice)
  */
-GLE_API int glXBindVideoImageNV( Display *dpy, GLXVideoDeviceNV VideoDevice, GLXPbuffer pbuf, int iVideoBuffer );
+GLE_API int glXGetVideoDeviceNV(Display *dpy, int screen, int numVideoDevices, GLXVideoDeviceNV *pVideoDevice);
 
 /**
- * @brief int glXReleaseVideoImageNV( Display *dpy, GLXPbuffer pbuf );
+ * @brief int glXGetVideoInfoNV(Display *dpy, int screen, GLXVideoDeviceNV VideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo)
  */
-GLE_API int glXReleaseVideoImageNV( Display *dpy, GLXPbuffer pbuf );
+GLE_API int glXGetVideoInfoNV(Display *dpy, int screen, GLXVideoDeviceNV VideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo);
 
 /**
- * @brief int glXSendPbufferToVideoNV( Display *dpy, GLXPbuffer pbuf, int iBufferType, unsigned long *pulCounterPbuffer, GLboolean bBlock );
+ * @brief int glXReleaseVideoDeviceNV(Display *dpy, int screen, GLXVideoDeviceNV VideoDevice)
  */
-GLE_API int glXSendPbufferToVideoNV( Display *dpy, GLXPbuffer pbuf, int iBufferType, unsigned long *pulCounterPbuffer, GLboolean bBlock );
+GLE_API int glXReleaseVideoDeviceNV(Display *dpy, int screen, GLXVideoDeviceNV VideoDevice);
 
 /**
- * @brief int glXGetVideoInfoNV( Display *dpy, int screen, GLXVideoDeviceNV VideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo );
+ * @brief int glXReleaseVideoImageNV(Display *dpy, GLXPbuffer pbuf)
  */
-GLE_API int glXGetVideoInfoNV( Display *dpy, int screen, GLXVideoDeviceNV VideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo );
+GLE_API int glXReleaseVideoImageNV(Display *dpy, GLXPbuffer pbuf);
+
+/**
+ * @brief int glXSendPbufferToVideoNV(Display *dpy, GLXPbuffer pbuf, int iBufferType, unsigned long *pulCounterPbuffer, GLboolean bBlock)
+ */
+GLE_API int glXSendPbufferToVideoNV(Display *dpy, GLXPbuffer pbuf, int iBufferType, unsigned long *pulCounterPbuffer, GLboolean bBlock);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_OML_swap_method GLX_OML_swap_method
  * Extension number in OpenGL registry : 237
@@ -1096,22 +1091,20 @@ GLE_API int glXGetVideoInfoNV( Display *dpy, int screen, GLXVideoDeviceNV VideoD
  * @ingroup g_GLX_OML g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_OML_swap_method is supported.
- * @return Returns \c true if \b GLX_OML_swap_method is supported, false otherwise.
+ * @brief  Tests if \b GLX_OML_swap_method is supported.
+ * @return Returns \c true if \b GLX_OML_swap_method is supported, \c false otherwise.
  */
 GLE_API bool isGLX_OML_swap_method();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_OML_sync_control GLX_OML_sync_control
  * Extension number in OpenGL registry : 238
@@ -1119,47 +1112,46 @@ GLE_API bool isGLX_OML_swap_method();
  * @ingroup g_GLX_OML g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_OML_sync_control is supported.
- * @return Returns \c true if \b GLX_OML_sync_control is supported, false otherwise.
+ * @brief  Tests if \b GLX_OML_sync_control is supported.
+ * @return Returns \c true if \b GLX_OML_sync_control is supported, \c false otherwise.
  */
 GLE_API bool isGLX_OML_sync_control();
 
-/**
- * @brief Bool glXGetSyncValuesOML( Display *dpy, GLXDrawable drawable, int64_t *ust, int64_t *msc, int64_t *sbc );
- */
-GLE_API Bool glXGetSyncValuesOML( Display *dpy, GLXDrawable drawable, int64_t *ust, int64_t *msc, int64_t *sbc );
+
 
 /**
- * @brief Bool glXGetMscRateOML( Display *dpy, GLXDrawable drawable, int32_t *numerator, int32_t *denominator );
+ * @brief Bool glXGetMscRateOML(Display *dpy, GLXDrawable drawable, int32_t *numerator, int32_t *denominator)
  */
-GLE_API Bool glXGetMscRateOML( Display *dpy, GLXDrawable drawable, int32_t *numerator, int32_t *denominator );
+GLE_API Bool glXGetMscRateOML(Display *dpy, GLXDrawable drawable, int32_t *numerator, int32_t *denominator);
 
 /**
- * @brief int64_t glXSwapBuffersMscOML( Display *dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder );
+ * @brief Bool glXGetSyncValuesOML(Display *dpy, GLXDrawable drawable, int64_t *ust, int64_t *msc, int64_t *sbc)
  */
-GLE_API int64_t glXSwapBuffersMscOML( Display *dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder );
+GLE_API Bool glXGetSyncValuesOML(Display *dpy, GLXDrawable drawable, int64_t *ust, int64_t *msc, int64_t *sbc);
 
 /**
- * @brief Bool glXWaitForMscOML( Display *dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder, int64_t *ust, int64_t *msc, int64_t *sbc );
+ * @brief int64_t glXSwapBuffersMscOML(Display *dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder)
  */
-GLE_API Bool glXWaitForMscOML( Display *dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder, int64_t *ust, int64_t *msc, int64_t *sbc );
+GLE_API int64_t glXSwapBuffersMscOML(Display *dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder);
 
 /**
- * @brief Bool glXWaitForSbcOML( Display *dpy, GLXDrawable drawable, int64_t target_sbc, int64_t *ust, int64_t *msc, int64_t *sbc );
+ * @brief Bool glXWaitForMscOML(Display *dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder, int64_t *ust, int64_t *msc, int64_t *sbc)
  */
-GLE_API Bool glXWaitForSbcOML( Display *dpy, GLXDrawable drawable, int64_t target_sbc, int64_t *ust, int64_t *msc, int64_t *sbc );
+GLE_API Bool glXWaitForMscOML(Display *dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder, int64_t *ust, int64_t *msc, int64_t *sbc);
+
+/**
+ * @brief Bool glXWaitForSbcOML(Display *dpy, GLXDrawable drawable, int64_t target_sbc, int64_t *ust, int64_t *msc, int64_t *sbc)
+ */
+GLE_API Bool glXWaitForSbcOML(Display *dpy, GLXDrawable drawable, int64_t target_sbc, int64_t *ust, int64_t *msc, int64_t *sbc);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGIS_blended_overlay GLX_SGIS_blended_overlay
  * Extension number in OpenGL registry : 142
@@ -1167,22 +1159,20 @@ GLE_API Bool glXWaitForSbcOML( Display *dpy, GLXDrawable drawable, int64_t targe
  * @ingroup g_GLX_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGIS_blended_overlay is supported.
- * @return Returns \c true if \b GLX_SGIS_blended_overlay is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGIS_blended_overlay is supported.
+ * @return Returns \c true if \b GLX_SGIS_blended_overlay is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGIS_blended_overlay();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGIS_multisample GLX_SGIS_multisample
  * Extension number in OpenGL registry : 25
@@ -1190,71 +1180,68 @@ GLE_API bool isGLX_SGIS_blended_overlay();
  * @ingroup g_GLX_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGIS_multisample is supported.
- * @return Returns \c true if \b GLX_SGIS_multisample is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGIS_multisample is supported.
+ * @return Returns \c true if \b GLX_SGIS_multisample is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGIS_multisample();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-			
-/**	
+/**
  * @defgroup GLX_SGIS_shared_multisample GLX_SGIS_shared_multisample
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GLX_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGIS_shared_multisample is supported.
- * @return Returns \c true if \b GLX_SGIS_shared_multisample is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGIS_shared_multisample is supported.
+ * @return Returns \c true if \b GLX_SGIS_shared_multisample is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGIS_shared_multisample();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-			
-/**	
+/**
  * @defgroup GLX_SGIX_dmbuffer GLX_SGIX_dmbuffer
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GLX_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGIX_dmbuffer is supported.
- * @return Returns \c true if \b GLX_SGIX_dmbuffer is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGIX_dmbuffer is supported.
+ * @return Returns \c true if \b GLX_SGIX_dmbuffer is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGIX_dmbuffer();
 
+
+
 /**
- * @brief Bool glXAssociateDMPbufferSGIX( Display *dpy, GLXPbufferSGIX pbuffer, DMparams *params, DMbuffer dmbuffer );
+ * @brief Bool glXAssociateDMPbufferSGIX(Display *dpy, GLXPbufferSGIX pbuffer, DMparams *params, DMbuffer dmbuffer)
  */
-GLE_API Bool glXAssociateDMPbufferSGIX( Display *dpy, GLXPbufferSGIX pbuffer, DMparams *params, DMbuffer dmbuffer );
+GLE_API Bool glXAssociateDMPbufferSGIX(Display *dpy, GLXPbufferSGIX pbuffer, DMparams *params, DMbuffer dmbuffer);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGIX_fbconfig GLX_SGIX_fbconfig
  * Extension number in OpenGL registry : 49
@@ -1262,52 +1249,51 @@ GLE_API Bool glXAssociateDMPbufferSGIX( Display *dpy, GLXPbufferSGIX pbuffer, DM
  * @ingroup g_GLX_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGIX_fbconfig is supported.
- * @return Returns \c true if \b GLX_SGIX_fbconfig is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGIX_fbconfig is supported.
+ * @return Returns \c true if \b GLX_SGIX_fbconfig is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGIX_fbconfig();
 
-/**
- * @brief int glXGetFBConfigAttribSGIX( Display *dpy, GLXFBConfigSGIX config, int attribute, int *value );
- */
-GLE_API int glXGetFBConfigAttribSGIX( Display *dpy, GLXFBConfigSGIX config, int attribute, int *value );
+
 
 /**
- * @brief GLXFBConfigSGIX * glXChooseFBConfigSGIX( Display *dpy, int screen, int *attrib_list, int *nelements );
+ * @brief GLXFBConfigSGIX * glXChooseFBConfigSGIX(Display *dpy, int screen, int *attrib_list, int *nelements)
  */
-GLE_API GLXFBConfigSGIX * glXChooseFBConfigSGIX( Display *dpy, int screen, int *attrib_list, int *nelements );
+GLE_API GLXFBConfigSGIX * glXChooseFBConfigSGIX(Display *dpy, int screen, int *attrib_list, int *nelements);
 
 /**
- * @brief GLXPixmap glXCreateGLXPixmapWithConfigSGIX( Display *dpy, GLXFBConfigSGIX config, Pixmap pixmap );
+ * @brief GLXContext glXCreateContextWithConfigSGIX(Display *dpy, GLXFBConfigSGIX config, int render_type, GLXContext share_list, Bool direct)
  */
-GLE_API GLXPixmap glXCreateGLXPixmapWithConfigSGIX( Display *dpy, GLXFBConfigSGIX config, Pixmap pixmap );
+GLE_API GLXContext glXCreateContextWithConfigSGIX(Display *dpy, GLXFBConfigSGIX config, int render_type, GLXContext share_list, Bool direct);
 
 /**
- * @brief GLXContext glXCreateContextWithConfigSGIX( Display *dpy, GLXFBConfigSGIX config, int render_type, GLXContext share_list, Bool direct );
+ * @brief GLXPixmap glXCreateGLXPixmapWithConfigSGIX(Display *dpy, GLXFBConfigSGIX config, Pixmap pixmap)
  */
-GLE_API GLXContext glXCreateContextWithConfigSGIX( Display *dpy, GLXFBConfigSGIX config, int render_type, GLXContext share_list, Bool direct );
+GLE_API GLXPixmap glXCreateGLXPixmapWithConfigSGIX(Display *dpy, GLXFBConfigSGIX config, Pixmap pixmap);
 
 /**
- * @brief XVisualInfo * glXGetVisualFromFBConfigSGIX( Display *dpy, GLXFBConfigSGIX config );
+ * @brief int glXGetFBConfigAttribSGIX(Display *dpy, GLXFBConfigSGIX config, int attribute, int *value)
  */
-GLE_API XVisualInfo * glXGetVisualFromFBConfigSGIX( Display *dpy, GLXFBConfigSGIX config );
+GLE_API int glXGetFBConfigAttribSGIX(Display *dpy, GLXFBConfigSGIX config, int attribute, int *value);
 
 /**
- * @brief GLXFBConfigSGIX glXGetFBConfigFromVisualSGIX( Display *dpy, XVisualInfo *vis );
+ * @brief GLXFBConfigSGIX glXGetFBConfigFromVisualSGIX(Display *dpy, XVisualInfo *vis)
  */
-GLE_API GLXFBConfigSGIX glXGetFBConfigFromVisualSGIX( Display *dpy, XVisualInfo *vis );
+GLE_API GLXFBConfigSGIX glXGetFBConfigFromVisualSGIX(Display *dpy, XVisualInfo *vis);
+
+/**
+ * @brief XVisualInfo * glXGetVisualFromFBConfigSGIX(Display *dpy, GLXFBConfigSGIX config)
+ */
+GLE_API XVisualInfo * glXGetVisualFromFBConfigSGIX(Display *dpy, GLXFBConfigSGIX config);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGIX_hyperpipe GLX_SGIX_hyperpipe
  * Extension number in OpenGL registry : 307
@@ -1315,62 +1301,61 @@ GLE_API GLXFBConfigSGIX glXGetFBConfigFromVisualSGIX( Display *dpy, XVisualInfo 
  * @ingroup g_GLX_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGIX_hyperpipe is supported.
- * @return Returns \c true if \b GLX_SGIX_hyperpipe is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGIX_hyperpipe is supported.
+ * @return Returns \c true if \b GLX_SGIX_hyperpipe is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGIX_hyperpipe();
 
-/**
- * @brief GLXHyperpipeNetworkSGIX * glXQueryHyperpipeNetworkSGIX( Display *dpy, int *npipes );
- */
-GLE_API GLXHyperpipeNetworkSGIX * glXQueryHyperpipeNetworkSGIX( Display *dpy, int *npipes );
+
 
 /**
- * @brief int glXHyperpipeConfigSGIX( Display *dpy, int networkId, int npipes, GLXHyperpipeConfigSGIX *cfg, int *hpId );
+ * @brief int glXBindHyperpipeSGIX(Display *dpy, int hpId)
  */
-GLE_API int glXHyperpipeConfigSGIX( Display *dpy, int networkId, int npipes, GLXHyperpipeConfigSGIX *cfg, int *hpId );
+GLE_API int glXBindHyperpipeSGIX(Display *dpy, int hpId);
 
 /**
- * @brief GLXHyperpipeConfigSGIX * glXQueryHyperpipeConfigSGIX( Display *dpy, int hpId, int *npipes );
+ * @brief int glXDestroyHyperpipeConfigSGIX(Display *dpy, int hpId)
  */
-GLE_API GLXHyperpipeConfigSGIX * glXQueryHyperpipeConfigSGIX( Display *dpy, int hpId, int *npipes );
+GLE_API int glXDestroyHyperpipeConfigSGIX(Display *dpy, int hpId);
 
 /**
- * @brief int glXDestroyHyperpipeConfigSGIX( Display *dpy, int hpId );
+ * @brief int glXHyperpipeAttribSGIX(Display *dpy, int timeSlice, int attrib, int size, void *attribList)
  */
-GLE_API int glXDestroyHyperpipeConfigSGIX( Display *dpy, int hpId );
+GLE_API int glXHyperpipeAttribSGIX(Display *dpy, int timeSlice, int attrib, int size, void *attribList);
 
 /**
- * @brief int glXBindHyperpipeSGIX( Display *dpy, int hpId );
+ * @brief int glXHyperpipeConfigSGIX(Display *dpy, int networkId, int npipes, GLXHyperpipeConfigSGIX *cfg, int *hpId)
  */
-GLE_API int glXBindHyperpipeSGIX( Display *dpy, int hpId );
+GLE_API int glXHyperpipeConfigSGIX(Display *dpy, int networkId, int npipes, GLXHyperpipeConfigSGIX *cfg, int *hpId);
 
 /**
- * @brief int glXQueryHyperpipeBestAttribSGIX( Display *dpy, int timeSlice, int attrib, int size, void *attribList, void *returnAttribList );
+ * @brief int glXQueryHyperpipeAttribSGIX(Display *dpy, int timeSlice, int attrib, int size, void *returnAttribList)
  */
-GLE_API int glXQueryHyperpipeBestAttribSGIX( Display *dpy, int timeSlice, int attrib, int size, void *attribList, void *returnAttribList );
+GLE_API int glXQueryHyperpipeAttribSGIX(Display *dpy, int timeSlice, int attrib, int size, void *returnAttribList);
 
 /**
- * @brief int glXHyperpipeAttribSGIX( Display *dpy, int timeSlice, int attrib, int size, void *attribList );
+ * @brief int glXQueryHyperpipeBestAttribSGIX(Display *dpy, int timeSlice, int attrib, int size, void *attribList, void *returnAttribList)
  */
-GLE_API int glXHyperpipeAttribSGIX( Display *dpy, int timeSlice, int attrib, int size, void *attribList );
+GLE_API int glXQueryHyperpipeBestAttribSGIX(Display *dpy, int timeSlice, int attrib, int size, void *attribList, void *returnAttribList);
 
 /**
- * @brief int glXQueryHyperpipeAttribSGIX( Display *dpy, int timeSlice, int attrib, int size, void *returnAttribList );
+ * @brief GLXHyperpipeConfigSGIX * glXQueryHyperpipeConfigSGIX(Display *dpy, int hpId, int *npipes)
  */
-GLE_API int glXQueryHyperpipeAttribSGIX( Display *dpy, int timeSlice, int attrib, int size, void *returnAttribList );
+GLE_API GLXHyperpipeConfigSGIX * glXQueryHyperpipeConfigSGIX(Display *dpy, int hpId, int *npipes);
+
+/**
+ * @brief GLXHyperpipeNetworkSGIX * glXQueryHyperpipeNetworkSGIX(Display *dpy, int *npipes)
+ */
+GLE_API GLXHyperpipeNetworkSGIX * glXQueryHyperpipeNetworkSGIX(Display *dpy, int *npipes);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGIX_pbuffer GLX_SGIX_pbuffer
  * Extension number in OpenGL registry : 50
@@ -1378,47 +1363,46 @@ GLE_API int glXQueryHyperpipeAttribSGIX( Display *dpy, int timeSlice, int attrib
  * @ingroup g_GLX_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGIX_pbuffer is supported.
- * @return Returns \c true if \b GLX_SGIX_pbuffer is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGIX_pbuffer is supported.
+ * @return Returns \c true if \b GLX_SGIX_pbuffer is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGIX_pbuffer();
 
-/**
- * @brief GLXPbufferSGIX glXCreateGLXPbufferSGIX( Display *dpy, GLXFBConfigSGIX config, unsigned int width, unsigned int height, int *attrib_list );
- */
-GLE_API GLXPbufferSGIX glXCreateGLXPbufferSGIX( Display *dpy, GLXFBConfigSGIX config, unsigned int width, unsigned int height, int *attrib_list );
+
 
 /**
- * @brief void glXDestroyGLXPbufferSGIX( Display *dpy, GLXPbufferSGIX pbuf );
+ * @brief GLXPbufferSGIX glXCreateGLXPbufferSGIX(Display *dpy, GLXFBConfigSGIX config, unsigned int width, unsigned int height, int *attrib_list)
  */
-GLE_API void glXDestroyGLXPbufferSGIX( Display *dpy, GLXPbufferSGIX pbuf );
+GLE_API GLXPbufferSGIX glXCreateGLXPbufferSGIX(Display *dpy, GLXFBConfigSGIX config, unsigned int width, unsigned int height, int *attrib_list);
 
 /**
- * @brief int glXQueryGLXPbufferSGIX( Display *dpy, GLXPbufferSGIX pbuf, int attribute, unsigned int *value );
+ * @brief void glXDestroyGLXPbufferSGIX(Display *dpy, GLXPbufferSGIX pbuf)
  */
-GLE_API int glXQueryGLXPbufferSGIX( Display *dpy, GLXPbufferSGIX pbuf, int attribute, unsigned int *value );
+GLE_API void glXDestroyGLXPbufferSGIX(Display *dpy, GLXPbufferSGIX pbuf);
 
 /**
- * @brief void glXSelectEventSGIX( Display *dpy, GLXDrawable drawable, unsigned long mask );
+ * @brief void glXGetSelectedEventSGIX(Display *dpy, GLXDrawable drawable, unsigned long *mask)
  */
-GLE_API void glXSelectEventSGIX( Display *dpy, GLXDrawable drawable, unsigned long mask );
+GLE_API void glXGetSelectedEventSGIX(Display *dpy, GLXDrawable drawable, unsigned long *mask);
 
 /**
- * @brief void glXGetSelectedEventSGIX( Display *dpy, GLXDrawable drawable, unsigned long *mask );
+ * @brief int glXQueryGLXPbufferSGIX(Display *dpy, GLXPbufferSGIX pbuf, int attribute, unsigned int *value)
  */
-GLE_API void glXGetSelectedEventSGIX( Display *dpy, GLXDrawable drawable, unsigned long *mask );
+GLE_API int glXQueryGLXPbufferSGIX(Display *dpy, GLXPbufferSGIX pbuf, int attribute, unsigned int *value);
+
+/**
+ * @brief void glXSelectEventSGIX(Display *dpy, GLXDrawable drawable, unsigned long mask)
+ */
+GLE_API void glXSelectEventSGIX(Display *dpy, GLXDrawable drawable, unsigned long mask);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGIX_swap_barrier GLX_SGIX_swap_barrier
  * Extension number in OpenGL registry : 92
@@ -1426,32 +1410,31 @@ GLE_API void glXGetSelectedEventSGIX( Display *dpy, GLXDrawable drawable, unsign
  * @ingroup g_GLX_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGIX_swap_barrier is supported.
- * @return Returns \c true if \b GLX_SGIX_swap_barrier is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGIX_swap_barrier is supported.
+ * @return Returns \c true if \b GLX_SGIX_swap_barrier is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGIX_swap_barrier();
 
-/**
- * @brief void glXBindSwapBarrierSGIX( Display *dpy, GLXDrawable drawable, int barrier );
- */
-GLE_API void glXBindSwapBarrierSGIX( Display *dpy, GLXDrawable drawable, int barrier );
+
 
 /**
- * @brief Bool glXQueryMaxSwapBarriersSGIX( Display *dpy, int screen, int *max );
+ * @brief void glXBindSwapBarrierSGIX(Display *dpy, GLXDrawable drawable, int barrier)
  */
-GLE_API Bool glXQueryMaxSwapBarriersSGIX( Display *dpy, int screen, int *max );
+GLE_API void glXBindSwapBarrierSGIX(Display *dpy, GLXDrawable drawable, int barrier);
+
+/**
+ * @brief Bool glXQueryMaxSwapBarriersSGIX(Display *dpy, int screen, int *max)
+ */
+GLE_API Bool glXQueryMaxSwapBarriersSGIX(Display *dpy, int screen, int *max);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGIX_swap_group GLX_SGIX_swap_group
  * Extension number in OpenGL registry : 91
@@ -1459,27 +1442,26 @@ GLE_API Bool glXQueryMaxSwapBarriersSGIX( Display *dpy, int screen, int *max );
  * @ingroup g_GLX_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGIX_swap_group is supported.
- * @return Returns \c true if \b GLX_SGIX_swap_group is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGIX_swap_group is supported.
+ * @return Returns \c true if \b GLX_SGIX_swap_group is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGIX_swap_group();
 
+
+
 /**
- * @brief void glXJoinSwapGroupSGIX( Display *dpy, GLXDrawable drawable, GLXDrawable member );
+ * @brief void glXJoinSwapGroupSGIX(Display *dpy, GLXDrawable drawable, GLXDrawable member)
  */
-GLE_API void glXJoinSwapGroupSGIX( Display *dpy, GLXDrawable drawable, GLXDrawable member );
+GLE_API void glXJoinSwapGroupSGIX(Display *dpy, GLXDrawable drawable, GLXDrawable member);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGIX_video_resize GLX_SGIX_video_resize
  * Extension number in OpenGL registry : 83
@@ -1487,47 +1469,46 @@ GLE_API void glXJoinSwapGroupSGIX( Display *dpy, GLXDrawable drawable, GLXDrawab
  * @ingroup g_GLX_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGIX_video_resize is supported.
- * @return Returns \c true if \b GLX_SGIX_video_resize is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGIX_video_resize is supported.
+ * @return Returns \c true if \b GLX_SGIX_video_resize is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGIX_video_resize();
 
-/**
- * @brief int glXBindChannelToWindowSGIX( Display *display, int screen, int channel, Window window );
- */
-GLE_API int glXBindChannelToWindowSGIX( Display *display, int screen, int channel, Window window );
+
 
 /**
- * @brief int glXChannelRectSGIX( Display *display, int screen, int channel, int x, int y, int w, int h );
+ * @brief int glXBindChannelToWindowSGIX(Display *display, int screen, int channel, Window window)
  */
-GLE_API int glXChannelRectSGIX( Display *display, int screen, int channel, int x, int y, int w, int h );
+GLE_API int glXBindChannelToWindowSGIX(Display *display, int screen, int channel, Window window);
 
 /**
- * @brief int glXQueryChannelRectSGIX( Display *display, int screen, int channel, int *dx, int *dy, int *dw, int *dh );
+ * @brief int glXChannelRectSGIX(Display *display, int screen, int channel, int x, int y, int w, int h)
  */
-GLE_API int glXQueryChannelRectSGIX( Display *display, int screen, int channel, int *dx, int *dy, int *dw, int *dh );
+GLE_API int glXChannelRectSGIX(Display *display, int screen, int channel, int x, int y, int w, int h);
 
 /**
- * @brief int glXQueryChannelDeltasSGIX( Display *display, int screen, int channel, int *x, int *y, int *w, int *h );
+ * @brief int glXChannelRectSyncSGIX(Display *display, int screen, int channel, GLenum synctype)
  */
-GLE_API int glXQueryChannelDeltasSGIX( Display *display, int screen, int channel, int *x, int *y, int *w, int *h );
+GLE_API int glXChannelRectSyncSGIX(Display *display, int screen, int channel, GLenum synctype);
 
 /**
- * @brief int glXChannelRectSyncSGIX( Display *display, int screen, int channel, GLenum synctype );
+ * @brief int glXQueryChannelDeltasSGIX(Display *display, int screen, int channel, int *x, int *y, int *w, int *h)
  */
-GLE_API int glXChannelRectSyncSGIX( Display *display, int screen, int channel, GLenum synctype );
+GLE_API int glXQueryChannelDeltasSGIX(Display *display, int screen, int channel, int *x, int *y, int *w, int *h);
+
+/**
+ * @brief int glXQueryChannelRectSGIX(Display *display, int screen, int channel, int *dx, int *dy, int *dw, int *dh)
+ */
+GLE_API int glXQueryChannelRectSGIX(Display *display, int screen, int channel, int *dx, int *dy, int *dw, int *dh);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGIX_video_source GLX_SGIX_video_source
  * Extension number in OpenGL registry : 43
@@ -1535,32 +1516,31 @@ GLE_API int glXChannelRectSyncSGIX( Display *display, int screen, int channel, G
  * @ingroup g_GLX_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGIX_video_source is supported.
- * @return Returns \c true if \b GLX_SGIX_video_source is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGIX_video_source is supported.
+ * @return Returns \c true if \b GLX_SGIX_video_source is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGIX_video_source();
 
-/**
- * @brief GLXVideoSourceSGIX glXCreateGLXVideoSourceSGIX( Display *display, int screen, VLServer server, VLPath path, int nodeClass, VLNode drainNode );
- */
-GLE_API GLXVideoSourceSGIX glXCreateGLXVideoSourceSGIX( Display *display, int screen, VLServer server, VLPath path, int nodeClass, VLNode drainNode );
+
 
 /**
- * @brief void glXDestroyGLXVideoSourceSGIX( Display *dpy, GLXVideoSourceSGIX glxvideosource );
+ * @brief GLXVideoSourceSGIX glXCreateGLXVideoSourceSGIX(Display *display, int screen, VLServer server, VLPath path, int nodeClass, VLNode drainNode)
  */
-GLE_API void glXDestroyGLXVideoSourceSGIX( Display *dpy, GLXVideoSourceSGIX glxvideosource );
+GLE_API GLXVideoSourceSGIX glXCreateGLXVideoSourceSGIX(Display *display, int screen, VLServer server, VLPath path, int nodeClass, VLNode drainNode);
+
+/**
+ * @brief void glXDestroyGLXVideoSourceSGIX(Display *dpy, GLXVideoSourceSGIX glxvideosource)
+ */
+GLE_API void glXDestroyGLXVideoSourceSGIX(Display *dpy, GLXVideoSourceSGIX glxvideosource);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGIX_visual_select_group GLX_SGIX_visual_select_group
  * Extension number in OpenGL registry : 234
@@ -1568,22 +1548,20 @@ GLE_API void glXDestroyGLXVideoSourceSGIX( Display *dpy, GLXVideoSourceSGIX glxv
  * @ingroup g_GLX_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGIX_visual_select_group is supported.
- * @return Returns \c true if \b GLX_SGIX_visual_select_group is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGIX_visual_select_group is supported.
+ * @return Returns \c true if \b GLX_SGIX_visual_select_group is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGIX_visual_select_group();
 
+
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGI_cushion GLX_SGI_cushion
  * Extension number in OpenGL registry : 62
@@ -1591,27 +1569,26 @@ GLE_API bool isGLX_SGIX_visual_select_group();
  * @ingroup g_GLX_SGI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGI_cushion is supported.
- * @return Returns \c true if \b GLX_SGI_cushion is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGI_cushion is supported.
+ * @return Returns \c true if \b GLX_SGI_cushion is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGI_cushion();
 
+
+
 /**
- * @brief void glXCushionSGI( Display *dpy, Window window, float cushion );
+ * @brief void glXCushionSGI(Display *dpy, Window window, float cushion)
  */
-GLE_API void glXCushionSGI( Display *dpy, Window window, float cushion );
+GLE_API void glXCushionSGI(Display *dpy, Window window, float cushion);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGI_make_current_read GLX_SGI_make_current_read
  * Extension number in OpenGL registry : 42
@@ -1619,32 +1596,31 @@ GLE_API void glXCushionSGI( Display *dpy, Window window, float cushion );
  * @ingroup g_GLX_SGI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGI_make_current_read is supported.
- * @return Returns \c true if \b GLX_SGI_make_current_read is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGI_make_current_read is supported.
+ * @return Returns \c true if \b GLX_SGI_make_current_read is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGI_make_current_read();
 
-/**
- * @brief Bool glXMakeCurrentReadSGI( Display *dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx );
- */
-GLE_API Bool glXMakeCurrentReadSGI( Display *dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx );
+
 
 /**
- * @brief GLXDrawable glXGetCurrentReadDrawableSGI( void );
+ * @brief GLXDrawable glXGetCurrentReadDrawableSGI(void)
  */
-GLE_API GLXDrawable glXGetCurrentReadDrawableSGI( void );
+GLE_API GLXDrawable glXGetCurrentReadDrawableSGI(void);
+
+/**
+ * @brief Bool glXMakeCurrentReadSGI(Display *dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx)
+ */
+GLE_API Bool glXMakeCurrentReadSGI(Display *dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGI_swap_control GLX_SGI_swap_control
  * Extension number in OpenGL registry : 40
@@ -1652,27 +1628,26 @@ GLE_API GLXDrawable glXGetCurrentReadDrawableSGI( void );
  * @ingroup g_GLX_SGI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGI_swap_control is supported.
- * @return Returns \c true if \b GLX_SGI_swap_control is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGI_swap_control is supported.
+ * @return Returns \c true if \b GLX_SGI_swap_control is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGI_swap_control();
 
+
+
 /**
- * @brief int glXSwapIntervalSGI( int interval );
+ * @brief int glXSwapIntervalSGI(int interval)
  */
-GLE_API int glXSwapIntervalSGI( int interval );
+GLE_API int glXSwapIntervalSGI(int interval);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SGI_video_sync GLX_SGI_video_sync
  * Extension number in OpenGL registry : 41
@@ -1680,32 +1655,31 @@ GLE_API int glXSwapIntervalSGI( int interval );
  * @ingroup g_GLX_SGI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SGI_video_sync is supported.
- * @return Returns \c true if \b GLX_SGI_video_sync is supported, false otherwise.
+ * @brief  Tests if \b GLX_SGI_video_sync is supported.
+ * @return Returns \c true if \b GLX_SGI_video_sync is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SGI_video_sync();
 
-/**
- * @brief int glXGetVideoSyncSGI( unsigned int *count );
- */
-GLE_API int glXGetVideoSyncSGI( unsigned int *count );
+
 
 /**
- * @brief int glXWaitVideoSyncSGI( int divisor, int remainder, unsigned int *count );
+ * @brief int glXGetVideoSyncSGI(unsigned int *count)
  */
-GLE_API int glXWaitVideoSyncSGI( int divisor, int remainder, unsigned int *count );
+GLE_API int glXGetVideoSyncSGI(unsigned int *count);
+
+/**
+ * @brief int glXWaitVideoSyncSGI(int divisor, int remainder, unsigned int *count)
+ */
+GLE_API int glXWaitVideoSyncSGI(int divisor, int remainder, unsigned int *count);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-
 /**
  * @defgroup GLX_SUN_get_transparent_index GLX_SUN_get_transparent_index
  * Extension number in OpenGL registry : 183
@@ -1713,160 +1687,163 @@ GLE_API int glXWaitVideoSyncSGI( int divisor, int remainder, unsigned int *count
  * @ingroup g_GLX_SUN g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_SUN_get_transparent_index is supported.
- * @return Returns \c true if \b GLX_SUN_get_transparent_index is supported, false otherwise.
+ * @brief  Tests if \b GLX_SUN_get_transparent_index is supported.
+ * @return Returns \c true if \b GLX_SUN_get_transparent_index is supported, \c false otherwise.
  */
 GLE_API bool isGLX_SUN_get_transparent_index();
 
+
+
 /**
- * @brief Status glXGetTransparentIndexSUN( Display *dpy, Window overlay, Window underlay, long *pTransparentIndex );
+ * @brief Status glXGetTransparentIndexSUN(Display *dpy, Window overlay, Window underlay, long *pTransparentIndex)
  */
-GLE_API Status glXGetTransparentIndexSUN( Display *dpy, Window overlay, Window underlay, long *pTransparentIndex );
+GLE_API Status glXGetTransparentIndexSUN(Display *dpy, Window overlay, Window underlay, long *pTransparentIndex);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-			
-/**	
+/**
  * @defgroup GLX_VERSION_1_3 GLX_VERSION_1_3
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GLX_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_VERSION_1_3 is supported.
- * @return Returns \c true if \b GLX_VERSION_1_3 is supported, false otherwise.
+ * @brief  Tests if \b GLX_VERSION_1_3 is supported.
+ * @return Returns \c true if \b GLX_VERSION_1_3 is supported, \c false otherwise.
  */
 GLE_API bool isGLX_VERSION_1_3();
 
-/**
- * @brief GLXFBConfig * glXGetFBConfigs( Display *dpy, int screen, int *nelements );
- */
-GLE_API GLXFBConfig * glXGetFBConfigs( Display *dpy, int screen, int *nelements );
+
 
 /**
- * @brief GLXFBConfig * glXChooseFBConfig( Display *dpy, int screen, const int *attrib_list, int *nelements );
+ * @brief GLXFBConfig * glXChooseFBConfig(Display *dpy, int screen, const int *attrib_list, int *nelements)
  */
-GLE_API GLXFBConfig * glXChooseFBConfig( Display *dpy, int screen, const int *attrib_list, int *nelements );
+GLE_API GLXFBConfig * glXChooseFBConfig(Display *dpy, int screen, const int *attrib_list, int *nelements);
 
 /**
- * @brief int glXGetFBConfigAttrib( Display *dpy, GLXFBConfig config, int attribute, int *value );
+ * @brief GLXContext glXCreateNewContext(Display *dpy, GLXFBConfig config, int render_type, GLXContext share_list, Bool direct)
  */
-GLE_API int glXGetFBConfigAttrib( Display *dpy, GLXFBConfig config, int attribute, int *value );
+GLE_API GLXContext glXCreateNewContext(Display *dpy, GLXFBConfig config, int render_type, GLXContext share_list, Bool direct);
 
 /**
- * @brief XVisualInfo * glXGetVisualFromFBConfig( Display *dpy, GLXFBConfig config );
+ * @brief GLXPbuffer glXCreatePbuffer(Display *dpy, GLXFBConfig config, const int *attrib_list)
  */
-GLE_API XVisualInfo * glXGetVisualFromFBConfig( Display *dpy, GLXFBConfig config );
+GLE_API GLXPbuffer glXCreatePbuffer(Display *dpy, GLXFBConfig config, const int *attrib_list);
 
 /**
- * @brief GLXWindow glXCreateWindow( Display *dpy, GLXFBConfig config, Window win, const int *attrib_list );
+ * @brief GLXPixmap glXCreatePixmap(Display *dpy, GLXFBConfig config, Pixmap pixmap, const int *attrib_list)
  */
-GLE_API GLXWindow glXCreateWindow( Display *dpy, GLXFBConfig config, Window win, const int *attrib_list );
+GLE_API GLXPixmap glXCreatePixmap(Display *dpy, GLXFBConfig config, Pixmap pixmap, const int *attrib_list);
 
 /**
- * @brief void glXDestroyWindow( Display *dpy, GLXWindow win );
+ * @brief GLXWindow glXCreateWindow(Display *dpy, GLXFBConfig config, Window win, const int *attrib_list)
  */
-GLE_API void glXDestroyWindow( Display *dpy, GLXWindow win );
+GLE_API GLXWindow glXCreateWindow(Display *dpy, GLXFBConfig config, Window win, const int *attrib_list);
 
 /**
- * @brief GLXPixmap glXCreatePixmap( Display *dpy, GLXFBConfig config, Pixmap pixmap, const int *attrib_list );
+ * @brief void glXDestroyPbuffer(Display *dpy, GLXPbuffer pbuf)
  */
-GLE_API GLXPixmap glXCreatePixmap( Display *dpy, GLXFBConfig config, Pixmap pixmap, const int *attrib_list );
+GLE_API void glXDestroyPbuffer(Display *dpy, GLXPbuffer pbuf);
 
 /**
- * @brief void glXDestroyPixmap( Display *dpy, GLXPixmap pixmap );
+ * @brief void glXDestroyPixmap(Display *dpy, GLXPixmap pixmap)
  */
-GLE_API void glXDestroyPixmap( Display *dpy, GLXPixmap pixmap );
+GLE_API void glXDestroyPixmap(Display *dpy, GLXPixmap pixmap);
 
 /**
- * @brief GLXPbuffer glXCreatePbuffer( Display *dpy, GLXFBConfig config, const int *attrib_list );
+ * @brief void glXDestroyWindow(Display *dpy, GLXWindow win)
  */
-GLE_API GLXPbuffer glXCreatePbuffer( Display *dpy, GLXFBConfig config, const int *attrib_list );
+GLE_API void glXDestroyWindow(Display *dpy, GLXWindow win);
 
 /**
- * @brief void glXDestroyPbuffer( Display *dpy, GLXPbuffer pbuf );
+ * @brief Display * glXGetCurrentDisplay(void)
  */
-GLE_API void glXDestroyPbuffer( Display *dpy, GLXPbuffer pbuf );
+GLE_API Display * glXGetCurrentDisplay(void);
 
 /**
- * @brief void glXQueryDrawable( Display *dpy, GLXDrawable draw, int attribute, unsigned int *value );
+ * @brief GLXDrawable glXGetCurrentReadDrawable(void)
  */
-GLE_API void glXQueryDrawable( Display *dpy, GLXDrawable draw, int attribute, unsigned int *value );
+GLE_API GLXDrawable glXGetCurrentReadDrawable(void);
 
 /**
- * @brief GLXContext glXCreateNewContext( Display *dpy, GLXFBConfig config, int render_type, GLXContext share_list, Bool direct );
+ * @brief int glXGetFBConfigAttrib(Display *dpy, GLXFBConfig config, int attribute, int *value)
  */
-GLE_API GLXContext glXCreateNewContext( Display *dpy, GLXFBConfig config, int render_type, GLXContext share_list, Bool direct );
+GLE_API int glXGetFBConfigAttrib(Display *dpy, GLXFBConfig config, int attribute, int *value);
 
 /**
- * @brief Bool glXMakeContextCurrent( Display *dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx );
+ * @brief GLXFBConfig * glXGetFBConfigs(Display *dpy, int screen, int *nelements)
  */
-GLE_API Bool glXMakeContextCurrent( Display *dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx );
+GLE_API GLXFBConfig * glXGetFBConfigs(Display *dpy, int screen, int *nelements);
 
 /**
- * @brief GLXDrawable glXGetCurrentReadDrawable( void );
+ * @brief void glXGetSelectedEvent(Display *dpy, GLXDrawable draw, unsigned long *event_mask)
  */
-GLE_API GLXDrawable glXGetCurrentReadDrawable( void );
+GLE_API void glXGetSelectedEvent(Display *dpy, GLXDrawable draw, unsigned long *event_mask);
 
 /**
- * @brief Display * glXGetCurrentDisplay( void );
+ * @brief XVisualInfo * glXGetVisualFromFBConfig(Display *dpy, GLXFBConfig config)
  */
-GLE_API Display * glXGetCurrentDisplay( void );
+GLE_API XVisualInfo * glXGetVisualFromFBConfig(Display *dpy, GLXFBConfig config);
 
 /**
- * @brief int glXQueryContext( Display *dpy, GLXContext ctx, int attribute, int *value );
+ * @brief Bool glXMakeContextCurrent(Display *dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx)
  */
-GLE_API int glXQueryContext( Display *dpy, GLXContext ctx, int attribute, int *value );
+GLE_API Bool glXMakeContextCurrent(Display *dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx);
 
 /**
- * @brief void glXSelectEvent( Display *dpy, GLXDrawable draw, unsigned long event_mask );
+ * @brief int glXQueryContext(Display *dpy, GLXContext ctx, int attribute, int *value)
  */
-GLE_API void glXSelectEvent( Display *dpy, GLXDrawable draw, unsigned long event_mask );
+GLE_API int glXQueryContext(Display *dpy, GLXContext ctx, int attribute, int *value);
 
 /**
- * @brief void glXGetSelectedEvent( Display *dpy, GLXDrawable draw, unsigned long *event_mask );
+ * @brief void glXQueryDrawable(Display *dpy, GLXDrawable draw, int attribute, unsigned int *value)
  */
-GLE_API void glXGetSelectedEvent( Display *dpy, GLXDrawable draw, unsigned long *event_mask );
+GLE_API void glXQueryDrawable(Display *dpy, GLXDrawable draw, int attribute, unsigned int *value);
+
+/**
+ * @brief void glXSelectEvent(Display *dpy, GLXDrawable draw, unsigned long event_mask)
+ */
+GLE_API void glXSelectEvent(Display *dpy, GLXDrawable draw, unsigned long event_mask);
 
 //@}
-
-
-#endif // POSIX
+#endif //POSIX
 
 
 
 #ifdef POSIX
-
-			
-/**	
+/**
  * @defgroup GLX_VERSION_1_4 GLX_VERSION_1_4
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GLX_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GLX_VERSION_1_4 is supported.
- * @return Returns \c true if \b GLX_VERSION_1_4 is supported, false otherwise.
+ * @brief  Tests if \b GLX_VERSION_1_4 is supported.
+ * @return Returns \c true if \b GLX_VERSION_1_4 is supported, \c false otherwise.
  */
 GLE_API bool isGLX_VERSION_1_4();
 
+
+
 /**
- * @brief __GLXextFuncPtr glXGetProcAddress( const GLubyte *procName );
+ * @brief __GLXextFuncPtr glXGetProcAddress(const GLubyte *procName)
  */
-GLE_API __GLXextFuncPtr glXGetProcAddress( const GLubyte *procName );
+GLE_API __GLXextFuncPtr glXGetProcAddress(const GLubyte *procName);
 
 //@}
+#endif //POSIX
 
 
-#endif // POSIX
 
 
 /**
@@ -1876,13 +1853,17 @@ GLE_API __GLXextFuncPtr glXGetProcAddress( const GLubyte *procName );
  * @ingroup g_GL_3DFX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_3DFX_multisample is supported.
- * @return Returns \c true if \b GL_3DFX_multisample is supported, false otherwise.
+ * @brief  Tests if \b GL_3DFX_multisample is supported.
+ * @return Returns \c true if \b GL_3DFX_multisample is supported, \c false otherwise.
  */
 GLE_API bool isGL_3DFX_multisample();
 
+
 //@}
+
+
 
 
 /**
@@ -1892,18 +1873,23 @@ GLE_API bool isGL_3DFX_multisample();
  * @ingroup g_GL_3DFX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_3DFX_tbuffer is supported.
- * @return Returns \c true if \b GL_3DFX_tbuffer is supported, false otherwise.
+ * @brief  Tests if \b GL_3DFX_tbuffer is supported.
+ * @return Returns \c true if \b GL_3DFX_tbuffer is supported, \c false otherwise.
  */
 GLE_API bool isGL_3DFX_tbuffer();
 
+
+
 /**
- * @brief void glTbufferMask3DFX( GLuint mask );
+ * @brief void glTbufferMask3DFX(GLuint mask)
  */
-GLE_API void glTbufferMask3DFX( GLuint mask );
+GLE_API void glTbufferMask3DFX(GLuint mask);
 
 //@}
+
+
 
 
 /**
@@ -1913,13 +1899,17 @@ GLE_API void glTbufferMask3DFX( GLuint mask );
  * @ingroup g_GL_3DFX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_3DFX_texture_compression_FXT1 is supported.
- * @return Returns \c true if \b GL_3DFX_texture_compression_FXT1 is supported, false otherwise.
+ * @brief  Tests if \b GL_3DFX_texture_compression_FXT1 is supported.
+ * @return Returns \c true if \b GL_3DFX_texture_compression_FXT1 is supported, \c false otherwise.
  */
 GLE_API bool isGL_3DFX_texture_compression_FXT1();
 
+
 //@}
+
+
 
 
 /**
@@ -1929,13 +1919,17 @@ GLE_API bool isGL_3DFX_texture_compression_FXT1();
  * @ingroup g_GL_AMD g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_AMD_conservative_depth is supported.
- * @return Returns \c true if \b GL_AMD_conservative_depth is supported, false otherwise.
+ * @brief  Tests if \b GL_AMD_conservative_depth is supported.
+ * @return Returns \c true if \b GL_AMD_conservative_depth is supported, \c false otherwise.
  */
 GLE_API bool isGL_AMD_conservative_depth();
 
+
 //@}
+
+
 
 
 /**
@@ -1945,13 +1939,17 @@ GLE_API bool isGL_AMD_conservative_depth();
  * @ingroup g_GL_AMD g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_AMD_debug_output is supported.
- * @return Returns \c true if \b GL_AMD_debug_output is supported, false otherwise.
+ * @brief  Tests if \b GL_AMD_debug_output is supported.
+ * @return Returns \c true if \b GL_AMD_debug_output is supported, \c false otherwise.
  */
 GLE_API bool isGL_AMD_debug_output();
 
+
 //@}
+
+
 
 
 /**
@@ -1961,33 +1959,38 @@ GLE_API bool isGL_AMD_debug_output();
  * @ingroup g_GL_AMD g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_AMD_draw_buffers_blend is supported.
- * @return Returns \c true if \b GL_AMD_draw_buffers_blend is supported, false otherwise.
+ * @brief  Tests if \b GL_AMD_draw_buffers_blend is supported.
+ * @return Returns \c true if \b GL_AMD_draw_buffers_blend is supported, \c false otherwise.
  */
 GLE_API bool isGL_AMD_draw_buffers_blend();
 
-/**
- * @brief void glBlendFuncIndexedAMD( GLuint buf, GLenum src, GLenum dst );
- */
-GLE_API void glBlendFuncIndexedAMD( GLuint buf, GLenum src, GLenum dst );
+
 
 /**
- * @brief void glBlendFuncSeparateIndexedAMD( GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha );
+ * @brief void glBlendEquationIndexedAMD(GLuint buf, GLenum mode)
  */
-GLE_API void glBlendFuncSeparateIndexedAMD( GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha );
+GLE_API void glBlendEquationIndexedAMD(GLuint buf, GLenum mode);
 
 /**
- * @brief void glBlendEquationIndexedAMD( GLuint buf, GLenum mode );
+ * @brief void glBlendEquationSeparateIndexedAMD(GLuint buf, GLenum modeRGB, GLenum modeAlpha)
  */
-GLE_API void glBlendEquationIndexedAMD( GLuint buf, GLenum mode );
+GLE_API void glBlendEquationSeparateIndexedAMD(GLuint buf, GLenum modeRGB, GLenum modeAlpha);
 
 /**
- * @brief void glBlendEquationSeparateIndexedAMD( GLuint buf, GLenum modeRGB, GLenum modeAlpha );
+ * @brief void glBlendFuncIndexedAMD(GLuint buf, GLenum src, GLenum dst)
  */
-GLE_API void glBlendEquationSeparateIndexedAMD( GLuint buf, GLenum modeRGB, GLenum modeAlpha );
+GLE_API void glBlendFuncIndexedAMD(GLuint buf, GLenum src, GLenum dst);
+
+/**
+ * @brief void glBlendFuncSeparateIndexedAMD(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
+ */
+GLE_API void glBlendFuncSeparateIndexedAMD(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
 
 //@}
+
+
 
 
 /**
@@ -1997,13 +2000,17 @@ GLE_API void glBlendEquationSeparateIndexedAMD( GLuint buf, GLenum modeRGB, GLen
  * @ingroup g_GL_AMD g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_AMD_name_gen_delete is supported.
- * @return Returns \c true if \b GL_AMD_name_gen_delete is supported, false otherwise.
+ * @brief  Tests if \b GL_AMD_name_gen_delete is supported.
+ * @return Returns \c true if \b GL_AMD_name_gen_delete is supported, \c false otherwise.
  */
 GLE_API bool isGL_AMD_name_gen_delete();
 
+
 //@}
+
+
 
 
 /**
@@ -2013,68 +2020,73 @@ GLE_API bool isGL_AMD_name_gen_delete();
  * @ingroup g_GL_AMD g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_AMD_performance_monitor is supported.
- * @return Returns \c true if \b GL_AMD_performance_monitor is supported, false otherwise.
+ * @brief  Tests if \b GL_AMD_performance_monitor is supported.
+ * @return Returns \c true if \b GL_AMD_performance_monitor is supported, \c false otherwise.
  */
 GLE_API bool isGL_AMD_performance_monitor();
 
-/**
- * @brief void glGetPerfMonitorGroupsAMD( GLint *numGroups, GLsizei groupsSize, GLuint *groups );
- */
-GLE_API void glGetPerfMonitorGroupsAMD( GLint *numGroups, GLsizei groupsSize, GLuint *groups );
+
 
 /**
- * @brief void glGetPerfMonitorCountersAMD( GLuint group, GLint *numCounters, GLint *maxActiveCounters, GLsizei counterSize, GLuint *counters );
+ * @brief void glBeginPerfMonitorAMD(GLuint monitor)
  */
-GLE_API void glGetPerfMonitorCountersAMD( GLuint group, GLint *numCounters, GLint *maxActiveCounters, GLsizei counterSize, GLuint *counters );
+GLE_API void glBeginPerfMonitorAMD(GLuint monitor);
 
 /**
- * @brief void glGetPerfMonitorGroupStringAMD( GLuint group, GLsizei bufSize, GLsizei *length, GLchar *groupString );
+ * @brief void glDeletePerfMonitorsAMD(GLsizei n, GLuint *monitors)
  */
-GLE_API void glGetPerfMonitorGroupStringAMD( GLuint group, GLsizei bufSize, GLsizei *length, GLchar *groupString );
+GLE_API void glDeletePerfMonitorsAMD(GLsizei n, GLuint *monitors);
 
 /**
- * @brief void glGetPerfMonitorCounterStringAMD( GLuint group, GLuint counter, GLsizei bufSize, GLsizei *length, GLchar *counterString );
+ * @brief void glEndPerfMonitorAMD(GLuint monitor)
  */
-GLE_API void glGetPerfMonitorCounterStringAMD( GLuint group, GLuint counter, GLsizei bufSize, GLsizei *length, GLchar *counterString );
+GLE_API void glEndPerfMonitorAMD(GLuint monitor);
 
 /**
- * @brief void glGetPerfMonitorCounterInfoAMD( GLuint group, GLuint counter, GLenum pname, void *data );
+ * @brief void glGenPerfMonitorsAMD(GLsizei n, GLuint *monitors)
  */
-GLE_API void glGetPerfMonitorCounterInfoAMD( GLuint group, GLuint counter, GLenum pname, void *data );
+GLE_API void glGenPerfMonitorsAMD(GLsizei n, GLuint *monitors);
 
 /**
- * @brief void glGenPerfMonitorsAMD( GLsizei n, GLuint *monitors );
+ * @brief void glGetPerfMonitorCounterDataAMD(GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten)
  */
-GLE_API void glGenPerfMonitorsAMD( GLsizei n, GLuint *monitors );
+GLE_API void glGetPerfMonitorCounterDataAMD(GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten);
 
 /**
- * @brief void glDeletePerfMonitorsAMD( GLsizei n, GLuint *monitors );
+ * @brief void glGetPerfMonitorCounterInfoAMD(GLuint group, GLuint counter, GLenum pname, void *data)
  */
-GLE_API void glDeletePerfMonitorsAMD( GLsizei n, GLuint *monitors );
+GLE_API void glGetPerfMonitorCounterInfoAMD(GLuint group, GLuint counter, GLenum pname, void *data);
 
 /**
- * @brief void glSelectPerfMonitorCountersAMD( GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList );
+ * @brief void glGetPerfMonitorCounterStringAMD(GLuint group, GLuint counter, GLsizei bufSize, GLsizei *length, GLchar *counterString)
  */
-GLE_API void glSelectPerfMonitorCountersAMD( GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList );
+GLE_API void glGetPerfMonitorCounterStringAMD(GLuint group, GLuint counter, GLsizei bufSize, GLsizei *length, GLchar *counterString);
 
 /**
- * @brief void glBeginPerfMonitorAMD( GLuint monitor );
+ * @brief void glGetPerfMonitorCountersAMD(GLuint group, GLint *numCounters, GLint *maxActiveCounters, GLsizei counterSize, GLuint *counters)
  */
-GLE_API void glBeginPerfMonitorAMD( GLuint monitor );
+GLE_API void glGetPerfMonitorCountersAMD(GLuint group, GLint *numCounters, GLint *maxActiveCounters, GLsizei counterSize, GLuint *counters);
 
 /**
- * @brief void glEndPerfMonitorAMD( GLuint monitor );
+ * @brief void glGetPerfMonitorGroupStringAMD(GLuint group, GLsizei bufSize, GLsizei *length, GLchar *groupString)
  */
-GLE_API void glEndPerfMonitorAMD( GLuint monitor );
+GLE_API void glGetPerfMonitorGroupStringAMD(GLuint group, GLsizei bufSize, GLsizei *length, GLchar *groupString);
 
 /**
- * @brief void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten );
+ * @brief void glGetPerfMonitorGroupsAMD(GLint *numGroups, GLsizei groupsSize, GLuint *groups)
  */
-GLE_API void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten );
+GLE_API void glGetPerfMonitorGroupsAMD(GLint *numGroups, GLsizei groupsSize, GLuint *groups);
+
+/**
+ * @brief void glSelectPerfMonitorCountersAMD(GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList)
+ */
+GLE_API void glSelectPerfMonitorCountersAMD(GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList);
 
 //@}
+
+
 
 
 /**
@@ -2084,13 +2096,17 @@ GLE_API void glGetPerfMonitorCounterDataAMD( GLuint monitor, GLenum pname, GLsiz
  * @ingroup g_GL_AMD g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_AMD_seamless_cubemap_per_texture is supported.
- * @return Returns \c true if \b GL_AMD_seamless_cubemap_per_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_AMD_seamless_cubemap_per_texture is supported.
+ * @return Returns \c true if \b GL_AMD_seamless_cubemap_per_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_AMD_seamless_cubemap_per_texture();
 
+
 //@}
+
+
 
 
 /**
@@ -2100,13 +2116,17 @@ GLE_API bool isGL_AMD_seamless_cubemap_per_texture();
  * @ingroup g_GL_AMD g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_AMD_shader_stencil_export is supported.
- * @return Returns \c true if \b GL_AMD_shader_stencil_export is supported, false otherwise.
+ * @brief  Tests if \b GL_AMD_shader_stencil_export is supported.
+ * @return Returns \c true if \b GL_AMD_shader_stencil_export is supported, \c false otherwise.
  */
 GLE_API bool isGL_AMD_shader_stencil_export();
 
+
 //@}
+
+
 
 
 /**
@@ -2116,13 +2136,17 @@ GLE_API bool isGL_AMD_shader_stencil_export();
  * @ingroup g_GL_AMD g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_AMD_texture_texture4 is supported.
- * @return Returns \c true if \b GL_AMD_texture_texture4 is supported, false otherwise.
+ * @brief  Tests if \b GL_AMD_texture_texture4 is supported.
+ * @return Returns \c true if \b GL_AMD_texture_texture4 is supported, \c false otherwise.
  */
 GLE_API bool isGL_AMD_texture_texture4();
 
+
 //@}
+
+
 
 
 /**
@@ -2132,38 +2156,48 @@ GLE_API bool isGL_AMD_texture_texture4();
  * @ingroup g_GL_AMD g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_AMD_transform_feedback3_lines_triangles is supported.
- * @return Returns \c true if \b GL_AMD_transform_feedback3_lines_triangles is supported, false otherwise.
+ * @brief  Tests if \b GL_AMD_transform_feedback3_lines_triangles is supported.
+ * @return Returns \c true if \b GL_AMD_transform_feedback3_lines_triangles is supported, \c false otherwise.
  */
 GLE_API bool isGL_AMD_transform_feedback3_lines_triangles();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_AMD_vertex_shader_tesselator GL_AMD_vertex_shader_tesselator
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_AMD g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_AMD_vertex_shader_tesselator is supported.
- * @return Returns \c true if \b GL_AMD_vertex_shader_tesselator is supported, false otherwise.
+ * @brief  Tests if \b GL_AMD_vertex_shader_tesselator is supported.
+ * @return Returns \c true if \b GL_AMD_vertex_shader_tesselator is supported, \c false otherwise.
  */
 GLE_API bool isGL_AMD_vertex_shader_tesselator();
 
-/**
- * @brief void glTessellationFactorAMD( GLfloat factor );
- */
-GLE_API void glTessellationFactorAMD( GLfloat factor );
+
 
 /**
- * @brief void glTessellationModeAMD( GLenum mode );
+ * @brief void glTessellationFactorAMD(GLfloat factor)
  */
-GLE_API void glTessellationModeAMD( GLenum mode );
+GLE_API void glTessellationFactorAMD(GLfloat factor);
+
+/**
+ * @brief void glTessellationModeAMD(GLenum mode)
+ */
+GLE_API void glTessellationModeAMD(GLenum mode);
 
 //@}
+
+
 
 
 /**
@@ -2173,13 +2207,17 @@ GLE_API void glTessellationModeAMD( GLenum mode );
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_aux_depth_stencil is supported.
- * @return Returns \c true if \b GL_APPLE_aux_depth_stencil is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_aux_depth_stencil is supported.
+ * @return Returns \c true if \b GL_APPLE_aux_depth_stencil is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_aux_depth_stencil();
 
+
 //@}
+
+
 
 
 /**
@@ -2189,13 +2227,17 @@ GLE_API bool isGL_APPLE_aux_depth_stencil();
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_client_storage is supported.
- * @return Returns \c true if \b GL_APPLE_client_storage is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_client_storage is supported.
+ * @return Returns \c true if \b GL_APPLE_client_storage is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_client_storage();
 
+
 //@}
+
+
 
 
 /**
@@ -2205,38 +2247,43 @@ GLE_API bool isGL_APPLE_client_storage();
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_element_array is supported.
- * @return Returns \c true if \b GL_APPLE_element_array is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_element_array is supported.
+ * @return Returns \c true if \b GL_APPLE_element_array is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_element_array();
 
-/**
- * @brief void glElementPointerAPPLE( GLenum type, const GLvoid *pointer );
- */
-GLE_API void glElementPointerAPPLE( GLenum type, const GLvoid *pointer );
+
 
 /**
- * @brief void glDrawElementArrayAPPLE( GLenum mode, GLint first, GLsizei count );
+ * @brief void glDrawElementArrayAPPLE(GLenum mode, GLint first, GLsizei count)
  */
-GLE_API void glDrawElementArrayAPPLE( GLenum mode, GLint first, GLsizei count );
+GLE_API void glDrawElementArrayAPPLE(GLenum mode, GLint first, GLsizei count);
 
 /**
- * @brief void glDrawRangeElementArrayAPPLE( GLenum mode, GLuint start, GLuint end, GLint first, GLsizei count );
+ * @brief void glDrawRangeElementArrayAPPLE(GLenum mode, GLuint start, GLuint end, GLint first, GLsizei count)
  */
-GLE_API void glDrawRangeElementArrayAPPLE( GLenum mode, GLuint start, GLuint end, GLint first, GLsizei count );
+GLE_API void glDrawRangeElementArrayAPPLE(GLenum mode, GLuint start, GLuint end, GLint first, GLsizei count);
 
 /**
- * @brief void glMultiDrawElementArrayAPPLE( GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount );
+ * @brief void glElementPointerAPPLE(GLenum type, const GLvoid *pointer)
  */
-GLE_API void glMultiDrawElementArrayAPPLE( GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount );
+GLE_API void glElementPointerAPPLE(GLenum type, const GLvoid *pointer);
 
 /**
- * @brief void glMultiDrawRangeElementArrayAPPLE( GLenum mode, GLuint start, GLuint end, const GLint *first, const GLsizei *count, GLsizei primcount );
+ * @brief void glMultiDrawElementArrayAPPLE(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount)
  */
-GLE_API void glMultiDrawRangeElementArrayAPPLE( GLenum mode, GLuint start, GLuint end, const GLint *first, const GLsizei *count, GLsizei primcount );
+GLE_API void glMultiDrawElementArrayAPPLE(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount);
+
+/**
+ * @brief void glMultiDrawRangeElementArrayAPPLE(GLenum mode, GLuint start, GLuint end, const GLint *first, const GLsizei *count, GLsizei primcount)
+ */
+GLE_API void glMultiDrawRangeElementArrayAPPLE(GLenum mode, GLuint start, GLuint end, const GLint *first, const GLsizei *count, GLsizei primcount);
 
 //@}
+
+
 
 
 /**
@@ -2246,53 +2293,58 @@ GLE_API void glMultiDrawRangeElementArrayAPPLE( GLenum mode, GLuint start, GLuin
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_fence is supported.
- * @return Returns \c true if \b GL_APPLE_fence is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_fence is supported.
+ * @return Returns \c true if \b GL_APPLE_fence is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_fence();
 
-/**
- * @brief void glGenFencesAPPLE( GLsizei n, GLuint *fences );
- */
-GLE_API void glGenFencesAPPLE( GLsizei n, GLuint *fences );
+
 
 /**
- * @brief void glDeleteFencesAPPLE( GLsizei n, const GLuint *fences );
+ * @brief void glDeleteFencesAPPLE(GLsizei n, const GLuint *fences)
  */
-GLE_API void glDeleteFencesAPPLE( GLsizei n, const GLuint *fences );
+GLE_API void glDeleteFencesAPPLE(GLsizei n, const GLuint *fences);
 
 /**
- * @brief void glSetFenceAPPLE( GLuint fence );
+ * @brief void glFinishFenceAPPLE(GLuint fence)
  */
-GLE_API void glSetFenceAPPLE( GLuint fence );
+GLE_API void glFinishFenceAPPLE(GLuint fence);
 
 /**
- * @brief GLboolean glIsFenceAPPLE( GLuint fence );
+ * @brief void glFinishObjectAPPLE(GLenum object, GLint name)
  */
-GLE_API GLboolean glIsFenceAPPLE( GLuint fence );
+GLE_API void glFinishObjectAPPLE(GLenum object, GLint name);
 
 /**
- * @brief GLboolean glTestFenceAPPLE( GLuint fence );
+ * @brief void glGenFencesAPPLE(GLsizei n, GLuint *fences)
  */
-GLE_API GLboolean glTestFenceAPPLE( GLuint fence );
+GLE_API void glGenFencesAPPLE(GLsizei n, GLuint *fences);
 
 /**
- * @brief void glFinishFenceAPPLE( GLuint fence );
+ * @brief GLboolean glIsFenceAPPLE(GLuint fence)
  */
-GLE_API void glFinishFenceAPPLE( GLuint fence );
+GLE_API GLboolean glIsFenceAPPLE(GLuint fence);
 
 /**
- * @brief GLboolean glTestObjectAPPLE( GLenum object, GLuint name );
+ * @brief void glSetFenceAPPLE(GLuint fence)
  */
-GLE_API GLboolean glTestObjectAPPLE( GLenum object, GLuint name );
+GLE_API void glSetFenceAPPLE(GLuint fence);
 
 /**
- * @brief void glFinishObjectAPPLE( GLenum object, GLint name );
+ * @brief GLboolean glTestFenceAPPLE(GLuint fence)
  */
-GLE_API void glFinishObjectAPPLE( GLenum object, GLint name );
+GLE_API GLboolean glTestFenceAPPLE(GLuint fence);
+
+/**
+ * @brief GLboolean glTestObjectAPPLE(GLenum object, GLuint name)
+ */
+GLE_API GLboolean glTestObjectAPPLE(GLenum object, GLuint name);
 
 //@}
+
+
 
 
 /**
@@ -2302,13 +2354,17 @@ GLE_API void glFinishObjectAPPLE( GLenum object, GLint name );
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_float_pixels is supported.
- * @return Returns \c true if \b GL_APPLE_float_pixels is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_float_pixels is supported.
+ * @return Returns \c true if \b GL_APPLE_float_pixels is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_float_pixels();
 
+
 //@}
+
+
 
 
 /**
@@ -2318,23 +2374,28 @@ GLE_API bool isGL_APPLE_float_pixels();
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_flush_buffer_range is supported.
- * @return Returns \c true if \b GL_APPLE_flush_buffer_range is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_flush_buffer_range is supported.
+ * @return Returns \c true if \b GL_APPLE_flush_buffer_range is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_flush_buffer_range();
 
-/**
- * @brief void glBufferParameteriAPPLE( GLenum target, GLenum pname, GLint param );
- */
-GLE_API void glBufferParameteriAPPLE( GLenum target, GLenum pname, GLint param );
+
 
 /**
- * @brief void glFlushMappedBufferRangeAPPLE( GLenum target, GLintptr offset, GLsizeiptr size );
+ * @brief void glBufferParameteriAPPLE(GLenum target, GLenum pname, GLint param)
  */
-GLE_API void glFlushMappedBufferRangeAPPLE( GLenum target, GLintptr offset, GLsizeiptr size );
+GLE_API void glBufferParameteriAPPLE(GLenum target, GLenum pname, GLint param);
+
+/**
+ * @brief void glFlushMappedBufferRangeAPPLE(GLenum target, GLintptr offset, GLsizeiptr size)
+ */
+GLE_API void glFlushMappedBufferRangeAPPLE(GLenum target, GLintptr offset, GLsizeiptr size);
 
 //@}
+
+
 
 
 /**
@@ -2344,28 +2405,33 @@ GLE_API void glFlushMappedBufferRangeAPPLE( GLenum target, GLintptr offset, GLsi
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_object_purgeable is supported.
- * @return Returns \c true if \b GL_APPLE_object_purgeable is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_object_purgeable is supported.
+ * @return Returns \c true if \b GL_APPLE_object_purgeable is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_object_purgeable();
 
-/**
- * @brief GLenum glObjectPurgeableAPPLE( GLenum objectType, GLuint name, GLenum option );
- */
-GLE_API GLenum glObjectPurgeableAPPLE( GLenum objectType, GLuint name, GLenum option );
+
 
 /**
- * @brief GLenum glObjectUnpurgeableAPPLE( GLenum objectType, GLuint name, GLenum option );
+ * @brief void glGetObjectParameterivAPPLE(GLenum objectType, GLuint name, GLenum pname, GLint *params)
  */
-GLE_API GLenum glObjectUnpurgeableAPPLE( GLenum objectType, GLuint name, GLenum option );
+GLE_API void glGetObjectParameterivAPPLE(GLenum objectType, GLuint name, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetObjectParameterivAPPLE( GLenum objectType, GLuint name, GLenum pname, GLint *params );
+ * @brief GLenum glObjectPurgeableAPPLE(GLenum objectType, GLuint name, GLenum option)
  */
-GLE_API void glGetObjectParameterivAPPLE( GLenum objectType, GLuint name, GLenum pname, GLint *params );
+GLE_API GLenum glObjectPurgeableAPPLE(GLenum objectType, GLuint name, GLenum option);
+
+/**
+ * @brief GLenum glObjectUnpurgeableAPPLE(GLenum objectType, GLuint name, GLenum option)
+ */
+GLE_API GLenum glObjectUnpurgeableAPPLE(GLenum objectType, GLuint name, GLenum option);
 
 //@}
+
+
 
 
 /**
@@ -2375,13 +2441,17 @@ GLE_API void glGetObjectParameterivAPPLE( GLenum objectType, GLuint name, GLenum
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_rgb_422 is supported.
- * @return Returns \c true if \b GL_APPLE_rgb_422 is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_rgb_422 is supported.
+ * @return Returns \c true if \b GL_APPLE_rgb_422 is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_rgb_422();
 
+
 //@}
+
+
 
 
 /**
@@ -2391,13 +2461,17 @@ GLE_API bool isGL_APPLE_rgb_422();
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_row_bytes is supported.
- * @return Returns \c true if \b GL_APPLE_row_bytes is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_row_bytes is supported.
+ * @return Returns \c true if \b GL_APPLE_row_bytes is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_row_bytes();
 
+
 //@}
+
+
 
 
 /**
@@ -2407,13 +2481,17 @@ GLE_API bool isGL_APPLE_row_bytes();
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_specular_vector is supported.
- * @return Returns \c true if \b GL_APPLE_specular_vector is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_specular_vector is supported.
+ * @return Returns \c true if \b GL_APPLE_specular_vector is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_specular_vector();
 
+
 //@}
+
+
 
 
 /**
@@ -2423,23 +2501,28 @@ GLE_API bool isGL_APPLE_specular_vector();
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_texture_range is supported.
- * @return Returns \c true if \b GL_APPLE_texture_range is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_texture_range is supported.
+ * @return Returns \c true if \b GL_APPLE_texture_range is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_texture_range();
 
-/**
- * @brief void glTextureRangeAPPLE( GLenum target, GLsizei length, const GLvoid *pointer );
- */
-GLE_API void glTextureRangeAPPLE( GLenum target, GLsizei length, const GLvoid *pointer );
+
 
 /**
- * @brief void glGetTexParameterPointervAPPLE( GLenum target, GLenum pname, GLvoid* *params );
+ * @brief void glGetTexParameterPointervAPPLE(GLenum target, GLenum pname, GLvoid* *params)
  */
-GLE_API void glGetTexParameterPointervAPPLE( GLenum target, GLenum pname, GLvoid* *params );
+GLE_API void glGetTexParameterPointervAPPLE(GLenum target, GLenum pname, GLvoid* *params);
+
+/**
+ * @brief void glTextureRangeAPPLE(GLenum target, GLsizei length, const GLvoid *pointer)
+ */
+GLE_API void glTextureRangeAPPLE(GLenum target, GLsizei length, const GLvoid *pointer);
 
 //@}
+
+
 
 
 /**
@@ -2449,13 +2532,17 @@ GLE_API void glGetTexParameterPointervAPPLE( GLenum target, GLenum pname, GLvoid
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_transform_hint is supported.
- * @return Returns \c true if \b GL_APPLE_transform_hint is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_transform_hint is supported.
+ * @return Returns \c true if \b GL_APPLE_transform_hint is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_transform_hint();
 
+
 //@}
+
+
 
 
 /**
@@ -2465,33 +2552,38 @@ GLE_API bool isGL_APPLE_transform_hint();
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_vertex_array_object is supported.
- * @return Returns \c true if \b GL_APPLE_vertex_array_object is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_vertex_array_object is supported.
+ * @return Returns \c true if \b GL_APPLE_vertex_array_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_vertex_array_object();
 
-/**
- * @brief void glBindVertexArrayAPPLE( GLuint array );
- */
-GLE_API void glBindVertexArrayAPPLE( GLuint array );
+
 
 /**
- * @brief void glDeleteVertexArraysAPPLE( GLsizei n, const GLuint *arrays );
+ * @brief void glBindVertexArrayAPPLE(GLuint array)
  */
-GLE_API void glDeleteVertexArraysAPPLE( GLsizei n, const GLuint *arrays );
+GLE_API void glBindVertexArrayAPPLE(GLuint array);
 
 /**
- * @brief void glGenVertexArraysAPPLE( GLsizei n, GLuint *arrays );
+ * @brief void glDeleteVertexArraysAPPLE(GLsizei n, const GLuint *arrays)
  */
-GLE_API void glGenVertexArraysAPPLE( GLsizei n, GLuint *arrays );
+GLE_API void glDeleteVertexArraysAPPLE(GLsizei n, const GLuint *arrays);
 
 /**
- * @brief GLboolean glIsVertexArrayAPPLE( GLuint array );
+ * @brief void glGenVertexArraysAPPLE(GLsizei n, GLuint *arrays)
  */
-GLE_API GLboolean glIsVertexArrayAPPLE( GLuint array );
+GLE_API void glGenVertexArraysAPPLE(GLsizei n, GLuint *arrays);
+
+/**
+ * @brief GLboolean glIsVertexArrayAPPLE(GLuint array)
+ */
+GLE_API GLboolean glIsVertexArrayAPPLE(GLuint array);
 
 //@}
+
+
 
 
 /**
@@ -2501,28 +2593,33 @@ GLE_API GLboolean glIsVertexArrayAPPLE( GLuint array );
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_vertex_array_range is supported.
- * @return Returns \c true if \b GL_APPLE_vertex_array_range is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_vertex_array_range is supported.
+ * @return Returns \c true if \b GL_APPLE_vertex_array_range is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_vertex_array_range();
 
-/**
- * @brief void glVertexArrayRangeAPPLE( GLsizei length, GLvoid *pointer );
- */
-GLE_API void glVertexArrayRangeAPPLE( GLsizei length, GLvoid *pointer );
+
 
 /**
- * @brief void glFlushVertexArrayRangeAPPLE( GLsizei length, GLvoid *pointer );
+ * @brief void glFlushVertexArrayRangeAPPLE(GLsizei length, GLvoid *pointer)
  */
-GLE_API void glFlushVertexArrayRangeAPPLE( GLsizei length, GLvoid *pointer );
+GLE_API void glFlushVertexArrayRangeAPPLE(GLsizei length, GLvoid *pointer);
 
 /**
- * @brief void glVertexArrayParameteriAPPLE( GLenum pname, GLint param );
+ * @brief void glVertexArrayParameteriAPPLE(GLenum pname, GLint param)
  */
-GLE_API void glVertexArrayParameteriAPPLE( GLenum pname, GLint param );
+GLE_API void glVertexArrayParameteriAPPLE(GLenum pname, GLint param);
+
+/**
+ * @brief void glVertexArrayRangeAPPLE(GLsizei length, GLvoid *pointer)
+ */
+GLE_API void glVertexArrayRangeAPPLE(GLsizei length, GLvoid *pointer);
 
 //@}
+
+
 
 
 /**
@@ -2532,48 +2629,53 @@ GLE_API void glVertexArrayParameteriAPPLE( GLenum pname, GLint param );
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_vertex_program_evaluators is supported.
- * @return Returns \c true if \b GL_APPLE_vertex_program_evaluators is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_vertex_program_evaluators is supported.
+ * @return Returns \c true if \b GL_APPLE_vertex_program_evaluators is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_vertex_program_evaluators();
 
-/**
- * @brief void glEnableVertexAttribAPPLE( GLuint index, GLenum pname );
- */
-GLE_API void glEnableVertexAttribAPPLE( GLuint index, GLenum pname );
+
 
 /**
- * @brief void glDisableVertexAttribAPPLE( GLuint index, GLenum pname );
+ * @brief void glDisableVertexAttribAPPLE(GLuint index, GLenum pname)
  */
-GLE_API void glDisableVertexAttribAPPLE( GLuint index, GLenum pname );
+GLE_API void glDisableVertexAttribAPPLE(GLuint index, GLenum pname);
 
 /**
- * @brief GLboolean glIsVertexAttribEnabledAPPLE( GLuint index, GLenum pname );
+ * @brief void glEnableVertexAttribAPPLE(GLuint index, GLenum pname)
  */
-GLE_API GLboolean glIsVertexAttribEnabledAPPLE( GLuint index, GLenum pname );
+GLE_API void glEnableVertexAttribAPPLE(GLuint index, GLenum pname);
 
 /**
- * @brief void glMapVertexAttrib1dAPPLE( GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint stride, GLint order, const GLdouble *points );
+ * @brief GLboolean glIsVertexAttribEnabledAPPLE(GLuint index, GLenum pname)
  */
-GLE_API void glMapVertexAttrib1dAPPLE( GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint stride, GLint order, const GLdouble *points );
+GLE_API GLboolean glIsVertexAttribEnabledAPPLE(GLuint index, GLenum pname);
 
 /**
- * @brief void glMapVertexAttrib1fAPPLE( GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint stride, GLint order, const GLfloat *points );
+ * @brief void glMapVertexAttrib1dAPPLE(GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint stride, GLint order, const GLdouble *points)
  */
-GLE_API void glMapVertexAttrib1fAPPLE( GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint stride, GLint order, const GLfloat *points );
+GLE_API void glMapVertexAttrib1dAPPLE(GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint stride, GLint order, const GLdouble *points);
 
 /**
- * @brief void glMapVertexAttrib2dAPPLE( GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, const GLdouble *points );
+ * @brief void glMapVertexAttrib1fAPPLE(GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint stride, GLint order, const GLfloat *points)
  */
-GLE_API void glMapVertexAttrib2dAPPLE( GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, const GLdouble *points );
+GLE_API void glMapVertexAttrib1fAPPLE(GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint stride, GLint order, const GLfloat *points);
 
 /**
- * @brief void glMapVertexAttrib2fAPPLE( GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, const GLfloat *points );
+ * @brief void glMapVertexAttrib2dAPPLE(GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, const GLdouble *points)
  */
-GLE_API void glMapVertexAttrib2fAPPLE( GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, const GLfloat *points );
+GLE_API void glMapVertexAttrib2dAPPLE(GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, const GLdouble *points);
+
+/**
+ * @brief void glMapVertexAttrib2fAPPLE(GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, const GLfloat *points)
+ */
+GLE_API void glMapVertexAttrib2fAPPLE(GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, const GLfloat *points);
 
 //@}
+
+
 
 
 /**
@@ -2583,13 +2685,17 @@ GLE_API void glMapVertexAttrib2fAPPLE( GLuint index, GLuint size, GLfloat u1, GL
  * @ingroup g_GL_APPLE g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_APPLE_ycbcr_422 is supported.
- * @return Returns \c true if \b GL_APPLE_ycbcr_422 is supported, false otherwise.
+ * @brief  Tests if \b GL_APPLE_ycbcr_422 is supported.
+ * @return Returns \c true if \b GL_APPLE_ycbcr_422 is supported, \c false otherwise.
  */
 GLE_API bool isGL_APPLE_ycbcr_422();
 
+
 //@}
+
+
 
 
 /**
@@ -2599,23 +2705,28 @@ GLE_API bool isGL_APPLE_ycbcr_422();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_blend_func_extended is supported.
- * @return Returns \c true if \b GL_ARB_blend_func_extended is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_blend_func_extended is supported.
+ * @return Returns \c true if \b GL_ARB_blend_func_extended is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_blend_func_extended();
 
-/**
- * @brief void glBindFragDataLocationIndexed( GLuint program, GLuint colorNumber, GLuint index, const GLchar *name );
- */
-GLE_API void glBindFragDataLocationIndexed( GLuint program, GLuint colorNumber, GLuint index, const GLchar *name );
+
 
 /**
- * @brief GLint glGetFragDataIndex( GLuint program, const GLchar *name );
+ * @brief void glBindFragDataLocationIndexed(GLuint program, GLuint colorNumber, GLuint index, const GLchar *name)
  */
-GLE_API GLint glGetFragDataIndex( GLuint program, const GLchar *name );
+GLE_API void glBindFragDataLocationIndexed(GLuint program, GLuint colorNumber, GLuint index, const GLchar *name);
+
+/**
+ * @brief GLint glGetFragDataIndex(GLuint program, const GLchar *name)
+ */
+GLE_API GLint glGetFragDataIndex(GLuint program, const GLchar *name);
 
 //@}
+
+
 
 
 /**
@@ -2625,18 +2736,23 @@ GLE_API GLint glGetFragDataIndex( GLuint program, const GLchar *name );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_color_buffer_float is supported.
- * @return Returns \c true if \b GL_ARB_color_buffer_float is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_color_buffer_float is supported.
+ * @return Returns \c true if \b GL_ARB_color_buffer_float is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_color_buffer_float();
 
+
+
 /**
- * @brief void glClampColorARB( GLenum target, GLenum clamp );
+ * @brief void glClampColorARB(GLenum target, GLenum clamp)
  */
-GLE_API void glClampColorARB( GLenum target, GLenum clamp );
+GLE_API void glClampColorARB(GLenum target, GLenum clamp);
 
 //@}
+
+
 
 
 /**
@@ -2646,13 +2762,17 @@ GLE_API void glClampColorARB( GLenum target, GLenum clamp );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_compatibility is supported.
- * @return Returns \c true if \b GL_ARB_compatibility is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_compatibility is supported.
+ * @return Returns \c true if \b GL_ARB_compatibility is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_compatibility();
 
+
 //@}
+
+
 
 
 /**
@@ -2662,18 +2782,23 @@ GLE_API bool isGL_ARB_compatibility();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_copy_buffer is supported.
- * @return Returns \c true if \b GL_ARB_copy_buffer is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_copy_buffer is supported.
+ * @return Returns \c true if \b GL_ARB_copy_buffer is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_copy_buffer();
 
+
+
 /**
- * @brief void glCopyBufferSubData( GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size );
+ * @brief void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size)
  */
-GLE_API void glCopyBufferSubData( GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size );
+GLE_API void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size);
 
 //@}
+
+
 
 
 /**
@@ -2683,13 +2808,17 @@ GLE_API void glCopyBufferSubData( GLenum readTarget, GLenum writeTarget, GLintpt
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_depth_buffer_float is supported.
- * @return Returns \c true if \b GL_ARB_depth_buffer_float is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_depth_buffer_float is supported.
+ * @return Returns \c true if \b GL_ARB_depth_buffer_float is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_depth_buffer_float();
 
+
 //@}
+
+
 
 
 /**
@@ -2699,13 +2828,17 @@ GLE_API bool isGL_ARB_depth_buffer_float();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_depth_clamp is supported.
- * @return Returns \c true if \b GL_ARB_depth_clamp is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_depth_clamp is supported.
+ * @return Returns \c true if \b GL_ARB_depth_clamp is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_depth_clamp();
 
+
 //@}
+
+
 
 
 /**
@@ -2715,13 +2848,17 @@ GLE_API bool isGL_ARB_depth_clamp();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_depth_texture is supported.
- * @return Returns \c true if \b GL_ARB_depth_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_depth_texture is supported.
+ * @return Returns \c true if \b GL_ARB_depth_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_depth_texture();
 
+
 //@}
+
+
 
 
 /**
@@ -2731,18 +2868,23 @@ GLE_API bool isGL_ARB_depth_texture();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_draw_buffers is supported.
- * @return Returns \c true if \b GL_ARB_draw_buffers is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_draw_buffers is supported.
+ * @return Returns \c true if \b GL_ARB_draw_buffers is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_draw_buffers();
 
+
+
 /**
- * @brief void glDrawBuffersARB( GLsizei n, const GLenum *bufs );
+ * @brief void glDrawBuffersARB(GLsizei n, const GLenum *bufs)
  */
-GLE_API void glDrawBuffersARB( GLsizei n, const GLenum *bufs );
+GLE_API void glDrawBuffersARB(GLsizei n, const GLenum *bufs);
 
 //@}
+
+
 
 
 /**
@@ -2752,33 +2894,38 @@ GLE_API void glDrawBuffersARB( GLsizei n, const GLenum *bufs );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_draw_buffers_blend is supported.
- * @return Returns \c true if \b GL_ARB_draw_buffers_blend is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_draw_buffers_blend is supported.
+ * @return Returns \c true if \b GL_ARB_draw_buffers_blend is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_draw_buffers_blend();
 
-/**
- * @brief void glBlendEquationi( GLuint buf, GLenum mode );
- */
-GLE_API void glBlendEquationi( GLuint buf, GLenum mode );
+
 
 /**
- * @brief void glBlendEquationSeparatei( GLuint buf, GLenum modeRGB, GLenum modeAlpha );
+ * @brief void glBlendEquationSeparatei(GLuint buf, GLenum modeRGB, GLenum modeAlpha)
  */
-GLE_API void glBlendEquationSeparatei( GLuint buf, GLenum modeRGB, GLenum modeAlpha );
+GLE_API void glBlendEquationSeparatei(GLuint buf, GLenum modeRGB, GLenum modeAlpha);
 
 /**
- * @brief void glBlendFunci( GLuint buf, GLenum src, GLenum dst );
+ * @brief void glBlendEquationi(GLuint buf, GLenum mode)
  */
-GLE_API void glBlendFunci( GLuint buf, GLenum src, GLenum dst );
+GLE_API void glBlendEquationi(GLuint buf, GLenum mode);
 
 /**
- * @brief void glBlendFuncSeparatei( GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha );
+ * @brief void glBlendFuncSeparatei(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
  */
-GLE_API void glBlendFuncSeparatei( GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha );
+GLE_API void glBlendFuncSeparatei(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
+
+/**
+ * @brief void glBlendFunci(GLuint buf, GLenum src, GLenum dst)
+ */
+GLE_API void glBlendFunci(GLuint buf, GLenum src, GLenum dst);
 
 //@}
+
+
 
 
 /**
@@ -2788,33 +2935,38 @@ GLE_API void glBlendFuncSeparatei( GLuint buf, GLenum srcRGB, GLenum dstRGB, GLe
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_draw_elements_base_vertex is supported.
- * @return Returns \c true if \b GL_ARB_draw_elements_base_vertex is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_draw_elements_base_vertex is supported.
+ * @return Returns \c true if \b GL_ARB_draw_elements_base_vertex is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_draw_elements_base_vertex();
 
-/**
- * @brief void glDrawElementsBaseVertex( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex );
- */
-GLE_API void glDrawElementsBaseVertex( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex );
+
 
 /**
- * @brief void glDrawRangeElementsBaseVertex( GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex );
+ * @brief void glDrawElementsBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex)
  */
-GLE_API void glDrawRangeElementsBaseVertex( GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex );
+GLE_API void glDrawElementsBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex);
 
 /**
- * @brief void glDrawElementsInstancedBaseVertex( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount, GLint basevertex );
+ * @brief void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount, GLint basevertex)
  */
-GLE_API void glDrawElementsInstancedBaseVertex( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount, GLint basevertex );
+GLE_API void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount, GLint basevertex);
 
 /**
- * @brief void glMultiDrawElementsBaseVertex( GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount, const GLint *basevertex );
+ * @brief void glDrawRangeElementsBaseVertex(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex)
  */
-GLE_API void glMultiDrawElementsBaseVertex( GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount, const GLint *basevertex );
+GLE_API void glDrawRangeElementsBaseVertex(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex);
+
+/**
+ * @brief void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount, const GLint *basevertex)
+ */
+GLE_API void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount, const GLint *basevertex);
 
 //@}
+
+
 
 
 /**
@@ -2824,23 +2976,28 @@ GLE_API void glMultiDrawElementsBaseVertex( GLenum mode, const GLsizei *count, G
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_draw_indirect is supported.
- * @return Returns \c true if \b GL_ARB_draw_indirect is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_draw_indirect is supported.
+ * @return Returns \c true if \b GL_ARB_draw_indirect is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_draw_indirect();
 
-/**
- * @brief void glDrawArraysIndirect( GLenum mode, const GLvoid *indirect );
- */
-GLE_API void glDrawArraysIndirect( GLenum mode, const GLvoid *indirect );
+
 
 /**
- * @brief void glDrawElementsIndirect( GLenum mode, GLenum type, const GLvoid *indirect );
+ * @brief void glDrawArraysIndirect(GLenum mode, const GLvoid *indirect)
  */
-GLE_API void glDrawElementsIndirect( GLenum mode, GLenum type, const GLvoid *indirect );
+GLE_API void glDrawArraysIndirect(GLenum mode, const GLvoid *indirect);
+
+/**
+ * @brief void glDrawElementsIndirect(GLenum mode, GLenum type, const GLvoid *indirect)
+ */
+GLE_API void glDrawElementsIndirect(GLenum mode, GLenum type, const GLvoid *indirect);
 
 //@}
+
+
 
 
 /**
@@ -2850,23 +3007,28 @@ GLE_API void glDrawElementsIndirect( GLenum mode, GLenum type, const GLvoid *ind
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_draw_instanced is supported.
- * @return Returns \c true if \b GL_ARB_draw_instanced is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_draw_instanced is supported.
+ * @return Returns \c true if \b GL_ARB_draw_instanced is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_draw_instanced();
 
-/**
- * @brief void glDrawArraysInstancedARB( GLenum mode, GLint first, GLsizei count, GLsizei primcount );
- */
-GLE_API void glDrawArraysInstancedARB( GLenum mode, GLint first, GLsizei count, GLsizei primcount );
+
 
 /**
- * @brief void glDrawElementsInstancedARB( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount );
+ * @brief void glDrawArraysInstancedARB(GLenum mode, GLint first, GLsizei count, GLsizei primcount)
  */
-GLE_API void glDrawElementsInstancedARB( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount );
+GLE_API void glDrawArraysInstancedARB(GLenum mode, GLint first, GLsizei count, GLsizei primcount);
+
+/**
+ * @brief void glDrawElementsInstancedARB(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount)
+ */
+GLE_API void glDrawElementsInstancedARB(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount);
 
 //@}
+
+
 
 
 /**
@@ -2876,13 +3038,17 @@ GLE_API void glDrawElementsInstancedARB( GLenum mode, GLsizei count, GLenum type
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_explicit_attrib_location is supported.
- * @return Returns \c true if \b GL_ARB_explicit_attrib_location is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_explicit_attrib_location is supported.
+ * @return Returns \c true if \b GL_ARB_explicit_attrib_location is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_explicit_attrib_location();
 
+
 //@}
+
+
 
 
 /**
@@ -2892,13 +3058,17 @@ GLE_API bool isGL_ARB_explicit_attrib_location();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_fragment_coord_conventions is supported.
- * @return Returns \c true if \b GL_ARB_fragment_coord_conventions is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_fragment_coord_conventions is supported.
+ * @return Returns \c true if \b GL_ARB_fragment_coord_conventions is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_fragment_coord_conventions();
 
+
 //@}
+
+
 
 
 /**
@@ -2908,13 +3078,17 @@ GLE_API bool isGL_ARB_fragment_coord_conventions();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_fragment_program is supported.
- * @return Returns \c true if \b GL_ARB_fragment_program is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_fragment_program is supported.
+ * @return Returns \c true if \b GL_ARB_fragment_program is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_fragment_program();
 
+
 //@}
+
+
 
 
 /**
@@ -2924,13 +3098,17 @@ GLE_API bool isGL_ARB_fragment_program();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_fragment_program_shadow is supported.
- * @return Returns \c true if \b GL_ARB_fragment_program_shadow is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_fragment_program_shadow is supported.
+ * @return Returns \c true if \b GL_ARB_fragment_program_shadow is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_fragment_program_shadow();
 
+
 //@}
+
+
 
 
 /**
@@ -2940,13 +3118,17 @@ GLE_API bool isGL_ARB_fragment_program_shadow();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_fragment_shader is supported.
- * @return Returns \c true if \b GL_ARB_fragment_shader is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_fragment_shader is supported.
+ * @return Returns \c true if \b GL_ARB_fragment_shader is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_fragment_shader();
 
+
 //@}
+
+
 
 
 /**
@@ -2956,128 +3138,138 @@ GLE_API bool isGL_ARB_fragment_shader();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_framebuffer_object is supported.
- * @return Returns \c true if \b GL_ARB_framebuffer_object is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_framebuffer_object is supported.
+ * @return Returns \c true if \b GL_ARB_framebuffer_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_framebuffer_object();
 
-/**
- * @brief GLboolean glIsRenderbuffer( GLuint renderbuffer );
- */
-GLE_API GLboolean glIsRenderbuffer( GLuint renderbuffer );
+
 
 /**
- * @brief void glBindRenderbuffer( GLenum target, GLuint renderbuffer );
+ * @brief void glBindFramebuffer(GLenum target, GLuint framebuffer)
  */
-GLE_API void glBindRenderbuffer( GLenum target, GLuint renderbuffer );
+GLE_API void glBindFramebuffer(GLenum target, GLuint framebuffer);
 
 /**
- * @brief void glDeleteRenderbuffers( GLsizei n, const GLuint *renderbuffers );
+ * @brief void glBindRenderbuffer(GLenum target, GLuint renderbuffer)
  */
-GLE_API void glDeleteRenderbuffers( GLsizei n, const GLuint *renderbuffers );
+GLE_API void glBindRenderbuffer(GLenum target, GLuint renderbuffer);
 
 /**
- * @brief void glGenRenderbuffers( GLsizei n, GLuint *renderbuffers );
+ * @brief void glBlitFramebuffer(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter)
  */
-GLE_API void glGenRenderbuffers( GLsizei n, GLuint *renderbuffers );
+GLE_API void glBlitFramebuffer(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
 
 /**
- * @brief void glRenderbufferStorage( GLenum target, GLenum internalformat, GLsizei width, GLsizei height );
+ * @brief GLenum glCheckFramebufferStatus(GLenum target)
  */
-GLE_API void glRenderbufferStorage( GLenum target, GLenum internalformat, GLsizei width, GLsizei height );
+GLE_API GLenum glCheckFramebufferStatus(GLenum target);
 
 /**
- * @brief void glGetRenderbufferParameteriv( GLenum target, GLenum pname, GLint *params );
+ * @brief void glDeleteFramebuffers(GLsizei n, const GLuint *framebuffers)
  */
-GLE_API void glGetRenderbufferParameteriv( GLenum target, GLenum pname, GLint *params );
+GLE_API void glDeleteFramebuffers(GLsizei n, const GLuint *framebuffers);
 
 /**
- * @brief GLboolean glIsFramebuffer( GLuint framebuffer );
+ * @brief void glDeleteRenderbuffers(GLsizei n, const GLuint *renderbuffers)
  */
-GLE_API GLboolean glIsFramebuffer( GLuint framebuffer );
+GLE_API void glDeleteRenderbuffers(GLsizei n, const GLuint *renderbuffers);
 
 /**
- * @brief void glBindFramebuffer( GLenum target, GLuint framebuffer );
+ * @brief void glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer)
  */
-GLE_API void glBindFramebuffer( GLenum target, GLuint framebuffer );
+GLE_API void glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer);
 
 /**
- * @brief void glDeleteFramebuffers( GLsizei n, const GLuint *framebuffers );
+ * @brief void glFramebufferTexture1D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level)
  */
-GLE_API void glDeleteFramebuffers( GLsizei n, const GLuint *framebuffers );
+GLE_API void glFramebufferTexture1D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
 
 /**
- * @brief void glGenFramebuffers( GLsizei n, GLuint *framebuffers );
+ * @brief void glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level)
  */
-GLE_API void glGenFramebuffers( GLsizei n, GLuint *framebuffers );
+GLE_API void glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
 
 /**
- * @brief GLenum glCheckFramebufferStatus( GLenum target );
+ * @brief void glFramebufferTexture3D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset)
  */
-GLE_API GLenum glCheckFramebufferStatus( GLenum target );
+GLE_API void glFramebufferTexture3D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset);
 
 /**
- * @brief void glFramebufferTexture1D( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level );
+ * @brief void glFramebufferTextureLayer(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer)
  */
-GLE_API void glFramebufferTexture1D( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level );
+GLE_API void glFramebufferTextureLayer(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer);
 
 /**
- * @brief void glFramebufferTexture2D( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level );
+ * @brief void glGenFramebuffers(GLsizei n, GLuint *framebuffers)
  */
-GLE_API void glFramebufferTexture2D( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level );
+GLE_API void glGenFramebuffers(GLsizei n, GLuint *framebuffers);
 
 /**
- * @brief void glFramebufferTexture3D( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset );
+ * @brief void glGenRenderbuffers(GLsizei n, GLuint *renderbuffers)
  */
-GLE_API void glFramebufferTexture3D( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset );
+GLE_API void glGenRenderbuffers(GLsizei n, GLuint *renderbuffers);
 
 /**
- * @brief void glFramebufferRenderbuffer( GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer );
+ * @brief void glGenerateMipmap(GLenum target)
  */
-GLE_API void glFramebufferRenderbuffer( GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer );
+GLE_API void glGenerateMipmap(GLenum target);
 
 /**
- * @brief void glGetFramebufferAttachmentParameteriv( GLenum target, GLenum attachment, GLenum pname, GLint *params );
+ * @brief void glGetFramebufferAttachmentParameteriv(GLenum target, GLenum attachment, GLenum pname, GLint *params)
  */
-GLE_API void glGetFramebufferAttachmentParameteriv( GLenum target, GLenum attachment, GLenum pname, GLint *params );
+GLE_API void glGetFramebufferAttachmentParameteriv(GLenum target, GLenum attachment, GLenum pname, GLint *params);
 
 /**
- * @brief void glGenerateMipmap( GLenum target );
+ * @brief void glGetRenderbufferParameteriv(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glGenerateMipmap( GLenum target );
+GLE_API void glGetRenderbufferParameteriv(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glBlitFramebuffer( GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter );
+ * @brief GLboolean glIsFramebuffer(GLuint framebuffer)
  */
-GLE_API void glBlitFramebuffer( GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter );
+GLE_API GLboolean glIsFramebuffer(GLuint framebuffer);
 
 /**
- * @brief void glRenderbufferStorageMultisample( GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height );
+ * @brief GLboolean glIsRenderbuffer(GLuint renderbuffer)
  */
-GLE_API void glRenderbufferStorageMultisample( GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height );
+GLE_API GLboolean glIsRenderbuffer(GLuint renderbuffer);
 
 /**
- * @brief void glFramebufferTextureLayer( GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer );
+ * @brief void glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height)
  */
-GLE_API void glFramebufferTextureLayer( GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer );
+GLE_API void glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height);
+
+/**
+ * @brief void glRenderbufferStorageMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height)
+ */
+GLE_API void glRenderbufferStorageMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
 
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_ARB_framebuffer_object_DEPRECATED GL_ARB_framebuffer_object_DEPRECATED
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_framebuffer_object_DEPRECATED is supported.
- * @return Returns \c true if \b GL_ARB_framebuffer_object_DEPRECATED is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_framebuffer_object_DEPRECATED is supported.
+ * @return Returns \c true if \b GL_ARB_framebuffer_object_DEPRECATED is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_framebuffer_object_DEPRECATED();
 
+
 //@}
+
+
 
 
 /**
@@ -3087,13 +3279,17 @@ GLE_API bool isGL_ARB_framebuffer_object_DEPRECATED();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_framebuffer_sRGB is supported.
- * @return Returns \c true if \b GL_ARB_framebuffer_sRGB is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_framebuffer_sRGB is supported.
+ * @return Returns \c true if \b GL_ARB_framebuffer_sRGB is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_framebuffer_sRGB();
 
+
 //@}
+
+
 
 
 /**
@@ -3103,33 +3299,38 @@ GLE_API bool isGL_ARB_framebuffer_sRGB();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_geometry_shader4 is supported.
- * @return Returns \c true if \b GL_ARB_geometry_shader4 is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_geometry_shader4 is supported.
+ * @return Returns \c true if \b GL_ARB_geometry_shader4 is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_geometry_shader4();
 
-/**
- * @brief void glProgramParameteriARB( GLuint program, GLenum pname, GLint value );
- */
-GLE_API void glProgramParameteriARB( GLuint program, GLenum pname, GLint value );
+
 
 /**
- * @brief void glFramebufferTextureARB( GLenum target, GLenum attachment, GLuint texture, GLint level );
+ * @brief void glFramebufferTextureARB(GLenum target, GLenum attachment, GLuint texture, GLint level)
  */
-GLE_API void glFramebufferTextureARB( GLenum target, GLenum attachment, GLuint texture, GLint level );
+GLE_API void glFramebufferTextureARB(GLenum target, GLenum attachment, GLuint texture, GLint level);
 
 /**
- * @brief void glFramebufferTextureLayerARB( GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer );
+ * @brief void glFramebufferTextureFaceARB(GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face)
  */
-GLE_API void glFramebufferTextureLayerARB( GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer );
+GLE_API void glFramebufferTextureFaceARB(GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face);
 
 /**
- * @brief void glFramebufferTextureFaceARB( GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face );
+ * @brief void glFramebufferTextureLayerARB(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer)
  */
-GLE_API void glFramebufferTextureFaceARB( GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face );
+GLE_API void glFramebufferTextureLayerARB(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer);
+
+/**
+ * @brief void glProgramParameteriARB(GLuint program, GLenum pname, GLint value)
+ */
+GLE_API void glProgramParameteriARB(GLuint program, GLenum pname, GLint value);
 
 //@}
+
+
 
 
 /**
@@ -3139,13 +3340,17 @@ GLE_API void glFramebufferTextureFaceARB( GLenum target, GLenum attachment, GLui
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_gpu_shader5 is supported.
- * @return Returns \c true if \b GL_ARB_gpu_shader5 is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_gpu_shader5 is supported.
+ * @return Returns \c true if \b GL_ARB_gpu_shader5 is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_gpu_shader5();
 
+
 //@}
+
+
 
 
 /**
@@ -3155,188 +3360,193 @@ GLE_API bool isGL_ARB_gpu_shader5();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_gpu_shader_fp64 is supported.
- * @return Returns \c true if \b GL_ARB_gpu_shader_fp64 is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_gpu_shader_fp64 is supported.
+ * @return Returns \c true if \b GL_ARB_gpu_shader_fp64 is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_gpu_shader_fp64();
 
-/**
- * @brief void glUniform1d( GLint location, GLdouble x );
- */
-GLE_API void glUniform1d( GLint location, GLdouble x );
+
 
 /**
- * @brief void glUniform2d( GLint location, GLdouble x, GLdouble y );
+ * @brief void glGetUniformdv(GLuint program, GLint location, GLdouble *params)
  */
-GLE_API void glUniform2d( GLint location, GLdouble x, GLdouble y );
+GLE_API void glGetUniformdv(GLuint program, GLint location, GLdouble *params);
 
 /**
- * @brief void glUniform3d( GLint location, GLdouble x, GLdouble y, GLdouble z );
+ * @brief void glProgramUniform1dEXT(GLuint program, GLint location, GLdouble x)
  */
-GLE_API void glUniform3d( GLint location, GLdouble x, GLdouble y, GLdouble z );
+GLE_API void glProgramUniform1dEXT(GLuint program, GLint location, GLdouble x);
 
 /**
- * @brief void glUniform4d( GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+ * @brief void glProgramUniform1dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
  */
-GLE_API void glUniform4d( GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+GLE_API void glProgramUniform1dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value);
 
 /**
- * @brief void glUniform1dv( GLint location, GLsizei count, const GLdouble *value );
+ * @brief void glProgramUniform2dEXT(GLuint program, GLint location, GLdouble x, GLdouble y)
  */
-GLE_API void glUniform1dv( GLint location, GLsizei count, const GLdouble *value );
+GLE_API void glProgramUniform2dEXT(GLuint program, GLint location, GLdouble x, GLdouble y);
 
 /**
- * @brief void glUniform2dv( GLint location, GLsizei count, const GLdouble *value );
+ * @brief void glProgramUniform2dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
  */
-GLE_API void glUniform2dv( GLint location, GLsizei count, const GLdouble *value );
+GLE_API void glProgramUniform2dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value);
 
 /**
- * @brief void glUniform3dv( GLint location, GLsizei count, const GLdouble *value );
+ * @brief void glProgramUniform3dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z)
  */
-GLE_API void glUniform3dv( GLint location, GLsizei count, const GLdouble *value );
+GLE_API void glProgramUniform3dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z);
 
 /**
- * @brief void glUniform4dv( GLint location, GLsizei count, const GLdouble *value );
+ * @brief void glProgramUniform3dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
  */
-GLE_API void glUniform4dv( GLint location, GLsizei count, const GLdouble *value );
+GLE_API void glProgramUniform3dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value);
 
 /**
- * @brief void glUniformMatrix2dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glProgramUniform4dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
  */
-GLE_API void glUniformMatrix2dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glProgramUniform4dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 
 /**
- * @brief void glUniformMatrix3dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glProgramUniform4dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
  */
-GLE_API void glUniformMatrix3dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glProgramUniform4dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value);
 
 /**
- * @brief void glUniformMatrix4dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glProgramUniformMatrix2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glUniformMatrix4dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glProgramUniformMatrix2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glUniformMatrix2x3dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glProgramUniformMatrix2x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glUniformMatrix2x3dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glProgramUniformMatrix2x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glUniformMatrix2x4dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glProgramUniformMatrix2x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glUniformMatrix2x4dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glProgramUniformMatrix2x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glUniformMatrix3x2dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glProgramUniformMatrix3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glUniformMatrix3x2dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glProgramUniformMatrix3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glUniformMatrix3x4dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glProgramUniformMatrix3x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glUniformMatrix3x4dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glProgramUniformMatrix3x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glUniformMatrix4x2dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glProgramUniformMatrix3x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glUniformMatrix4x2dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glProgramUniformMatrix3x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glUniformMatrix4x3dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glProgramUniformMatrix4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glUniformMatrix4x3dv( GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glProgramUniformMatrix4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glGetUniformdv( GLuint program, GLint location, GLdouble *params );
+ * @brief void glProgramUniformMatrix4x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glGetUniformdv( GLuint program, GLint location, GLdouble *params );
+GLE_API void glProgramUniformMatrix4x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glProgramUniform1dEXT( GLuint program, GLint location, GLdouble x );
+ * @brief void glProgramUniformMatrix4x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glProgramUniform1dEXT( GLuint program, GLint location, GLdouble x );
+GLE_API void glProgramUniformMatrix4x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glProgramUniform2dEXT( GLuint program, GLint location, GLdouble x, GLdouble y );
+ * @brief void glUniform1d(GLint location, GLdouble x)
  */
-GLE_API void glProgramUniform2dEXT( GLuint program, GLint location, GLdouble x, GLdouble y );
+GLE_API void glUniform1d(GLint location, GLdouble x);
 
 /**
- * @brief void glProgramUniform3dEXT( GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z );
+ * @brief void glUniform1dv(GLint location, GLsizei count, const GLdouble *value)
  */
-GLE_API void glProgramUniform3dEXT( GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z );
+GLE_API void glUniform1dv(GLint location, GLsizei count, const GLdouble *value);
 
 /**
- * @brief void glProgramUniform4dEXT( GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+ * @brief void glUniform2d(GLint location, GLdouble x, GLdouble y)
  */
-GLE_API void glProgramUniform4dEXT( GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+GLE_API void glUniform2d(GLint location, GLdouble x, GLdouble y);
 
 /**
- * @brief void glProgramUniform1dvEXT( GLuint program, GLint location, GLsizei count, const GLdouble *value );
+ * @brief void glUniform2dv(GLint location, GLsizei count, const GLdouble *value)
  */
-GLE_API void glProgramUniform1dvEXT( GLuint program, GLint location, GLsizei count, const GLdouble *value );
+GLE_API void glUniform2dv(GLint location, GLsizei count, const GLdouble *value);
 
 /**
- * @brief void glProgramUniform2dvEXT( GLuint program, GLint location, GLsizei count, const GLdouble *value );
+ * @brief void glUniform3d(GLint location, GLdouble x, GLdouble y, GLdouble z)
  */
-GLE_API void glProgramUniform2dvEXT( GLuint program, GLint location, GLsizei count, const GLdouble *value );
+GLE_API void glUniform3d(GLint location, GLdouble x, GLdouble y, GLdouble z);
 
 /**
- * @brief void glProgramUniform3dvEXT( GLuint program, GLint location, GLsizei count, const GLdouble *value );
+ * @brief void glUniform3dv(GLint location, GLsizei count, const GLdouble *value)
  */
-GLE_API void glProgramUniform3dvEXT( GLuint program, GLint location, GLsizei count, const GLdouble *value );
+GLE_API void glUniform3dv(GLint location, GLsizei count, const GLdouble *value);
 
 /**
- * @brief void glProgramUniform4dvEXT( GLuint program, GLint location, GLsizei count, const GLdouble *value );
+ * @brief void glUniform4d(GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
  */
-GLE_API void glProgramUniform4dvEXT( GLuint program, GLint location, GLsizei count, const GLdouble *value );
+GLE_API void glUniform4d(GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 
 /**
- * @brief void glProgramUniformMatrix2dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glUniform4dv(GLint location, GLsizei count, const GLdouble *value)
  */
-GLE_API void glProgramUniformMatrix2dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glUniform4dv(GLint location, GLsizei count, const GLdouble *value);
 
 /**
- * @brief void glProgramUniformMatrix3dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glUniformMatrix2dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glProgramUniformMatrix3dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glUniformMatrix2dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glProgramUniformMatrix4dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glUniformMatrix2x3dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glProgramUniformMatrix4dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glUniformMatrix2x3dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glProgramUniformMatrix2x3dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glUniformMatrix2x4dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glProgramUniformMatrix2x3dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glUniformMatrix2x4dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glProgramUniformMatrix2x4dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glUniformMatrix3dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glProgramUniformMatrix2x4dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glUniformMatrix3dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glProgramUniformMatrix3x2dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glUniformMatrix3x2dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glProgramUniformMatrix3x2dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glUniformMatrix3x2dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glProgramUniformMatrix3x4dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glUniformMatrix3x4dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glProgramUniformMatrix3x4dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glUniformMatrix3x4dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glProgramUniformMatrix4x2dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glUniformMatrix4dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glProgramUniformMatrix4x2dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glUniformMatrix4dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
- * @brief void glProgramUniformMatrix4x3dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+ * @brief void glUniformMatrix4x2dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
  */
-GLE_API void glProgramUniformMatrix4x3dvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value );
+GLE_API void glUniformMatrix4x2dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
+ * @brief void glUniformMatrix4x3dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glUniformMatrix4x3dv(GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 //@}
+
+
 
 
 /**
@@ -3346,13 +3556,17 @@ GLE_API void glProgramUniformMatrix4x3dvEXT( GLuint program, GLint location, GLs
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_half_float_pixel is supported.
- * @return Returns \c true if \b GL_ARB_half_float_pixel is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_half_float_pixel is supported.
+ * @return Returns \c true if \b GL_ARB_half_float_pixel is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_half_float_pixel();
 
+
 //@}
+
+
 
 
 /**
@@ -3362,43 +3576,57 @@ GLE_API bool isGL_ARB_half_float_pixel();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_half_float_vertex is supported.
- * @return Returns \c true if \b GL_ARB_half_float_vertex is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_half_float_vertex is supported.
+ * @return Returns \c true if \b GL_ARB_half_float_vertex is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_half_float_vertex();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_ARB_imaging GL_ARB_imaging
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_imaging is supported.
- * @return Returns \c true if \b GL_ARB_imaging is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_imaging is supported.
+ * @return Returns \c true if \b GL_ARB_imaging is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_imaging();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_ARB_imaging_DEPRECATED GL_ARB_imaging_DEPRECATED
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_imaging_DEPRECATED is supported.
- * @return Returns \c true if \b GL_ARB_imaging_DEPRECATED is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_imaging_DEPRECATED is supported.
+ * @return Returns \c true if \b GL_ARB_imaging_DEPRECATED is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_imaging_DEPRECATED();
 
+
 //@}
+
+
 
 
 /**
@@ -3408,18 +3636,23 @@ GLE_API bool isGL_ARB_imaging_DEPRECATED();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_instanced_arrays is supported.
- * @return Returns \c true if \b GL_ARB_instanced_arrays is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_instanced_arrays is supported.
+ * @return Returns \c true if \b GL_ARB_instanced_arrays is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_instanced_arrays();
 
+
+
 /**
- * @brief void glVertexAttribDivisorARB( GLuint index, GLuint divisor );
+ * @brief void glVertexAttribDivisorARB(GLuint index, GLuint divisor)
  */
-GLE_API void glVertexAttribDivisorARB( GLuint index, GLuint divisor );
+GLE_API void glVertexAttribDivisorARB(GLuint index, GLuint divisor);
 
 //@}
+
+
 
 
 /**
@@ -3429,23 +3662,28 @@ GLE_API void glVertexAttribDivisorARB( GLuint index, GLuint divisor );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_map_buffer_range is supported.
- * @return Returns \c true if \b GL_ARB_map_buffer_range is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_map_buffer_range is supported.
+ * @return Returns \c true if \b GL_ARB_map_buffer_range is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_map_buffer_range();
 
-/**
- * @brief GLvoid* glMapBufferRange( GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access );
- */
-GLE_API GLvoid* glMapBufferRange( GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access );
+
 
 /**
- * @brief void glFlushMappedBufferRange( GLenum target, GLintptr offset, GLsizeiptr length );
+ * @brief void glFlushMappedBufferRange(GLenum target, GLintptr offset, GLsizeiptr length)
  */
-GLE_API void glFlushMappedBufferRange( GLenum target, GLintptr offset, GLsizeiptr length );
+GLE_API void glFlushMappedBufferRange(GLenum target, GLintptr offset, GLsizeiptr length);
+
+/**
+ * @brief GLvoid* glMapBufferRange(GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access)
+ */
+GLE_API GLvoid* glMapBufferRange(GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access);
 
 //@}
+
+
 
 
 /**
@@ -3455,38 +3693,43 @@ GLE_API void glFlushMappedBufferRange( GLenum target, GLintptr offset, GLsizeipt
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_matrix_palette is supported.
- * @return Returns \c true if \b GL_ARB_matrix_palette is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_matrix_palette is supported.
+ * @return Returns \c true if \b GL_ARB_matrix_palette is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_matrix_palette();
 
-/**
- * @brief void glCurrentPaletteMatrixARB( GLint index );
- */
-GLE_API void glCurrentPaletteMatrixARB( GLint index );
+
 
 /**
- * @brief void glMatrixIndexubvARB( GLint size, const GLubyte *indices );
+ * @brief void glCurrentPaletteMatrixARB(GLint index)
  */
-GLE_API void glMatrixIndexubvARB( GLint size, const GLubyte *indices );
+GLE_API void glCurrentPaletteMatrixARB(GLint index);
 
 /**
- * @brief void glMatrixIndexusvARB( GLint size, const GLushort *indices );
+ * @brief void glMatrixIndexPointerARB(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
  */
-GLE_API void glMatrixIndexusvARB( GLint size, const GLushort *indices );
+GLE_API void glMatrixIndexPointerARB(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
 
 /**
- * @brief void glMatrixIndexuivARB( GLint size, const GLuint *indices );
+ * @brief void glMatrixIndexubvARB(GLint size, const GLubyte *indices)
  */
-GLE_API void glMatrixIndexuivARB( GLint size, const GLuint *indices );
+GLE_API void glMatrixIndexubvARB(GLint size, const GLubyte *indices);
 
 /**
- * @brief void glMatrixIndexPointerARB( GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+ * @brief void glMatrixIndexuivARB(GLint size, const GLuint *indices)
  */
-GLE_API void glMatrixIndexPointerARB( GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+GLE_API void glMatrixIndexuivARB(GLint size, const GLuint *indices);
+
+/**
+ * @brief void glMatrixIndexusvARB(GLint size, const GLushort *indices)
+ */
+GLE_API void glMatrixIndexusvARB(GLint size, const GLushort *indices);
 
 //@}
+
+
 
 
 /**
@@ -3496,18 +3739,23 @@ GLE_API void glMatrixIndexPointerARB( GLint size, GLenum type, GLsizei stride, c
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_multisample is supported.
- * @return Returns \c true if \b GL_ARB_multisample is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_multisample is supported.
+ * @return Returns \c true if \b GL_ARB_multisample is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_multisample();
 
+
+
 /**
- * @brief void glSampleCoverageARB( GLclampf value, GLboolean invert );
+ * @brief void glSampleCoverageARB(GLclampf value, GLboolean invert)
  */
-GLE_API void glSampleCoverageARB( GLclampf value, GLboolean invert );
+GLE_API void glSampleCoverageARB(GLclampf value, GLboolean invert);
 
 //@}
+
+
 
 
 /**
@@ -3517,183 +3765,188 @@ GLE_API void glSampleCoverageARB( GLclampf value, GLboolean invert );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_multitexture is supported.
- * @return Returns \c true if \b GL_ARB_multitexture is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_multitexture is supported.
+ * @return Returns \c true if \b GL_ARB_multitexture is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_multitexture();
 
-/**
- * @brief void glActiveTextureARB( GLenum texture );
- */
-GLE_API void glActiveTextureARB( GLenum texture );
+
 
 /**
- * @brief void glClientActiveTextureARB( GLenum texture );
+ * @brief void glActiveTextureARB(GLenum texture)
  */
-GLE_API void glClientActiveTextureARB( GLenum texture );
+GLE_API void glActiveTextureARB(GLenum texture);
 
 /**
- * @brief void glMultiTexCoord1dARB( GLenum target, GLdouble s );
+ * @brief void glClientActiveTextureARB(GLenum texture)
  */
-GLE_API void glMultiTexCoord1dARB( GLenum target, GLdouble s );
+GLE_API void glClientActiveTextureARB(GLenum texture);
 
 /**
- * @brief void glMultiTexCoord1dvARB( GLenum target, const GLdouble *v );
+ * @brief void glMultiTexCoord1dARB(GLenum target, GLdouble s)
  */
-GLE_API void glMultiTexCoord1dvARB( GLenum target, const GLdouble *v );
+GLE_API void glMultiTexCoord1dARB(GLenum target, GLdouble s);
 
 /**
- * @brief void glMultiTexCoord1fARB( GLenum target, GLfloat s );
+ * @brief void glMultiTexCoord1dvARB(GLenum target, const GLdouble *v)
  */
-GLE_API void glMultiTexCoord1fARB( GLenum target, GLfloat s );
+GLE_API void glMultiTexCoord1dvARB(GLenum target, const GLdouble *v);
 
 /**
- * @brief void glMultiTexCoord1fvARB( GLenum target, const GLfloat *v );
+ * @brief void glMultiTexCoord1fARB(GLenum target, GLfloat s)
  */
-GLE_API void glMultiTexCoord1fvARB( GLenum target, const GLfloat *v );
+GLE_API void glMultiTexCoord1fARB(GLenum target, GLfloat s);
 
 /**
- * @brief void glMultiTexCoord1iARB( GLenum target, GLint s );
+ * @brief void glMultiTexCoord1fvARB(GLenum target, const GLfloat *v)
  */
-GLE_API void glMultiTexCoord1iARB( GLenum target, GLint s );
+GLE_API void glMultiTexCoord1fvARB(GLenum target, const GLfloat *v);
 
 /**
- * @brief void glMultiTexCoord1ivARB( GLenum target, const GLint *v );
+ * @brief void glMultiTexCoord1iARB(GLenum target, GLint s)
  */
-GLE_API void glMultiTexCoord1ivARB( GLenum target, const GLint *v );
+GLE_API void glMultiTexCoord1iARB(GLenum target, GLint s);
 
 /**
- * @brief void glMultiTexCoord1sARB( GLenum target, GLshort s );
+ * @brief void glMultiTexCoord1ivARB(GLenum target, const GLint *v)
  */
-GLE_API void glMultiTexCoord1sARB( GLenum target, GLshort s );
+GLE_API void glMultiTexCoord1ivARB(GLenum target, const GLint *v);
 
 /**
- * @brief void glMultiTexCoord1svARB( GLenum target, const GLshort *v );
+ * @brief void glMultiTexCoord1sARB(GLenum target, GLshort s)
  */
-GLE_API void glMultiTexCoord1svARB( GLenum target, const GLshort *v );
+GLE_API void glMultiTexCoord1sARB(GLenum target, GLshort s);
 
 /**
- * @brief void glMultiTexCoord2dARB( GLenum target, GLdouble s, GLdouble t );
+ * @brief void glMultiTexCoord1svARB(GLenum target, const GLshort *v)
  */
-GLE_API void glMultiTexCoord2dARB( GLenum target, GLdouble s, GLdouble t );
+GLE_API void glMultiTexCoord1svARB(GLenum target, const GLshort *v);
 
 /**
- * @brief void glMultiTexCoord2dvARB( GLenum target, const GLdouble *v );
+ * @brief void glMultiTexCoord2dARB(GLenum target, GLdouble s, GLdouble t)
  */
-GLE_API void glMultiTexCoord2dvARB( GLenum target, const GLdouble *v );
+GLE_API void glMultiTexCoord2dARB(GLenum target, GLdouble s, GLdouble t);
 
 /**
- * @brief void glMultiTexCoord2fARB( GLenum target, GLfloat s, GLfloat t );
+ * @brief void glMultiTexCoord2dvARB(GLenum target, const GLdouble *v)
  */
-GLE_API void glMultiTexCoord2fARB( GLenum target, GLfloat s, GLfloat t );
+GLE_API void glMultiTexCoord2dvARB(GLenum target, const GLdouble *v);
 
 /**
- * @brief void glMultiTexCoord2fvARB( GLenum target, const GLfloat *v );
+ * @brief void glMultiTexCoord2fARB(GLenum target, GLfloat s, GLfloat t)
  */
-GLE_API void glMultiTexCoord2fvARB( GLenum target, const GLfloat *v );
+GLE_API void glMultiTexCoord2fARB(GLenum target, GLfloat s, GLfloat t);
 
 /**
- * @brief void glMultiTexCoord2iARB( GLenum target, GLint s, GLint t );
+ * @brief void glMultiTexCoord2fvARB(GLenum target, const GLfloat *v)
  */
-GLE_API void glMultiTexCoord2iARB( GLenum target, GLint s, GLint t );
+GLE_API void glMultiTexCoord2fvARB(GLenum target, const GLfloat *v);
 
 /**
- * @brief void glMultiTexCoord2ivARB( GLenum target, const GLint *v );
+ * @brief void glMultiTexCoord2iARB(GLenum target, GLint s, GLint t)
  */
-GLE_API void glMultiTexCoord2ivARB( GLenum target, const GLint *v );
+GLE_API void glMultiTexCoord2iARB(GLenum target, GLint s, GLint t);
 
 /**
- * @brief void glMultiTexCoord2sARB( GLenum target, GLshort s, GLshort t );
+ * @brief void glMultiTexCoord2ivARB(GLenum target, const GLint *v)
  */
-GLE_API void glMultiTexCoord2sARB( GLenum target, GLshort s, GLshort t );
+GLE_API void glMultiTexCoord2ivARB(GLenum target, const GLint *v);
 
 /**
- * @brief void glMultiTexCoord2svARB( GLenum target, const GLshort *v );
+ * @brief void glMultiTexCoord2sARB(GLenum target, GLshort s, GLshort t)
  */
-GLE_API void glMultiTexCoord2svARB( GLenum target, const GLshort *v );
+GLE_API void glMultiTexCoord2sARB(GLenum target, GLshort s, GLshort t);
 
 /**
- * @brief void glMultiTexCoord3dARB( GLenum target, GLdouble s, GLdouble t, GLdouble r );
+ * @brief void glMultiTexCoord2svARB(GLenum target, const GLshort *v)
  */
-GLE_API void glMultiTexCoord3dARB( GLenum target, GLdouble s, GLdouble t, GLdouble r );
+GLE_API void glMultiTexCoord2svARB(GLenum target, const GLshort *v);
 
 /**
- * @brief void glMultiTexCoord3dvARB( GLenum target, const GLdouble *v );
+ * @brief void glMultiTexCoord3dARB(GLenum target, GLdouble s, GLdouble t, GLdouble r)
  */
-GLE_API void glMultiTexCoord3dvARB( GLenum target, const GLdouble *v );
+GLE_API void glMultiTexCoord3dARB(GLenum target, GLdouble s, GLdouble t, GLdouble r);
 
 /**
- * @brief void glMultiTexCoord3fARB( GLenum target, GLfloat s, GLfloat t, GLfloat r );
+ * @brief void glMultiTexCoord3dvARB(GLenum target, const GLdouble *v)
  */
-GLE_API void glMultiTexCoord3fARB( GLenum target, GLfloat s, GLfloat t, GLfloat r );
+GLE_API void glMultiTexCoord3dvARB(GLenum target, const GLdouble *v);
 
 /**
- * @brief void glMultiTexCoord3fvARB( GLenum target, const GLfloat *v );
+ * @brief void glMultiTexCoord3fARB(GLenum target, GLfloat s, GLfloat t, GLfloat r)
  */
-GLE_API void glMultiTexCoord3fvARB( GLenum target, const GLfloat *v );
+GLE_API void glMultiTexCoord3fARB(GLenum target, GLfloat s, GLfloat t, GLfloat r);
 
 /**
- * @brief void glMultiTexCoord3iARB( GLenum target, GLint s, GLint t, GLint r );
+ * @brief void glMultiTexCoord3fvARB(GLenum target, const GLfloat *v)
  */
-GLE_API void glMultiTexCoord3iARB( GLenum target, GLint s, GLint t, GLint r );
+GLE_API void glMultiTexCoord3fvARB(GLenum target, const GLfloat *v);
 
 /**
- * @brief void glMultiTexCoord3ivARB( GLenum target, const GLint *v );
+ * @brief void glMultiTexCoord3iARB(GLenum target, GLint s, GLint t, GLint r)
  */
-GLE_API void glMultiTexCoord3ivARB( GLenum target, const GLint *v );
+GLE_API void glMultiTexCoord3iARB(GLenum target, GLint s, GLint t, GLint r);
 
 /**
- * @brief void glMultiTexCoord3sARB( GLenum target, GLshort s, GLshort t, GLshort r );
+ * @brief void glMultiTexCoord3ivARB(GLenum target, const GLint *v)
  */
-GLE_API void glMultiTexCoord3sARB( GLenum target, GLshort s, GLshort t, GLshort r );
+GLE_API void glMultiTexCoord3ivARB(GLenum target, const GLint *v);
 
 /**
- * @brief void glMultiTexCoord3svARB( GLenum target, const GLshort *v );
+ * @brief void glMultiTexCoord3sARB(GLenum target, GLshort s, GLshort t, GLshort r)
  */
-GLE_API void glMultiTexCoord3svARB( GLenum target, const GLshort *v );
+GLE_API void glMultiTexCoord3sARB(GLenum target, GLshort s, GLshort t, GLshort r);
 
 /**
- * @brief void glMultiTexCoord4dARB( GLenum target, GLdouble s, GLdouble t, GLdouble r, GLdouble q );
+ * @brief void glMultiTexCoord3svARB(GLenum target, const GLshort *v)
  */
-GLE_API void glMultiTexCoord4dARB( GLenum target, GLdouble s, GLdouble t, GLdouble r, GLdouble q );
+GLE_API void glMultiTexCoord3svARB(GLenum target, const GLshort *v);
 
 /**
- * @brief void glMultiTexCoord4dvARB( GLenum target, const GLdouble *v );
+ * @brief void glMultiTexCoord4dARB(GLenum target, GLdouble s, GLdouble t, GLdouble r, GLdouble q)
  */
-GLE_API void glMultiTexCoord4dvARB( GLenum target, const GLdouble *v );
+GLE_API void glMultiTexCoord4dARB(GLenum target, GLdouble s, GLdouble t, GLdouble r, GLdouble q);
 
 /**
- * @brief void glMultiTexCoord4fARB( GLenum target, GLfloat s, GLfloat t, GLfloat r, GLfloat q );
+ * @brief void glMultiTexCoord4dvARB(GLenum target, const GLdouble *v)
  */
-GLE_API void glMultiTexCoord4fARB( GLenum target, GLfloat s, GLfloat t, GLfloat r, GLfloat q );
+GLE_API void glMultiTexCoord4dvARB(GLenum target, const GLdouble *v);
 
 /**
- * @brief void glMultiTexCoord4fvARB( GLenum target, const GLfloat *v );
+ * @brief void glMultiTexCoord4fARB(GLenum target, GLfloat s, GLfloat t, GLfloat r, GLfloat q)
  */
-GLE_API void glMultiTexCoord4fvARB( GLenum target, const GLfloat *v );
+GLE_API void glMultiTexCoord4fARB(GLenum target, GLfloat s, GLfloat t, GLfloat r, GLfloat q);
 
 /**
- * @brief void glMultiTexCoord4iARB( GLenum target, GLint s, GLint t, GLint r, GLint q );
+ * @brief void glMultiTexCoord4fvARB(GLenum target, const GLfloat *v)
  */
-GLE_API void glMultiTexCoord4iARB( GLenum target, GLint s, GLint t, GLint r, GLint q );
+GLE_API void glMultiTexCoord4fvARB(GLenum target, const GLfloat *v);
 
 /**
- * @brief void glMultiTexCoord4ivARB( GLenum target, const GLint *v );
+ * @brief void glMultiTexCoord4iARB(GLenum target, GLint s, GLint t, GLint r, GLint q)
  */
-GLE_API void glMultiTexCoord4ivARB( GLenum target, const GLint *v );
+GLE_API void glMultiTexCoord4iARB(GLenum target, GLint s, GLint t, GLint r, GLint q);
 
 /**
- * @brief void glMultiTexCoord4sARB( GLenum target, GLshort s, GLshort t, GLshort r, GLshort q );
+ * @brief void glMultiTexCoord4ivARB(GLenum target, const GLint *v)
  */
-GLE_API void glMultiTexCoord4sARB( GLenum target, GLshort s, GLshort t, GLshort r, GLshort q );
+GLE_API void glMultiTexCoord4ivARB(GLenum target, const GLint *v);
 
 /**
- * @brief void glMultiTexCoord4svARB( GLenum target, const GLshort *v );
+ * @brief void glMultiTexCoord4sARB(GLenum target, GLshort s, GLshort t, GLshort r, GLshort q)
  */
-GLE_API void glMultiTexCoord4svARB( GLenum target, const GLshort *v );
+GLE_API void glMultiTexCoord4sARB(GLenum target, GLshort s, GLshort t, GLshort r, GLshort q);
+
+/**
+ * @brief void glMultiTexCoord4svARB(GLenum target, const GLshort *v)
+ */
+GLE_API void glMultiTexCoord4svARB(GLenum target, const GLshort *v);
 
 //@}
+
+
 
 
 /**
@@ -3703,53 +3956,58 @@ GLE_API void glMultiTexCoord4svARB( GLenum target, const GLshort *v );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_occlusion_query is supported.
- * @return Returns \c true if \b GL_ARB_occlusion_query is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_occlusion_query is supported.
+ * @return Returns \c true if \b GL_ARB_occlusion_query is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_occlusion_query();
 
-/**
- * @brief void glGenQueriesARB( GLsizei n, GLuint *ids );
- */
-GLE_API void glGenQueriesARB( GLsizei n, GLuint *ids );
+
 
 /**
- * @brief void glDeleteQueriesARB( GLsizei n, const GLuint *ids );
+ * @brief void glBeginQueryARB(GLenum target, GLuint id)
  */
-GLE_API void glDeleteQueriesARB( GLsizei n, const GLuint *ids );
+GLE_API void glBeginQueryARB(GLenum target, GLuint id);
 
 /**
- * @brief GLboolean glIsQueryARB( GLuint id );
+ * @brief void glDeleteQueriesARB(GLsizei n, const GLuint *ids)
  */
-GLE_API GLboolean glIsQueryARB( GLuint id );
+GLE_API void glDeleteQueriesARB(GLsizei n, const GLuint *ids);
 
 /**
- * @brief void glBeginQueryARB( GLenum target, GLuint id );
+ * @brief void glEndQueryARB(GLenum target)
  */
-GLE_API void glBeginQueryARB( GLenum target, GLuint id );
+GLE_API void glEndQueryARB(GLenum target);
 
 /**
- * @brief void glEndQueryARB( GLenum target );
+ * @brief void glGenQueriesARB(GLsizei n, GLuint *ids)
  */
-GLE_API void glEndQueryARB( GLenum target );
+GLE_API void glGenQueriesARB(GLsizei n, GLuint *ids);
 
 /**
- * @brief void glGetQueryivARB( GLenum target, GLenum pname, GLint *params );
+ * @brief void glGetQueryObjectivARB(GLuint id, GLenum pname, GLint *params)
  */
-GLE_API void glGetQueryivARB( GLenum target, GLenum pname, GLint *params );
+GLE_API void glGetQueryObjectivARB(GLuint id, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetQueryObjectivARB( GLuint id, GLenum pname, GLint *params );
+ * @brief void glGetQueryObjectuivARB(GLuint id, GLenum pname, GLuint *params)
  */
-GLE_API void glGetQueryObjectivARB( GLuint id, GLenum pname, GLint *params );
+GLE_API void glGetQueryObjectuivARB(GLuint id, GLenum pname, GLuint *params);
 
 /**
- * @brief void glGetQueryObjectuivARB( GLuint id, GLenum pname, GLuint *params );
+ * @brief void glGetQueryivARB(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glGetQueryObjectuivARB( GLuint id, GLenum pname, GLuint *params );
+GLE_API void glGetQueryivARB(GLenum target, GLenum pname, GLint *params);
+
+/**
+ * @brief GLboolean glIsQueryARB(GLuint id)
+ */
+GLE_API GLboolean glIsQueryARB(GLuint id);
 
 //@}
+
+
 
 
 /**
@@ -3759,13 +4017,17 @@ GLE_API void glGetQueryObjectuivARB( GLuint id, GLenum pname, GLuint *params );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_occlusion_query2 is supported.
- * @return Returns \c true if \b GL_ARB_occlusion_query2 is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_occlusion_query2 is supported.
+ * @return Returns \c true if \b GL_ARB_occlusion_query2 is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_occlusion_query2();
 
+
 //@}
+
+
 
 
 /**
@@ -3775,13 +4037,17 @@ GLE_API bool isGL_ARB_occlusion_query2();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_pixel_buffer_object is supported.
- * @return Returns \c true if \b GL_ARB_pixel_buffer_object is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_pixel_buffer_object is supported.
+ * @return Returns \c true if \b GL_ARB_pixel_buffer_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_pixel_buffer_object();
 
+
 //@}
+
+
 
 
 /**
@@ -3791,23 +4057,28 @@ GLE_API bool isGL_ARB_pixel_buffer_object();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_point_parameters is supported.
- * @return Returns \c true if \b GL_ARB_point_parameters is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_point_parameters is supported.
+ * @return Returns \c true if \b GL_ARB_point_parameters is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_point_parameters();
 
-/**
- * @brief void glPointParameterfARB( GLenum pname, GLfloat param );
- */
-GLE_API void glPointParameterfARB( GLenum pname, GLfloat param );
+
 
 /**
- * @brief void glPointParameterfvARB( GLenum pname, const GLfloat *params );
+ * @brief void glPointParameterfARB(GLenum pname, GLfloat param)
  */
-GLE_API void glPointParameterfvARB( GLenum pname, const GLfloat *params );
+GLE_API void glPointParameterfARB(GLenum pname, GLfloat param);
+
+/**
+ * @brief void glPointParameterfvARB(GLenum pname, const GLfloat *params)
+ */
+GLE_API void glPointParameterfvARB(GLenum pname, const GLfloat *params);
 
 //@}
+
+
 
 
 /**
@@ -3817,13 +4088,17 @@ GLE_API void glPointParameterfvARB( GLenum pname, const GLfloat *params );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_point_sprite is supported.
- * @return Returns \c true if \b GL_ARB_point_sprite is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_point_sprite is supported.
+ * @return Returns \c true if \b GL_ARB_point_sprite is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_point_sprite();
 
+
 //@}
+
+
 
 
 /**
@@ -3833,18 +4108,23 @@ GLE_API bool isGL_ARB_point_sprite();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_provoking_vertex is supported.
- * @return Returns \c true if \b GL_ARB_provoking_vertex is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_provoking_vertex is supported.
+ * @return Returns \c true if \b GL_ARB_provoking_vertex is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_provoking_vertex();
 
+
+
 /**
- * @brief void glProvokingVertex( GLenum mode );
+ * @brief void glProvokingVertex(GLenum mode)
  */
-GLE_API void glProvokingVertex( GLenum mode );
+GLE_API void glProvokingVertex(GLenum mode);
 
 //@}
+
+
 
 
 /**
@@ -3854,18 +4134,23 @@ GLE_API void glProvokingVertex( GLenum mode );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_sample_shading is supported.
- * @return Returns \c true if \b GL_ARB_sample_shading is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_sample_shading is supported.
+ * @return Returns \c true if \b GL_ARB_sample_shading is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_sample_shading();
 
+
+
 /**
- * @brief void glMinSampleShading( GLclampf value );
+ * @brief void glMinSampleShading(GLclampf value)
  */
-GLE_API void glMinSampleShading( GLclampf value );
+GLE_API void glMinSampleShading(GLclampf value);
 
 //@}
+
+
 
 
 /**
@@ -3875,83 +4160,88 @@ GLE_API void glMinSampleShading( GLclampf value );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_sampler_objects is supported.
- * @return Returns \c true if \b GL_ARB_sampler_objects is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_sampler_objects is supported.
+ * @return Returns \c true if \b GL_ARB_sampler_objects is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_sampler_objects();
 
-/**
- * @brief void glGenSamplers( GLsizei count, GLuint *samplers );
- */
-GLE_API void glGenSamplers( GLsizei count, GLuint *samplers );
+
 
 /**
- * @brief void glDeleteSamplers( GLsizei count, const GLuint *samplers );
+ * @brief void glBindSampler(GLuint unit, GLuint sampler)
  */
-GLE_API void glDeleteSamplers( GLsizei count, const GLuint *samplers );
+GLE_API void glBindSampler(GLuint unit, GLuint sampler);
 
 /**
- * @brief GLboolean glIsSampler( GLuint sampler );
+ * @brief void glDeleteSamplers(GLsizei count, const GLuint *samplers)
  */
-GLE_API GLboolean glIsSampler( GLuint sampler );
+GLE_API void glDeleteSamplers(GLsizei count, const GLuint *samplers);
 
 /**
- * @brief void glBindSampler( GLuint unit, GLuint sampler );
+ * @brief void glGenSamplers(GLsizei count, GLuint *samplers)
  */
-GLE_API void glBindSampler( GLuint unit, GLuint sampler );
+GLE_API void glGenSamplers(GLsizei count, GLuint *samplers);
 
 /**
- * @brief void glSamplerParameteri( GLuint sampler, GLenum pname, GLint param );
+ * @brief void glGetSamplerParameterIfv(GLuint sampler, GLenum pname, GLfloat *params)
  */
-GLE_API void glSamplerParameteri( GLuint sampler, GLenum pname, GLint param );
+GLE_API void glGetSamplerParameterIfv(GLuint sampler, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glSamplerParameteriv( GLuint sampler, GLenum pname, const GLint *param );
+ * @brief void glGetSamplerParameterIiv(GLuint sampler, GLenum pname, GLint *params)
  */
-GLE_API void glSamplerParameteriv( GLuint sampler, GLenum pname, const GLint *param );
+GLE_API void glGetSamplerParameterIiv(GLuint sampler, GLenum pname, GLint *params);
 
 /**
- * @brief void glSamplerParameterf( GLuint sampler, GLenum pname, GLfloat param );
+ * @brief void glGetSamplerParameterfv(GLuint sampler, GLenum pname, GLfloat *params)
  */
-GLE_API void glSamplerParameterf( GLuint sampler, GLenum pname, GLfloat param );
+GLE_API void glGetSamplerParameterfv(GLuint sampler, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glSamplerParameterfv( GLuint sampler, GLenum pname, const GLfloat *param );
+ * @brief void glGetSamplerParameteriv(GLuint sampler, GLenum pname, GLint *params)
  */
-GLE_API void glSamplerParameterfv( GLuint sampler, GLenum pname, const GLfloat *param );
+GLE_API void glGetSamplerParameteriv(GLuint sampler, GLenum pname, GLint *params);
 
 /**
- * @brief void glSamplerParameterIiv( GLuint sampler, GLenum pname, const GLint *param );
+ * @brief GLboolean glIsSampler(GLuint sampler)
  */
-GLE_API void glSamplerParameterIiv( GLuint sampler, GLenum pname, const GLint *param );
+GLE_API GLboolean glIsSampler(GLuint sampler);
 
 /**
- * @brief void glSamplerParameterIuiv( GLuint sampler, GLenum pname, const GLuint *param );
+ * @brief void glSamplerParameterIiv(GLuint sampler, GLenum pname, const GLint *param)
  */
-GLE_API void glSamplerParameterIuiv( GLuint sampler, GLenum pname, const GLuint *param );
+GLE_API void glSamplerParameterIiv(GLuint sampler, GLenum pname, const GLint *param);
 
 /**
- * @brief void glGetSamplerParameteriv( GLuint sampler, GLenum pname, GLint *params );
+ * @brief void glSamplerParameterIuiv(GLuint sampler, GLenum pname, const GLuint *param)
  */
-GLE_API void glGetSamplerParameteriv( GLuint sampler, GLenum pname, GLint *params );
+GLE_API void glSamplerParameterIuiv(GLuint sampler, GLenum pname, const GLuint *param);
 
 /**
- * @brief void glGetSamplerParameterIiv( GLuint sampler, GLenum pname, GLint *params );
+ * @brief void glSamplerParameterf(GLuint sampler, GLenum pname, GLfloat param)
  */
-GLE_API void glGetSamplerParameterIiv( GLuint sampler, GLenum pname, GLint *params );
+GLE_API void glSamplerParameterf(GLuint sampler, GLenum pname, GLfloat param);
 
 /**
- * @brief void glGetSamplerParameterfv( GLuint sampler, GLenum pname, GLfloat *params );
+ * @brief void glSamplerParameterfv(GLuint sampler, GLenum pname, const GLfloat *param)
  */
-GLE_API void glGetSamplerParameterfv( GLuint sampler, GLenum pname, GLfloat *params );
+GLE_API void glSamplerParameterfv(GLuint sampler, GLenum pname, const GLfloat *param);
 
 /**
- * @brief void glGetSamplerParameterIfv( GLuint sampler, GLenum pname, GLfloat *params );
+ * @brief void glSamplerParameteri(GLuint sampler, GLenum pname, GLint param)
  */
-GLE_API void glGetSamplerParameterIfv( GLuint sampler, GLenum pname, GLfloat *params );
+GLE_API void glSamplerParameteri(GLuint sampler, GLenum pname, GLint param);
+
+/**
+ * @brief void glSamplerParameteriv(GLuint sampler, GLenum pname, const GLint *param)
+ */
+GLE_API void glSamplerParameteriv(GLuint sampler, GLenum pname, const GLint *param);
 
 //@}
+
+
 
 
 /**
@@ -3961,13 +4251,17 @@ GLE_API void glGetSamplerParameterIfv( GLuint sampler, GLenum pname, GLfloat *pa
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_seamless_cube_map is supported.
- * @return Returns \c true if \b GL_ARB_seamless_cube_map is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_seamless_cube_map is supported.
+ * @return Returns \c true if \b GL_ARB_seamless_cube_map is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_seamless_cube_map();
 
+
 //@}
+
+
 
 
 /**
@@ -3977,13 +4271,17 @@ GLE_API bool isGL_ARB_seamless_cube_map();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_shader_bit_encoding is supported.
- * @return Returns \c true if \b GL_ARB_shader_bit_encoding is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_shader_bit_encoding is supported.
+ * @return Returns \c true if \b GL_ARB_shader_bit_encoding is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_shader_bit_encoding();
 
+
 //@}
+
+
 
 
 /**
@@ -3993,208 +4291,213 @@ GLE_API bool isGL_ARB_shader_bit_encoding();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_shader_objects is supported.
- * @return Returns \c true if \b GL_ARB_shader_objects is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_shader_objects is supported.
+ * @return Returns \c true if \b GL_ARB_shader_objects is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_shader_objects();
 
-/**
- * @brief void glDeleteObjectARB( GLhandleARB obj );
- */
-GLE_API void glDeleteObjectARB( GLhandleARB obj );
+
 
 /**
- * @brief GLhandleARB glGetHandleARB( GLenum pname );
+ * @brief void glAttachObjectARB(GLhandleARB containerObj, GLhandleARB obj)
  */
-GLE_API GLhandleARB glGetHandleARB( GLenum pname );
+GLE_API void glAttachObjectARB(GLhandleARB containerObj, GLhandleARB obj);
 
 /**
- * @brief void glDetachObjectARB( GLhandleARB containerObj, GLhandleARB attachedObj );
+ * @brief void glCompileShaderARB(GLhandleARB shaderObj)
  */
-GLE_API void glDetachObjectARB( GLhandleARB containerObj, GLhandleARB attachedObj );
+GLE_API void glCompileShaderARB(GLhandleARB shaderObj);
 
 /**
- * @brief GLhandleARB glCreateShaderObjectARB( GLenum shaderType );
+ * @brief GLhandleARB glCreateProgramObjectARB(void)
  */
-GLE_API GLhandleARB glCreateShaderObjectARB( GLenum shaderType );
+GLE_API GLhandleARB glCreateProgramObjectARB(void);
 
 /**
- * @brief void glShaderSourceARB( GLhandleARB shaderObj, GLsizei count, const GLcharARB* *string, const GLint *length );
+ * @brief GLhandleARB glCreateShaderObjectARB(GLenum shaderType)
  */
-GLE_API void glShaderSourceARB( GLhandleARB shaderObj, GLsizei count, const GLcharARB* *string, const GLint *length );
+GLE_API GLhandleARB glCreateShaderObjectARB(GLenum shaderType);
 
 /**
- * @brief void glCompileShaderARB( GLhandleARB shaderObj );
+ * @brief void glDeleteObjectARB(GLhandleARB obj)
  */
-GLE_API void glCompileShaderARB( GLhandleARB shaderObj );
+GLE_API void glDeleteObjectARB(GLhandleARB obj);
 
 /**
- * @brief GLhandleARB glCreateProgramObjectARB( void );
+ * @brief void glDetachObjectARB(GLhandleARB containerObj, GLhandleARB attachedObj)
  */
-GLE_API GLhandleARB glCreateProgramObjectARB( void );
+GLE_API void glDetachObjectARB(GLhandleARB containerObj, GLhandleARB attachedObj);
 
 /**
- * @brief void glAttachObjectARB( GLhandleARB containerObj, GLhandleARB obj );
+ * @brief void glGetActiveUniformARB(GLhandleARB programObj, GLuint index, GLsizei maxLength, GLsizei *length, GLint *size, GLenum *type, GLcharARB *name)
  */
-GLE_API void glAttachObjectARB( GLhandleARB containerObj, GLhandleARB obj );
+GLE_API void glGetActiveUniformARB(GLhandleARB programObj, GLuint index, GLsizei maxLength, GLsizei *length, GLint *size, GLenum *type, GLcharARB *name);
 
 /**
- * @brief void glLinkProgramARB( GLhandleARB programObj );
+ * @brief void glGetAttachedObjectsARB(GLhandleARB containerObj, GLsizei maxCount, GLsizei *count, GLhandleARB *obj)
  */
-GLE_API void glLinkProgramARB( GLhandleARB programObj );
+GLE_API void glGetAttachedObjectsARB(GLhandleARB containerObj, GLsizei maxCount, GLsizei *count, GLhandleARB *obj);
 
 /**
- * @brief void glUseProgramObjectARB( GLhandleARB programObj );
+ * @brief GLhandleARB glGetHandleARB(GLenum pname)
  */
-GLE_API void glUseProgramObjectARB( GLhandleARB programObj );
+GLE_API GLhandleARB glGetHandleARB(GLenum pname);
 
 /**
- * @brief void glValidateProgramARB( GLhandleARB programObj );
+ * @brief void glGetInfoLogARB(GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *infoLog)
  */
-GLE_API void glValidateProgramARB( GLhandleARB programObj );
+GLE_API void glGetInfoLogARB(GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *infoLog);
 
 /**
- * @brief void glUniform1fARB( GLint location, GLfloat v0 );
+ * @brief void glGetObjectParameterfvARB(GLhandleARB obj, GLenum pname, GLfloat *params)
  */
-GLE_API void glUniform1fARB( GLint location, GLfloat v0 );
+GLE_API void glGetObjectParameterfvARB(GLhandleARB obj, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glUniform2fARB( GLint location, GLfloat v0, GLfloat v1 );
+ * @brief void glGetObjectParameterivARB(GLhandleARB obj, GLenum pname, GLint *params)
  */
-GLE_API void glUniform2fARB( GLint location, GLfloat v0, GLfloat v1 );
+GLE_API void glGetObjectParameterivARB(GLhandleARB obj, GLenum pname, GLint *params);
 
 /**
- * @brief void glUniform3fARB( GLint location, GLfloat v0, GLfloat v1, GLfloat v2 );
+ * @brief void glGetShaderSourceARB(GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *source)
  */
-GLE_API void glUniform3fARB( GLint location, GLfloat v0, GLfloat v1, GLfloat v2 );
+GLE_API void glGetShaderSourceARB(GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *source);
 
 /**
- * @brief void glUniform4fARB( GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3 );
+ * @brief GLint glGetUniformLocationARB(GLhandleARB programObj, const GLcharARB *name)
  */
-GLE_API void glUniform4fARB( GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3 );
+GLE_API GLint glGetUniformLocationARB(GLhandleARB programObj, const GLcharARB *name);
 
 /**
- * @brief void glUniform1iARB( GLint location, GLint v0 );
+ * @brief void glGetUniformfvARB(GLhandleARB programObj, GLint location, GLfloat *params)
  */
-GLE_API void glUniform1iARB( GLint location, GLint v0 );
+GLE_API void glGetUniformfvARB(GLhandleARB programObj, GLint location, GLfloat *params);
 
 /**
- * @brief void glUniform2iARB( GLint location, GLint v0, GLint v1 );
+ * @brief void glGetUniformivARB(GLhandleARB programObj, GLint location, GLint *params)
  */
-GLE_API void glUniform2iARB( GLint location, GLint v0, GLint v1 );
+GLE_API void glGetUniformivARB(GLhandleARB programObj, GLint location, GLint *params);
 
 /**
- * @brief void glUniform3iARB( GLint location, GLint v0, GLint v1, GLint v2 );
+ * @brief void glLinkProgramARB(GLhandleARB programObj)
  */
-GLE_API void glUniform3iARB( GLint location, GLint v0, GLint v1, GLint v2 );
+GLE_API void glLinkProgramARB(GLhandleARB programObj);
 
 /**
- * @brief void glUniform4iARB( GLint location, GLint v0, GLint v1, GLint v2, GLint v3 );
+ * @brief void glShaderSourceARB(GLhandleARB shaderObj, GLsizei count, const GLcharARB* *string, const GLint *length)
  */
-GLE_API void glUniform4iARB( GLint location, GLint v0, GLint v1, GLint v2, GLint v3 );
+GLE_API void glShaderSourceARB(GLhandleARB shaderObj, GLsizei count, const GLcharARB* *string, const GLint *length);
 
 /**
- * @brief void glUniform1fvARB( GLint location, GLsizei count, const GLfloat *value );
+ * @brief void glUniform1fARB(GLint location, GLfloat v0)
  */
-GLE_API void glUniform1fvARB( GLint location, GLsizei count, const GLfloat *value );
+GLE_API void glUniform1fARB(GLint location, GLfloat v0);
 
 /**
- * @brief void glUniform2fvARB( GLint location, GLsizei count, const GLfloat *value );
+ * @brief void glUniform1fvARB(GLint location, GLsizei count, const GLfloat *value)
  */
-GLE_API void glUniform2fvARB( GLint location, GLsizei count, const GLfloat *value );
+GLE_API void glUniform1fvARB(GLint location, GLsizei count, const GLfloat *value);
 
 /**
- * @brief void glUniform3fvARB( GLint location, GLsizei count, const GLfloat *value );
+ * @brief void glUniform1iARB(GLint location, GLint v0)
  */
-GLE_API void glUniform3fvARB( GLint location, GLsizei count, const GLfloat *value );
+GLE_API void glUniform1iARB(GLint location, GLint v0);
 
 /**
- * @brief void glUniform4fvARB( GLint location, GLsizei count, const GLfloat *value );
+ * @brief void glUniform1ivARB(GLint location, GLsizei count, const GLint *value)
  */
-GLE_API void glUniform4fvARB( GLint location, GLsizei count, const GLfloat *value );
+GLE_API void glUniform1ivARB(GLint location, GLsizei count, const GLint *value);
 
 /**
- * @brief void glUniform1ivARB( GLint location, GLsizei count, const GLint *value );
+ * @brief void glUniform2fARB(GLint location, GLfloat v0, GLfloat v1)
  */
-GLE_API void glUniform1ivARB( GLint location, GLsizei count, const GLint *value );
+GLE_API void glUniform2fARB(GLint location, GLfloat v0, GLfloat v1);
 
 /**
- * @brief void glUniform2ivARB( GLint location, GLsizei count, const GLint *value );
+ * @brief void glUniform2fvARB(GLint location, GLsizei count, const GLfloat *value)
  */
-GLE_API void glUniform2ivARB( GLint location, GLsizei count, const GLint *value );
+GLE_API void glUniform2fvARB(GLint location, GLsizei count, const GLfloat *value);
 
 /**
- * @brief void glUniform3ivARB( GLint location, GLsizei count, const GLint *value );
+ * @brief void glUniform2iARB(GLint location, GLint v0, GLint v1)
  */
-GLE_API void glUniform3ivARB( GLint location, GLsizei count, const GLint *value );
+GLE_API void glUniform2iARB(GLint location, GLint v0, GLint v1);
 
 /**
- * @brief void glUniform4ivARB( GLint location, GLsizei count, const GLint *value );
+ * @brief void glUniform2ivARB(GLint location, GLsizei count, const GLint *value)
  */
-GLE_API void glUniform4ivARB( GLint location, GLsizei count, const GLint *value );
+GLE_API void glUniform2ivARB(GLint location, GLsizei count, const GLint *value);
 
 /**
- * @brief void glUniformMatrix2fvARB( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glUniform3fARB(GLint location, GLfloat v0, GLfloat v1, GLfloat v2)
  */
-GLE_API void glUniformMatrix2fvARB( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glUniform3fARB(GLint location, GLfloat v0, GLfloat v1, GLfloat v2);
 
 /**
- * @brief void glUniformMatrix3fvARB( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glUniform3fvARB(GLint location, GLsizei count, const GLfloat *value)
  */
-GLE_API void glUniformMatrix3fvARB( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glUniform3fvARB(GLint location, GLsizei count, const GLfloat *value);
 
 /**
- * @brief void glUniformMatrix4fvARB( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glUniform3iARB(GLint location, GLint v0, GLint v1, GLint v2)
  */
-GLE_API void glUniformMatrix4fvARB( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glUniform3iARB(GLint location, GLint v0, GLint v1, GLint v2);
 
 /**
- * @brief void glGetObjectParameterfvARB( GLhandleARB obj, GLenum pname, GLfloat *params );
+ * @brief void glUniform3ivARB(GLint location, GLsizei count, const GLint *value)
  */
-GLE_API void glGetObjectParameterfvARB( GLhandleARB obj, GLenum pname, GLfloat *params );
+GLE_API void glUniform3ivARB(GLint location, GLsizei count, const GLint *value);
 
 /**
- * @brief void glGetObjectParameterivARB( GLhandleARB obj, GLenum pname, GLint *params );
+ * @brief void glUniform4fARB(GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3)
  */
-GLE_API void glGetObjectParameterivARB( GLhandleARB obj, GLenum pname, GLint *params );
+GLE_API void glUniform4fARB(GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3);
 
 /**
- * @brief void glGetInfoLogARB( GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *infoLog );
+ * @brief void glUniform4fvARB(GLint location, GLsizei count, const GLfloat *value)
  */
-GLE_API void glGetInfoLogARB( GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *infoLog );
+GLE_API void glUniform4fvARB(GLint location, GLsizei count, const GLfloat *value);
 
 /**
- * @brief void glGetAttachedObjectsARB( GLhandleARB containerObj, GLsizei maxCount, GLsizei *count, GLhandleARB *obj );
+ * @brief void glUniform4iARB(GLint location, GLint v0, GLint v1, GLint v2, GLint v3)
  */
-GLE_API void glGetAttachedObjectsARB( GLhandleARB containerObj, GLsizei maxCount, GLsizei *count, GLhandleARB *obj );
+GLE_API void glUniform4iARB(GLint location, GLint v0, GLint v1, GLint v2, GLint v3);
 
 /**
- * @brief GLint glGetUniformLocationARB( GLhandleARB programObj, const GLcharARB *name );
+ * @brief void glUniform4ivARB(GLint location, GLsizei count, const GLint *value)
  */
-GLE_API GLint glGetUniformLocationARB( GLhandleARB programObj, const GLcharARB *name );
+GLE_API void glUniform4ivARB(GLint location, GLsizei count, const GLint *value);
 
 /**
- * @brief void glGetActiveUniformARB( GLhandleARB programObj, GLuint index, GLsizei maxLength, GLsizei *length, GLint *size, GLenum *type, GLcharARB *name );
+ * @brief void glUniformMatrix2fvARB(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glGetActiveUniformARB( GLhandleARB programObj, GLuint index, GLsizei maxLength, GLsizei *length, GLint *size, GLenum *type, GLcharARB *name );
+GLE_API void glUniformMatrix2fvARB(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glGetUniformfvARB( GLhandleARB programObj, GLint location, GLfloat *params );
+ * @brief void glUniformMatrix3fvARB(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glGetUniformfvARB( GLhandleARB programObj, GLint location, GLfloat *params );
+GLE_API void glUniformMatrix3fvARB(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glGetUniformivARB( GLhandleARB programObj, GLint location, GLint *params );
+ * @brief void glUniformMatrix4fvARB(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glGetUniformivARB( GLhandleARB programObj, GLint location, GLint *params );
+GLE_API void glUniformMatrix4fvARB(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glGetShaderSourceARB( GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *source );
+ * @brief void glUseProgramObjectARB(GLhandleARB programObj)
  */
-GLE_API void glGetShaderSourceARB( GLhandleARB obj, GLsizei maxLength, GLsizei *length, GLcharARB *source );
+GLE_API void glUseProgramObjectARB(GLhandleARB programObj);
+
+/**
+ * @brief void glValidateProgramARB(GLhandleARB programObj)
+ */
+GLE_API void glValidateProgramARB(GLhandleARB programObj);
 
 //@}
+
+
 
 
 /**
@@ -4204,53 +4507,58 @@ GLE_API void glGetShaderSourceARB( GLhandleARB obj, GLsizei maxLength, GLsizei *
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_shader_subroutine is supported.
- * @return Returns \c true if \b GL_ARB_shader_subroutine is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_shader_subroutine is supported.
+ * @return Returns \c true if \b GL_ARB_shader_subroutine is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_shader_subroutine();
 
-/**
- * @brief GLint glGetSubroutineUniformLocation( GLuint program, GLenum shadertype, const GLchar *name );
- */
-GLE_API GLint glGetSubroutineUniformLocation( GLuint program, GLenum shadertype, const GLchar *name );
+
 
 /**
- * @brief GLuint glGetSubroutineIndex( GLuint program, GLenum shadertype, const GLchar *name );
+ * @brief void glGetActiveSubroutineName(GLuint program, GLenum shadertype, GLuint index, GLsizei bufsize, GLsizei *length, GLchar *name)
  */
-GLE_API GLuint glGetSubroutineIndex( GLuint program, GLenum shadertype, const GLchar *name );
+GLE_API void glGetActiveSubroutineName(GLuint program, GLenum shadertype, GLuint index, GLsizei bufsize, GLsizei *length, GLchar *name);
 
 /**
- * @brief void glGetActiveSubroutineUniformiv( GLuint program, GLenum shadertype, GLuint index, GLenum pname, GLint *values );
+ * @brief void glGetActiveSubroutineUniformName(GLuint program, GLenum shadertype, GLuint index, GLsizei bufsize, GLsizei *length, GLchar *name)
  */
-GLE_API void glGetActiveSubroutineUniformiv( GLuint program, GLenum shadertype, GLuint index, GLenum pname, GLint *values );
+GLE_API void glGetActiveSubroutineUniformName(GLuint program, GLenum shadertype, GLuint index, GLsizei bufsize, GLsizei *length, GLchar *name);
 
 /**
- * @brief void glGetActiveSubroutineUniformName( GLuint program, GLenum shadertype, GLuint index, GLsizei bufsize, GLsizei *length, GLchar *name );
+ * @brief void glGetActiveSubroutineUniformiv(GLuint program, GLenum shadertype, GLuint index, GLenum pname, GLint *values)
  */
-GLE_API void glGetActiveSubroutineUniformName( GLuint program, GLenum shadertype, GLuint index, GLsizei bufsize, GLsizei *length, GLchar *name );
+GLE_API void glGetActiveSubroutineUniformiv(GLuint program, GLenum shadertype, GLuint index, GLenum pname, GLint *values);
 
 /**
- * @brief void glGetActiveSubroutineName( GLuint program, GLenum shadertype, GLuint index, GLsizei bufsize, GLsizei *length, GLchar *name );
+ * @brief void glGetProgramStageiv(GLuint program, GLenum shadertype, GLenum pname, GLint *values)
  */
-GLE_API void glGetActiveSubroutineName( GLuint program, GLenum shadertype, GLuint index, GLsizei bufsize, GLsizei *length, GLchar *name );
+GLE_API void glGetProgramStageiv(GLuint program, GLenum shadertype, GLenum pname, GLint *values);
 
 /**
- * @brief void glUniformSubroutinesuiv( GLenum shadertype, GLsizei count, const GLuint *indices );
+ * @brief GLuint glGetSubroutineIndex(GLuint program, GLenum shadertype, const GLchar *name)
  */
-GLE_API void glUniformSubroutinesuiv( GLenum shadertype, GLsizei count, const GLuint *indices );
+GLE_API GLuint glGetSubroutineIndex(GLuint program, GLenum shadertype, const GLchar *name);
 
 /**
- * @brief void glGetUniformSubroutineuiv( GLenum shadertype, GLint location, GLuint *params );
+ * @brief GLint glGetSubroutineUniformLocation(GLuint program, GLenum shadertype, const GLchar *name)
  */
-GLE_API void glGetUniformSubroutineuiv( GLenum shadertype, GLint location, GLuint *params );
+GLE_API GLint glGetSubroutineUniformLocation(GLuint program, GLenum shadertype, const GLchar *name);
 
 /**
- * @brief void glGetProgramStageiv( GLuint program, GLenum shadertype, GLenum pname, GLint *values );
+ * @brief void glGetUniformSubroutineuiv(GLenum shadertype, GLint location, GLuint *params)
  */
-GLE_API void glGetProgramStageiv( GLuint program, GLenum shadertype, GLenum pname, GLint *values );
+GLE_API void glGetUniformSubroutineuiv(GLenum shadertype, GLint location, GLuint *params);
+
+/**
+ * @brief void glUniformSubroutinesuiv(GLenum shadertype, GLsizei count, const GLuint *indices)
+ */
+GLE_API void glUniformSubroutinesuiv(GLenum shadertype, GLsizei count, const GLuint *indices);
 
 //@}
+
+
 
 
 /**
@@ -4260,13 +4568,17 @@ GLE_API void glGetProgramStageiv( GLuint program, GLenum shadertype, GLenum pnam
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_shader_texture_lod is supported.
- * @return Returns \c true if \b GL_ARB_shader_texture_lod is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_shader_texture_lod is supported.
+ * @return Returns \c true if \b GL_ARB_shader_texture_lod is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_shader_texture_lod();
 
+
 //@}
+
+
 
 
 /**
@@ -4276,13 +4588,17 @@ GLE_API bool isGL_ARB_shader_texture_lod();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_shading_language_100 is supported.
- * @return Returns \c true if \b GL_ARB_shading_language_100 is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_shading_language_100 is supported.
+ * @return Returns \c true if \b GL_ARB_shading_language_100 is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_shading_language_100();
 
+
 //@}
+
+
 
 
 /**
@@ -4292,43 +4608,48 @@ GLE_API bool isGL_ARB_shading_language_100();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_shading_language_include is supported.
- * @return Returns \c true if \b GL_ARB_shading_language_include is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_shading_language_include is supported.
+ * @return Returns \c true if \b GL_ARB_shading_language_include is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_shading_language_include();
 
-/**
- * @brief void glNamedStringARB( GLenum type, GLint namelen, const GLchar *name, GLint stringlen, const GLchar *string );
- */
-GLE_API void glNamedStringARB( GLenum type, GLint namelen, const GLchar *name, GLint stringlen, const GLchar *string );
+
 
 /**
- * @brief void glDeleteNamedStringARB( GLint namelen, const GLchar *name );
+ * @brief void glCompileShaderIncludeARB(GLuint shader, GLsizei count, const GLchar* *path, const GLint *length)
  */
-GLE_API void glDeleteNamedStringARB( GLint namelen, const GLchar *name );
+GLE_API void glCompileShaderIncludeARB(GLuint shader, GLsizei count, const GLchar* *path, const GLint *length);
 
 /**
- * @brief void glCompileShaderIncludeARB( GLuint shader, GLsizei count, const GLchar* *path, const GLint *length );
+ * @brief void glDeleteNamedStringARB(GLint namelen, const GLchar *name)
  */
-GLE_API void glCompileShaderIncludeARB( GLuint shader, GLsizei count, const GLchar* *path, const GLint *length );
+GLE_API void glDeleteNamedStringARB(GLint namelen, const GLchar *name);
 
 /**
- * @brief GLboolean glIsNamedStringARB( GLint namelen, const GLchar *name );
+ * @brief void glGetNamedStringARB(GLint namelen, const GLchar *name, GLsizei bufSize, GLint *stringlen, GLchar *string)
  */
-GLE_API GLboolean glIsNamedStringARB( GLint namelen, const GLchar *name );
+GLE_API void glGetNamedStringARB(GLint namelen, const GLchar *name, GLsizei bufSize, GLint *stringlen, GLchar *string);
 
 /**
- * @brief void glGetNamedStringARB( GLint namelen, const GLchar *name, GLsizei bufSize, GLint *stringlen, GLchar *string );
+ * @brief void glGetNamedStringivARB(GLint namelen, const GLchar *name, GLenum pname, GLint *params)
  */
-GLE_API void glGetNamedStringARB( GLint namelen, const GLchar *name, GLsizei bufSize, GLint *stringlen, GLchar *string );
+GLE_API void glGetNamedStringivARB(GLint namelen, const GLchar *name, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetNamedStringivARB( GLint namelen, const GLchar *name, GLenum pname, GLint *params );
+ * @brief GLboolean glIsNamedStringARB(GLint namelen, const GLchar *name)
  */
-GLE_API void glGetNamedStringivARB( GLint namelen, const GLchar *name, GLenum pname, GLint *params );
+GLE_API GLboolean glIsNamedStringARB(GLint namelen, const GLchar *name);
+
+/**
+ * @brief void glNamedStringARB(GLenum type, GLint namelen, const GLchar *name, GLint stringlen, const GLchar *string)
+ */
+GLE_API void glNamedStringARB(GLenum type, GLint namelen, const GLchar *name, GLint stringlen, const GLchar *string);
 
 //@}
+
+
 
 
 /**
@@ -4338,13 +4659,17 @@ GLE_API void glGetNamedStringivARB( GLint namelen, const GLchar *name, GLenum pn
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_shadow is supported.
- * @return Returns \c true if \b GL_ARB_shadow is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_shadow is supported.
+ * @return Returns \c true if \b GL_ARB_shadow is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_shadow();
 
+
 //@}
+
+
 
 
 /**
@@ -4354,13 +4679,17 @@ GLE_API bool isGL_ARB_shadow();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_shadow_ambient is supported.
- * @return Returns \c true if \b GL_ARB_shadow_ambient is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_shadow_ambient is supported.
+ * @return Returns \c true if \b GL_ARB_shadow_ambient is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_shadow_ambient();
 
+
 //@}
+
+
 
 
 /**
@@ -4370,48 +4699,53 @@ GLE_API bool isGL_ARB_shadow_ambient();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_sync is supported.
- * @return Returns \c true if \b GL_ARB_sync is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_sync is supported.
+ * @return Returns \c true if \b GL_ARB_sync is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_sync();
 
-/**
- * @brief GLsync glFenceSync( GLenum condition, GLbitfield flags );
- */
-GLE_API GLsync glFenceSync( GLenum condition, GLbitfield flags );
+
 
 /**
- * @brief GLboolean glIsSync( GLsync sync );
+ * @brief GLenum glClientWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout)
  */
-GLE_API GLboolean glIsSync( GLsync sync );
+GLE_API GLenum glClientWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout);
 
 /**
- * @brief void glDeleteSync( GLsync sync );
+ * @brief void glDeleteSync(GLsync sync)
  */
-GLE_API void glDeleteSync( GLsync sync );
+GLE_API void glDeleteSync(GLsync sync);
 
 /**
- * @brief GLenum glClientWaitSync( GLsync sync, GLbitfield flags, GLuint64 timeout );
+ * @brief GLsync glFenceSync(GLenum condition, GLbitfield flags)
  */
-GLE_API GLenum glClientWaitSync( GLsync sync, GLbitfield flags, GLuint64 timeout );
+GLE_API GLsync glFenceSync(GLenum condition, GLbitfield flags);
 
 /**
- * @brief void glWaitSync( GLsync sync, GLbitfield flags, GLuint64 timeout );
+ * @brief void glGetInteger64v(GLenum pname, GLint64 *params)
  */
-GLE_API void glWaitSync( GLsync sync, GLbitfield flags, GLuint64 timeout );
+GLE_API void glGetInteger64v(GLenum pname, GLint64 *params);
 
 /**
- * @brief void glGetInteger64v( GLenum pname, GLint64 *params );
+ * @brief void glGetSynciv(GLsync sync, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values)
  */
-GLE_API void glGetInteger64v( GLenum pname, GLint64 *params );
+GLE_API void glGetSynciv(GLsync sync, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values);
 
 /**
- * @brief void glGetSynciv( GLsync sync, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values );
+ * @brief GLboolean glIsSync(GLsync sync)
  */
-GLE_API void glGetSynciv( GLsync sync, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values );
+GLE_API GLboolean glIsSync(GLsync sync);
+
+/**
+ * @brief void glWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout)
+ */
+GLE_API void glWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout);
 
 //@}
+
+
 
 
 /**
@@ -4421,23 +4755,28 @@ GLE_API void glGetSynciv( GLsync sync, GLenum pname, GLsizei bufSize, GLsizei *l
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_tessellation_shader is supported.
- * @return Returns \c true if \b GL_ARB_tessellation_shader is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_tessellation_shader is supported.
+ * @return Returns \c true if \b GL_ARB_tessellation_shader is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_tessellation_shader();
 
-/**
- * @brief void glPatchParameteri( GLenum pname, GLint value );
- */
-GLE_API void glPatchParameteri( GLenum pname, GLint value );
+
 
 /**
- * @brief void glPatchParameterfv( GLenum pname, const GLfloat *values );
+ * @brief void glPatchParameterfv(GLenum pname, const GLfloat *values)
  */
-GLE_API void glPatchParameterfv( GLenum pname, const GLfloat *values );
+GLE_API void glPatchParameterfv(GLenum pname, const GLfloat *values);
+
+/**
+ * @brief void glPatchParameteri(GLenum pname, GLint value)
+ */
+GLE_API void glPatchParameteri(GLenum pname, GLint value);
 
 //@}
+
+
 
 
 /**
@@ -4447,13 +4786,17 @@ GLE_API void glPatchParameterfv( GLenum pname, const GLfloat *values );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_border_clamp is supported.
- * @return Returns \c true if \b GL_ARB_texture_border_clamp is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_border_clamp is supported.
+ * @return Returns \c true if \b GL_ARB_texture_border_clamp is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_border_clamp();
 
+
 //@}
+
+
 
 
 /**
@@ -4463,18 +4806,23 @@ GLE_API bool isGL_ARB_texture_border_clamp();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_buffer_object is supported.
- * @return Returns \c true if \b GL_ARB_texture_buffer_object is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_buffer_object is supported.
+ * @return Returns \c true if \b GL_ARB_texture_buffer_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_buffer_object();
 
+
+
 /**
- * @brief void glTexBufferARB( GLenum target, GLenum internalformat, GLuint buffer );
+ * @brief void glTexBufferARB(GLenum target, GLenum internalformat, GLuint buffer)
  */
-GLE_API void glTexBufferARB( GLenum target, GLenum internalformat, GLuint buffer );
+GLE_API void glTexBufferARB(GLenum target, GLenum internalformat, GLuint buffer);
 
 //@}
+
+
 
 
 /**
@@ -4484,13 +4832,17 @@ GLE_API void glTexBufferARB( GLenum target, GLenum internalformat, GLuint buffer
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_buffer_object_rgb32 is supported.
- * @return Returns \c true if \b GL_ARB_texture_buffer_object_rgb32 is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_buffer_object_rgb32 is supported.
+ * @return Returns \c true if \b GL_ARB_texture_buffer_object_rgb32 is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_buffer_object_rgb32();
 
+
 //@}
+
+
 
 
 /**
@@ -4500,48 +4852,53 @@ GLE_API bool isGL_ARB_texture_buffer_object_rgb32();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_compression is supported.
- * @return Returns \c true if \b GL_ARB_texture_compression is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_compression is supported.
+ * @return Returns \c true if \b GL_ARB_texture_compression is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_compression();
 
-/**
- * @brief void glCompressedTexImage3DARB( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *data );
- */
-GLE_API void glCompressedTexImage3DARB( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *data );
+
 
 /**
- * @brief void glCompressedTexImage2DARB( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *data );
+ * @brief void glCompressedTexImage1DARB(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *data)
  */
-GLE_API void glCompressedTexImage2DARB( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *data );
+GLE_API void glCompressedTexImage1DARB(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *data);
 
 /**
- * @brief void glCompressedTexImage1DARB( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *data );
+ * @brief void glCompressedTexImage2DARB(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *data)
  */
-GLE_API void glCompressedTexImage1DARB( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *data );
+GLE_API void glCompressedTexImage2DARB(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *data);
 
 /**
- * @brief void glCompressedTexSubImage3DARB( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *data );
+ * @brief void glCompressedTexImage3DARB(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *data)
  */
-GLE_API void glCompressedTexSubImage3DARB( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *data );
+GLE_API void glCompressedTexImage3DARB(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *data);
 
 /**
- * @brief void glCompressedTexSubImage2DARB( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *data );
+ * @brief void glCompressedTexSubImage1DARB(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *data)
  */
-GLE_API void glCompressedTexSubImage2DARB( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *data );
+GLE_API void glCompressedTexSubImage1DARB(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *data);
 
 /**
- * @brief void glCompressedTexSubImage1DARB( GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *data );
+ * @brief void glCompressedTexSubImage2DARB(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *data)
  */
-GLE_API void glCompressedTexSubImage1DARB( GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *data );
+GLE_API void glCompressedTexSubImage2DARB(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *data);
 
 /**
- * @brief void glGetCompressedTexImageARB( GLenum target, GLint level, GLvoid *img );
+ * @brief void glCompressedTexSubImage3DARB(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *data)
  */
-GLE_API void glGetCompressedTexImageARB( GLenum target, GLint level, GLvoid *img );
+GLE_API void glCompressedTexSubImage3DARB(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *data);
+
+/**
+ * @brief void glGetCompressedTexImageARB(GLenum target, GLint level, GLvoid *img)
+ */
+GLE_API void glGetCompressedTexImageARB(GLenum target, GLint level, GLvoid *img);
 
 //@}
+
+
 
 
 /**
@@ -4551,13 +4908,17 @@ GLE_API void glGetCompressedTexImageARB( GLenum target, GLint level, GLvoid *img
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_compression_bptc is supported.
- * @return Returns \c true if \b GL_ARB_texture_compression_bptc is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_compression_bptc is supported.
+ * @return Returns \c true if \b GL_ARB_texture_compression_bptc is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_compression_bptc();
 
+
 //@}
+
+
 
 
 /**
@@ -4567,13 +4928,17 @@ GLE_API bool isGL_ARB_texture_compression_bptc();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_compression_rgtc is supported.
- * @return Returns \c true if \b GL_ARB_texture_compression_rgtc is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_compression_rgtc is supported.
+ * @return Returns \c true if \b GL_ARB_texture_compression_rgtc is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_compression_rgtc();
 
+
 //@}
+
+
 
 
 /**
@@ -4583,13 +4948,17 @@ GLE_API bool isGL_ARB_texture_compression_rgtc();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_cube_map is supported.
- * @return Returns \c true if \b GL_ARB_texture_cube_map is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_cube_map is supported.
+ * @return Returns \c true if \b GL_ARB_texture_cube_map is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_cube_map();
 
+
 //@}
+
+
 
 
 /**
@@ -4599,13 +4968,17 @@ GLE_API bool isGL_ARB_texture_cube_map();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_cube_map_array is supported.
- * @return Returns \c true if \b GL_ARB_texture_cube_map_array is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_cube_map_array is supported.
+ * @return Returns \c true if \b GL_ARB_texture_cube_map_array is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_cube_map_array();
 
+
 //@}
+
+
 
 
 /**
@@ -4615,13 +4988,17 @@ GLE_API bool isGL_ARB_texture_cube_map_array();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_env_add is supported.
- * @return Returns \c true if \b GL_ARB_texture_env_add is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_env_add is supported.
+ * @return Returns \c true if \b GL_ARB_texture_env_add is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_env_add();
 
+
 //@}
+
+
 
 
 /**
@@ -4631,13 +5008,17 @@ GLE_API bool isGL_ARB_texture_env_add();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_env_combine is supported.
- * @return Returns \c true if \b GL_ARB_texture_env_combine is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_env_combine is supported.
+ * @return Returns \c true if \b GL_ARB_texture_env_combine is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_env_combine();
 
+
 //@}
+
+
 
 
 /**
@@ -4647,13 +5028,17 @@ GLE_API bool isGL_ARB_texture_env_combine();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_env_crossbar is supported.
- * @return Returns \c true if \b GL_ARB_texture_env_crossbar is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_env_crossbar is supported.
+ * @return Returns \c true if \b GL_ARB_texture_env_crossbar is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_env_crossbar();
 
+
 //@}
+
+
 
 
 /**
@@ -4663,13 +5048,17 @@ GLE_API bool isGL_ARB_texture_env_crossbar();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_env_dot3 is supported.
- * @return Returns \c true if \b GL_ARB_texture_env_dot3 is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_env_dot3 is supported.
+ * @return Returns \c true if \b GL_ARB_texture_env_dot3 is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_env_dot3();
 
+
 //@}
+
+
 
 
 /**
@@ -4679,13 +5068,17 @@ GLE_API bool isGL_ARB_texture_env_dot3();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_float is supported.
- * @return Returns \c true if \b GL_ARB_texture_float is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_float is supported.
+ * @return Returns \c true if \b GL_ARB_texture_float is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_float();
 
+
 //@}
+
+
 
 
 /**
@@ -4695,13 +5088,17 @@ GLE_API bool isGL_ARB_texture_float();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_gather is supported.
- * @return Returns \c true if \b GL_ARB_texture_gather is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_gather is supported.
+ * @return Returns \c true if \b GL_ARB_texture_gather is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_gather();
 
+
 //@}
+
+
 
 
 /**
@@ -4711,13 +5108,17 @@ GLE_API bool isGL_ARB_texture_gather();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_mirrored_repeat is supported.
- * @return Returns \c true if \b GL_ARB_texture_mirrored_repeat is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_mirrored_repeat is supported.
+ * @return Returns \c true if \b GL_ARB_texture_mirrored_repeat is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_mirrored_repeat();
 
+
 //@}
+
+
 
 
 /**
@@ -4727,33 +5128,38 @@ GLE_API bool isGL_ARB_texture_mirrored_repeat();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_multisample is supported.
- * @return Returns \c true if \b GL_ARB_texture_multisample is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_multisample is supported.
+ * @return Returns \c true if \b GL_ARB_texture_multisample is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_multisample();
 
-/**
- * @brief void glTexImage2DMultisample( GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations );
- */
-GLE_API void glTexImage2DMultisample( GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations );
+
 
 /**
- * @brief void glTexImage3DMultisample( GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations );
+ * @brief void glGetMultisamplefv(GLenum pname, GLuint index, GLfloat *val)
  */
-GLE_API void glTexImage3DMultisample( GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations );
+GLE_API void glGetMultisamplefv(GLenum pname, GLuint index, GLfloat *val);
 
 /**
- * @brief void glGetMultisamplefv( GLenum pname, GLuint index, GLfloat *val );
+ * @brief void glSampleMaski(GLuint index, GLbitfield mask)
  */
-GLE_API void glGetMultisamplefv( GLenum pname, GLuint index, GLfloat *val );
+GLE_API void glSampleMaski(GLuint index, GLbitfield mask);
 
 /**
- * @brief void glSampleMaski( GLuint index, GLbitfield mask );
+ * @brief void glTexImage2DMultisample(GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations)
  */
-GLE_API void glSampleMaski( GLuint index, GLbitfield mask );
+GLE_API void glTexImage2DMultisample(GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations);
+
+/**
+ * @brief void glTexImage3DMultisample(GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations)
+ */
+GLE_API void glTexImage3DMultisample(GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
 
 //@}
+
+
 
 
 /**
@@ -4763,13 +5169,17 @@ GLE_API void glSampleMaski( GLuint index, GLbitfield mask );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_non_power_of_two is supported.
- * @return Returns \c true if \b GL_ARB_texture_non_power_of_two is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_non_power_of_two is supported.
+ * @return Returns \c true if \b GL_ARB_texture_non_power_of_two is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_non_power_of_two();
 
+
 //@}
+
+
 
 
 /**
@@ -4779,13 +5189,17 @@ GLE_API bool isGL_ARB_texture_non_power_of_two();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_query_lod is supported.
- * @return Returns \c true if \b GL_ARB_texture_query_lod is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_query_lod is supported.
+ * @return Returns \c true if \b GL_ARB_texture_query_lod is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_query_lod();
 
+
 //@}
+
+
 
 
 /**
@@ -4795,13 +5209,17 @@ GLE_API bool isGL_ARB_texture_query_lod();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_rectangle is supported.
- * @return Returns \c true if \b GL_ARB_texture_rectangle is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_rectangle is supported.
+ * @return Returns \c true if \b GL_ARB_texture_rectangle is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_rectangle();
 
+
 //@}
+
+
 
 
 /**
@@ -4811,13 +5229,17 @@ GLE_API bool isGL_ARB_texture_rectangle();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_rg is supported.
- * @return Returns \c true if \b GL_ARB_texture_rg is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_rg is supported.
+ * @return Returns \c true if \b GL_ARB_texture_rg is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_rg();
 
+
 //@}
+
+
 
 
 /**
@@ -4827,13 +5249,17 @@ GLE_API bool isGL_ARB_texture_rg();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_rgb10_a2ui is supported.
- * @return Returns \c true if \b GL_ARB_texture_rgb10_a2ui is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_rgb10_a2ui is supported.
+ * @return Returns \c true if \b GL_ARB_texture_rgb10_a2ui is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_rgb10_a2ui();
 
+
 //@}
+
+
 
 
 /**
@@ -4843,13 +5269,17 @@ GLE_API bool isGL_ARB_texture_rgb10_a2ui();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_texture_swizzle is supported.
- * @return Returns \c true if \b GL_ARB_texture_swizzle is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_texture_swizzle is supported.
+ * @return Returns \c true if \b GL_ARB_texture_swizzle is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_texture_swizzle();
 
+
 //@}
+
+
 
 
 /**
@@ -4859,28 +5289,33 @@ GLE_API bool isGL_ARB_texture_swizzle();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_timer_query is supported.
- * @return Returns \c true if \b GL_ARB_timer_query is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_timer_query is supported.
+ * @return Returns \c true if \b GL_ARB_timer_query is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_timer_query();
 
-/**
- * @brief void glQueryCounter( GLuint id, GLenum target );
- */
-GLE_API void glQueryCounter( GLuint id, GLenum target );
+
 
 /**
- * @brief void glGetQueryObjecti64v( GLuint id, GLenum pname, GLint64 *params );
+ * @brief void glGetQueryObjecti64v(GLuint id, GLenum pname, GLint64 *params)
  */
-GLE_API void glGetQueryObjecti64v( GLuint id, GLenum pname, GLint64 *params );
+GLE_API void glGetQueryObjecti64v(GLuint id, GLenum pname, GLint64 *params);
 
 /**
- * @brief void glGetQueryObjectui64v( GLuint id, GLenum pname, GLuint64 *params );
+ * @brief void glGetQueryObjectui64v(GLuint id, GLenum pname, GLuint64 *params)
  */
-GLE_API void glGetQueryObjectui64v( GLuint id, GLenum pname, GLuint64 *params );
+GLE_API void glGetQueryObjectui64v(GLuint id, GLenum pname, GLuint64 *params);
+
+/**
+ * @brief void glQueryCounter(GLuint id, GLenum target)
+ */
+GLE_API void glQueryCounter(GLuint id, GLenum target);
 
 //@}
+
+
 
 
 /**
@@ -4890,48 +5325,53 @@ GLE_API void glGetQueryObjectui64v( GLuint id, GLenum pname, GLuint64 *params );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_transform_feedback2 is supported.
- * @return Returns \c true if \b GL_ARB_transform_feedback2 is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_transform_feedback2 is supported.
+ * @return Returns \c true if \b GL_ARB_transform_feedback2 is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_transform_feedback2();
 
-/**
- * @brief void glBindTransformFeedback( GLenum target, GLuint id );
- */
-GLE_API void glBindTransformFeedback( GLenum target, GLuint id );
+
 
 /**
- * @brief void glDeleteTransformFeedbacks( GLsizei n, const GLuint *ids );
+ * @brief void glBindTransformFeedback(GLenum target, GLuint id)
  */
-GLE_API void glDeleteTransformFeedbacks( GLsizei n, const GLuint *ids );
+GLE_API void glBindTransformFeedback(GLenum target, GLuint id);
 
 /**
- * @brief void glGenTransformFeedbacks( GLsizei n, GLuint *ids );
+ * @brief void glDeleteTransformFeedbacks(GLsizei n, const GLuint *ids)
  */
-GLE_API void glGenTransformFeedbacks( GLsizei n, GLuint *ids );
+GLE_API void glDeleteTransformFeedbacks(GLsizei n, const GLuint *ids);
 
 /**
- * @brief GLboolean glIsTransformFeedback( GLuint id );
+ * @brief void glDrawTransformFeedback(GLenum mode, GLuint id)
  */
-GLE_API GLboolean glIsTransformFeedback( GLuint id );
+GLE_API void glDrawTransformFeedback(GLenum mode, GLuint id);
 
 /**
- * @brief void glPauseTransformFeedback( void );
+ * @brief void glGenTransformFeedbacks(GLsizei n, GLuint *ids)
  */
-GLE_API void glPauseTransformFeedback( void );
+GLE_API void glGenTransformFeedbacks(GLsizei n, GLuint *ids);
 
 /**
- * @brief void glResumeTransformFeedback( void );
+ * @brief GLboolean glIsTransformFeedback(GLuint id)
  */
-GLE_API void glResumeTransformFeedback( void );
+GLE_API GLboolean glIsTransformFeedback(GLuint id);
 
 /**
- * @brief void glDrawTransformFeedback( GLenum mode, GLuint id );
+ * @brief void glPauseTransformFeedback(void)
  */
-GLE_API void glDrawTransformFeedback( GLenum mode, GLuint id );
+GLE_API void glPauseTransformFeedback(void);
+
+/**
+ * @brief void glResumeTransformFeedback(void)
+ */
+GLE_API void glResumeTransformFeedback(void);
 
 //@}
+
+
 
 
 /**
@@ -4941,33 +5381,38 @@ GLE_API void glDrawTransformFeedback( GLenum mode, GLuint id );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_transform_feedback3 is supported.
- * @return Returns \c true if \b GL_ARB_transform_feedback3 is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_transform_feedback3 is supported.
+ * @return Returns \c true if \b GL_ARB_transform_feedback3 is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_transform_feedback3();
 
-/**
- * @brief void glDrawTransformFeedbackStream( GLenum mode, GLuint id, GLuint stream );
- */
-GLE_API void glDrawTransformFeedbackStream( GLenum mode, GLuint id, GLuint stream );
+
 
 /**
- * @brief void glBeginQueryIndexed( GLenum target, GLuint index, GLuint id );
+ * @brief void glBeginQueryIndexed(GLenum target, GLuint index, GLuint id)
  */
-GLE_API void glBeginQueryIndexed( GLenum target, GLuint index, GLuint id );
+GLE_API void glBeginQueryIndexed(GLenum target, GLuint index, GLuint id);
 
 /**
- * @brief void glEndQueryIndexed( GLenum target, GLuint index );
+ * @brief void glDrawTransformFeedbackStream(GLenum mode, GLuint id, GLuint stream)
  */
-GLE_API void glEndQueryIndexed( GLenum target, GLuint index );
+GLE_API void glDrawTransformFeedbackStream(GLenum mode, GLuint id, GLuint stream);
 
 /**
- * @brief void glGetQueryIndexediv( GLenum target, GLuint index, GLenum pname, GLint *params );
+ * @brief void glEndQueryIndexed(GLenum target, GLuint index)
  */
-GLE_API void glGetQueryIndexediv( GLenum target, GLuint index, GLenum pname, GLint *params );
+GLE_API void glEndQueryIndexed(GLenum target, GLuint index);
+
+/**
+ * @brief void glGetQueryIndexediv(GLenum target, GLuint index, GLenum pname, GLint *params)
+ */
+GLE_API void glGetQueryIndexediv(GLenum target, GLuint index, GLenum pname, GLint *params);
 
 //@}
+
+
 
 
 /**
@@ -4977,33 +5422,38 @@ GLE_API void glGetQueryIndexediv( GLenum target, GLuint index, GLenum pname, GLi
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_transpose_matrix is supported.
- * @return Returns \c true if \b GL_ARB_transpose_matrix is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_transpose_matrix is supported.
+ * @return Returns \c true if \b GL_ARB_transpose_matrix is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_transpose_matrix();
 
-/**
- * @brief void glLoadTransposeMatrixfARB( const GLfloat *m );
- */
-GLE_API void glLoadTransposeMatrixfARB( const GLfloat *m );
+
 
 /**
- * @brief void glLoadTransposeMatrixdARB( const GLdouble *m );
+ * @brief void glLoadTransposeMatrixdARB(const GLdouble *m)
  */
-GLE_API void glLoadTransposeMatrixdARB( const GLdouble *m );
+GLE_API void glLoadTransposeMatrixdARB(const GLdouble *m);
 
 /**
- * @brief void glMultTransposeMatrixfARB( const GLfloat *m );
+ * @brief void glLoadTransposeMatrixfARB(const GLfloat *m)
  */
-GLE_API void glMultTransposeMatrixfARB( const GLfloat *m );
+GLE_API void glLoadTransposeMatrixfARB(const GLfloat *m);
 
 /**
- * @brief void glMultTransposeMatrixdARB( const GLdouble *m );
+ * @brief void glMultTransposeMatrixdARB(const GLdouble *m)
  */
-GLE_API void glMultTransposeMatrixdARB( const GLdouble *m );
+GLE_API void glMultTransposeMatrixdARB(const GLdouble *m);
+
+/**
+ * @brief void glMultTransposeMatrixfARB(const GLfloat *m)
+ */
+GLE_API void glMultTransposeMatrixfARB(const GLfloat *m);
 
 //@}
+
+
 
 
 /**
@@ -5013,48 +5463,53 @@ GLE_API void glMultTransposeMatrixdARB( const GLdouble *m );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_uniform_buffer_object is supported.
- * @return Returns \c true if \b GL_ARB_uniform_buffer_object is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_uniform_buffer_object is supported.
+ * @return Returns \c true if \b GL_ARB_uniform_buffer_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_uniform_buffer_object();
 
-/**
- * @brief void glGetUniformIndices( GLuint program, GLsizei uniformCount, const GLchar* *uniformNames, GLuint *uniformIndices );
- */
-GLE_API void glGetUniformIndices( GLuint program, GLsizei uniformCount, const GLchar* *uniformNames, GLuint *uniformIndices );
+
 
 /**
- * @brief void glGetActiveUniformsiv( GLuint program, GLsizei uniformCount, const GLuint *uniformIndices, GLenum pname, GLint *params );
+ * @brief void glGetActiveUniformBlockName(GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformBlockName)
  */
-GLE_API void glGetActiveUniformsiv( GLuint program, GLsizei uniformCount, const GLuint *uniformIndices, GLenum pname, GLint *params );
+GLE_API void glGetActiveUniformBlockName(GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformBlockName);
 
 /**
- * @brief void glGetActiveUniformName( GLuint program, GLuint uniformIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformName );
+ * @brief void glGetActiveUniformBlockiv(GLuint program, GLuint uniformBlockIndex, GLenum pname, GLint *params)
  */
-GLE_API void glGetActiveUniformName( GLuint program, GLuint uniformIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformName );
+GLE_API void glGetActiveUniformBlockiv(GLuint program, GLuint uniformBlockIndex, GLenum pname, GLint *params);
 
 /**
- * @brief GLuint glGetUniformBlockIndex( GLuint program, const GLchar *uniformBlockName );
+ * @brief void glGetActiveUniformName(GLuint program, GLuint uniformIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformName)
  */
-GLE_API GLuint glGetUniformBlockIndex( GLuint program, const GLchar *uniformBlockName );
+GLE_API void glGetActiveUniformName(GLuint program, GLuint uniformIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformName);
 
 /**
- * @brief void glGetActiveUniformBlockiv( GLuint program, GLuint uniformBlockIndex, GLenum pname, GLint *params );
+ * @brief void glGetActiveUniformsiv(GLuint program, GLsizei uniformCount, const GLuint *uniformIndices, GLenum pname, GLint *params)
  */
-GLE_API void glGetActiveUniformBlockiv( GLuint program, GLuint uniformBlockIndex, GLenum pname, GLint *params );
+GLE_API void glGetActiveUniformsiv(GLuint program, GLsizei uniformCount, const GLuint *uniformIndices, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetActiveUniformBlockName( GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformBlockName );
+ * @brief GLuint glGetUniformBlockIndex(GLuint program, const GLchar *uniformBlockName)
  */
-GLE_API void glGetActiveUniformBlockName( GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformBlockName );
+GLE_API GLuint glGetUniformBlockIndex(GLuint program, const GLchar *uniformBlockName);
 
 /**
- * @brief void glUniformBlockBinding( GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding );
+ * @brief void glGetUniformIndices(GLuint program, GLsizei uniformCount, const GLchar* *uniformNames, GLuint *uniformIndices)
  */
-GLE_API void glUniformBlockBinding( GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding );
+GLE_API void glGetUniformIndices(GLuint program, GLsizei uniformCount, const GLchar* *uniformNames, GLuint *uniformIndices);
+
+/**
+ * @brief void glUniformBlockBinding(GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding)
+ */
+GLE_API void glUniformBlockBinding(GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding);
 
 //@}
+
+
 
 
 /**
@@ -5064,13 +5519,17 @@ GLE_API void glUniformBlockBinding( GLuint program, GLuint uniformBlockIndex, GL
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_vertex_array_bgra is supported.
- * @return Returns \c true if \b GL_ARB_vertex_array_bgra is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_vertex_array_bgra is supported.
+ * @return Returns \c true if \b GL_ARB_vertex_array_bgra is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_vertex_array_bgra();
 
+
 //@}
+
+
 
 
 /**
@@ -5080,33 +5539,38 @@ GLE_API bool isGL_ARB_vertex_array_bgra();
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_vertex_array_object is supported.
- * @return Returns \c true if \b GL_ARB_vertex_array_object is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_vertex_array_object is supported.
+ * @return Returns \c true if \b GL_ARB_vertex_array_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_vertex_array_object();
 
-/**
- * @brief void glBindVertexArray( GLuint array );
- */
-GLE_API void glBindVertexArray( GLuint array );
+
 
 /**
- * @brief void glDeleteVertexArrays( GLsizei n, const GLuint *arrays );
+ * @brief void glBindVertexArray(GLuint array)
  */
-GLE_API void glDeleteVertexArrays( GLsizei n, const GLuint *arrays );
+GLE_API void glBindVertexArray(GLuint array);
 
 /**
- * @brief void glGenVertexArrays( GLsizei n, GLuint *arrays );
+ * @brief void glDeleteVertexArrays(GLsizei n, const GLuint *arrays)
  */
-GLE_API void glGenVertexArrays( GLsizei n, GLuint *arrays );
+GLE_API void glDeleteVertexArrays(GLsizei n, const GLuint *arrays);
 
 /**
- * @brief GLboolean glIsVertexArray( GLuint array );
+ * @brief void glGenVertexArrays(GLsizei n, GLuint *arrays)
  */
-GLE_API GLboolean glIsVertexArray( GLuint array );
+GLE_API void glGenVertexArrays(GLsizei n, GLuint *arrays);
+
+/**
+ * @brief GLboolean glIsVertexArray(GLuint array)
+ */
+GLE_API GLboolean glIsVertexArray(GLuint array);
 
 //@}
+
+
 
 
 /**
@@ -5116,63 +5580,68 @@ GLE_API GLboolean glIsVertexArray( GLuint array );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_vertex_blend is supported.
- * @return Returns \c true if \b GL_ARB_vertex_blend is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_vertex_blend is supported.
+ * @return Returns \c true if \b GL_ARB_vertex_blend is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_vertex_blend();
 
-/**
- * @brief void glWeightbvARB( GLint size, const GLbyte *weights );
- */
-GLE_API void glWeightbvARB( GLint size, const GLbyte *weights );
+
 
 /**
- * @brief void glWeightsvARB( GLint size, const GLshort *weights );
+ * @brief void glVertexBlendARB(GLint count)
  */
-GLE_API void glWeightsvARB( GLint size, const GLshort *weights );
+GLE_API void glVertexBlendARB(GLint count);
 
 /**
- * @brief void glWeightivARB( GLint size, const GLint *weights );
+ * @brief void glWeightPointerARB(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
  */
-GLE_API void glWeightivARB( GLint size, const GLint *weights );
+GLE_API void glWeightPointerARB(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
 
 /**
- * @brief void glWeightfvARB( GLint size, const GLfloat *weights );
+ * @brief void glWeightbvARB(GLint size, const GLbyte *weights)
  */
-GLE_API void glWeightfvARB( GLint size, const GLfloat *weights );
+GLE_API void glWeightbvARB(GLint size, const GLbyte *weights);
 
 /**
- * @brief void glWeightdvARB( GLint size, const GLdouble *weights );
+ * @brief void glWeightdvARB(GLint size, const GLdouble *weights)
  */
-GLE_API void glWeightdvARB( GLint size, const GLdouble *weights );
+GLE_API void glWeightdvARB(GLint size, const GLdouble *weights);
 
 /**
- * @brief void glWeightubvARB( GLint size, const GLubyte *weights );
+ * @brief void glWeightfvARB(GLint size, const GLfloat *weights)
  */
-GLE_API void glWeightubvARB( GLint size, const GLubyte *weights );
+GLE_API void glWeightfvARB(GLint size, const GLfloat *weights);
 
 /**
- * @brief void glWeightusvARB( GLint size, const GLushort *weights );
+ * @brief void glWeightivARB(GLint size, const GLint *weights)
  */
-GLE_API void glWeightusvARB( GLint size, const GLushort *weights );
+GLE_API void glWeightivARB(GLint size, const GLint *weights);
 
 /**
- * @brief void glWeightuivARB( GLint size, const GLuint *weights );
+ * @brief void glWeightsvARB(GLint size, const GLshort *weights)
  */
-GLE_API void glWeightuivARB( GLint size, const GLuint *weights );
+GLE_API void glWeightsvARB(GLint size, const GLshort *weights);
 
 /**
- * @brief void glWeightPointerARB( GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+ * @brief void glWeightubvARB(GLint size, const GLubyte *weights)
  */
-GLE_API void glWeightPointerARB( GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+GLE_API void glWeightubvARB(GLint size, const GLubyte *weights);
 
 /**
- * @brief void glVertexBlendARB( GLint count );
+ * @brief void glWeightuivARB(GLint size, const GLuint *weights)
  */
-GLE_API void glVertexBlendARB( GLint count );
+GLE_API void glWeightuivARB(GLint size, const GLuint *weights);
+
+/**
+ * @brief void glWeightusvARB(GLint size, const GLushort *weights)
+ */
+GLE_API void glWeightusvARB(GLint size, const GLushort *weights);
 
 //@}
+
+
 
 
 /**
@@ -5182,68 +5651,73 @@ GLE_API void glVertexBlendARB( GLint count );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_vertex_buffer_object is supported.
- * @return Returns \c true if \b GL_ARB_vertex_buffer_object is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_vertex_buffer_object is supported.
+ * @return Returns \c true if \b GL_ARB_vertex_buffer_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_vertex_buffer_object();
 
-/**
- * @brief void glBindBufferARB( GLenum target, GLuint buffer );
- */
-GLE_API void glBindBufferARB( GLenum target, GLuint buffer );
+
 
 /**
- * @brief void glDeleteBuffersARB( GLsizei n, const GLuint *buffers );
+ * @brief void glBindBufferARB(GLenum target, GLuint buffer)
  */
-GLE_API void glDeleteBuffersARB( GLsizei n, const GLuint *buffers );
+GLE_API void glBindBufferARB(GLenum target, GLuint buffer);
 
 /**
- * @brief void glGenBuffersARB( GLsizei n, GLuint *buffers );
+ * @brief void glBufferDataARB(GLenum target, GLsizeiptrARB size, const GLvoid *data, GLenum usage)
  */
-GLE_API void glGenBuffersARB( GLsizei n, GLuint *buffers );
+GLE_API void glBufferDataARB(GLenum target, GLsizeiptrARB size, const GLvoid *data, GLenum usage);
 
 /**
- * @brief GLboolean glIsBufferARB( GLuint buffer );
+ * @brief void glBufferSubDataARB(GLenum target, GLintptrARB offset, GLsizeiptrARB size, const GLvoid *data)
  */
-GLE_API GLboolean glIsBufferARB( GLuint buffer );
+GLE_API void glBufferSubDataARB(GLenum target, GLintptrARB offset, GLsizeiptrARB size, const GLvoid *data);
 
 /**
- * @brief void glBufferDataARB( GLenum target, GLsizeiptrARB size, const GLvoid *data, GLenum usage );
+ * @brief void glDeleteBuffersARB(GLsizei n, const GLuint *buffers)
  */
-GLE_API void glBufferDataARB( GLenum target, GLsizeiptrARB size, const GLvoid *data, GLenum usage );
+GLE_API void glDeleteBuffersARB(GLsizei n, const GLuint *buffers);
 
 /**
- * @brief void glBufferSubDataARB( GLenum target, GLintptrARB offset, GLsizeiptrARB size, const GLvoid *data );
+ * @brief void glGenBuffersARB(GLsizei n, GLuint *buffers)
  */
-GLE_API void glBufferSubDataARB( GLenum target, GLintptrARB offset, GLsizeiptrARB size, const GLvoid *data );
+GLE_API void glGenBuffersARB(GLsizei n, GLuint *buffers);
 
 /**
- * @brief void glGetBufferSubDataARB( GLenum target, GLintptrARB offset, GLsizeiptrARB size, GLvoid *data );
+ * @brief void glGetBufferParameterivARB(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glGetBufferSubDataARB( GLenum target, GLintptrARB offset, GLsizeiptrARB size, GLvoid *data );
+GLE_API void glGetBufferParameterivARB(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief GLvoid* glMapBufferARB( GLenum target, GLenum access );
+ * @brief void glGetBufferPointervARB(GLenum target, GLenum pname, GLvoid* *params)
  */
-GLE_API GLvoid* glMapBufferARB( GLenum target, GLenum access );
+GLE_API void glGetBufferPointervARB(GLenum target, GLenum pname, GLvoid* *params);
 
 /**
- * @brief GLboolean glUnmapBufferARB( GLenum target );
+ * @brief void glGetBufferSubDataARB(GLenum target, GLintptrARB offset, GLsizeiptrARB size, GLvoid *data)
  */
-GLE_API GLboolean glUnmapBufferARB( GLenum target );
+GLE_API void glGetBufferSubDataARB(GLenum target, GLintptrARB offset, GLsizeiptrARB size, GLvoid *data);
 
 /**
- * @brief void glGetBufferParameterivARB( GLenum target, GLenum pname, GLint *params );
+ * @brief GLboolean glIsBufferARB(GLuint buffer)
  */
-GLE_API void glGetBufferParameterivARB( GLenum target, GLenum pname, GLint *params );
+GLE_API GLboolean glIsBufferARB(GLuint buffer);
 
 /**
- * @brief void glGetBufferPointervARB( GLenum target, GLenum pname, GLvoid* *params );
+ * @brief GLvoid* glMapBufferARB(GLenum target, GLenum access)
  */
-GLE_API void glGetBufferPointervARB( GLenum target, GLenum pname, GLvoid* *params );
+GLE_API GLvoid* glMapBufferARB(GLenum target, GLenum access);
+
+/**
+ * @brief GLboolean glUnmapBufferARB(GLenum target)
+ */
+GLE_API GLboolean glUnmapBufferARB(GLenum target);
 
 //@}
+
+
 
 
 /**
@@ -5253,323 +5727,328 @@ GLE_API void glGetBufferPointervARB( GLenum target, GLenum pname, GLvoid* *param
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_vertex_program is supported.
- * @return Returns \c true if \b GL_ARB_vertex_program is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_vertex_program is supported.
+ * @return Returns \c true if \b GL_ARB_vertex_program is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_vertex_program();
 
-/**
- * @brief void glVertexAttrib1dARB( GLuint index, GLdouble x );
- */
-GLE_API void glVertexAttrib1dARB( GLuint index, GLdouble x );
+
 
 /**
- * @brief void glVertexAttrib1dvARB( GLuint index, const GLdouble *v );
+ * @brief void glBindProgramARB(GLenum target, GLuint program)
  */
-GLE_API void glVertexAttrib1dvARB( GLuint index, const GLdouble *v );
+GLE_API void glBindProgramARB(GLenum target, GLuint program);
 
 /**
- * @brief void glVertexAttrib1fARB( GLuint index, GLfloat x );
+ * @brief void glDeleteProgramsARB(GLsizei n, const GLuint *programs)
  */
-GLE_API void glVertexAttrib1fARB( GLuint index, GLfloat x );
+GLE_API void glDeleteProgramsARB(GLsizei n, const GLuint *programs);
 
 /**
- * @brief void glVertexAttrib1fvARB( GLuint index, const GLfloat *v );
+ * @brief void glDisableVertexAttribArrayARB(GLuint index)
  */
-GLE_API void glVertexAttrib1fvARB( GLuint index, const GLfloat *v );
+GLE_API void glDisableVertexAttribArrayARB(GLuint index);
 
 /**
- * @brief void glVertexAttrib1sARB( GLuint index, GLshort x );
+ * @brief void glEnableVertexAttribArrayARB(GLuint index)
  */
-GLE_API void glVertexAttrib1sARB( GLuint index, GLshort x );
+GLE_API void glEnableVertexAttribArrayARB(GLuint index);
 
 /**
- * @brief void glVertexAttrib1svARB( GLuint index, const GLshort *v );
+ * @brief void glGenProgramsARB(GLsizei n, GLuint *programs)
  */
-GLE_API void glVertexAttrib1svARB( GLuint index, const GLshort *v );
+GLE_API void glGenProgramsARB(GLsizei n, GLuint *programs);
 
 /**
- * @brief void glVertexAttrib2dARB( GLuint index, GLdouble x, GLdouble y );
+ * @brief void glGetProgramEnvParameterdvARB(GLenum target, GLuint index, GLdouble *params)
  */
-GLE_API void glVertexAttrib2dARB( GLuint index, GLdouble x, GLdouble y );
+GLE_API void glGetProgramEnvParameterdvARB(GLenum target, GLuint index, GLdouble *params);
 
 /**
- * @brief void glVertexAttrib2dvARB( GLuint index, const GLdouble *v );
+ * @brief void glGetProgramEnvParameterfvARB(GLenum target, GLuint index, GLfloat *params)
  */
-GLE_API void glVertexAttrib2dvARB( GLuint index, const GLdouble *v );
+GLE_API void glGetProgramEnvParameterfvARB(GLenum target, GLuint index, GLfloat *params);
 
 /**
- * @brief void glVertexAttrib2fARB( GLuint index, GLfloat x, GLfloat y );
+ * @brief void glGetProgramLocalParameterdvARB(GLenum target, GLuint index, GLdouble *params)
  */
-GLE_API void glVertexAttrib2fARB( GLuint index, GLfloat x, GLfloat y );
+GLE_API void glGetProgramLocalParameterdvARB(GLenum target, GLuint index, GLdouble *params);
 
 /**
- * @brief void glVertexAttrib2fvARB( GLuint index, const GLfloat *v );
+ * @brief void glGetProgramLocalParameterfvARB(GLenum target, GLuint index, GLfloat *params)
  */
-GLE_API void glVertexAttrib2fvARB( GLuint index, const GLfloat *v );
+GLE_API void glGetProgramLocalParameterfvARB(GLenum target, GLuint index, GLfloat *params);
 
 /**
- * @brief void glVertexAttrib2sARB( GLuint index, GLshort x, GLshort y );
+ * @brief void glGetProgramStringARB(GLenum target, GLenum pname, GLvoid *string)
  */
-GLE_API void glVertexAttrib2sARB( GLuint index, GLshort x, GLshort y );
+GLE_API void glGetProgramStringARB(GLenum target, GLenum pname, GLvoid *string);
 
 /**
- * @brief void glVertexAttrib2svARB( GLuint index, const GLshort *v );
+ * @brief void glGetProgramivARB(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glVertexAttrib2svARB( GLuint index, const GLshort *v );
+GLE_API void glGetProgramivARB(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glVertexAttrib3dARB( GLuint index, GLdouble x, GLdouble y, GLdouble z );
+ * @brief void glGetVertexAttribPointervARB(GLuint index, GLenum pname, GLvoid* *pointer)
  */
-GLE_API void glVertexAttrib3dARB( GLuint index, GLdouble x, GLdouble y, GLdouble z );
+GLE_API void glGetVertexAttribPointervARB(GLuint index, GLenum pname, GLvoid* *pointer);
 
 /**
- * @brief void glVertexAttrib3dvARB( GLuint index, const GLdouble *v );
+ * @brief void glGetVertexAttribdvARB(GLuint index, GLenum pname, GLdouble *params)
  */
-GLE_API void glVertexAttrib3dvARB( GLuint index, const GLdouble *v );
+GLE_API void glGetVertexAttribdvARB(GLuint index, GLenum pname, GLdouble *params);
 
 /**
- * @brief void glVertexAttrib3fARB( GLuint index, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glGetVertexAttribfvARB(GLuint index, GLenum pname, GLfloat *params)
  */
-GLE_API void glVertexAttrib3fARB( GLuint index, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glGetVertexAttribfvARB(GLuint index, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glVertexAttrib3fvARB( GLuint index, const GLfloat *v );
+ * @brief void glGetVertexAttribivARB(GLuint index, GLenum pname, GLint *params)
  */
-GLE_API void glVertexAttrib3fvARB( GLuint index, const GLfloat *v );
+GLE_API void glGetVertexAttribivARB(GLuint index, GLenum pname, GLint *params);
 
 /**
- * @brief void glVertexAttrib3sARB( GLuint index, GLshort x, GLshort y, GLshort z );
+ * @brief GLboolean glIsProgramARB(GLuint program)
  */
-GLE_API void glVertexAttrib3sARB( GLuint index, GLshort x, GLshort y, GLshort z );
+GLE_API GLboolean glIsProgramARB(GLuint program);
 
 /**
- * @brief void glVertexAttrib3svARB( GLuint index, const GLshort *v );
+ * @brief void glProgramEnvParameter4dARB(GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
  */
-GLE_API void glVertexAttrib3svARB( GLuint index, const GLshort *v );
+GLE_API void glProgramEnvParameter4dARB(GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 
 /**
- * @brief void glVertexAttrib4NbvARB( GLuint index, const GLbyte *v );
+ * @brief void glProgramEnvParameter4dvARB(GLenum target, GLuint index, const GLdouble *params)
  */
-GLE_API void glVertexAttrib4NbvARB( GLuint index, const GLbyte *v );
+GLE_API void glProgramEnvParameter4dvARB(GLenum target, GLuint index, const GLdouble *params);
 
 /**
- * @brief void glVertexAttrib4NivARB( GLuint index, const GLint *v );
+ * @brief void glProgramEnvParameter4fARB(GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
  */
-GLE_API void glVertexAttrib4NivARB( GLuint index, const GLint *v );
+GLE_API void glProgramEnvParameter4fARB(GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 
 /**
- * @brief void glVertexAttrib4NsvARB( GLuint index, const GLshort *v );
+ * @brief void glProgramEnvParameter4fvARB(GLenum target, GLuint index, const GLfloat *params)
  */
-GLE_API void glVertexAttrib4NsvARB( GLuint index, const GLshort *v );
+GLE_API void glProgramEnvParameter4fvARB(GLenum target, GLuint index, const GLfloat *params);
 
 /**
- * @brief void glVertexAttrib4NubARB( GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w );
+ * @brief void glProgramLocalParameter4dARB(GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
  */
-GLE_API void glVertexAttrib4NubARB( GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w );
+GLE_API void glProgramLocalParameter4dARB(GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 
 /**
- * @brief void glVertexAttrib4NubvARB( GLuint index, const GLubyte *v );
+ * @brief void glProgramLocalParameter4dvARB(GLenum target, GLuint index, const GLdouble *params)
  */
-GLE_API void glVertexAttrib4NubvARB( GLuint index, const GLubyte *v );
+GLE_API void glProgramLocalParameter4dvARB(GLenum target, GLuint index, const GLdouble *params);
 
 /**
- * @brief void glVertexAttrib4NuivARB( GLuint index, const GLuint *v );
+ * @brief void glProgramLocalParameter4fARB(GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
  */
-GLE_API void glVertexAttrib4NuivARB( GLuint index, const GLuint *v );
+GLE_API void glProgramLocalParameter4fARB(GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 
 /**
- * @brief void glVertexAttrib4NusvARB( GLuint index, const GLushort *v );
+ * @brief void glProgramLocalParameter4fvARB(GLenum target, GLuint index, const GLfloat *params)
  */
-GLE_API void glVertexAttrib4NusvARB( GLuint index, const GLushort *v );
+GLE_API void glProgramLocalParameter4fvARB(GLenum target, GLuint index, const GLfloat *params);
 
 /**
- * @brief void glVertexAttrib4bvARB( GLuint index, const GLbyte *v );
+ * @brief void glProgramStringARB(GLenum target, GLenum format, GLsizei len, const GLvoid *string)
  */
-GLE_API void glVertexAttrib4bvARB( GLuint index, const GLbyte *v );
+GLE_API void glProgramStringARB(GLenum target, GLenum format, GLsizei len, const GLvoid *string);
 
 /**
- * @brief void glVertexAttrib4dARB( GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+ * @brief void glVertexAttrib1dARB(GLuint index, GLdouble x)
  */
-GLE_API void glVertexAttrib4dARB( GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+GLE_API void glVertexAttrib1dARB(GLuint index, GLdouble x);
 
 /**
- * @brief void glVertexAttrib4dvARB( GLuint index, const GLdouble *v );
+ * @brief void glVertexAttrib1dvARB(GLuint index, const GLdouble *v)
  */
-GLE_API void glVertexAttrib4dvARB( GLuint index, const GLdouble *v );
+GLE_API void glVertexAttrib1dvARB(GLuint index, const GLdouble *v);
 
 /**
- * @brief void glVertexAttrib4fARB( GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+ * @brief void glVertexAttrib1fARB(GLuint index, GLfloat x)
  */
-GLE_API void glVertexAttrib4fARB( GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+GLE_API void glVertexAttrib1fARB(GLuint index, GLfloat x);
 
 /**
- * @brief void glVertexAttrib4fvARB( GLuint index, const GLfloat *v );
+ * @brief void glVertexAttrib1fvARB(GLuint index, const GLfloat *v)
  */
-GLE_API void glVertexAttrib4fvARB( GLuint index, const GLfloat *v );
+GLE_API void glVertexAttrib1fvARB(GLuint index, const GLfloat *v);
 
 /**
- * @brief void glVertexAttrib4ivARB( GLuint index, const GLint *v );
+ * @brief void glVertexAttrib1sARB(GLuint index, GLshort x)
  */
-GLE_API void glVertexAttrib4ivARB( GLuint index, const GLint *v );
+GLE_API void glVertexAttrib1sARB(GLuint index, GLshort x);
 
 /**
- * @brief void glVertexAttrib4sARB( GLuint index, GLshort x, GLshort y, GLshort z, GLshort w );
+ * @brief void glVertexAttrib1svARB(GLuint index, const GLshort *v)
  */
-GLE_API void glVertexAttrib4sARB( GLuint index, GLshort x, GLshort y, GLshort z, GLshort w );
+GLE_API void glVertexAttrib1svARB(GLuint index, const GLshort *v);
 
 /**
- * @brief void glVertexAttrib4svARB( GLuint index, const GLshort *v );
+ * @brief void glVertexAttrib2dARB(GLuint index, GLdouble x, GLdouble y)
  */
-GLE_API void glVertexAttrib4svARB( GLuint index, const GLshort *v );
+GLE_API void glVertexAttrib2dARB(GLuint index, GLdouble x, GLdouble y);
 
 /**
- * @brief void glVertexAttrib4ubvARB( GLuint index, const GLubyte *v );
+ * @brief void glVertexAttrib2dvARB(GLuint index, const GLdouble *v)
  */
-GLE_API void glVertexAttrib4ubvARB( GLuint index, const GLubyte *v );
+GLE_API void glVertexAttrib2dvARB(GLuint index, const GLdouble *v);
 
 /**
- * @brief void glVertexAttrib4uivARB( GLuint index, const GLuint *v );
+ * @brief void glVertexAttrib2fARB(GLuint index, GLfloat x, GLfloat y)
  */
-GLE_API void glVertexAttrib4uivARB( GLuint index, const GLuint *v );
+GLE_API void glVertexAttrib2fARB(GLuint index, GLfloat x, GLfloat y);
 
 /**
- * @brief void glVertexAttrib4usvARB( GLuint index, const GLushort *v );
+ * @brief void glVertexAttrib2fvARB(GLuint index, const GLfloat *v)
  */
-GLE_API void glVertexAttrib4usvARB( GLuint index, const GLushort *v );
+GLE_API void glVertexAttrib2fvARB(GLuint index, const GLfloat *v);
 
 /**
- * @brief void glVertexAttribPointerARB( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid *pointer );
+ * @brief void glVertexAttrib2sARB(GLuint index, GLshort x, GLshort y)
  */
-GLE_API void glVertexAttribPointerARB( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid *pointer );
+GLE_API void glVertexAttrib2sARB(GLuint index, GLshort x, GLshort y);
 
 /**
- * @brief void glEnableVertexAttribArrayARB( GLuint index );
+ * @brief void glVertexAttrib2svARB(GLuint index, const GLshort *v)
  */
-GLE_API void glEnableVertexAttribArrayARB( GLuint index );
+GLE_API void glVertexAttrib2svARB(GLuint index, const GLshort *v);
 
 /**
- * @brief void glDisableVertexAttribArrayARB( GLuint index );
+ * @brief void glVertexAttrib3dARB(GLuint index, GLdouble x, GLdouble y, GLdouble z)
  */
-GLE_API void glDisableVertexAttribArrayARB( GLuint index );
+GLE_API void glVertexAttrib3dARB(GLuint index, GLdouble x, GLdouble y, GLdouble z);
 
 /**
- * @brief void glProgramStringARB( GLenum target, GLenum format, GLsizei len, const GLvoid *string );
+ * @brief void glVertexAttrib3dvARB(GLuint index, const GLdouble *v)
  */
-GLE_API void glProgramStringARB( GLenum target, GLenum format, GLsizei len, const GLvoid *string );
+GLE_API void glVertexAttrib3dvARB(GLuint index, const GLdouble *v);
 
 /**
- * @brief void glBindProgramARB( GLenum target, GLuint program );
+ * @brief void glVertexAttrib3fARB(GLuint index, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glBindProgramARB( GLenum target, GLuint program );
+GLE_API void glVertexAttrib3fARB(GLuint index, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glDeleteProgramsARB( GLsizei n, const GLuint *programs );
+ * @brief void glVertexAttrib3fvARB(GLuint index, const GLfloat *v)
  */
-GLE_API void glDeleteProgramsARB( GLsizei n, const GLuint *programs );
+GLE_API void glVertexAttrib3fvARB(GLuint index, const GLfloat *v);
 
 /**
- * @brief void glGenProgramsARB( GLsizei n, GLuint *programs );
+ * @brief void glVertexAttrib3sARB(GLuint index, GLshort x, GLshort y, GLshort z)
  */
-GLE_API void glGenProgramsARB( GLsizei n, GLuint *programs );
+GLE_API void glVertexAttrib3sARB(GLuint index, GLshort x, GLshort y, GLshort z);
 
 /**
- * @brief void glProgramEnvParameter4dARB( GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+ * @brief void glVertexAttrib3svARB(GLuint index, const GLshort *v)
  */
-GLE_API void glProgramEnvParameter4dARB( GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+GLE_API void glVertexAttrib3svARB(GLuint index, const GLshort *v);
 
 /**
- * @brief void glProgramEnvParameter4dvARB( GLenum target, GLuint index, const GLdouble *params );
+ * @brief void glVertexAttrib4NbvARB(GLuint index, const GLbyte *v)
  */
-GLE_API void glProgramEnvParameter4dvARB( GLenum target, GLuint index, const GLdouble *params );
+GLE_API void glVertexAttrib4NbvARB(GLuint index, const GLbyte *v);
 
 /**
- * @brief void glProgramEnvParameter4fARB( GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+ * @brief void glVertexAttrib4NivARB(GLuint index, const GLint *v)
  */
-GLE_API void glProgramEnvParameter4fARB( GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+GLE_API void glVertexAttrib4NivARB(GLuint index, const GLint *v);
 
 /**
- * @brief void glProgramEnvParameter4fvARB( GLenum target, GLuint index, const GLfloat *params );
+ * @brief void glVertexAttrib4NsvARB(GLuint index, const GLshort *v)
  */
-GLE_API void glProgramEnvParameter4fvARB( GLenum target, GLuint index, const GLfloat *params );
+GLE_API void glVertexAttrib4NsvARB(GLuint index, const GLshort *v);
 
 /**
- * @brief void glProgramLocalParameter4dARB( GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+ * @brief void glVertexAttrib4NubARB(GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w)
  */
-GLE_API void glProgramLocalParameter4dARB( GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+GLE_API void glVertexAttrib4NubARB(GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w);
 
 /**
- * @brief void glProgramLocalParameter4dvARB( GLenum target, GLuint index, const GLdouble *params );
+ * @brief void glVertexAttrib4NubvARB(GLuint index, const GLubyte *v)
  */
-GLE_API void glProgramLocalParameter4dvARB( GLenum target, GLuint index, const GLdouble *params );
+GLE_API void glVertexAttrib4NubvARB(GLuint index, const GLubyte *v);
 
 /**
- * @brief void glProgramLocalParameter4fARB( GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+ * @brief void glVertexAttrib4NuivARB(GLuint index, const GLuint *v)
  */
-GLE_API void glProgramLocalParameter4fARB( GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+GLE_API void glVertexAttrib4NuivARB(GLuint index, const GLuint *v);
 
 /**
- * @brief void glProgramLocalParameter4fvARB( GLenum target, GLuint index, const GLfloat *params );
+ * @brief void glVertexAttrib4NusvARB(GLuint index, const GLushort *v)
  */
-GLE_API void glProgramLocalParameter4fvARB( GLenum target, GLuint index, const GLfloat *params );
+GLE_API void glVertexAttrib4NusvARB(GLuint index, const GLushort *v);
 
 /**
- * @brief void glGetProgramEnvParameterdvARB( GLenum target, GLuint index, GLdouble *params );
+ * @brief void glVertexAttrib4bvARB(GLuint index, const GLbyte *v)
  */
-GLE_API void glGetProgramEnvParameterdvARB( GLenum target, GLuint index, GLdouble *params );
+GLE_API void glVertexAttrib4bvARB(GLuint index, const GLbyte *v);
 
 /**
- * @brief void glGetProgramEnvParameterfvARB( GLenum target, GLuint index, GLfloat *params );
+ * @brief void glVertexAttrib4dARB(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
  */
-GLE_API void glGetProgramEnvParameterfvARB( GLenum target, GLuint index, GLfloat *params );
+GLE_API void glVertexAttrib4dARB(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 
 /**
- * @brief void glGetProgramLocalParameterdvARB( GLenum target, GLuint index, GLdouble *params );
+ * @brief void glVertexAttrib4dvARB(GLuint index, const GLdouble *v)
  */
-GLE_API void glGetProgramLocalParameterdvARB( GLenum target, GLuint index, GLdouble *params );
+GLE_API void glVertexAttrib4dvARB(GLuint index, const GLdouble *v);
 
 /**
- * @brief void glGetProgramLocalParameterfvARB( GLenum target, GLuint index, GLfloat *params );
+ * @brief void glVertexAttrib4fARB(GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
  */
-GLE_API void glGetProgramLocalParameterfvARB( GLenum target, GLuint index, GLfloat *params );
+GLE_API void glVertexAttrib4fARB(GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 
 /**
- * @brief void glGetProgramivARB( GLenum target, GLenum pname, GLint *params );
+ * @brief void glVertexAttrib4fvARB(GLuint index, const GLfloat *v)
  */
-GLE_API void glGetProgramivARB( GLenum target, GLenum pname, GLint *params );
+GLE_API void glVertexAttrib4fvARB(GLuint index, const GLfloat *v);
 
 /**
- * @brief void glGetProgramStringARB( GLenum target, GLenum pname, GLvoid *string );
+ * @brief void glVertexAttrib4ivARB(GLuint index, const GLint *v)
  */
-GLE_API void glGetProgramStringARB( GLenum target, GLenum pname, GLvoid *string );
+GLE_API void glVertexAttrib4ivARB(GLuint index, const GLint *v);
 
 /**
- * @brief void glGetVertexAttribdvARB( GLuint index, GLenum pname, GLdouble *params );
+ * @brief void glVertexAttrib4sARB(GLuint index, GLshort x, GLshort y, GLshort z, GLshort w)
  */
-GLE_API void glGetVertexAttribdvARB( GLuint index, GLenum pname, GLdouble *params );
+GLE_API void glVertexAttrib4sARB(GLuint index, GLshort x, GLshort y, GLshort z, GLshort w);
 
 /**
- * @brief void glGetVertexAttribfvARB( GLuint index, GLenum pname, GLfloat *params );
+ * @brief void glVertexAttrib4svARB(GLuint index, const GLshort *v)
  */
-GLE_API void glGetVertexAttribfvARB( GLuint index, GLenum pname, GLfloat *params );
+GLE_API void glVertexAttrib4svARB(GLuint index, const GLshort *v);
 
 /**
- * @brief void glGetVertexAttribivARB( GLuint index, GLenum pname, GLint *params );
+ * @brief void glVertexAttrib4ubvARB(GLuint index, const GLubyte *v)
  */
-GLE_API void glGetVertexAttribivARB( GLuint index, GLenum pname, GLint *params );
+GLE_API void glVertexAttrib4ubvARB(GLuint index, const GLubyte *v);
 
 /**
- * @brief void glGetVertexAttribPointervARB( GLuint index, GLenum pname, GLvoid* *pointer );
+ * @brief void glVertexAttrib4uivARB(GLuint index, const GLuint *v)
  */
-GLE_API void glGetVertexAttribPointervARB( GLuint index, GLenum pname, GLvoid* *pointer );
+GLE_API void glVertexAttrib4uivARB(GLuint index, const GLuint *v);
 
 /**
- * @brief GLboolean glIsProgramARB( GLuint program );
+ * @brief void glVertexAttrib4usvARB(GLuint index, const GLushort *v)
  */
-GLE_API GLboolean glIsProgramARB( GLuint program );
+GLE_API void glVertexAttrib4usvARB(GLuint index, const GLushort *v);
+
+/**
+ * @brief void glVertexAttribPointerARB(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid *pointer)
+ */
+GLE_API void glVertexAttribPointerARB(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid *pointer);
 
 //@}
+
+
 
 
 /**
@@ -5579,28 +6058,33 @@ GLE_API GLboolean glIsProgramARB( GLuint program );
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_vertex_shader is supported.
- * @return Returns \c true if \b GL_ARB_vertex_shader is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_vertex_shader is supported.
+ * @return Returns \c true if \b GL_ARB_vertex_shader is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_vertex_shader();
 
-/**
- * @brief void glBindAttribLocationARB( GLhandleARB programObj, GLuint index, const GLcharARB *name );
- */
-GLE_API void glBindAttribLocationARB( GLhandleARB programObj, GLuint index, const GLcharARB *name );
+
 
 /**
- * @brief void glGetActiveAttribARB( GLhandleARB programObj, GLuint index, GLsizei maxLength, GLsizei *length, GLint *size, GLenum *type, GLcharARB *name );
+ * @brief void glBindAttribLocationARB(GLhandleARB programObj, GLuint index, const GLcharARB *name)
  */
-GLE_API void glGetActiveAttribARB( GLhandleARB programObj, GLuint index, GLsizei maxLength, GLsizei *length, GLint *size, GLenum *type, GLcharARB *name );
+GLE_API void glBindAttribLocationARB(GLhandleARB programObj, GLuint index, const GLcharARB *name);
 
 /**
- * @brief GLint glGetAttribLocationARB( GLhandleARB programObj, const GLcharARB *name );
+ * @brief void glGetActiveAttribARB(GLhandleARB programObj, GLuint index, GLsizei maxLength, GLsizei *length, GLint *size, GLenum *type, GLcharARB *name)
  */
-GLE_API GLint glGetAttribLocationARB( GLhandleARB programObj, const GLcharARB *name );
+GLE_API void glGetActiveAttribARB(GLhandleARB programObj, GLuint index, GLsizei maxLength, GLsizei *length, GLint *size, GLenum *type, GLcharARB *name);
+
+/**
+ * @brief GLint glGetAttribLocationARB(GLhandleARB programObj, const GLcharARB *name)
+ */
+GLE_API GLint glGetAttribLocationARB(GLhandleARB programObj, const GLcharARB *name);
 
 //@}
+
+
 
 
 /**
@@ -5610,203 +6094,208 @@ GLE_API GLint glGetAttribLocationARB( GLhandleARB programObj, const GLcharARB *n
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_vertex_type_2_10_10_10_rev is supported.
- * @return Returns \c true if \b GL_ARB_vertex_type_2_10_10_10_rev is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_vertex_type_2_10_10_10_rev is supported.
+ * @return Returns \c true if \b GL_ARB_vertex_type_2_10_10_10_rev is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_vertex_type_2_10_10_10_rev();
 
-/**
- * @brief void glVertexP2ui( GLenum type, GLuint value );
- */
-GLE_API void glVertexP2ui( GLenum type, GLuint value );
+
 
 /**
- * @brief void glVertexP2uiv( GLenum type, const GLuint *value );
+ * @brief void glColorP3ui(GLenum type, GLuint color)
  */
-GLE_API void glVertexP2uiv( GLenum type, const GLuint *value );
+GLE_API void glColorP3ui(GLenum type, GLuint color);
 
 /**
- * @brief void glVertexP3ui( GLenum type, GLuint value );
+ * @brief void glColorP3uiv(GLenum type, const GLuint *color)
  */
-GLE_API void glVertexP3ui( GLenum type, GLuint value );
+GLE_API void glColorP3uiv(GLenum type, const GLuint *color);
 
 /**
- * @brief void glVertexP3uiv( GLenum type, const GLuint *value );
+ * @brief void glColorP4ui(GLenum type, GLuint color)
  */
-GLE_API void glVertexP3uiv( GLenum type, const GLuint *value );
+GLE_API void glColorP4ui(GLenum type, GLuint color);
 
 /**
- * @brief void glVertexP4ui( GLenum type, GLuint value );
+ * @brief void glColorP4uiv(GLenum type, const GLuint *color)
  */
-GLE_API void glVertexP4ui( GLenum type, GLuint value );
+GLE_API void glColorP4uiv(GLenum type, const GLuint *color);
 
 /**
- * @brief void glVertexP4uiv( GLenum type, const GLuint *value );
+ * @brief void glMultiTexCoordP1ui(GLenum texture, GLenum type, GLuint coords)
  */
-GLE_API void glVertexP4uiv( GLenum type, const GLuint *value );
+GLE_API void glMultiTexCoordP1ui(GLenum texture, GLenum type, GLuint coords);
 
 /**
- * @brief void glTexCoordP1ui( GLenum type, GLuint coords );
+ * @brief void glMultiTexCoordP1uiv(GLenum texture, GLenum type, const GLuint *coords)
  */
-GLE_API void glTexCoordP1ui( GLenum type, GLuint coords );
+GLE_API void glMultiTexCoordP1uiv(GLenum texture, GLenum type, const GLuint *coords);
 
 /**
- * @brief void glTexCoordP1uiv( GLenum type, const GLuint *coords );
+ * @brief void glMultiTexCoordP2ui(GLenum texture, GLenum type, GLuint coords)
  */
-GLE_API void glTexCoordP1uiv( GLenum type, const GLuint *coords );
+GLE_API void glMultiTexCoordP2ui(GLenum texture, GLenum type, GLuint coords);
 
 /**
- * @brief void glTexCoordP2ui( GLenum type, GLuint coords );
+ * @brief void glMultiTexCoordP2uiv(GLenum texture, GLenum type, const GLuint *coords)
  */
-GLE_API void glTexCoordP2ui( GLenum type, GLuint coords );
+GLE_API void glMultiTexCoordP2uiv(GLenum texture, GLenum type, const GLuint *coords);
 
 /**
- * @brief void glTexCoordP2uiv( GLenum type, const GLuint *coords );
+ * @brief void glMultiTexCoordP3ui(GLenum texture, GLenum type, GLuint coords)
  */
-GLE_API void glTexCoordP2uiv( GLenum type, const GLuint *coords );
+GLE_API void glMultiTexCoordP3ui(GLenum texture, GLenum type, GLuint coords);
 
 /**
- * @brief void glTexCoordP3ui( GLenum type, GLuint coords );
+ * @brief void glMultiTexCoordP3uiv(GLenum texture, GLenum type, const GLuint *coords)
  */
-GLE_API void glTexCoordP3ui( GLenum type, GLuint coords );
+GLE_API void glMultiTexCoordP3uiv(GLenum texture, GLenum type, const GLuint *coords);
 
 /**
- * @brief void glTexCoordP3uiv( GLenum type, const GLuint *coords );
+ * @brief void glMultiTexCoordP4ui(GLenum texture, GLenum type, GLuint coords)
  */
-GLE_API void glTexCoordP3uiv( GLenum type, const GLuint *coords );
+GLE_API void glMultiTexCoordP4ui(GLenum texture, GLenum type, GLuint coords);
 
 /**
- * @brief void glTexCoordP4ui( GLenum type, GLuint coords );
+ * @brief void glMultiTexCoordP4uiv(GLenum texture, GLenum type, const GLuint *coords)
  */
-GLE_API void glTexCoordP4ui( GLenum type, GLuint coords );
+GLE_API void glMultiTexCoordP4uiv(GLenum texture, GLenum type, const GLuint *coords);
 
 /**
- * @brief void glTexCoordP4uiv( GLenum type, const GLuint *coords );
+ * @brief void glNormalP3ui(GLenum type, GLuint coords)
  */
-GLE_API void glTexCoordP4uiv( GLenum type, const GLuint *coords );
+GLE_API void glNormalP3ui(GLenum type, GLuint coords);
 
 /**
- * @brief void glMultiTexCoordP1ui( GLenum texture, GLenum type, GLuint coords );
+ * @brief void glNormalP3uiv(GLenum type, const GLuint *coords)
  */
-GLE_API void glMultiTexCoordP1ui( GLenum texture, GLenum type, GLuint coords );
+GLE_API void glNormalP3uiv(GLenum type, const GLuint *coords);
 
 /**
- * @brief void glMultiTexCoordP1uiv( GLenum texture, GLenum type, const GLuint *coords );
+ * @brief void glSecondaryColorP3ui(GLenum type, GLuint color)
  */
-GLE_API void glMultiTexCoordP1uiv( GLenum texture, GLenum type, const GLuint *coords );
+GLE_API void glSecondaryColorP3ui(GLenum type, GLuint color);
 
 /**
- * @brief void glMultiTexCoordP2ui( GLenum texture, GLenum type, GLuint coords );
+ * @brief void glSecondaryColorP3uiv(GLenum type, const GLuint *color)
  */
-GLE_API void glMultiTexCoordP2ui( GLenum texture, GLenum type, GLuint coords );
+GLE_API void glSecondaryColorP3uiv(GLenum type, const GLuint *color);
 
 /**
- * @brief void glMultiTexCoordP2uiv( GLenum texture, GLenum type, const GLuint *coords );
+ * @brief void glTexCoordP1ui(GLenum type, GLuint coords)
  */
-GLE_API void glMultiTexCoordP2uiv( GLenum texture, GLenum type, const GLuint *coords );
+GLE_API void glTexCoordP1ui(GLenum type, GLuint coords);
 
 /**
- * @brief void glMultiTexCoordP3ui( GLenum texture, GLenum type, GLuint coords );
+ * @brief void glTexCoordP1uiv(GLenum type, const GLuint *coords)
  */
-GLE_API void glMultiTexCoordP3ui( GLenum texture, GLenum type, GLuint coords );
+GLE_API void glTexCoordP1uiv(GLenum type, const GLuint *coords);
 
 /**
- * @brief void glMultiTexCoordP3uiv( GLenum texture, GLenum type, const GLuint *coords );
+ * @brief void glTexCoordP2ui(GLenum type, GLuint coords)
  */
-GLE_API void glMultiTexCoordP3uiv( GLenum texture, GLenum type, const GLuint *coords );
+GLE_API void glTexCoordP2ui(GLenum type, GLuint coords);
 
 /**
- * @brief void glMultiTexCoordP4ui( GLenum texture, GLenum type, GLuint coords );
+ * @brief void glTexCoordP2uiv(GLenum type, const GLuint *coords)
  */
-GLE_API void glMultiTexCoordP4ui( GLenum texture, GLenum type, GLuint coords );
+GLE_API void glTexCoordP2uiv(GLenum type, const GLuint *coords);
 
 /**
- * @brief void glMultiTexCoordP4uiv( GLenum texture, GLenum type, const GLuint *coords );
+ * @brief void glTexCoordP3ui(GLenum type, GLuint coords)
  */
-GLE_API void glMultiTexCoordP4uiv( GLenum texture, GLenum type, const GLuint *coords );
+GLE_API void glTexCoordP3ui(GLenum type, GLuint coords);
 
 /**
- * @brief void glNormalP3ui( GLenum type, GLuint coords );
+ * @brief void glTexCoordP3uiv(GLenum type, const GLuint *coords)
  */
-GLE_API void glNormalP3ui( GLenum type, GLuint coords );
+GLE_API void glTexCoordP3uiv(GLenum type, const GLuint *coords);
 
 /**
- * @brief void glNormalP3uiv( GLenum type, const GLuint *coords );
+ * @brief void glTexCoordP4ui(GLenum type, GLuint coords)
  */
-GLE_API void glNormalP3uiv( GLenum type, const GLuint *coords );
+GLE_API void glTexCoordP4ui(GLenum type, GLuint coords);
 
 /**
- * @brief void glColorP3ui( GLenum type, GLuint color );
+ * @brief void glTexCoordP4uiv(GLenum type, const GLuint *coords)
  */
-GLE_API void glColorP3ui( GLenum type, GLuint color );
+GLE_API void glTexCoordP4uiv(GLenum type, const GLuint *coords);
 
 /**
- * @brief void glColorP3uiv( GLenum type, const GLuint *color );
+ * @brief void glVertexAttribP1ui(GLuint index, GLenum type, GLboolean normalized, GLuint value)
  */
-GLE_API void glColorP3uiv( GLenum type, const GLuint *color );
+GLE_API void glVertexAttribP1ui(GLuint index, GLenum type, GLboolean normalized, GLuint value);
 
 /**
- * @brief void glColorP4ui( GLenum type, GLuint color );
+ * @brief void glVertexAttribP1uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint *value)
  */
-GLE_API void glColorP4ui( GLenum type, GLuint color );
+GLE_API void glVertexAttribP1uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint *value);
 
 /**
- * @brief void glColorP4uiv( GLenum type, const GLuint *color );
+ * @brief void glVertexAttribP2ui(GLuint index, GLenum type, GLboolean normalized, GLuint value)
  */
-GLE_API void glColorP4uiv( GLenum type, const GLuint *color );
+GLE_API void glVertexAttribP2ui(GLuint index, GLenum type, GLboolean normalized, GLuint value);
 
 /**
- * @brief void glSecondaryColorP3ui( GLenum type, GLuint color );
+ * @brief void glVertexAttribP2uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint *value)
  */
-GLE_API void glSecondaryColorP3ui( GLenum type, GLuint color );
+GLE_API void glVertexAttribP2uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint *value);
 
 /**
- * @brief void glSecondaryColorP3uiv( GLenum type, const GLuint *color );
+ * @brief void glVertexAttribP3ui(GLuint index, GLenum type, GLboolean normalized, GLuint value)
  */
-GLE_API void glSecondaryColorP3uiv( GLenum type, const GLuint *color );
+GLE_API void glVertexAttribP3ui(GLuint index, GLenum type, GLboolean normalized, GLuint value);
 
 /**
- * @brief void glVertexAttribP1ui( GLuint index, GLenum type, GLboolean normalized, GLuint value );
+ * @brief void glVertexAttribP3uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint *value)
  */
-GLE_API void glVertexAttribP1ui( GLuint index, GLenum type, GLboolean normalized, GLuint value );
+GLE_API void glVertexAttribP3uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint *value);
 
 /**
- * @brief void glVertexAttribP1uiv( GLuint index, GLenum type, GLboolean normalized, const GLuint *value );
+ * @brief void glVertexAttribP4ui(GLuint index, GLenum type, GLboolean normalized, GLuint value)
  */
-GLE_API void glVertexAttribP1uiv( GLuint index, GLenum type, GLboolean normalized, const GLuint *value );
+GLE_API void glVertexAttribP4ui(GLuint index, GLenum type, GLboolean normalized, GLuint value);
 
 /**
- * @brief void glVertexAttribP2ui( GLuint index, GLenum type, GLboolean normalized, GLuint value );
+ * @brief void glVertexAttribP4uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint *value)
  */
-GLE_API void glVertexAttribP2ui( GLuint index, GLenum type, GLboolean normalized, GLuint value );
+GLE_API void glVertexAttribP4uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint *value);
 
 /**
- * @brief void glVertexAttribP2uiv( GLuint index, GLenum type, GLboolean normalized, const GLuint *value );
+ * @brief void glVertexP2ui(GLenum type, GLuint value)
  */
-GLE_API void glVertexAttribP2uiv( GLuint index, GLenum type, GLboolean normalized, const GLuint *value );
+GLE_API void glVertexP2ui(GLenum type, GLuint value);
 
 /**
- * @brief void glVertexAttribP3ui( GLuint index, GLenum type, GLboolean normalized, GLuint value );
+ * @brief void glVertexP2uiv(GLenum type, const GLuint *value)
  */
-GLE_API void glVertexAttribP3ui( GLuint index, GLenum type, GLboolean normalized, GLuint value );
+GLE_API void glVertexP2uiv(GLenum type, const GLuint *value);
 
 /**
- * @brief void glVertexAttribP3uiv( GLuint index, GLenum type, GLboolean normalized, const GLuint *value );
+ * @brief void glVertexP3ui(GLenum type, GLuint value)
  */
-GLE_API void glVertexAttribP3uiv( GLuint index, GLenum type, GLboolean normalized, const GLuint *value );
+GLE_API void glVertexP3ui(GLenum type, GLuint value);
 
 /**
- * @brief void glVertexAttribP4ui( GLuint index, GLenum type, GLboolean normalized, GLuint value );
+ * @brief void glVertexP3uiv(GLenum type, const GLuint *value)
  */
-GLE_API void glVertexAttribP4ui( GLuint index, GLenum type, GLboolean normalized, GLuint value );
+GLE_API void glVertexP3uiv(GLenum type, const GLuint *value);
 
 /**
- * @brief void glVertexAttribP4uiv( GLuint index, GLenum type, GLboolean normalized, const GLuint *value );
+ * @brief void glVertexP4ui(GLenum type, GLuint value)
  */
-GLE_API void glVertexAttribP4uiv( GLuint index, GLenum type, GLboolean normalized, const GLuint *value );
+GLE_API void glVertexP4ui(GLenum type, GLuint value);
+
+/**
+ * @brief void glVertexP4uiv(GLenum type, const GLuint *value)
+ */
+GLE_API void glVertexP4uiv(GLenum type, const GLuint *value);
 
 //@}
+
+
 
 
 /**
@@ -5816,93 +6305,98 @@ GLE_API void glVertexAttribP4uiv( GLuint index, GLenum type, GLboolean normalize
  * @ingroup g_GL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ARB_window_pos is supported.
- * @return Returns \c true if \b GL_ARB_window_pos is supported, false otherwise.
+ * @brief  Tests if \b GL_ARB_window_pos is supported.
+ * @return Returns \c true if \b GL_ARB_window_pos is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_window_pos();
 
-/**
- * @brief void glWindowPos2dARB( GLdouble x, GLdouble y );
- */
-GLE_API void glWindowPos2dARB( GLdouble x, GLdouble y );
+
 
 /**
- * @brief void glWindowPos2dvARB( const GLdouble *v );
+ * @brief void glWindowPos2dARB(GLdouble x, GLdouble y)
  */
-GLE_API void glWindowPos2dvARB( const GLdouble *v );
+GLE_API void glWindowPos2dARB(GLdouble x, GLdouble y);
 
 /**
- * @brief void glWindowPos2fARB( GLfloat x, GLfloat y );
+ * @brief void glWindowPos2dvARB(const GLdouble *v)
  */
-GLE_API void glWindowPos2fARB( GLfloat x, GLfloat y );
+GLE_API void glWindowPos2dvARB(const GLdouble *v);
 
 /**
- * @brief void glWindowPos2fvARB( const GLfloat *v );
+ * @brief void glWindowPos2fARB(GLfloat x, GLfloat y)
  */
-GLE_API void glWindowPos2fvARB( const GLfloat *v );
+GLE_API void glWindowPos2fARB(GLfloat x, GLfloat y);
 
 /**
- * @brief void glWindowPos2iARB( GLint x, GLint y );
+ * @brief void glWindowPos2fvARB(const GLfloat *v)
  */
-GLE_API void glWindowPos2iARB( GLint x, GLint y );
+GLE_API void glWindowPos2fvARB(const GLfloat *v);
 
 /**
- * @brief void glWindowPos2ivARB( const GLint *v );
+ * @brief void glWindowPos2iARB(GLint x, GLint y)
  */
-GLE_API void glWindowPos2ivARB( const GLint *v );
+GLE_API void glWindowPos2iARB(GLint x, GLint y);
 
 /**
- * @brief void glWindowPos2sARB( GLshort x, GLshort y );
+ * @brief void glWindowPos2ivARB(const GLint *v)
  */
-GLE_API void glWindowPos2sARB( GLshort x, GLshort y );
+GLE_API void glWindowPos2ivARB(const GLint *v);
 
 /**
- * @brief void glWindowPos2svARB( const GLshort *v );
+ * @brief void glWindowPos2sARB(GLshort x, GLshort y)
  */
-GLE_API void glWindowPos2svARB( const GLshort *v );
+GLE_API void glWindowPos2sARB(GLshort x, GLshort y);
 
 /**
- * @brief void glWindowPos3dARB( GLdouble x, GLdouble y, GLdouble z );
+ * @brief void glWindowPos2svARB(const GLshort *v)
  */
-GLE_API void glWindowPos3dARB( GLdouble x, GLdouble y, GLdouble z );
+GLE_API void glWindowPos2svARB(const GLshort *v);
 
 /**
- * @brief void glWindowPos3dvARB( const GLdouble *v );
+ * @brief void glWindowPos3dARB(GLdouble x, GLdouble y, GLdouble z)
  */
-GLE_API void glWindowPos3dvARB( const GLdouble *v );
+GLE_API void glWindowPos3dARB(GLdouble x, GLdouble y, GLdouble z);
 
 /**
- * @brief void glWindowPos3fARB( GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glWindowPos3dvARB(const GLdouble *v)
  */
-GLE_API void glWindowPos3fARB( GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glWindowPos3dvARB(const GLdouble *v);
 
 /**
- * @brief void glWindowPos3fvARB( const GLfloat *v );
+ * @brief void glWindowPos3fARB(GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glWindowPos3fvARB( const GLfloat *v );
+GLE_API void glWindowPos3fARB(GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glWindowPos3iARB( GLint x, GLint y, GLint z );
+ * @brief void glWindowPos3fvARB(const GLfloat *v)
  */
-GLE_API void glWindowPos3iARB( GLint x, GLint y, GLint z );
+GLE_API void glWindowPos3fvARB(const GLfloat *v);
 
 /**
- * @brief void glWindowPos3ivARB( const GLint *v );
+ * @brief void glWindowPos3iARB(GLint x, GLint y, GLint z)
  */
-GLE_API void glWindowPos3ivARB( const GLint *v );
+GLE_API void glWindowPos3iARB(GLint x, GLint y, GLint z);
 
 /**
- * @brief void glWindowPos3sARB( GLshort x, GLshort y, GLshort z );
+ * @brief void glWindowPos3ivARB(const GLint *v)
  */
-GLE_API void glWindowPos3sARB( GLshort x, GLshort y, GLshort z );
+GLE_API void glWindowPos3ivARB(const GLint *v);
 
 /**
- * @brief void glWindowPos3svARB( const GLshort *v );
+ * @brief void glWindowPos3sARB(GLshort x, GLshort y, GLshort z)
  */
-GLE_API void glWindowPos3svARB( const GLshort *v );
+GLE_API void glWindowPos3sARB(GLshort x, GLshort y, GLshort z);
+
+/**
+ * @brief void glWindowPos3svARB(const GLshort *v)
+ */
+GLE_API void glWindowPos3svARB(const GLshort *v);
 
 //@}
+
+
 
 
 /**
@@ -5912,18 +6406,23 @@ GLE_API void glWindowPos3svARB( const GLshort *v );
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_draw_buffers is supported.
- * @return Returns \c true if \b GL_ATI_draw_buffers is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_draw_buffers is supported.
+ * @return Returns \c true if \b GL_ATI_draw_buffers is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_draw_buffers();
 
+
+
 /**
- * @brief void glDrawBuffersATI( GLsizei n, const GLenum *bufs );
+ * @brief void glDrawBuffersATI(GLsizei n, const GLenum *bufs)
  */
-GLE_API void glDrawBuffersATI( GLsizei n, const GLenum *bufs );
+GLE_API void glDrawBuffersATI(GLsizei n, const GLenum *bufs);
 
 //@}
+
+
 
 
 /**
@@ -5933,28 +6432,33 @@ GLE_API void glDrawBuffersATI( GLsizei n, const GLenum *bufs );
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_element_array is supported.
- * @return Returns \c true if \b GL_ATI_element_array is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_element_array is supported.
+ * @return Returns \c true if \b GL_ATI_element_array is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_element_array();
 
-/**
- * @brief void glElementPointerATI( GLenum type, const GLvoid *pointer );
- */
-GLE_API void glElementPointerATI( GLenum type, const GLvoid *pointer );
+
 
 /**
- * @brief void glDrawElementArrayATI( GLenum mode, GLsizei count );
+ * @brief void glDrawElementArrayATI(GLenum mode, GLsizei count)
  */
-GLE_API void glDrawElementArrayATI( GLenum mode, GLsizei count );
+GLE_API void glDrawElementArrayATI(GLenum mode, GLsizei count);
 
 /**
- * @brief void glDrawRangeElementArrayATI( GLenum mode, GLuint start, GLuint end, GLsizei count );
+ * @brief void glDrawRangeElementArrayATI(GLenum mode, GLuint start, GLuint end, GLsizei count)
  */
-GLE_API void glDrawRangeElementArrayATI( GLenum mode, GLuint start, GLuint end, GLsizei count );
+GLE_API void glDrawRangeElementArrayATI(GLenum mode, GLuint start, GLuint end, GLsizei count);
+
+/**
+ * @brief void glElementPointerATI(GLenum type, const GLvoid *pointer)
+ */
+GLE_API void glElementPointerATI(GLenum type, const GLvoid *pointer);
 
 //@}
+
+
 
 
 /**
@@ -5964,33 +6468,38 @@ GLE_API void glDrawRangeElementArrayATI( GLenum mode, GLuint start, GLuint end, 
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_envmap_bumpmap is supported.
- * @return Returns \c true if \b GL_ATI_envmap_bumpmap is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_envmap_bumpmap is supported.
+ * @return Returns \c true if \b GL_ATI_envmap_bumpmap is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_envmap_bumpmap();
 
-/**
- * @brief void glTexBumpParameterivATI( GLenum pname, const GLint *param );
- */
-GLE_API void glTexBumpParameterivATI( GLenum pname, const GLint *param );
+
 
 /**
- * @brief void glTexBumpParameterfvATI( GLenum pname, const GLfloat *param );
+ * @brief void glGetTexBumpParameterfvATI(GLenum pname, GLfloat *param)
  */
-GLE_API void glTexBumpParameterfvATI( GLenum pname, const GLfloat *param );
+GLE_API void glGetTexBumpParameterfvATI(GLenum pname, GLfloat *param);
 
 /**
- * @brief void glGetTexBumpParameterivATI( GLenum pname, GLint *param );
+ * @brief void glGetTexBumpParameterivATI(GLenum pname, GLint *param)
  */
-GLE_API void glGetTexBumpParameterivATI( GLenum pname, GLint *param );
+GLE_API void glGetTexBumpParameterivATI(GLenum pname, GLint *param);
 
 /**
- * @brief void glGetTexBumpParameterfvATI( GLenum pname, GLfloat *param );
+ * @brief void glTexBumpParameterfvATI(GLenum pname, const GLfloat *param)
  */
-GLE_API void glGetTexBumpParameterfvATI( GLenum pname, GLfloat *param );
+GLE_API void glTexBumpParameterfvATI(GLenum pname, const GLfloat *param);
+
+/**
+ * @brief void glTexBumpParameterivATI(GLenum pname, const GLint *param)
+ */
+GLE_API void glTexBumpParameterivATI(GLenum pname, const GLint *param);
 
 //@}
+
+
 
 
 /**
@@ -6000,83 +6509,88 @@ GLE_API void glGetTexBumpParameterfvATI( GLenum pname, GLfloat *param );
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_fragment_shader is supported.
- * @return Returns \c true if \b GL_ATI_fragment_shader is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_fragment_shader is supported.
+ * @return Returns \c true if \b GL_ATI_fragment_shader is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_fragment_shader();
 
-/**
- * @brief GLuint glGenFragmentShadersATI( GLuint range );
- */
-GLE_API GLuint glGenFragmentShadersATI( GLuint range );
+
 
 /**
- * @brief void glBindFragmentShaderATI( GLuint id );
+ * @brief void glAlphaFragmentOp1ATI(GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod)
  */
-GLE_API void glBindFragmentShaderATI( GLuint id );
+GLE_API void glAlphaFragmentOp1ATI(GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod);
 
 /**
- * @brief void glDeleteFragmentShaderATI( GLuint id );
+ * @brief void glAlphaFragmentOp2ATI(GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod)
  */
-GLE_API void glDeleteFragmentShaderATI( GLuint id );
+GLE_API void glAlphaFragmentOp2ATI(GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod);
 
 /**
- * @brief void glBeginFragmentShaderATI( void );
+ * @brief void glAlphaFragmentOp3ATI(GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod, GLuint arg3, GLuint arg3Rep, GLuint arg3Mod)
  */
-GLE_API void glBeginFragmentShaderATI( void );
+GLE_API void glAlphaFragmentOp3ATI(GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod, GLuint arg3, GLuint arg3Rep, GLuint arg3Mod);
 
 /**
- * @brief void glEndFragmentShaderATI( void );
+ * @brief void glBeginFragmentShaderATI(void)
  */
-GLE_API void glEndFragmentShaderATI( void );
+GLE_API void glBeginFragmentShaderATI(void);
 
 /**
- * @brief void glPassTexCoordATI( GLuint dst, GLuint coord, GLenum swizzle );
+ * @brief void glBindFragmentShaderATI(GLuint id)
  */
-GLE_API void glPassTexCoordATI( GLuint dst, GLuint coord, GLenum swizzle );
+GLE_API void glBindFragmentShaderATI(GLuint id);
 
 /**
- * @brief void glSampleMapATI( GLuint dst, GLuint interp, GLenum swizzle );
+ * @brief void glColorFragmentOp1ATI(GLenum op, GLuint dst, GLuint dstMask, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod)
  */
-GLE_API void glSampleMapATI( GLuint dst, GLuint interp, GLenum swizzle );
+GLE_API void glColorFragmentOp1ATI(GLenum op, GLuint dst, GLuint dstMask, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod);
 
 /**
- * @brief void glColorFragmentOp1ATI( GLenum op, GLuint dst, GLuint dstMask, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod );
+ * @brief void glColorFragmentOp2ATI(GLenum op, GLuint dst, GLuint dstMask, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod)
  */
-GLE_API void glColorFragmentOp1ATI( GLenum op, GLuint dst, GLuint dstMask, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod );
+GLE_API void glColorFragmentOp2ATI(GLenum op, GLuint dst, GLuint dstMask, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod);
 
 /**
- * @brief void glColorFragmentOp2ATI( GLenum op, GLuint dst, GLuint dstMask, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod );
+ * @brief void glColorFragmentOp3ATI(GLenum op, GLuint dst, GLuint dstMask, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod, GLuint arg3, GLuint arg3Rep, GLuint arg3Mod)
  */
-GLE_API void glColorFragmentOp2ATI( GLenum op, GLuint dst, GLuint dstMask, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod );
+GLE_API void glColorFragmentOp3ATI(GLenum op, GLuint dst, GLuint dstMask, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod, GLuint arg3, GLuint arg3Rep, GLuint arg3Mod);
 
 /**
- * @brief void glColorFragmentOp3ATI( GLenum op, GLuint dst, GLuint dstMask, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod, GLuint arg3, GLuint arg3Rep, GLuint arg3Mod );
+ * @brief void glDeleteFragmentShaderATI(GLuint id)
  */
-GLE_API void glColorFragmentOp3ATI( GLenum op, GLuint dst, GLuint dstMask, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod, GLuint arg3, GLuint arg3Rep, GLuint arg3Mod );
+GLE_API void glDeleteFragmentShaderATI(GLuint id);
 
 /**
- * @brief void glAlphaFragmentOp1ATI( GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod );
+ * @brief void glEndFragmentShaderATI(void)
  */
-GLE_API void glAlphaFragmentOp1ATI( GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod );
+GLE_API void glEndFragmentShaderATI(void);
 
 /**
- * @brief void glAlphaFragmentOp2ATI( GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod );
+ * @brief GLuint glGenFragmentShadersATI(GLuint range)
  */
-GLE_API void glAlphaFragmentOp2ATI( GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod );
+GLE_API GLuint glGenFragmentShadersATI(GLuint range);
 
 /**
- * @brief void glAlphaFragmentOp3ATI( GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod, GLuint arg3, GLuint arg3Rep, GLuint arg3Mod );
+ * @brief void glPassTexCoordATI(GLuint dst, GLuint coord, GLenum swizzle)
  */
-GLE_API void glAlphaFragmentOp3ATI( GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod, GLuint arg3, GLuint arg3Rep, GLuint arg3Mod );
+GLE_API void glPassTexCoordATI(GLuint dst, GLuint coord, GLenum swizzle);
 
 /**
- * @brief void glSetFragmentShaderConstantATI( GLuint dst, const GLfloat *value );
+ * @brief void glSampleMapATI(GLuint dst, GLuint interp, GLenum swizzle)
  */
-GLE_API void glSetFragmentShaderConstantATI( GLuint dst, const GLfloat *value );
+GLE_API void glSampleMapATI(GLuint dst, GLuint interp, GLenum swizzle);
+
+/**
+ * @brief void glSetFragmentShaderConstantATI(GLuint dst, const GLfloat *value)
+ */
+GLE_API void glSetFragmentShaderConstantATI(GLuint dst, const GLfloat *value);
 
 //@}
+
+
 
 
 /**
@@ -6086,23 +6600,28 @@ GLE_API void glSetFragmentShaderConstantATI( GLuint dst, const GLfloat *value );
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_map_object_buffer is supported.
- * @return Returns \c true if \b GL_ATI_map_object_buffer is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_map_object_buffer is supported.
+ * @return Returns \c true if \b GL_ATI_map_object_buffer is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_map_object_buffer();
 
-/**
- * @brief GLvoid* glMapObjectBufferATI( GLuint buffer );
- */
-GLE_API GLvoid* glMapObjectBufferATI( GLuint buffer );
+
 
 /**
- * @brief void glUnmapObjectBufferATI( GLuint buffer );
+ * @brief GLvoid* glMapObjectBufferATI(GLuint buffer)
  */
-GLE_API void glUnmapObjectBufferATI( GLuint buffer );
+GLE_API GLvoid* glMapObjectBufferATI(GLuint buffer);
+
+/**
+ * @brief void glUnmapObjectBufferATI(GLuint buffer)
+ */
+GLE_API void glUnmapObjectBufferATI(GLuint buffer);
 
 //@}
+
+
 
 
 /**
@@ -6112,28 +6631,37 @@ GLE_API void glUnmapObjectBufferATI( GLuint buffer );
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_meminfo is supported.
- * @return Returns \c true if \b GL_ATI_meminfo is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_meminfo is supported.
+ * @return Returns \c true if \b GL_ATI_meminfo is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_meminfo();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_ATI_pixel_format_float GL_ATI_pixel_format_float
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_pixel_format_float is supported.
- * @return Returns \c true if \b GL_ATI_pixel_format_float is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_pixel_format_float is supported.
+ * @return Returns \c true if \b GL_ATI_pixel_format_float is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_pixel_format_float();
 
+
 //@}
+
+
 
 
 /**
@@ -6143,23 +6671,28 @@ GLE_API bool isGL_ATI_pixel_format_float();
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_pn_triangles is supported.
- * @return Returns \c true if \b GL_ATI_pn_triangles is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_pn_triangles is supported.
+ * @return Returns \c true if \b GL_ATI_pn_triangles is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_pn_triangles();
 
-/**
- * @brief void glPNTrianglesiATI( GLenum pname, GLint param );
- */
-GLE_API void glPNTrianglesiATI( GLenum pname, GLint param );
+
 
 /**
- * @brief void glPNTrianglesfATI( GLenum pname, GLfloat param );
+ * @brief void glPNTrianglesfATI(GLenum pname, GLfloat param)
  */
-GLE_API void glPNTrianglesfATI( GLenum pname, GLfloat param );
+GLE_API void glPNTrianglesfATI(GLenum pname, GLfloat param);
+
+/**
+ * @brief void glPNTrianglesiATI(GLenum pname, GLint param)
+ */
+GLE_API void glPNTrianglesiATI(GLenum pname, GLint param);
 
 //@}
+
+
 
 
 /**
@@ -6169,23 +6702,28 @@ GLE_API void glPNTrianglesfATI( GLenum pname, GLfloat param );
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_separate_stencil is supported.
- * @return Returns \c true if \b GL_ATI_separate_stencil is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_separate_stencil is supported.
+ * @return Returns \c true if \b GL_ATI_separate_stencil is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_separate_stencil();
 
-/**
- * @brief void glStencilOpSeparateATI( GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass );
- */
-GLE_API void glStencilOpSeparateATI( GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass );
+
 
 /**
- * @brief void glStencilFuncSeparateATI( GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask );
+ * @brief void glStencilFuncSeparateATI(GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask)
  */
-GLE_API void glStencilFuncSeparateATI( GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask );
+GLE_API void glStencilFuncSeparateATI(GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask);
+
+/**
+ * @brief void glStencilOpSeparateATI(GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass)
+ */
+GLE_API void glStencilOpSeparateATI(GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass);
 
 //@}
+
+
 
 
 /**
@@ -6195,13 +6733,17 @@ GLE_API void glStencilFuncSeparateATI( GLenum frontfunc, GLenum backfunc, GLint 
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_text_fragment_shader is supported.
- * @return Returns \c true if \b GL_ATI_text_fragment_shader is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_text_fragment_shader is supported.
+ * @return Returns \c true if \b GL_ATI_text_fragment_shader is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_text_fragment_shader();
 
+
 //@}
+
+
 
 
 /**
@@ -6211,13 +6753,17 @@ GLE_API bool isGL_ATI_text_fragment_shader();
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_texture_env_combine3 is supported.
- * @return Returns \c true if \b GL_ATI_texture_env_combine3 is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_texture_env_combine3 is supported.
+ * @return Returns \c true if \b GL_ATI_texture_env_combine3 is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_texture_env_combine3();
 
+
 //@}
+
+
 
 
 /**
@@ -6227,13 +6773,17 @@ GLE_API bool isGL_ATI_texture_env_combine3();
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_texture_float is supported.
- * @return Returns \c true if \b GL_ATI_texture_float is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_texture_float is supported.
+ * @return Returns \c true if \b GL_ATI_texture_float is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_texture_float();
 
+
 //@}
+
+
 
 
 /**
@@ -6243,13 +6793,17 @@ GLE_API bool isGL_ATI_texture_float();
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_texture_mirror_once is supported.
- * @return Returns \c true if \b GL_ATI_texture_mirror_once is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_texture_mirror_once is supported.
+ * @return Returns \c true if \b GL_ATI_texture_mirror_once is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_texture_mirror_once();
 
+
 //@}
+
+
 
 
 /**
@@ -6259,73 +6813,78 @@ GLE_API bool isGL_ATI_texture_mirror_once();
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_vertex_array_object is supported.
- * @return Returns \c true if \b GL_ATI_vertex_array_object is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_vertex_array_object is supported.
+ * @return Returns \c true if \b GL_ATI_vertex_array_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_vertex_array_object();
 
-/**
- * @brief GLuint glNewObjectBufferATI( GLsizei size, const GLvoid *pointer, GLenum usage );
- */
-GLE_API GLuint glNewObjectBufferATI( GLsizei size, const GLvoid *pointer, GLenum usage );
+
 
 /**
- * @brief GLboolean glIsObjectBufferATI( GLuint buffer );
+ * @brief void glArrayObjectATI(GLenum array, GLint size, GLenum type, GLsizei stride, GLuint buffer, GLuint offset)
  */
-GLE_API GLboolean glIsObjectBufferATI( GLuint buffer );
+GLE_API void glArrayObjectATI(GLenum array, GLint size, GLenum type, GLsizei stride, GLuint buffer, GLuint offset);
 
 /**
- * @brief void glUpdateObjectBufferATI( GLuint buffer, GLuint offset, GLsizei size, const GLvoid *pointer, GLenum preserve );
+ * @brief void glFreeObjectBufferATI(GLuint buffer)
  */
-GLE_API void glUpdateObjectBufferATI( GLuint buffer, GLuint offset, GLsizei size, const GLvoid *pointer, GLenum preserve );
+GLE_API void glFreeObjectBufferATI(GLuint buffer);
 
 /**
- * @brief void glGetObjectBufferfvATI( GLuint buffer, GLenum pname, GLfloat *params );
+ * @brief void glGetArrayObjectfvATI(GLenum array, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetObjectBufferfvATI( GLuint buffer, GLenum pname, GLfloat *params );
+GLE_API void glGetArrayObjectfvATI(GLenum array, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetObjectBufferivATI( GLuint buffer, GLenum pname, GLint *params );
+ * @brief void glGetArrayObjectivATI(GLenum array, GLenum pname, GLint *params)
  */
-GLE_API void glGetObjectBufferivATI( GLuint buffer, GLenum pname, GLint *params );
+GLE_API void glGetArrayObjectivATI(GLenum array, GLenum pname, GLint *params);
 
 /**
- * @brief void glFreeObjectBufferATI( GLuint buffer );
+ * @brief void glGetObjectBufferfvATI(GLuint buffer, GLenum pname, GLfloat *params)
  */
-GLE_API void glFreeObjectBufferATI( GLuint buffer );
+GLE_API void glGetObjectBufferfvATI(GLuint buffer, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glArrayObjectATI( GLenum array, GLint size, GLenum type, GLsizei stride, GLuint buffer, GLuint offset );
+ * @brief void glGetObjectBufferivATI(GLuint buffer, GLenum pname, GLint *params)
  */
-GLE_API void glArrayObjectATI( GLenum array, GLint size, GLenum type, GLsizei stride, GLuint buffer, GLuint offset );
+GLE_API void glGetObjectBufferivATI(GLuint buffer, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetArrayObjectfvATI( GLenum array, GLenum pname, GLfloat *params );
+ * @brief void glGetVariantArrayObjectfvATI(GLuint id, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetArrayObjectfvATI( GLenum array, GLenum pname, GLfloat *params );
+GLE_API void glGetVariantArrayObjectfvATI(GLuint id, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetArrayObjectivATI( GLenum array, GLenum pname, GLint *params );
+ * @brief void glGetVariantArrayObjectivATI(GLuint id, GLenum pname, GLint *params)
  */
-GLE_API void glGetArrayObjectivATI( GLenum array, GLenum pname, GLint *params );
+GLE_API void glGetVariantArrayObjectivATI(GLuint id, GLenum pname, GLint *params);
 
 /**
- * @brief void glVariantArrayObjectATI( GLuint id, GLenum type, GLsizei stride, GLuint buffer, GLuint offset );
+ * @brief GLboolean glIsObjectBufferATI(GLuint buffer)
  */
-GLE_API void glVariantArrayObjectATI( GLuint id, GLenum type, GLsizei stride, GLuint buffer, GLuint offset );
+GLE_API GLboolean glIsObjectBufferATI(GLuint buffer);
 
 /**
- * @brief void glGetVariantArrayObjectfvATI( GLuint id, GLenum pname, GLfloat *params );
+ * @brief GLuint glNewObjectBufferATI(GLsizei size, const GLvoid *pointer, GLenum usage)
  */
-GLE_API void glGetVariantArrayObjectfvATI( GLuint id, GLenum pname, GLfloat *params );
+GLE_API GLuint glNewObjectBufferATI(GLsizei size, const GLvoid *pointer, GLenum usage);
 
 /**
- * @brief void glGetVariantArrayObjectivATI( GLuint id, GLenum pname, GLint *params );
+ * @brief void glUpdateObjectBufferATI(GLuint buffer, GLuint offset, GLsizei size, const GLvoid *pointer, GLenum preserve)
  */
-GLE_API void glGetVariantArrayObjectivATI( GLuint id, GLenum pname, GLint *params );
+GLE_API void glUpdateObjectBufferATI(GLuint buffer, GLuint offset, GLsizei size, const GLvoid *pointer, GLenum preserve);
+
+/**
+ * @brief void glVariantArrayObjectATI(GLuint id, GLenum type, GLsizei stride, GLuint buffer, GLuint offset)
+ */
+GLE_API void glVariantArrayObjectATI(GLuint id, GLenum type, GLsizei stride, GLuint buffer, GLuint offset);
 
 //@}
+
+
 
 
 /**
@@ -6335,28 +6894,33 @@ GLE_API void glGetVariantArrayObjectivATI( GLuint id, GLenum pname, GLint *param
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_vertex_attrib_array_object is supported.
- * @return Returns \c true if \b GL_ATI_vertex_attrib_array_object is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_vertex_attrib_array_object is supported.
+ * @return Returns \c true if \b GL_ATI_vertex_attrib_array_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_vertex_attrib_array_object();
 
-/**
- * @brief void glVertexAttribArrayObjectATI( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, GLuint buffer, GLuint offset );
- */
-GLE_API void glVertexAttribArrayObjectATI( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, GLuint buffer, GLuint offset );
+
 
 /**
- * @brief void glGetVertexAttribArrayObjectfvATI( GLuint index, GLenum pname, GLfloat *params );
+ * @brief void glGetVertexAttribArrayObjectfvATI(GLuint index, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetVertexAttribArrayObjectfvATI( GLuint index, GLenum pname, GLfloat *params );
+GLE_API void glGetVertexAttribArrayObjectfvATI(GLuint index, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetVertexAttribArrayObjectivATI( GLuint index, GLenum pname, GLint *params );
+ * @brief void glGetVertexAttribArrayObjectivATI(GLuint index, GLenum pname, GLint *params)
  */
-GLE_API void glGetVertexAttribArrayObjectivATI( GLuint index, GLenum pname, GLint *params );
+GLE_API void glGetVertexAttribArrayObjectivATI(GLuint index, GLenum pname, GLint *params);
+
+/**
+ * @brief void glVertexAttribArrayObjectATI(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, GLuint buffer, GLuint offset)
+ */
+GLE_API void glVertexAttribArrayObjectATI(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, GLuint buffer, GLuint offset);
 
 //@}
+
+
 
 
 /**
@@ -6366,238 +6930,243 @@ GLE_API void glGetVertexAttribArrayObjectivATI( GLuint index, GLenum pname, GLin
  * @ingroup g_GL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_ATI_vertex_streams is supported.
- * @return Returns \c true if \b GL_ATI_vertex_streams is supported, false otherwise.
+ * @brief  Tests if \b GL_ATI_vertex_streams is supported.
+ * @return Returns \c true if \b GL_ATI_vertex_streams is supported, \c false otherwise.
  */
 GLE_API bool isGL_ATI_vertex_streams();
 
-/**
- * @brief void glVertexStream1sATI( GLenum stream, GLshort x );
- */
-GLE_API void glVertexStream1sATI( GLenum stream, GLshort x );
+
 
 /**
- * @brief void glVertexStream1svATI( GLenum stream, const GLshort *coords );
+ * @brief void glClientActiveVertexStreamATI(GLenum stream)
  */
-GLE_API void glVertexStream1svATI( GLenum stream, const GLshort *coords );
+GLE_API void glClientActiveVertexStreamATI(GLenum stream);
 
 /**
- * @brief void glVertexStream1iATI( GLenum stream, GLint x );
+ * @brief void glNormalStream3bATI(GLenum stream, GLbyte nx, GLbyte ny, GLbyte nz)
  */
-GLE_API void glVertexStream1iATI( GLenum stream, GLint x );
+GLE_API void glNormalStream3bATI(GLenum stream, GLbyte nx, GLbyte ny, GLbyte nz);
 
 /**
- * @brief void glVertexStream1ivATI( GLenum stream, const GLint *coords );
+ * @brief void glNormalStream3bvATI(GLenum stream, const GLbyte *coords)
  */
-GLE_API void glVertexStream1ivATI( GLenum stream, const GLint *coords );
+GLE_API void glNormalStream3bvATI(GLenum stream, const GLbyte *coords);
 
 /**
- * @brief void glVertexStream1fATI( GLenum stream, GLfloat x );
+ * @brief void glNormalStream3dATI(GLenum stream, GLdouble nx, GLdouble ny, GLdouble nz)
  */
-GLE_API void glVertexStream1fATI( GLenum stream, GLfloat x );
+GLE_API void glNormalStream3dATI(GLenum stream, GLdouble nx, GLdouble ny, GLdouble nz);
 
 /**
- * @brief void glVertexStream1fvATI( GLenum stream, const GLfloat *coords );
+ * @brief void glNormalStream3dvATI(GLenum stream, const GLdouble *coords)
  */
-GLE_API void glVertexStream1fvATI( GLenum stream, const GLfloat *coords );
+GLE_API void glNormalStream3dvATI(GLenum stream, const GLdouble *coords);
 
 /**
- * @brief void glVertexStream1dATI( GLenum stream, GLdouble x );
+ * @brief void glNormalStream3fATI(GLenum stream, GLfloat nx, GLfloat ny, GLfloat nz)
  */
-GLE_API void glVertexStream1dATI( GLenum stream, GLdouble x );
+GLE_API void glNormalStream3fATI(GLenum stream, GLfloat nx, GLfloat ny, GLfloat nz);
 
 /**
- * @brief void glVertexStream1dvATI( GLenum stream, const GLdouble *coords );
+ * @brief void glNormalStream3fvATI(GLenum stream, const GLfloat *coords)
  */
-GLE_API void glVertexStream1dvATI( GLenum stream, const GLdouble *coords );
+GLE_API void glNormalStream3fvATI(GLenum stream, const GLfloat *coords);
 
 /**
- * @brief void glVertexStream2sATI( GLenum stream, GLshort x, GLshort y );
+ * @brief void glNormalStream3iATI(GLenum stream, GLint nx, GLint ny, GLint nz)
  */
-GLE_API void glVertexStream2sATI( GLenum stream, GLshort x, GLshort y );
+GLE_API void glNormalStream3iATI(GLenum stream, GLint nx, GLint ny, GLint nz);
 
 /**
- * @brief void glVertexStream2svATI( GLenum stream, const GLshort *coords );
+ * @brief void glNormalStream3ivATI(GLenum stream, const GLint *coords)
  */
-GLE_API void glVertexStream2svATI( GLenum stream, const GLshort *coords );
+GLE_API void glNormalStream3ivATI(GLenum stream, const GLint *coords);
 
 /**
- * @brief void glVertexStream2iATI( GLenum stream, GLint x, GLint y );
+ * @brief void glNormalStream3sATI(GLenum stream, GLshort nx, GLshort ny, GLshort nz)
  */
-GLE_API void glVertexStream2iATI( GLenum stream, GLint x, GLint y );
+GLE_API void glNormalStream3sATI(GLenum stream, GLshort nx, GLshort ny, GLshort nz);
 
 /**
- * @brief void glVertexStream2ivATI( GLenum stream, const GLint *coords );
+ * @brief void glNormalStream3svATI(GLenum stream, const GLshort *coords)
  */
-GLE_API void glVertexStream2ivATI( GLenum stream, const GLint *coords );
+GLE_API void glNormalStream3svATI(GLenum stream, const GLshort *coords);
 
 /**
- * @brief void glVertexStream2fATI( GLenum stream, GLfloat x, GLfloat y );
+ * @brief void glVertexBlendEnvfATI(GLenum pname, GLfloat param)
  */
-GLE_API void glVertexStream2fATI( GLenum stream, GLfloat x, GLfloat y );
+GLE_API void glVertexBlendEnvfATI(GLenum pname, GLfloat param);
 
 /**
- * @brief void glVertexStream2fvATI( GLenum stream, const GLfloat *coords );
+ * @brief void glVertexBlendEnviATI(GLenum pname, GLint param)
  */
-GLE_API void glVertexStream2fvATI( GLenum stream, const GLfloat *coords );
+GLE_API void glVertexBlendEnviATI(GLenum pname, GLint param);
 
 /**
- * @brief void glVertexStream2dATI( GLenum stream, GLdouble x, GLdouble y );
+ * @brief void glVertexStream1dATI(GLenum stream, GLdouble x)
  */
-GLE_API void glVertexStream2dATI( GLenum stream, GLdouble x, GLdouble y );
+GLE_API void glVertexStream1dATI(GLenum stream, GLdouble x);
 
 /**
- * @brief void glVertexStream2dvATI( GLenum stream, const GLdouble *coords );
+ * @brief void glVertexStream1dvATI(GLenum stream, const GLdouble *coords)
  */
-GLE_API void glVertexStream2dvATI( GLenum stream, const GLdouble *coords );
+GLE_API void glVertexStream1dvATI(GLenum stream, const GLdouble *coords);
 
 /**
- * @brief void glVertexStream3sATI( GLenum stream, GLshort x, GLshort y, GLshort z );
+ * @brief void glVertexStream1fATI(GLenum stream, GLfloat x)
  */
-GLE_API void glVertexStream3sATI( GLenum stream, GLshort x, GLshort y, GLshort z );
+GLE_API void glVertexStream1fATI(GLenum stream, GLfloat x);
 
 /**
- * @brief void glVertexStream3svATI( GLenum stream, const GLshort *coords );
+ * @brief void glVertexStream1fvATI(GLenum stream, const GLfloat *coords)
  */
-GLE_API void glVertexStream3svATI( GLenum stream, const GLshort *coords );
+GLE_API void glVertexStream1fvATI(GLenum stream, const GLfloat *coords);
 
 /**
- * @brief void glVertexStream3iATI( GLenum stream, GLint x, GLint y, GLint z );
+ * @brief void glVertexStream1iATI(GLenum stream, GLint x)
  */
-GLE_API void glVertexStream3iATI( GLenum stream, GLint x, GLint y, GLint z );
+GLE_API void glVertexStream1iATI(GLenum stream, GLint x);
 
 /**
- * @brief void glVertexStream3ivATI( GLenum stream, const GLint *coords );
+ * @brief void glVertexStream1ivATI(GLenum stream, const GLint *coords)
  */
-GLE_API void glVertexStream3ivATI( GLenum stream, const GLint *coords );
+GLE_API void glVertexStream1ivATI(GLenum stream, const GLint *coords);
 
 /**
- * @brief void glVertexStream3fATI( GLenum stream, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glVertexStream1sATI(GLenum stream, GLshort x)
  */
-GLE_API void glVertexStream3fATI( GLenum stream, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glVertexStream1sATI(GLenum stream, GLshort x);
 
 /**
- * @brief void glVertexStream3fvATI( GLenum stream, const GLfloat *coords );
+ * @brief void glVertexStream1svATI(GLenum stream, const GLshort *coords)
  */
-GLE_API void glVertexStream3fvATI( GLenum stream, const GLfloat *coords );
+GLE_API void glVertexStream1svATI(GLenum stream, const GLshort *coords);
 
 /**
- * @brief void glVertexStream3dATI( GLenum stream, GLdouble x, GLdouble y, GLdouble z );
+ * @brief void glVertexStream2dATI(GLenum stream, GLdouble x, GLdouble y)
  */
-GLE_API void glVertexStream3dATI( GLenum stream, GLdouble x, GLdouble y, GLdouble z );
+GLE_API void glVertexStream2dATI(GLenum stream, GLdouble x, GLdouble y);
 
 /**
- * @brief void glVertexStream3dvATI( GLenum stream, const GLdouble *coords );
+ * @brief void glVertexStream2dvATI(GLenum stream, const GLdouble *coords)
  */
-GLE_API void glVertexStream3dvATI( GLenum stream, const GLdouble *coords );
+GLE_API void glVertexStream2dvATI(GLenum stream, const GLdouble *coords);
 
 /**
- * @brief void glVertexStream4sATI( GLenum stream, GLshort x, GLshort y, GLshort z, GLshort w );
+ * @brief void glVertexStream2fATI(GLenum stream, GLfloat x, GLfloat y)
  */
-GLE_API void glVertexStream4sATI( GLenum stream, GLshort x, GLshort y, GLshort z, GLshort w );
+GLE_API void glVertexStream2fATI(GLenum stream, GLfloat x, GLfloat y);
 
 /**
- * @brief void glVertexStream4svATI( GLenum stream, const GLshort *coords );
+ * @brief void glVertexStream2fvATI(GLenum stream, const GLfloat *coords)
  */
-GLE_API void glVertexStream4svATI( GLenum stream, const GLshort *coords );
+GLE_API void glVertexStream2fvATI(GLenum stream, const GLfloat *coords);
 
 /**
- * @brief void glVertexStream4iATI( GLenum stream, GLint x, GLint y, GLint z, GLint w );
+ * @brief void glVertexStream2iATI(GLenum stream, GLint x, GLint y)
  */
-GLE_API void glVertexStream4iATI( GLenum stream, GLint x, GLint y, GLint z, GLint w );
+GLE_API void glVertexStream2iATI(GLenum stream, GLint x, GLint y);
 
 /**
- * @brief void glVertexStream4ivATI( GLenum stream, const GLint *coords );
+ * @brief void glVertexStream2ivATI(GLenum stream, const GLint *coords)
  */
-GLE_API void glVertexStream4ivATI( GLenum stream, const GLint *coords );
+GLE_API void glVertexStream2ivATI(GLenum stream, const GLint *coords);
 
 /**
- * @brief void glVertexStream4fATI( GLenum stream, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+ * @brief void glVertexStream2sATI(GLenum stream, GLshort x, GLshort y)
  */
-GLE_API void glVertexStream4fATI( GLenum stream, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+GLE_API void glVertexStream2sATI(GLenum stream, GLshort x, GLshort y);
 
 /**
- * @brief void glVertexStream4fvATI( GLenum stream, const GLfloat *coords );
+ * @brief void glVertexStream2svATI(GLenum stream, const GLshort *coords)
  */
-GLE_API void glVertexStream4fvATI( GLenum stream, const GLfloat *coords );
+GLE_API void glVertexStream2svATI(GLenum stream, const GLshort *coords);
 
 /**
- * @brief void glVertexStream4dATI( GLenum stream, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+ * @brief void glVertexStream3dATI(GLenum stream, GLdouble x, GLdouble y, GLdouble z)
  */
-GLE_API void glVertexStream4dATI( GLenum stream, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+GLE_API void glVertexStream3dATI(GLenum stream, GLdouble x, GLdouble y, GLdouble z);
 
 /**
- * @brief void glVertexStream4dvATI( GLenum stream, const GLdouble *coords );
+ * @brief void glVertexStream3dvATI(GLenum stream, const GLdouble *coords)
  */
-GLE_API void glVertexStream4dvATI( GLenum stream, const GLdouble *coords );
+GLE_API void glVertexStream3dvATI(GLenum stream, const GLdouble *coords);
 
 /**
- * @brief void glNormalStream3bATI( GLenum stream, GLbyte nx, GLbyte ny, GLbyte nz );
+ * @brief void glVertexStream3fATI(GLenum stream, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glNormalStream3bATI( GLenum stream, GLbyte nx, GLbyte ny, GLbyte nz );
+GLE_API void glVertexStream3fATI(GLenum stream, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glNormalStream3bvATI( GLenum stream, const GLbyte *coords );
+ * @brief void glVertexStream3fvATI(GLenum stream, const GLfloat *coords)
  */
-GLE_API void glNormalStream3bvATI( GLenum stream, const GLbyte *coords );
+GLE_API void glVertexStream3fvATI(GLenum stream, const GLfloat *coords);
 
 /**
- * @brief void glNormalStream3sATI( GLenum stream, GLshort nx, GLshort ny, GLshort nz );
+ * @brief void glVertexStream3iATI(GLenum stream, GLint x, GLint y, GLint z)
  */
-GLE_API void glNormalStream3sATI( GLenum stream, GLshort nx, GLshort ny, GLshort nz );
+GLE_API void glVertexStream3iATI(GLenum stream, GLint x, GLint y, GLint z);
 
 /**
- * @brief void glNormalStream3svATI( GLenum stream, const GLshort *coords );
+ * @brief void glVertexStream3ivATI(GLenum stream, const GLint *coords)
  */
-GLE_API void glNormalStream3svATI( GLenum stream, const GLshort *coords );
+GLE_API void glVertexStream3ivATI(GLenum stream, const GLint *coords);
 
 /**
- * @brief void glNormalStream3iATI( GLenum stream, GLint nx, GLint ny, GLint nz );
+ * @brief void glVertexStream3sATI(GLenum stream, GLshort x, GLshort y, GLshort z)
  */
-GLE_API void glNormalStream3iATI( GLenum stream, GLint nx, GLint ny, GLint nz );
+GLE_API void glVertexStream3sATI(GLenum stream, GLshort x, GLshort y, GLshort z);
 
 /**
- * @brief void glNormalStream3ivATI( GLenum stream, const GLint *coords );
+ * @brief void glVertexStream3svATI(GLenum stream, const GLshort *coords)
  */
-GLE_API void glNormalStream3ivATI( GLenum stream, const GLint *coords );
+GLE_API void glVertexStream3svATI(GLenum stream, const GLshort *coords);
 
 /**
- * @brief void glNormalStream3fATI( GLenum stream, GLfloat nx, GLfloat ny, GLfloat nz );
+ * @brief void glVertexStream4dATI(GLenum stream, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
  */
-GLE_API void glNormalStream3fATI( GLenum stream, GLfloat nx, GLfloat ny, GLfloat nz );
+GLE_API void glVertexStream4dATI(GLenum stream, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 
 /**
- * @brief void glNormalStream3fvATI( GLenum stream, const GLfloat *coords );
+ * @brief void glVertexStream4dvATI(GLenum stream, const GLdouble *coords)
  */
-GLE_API void glNormalStream3fvATI( GLenum stream, const GLfloat *coords );
+GLE_API void glVertexStream4dvATI(GLenum stream, const GLdouble *coords);
 
 /**
- * @brief void glNormalStream3dATI( GLenum stream, GLdouble nx, GLdouble ny, GLdouble nz );
+ * @brief void glVertexStream4fATI(GLenum stream, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
  */
-GLE_API void glNormalStream3dATI( GLenum stream, GLdouble nx, GLdouble ny, GLdouble nz );
+GLE_API void glVertexStream4fATI(GLenum stream, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 
 /**
- * @brief void glNormalStream3dvATI( GLenum stream, const GLdouble *coords );
+ * @brief void glVertexStream4fvATI(GLenum stream, const GLfloat *coords)
  */
-GLE_API void glNormalStream3dvATI( GLenum stream, const GLdouble *coords );
+GLE_API void glVertexStream4fvATI(GLenum stream, const GLfloat *coords);
 
 /**
- * @brief void glClientActiveVertexStreamATI( GLenum stream );
+ * @brief void glVertexStream4iATI(GLenum stream, GLint x, GLint y, GLint z, GLint w)
  */
-GLE_API void glClientActiveVertexStreamATI( GLenum stream );
+GLE_API void glVertexStream4iATI(GLenum stream, GLint x, GLint y, GLint z, GLint w);
 
 /**
- * @brief void glVertexBlendEnviATI( GLenum pname, GLint param );
+ * @brief void glVertexStream4ivATI(GLenum stream, const GLint *coords)
  */
-GLE_API void glVertexBlendEnviATI( GLenum pname, GLint param );
+GLE_API void glVertexStream4ivATI(GLenum stream, const GLint *coords);
 
 /**
- * @brief void glVertexBlendEnvfATI( GLenum pname, GLfloat param );
+ * @brief void glVertexStream4sATI(GLenum stream, GLshort x, GLshort y, GLshort z, GLshort w)
  */
-GLE_API void glVertexBlendEnvfATI( GLenum pname, GLfloat param );
+GLE_API void glVertexStream4sATI(GLenum stream, GLshort x, GLshort y, GLshort z, GLshort w);
+
+/**
+ * @brief void glVertexStream4svATI(GLenum stream, const GLshort *coords)
+ */
+GLE_API void glVertexStream4svATI(GLenum stream, const GLshort *coords);
 
 //@}
+
+
 
 
 /**
@@ -6607,13 +7176,17 @@ GLE_API void glVertexBlendEnvfATI( GLenum pname, GLfloat param );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_422_pixels is supported.
- * @return Returns \c true if \b GL_EXT_422_pixels is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_422_pixels is supported.
+ * @return Returns \c true if \b GL_EXT_422_pixels is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_422_pixels();
 
+
 //@}
+
+
 
 
 /**
@@ -6623,13 +7196,17 @@ GLE_API bool isGL_EXT_422_pixels();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_abgr is supported.
- * @return Returns \c true if \b GL_EXT_abgr is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_abgr is supported.
+ * @return Returns \c true if \b GL_EXT_abgr is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_abgr();
 
+
 //@}
+
+
 
 
 /**
@@ -6639,13 +7216,17 @@ GLE_API bool isGL_EXT_abgr();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_bgra is supported.
- * @return Returns \c true if \b GL_EXT_bgra is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_bgra is supported.
+ * @return Returns \c true if \b GL_EXT_bgra is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_bgra();
 
+
 //@}
+
+
 
 
 /**
@@ -6655,28 +7236,33 @@ GLE_API bool isGL_EXT_bgra();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_bindable_uniform is supported.
- * @return Returns \c true if \b GL_EXT_bindable_uniform is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_bindable_uniform is supported.
+ * @return Returns \c true if \b GL_EXT_bindable_uniform is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_bindable_uniform();
 
-/**
- * @brief void glUniformBufferEXT( GLuint program, GLint location, GLuint buffer );
- */
-GLE_API void glUniformBufferEXT( GLuint program, GLint location, GLuint buffer );
+
 
 /**
- * @brief GLint glGetUniformBufferSizeEXT( GLuint program, GLint location );
+ * @brief GLint glGetUniformBufferSizeEXT(GLuint program, GLint location)
  */
-GLE_API GLint glGetUniformBufferSizeEXT( GLuint program, GLint location );
+GLE_API GLint glGetUniformBufferSizeEXT(GLuint program, GLint location);
 
 /**
- * @brief GLintptr glGetUniformOffsetEXT( GLuint program, GLint location );
+ * @brief GLintptr glGetUniformOffsetEXT(GLuint program, GLint location)
  */
-GLE_API GLintptr glGetUniformOffsetEXT( GLuint program, GLint location );
+GLE_API GLintptr glGetUniformOffsetEXT(GLuint program, GLint location);
+
+/**
+ * @brief void glUniformBufferEXT(GLuint program, GLint location, GLuint buffer)
+ */
+GLE_API void glUniformBufferEXT(GLuint program, GLint location, GLuint buffer);
 
 //@}
+
+
 
 
 /**
@@ -6686,18 +7272,23 @@ GLE_API GLintptr glGetUniformOffsetEXT( GLuint program, GLint location );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_blend_color is supported.
- * @return Returns \c true if \b GL_EXT_blend_color is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_blend_color is supported.
+ * @return Returns \c true if \b GL_EXT_blend_color is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_blend_color();
 
+
+
 /**
- * @brief void glBlendColorEXT( GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha );
+ * @brief void glBlendColorEXT(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
  */
-GLE_API void glBlendColorEXT( GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha );
+GLE_API void glBlendColorEXT(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
 
 //@}
+
+
 
 
 /**
@@ -6707,18 +7298,23 @@ GLE_API void glBlendColorEXT( GLclampf red, GLclampf green, GLclampf blue, GLcla
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_blend_equation_separate is supported.
- * @return Returns \c true if \b GL_EXT_blend_equation_separate is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_blend_equation_separate is supported.
+ * @return Returns \c true if \b GL_EXT_blend_equation_separate is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_blend_equation_separate();
 
+
+
 /**
- * @brief void glBlendEquationSeparateEXT( GLenum modeRGB, GLenum modeAlpha );
+ * @brief void glBlendEquationSeparateEXT(GLenum modeRGB, GLenum modeAlpha)
  */
-GLE_API void glBlendEquationSeparateEXT( GLenum modeRGB, GLenum modeAlpha );
+GLE_API void glBlendEquationSeparateEXT(GLenum modeRGB, GLenum modeAlpha);
 
 //@}
+
+
 
 
 /**
@@ -6728,18 +7324,23 @@ GLE_API void glBlendEquationSeparateEXT( GLenum modeRGB, GLenum modeAlpha );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_blend_func_separate is supported.
- * @return Returns \c true if \b GL_EXT_blend_func_separate is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_blend_func_separate is supported.
+ * @return Returns \c true if \b GL_EXT_blend_func_separate is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_blend_func_separate();
 
+
+
 /**
- * @brief void glBlendFuncSeparateEXT( GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha );
+ * @brief void glBlendFuncSeparateEXT(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha)
  */
-GLE_API void glBlendFuncSeparateEXT( GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha );
+GLE_API void glBlendFuncSeparateEXT(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
 
 //@}
+
+
 
 
 /**
@@ -6749,13 +7350,17 @@ GLE_API void glBlendFuncSeparateEXT( GLenum sfactorRGB, GLenum dfactorRGB, GLenu
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_blend_logic_op is supported.
- * @return Returns \c true if \b GL_EXT_blend_logic_op is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_blend_logic_op is supported.
+ * @return Returns \c true if \b GL_EXT_blend_logic_op is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_blend_logic_op();
 
+
 //@}
+
+
 
 
 /**
@@ -6765,18 +7370,23 @@ GLE_API bool isGL_EXT_blend_logic_op();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_blend_minmax is supported.
- * @return Returns \c true if \b GL_EXT_blend_minmax is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_blend_minmax is supported.
+ * @return Returns \c true if \b GL_EXT_blend_minmax is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_blend_minmax();
 
+
+
 /**
- * @brief void glBlendEquationEXT( GLenum mode );
+ * @brief void glBlendEquationEXT(GLenum mode)
  */
-GLE_API void glBlendEquationEXT( GLenum mode );
+GLE_API void glBlendEquationEXT(GLenum mode);
 
 //@}
+
+
 
 
 /**
@@ -6786,13 +7396,17 @@ GLE_API void glBlendEquationEXT( GLenum mode );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_blend_subtract is supported.
- * @return Returns \c true if \b GL_EXT_blend_subtract is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_blend_subtract is supported.
+ * @return Returns \c true if \b GL_EXT_blend_subtract is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_blend_subtract();
 
+
 //@}
+
+
 
 
 /**
@@ -6802,13 +7416,17 @@ GLE_API bool isGL_EXT_blend_subtract();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_clip_volume_hint is supported.
- * @return Returns \c true if \b GL_EXT_clip_volume_hint is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_clip_volume_hint is supported.
+ * @return Returns \c true if \b GL_EXT_clip_volume_hint is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_clip_volume_hint();
 
+
 //@}
+
+
 
 
 /**
@@ -6818,13 +7436,17 @@ GLE_API bool isGL_EXT_clip_volume_hint();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_cmyka is supported.
- * @return Returns \c true if \b GL_EXT_cmyka is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_cmyka is supported.
+ * @return Returns \c true if \b GL_EXT_cmyka is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_cmyka();
 
+
 //@}
+
+
 
 
 /**
@@ -6834,23 +7456,28 @@ GLE_API bool isGL_EXT_cmyka();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_color_subtable is supported.
- * @return Returns \c true if \b GL_EXT_color_subtable is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_color_subtable is supported.
+ * @return Returns \c true if \b GL_EXT_color_subtable is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_color_subtable();
 
-/**
- * @brief void glColorSubTableEXT( GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const GLvoid *data );
- */
-GLE_API void glColorSubTableEXT( GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const GLvoid *data );
+
 
 /**
- * @brief void glCopyColorSubTableEXT( GLenum target, GLsizei start, GLint x, GLint y, GLsizei width );
+ * @brief void glColorSubTableEXT(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const GLvoid *data)
  */
-GLE_API void glCopyColorSubTableEXT( GLenum target, GLsizei start, GLint x, GLint y, GLsizei width );
+GLE_API void glColorSubTableEXT(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const GLvoid *data);
+
+/**
+ * @brief void glCopyColorSubTableEXT(GLenum target, GLsizei start, GLint x, GLint y, GLsizei width)
+ */
+GLE_API void glCopyColorSubTableEXT(GLenum target, GLsizei start, GLint x, GLint y, GLsizei width);
 
 //@}
+
+
 
 
 /**
@@ -6860,23 +7487,28 @@ GLE_API void glCopyColorSubTableEXT( GLenum target, GLsizei start, GLint x, GLin
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_compiled_vertex_array is supported.
- * @return Returns \c true if \b GL_EXT_compiled_vertex_array is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_compiled_vertex_array is supported.
+ * @return Returns \c true if \b GL_EXT_compiled_vertex_array is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_compiled_vertex_array();
 
-/**
- * @brief void glLockArraysEXT( GLint first, GLsizei count );
- */
-GLE_API void glLockArraysEXT( GLint first, GLsizei count );
+
 
 /**
- * @brief void glUnlockArraysEXT( void );
+ * @brief void glLockArraysEXT(GLint first, GLsizei count)
  */
-GLE_API void glUnlockArraysEXT( void );
+GLE_API void glLockArraysEXT(GLint first, GLsizei count);
+
+/**
+ * @brief void glUnlockArraysEXT(void)
+ */
+GLE_API void glUnlockArraysEXT(void);
 
 //@}
+
+
 
 
 /**
@@ -6886,78 +7518,83 @@ GLE_API void glUnlockArraysEXT( void );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_convolution is supported.
- * @return Returns \c true if \b GL_EXT_convolution is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_convolution is supported.
+ * @return Returns \c true if \b GL_EXT_convolution is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_convolution();
 
-/**
- * @brief void glConvolutionFilter1DEXT( GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *image );
- */
-GLE_API void glConvolutionFilter1DEXT( GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *image );
+
 
 /**
- * @brief void glConvolutionFilter2DEXT( GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *image );
+ * @brief void glConvolutionFilter1DEXT(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *image)
  */
-GLE_API void glConvolutionFilter2DEXT( GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *image );
+GLE_API void glConvolutionFilter1DEXT(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *image);
 
 /**
- * @brief void glConvolutionParameterfEXT( GLenum target, GLenum pname, GLfloat params );
+ * @brief void glConvolutionFilter2DEXT(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *image)
  */
-GLE_API void glConvolutionParameterfEXT( GLenum target, GLenum pname, GLfloat params );
+GLE_API void glConvolutionFilter2DEXT(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *image);
 
 /**
- * @brief void glConvolutionParameterfvEXT( GLenum target, GLenum pname, const GLfloat *params );
+ * @brief void glConvolutionParameterfEXT(GLenum target, GLenum pname, GLfloat params)
  */
-GLE_API void glConvolutionParameterfvEXT( GLenum target, GLenum pname, const GLfloat *params );
+GLE_API void glConvolutionParameterfEXT(GLenum target, GLenum pname, GLfloat params);
 
 /**
- * @brief void glConvolutionParameteriEXT( GLenum target, GLenum pname, GLint params );
+ * @brief void glConvolutionParameterfvEXT(GLenum target, GLenum pname, const GLfloat *params)
  */
-GLE_API void glConvolutionParameteriEXT( GLenum target, GLenum pname, GLint params );
+GLE_API void glConvolutionParameterfvEXT(GLenum target, GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glConvolutionParameterivEXT( GLenum target, GLenum pname, const GLint *params );
+ * @brief void glConvolutionParameteriEXT(GLenum target, GLenum pname, GLint params)
  */
-GLE_API void glConvolutionParameterivEXT( GLenum target, GLenum pname, const GLint *params );
+GLE_API void glConvolutionParameteriEXT(GLenum target, GLenum pname, GLint params);
 
 /**
- * @brief void glCopyConvolutionFilter1DEXT( GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width );
+ * @brief void glConvolutionParameterivEXT(GLenum target, GLenum pname, const GLint *params)
  */
-GLE_API void glCopyConvolutionFilter1DEXT( GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width );
+GLE_API void glConvolutionParameterivEXT(GLenum target, GLenum pname, const GLint *params);
 
 /**
- * @brief void glCopyConvolutionFilter2DEXT( GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height );
+ * @brief void glCopyConvolutionFilter1DEXT(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width)
  */
-GLE_API void glCopyConvolutionFilter2DEXT( GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height );
+GLE_API void glCopyConvolutionFilter1DEXT(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width);
 
 /**
- * @brief void glGetConvolutionFilterEXT( GLenum target, GLenum format, GLenum type, GLvoid *image );
+ * @brief void glCopyConvolutionFilter2DEXT(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height)
  */
-GLE_API void glGetConvolutionFilterEXT( GLenum target, GLenum format, GLenum type, GLvoid *image );
+GLE_API void glCopyConvolutionFilter2DEXT(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height);
 
 /**
- * @brief void glGetConvolutionParameterfvEXT( GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glGetConvolutionFilterEXT(GLenum target, GLenum format, GLenum type, GLvoid *image)
  */
-GLE_API void glGetConvolutionParameterfvEXT( GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glGetConvolutionFilterEXT(GLenum target, GLenum format, GLenum type, GLvoid *image);
 
 /**
- * @brief void glGetConvolutionParameterivEXT( GLenum target, GLenum pname, GLint *params );
+ * @brief void glGetConvolutionParameterfvEXT(GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetConvolutionParameterivEXT( GLenum target, GLenum pname, GLint *params );
+GLE_API void glGetConvolutionParameterfvEXT(GLenum target, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetSeparableFilterEXT( GLenum target, GLenum format, GLenum type, GLvoid *row, GLvoid *column, GLvoid *span );
+ * @brief void glGetConvolutionParameterivEXT(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glGetSeparableFilterEXT( GLenum target, GLenum format, GLenum type, GLvoid *row, GLvoid *column, GLvoid *span );
+GLE_API void glGetConvolutionParameterivEXT(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glSeparableFilter2DEXT( GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *row, const GLvoid *column );
+ * @brief void glGetSeparableFilterEXT(GLenum target, GLenum format, GLenum type, GLvoid *row, GLvoid *column, GLvoid *span)
  */
-GLE_API void glSeparableFilter2DEXT( GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *row, const GLvoid *column );
+GLE_API void glGetSeparableFilterEXT(GLenum target, GLenum format, GLenum type, GLvoid *row, GLvoid *column, GLvoid *span);
+
+/**
+ * @brief void glSeparableFilter2DEXT(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *row, const GLvoid *column)
+ */
+GLE_API void glSeparableFilter2DEXT(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *row, const GLvoid *column);
 
 //@}
+
+
 
 
 /**
@@ -6967,123 +7604,128 @@ GLE_API void glSeparableFilter2DEXT( GLenum target, GLenum internalformat, GLsiz
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_coordinate_frame is supported.
- * @return Returns \c true if \b GL_EXT_coordinate_frame is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_coordinate_frame is supported.
+ * @return Returns \c true if \b GL_EXT_coordinate_frame is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_coordinate_frame();
 
-/**
- * @brief void glTangent3bEXT( GLbyte tx, GLbyte ty, GLbyte tz );
- */
-GLE_API void glTangent3bEXT( GLbyte tx, GLbyte ty, GLbyte tz );
+
 
 /**
- * @brief void glTangent3bvEXT( const GLbyte *v );
+ * @brief void glBinormal3bEXT(GLbyte bx, GLbyte by, GLbyte bz)
  */
-GLE_API void glTangent3bvEXT( const GLbyte *v );
+GLE_API void glBinormal3bEXT(GLbyte bx, GLbyte by, GLbyte bz);
 
 /**
- * @brief void glTangent3dEXT( GLdouble tx, GLdouble ty, GLdouble tz );
+ * @brief void glBinormal3bvEXT(const GLbyte *v)
  */
-GLE_API void glTangent3dEXT( GLdouble tx, GLdouble ty, GLdouble tz );
+GLE_API void glBinormal3bvEXT(const GLbyte *v);
 
 /**
- * @brief void glTangent3dvEXT( const GLdouble *v );
+ * @brief void glBinormal3dEXT(GLdouble bx, GLdouble by, GLdouble bz)
  */
-GLE_API void glTangent3dvEXT( const GLdouble *v );
+GLE_API void glBinormal3dEXT(GLdouble bx, GLdouble by, GLdouble bz);
 
 /**
- * @brief void glTangent3fEXT( GLfloat tx, GLfloat ty, GLfloat tz );
+ * @brief void glBinormal3dvEXT(const GLdouble *v)
  */
-GLE_API void glTangent3fEXT( GLfloat tx, GLfloat ty, GLfloat tz );
+GLE_API void glBinormal3dvEXT(const GLdouble *v);
 
 /**
- * @brief void glTangent3fvEXT( const GLfloat *v );
+ * @brief void glBinormal3fEXT(GLfloat bx, GLfloat by, GLfloat bz)
  */
-GLE_API void glTangent3fvEXT( const GLfloat *v );
+GLE_API void glBinormal3fEXT(GLfloat bx, GLfloat by, GLfloat bz);
 
 /**
- * @brief void glTangent3iEXT( GLint tx, GLint ty, GLint tz );
+ * @brief void glBinormal3fvEXT(const GLfloat *v)
  */
-GLE_API void glTangent3iEXT( GLint tx, GLint ty, GLint tz );
+GLE_API void glBinormal3fvEXT(const GLfloat *v);
 
 /**
- * @brief void glTangent3ivEXT( const GLint *v );
+ * @brief void glBinormal3iEXT(GLint bx, GLint by, GLint bz)
  */
-GLE_API void glTangent3ivEXT( const GLint *v );
+GLE_API void glBinormal3iEXT(GLint bx, GLint by, GLint bz);
 
 /**
- * @brief void glTangent3sEXT( GLshort tx, GLshort ty, GLshort tz );
+ * @brief void glBinormal3ivEXT(const GLint *v)
  */
-GLE_API void glTangent3sEXT( GLshort tx, GLshort ty, GLshort tz );
+GLE_API void glBinormal3ivEXT(const GLint *v);
 
 /**
- * @brief void glTangent3svEXT( const GLshort *v );
+ * @brief void glBinormal3sEXT(GLshort bx, GLshort by, GLshort bz)
  */
-GLE_API void glTangent3svEXT( const GLshort *v );
+GLE_API void glBinormal3sEXT(GLshort bx, GLshort by, GLshort bz);
 
 /**
- * @brief void glBinormal3bEXT( GLbyte bx, GLbyte by, GLbyte bz );
+ * @brief void glBinormal3svEXT(const GLshort *v)
  */
-GLE_API void glBinormal3bEXT( GLbyte bx, GLbyte by, GLbyte bz );
+GLE_API void glBinormal3svEXT(const GLshort *v);
 
 /**
- * @brief void glBinormal3bvEXT( const GLbyte *v );
+ * @brief void glBinormalPointerEXT(GLenum type, GLsizei stride, const GLvoid *pointer)
  */
-GLE_API void glBinormal3bvEXT( const GLbyte *v );
+GLE_API void glBinormalPointerEXT(GLenum type, GLsizei stride, const GLvoid *pointer);
 
 /**
- * @brief void glBinormal3dEXT( GLdouble bx, GLdouble by, GLdouble bz );
+ * @brief void glTangent3bEXT(GLbyte tx, GLbyte ty, GLbyte tz)
  */
-GLE_API void glBinormal3dEXT( GLdouble bx, GLdouble by, GLdouble bz );
+GLE_API void glTangent3bEXT(GLbyte tx, GLbyte ty, GLbyte tz);
 
 /**
- * @brief void glBinormal3dvEXT( const GLdouble *v );
+ * @brief void glTangent3bvEXT(const GLbyte *v)
  */
-GLE_API void glBinormal3dvEXT( const GLdouble *v );
+GLE_API void glTangent3bvEXT(const GLbyte *v);
 
 /**
- * @brief void glBinormal3fEXT( GLfloat bx, GLfloat by, GLfloat bz );
+ * @brief void glTangent3dEXT(GLdouble tx, GLdouble ty, GLdouble tz)
  */
-GLE_API void glBinormal3fEXT( GLfloat bx, GLfloat by, GLfloat bz );
+GLE_API void glTangent3dEXT(GLdouble tx, GLdouble ty, GLdouble tz);
 
 /**
- * @brief void glBinormal3fvEXT( const GLfloat *v );
+ * @brief void glTangent3dvEXT(const GLdouble *v)
  */
-GLE_API void glBinormal3fvEXT( const GLfloat *v );
+GLE_API void glTangent3dvEXT(const GLdouble *v);
 
 /**
- * @brief void glBinormal3iEXT( GLint bx, GLint by, GLint bz );
+ * @brief void glTangent3fEXT(GLfloat tx, GLfloat ty, GLfloat tz)
  */
-GLE_API void glBinormal3iEXT( GLint bx, GLint by, GLint bz );
+GLE_API void glTangent3fEXT(GLfloat tx, GLfloat ty, GLfloat tz);
 
 /**
- * @brief void glBinormal3ivEXT( const GLint *v );
+ * @brief void glTangent3fvEXT(const GLfloat *v)
  */
-GLE_API void glBinormal3ivEXT( const GLint *v );
+GLE_API void glTangent3fvEXT(const GLfloat *v);
 
 /**
- * @brief void glBinormal3sEXT( GLshort bx, GLshort by, GLshort bz );
+ * @brief void glTangent3iEXT(GLint tx, GLint ty, GLint tz)
  */
-GLE_API void glBinormal3sEXT( GLshort bx, GLshort by, GLshort bz );
+GLE_API void glTangent3iEXT(GLint tx, GLint ty, GLint tz);
 
 /**
- * @brief void glBinormal3svEXT( const GLshort *v );
+ * @brief void glTangent3ivEXT(const GLint *v)
  */
-GLE_API void glBinormal3svEXT( const GLshort *v );
+GLE_API void glTangent3ivEXT(const GLint *v);
 
 /**
- * @brief void glTangentPointerEXT( GLenum type, GLsizei stride, const GLvoid *pointer );
+ * @brief void glTangent3sEXT(GLshort tx, GLshort ty, GLshort tz)
  */
-GLE_API void glTangentPointerEXT( GLenum type, GLsizei stride, const GLvoid *pointer );
+GLE_API void glTangent3sEXT(GLshort tx, GLshort ty, GLshort tz);
 
 /**
- * @brief void glBinormalPointerEXT( GLenum type, GLsizei stride, const GLvoid *pointer );
+ * @brief void glTangent3svEXT(const GLshort *v)
  */
-GLE_API void glBinormalPointerEXT( GLenum type, GLsizei stride, const GLvoid *pointer );
+GLE_API void glTangent3svEXT(const GLshort *v);
+
+/**
+ * @brief void glTangentPointerEXT(GLenum type, GLsizei stride, const GLvoid *pointer)
+ */
+GLE_API void glTangentPointerEXT(GLenum type, GLsizei stride, const GLvoid *pointer);
 
 //@}
+
+
 
 
 /**
@@ -7093,38 +7735,43 @@ GLE_API void glBinormalPointerEXT( GLenum type, GLsizei stride, const GLvoid *po
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_copy_texture is supported.
- * @return Returns \c true if \b GL_EXT_copy_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_copy_texture is supported.
+ * @return Returns \c true if \b GL_EXT_copy_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_copy_texture();
 
-/**
- * @brief void glCopyTexImage1DEXT( GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border );
- */
-GLE_API void glCopyTexImage1DEXT( GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border );
+
 
 /**
- * @brief void glCopyTexImage2DEXT( GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border );
+ * @brief void glCopyTexImage1DEXT(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border)
  */
-GLE_API void glCopyTexImage2DEXT( GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border );
+GLE_API void glCopyTexImage1DEXT(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border);
 
 /**
- * @brief void glCopyTexSubImage1DEXT( GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width );
+ * @brief void glCopyTexImage2DEXT(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border)
  */
-GLE_API void glCopyTexSubImage1DEXT( GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width );
+GLE_API void glCopyTexImage2DEXT(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border);
 
 /**
- * @brief void glCopyTexSubImage2DEXT( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+ * @brief void glCopyTexSubImage1DEXT(GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width)
  */
-GLE_API void glCopyTexSubImage2DEXT( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+GLE_API void glCopyTexSubImage1DEXT(GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width);
 
 /**
- * @brief void glCopyTexSubImage3DEXT( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+ * @brief void glCopyTexSubImage2DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height)
  */
-GLE_API void glCopyTexSubImage3DEXT( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+GLE_API void glCopyTexSubImage2DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height);
+
+/**
+ * @brief void glCopyTexSubImage3DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height)
+ */
+GLE_API void glCopyTexSubImage3DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
 
 //@}
+
+
 
 
 /**
@@ -7134,23 +7781,28 @@ GLE_API void glCopyTexSubImage3DEXT( GLenum target, GLint level, GLint xoffset, 
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_cull_vertex is supported.
- * @return Returns \c true if \b GL_EXT_cull_vertex is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_cull_vertex is supported.
+ * @return Returns \c true if \b GL_EXT_cull_vertex is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_cull_vertex();
 
-/**
- * @brief void glCullParameterdvEXT( GLenum pname, GLdouble *params );
- */
-GLE_API void glCullParameterdvEXT( GLenum pname, GLdouble *params );
+
 
 /**
- * @brief void glCullParameterfvEXT( GLenum pname, GLfloat *params );
+ * @brief void glCullParameterdvEXT(GLenum pname, GLdouble *params)
  */
-GLE_API void glCullParameterfvEXT( GLenum pname, GLfloat *params );
+GLE_API void glCullParameterdvEXT(GLenum pname, GLdouble *params);
+
+/**
+ * @brief void glCullParameterfvEXT(GLenum pname, GLfloat *params)
+ */
+GLE_API void glCullParameterfvEXT(GLenum pname, GLfloat *params);
 
 //@}
+
+
 
 
 /**
@@ -7160,18 +7812,23 @@ GLE_API void glCullParameterfvEXT( GLenum pname, GLfloat *params );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_depth_bounds_test is supported.
- * @return Returns \c true if \b GL_EXT_depth_bounds_test is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_depth_bounds_test is supported.
+ * @return Returns \c true if \b GL_EXT_depth_bounds_test is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_depth_bounds_test();
 
+
+
 /**
- * @brief void glDepthBoundsEXT( GLclampd zmin, GLclampd zmax );
+ * @brief void glDepthBoundsEXT(GLclampd zmin, GLclampd zmax)
  */
-GLE_API void glDepthBoundsEXT( GLclampd zmin, GLclampd zmax );
+GLE_API void glDepthBoundsEXT(GLclampd zmin, GLclampd zmax);
 
 //@}
+
+
 
 
 /**
@@ -7181,958 +7838,963 @@ GLE_API void glDepthBoundsEXT( GLclampd zmin, GLclampd zmax );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_direct_state_access is supported.
- * @return Returns \c true if \b GL_EXT_direct_state_access is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_direct_state_access is supported.
+ * @return Returns \c true if \b GL_EXT_direct_state_access is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_direct_state_access();
 
+
+
 /**
- * @brief void glClientAttribDefaultEXT( GLbitfield mask );
+ * @brief void glBindMultiTextureEXT(GLenum texunit, GLenum target, GLuint texture)
  */
-GLE_API void glClientAttribDefaultEXT( GLbitfield mask );
+GLE_API void glBindMultiTextureEXT(GLenum texunit, GLenum target, GLuint texture);
 
 /**
- * @brief void glPushClientAttribDefaultEXT( GLbitfield mask );
+ * @brief GLenum glCheckNamedFramebufferStatusEXT(GLuint framebuffer, GLenum target)
  */
-GLE_API void glPushClientAttribDefaultEXT( GLbitfield mask );
+GLE_API GLenum glCheckNamedFramebufferStatusEXT(GLuint framebuffer, GLenum target);
 
 /**
- * @brief void glMatrixLoadfEXT( GLenum mode, const GLfloat *m );
+ * @brief void glClientAttribDefaultEXT(GLbitfield mask)
  */
-GLE_API void glMatrixLoadfEXT( GLenum mode, const GLfloat *m );
+GLE_API void glClientAttribDefaultEXT(GLbitfield mask);
 
 /**
- * @brief void glMatrixLoaddEXT( GLenum mode, const GLdouble *m );
+ * @brief void glCompressedMultiTexImage1DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *bits)
  */
-GLE_API void glMatrixLoaddEXT( GLenum mode, const GLdouble *m );
+GLE_API void glCompressedMultiTexImage1DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *bits);
 
 /**
- * @brief void glMatrixMultfEXT( GLenum mode, const GLfloat *m );
+ * @brief void glCompressedMultiTexImage2DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *bits)
  */
-GLE_API void glMatrixMultfEXT( GLenum mode, const GLfloat *m );
+GLE_API void glCompressedMultiTexImage2DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *bits);
 
 /**
- * @brief void glMatrixMultdEXT( GLenum mode, const GLdouble *m );
+ * @brief void glCompressedMultiTexImage3DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *bits)
  */
-GLE_API void glMatrixMultdEXT( GLenum mode, const GLdouble *m );
+GLE_API void glCompressedMultiTexImage3DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *bits);
 
 /**
- * @brief void glMatrixLoadIdentityEXT( GLenum mode );
+ * @brief void glCompressedMultiTexSubImage1DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *bits)
  */
-GLE_API void glMatrixLoadIdentityEXT( GLenum mode );
+GLE_API void glCompressedMultiTexSubImage1DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *bits);
 
 /**
- * @brief void glMatrixRotatefEXT( GLenum mode, GLfloat angle, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glCompressedMultiTexSubImage2DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *bits)
  */
-GLE_API void glMatrixRotatefEXT( GLenum mode, GLfloat angle, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glCompressedMultiTexSubImage2DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *bits);
 
 /**
- * @brief void glMatrixRotatedEXT( GLenum mode, GLdouble angle, GLdouble x, GLdouble y, GLdouble z );
+ * @brief void glCompressedMultiTexSubImage3DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *bits)
  */
-GLE_API void glMatrixRotatedEXT( GLenum mode, GLdouble angle, GLdouble x, GLdouble y, GLdouble z );
+GLE_API void glCompressedMultiTexSubImage3DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *bits);
 
 /**
- * @brief void glMatrixScalefEXT( GLenum mode, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glCompressedTextureImage1DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *bits)
  */
-GLE_API void glMatrixScalefEXT( GLenum mode, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glCompressedTextureImage1DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *bits);
 
 /**
- * @brief void glMatrixScaledEXT( GLenum mode, GLdouble x, GLdouble y, GLdouble z );
+ * @brief void glCompressedTextureImage2DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *bits)
  */
-GLE_API void glMatrixScaledEXT( GLenum mode, GLdouble x, GLdouble y, GLdouble z );
+GLE_API void glCompressedTextureImage2DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *bits);
 
 /**
- * @brief void glMatrixTranslatefEXT( GLenum mode, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glCompressedTextureImage3DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *bits)
  */
-GLE_API void glMatrixTranslatefEXT( GLenum mode, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glCompressedTextureImage3DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *bits);
 
 /**
- * @brief void glMatrixTranslatedEXT( GLenum mode, GLdouble x, GLdouble y, GLdouble z );
+ * @brief void glCompressedTextureSubImage1DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *bits)
  */
-GLE_API void glMatrixTranslatedEXT( GLenum mode, GLdouble x, GLdouble y, GLdouble z );
+GLE_API void glCompressedTextureSubImage1DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *bits);
 
 /**
- * @brief void glMatrixFrustumEXT( GLenum mode, GLdouble left, GLdouble right, GLdouble bottom, GLdouble top, GLdouble zNear, GLdouble zFar );
+ * @brief void glCompressedTextureSubImage2DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *bits)
  */
-GLE_API void glMatrixFrustumEXT( GLenum mode, GLdouble left, GLdouble right, GLdouble bottom, GLdouble top, GLdouble zNear, GLdouble zFar );
+GLE_API void glCompressedTextureSubImage2DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *bits);
 
 /**
- * @brief void glMatrixOrthoEXT( GLenum mode, GLdouble left, GLdouble right, GLdouble bottom, GLdouble top, GLdouble zNear, GLdouble zFar );
+ * @brief void glCompressedTextureSubImage3DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *bits)
  */
-GLE_API void glMatrixOrthoEXT( GLenum mode, GLdouble left, GLdouble right, GLdouble bottom, GLdouble top, GLdouble zNear, GLdouble zFar );
+GLE_API void glCompressedTextureSubImage3DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *bits);
 
 /**
- * @brief void glMatrixPopEXT( GLenum mode );
+ * @brief void glCopyMultiTexImage1DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border)
  */
-GLE_API void glMatrixPopEXT( GLenum mode );
+GLE_API void glCopyMultiTexImage1DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border);
 
 /**
- * @brief void glMatrixPushEXT( GLenum mode );
+ * @brief void glCopyMultiTexImage2DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border)
  */
-GLE_API void glMatrixPushEXT( GLenum mode );
+GLE_API void glCopyMultiTexImage2DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border);
 
 /**
- * @brief void glMatrixLoadTransposefEXT( GLenum mode, const GLfloat *m );
+ * @brief void glCopyMultiTexSubImage1DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width)
  */
-GLE_API void glMatrixLoadTransposefEXT( GLenum mode, const GLfloat *m );
+GLE_API void glCopyMultiTexSubImage1DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width);
 
 /**
- * @brief void glMatrixLoadTransposedEXT( GLenum mode, const GLdouble *m );
+ * @brief void glCopyMultiTexSubImage2DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height)
  */
-GLE_API void glMatrixLoadTransposedEXT( GLenum mode, const GLdouble *m );
+GLE_API void glCopyMultiTexSubImage2DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height);
 
 /**
- * @brief void glMatrixMultTransposefEXT( GLenum mode, const GLfloat *m );
+ * @brief void glCopyMultiTexSubImage3DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height)
  */
-GLE_API void glMatrixMultTransposefEXT( GLenum mode, const GLfloat *m );
+GLE_API void glCopyMultiTexSubImage3DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
 
 /**
- * @brief void glMatrixMultTransposedEXT( GLenum mode, const GLdouble *m );
+ * @brief void glCopyTextureImage1DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border)
  */
-GLE_API void glMatrixMultTransposedEXT( GLenum mode, const GLdouble *m );
+GLE_API void glCopyTextureImage1DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border);
 
 /**
- * @brief void glTextureParameterfEXT( GLuint texture, GLenum target, GLenum pname, GLfloat param );
+ * @brief void glCopyTextureImage2DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border)
  */
-GLE_API void glTextureParameterfEXT( GLuint texture, GLenum target, GLenum pname, GLfloat param );
+GLE_API void glCopyTextureImage2DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border);
 
 /**
- * @brief void glTextureParameterfvEXT( GLuint texture, GLenum target, GLenum pname, const GLfloat *params );
+ * @brief void glCopyTextureSubImage1DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width)
  */
-GLE_API void glTextureParameterfvEXT( GLuint texture, GLenum target, GLenum pname, const GLfloat *params );
+GLE_API void glCopyTextureSubImage1DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width);
 
 /**
- * @brief void glTextureParameteriEXT( GLuint texture, GLenum target, GLenum pname, GLint param );
+ * @brief void glCopyTextureSubImage2DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height)
  */
-GLE_API void glTextureParameteriEXT( GLuint texture, GLenum target, GLenum pname, GLint param );
+GLE_API void glCopyTextureSubImage2DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height);
 
 /**
- * @brief void glTextureParameterivEXT( GLuint texture, GLenum target, GLenum pname, const GLint *params );
+ * @brief void glCopyTextureSubImage3DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height)
  */
-GLE_API void glTextureParameterivEXT( GLuint texture, GLenum target, GLenum pname, const GLint *params );
+GLE_API void glCopyTextureSubImage3DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
 
 /**
- * @brief void glTextureImage1DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glDisableClientStateIndexedEXT(GLenum array, GLuint index)
  */
-GLE_API void glTextureImage1DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glDisableClientStateIndexedEXT(GLenum array, GLuint index);
 
 /**
- * @brief void glTextureImage2DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glEnableClientStateIndexedEXT(GLenum array, GLuint index)
  */
-GLE_API void glTextureImage2DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glEnableClientStateIndexedEXT(GLenum array, GLuint index);
 
 /**
- * @brief void glTextureSubImage1DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glFlushMappedNamedBufferRangeEXT(GLuint buffer, GLintptr offset, GLsizeiptr length)
  */
-GLE_API void glTextureSubImage1DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glFlushMappedNamedBufferRangeEXT(GLuint buffer, GLintptr offset, GLsizeiptr length);
 
 /**
- * @brief void glTextureSubImage2DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glFramebufferDrawBufferEXT(GLuint framebuffer, GLenum mode)
  */
-GLE_API void glTextureSubImage2DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glFramebufferDrawBufferEXT(GLuint framebuffer, GLenum mode);
 
 /**
- * @brief void glCopyTextureImage1DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border );
+ * @brief void glFramebufferDrawBuffersEXT(GLuint framebuffer, GLsizei n, const GLenum *bufs)
  */
-GLE_API void glCopyTextureImage1DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border );
+GLE_API void glFramebufferDrawBuffersEXT(GLuint framebuffer, GLsizei n, const GLenum *bufs);
 
 /**
- * @brief void glCopyTextureImage2DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border );
+ * @brief void glFramebufferReadBufferEXT(GLuint framebuffer, GLenum mode)
  */
-GLE_API void glCopyTextureImage2DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border );
+GLE_API void glFramebufferReadBufferEXT(GLuint framebuffer, GLenum mode);
 
 /**
- * @brief void glCopyTextureSubImage1DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width );
+ * @brief void glGenerateMultiTexMipmapEXT(GLenum texunit, GLenum target)
  */
-GLE_API void glCopyTextureSubImage1DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width );
+GLE_API void glGenerateMultiTexMipmapEXT(GLenum texunit, GLenum target);
 
 /**
- * @brief void glCopyTextureSubImage2DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+ * @brief void glGenerateTextureMipmapEXT(GLuint texture, GLenum target)
  */
-GLE_API void glCopyTextureSubImage2DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+GLE_API void glGenerateTextureMipmapEXT(GLuint texture, GLenum target);
 
 /**
- * @brief void glGetTextureImageEXT( GLuint texture, GLenum target, GLint level, GLenum format, GLenum type, GLvoid *pixels );
+ * @brief void glGetCompressedMultiTexImageEXT(GLenum texunit, GLenum target, GLint lod, GLvoid *img)
  */
-GLE_API void glGetTextureImageEXT( GLuint texture, GLenum target, GLint level, GLenum format, GLenum type, GLvoid *pixels );
+GLE_API void glGetCompressedMultiTexImageEXT(GLenum texunit, GLenum target, GLint lod, GLvoid *img);
 
 /**
- * @brief void glGetTextureParameterfvEXT( GLuint texture, GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glGetCompressedTextureImageEXT(GLuint texture, GLenum target, GLint lod, GLvoid *img)
  */
-GLE_API void glGetTextureParameterfvEXT( GLuint texture, GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glGetCompressedTextureImageEXT(GLuint texture, GLenum target, GLint lod, GLvoid *img);
 
 /**
- * @brief void glGetTextureParameterivEXT( GLuint texture, GLenum target, GLenum pname, GLint *params );
+ * @brief void glGetDoubleIndexedvEXT(GLenum target, GLuint index, GLdouble *data)
  */
-GLE_API void glGetTextureParameterivEXT( GLuint texture, GLenum target, GLenum pname, GLint *params );
+GLE_API void glGetDoubleIndexedvEXT(GLenum target, GLuint index, GLdouble *data);
 
 /**
- * @brief void glGetTextureLevelParameterfvEXT( GLuint texture, GLenum target, GLint level, GLenum pname, GLfloat *params );
+ * @brief void glGetFloatIndexedvEXT(GLenum target, GLuint index, GLfloat *data)
  */
-GLE_API void glGetTextureLevelParameterfvEXT( GLuint texture, GLenum target, GLint level, GLenum pname, GLfloat *params );
+GLE_API void glGetFloatIndexedvEXT(GLenum target, GLuint index, GLfloat *data);
 
 /**
- * @brief void glGetTextureLevelParameterivEXT( GLuint texture, GLenum target, GLint level, GLenum pname, GLint *params );
+ * @brief void glGetFramebufferParameterivEXT(GLuint framebuffer, GLenum pname, GLint *params)
  */
-GLE_API void glGetTextureLevelParameterivEXT( GLuint texture, GLenum target, GLint level, GLenum pname, GLint *params );
+GLE_API void glGetFramebufferParameterivEXT(GLuint framebuffer, GLenum pname, GLint *params);
 
 /**
- * @brief void glTextureImage3DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glGetMultiTexEnvfvEXT(GLenum texunit, GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glTextureImage3DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glGetMultiTexEnvfvEXT(GLenum texunit, GLenum target, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glTextureSubImage3DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glGetMultiTexEnvivEXT(GLenum texunit, GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glTextureSubImage3DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glGetMultiTexEnvivEXT(GLenum texunit, GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glCopyTextureSubImage3DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+ * @brief void glGetMultiTexGendvEXT(GLenum texunit, GLenum coord, GLenum pname, GLdouble *params)
  */
-GLE_API void glCopyTextureSubImage3DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+GLE_API void glGetMultiTexGendvEXT(GLenum texunit, GLenum coord, GLenum pname, GLdouble *params);
 
 /**
- * @brief void glMultiTexParameterfEXT( GLenum texunit, GLenum target, GLenum pname, GLfloat param );
+ * @brief void glGetMultiTexGenfvEXT(GLenum texunit, GLenum coord, GLenum pname, GLfloat *params)
  */
-GLE_API void glMultiTexParameterfEXT( GLenum texunit, GLenum target, GLenum pname, GLfloat param );
+GLE_API void glGetMultiTexGenfvEXT(GLenum texunit, GLenum coord, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glMultiTexParameterfvEXT( GLenum texunit, GLenum target, GLenum pname, const GLfloat *params );
+ * @brief void glGetMultiTexGenivEXT(GLenum texunit, GLenum coord, GLenum pname, GLint *params)
  */
-GLE_API void glMultiTexParameterfvEXT( GLenum texunit, GLenum target, GLenum pname, const GLfloat *params );
+GLE_API void glGetMultiTexGenivEXT(GLenum texunit, GLenum coord, GLenum pname, GLint *params);
 
 /**
- * @brief void glMultiTexParameteriEXT( GLenum texunit, GLenum target, GLenum pname, GLint param );
+ * @brief void glGetMultiTexImageEXT(GLenum texunit, GLenum target, GLint level, GLenum format, GLenum type, GLvoid *pixels)
  */
-GLE_API void glMultiTexParameteriEXT( GLenum texunit, GLenum target, GLenum pname, GLint param );
+GLE_API void glGetMultiTexImageEXT(GLenum texunit, GLenum target, GLint level, GLenum format, GLenum type, GLvoid *pixels);
 
 /**
- * @brief void glMultiTexParameterivEXT( GLenum texunit, GLenum target, GLenum pname, const GLint *params );
+ * @brief void glGetMultiTexLevelParameterfvEXT(GLenum texunit, GLenum target, GLint level, GLenum pname, GLfloat *params)
  */
-GLE_API void glMultiTexParameterivEXT( GLenum texunit, GLenum target, GLenum pname, const GLint *params );
+GLE_API void glGetMultiTexLevelParameterfvEXT(GLenum texunit, GLenum target, GLint level, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glMultiTexImage1DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glGetMultiTexLevelParameterivEXT(GLenum texunit, GLenum target, GLint level, GLenum pname, GLint *params)
  */
-GLE_API void glMultiTexImage1DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glGetMultiTexLevelParameterivEXT(GLenum texunit, GLenum target, GLint level, GLenum pname, GLint *params);
 
 /**
- * @brief void glMultiTexImage2DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glGetMultiTexParameterIivEXT(GLenum texunit, GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glMultiTexImage2DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glGetMultiTexParameterIivEXT(GLenum texunit, GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glMultiTexSubImage1DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glGetMultiTexParameterIuivEXT(GLenum texunit, GLenum target, GLenum pname, GLuint *params)
  */
-GLE_API void glMultiTexSubImage1DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glGetMultiTexParameterIuivEXT(GLenum texunit, GLenum target, GLenum pname, GLuint *params);
 
 /**
- * @brief void glMultiTexSubImage2DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glGetMultiTexParameterfvEXT(GLenum texunit, GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glMultiTexSubImage2DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glGetMultiTexParameterfvEXT(GLenum texunit, GLenum target, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glCopyMultiTexImage1DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border );
+ * @brief void glGetMultiTexParameterivEXT(GLenum texunit, GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glCopyMultiTexImage1DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border );
+GLE_API void glGetMultiTexParameterivEXT(GLenum texunit, GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glCopyMultiTexImage2DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border );
+ * @brief void glGetNamedBufferParameterivEXT(GLuint buffer, GLenum pname, GLint *params)
  */
-GLE_API void glCopyMultiTexImage2DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border );
+GLE_API void glGetNamedBufferParameterivEXT(GLuint buffer, GLenum pname, GLint *params);
 
 /**
- * @brief void glCopyMultiTexSubImage1DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width );
+ * @brief void glGetNamedBufferPointervEXT(GLuint buffer, GLenum pname, GLvoid* *params)
  */
-GLE_API void glCopyMultiTexSubImage1DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width );
+GLE_API void glGetNamedBufferPointervEXT(GLuint buffer, GLenum pname, GLvoid* *params);
 
 /**
- * @brief void glCopyMultiTexSubImage2DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+ * @brief void glGetNamedBufferSubDataEXT(GLuint buffer, GLintptr offset, GLsizeiptr size, GLvoid *data)
  */
-GLE_API void glCopyMultiTexSubImage2DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+GLE_API void glGetNamedBufferSubDataEXT(GLuint buffer, GLintptr offset, GLsizeiptr size, GLvoid *data);
 
 /**
- * @brief void glGetMultiTexImageEXT( GLenum texunit, GLenum target, GLint level, GLenum format, GLenum type, GLvoid *pixels );
+ * @brief void glGetNamedFramebufferAttachmentParameterivEXT(GLuint framebuffer, GLenum attachment, GLenum pname, GLint *params)
  */
-GLE_API void glGetMultiTexImageEXT( GLenum texunit, GLenum target, GLint level, GLenum format, GLenum type, GLvoid *pixels );
+GLE_API void glGetNamedFramebufferAttachmentParameterivEXT(GLuint framebuffer, GLenum attachment, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetMultiTexParameterfvEXT( GLenum texunit, GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glGetNamedProgramLocalParameterIivEXT(GLuint program, GLenum target, GLuint index, GLint *params)
  */
-GLE_API void glGetMultiTexParameterfvEXT( GLenum texunit, GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glGetNamedProgramLocalParameterIivEXT(GLuint program, GLenum target, GLuint index, GLint *params);
 
 /**
- * @brief void glGetMultiTexParameterivEXT( GLenum texunit, GLenum target, GLenum pname, GLint *params );
+ * @brief void glGetNamedProgramLocalParameterIuivEXT(GLuint program, GLenum target, GLuint index, GLuint *params)
  */
-GLE_API void glGetMultiTexParameterivEXT( GLenum texunit, GLenum target, GLenum pname, GLint *params );
+GLE_API void glGetNamedProgramLocalParameterIuivEXT(GLuint program, GLenum target, GLuint index, GLuint *params);
 
 /**
- * @brief void glGetMultiTexLevelParameterfvEXT( GLenum texunit, GLenum target, GLint level, GLenum pname, GLfloat *params );
+ * @brief void glGetNamedProgramLocalParameterdvEXT(GLuint program, GLenum target, GLuint index, GLdouble *params)
  */
-GLE_API void glGetMultiTexLevelParameterfvEXT( GLenum texunit, GLenum target, GLint level, GLenum pname, GLfloat *params );
+GLE_API void glGetNamedProgramLocalParameterdvEXT(GLuint program, GLenum target, GLuint index, GLdouble *params);
 
 /**
- * @brief void glGetMultiTexLevelParameterivEXT( GLenum texunit, GLenum target, GLint level, GLenum pname, GLint *params );
+ * @brief void glGetNamedProgramLocalParameterfvEXT(GLuint program, GLenum target, GLuint index, GLfloat *params)
  */
-GLE_API void glGetMultiTexLevelParameterivEXT( GLenum texunit, GLenum target, GLint level, GLenum pname, GLint *params );
+GLE_API void glGetNamedProgramLocalParameterfvEXT(GLuint program, GLenum target, GLuint index, GLfloat *params);
 
 /**
- * @brief void glMultiTexImage3DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glGetNamedProgramStringEXT(GLuint program, GLenum target, GLenum pname, GLvoid *string)
  */
-GLE_API void glMultiTexImage3DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glGetNamedProgramStringEXT(GLuint program, GLenum target, GLenum pname, GLvoid *string);
 
 /**
- * @brief void glMultiTexSubImage3DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glGetNamedProgramivEXT(GLuint program, GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glMultiTexSubImage3DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glGetNamedProgramivEXT(GLuint program, GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glCopyMultiTexSubImage3DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+ * @brief void glGetNamedRenderbufferParameterivEXT(GLuint renderbuffer, GLenum pname, GLint *params)
  */
-GLE_API void glCopyMultiTexSubImage3DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+GLE_API void glGetNamedRenderbufferParameterivEXT(GLuint renderbuffer, GLenum pname, GLint *params);
 
 /**
- * @brief void glBindMultiTextureEXT( GLenum texunit, GLenum target, GLuint texture );
+ * @brief void glGetPointerIndexedvEXT(GLenum target, GLuint index, GLvoid* *data)
  */
-GLE_API void glBindMultiTextureEXT( GLenum texunit, GLenum target, GLuint texture );
+GLE_API void glGetPointerIndexedvEXT(GLenum target, GLuint index, GLvoid* *data);
 
 /**
- * @brief void glEnableClientStateIndexedEXT( GLenum array, GLuint index );
+ * @brief void glGetTextureImageEXT(GLuint texture, GLenum target, GLint level, GLenum format, GLenum type, GLvoid *pixels)
  */
-GLE_API void glEnableClientStateIndexedEXT( GLenum array, GLuint index );
+GLE_API void glGetTextureImageEXT(GLuint texture, GLenum target, GLint level, GLenum format, GLenum type, GLvoid *pixels);
 
 /**
- * @brief void glDisableClientStateIndexedEXT( GLenum array, GLuint index );
+ * @brief void glGetTextureLevelParameterfvEXT(GLuint texture, GLenum target, GLint level, GLenum pname, GLfloat *params)
  */
-GLE_API void glDisableClientStateIndexedEXT( GLenum array, GLuint index );
+GLE_API void glGetTextureLevelParameterfvEXT(GLuint texture, GLenum target, GLint level, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glMultiTexCoordPointerEXT( GLenum texunit, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+ * @brief void glGetTextureLevelParameterivEXT(GLuint texture, GLenum target, GLint level, GLenum pname, GLint *params)
  */
-GLE_API void glMultiTexCoordPointerEXT( GLenum texunit, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+GLE_API void glGetTextureLevelParameterivEXT(GLuint texture, GLenum target, GLint level, GLenum pname, GLint *params);
 
 /**
- * @brief void glMultiTexEnvfEXT( GLenum texunit, GLenum target, GLenum pname, GLfloat param );
+ * @brief void glGetTextureParameterIivEXT(GLuint texture, GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glMultiTexEnvfEXT( GLenum texunit, GLenum target, GLenum pname, GLfloat param );
+GLE_API void glGetTextureParameterIivEXT(GLuint texture, GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glMultiTexEnvfvEXT( GLenum texunit, GLenum target, GLenum pname, const GLfloat *params );
+ * @brief void glGetTextureParameterIuivEXT(GLuint texture, GLenum target, GLenum pname, GLuint *params)
  */
-GLE_API void glMultiTexEnvfvEXT( GLenum texunit, GLenum target, GLenum pname, const GLfloat *params );
+GLE_API void glGetTextureParameterIuivEXT(GLuint texture, GLenum target, GLenum pname, GLuint *params);
 
 /**
- * @brief void glMultiTexEnviEXT( GLenum texunit, GLenum target, GLenum pname, GLint param );
+ * @brief void glGetTextureParameterfvEXT(GLuint texture, GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glMultiTexEnviEXT( GLenum texunit, GLenum target, GLenum pname, GLint param );
+GLE_API void glGetTextureParameterfvEXT(GLuint texture, GLenum target, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glMultiTexEnvivEXT( GLenum texunit, GLenum target, GLenum pname, const GLint *params );
+ * @brief void glGetTextureParameterivEXT(GLuint texture, GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glMultiTexEnvivEXT( GLenum texunit, GLenum target, GLenum pname, const GLint *params );
+GLE_API void glGetTextureParameterivEXT(GLuint texture, GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glMultiTexGendEXT( GLenum texunit, GLenum coord, GLenum pname, GLdouble param );
+ * @brief GLvoid* glMapNamedBufferEXT(GLuint buffer, GLenum access)
  */
-GLE_API void glMultiTexGendEXT( GLenum texunit, GLenum coord, GLenum pname, GLdouble param );
+GLE_API GLvoid* glMapNamedBufferEXT(GLuint buffer, GLenum access);
 
 /**
- * @brief void glMultiTexGendvEXT( GLenum texunit, GLenum coord, GLenum pname, const GLdouble *params );
+ * @brief GLvoid* glMapNamedBufferRangeEXT(GLuint buffer, GLintptr offset, GLsizeiptr length, GLbitfield access)
  */
-GLE_API void glMultiTexGendvEXT( GLenum texunit, GLenum coord, GLenum pname, const GLdouble *params );
+GLE_API GLvoid* glMapNamedBufferRangeEXT(GLuint buffer, GLintptr offset, GLsizeiptr length, GLbitfield access);
 
 /**
- * @brief void glMultiTexGenfEXT( GLenum texunit, GLenum coord, GLenum pname, GLfloat param );
+ * @brief void glMatrixFrustumEXT(GLenum mode, GLdouble left, GLdouble right, GLdouble bottom, GLdouble top, GLdouble zNear, GLdouble zFar)
  */
-GLE_API void glMultiTexGenfEXT( GLenum texunit, GLenum coord, GLenum pname, GLfloat param );
+GLE_API void glMatrixFrustumEXT(GLenum mode, GLdouble left, GLdouble right, GLdouble bottom, GLdouble top, GLdouble zNear, GLdouble zFar);
 
 /**
- * @brief void glMultiTexGenfvEXT( GLenum texunit, GLenum coord, GLenum pname, const GLfloat *params );
+ * @brief void glMatrixLoadIdentityEXT(GLenum mode)
  */
-GLE_API void glMultiTexGenfvEXT( GLenum texunit, GLenum coord, GLenum pname, const GLfloat *params );
+GLE_API void glMatrixLoadIdentityEXT(GLenum mode);
 
 /**
- * @brief void glMultiTexGeniEXT( GLenum texunit, GLenum coord, GLenum pname, GLint param );
+ * @brief void glMatrixLoadTransposedEXT(GLenum mode, const GLdouble *m)
  */
-GLE_API void glMultiTexGeniEXT( GLenum texunit, GLenum coord, GLenum pname, GLint param );
+GLE_API void glMatrixLoadTransposedEXT(GLenum mode, const GLdouble *m);
 
 /**
- * @brief void glMultiTexGenivEXT( GLenum texunit, GLenum coord, GLenum pname, const GLint *params );
+ * @brief void glMatrixLoadTransposefEXT(GLenum mode, const GLfloat *m)
  */
-GLE_API void glMultiTexGenivEXT( GLenum texunit, GLenum coord, GLenum pname, const GLint *params );
+GLE_API void glMatrixLoadTransposefEXT(GLenum mode, const GLfloat *m);
 
 /**
- * @brief void glGetMultiTexEnvfvEXT( GLenum texunit, GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glMatrixLoaddEXT(GLenum mode, const GLdouble *m)
  */
-GLE_API void glGetMultiTexEnvfvEXT( GLenum texunit, GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glMatrixLoaddEXT(GLenum mode, const GLdouble *m);
 
 /**
- * @brief void glGetMultiTexEnvivEXT( GLenum texunit, GLenum target, GLenum pname, GLint *params );
+ * @brief void glMatrixLoadfEXT(GLenum mode, const GLfloat *m)
  */
-GLE_API void glGetMultiTexEnvivEXT( GLenum texunit, GLenum target, GLenum pname, GLint *params );
+GLE_API void glMatrixLoadfEXT(GLenum mode, const GLfloat *m);
 
 /**
- * @brief void glGetMultiTexGendvEXT( GLenum texunit, GLenum coord, GLenum pname, GLdouble *params );
+ * @brief void glMatrixMultTransposedEXT(GLenum mode, const GLdouble *m)
  */
-GLE_API void glGetMultiTexGendvEXT( GLenum texunit, GLenum coord, GLenum pname, GLdouble *params );
+GLE_API void glMatrixMultTransposedEXT(GLenum mode, const GLdouble *m);
 
 /**
- * @brief void glGetMultiTexGenfvEXT( GLenum texunit, GLenum coord, GLenum pname, GLfloat *params );
+ * @brief void glMatrixMultTransposefEXT(GLenum mode, const GLfloat *m)
  */
-GLE_API void glGetMultiTexGenfvEXT( GLenum texunit, GLenum coord, GLenum pname, GLfloat *params );
+GLE_API void glMatrixMultTransposefEXT(GLenum mode, const GLfloat *m);
 
 /**
- * @brief void glGetMultiTexGenivEXT( GLenum texunit, GLenum coord, GLenum pname, GLint *params );
+ * @brief void glMatrixMultdEXT(GLenum mode, const GLdouble *m)
  */
-GLE_API void glGetMultiTexGenivEXT( GLenum texunit, GLenum coord, GLenum pname, GLint *params );
+GLE_API void glMatrixMultdEXT(GLenum mode, const GLdouble *m);
 
 /**
- * @brief void glGetFloatIndexedvEXT( GLenum target, GLuint index, GLfloat *data );
+ * @brief void glMatrixMultfEXT(GLenum mode, const GLfloat *m)
  */
-GLE_API void glGetFloatIndexedvEXT( GLenum target, GLuint index, GLfloat *data );
+GLE_API void glMatrixMultfEXT(GLenum mode, const GLfloat *m);
 
 /**
- * @brief void glGetDoubleIndexedvEXT( GLenum target, GLuint index, GLdouble *data );
+ * @brief void glMatrixOrthoEXT(GLenum mode, GLdouble left, GLdouble right, GLdouble bottom, GLdouble top, GLdouble zNear, GLdouble zFar)
  */
-GLE_API void glGetDoubleIndexedvEXT( GLenum target, GLuint index, GLdouble *data );
+GLE_API void glMatrixOrthoEXT(GLenum mode, GLdouble left, GLdouble right, GLdouble bottom, GLdouble top, GLdouble zNear, GLdouble zFar);
 
 /**
- * @brief void glGetPointerIndexedvEXT( GLenum target, GLuint index, GLvoid* *data );
+ * @brief void glMatrixPopEXT(GLenum mode)
  */
-GLE_API void glGetPointerIndexedvEXT( GLenum target, GLuint index, GLvoid* *data );
+GLE_API void glMatrixPopEXT(GLenum mode);
 
 /**
- * @brief void glCompressedTextureImage3DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *bits );
+ * @brief void glMatrixPushEXT(GLenum mode)
  */
-GLE_API void glCompressedTextureImage3DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *bits );
+GLE_API void glMatrixPushEXT(GLenum mode);
 
 /**
- * @brief void glCompressedTextureImage2DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *bits );
+ * @brief void glMatrixRotatedEXT(GLenum mode, GLdouble angle, GLdouble x, GLdouble y, GLdouble z)
  */
-GLE_API void glCompressedTextureImage2DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *bits );
+GLE_API void glMatrixRotatedEXT(GLenum mode, GLdouble angle, GLdouble x, GLdouble y, GLdouble z);
 
 /**
- * @brief void glCompressedTextureImage1DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *bits );
+ * @brief void glMatrixRotatefEXT(GLenum mode, GLfloat angle, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glCompressedTextureImage1DEXT( GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *bits );
+GLE_API void glMatrixRotatefEXT(GLenum mode, GLfloat angle, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glCompressedTextureSubImage3DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *bits );
+ * @brief void glMatrixScaledEXT(GLenum mode, GLdouble x, GLdouble y, GLdouble z)
  */
-GLE_API void glCompressedTextureSubImage3DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *bits );
+GLE_API void glMatrixScaledEXT(GLenum mode, GLdouble x, GLdouble y, GLdouble z);
 
 /**
- * @brief void glCompressedTextureSubImage2DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *bits );
+ * @brief void glMatrixScalefEXT(GLenum mode, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glCompressedTextureSubImage2DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *bits );
+GLE_API void glMatrixScalefEXT(GLenum mode, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glCompressedTextureSubImage1DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *bits );
+ * @brief void glMatrixTranslatedEXT(GLenum mode, GLdouble x, GLdouble y, GLdouble z)
  */
-GLE_API void glCompressedTextureSubImage1DEXT( GLuint texture, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *bits );
+GLE_API void glMatrixTranslatedEXT(GLenum mode, GLdouble x, GLdouble y, GLdouble z);
 
 /**
- * @brief void glGetCompressedTextureImageEXT( GLuint texture, GLenum target, GLint lod, GLvoid *img );
+ * @brief void glMatrixTranslatefEXT(GLenum mode, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glGetCompressedTextureImageEXT( GLuint texture, GLenum target, GLint lod, GLvoid *img );
+GLE_API void glMatrixTranslatefEXT(GLenum mode, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glCompressedMultiTexImage3DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *bits );
+ * @brief void glMultiTexBufferEXT(GLenum texunit, GLenum target, GLenum internalformat, GLuint buffer)
  */
-GLE_API void glCompressedMultiTexImage3DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *bits );
+GLE_API void glMultiTexBufferEXT(GLenum texunit, GLenum target, GLenum internalformat, GLuint buffer);
 
 /**
- * @brief void glCompressedMultiTexImage2DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *bits );
+ * @brief void glMultiTexCoordPointerEXT(GLenum texunit, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
  */
-GLE_API void glCompressedMultiTexImage2DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *bits );
+GLE_API void glMultiTexCoordPointerEXT(GLenum texunit, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
 
 /**
- * @brief void glCompressedMultiTexImage1DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *bits );
+ * @brief void glMultiTexEnvfEXT(GLenum texunit, GLenum target, GLenum pname, GLfloat param)
  */
-GLE_API void glCompressedMultiTexImage1DEXT( GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *bits );
+GLE_API void glMultiTexEnvfEXT(GLenum texunit, GLenum target, GLenum pname, GLfloat param);
 
 /**
- * @brief void glCompressedMultiTexSubImage3DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *bits );
+ * @brief void glMultiTexEnvfvEXT(GLenum texunit, GLenum target, GLenum pname, const GLfloat *params)
  */
-GLE_API void glCompressedMultiTexSubImage3DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *bits );
+GLE_API void glMultiTexEnvfvEXT(GLenum texunit, GLenum target, GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glCompressedMultiTexSubImage2DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *bits );
+ * @brief void glMultiTexEnviEXT(GLenum texunit, GLenum target, GLenum pname, GLint param)
  */
-GLE_API void glCompressedMultiTexSubImage2DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *bits );
+GLE_API void glMultiTexEnviEXT(GLenum texunit, GLenum target, GLenum pname, GLint param);
 
 /**
- * @brief void glCompressedMultiTexSubImage1DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *bits );
+ * @brief void glMultiTexEnvivEXT(GLenum texunit, GLenum target, GLenum pname, const GLint *params)
  */
-GLE_API void glCompressedMultiTexSubImage1DEXT( GLenum texunit, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *bits );
+GLE_API void glMultiTexEnvivEXT(GLenum texunit, GLenum target, GLenum pname, const GLint *params);
 
 /**
- * @brief void glGetCompressedMultiTexImageEXT( GLenum texunit, GLenum target, GLint lod, GLvoid *img );
+ * @brief void glMultiTexGendEXT(GLenum texunit, GLenum coord, GLenum pname, GLdouble param)
  */
-GLE_API void glGetCompressedMultiTexImageEXT( GLenum texunit, GLenum target, GLint lod, GLvoid *img );
+GLE_API void glMultiTexGendEXT(GLenum texunit, GLenum coord, GLenum pname, GLdouble param);
 
 /**
- * @brief void glNamedProgramStringEXT( GLuint program, GLenum target, GLenum format, GLsizei len, const GLvoid *string );
+ * @brief void glMultiTexGendvEXT(GLenum texunit, GLenum coord, GLenum pname, const GLdouble *params)
  */
-GLE_API void glNamedProgramStringEXT( GLuint program, GLenum target, GLenum format, GLsizei len, const GLvoid *string );
+GLE_API void glMultiTexGendvEXT(GLenum texunit, GLenum coord, GLenum pname, const GLdouble *params);
 
 /**
- * @brief void glNamedProgramLocalParameter4dEXT( GLuint program, GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+ * @brief void glMultiTexGenfEXT(GLenum texunit, GLenum coord, GLenum pname, GLfloat param)
  */
-GLE_API void glNamedProgramLocalParameter4dEXT( GLuint program, GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+GLE_API void glMultiTexGenfEXT(GLenum texunit, GLenum coord, GLenum pname, GLfloat param);
 
 /**
- * @brief void glNamedProgramLocalParameter4dvEXT( GLuint program, GLenum target, GLuint index, const GLdouble *params );
+ * @brief void glMultiTexGenfvEXT(GLenum texunit, GLenum coord, GLenum pname, const GLfloat *params)
  */
-GLE_API void glNamedProgramLocalParameter4dvEXT( GLuint program, GLenum target, GLuint index, const GLdouble *params );
+GLE_API void glMultiTexGenfvEXT(GLenum texunit, GLenum coord, GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glNamedProgramLocalParameter4fEXT( GLuint program, GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+ * @brief void glMultiTexGeniEXT(GLenum texunit, GLenum coord, GLenum pname, GLint param)
  */
-GLE_API void glNamedProgramLocalParameter4fEXT( GLuint program, GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+GLE_API void glMultiTexGeniEXT(GLenum texunit, GLenum coord, GLenum pname, GLint param);
 
 /**
- * @brief void glNamedProgramLocalParameter4fvEXT( GLuint program, GLenum target, GLuint index, const GLfloat *params );
+ * @brief void glMultiTexGenivEXT(GLenum texunit, GLenum coord, GLenum pname, const GLint *params)
  */
-GLE_API void glNamedProgramLocalParameter4fvEXT( GLuint program, GLenum target, GLuint index, const GLfloat *params );
+GLE_API void glMultiTexGenivEXT(GLenum texunit, GLenum coord, GLenum pname, const GLint *params);
 
 /**
- * @brief void glGetNamedProgramLocalParameterdvEXT( GLuint program, GLenum target, GLuint index, GLdouble *params );
+ * @brief void glMultiTexImage1DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glGetNamedProgramLocalParameterdvEXT( GLuint program, GLenum target, GLuint index, GLdouble *params );
+GLE_API void glMultiTexImage1DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLenum format, GLenum type, const GLvoid *pixels);
 
 /**
- * @brief void glGetNamedProgramLocalParameterfvEXT( GLuint program, GLenum target, GLuint index, GLfloat *params );
+ * @brief void glMultiTexImage2DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glGetNamedProgramLocalParameterfvEXT( GLuint program, GLenum target, GLuint index, GLfloat *params );
+GLE_API void glMultiTexImage2DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid *pixels);
 
 /**
- * @brief void glGetNamedProgramivEXT( GLuint program, GLenum target, GLenum pname, GLint *params );
+ * @brief void glMultiTexImage3DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glGetNamedProgramivEXT( GLuint program, GLenum target, GLenum pname, GLint *params );
+GLE_API void glMultiTexImage3DEXT(GLenum texunit, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels);
 
 /**
- * @brief void glGetNamedProgramStringEXT( GLuint program, GLenum target, GLenum pname, GLvoid *string );
+ * @brief void glMultiTexParameterIivEXT(GLenum texunit, GLenum target, GLenum pname, const GLint *params)
  */
-GLE_API void glGetNamedProgramStringEXT( GLuint program, GLenum target, GLenum pname, GLvoid *string );
+GLE_API void glMultiTexParameterIivEXT(GLenum texunit, GLenum target, GLenum pname, const GLint *params);
 
 /**
- * @brief void glNamedProgramLocalParameters4fvEXT( GLuint program, GLenum target, GLuint index, GLsizei count, const GLfloat *params );
+ * @brief void glMultiTexParameterIuivEXT(GLenum texunit, GLenum target, GLenum pname, const GLuint *params)
  */
-GLE_API void glNamedProgramLocalParameters4fvEXT( GLuint program, GLenum target, GLuint index, GLsizei count, const GLfloat *params );
+GLE_API void glMultiTexParameterIuivEXT(GLenum texunit, GLenum target, GLenum pname, const GLuint *params);
 
 /**
- * @brief void glNamedProgramLocalParameterI4iEXT( GLuint program, GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w );
+ * @brief void glMultiTexParameterfEXT(GLenum texunit, GLenum target, GLenum pname, GLfloat param)
  */
-GLE_API void glNamedProgramLocalParameterI4iEXT( GLuint program, GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w );
+GLE_API void glMultiTexParameterfEXT(GLenum texunit, GLenum target, GLenum pname, GLfloat param);
 
 /**
- * @brief void glNamedProgramLocalParameterI4ivEXT( GLuint program, GLenum target, GLuint index, const GLint *params );
+ * @brief void glMultiTexParameterfvEXT(GLenum texunit, GLenum target, GLenum pname, const GLfloat *params)
  */
-GLE_API void glNamedProgramLocalParameterI4ivEXT( GLuint program, GLenum target, GLuint index, const GLint *params );
+GLE_API void glMultiTexParameterfvEXT(GLenum texunit, GLenum target, GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glNamedProgramLocalParametersI4ivEXT( GLuint program, GLenum target, GLuint index, GLsizei count, const GLint *params );
+ * @brief void glMultiTexParameteriEXT(GLenum texunit, GLenum target, GLenum pname, GLint param)
  */
-GLE_API void glNamedProgramLocalParametersI4ivEXT( GLuint program, GLenum target, GLuint index, GLsizei count, const GLint *params );
+GLE_API void glMultiTexParameteriEXT(GLenum texunit, GLenum target, GLenum pname, GLint param);
 
 /**
- * @brief void glNamedProgramLocalParameterI4uiEXT( GLuint program, GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+ * @brief void glMultiTexParameterivEXT(GLenum texunit, GLenum target, GLenum pname, const GLint *params)
  */
-GLE_API void glNamedProgramLocalParameterI4uiEXT( GLuint program, GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+GLE_API void glMultiTexParameterivEXT(GLenum texunit, GLenum target, GLenum pname, const GLint *params);
 
 /**
- * @brief void glNamedProgramLocalParameterI4uivEXT( GLuint program, GLenum target, GLuint index, const GLuint *params );
+ * @brief void glMultiTexRenderbufferEXT(GLenum texunit, GLenum target, GLuint renderbuffer)
  */
-GLE_API void glNamedProgramLocalParameterI4uivEXT( GLuint program, GLenum target, GLuint index, const GLuint *params );
+GLE_API void glMultiTexRenderbufferEXT(GLenum texunit, GLenum target, GLuint renderbuffer);
 
 /**
- * @brief void glNamedProgramLocalParametersI4uivEXT( GLuint program, GLenum target, GLuint index, GLsizei count, const GLuint *params );
+ * @brief void glMultiTexSubImage1DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glNamedProgramLocalParametersI4uivEXT( GLuint program, GLenum target, GLuint index, GLsizei count, const GLuint *params );
+GLE_API void glMultiTexSubImage1DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels);
 
 /**
- * @brief void glGetNamedProgramLocalParameterIivEXT( GLuint program, GLenum target, GLuint index, GLint *params );
+ * @brief void glMultiTexSubImage2DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glGetNamedProgramLocalParameterIivEXT( GLuint program, GLenum target, GLuint index, GLint *params );
+GLE_API void glMultiTexSubImage2DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels);
 
 /**
- * @brief void glGetNamedProgramLocalParameterIuivEXT( GLuint program, GLenum target, GLuint index, GLuint *params );
+ * @brief void glMultiTexSubImage3DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glGetNamedProgramLocalParameterIuivEXT( GLuint program, GLenum target, GLuint index, GLuint *params );
+GLE_API void glMultiTexSubImage3DEXT(GLenum texunit, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels);
 
 /**
- * @brief void glTextureParameterIivEXT( GLuint texture, GLenum target, GLenum pname, const GLint *params );
+ * @brief void glNamedBufferDataEXT(GLuint buffer, GLsizeiptr size, const GLvoid *data, GLenum usage)
  */
-GLE_API void glTextureParameterIivEXT( GLuint texture, GLenum target, GLenum pname, const GLint *params );
+GLE_API void glNamedBufferDataEXT(GLuint buffer, GLsizeiptr size, const GLvoid *data, GLenum usage);
 
 /**
- * @brief void glTextureParameterIuivEXT( GLuint texture, GLenum target, GLenum pname, const GLuint *params );
+ * @brief void glNamedBufferSubDataEXT(GLuint buffer, GLintptr offset, GLsizeiptr size, const GLvoid *data)
  */
-GLE_API void glTextureParameterIuivEXT( GLuint texture, GLenum target, GLenum pname, const GLuint *params );
+GLE_API void glNamedBufferSubDataEXT(GLuint buffer, GLintptr offset, GLsizeiptr size, const GLvoid *data);
 
 /**
- * @brief void glGetTextureParameterIivEXT( GLuint texture, GLenum target, GLenum pname, GLint *params );
+ * @brief void glNamedCopyBufferSubDataEXT(GLuint readBuffer, GLuint writeBuffer, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size)
  */
-GLE_API void glGetTextureParameterIivEXT( GLuint texture, GLenum target, GLenum pname, GLint *params );
+GLE_API void glNamedCopyBufferSubDataEXT(GLuint readBuffer, GLuint writeBuffer, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size);
 
 /**
- * @brief void glGetTextureParameterIuivEXT( GLuint texture, GLenum target, GLenum pname, GLuint *params );
+ * @brief void glNamedFramebufferRenderbufferEXT(GLuint framebuffer, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer)
  */
-GLE_API void glGetTextureParameterIuivEXT( GLuint texture, GLenum target, GLenum pname, GLuint *params );
+GLE_API void glNamedFramebufferRenderbufferEXT(GLuint framebuffer, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer);
 
 /**
- * @brief void glMultiTexParameterIivEXT( GLenum texunit, GLenum target, GLenum pname, const GLint *params );
+ * @brief void glNamedFramebufferTexture1DEXT(GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level)
  */
-GLE_API void glMultiTexParameterIivEXT( GLenum texunit, GLenum target, GLenum pname, const GLint *params );
+GLE_API void glNamedFramebufferTexture1DEXT(GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
 
 /**
- * @brief void glMultiTexParameterIuivEXT( GLenum texunit, GLenum target, GLenum pname, const GLuint *params );
+ * @brief void glNamedFramebufferTexture2DEXT(GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level)
  */
-GLE_API void glMultiTexParameterIuivEXT( GLenum texunit, GLenum target, GLenum pname, const GLuint *params );
+GLE_API void glNamedFramebufferTexture2DEXT(GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
 
 /**
- * @brief void glGetMultiTexParameterIivEXT( GLenum texunit, GLenum target, GLenum pname, GLint *params );
+ * @brief void glNamedFramebufferTexture3DEXT(GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset)
  */
-GLE_API void glGetMultiTexParameterIivEXT( GLenum texunit, GLenum target, GLenum pname, GLint *params );
+GLE_API void glNamedFramebufferTexture3DEXT(GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset);
 
 /**
- * @brief void glGetMultiTexParameterIuivEXT( GLenum texunit, GLenum target, GLenum pname, GLuint *params );
+ * @brief void glNamedFramebufferTextureEXT(GLuint framebuffer, GLenum attachment, GLuint texture, GLint level)
  */
-GLE_API void glGetMultiTexParameterIuivEXT( GLenum texunit, GLenum target, GLenum pname, GLuint *params );
+GLE_API void glNamedFramebufferTextureEXT(GLuint framebuffer, GLenum attachment, GLuint texture, GLint level);
 
 /**
- * @brief void glProgramUniform1fEXT( GLuint program, GLint location, GLfloat v0 );
+ * @brief void glNamedFramebufferTextureFaceEXT(GLuint framebuffer, GLenum attachment, GLuint texture, GLint level, GLenum face)
  */
-GLE_API void glProgramUniform1fEXT( GLuint program, GLint location, GLfloat v0 );
+GLE_API void glNamedFramebufferTextureFaceEXT(GLuint framebuffer, GLenum attachment, GLuint texture, GLint level, GLenum face);
 
 /**
- * @brief void glProgramUniform2fEXT( GLuint program, GLint location, GLfloat v0, GLfloat v1 );
+ * @brief void glNamedFramebufferTextureLayerEXT(GLuint framebuffer, GLenum attachment, GLuint texture, GLint level, GLint layer)
  */
-GLE_API void glProgramUniform2fEXT( GLuint program, GLint location, GLfloat v0, GLfloat v1 );
+GLE_API void glNamedFramebufferTextureLayerEXT(GLuint framebuffer, GLenum attachment, GLuint texture, GLint level, GLint layer);
 
 /**
- * @brief void glProgramUniform3fEXT( GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2 );
+ * @brief void glNamedProgramLocalParameter4dEXT(GLuint program, GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
  */
-GLE_API void glProgramUniform3fEXT( GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2 );
+GLE_API void glNamedProgramLocalParameter4dEXT(GLuint program, GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 
 /**
- * @brief void glProgramUniform4fEXT( GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3 );
+ * @brief void glNamedProgramLocalParameter4dvEXT(GLuint program, GLenum target, GLuint index, const GLdouble *params)
  */
-GLE_API void glProgramUniform4fEXT( GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3 );
+GLE_API void glNamedProgramLocalParameter4dvEXT(GLuint program, GLenum target, GLuint index, const GLdouble *params);
 
 /**
- * @brief void glProgramUniform1iEXT( GLuint program, GLint location, GLint v0 );
+ * @brief void glNamedProgramLocalParameter4fEXT(GLuint program, GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
  */
-GLE_API void glProgramUniform1iEXT( GLuint program, GLint location, GLint v0 );
+GLE_API void glNamedProgramLocalParameter4fEXT(GLuint program, GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 
 /**
- * @brief void glProgramUniform2iEXT( GLuint program, GLint location, GLint v0, GLint v1 );
+ * @brief void glNamedProgramLocalParameter4fvEXT(GLuint program, GLenum target, GLuint index, const GLfloat *params)
  */
-GLE_API void glProgramUniform2iEXT( GLuint program, GLint location, GLint v0, GLint v1 );
+GLE_API void glNamedProgramLocalParameter4fvEXT(GLuint program, GLenum target, GLuint index, const GLfloat *params);
 
 /**
- * @brief void glProgramUniform3iEXT( GLuint program, GLint location, GLint v0, GLint v1, GLint v2 );
+ * @brief void glNamedProgramLocalParameterI4iEXT(GLuint program, GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w)
  */
-GLE_API void glProgramUniform3iEXT( GLuint program, GLint location, GLint v0, GLint v1, GLint v2 );
+GLE_API void glNamedProgramLocalParameterI4iEXT(GLuint program, GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w);
 
 /**
- * @brief void glProgramUniform4iEXT( GLuint program, GLint location, GLint v0, GLint v1, GLint v2, GLint v3 );
+ * @brief void glNamedProgramLocalParameterI4ivEXT(GLuint program, GLenum target, GLuint index, const GLint *params)
  */
-GLE_API void glProgramUniform4iEXT( GLuint program, GLint location, GLint v0, GLint v1, GLint v2, GLint v3 );
+GLE_API void glNamedProgramLocalParameterI4ivEXT(GLuint program, GLenum target, GLuint index, const GLint *params);
 
 /**
- * @brief void glProgramUniform1fvEXT( GLuint program, GLint location, GLsizei count, const GLfloat *value );
+ * @brief void glNamedProgramLocalParameterI4uiEXT(GLuint program, GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w)
  */
-GLE_API void glProgramUniform1fvEXT( GLuint program, GLint location, GLsizei count, const GLfloat *value );
+GLE_API void glNamedProgramLocalParameterI4uiEXT(GLuint program, GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w);
 
 /**
- * @brief void glProgramUniform2fvEXT( GLuint program, GLint location, GLsizei count, const GLfloat *value );
+ * @brief void glNamedProgramLocalParameterI4uivEXT(GLuint program, GLenum target, GLuint index, const GLuint *params)
  */
-GLE_API void glProgramUniform2fvEXT( GLuint program, GLint location, GLsizei count, const GLfloat *value );
+GLE_API void glNamedProgramLocalParameterI4uivEXT(GLuint program, GLenum target, GLuint index, const GLuint *params);
 
 /**
- * @brief void glProgramUniform3fvEXT( GLuint program, GLint location, GLsizei count, const GLfloat *value );
+ * @brief void glNamedProgramLocalParameters4fvEXT(GLuint program, GLenum target, GLuint index, GLsizei count, const GLfloat *params)
  */
-GLE_API void glProgramUniform3fvEXT( GLuint program, GLint location, GLsizei count, const GLfloat *value );
+GLE_API void glNamedProgramLocalParameters4fvEXT(GLuint program, GLenum target, GLuint index, GLsizei count, const GLfloat *params);
 
 /**
- * @brief void glProgramUniform4fvEXT( GLuint program, GLint location, GLsizei count, const GLfloat *value );
+ * @brief void glNamedProgramLocalParametersI4ivEXT(GLuint program, GLenum target, GLuint index, GLsizei count, const GLint *params)
  */
-GLE_API void glProgramUniform4fvEXT( GLuint program, GLint location, GLsizei count, const GLfloat *value );
+GLE_API void glNamedProgramLocalParametersI4ivEXT(GLuint program, GLenum target, GLuint index, GLsizei count, const GLint *params);
 
 /**
- * @brief void glProgramUniform1ivEXT( GLuint program, GLint location, GLsizei count, const GLint *value );
+ * @brief void glNamedProgramLocalParametersI4uivEXT(GLuint program, GLenum target, GLuint index, GLsizei count, const GLuint *params)
  */
-GLE_API void glProgramUniform1ivEXT( GLuint program, GLint location, GLsizei count, const GLint *value );
+GLE_API void glNamedProgramLocalParametersI4uivEXT(GLuint program, GLenum target, GLuint index, GLsizei count, const GLuint *params);
 
 /**
- * @brief void glProgramUniform2ivEXT( GLuint program, GLint location, GLsizei count, const GLint *value );
+ * @brief void glNamedProgramStringEXT(GLuint program, GLenum target, GLenum format, GLsizei len, const GLvoid *string)
  */
-GLE_API void glProgramUniform2ivEXT( GLuint program, GLint location, GLsizei count, const GLint *value );
+GLE_API void glNamedProgramStringEXT(GLuint program, GLenum target, GLenum format, GLsizei len, const GLvoid *string);
 
 /**
- * @brief void glProgramUniform3ivEXT( GLuint program, GLint location, GLsizei count, const GLint *value );
+ * @brief void glNamedRenderbufferStorageEXT(GLuint renderbuffer, GLenum internalformat, GLsizei width, GLsizei height)
  */
-GLE_API void glProgramUniform3ivEXT( GLuint program, GLint location, GLsizei count, const GLint *value );
+GLE_API void glNamedRenderbufferStorageEXT(GLuint renderbuffer, GLenum internalformat, GLsizei width, GLsizei height);
 
 /**
- * @brief void glProgramUniform4ivEXT( GLuint program, GLint location, GLsizei count, const GLint *value );
+ * @brief void glNamedRenderbufferStorageMultisampleCoverageEXT(GLuint renderbuffer, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height)
  */
-GLE_API void glProgramUniform4ivEXT( GLuint program, GLint location, GLsizei count, const GLint *value );
+GLE_API void glNamedRenderbufferStorageMultisampleCoverageEXT(GLuint renderbuffer, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height);
 
 /**
- * @brief void glProgramUniformMatrix2fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glNamedRenderbufferStorageMultisampleEXT(GLuint renderbuffer, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height)
  */
-GLE_API void glProgramUniformMatrix2fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glNamedRenderbufferStorageMultisampleEXT(GLuint renderbuffer, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
 
 /**
- * @brief void glProgramUniformMatrix3fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glProgramUniform1fEXT(GLuint program, GLint location, GLfloat v0)
  */
-GLE_API void glProgramUniformMatrix3fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glProgramUniform1fEXT(GLuint program, GLint location, GLfloat v0);
 
 /**
- * @brief void glProgramUniformMatrix4fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glProgramUniform1fvEXT(GLuint program, GLint location, GLsizei count, const GLfloat *value)
  */
-GLE_API void glProgramUniformMatrix4fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glProgramUniform1fvEXT(GLuint program, GLint location, GLsizei count, const GLfloat *value);
 
 /**
- * @brief void glProgramUniformMatrix2x3fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glProgramUniform1iEXT(GLuint program, GLint location, GLint v0)
  */
-GLE_API void glProgramUniformMatrix2x3fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glProgramUniform1iEXT(GLuint program, GLint location, GLint v0);
 
 /**
- * @brief void glProgramUniformMatrix3x2fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glProgramUniform1ivEXT(GLuint program, GLint location, GLsizei count, const GLint *value)
  */
-GLE_API void glProgramUniformMatrix3x2fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glProgramUniform1ivEXT(GLuint program, GLint location, GLsizei count, const GLint *value);
 
 /**
- * @brief void glProgramUniformMatrix2x4fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glProgramUniform1uiEXT(GLuint program, GLint location, GLuint v0)
  */
-GLE_API void glProgramUniformMatrix2x4fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glProgramUniform1uiEXT(GLuint program, GLint location, GLuint v0);
 
 /**
- * @brief void glProgramUniformMatrix4x2fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glProgramUniform1uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value)
  */
-GLE_API void glProgramUniformMatrix4x2fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glProgramUniform1uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value);
 
 /**
- * @brief void glProgramUniformMatrix3x4fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glProgramUniform2fEXT(GLuint program, GLint location, GLfloat v0, GLfloat v1)
  */
-GLE_API void glProgramUniformMatrix3x4fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glProgramUniform2fEXT(GLuint program, GLint location, GLfloat v0, GLfloat v1);
 
 /**
- * @brief void glProgramUniformMatrix4x3fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glProgramUniform2fvEXT(GLuint program, GLint location, GLsizei count, const GLfloat *value)
  */
-GLE_API void glProgramUniformMatrix4x3fvEXT( GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glProgramUniform2fvEXT(GLuint program, GLint location, GLsizei count, const GLfloat *value);
 
 /**
- * @brief void glProgramUniform1uiEXT( GLuint program, GLint location, GLuint v0 );
+ * @brief void glProgramUniform2iEXT(GLuint program, GLint location, GLint v0, GLint v1)
  */
-GLE_API void glProgramUniform1uiEXT( GLuint program, GLint location, GLuint v0 );
+GLE_API void glProgramUniform2iEXT(GLuint program, GLint location, GLint v0, GLint v1);
 
 /**
- * @brief void glProgramUniform2uiEXT( GLuint program, GLint location, GLuint v0, GLuint v1 );
+ * @brief void glProgramUniform2ivEXT(GLuint program, GLint location, GLsizei count, const GLint *value)
  */
-GLE_API void glProgramUniform2uiEXT( GLuint program, GLint location, GLuint v0, GLuint v1 );
+GLE_API void glProgramUniform2ivEXT(GLuint program, GLint location, GLsizei count, const GLint *value);
 
 /**
- * @brief void glProgramUniform3uiEXT( GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2 );
+ * @brief void glProgramUniform2uiEXT(GLuint program, GLint location, GLuint v0, GLuint v1)
  */
-GLE_API void glProgramUniform3uiEXT( GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2 );
+GLE_API void glProgramUniform2uiEXT(GLuint program, GLint location, GLuint v0, GLuint v1);
 
 /**
- * @brief void glProgramUniform4uiEXT( GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3 );
+ * @brief void glProgramUniform2uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value)
  */
-GLE_API void glProgramUniform4uiEXT( GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3 );
+GLE_API void glProgramUniform2uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value);
 
 /**
- * @brief void glProgramUniform1uivEXT( GLuint program, GLint location, GLsizei count, const GLuint *value );
+ * @brief void glProgramUniform3fEXT(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2)
  */
-GLE_API void glProgramUniform1uivEXT( GLuint program, GLint location, GLsizei count, const GLuint *value );
+GLE_API void glProgramUniform3fEXT(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2);
 
 /**
- * @brief void glProgramUniform2uivEXT( GLuint program, GLint location, GLsizei count, const GLuint *value );
+ * @brief void glProgramUniform3fvEXT(GLuint program, GLint location, GLsizei count, const GLfloat *value)
  */
-GLE_API void glProgramUniform2uivEXT( GLuint program, GLint location, GLsizei count, const GLuint *value );
+GLE_API void glProgramUniform3fvEXT(GLuint program, GLint location, GLsizei count, const GLfloat *value);
 
 /**
- * @brief void glProgramUniform3uivEXT( GLuint program, GLint location, GLsizei count, const GLuint *value );
+ * @brief void glProgramUniform3iEXT(GLuint program, GLint location, GLint v0, GLint v1, GLint v2)
  */
-GLE_API void glProgramUniform3uivEXT( GLuint program, GLint location, GLsizei count, const GLuint *value );
+GLE_API void glProgramUniform3iEXT(GLuint program, GLint location, GLint v0, GLint v1, GLint v2);
 
 /**
- * @brief void glProgramUniform4uivEXT( GLuint program, GLint location, GLsizei count, const GLuint *value );
+ * @brief void glProgramUniform3ivEXT(GLuint program, GLint location, GLsizei count, const GLint *value)
  */
-GLE_API void glProgramUniform4uivEXT( GLuint program, GLint location, GLsizei count, const GLuint *value );
+GLE_API void glProgramUniform3ivEXT(GLuint program, GLint location, GLsizei count, const GLint *value);
 
 /**
- * @brief void glNamedBufferDataEXT( GLuint buffer, GLsizeiptr size, const GLvoid *data, GLenum usage );
+ * @brief void glProgramUniform3uiEXT(GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2)
  */
-GLE_API void glNamedBufferDataEXT( GLuint buffer, GLsizeiptr size, const GLvoid *data, GLenum usage );
+GLE_API void glProgramUniform3uiEXT(GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2);
 
 /**
- * @brief void glNamedBufferSubDataEXT( GLuint buffer, GLintptr offset, GLsizeiptr size, const GLvoid *data );
+ * @brief void glProgramUniform3uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value)
  */
-GLE_API void glNamedBufferSubDataEXT( GLuint buffer, GLintptr offset, GLsizeiptr size, const GLvoid *data );
+GLE_API void glProgramUniform3uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value);
 
 /**
- * @brief GLvoid* glMapNamedBufferEXT( GLuint buffer, GLenum access );
+ * @brief void glProgramUniform4fEXT(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3)
  */
-GLE_API GLvoid* glMapNamedBufferEXT( GLuint buffer, GLenum access );
+GLE_API void glProgramUniform4fEXT(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3);
 
 /**
- * @brief GLboolean glUnmapNamedBufferEXT( GLuint buffer );
+ * @brief void glProgramUniform4fvEXT(GLuint program, GLint location, GLsizei count, const GLfloat *value)
  */
-GLE_API GLboolean glUnmapNamedBufferEXT( GLuint buffer );
+GLE_API void glProgramUniform4fvEXT(GLuint program, GLint location, GLsizei count, const GLfloat *value);
 
 /**
- * @brief GLvoid* glMapNamedBufferRangeEXT( GLuint buffer, GLintptr offset, GLsizeiptr length, GLbitfield access );
+ * @brief void glProgramUniform4iEXT(GLuint program, GLint location, GLint v0, GLint v1, GLint v2, GLint v3)
  */
-GLE_API GLvoid* glMapNamedBufferRangeEXT( GLuint buffer, GLintptr offset, GLsizeiptr length, GLbitfield access );
+GLE_API void glProgramUniform4iEXT(GLuint program, GLint location, GLint v0, GLint v1, GLint v2, GLint v3);
 
 /**
- * @brief void glFlushMappedNamedBufferRangeEXT( GLuint buffer, GLintptr offset, GLsizeiptr length );
+ * @brief void glProgramUniform4ivEXT(GLuint program, GLint location, GLsizei count, const GLint *value)
  */
-GLE_API void glFlushMappedNamedBufferRangeEXT( GLuint buffer, GLintptr offset, GLsizeiptr length );
+GLE_API void glProgramUniform4ivEXT(GLuint program, GLint location, GLsizei count, const GLint *value);
 
 /**
- * @brief void glNamedCopyBufferSubDataEXT( GLuint readBuffer, GLuint writeBuffer, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size );
+ * @brief void glProgramUniform4uiEXT(GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3)
  */
-GLE_API void glNamedCopyBufferSubDataEXT( GLuint readBuffer, GLuint writeBuffer, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size );
+GLE_API void glProgramUniform4uiEXT(GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3);
 
 /**
- * @brief void glGetNamedBufferParameterivEXT( GLuint buffer, GLenum pname, GLint *params );
+ * @brief void glProgramUniform4uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value)
  */
-GLE_API void glGetNamedBufferParameterivEXT( GLuint buffer, GLenum pname, GLint *params );
+GLE_API void glProgramUniform4uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value);
 
 /**
- * @brief void glGetNamedBufferPointervEXT( GLuint buffer, GLenum pname, GLvoid* *params );
+ * @brief void glProgramUniformMatrix2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glGetNamedBufferPointervEXT( GLuint buffer, GLenum pname, GLvoid* *params );
+GLE_API void glProgramUniformMatrix2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glGetNamedBufferSubDataEXT( GLuint buffer, GLintptr offset, GLsizeiptr size, GLvoid *data );
+ * @brief void glProgramUniformMatrix2x3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glGetNamedBufferSubDataEXT( GLuint buffer, GLintptr offset, GLsizeiptr size, GLvoid *data );
+GLE_API void glProgramUniformMatrix2x3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glTextureBufferEXT( GLuint texture, GLenum target, GLenum internalformat, GLuint buffer );
+ * @brief void glProgramUniformMatrix2x4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glTextureBufferEXT( GLuint texture, GLenum target, GLenum internalformat, GLuint buffer );
+GLE_API void glProgramUniformMatrix2x4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glMultiTexBufferEXT( GLenum texunit, GLenum target, GLenum internalformat, GLuint buffer );
+ * @brief void glProgramUniformMatrix3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glMultiTexBufferEXT( GLenum texunit, GLenum target, GLenum internalformat, GLuint buffer );
+GLE_API void glProgramUniformMatrix3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glNamedRenderbufferStorageEXT( GLuint renderbuffer, GLenum internalformat, GLsizei width, GLsizei height );
+ * @brief void glProgramUniformMatrix3x2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glNamedRenderbufferStorageEXT( GLuint renderbuffer, GLenum internalformat, GLsizei width, GLsizei height );
+GLE_API void glProgramUniformMatrix3x2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glGetNamedRenderbufferParameterivEXT( GLuint renderbuffer, GLenum pname, GLint *params );
+ * @brief void glProgramUniformMatrix3x4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glGetNamedRenderbufferParameterivEXT( GLuint renderbuffer, GLenum pname, GLint *params );
+GLE_API void glProgramUniformMatrix3x4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief GLenum glCheckNamedFramebufferStatusEXT( GLuint framebuffer, GLenum target );
+ * @brief void glProgramUniformMatrix4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API GLenum glCheckNamedFramebufferStatusEXT( GLuint framebuffer, GLenum target );
+GLE_API void glProgramUniformMatrix4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glNamedFramebufferTexture1DEXT( GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level );
+ * @brief void glProgramUniformMatrix4x2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glNamedFramebufferTexture1DEXT( GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level );
+GLE_API void glProgramUniformMatrix4x2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glNamedFramebufferTexture2DEXT( GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level );
+ * @brief void glProgramUniformMatrix4x3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glNamedFramebufferTexture2DEXT( GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level );
+GLE_API void glProgramUniformMatrix4x3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glNamedFramebufferTexture3DEXT( GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset );
+ * @brief void glPushClientAttribDefaultEXT(GLbitfield mask)
  */
-GLE_API void glNamedFramebufferTexture3DEXT( GLuint framebuffer, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset );
+GLE_API void glPushClientAttribDefaultEXT(GLbitfield mask);
 
 /**
- * @brief void glNamedFramebufferRenderbufferEXT( GLuint framebuffer, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer );
+ * @brief void glTextureBufferEXT(GLuint texture, GLenum target, GLenum internalformat, GLuint buffer)
  */
-GLE_API void glNamedFramebufferRenderbufferEXT( GLuint framebuffer, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer );
+GLE_API void glTextureBufferEXT(GLuint texture, GLenum target, GLenum internalformat, GLuint buffer);
 
 /**
- * @brief void glGetNamedFramebufferAttachmentParameterivEXT( GLuint framebuffer, GLenum attachment, GLenum pname, GLint *params );
+ * @brief void glTextureImage1DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glGetNamedFramebufferAttachmentParameterivEXT( GLuint framebuffer, GLenum attachment, GLenum pname, GLint *params );
+GLE_API void glTextureImage1DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLenum format, GLenum type, const GLvoid *pixels);
 
 /**
- * @brief void glGenerateTextureMipmapEXT( GLuint texture, GLenum target );
+ * @brief void glTextureImage2DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glGenerateTextureMipmapEXT( GLuint texture, GLenum target );
+GLE_API void glTextureImage2DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid *pixels);
 
 /**
- * @brief void glGenerateMultiTexMipmapEXT( GLenum texunit, GLenum target );
+ * @brief void glTextureImage3DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glGenerateMultiTexMipmapEXT( GLenum texunit, GLenum target );
+GLE_API void glTextureImage3DEXT(GLuint texture, GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels);
 
 /**
- * @brief void glFramebufferDrawBufferEXT( GLuint framebuffer, GLenum mode );
+ * @brief void glTextureParameterIivEXT(GLuint texture, GLenum target, GLenum pname, const GLint *params)
  */
-GLE_API void glFramebufferDrawBufferEXT( GLuint framebuffer, GLenum mode );
+GLE_API void glTextureParameterIivEXT(GLuint texture, GLenum target, GLenum pname, const GLint *params);
 
 /**
- * @brief void glFramebufferDrawBuffersEXT( GLuint framebuffer, GLsizei n, const GLenum *bufs );
+ * @brief void glTextureParameterIuivEXT(GLuint texture, GLenum target, GLenum pname, const GLuint *params)
  */
-GLE_API void glFramebufferDrawBuffersEXT( GLuint framebuffer, GLsizei n, const GLenum *bufs );
+GLE_API void glTextureParameterIuivEXT(GLuint texture, GLenum target, GLenum pname, const GLuint *params);
 
 /**
- * @brief void glFramebufferReadBufferEXT( GLuint framebuffer, GLenum mode );
+ * @brief void glTextureParameterfEXT(GLuint texture, GLenum target, GLenum pname, GLfloat param)
  */
-GLE_API void glFramebufferReadBufferEXT( GLuint framebuffer, GLenum mode );
+GLE_API void glTextureParameterfEXT(GLuint texture, GLenum target, GLenum pname, GLfloat param);
 
 /**
- * @brief void glGetFramebufferParameterivEXT( GLuint framebuffer, GLenum pname, GLint *params );
+ * @brief void glTextureParameterfvEXT(GLuint texture, GLenum target, GLenum pname, const GLfloat *params)
  */
-GLE_API void glGetFramebufferParameterivEXT( GLuint framebuffer, GLenum pname, GLint *params );
+GLE_API void glTextureParameterfvEXT(GLuint texture, GLenum target, GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glNamedRenderbufferStorageMultisampleEXT( GLuint renderbuffer, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height );
+ * @brief void glTextureParameteriEXT(GLuint texture, GLenum target, GLenum pname, GLint param)
  */
-GLE_API void glNamedRenderbufferStorageMultisampleEXT( GLuint renderbuffer, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height );
+GLE_API void glTextureParameteriEXT(GLuint texture, GLenum target, GLenum pname, GLint param);
 
 /**
- * @brief void glNamedRenderbufferStorageMultisampleCoverageEXT( GLuint renderbuffer, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height );
+ * @brief void glTextureParameterivEXT(GLuint texture, GLenum target, GLenum pname, const GLint *params)
  */
-GLE_API void glNamedRenderbufferStorageMultisampleCoverageEXT( GLuint renderbuffer, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height );
+GLE_API void glTextureParameterivEXT(GLuint texture, GLenum target, GLenum pname, const GLint *params);
 
 /**
- * @brief void glNamedFramebufferTextureEXT( GLuint framebuffer, GLenum attachment, GLuint texture, GLint level );
+ * @brief void glTextureRenderbufferEXT(GLuint texture, GLenum target, GLuint renderbuffer)
  */
-GLE_API void glNamedFramebufferTextureEXT( GLuint framebuffer, GLenum attachment, GLuint texture, GLint level );
+GLE_API void glTextureRenderbufferEXT(GLuint texture, GLenum target, GLuint renderbuffer);
 
 /**
- * @brief void glNamedFramebufferTextureLayerEXT( GLuint framebuffer, GLenum attachment, GLuint texture, GLint level, GLint layer );
+ * @brief void glTextureSubImage1DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glNamedFramebufferTextureLayerEXT( GLuint framebuffer, GLenum attachment, GLuint texture, GLint level, GLint layer );
+GLE_API void glTextureSubImage1DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels);
 
 /**
- * @brief void glNamedFramebufferTextureFaceEXT( GLuint framebuffer, GLenum attachment, GLuint texture, GLint level, GLenum face );
+ * @brief void glTextureSubImage2DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glNamedFramebufferTextureFaceEXT( GLuint framebuffer, GLenum attachment, GLuint texture, GLint level, GLenum face );
+GLE_API void glTextureSubImage2DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels);
 
 /**
- * @brief void glTextureRenderbufferEXT( GLuint texture, GLenum target, GLuint renderbuffer );
+ * @brief void glTextureSubImage3DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glTextureRenderbufferEXT( GLuint texture, GLenum target, GLuint renderbuffer );
+GLE_API void glTextureSubImage3DEXT(GLuint texture, GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels);
 
 /**
- * @brief void glMultiTexRenderbufferEXT( GLenum texunit, GLenum target, GLuint renderbuffer );
+ * @brief GLboolean glUnmapNamedBufferEXT(GLuint buffer)
  */
-GLE_API void glMultiTexRenderbufferEXT( GLenum texunit, GLenum target, GLuint renderbuffer );
+GLE_API GLboolean glUnmapNamedBufferEXT(GLuint buffer);
 
 //@}
+
+
 
 
 /**
@@ -8142,43 +8804,48 @@ GLE_API void glMultiTexRenderbufferEXT( GLenum texunit, GLenum target, GLuint re
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_draw_buffers2 is supported.
- * @return Returns \c true if \b GL_EXT_draw_buffers2 is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_draw_buffers2 is supported.
+ * @return Returns \c true if \b GL_EXT_draw_buffers2 is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_draw_buffers2();
 
-/**
- * @brief void glColorMaskIndexedEXT( GLuint index, GLboolean r, GLboolean g, GLboolean b, GLboolean a );
- */
-GLE_API void glColorMaskIndexedEXT( GLuint index, GLboolean r, GLboolean g, GLboolean b, GLboolean a );
+
 
 /**
- * @brief void glGetBooleanIndexedvEXT( GLenum target, GLuint index, GLboolean *data );
+ * @brief void glColorMaskIndexedEXT(GLuint index, GLboolean r, GLboolean g, GLboolean b, GLboolean a)
  */
-GLE_API void glGetBooleanIndexedvEXT( GLenum target, GLuint index, GLboolean *data );
+GLE_API void glColorMaskIndexedEXT(GLuint index, GLboolean r, GLboolean g, GLboolean b, GLboolean a);
 
 /**
- * @brief void glGetIntegerIndexedvEXT( GLenum target, GLuint index, GLint *data );
+ * @brief void glDisableIndexedEXT(GLenum target, GLuint index)
  */
-GLE_API void glGetIntegerIndexedvEXT( GLenum target, GLuint index, GLint *data );
+GLE_API void glDisableIndexedEXT(GLenum target, GLuint index);
 
 /**
- * @brief void glEnableIndexedEXT( GLenum target, GLuint index );
+ * @brief void glEnableIndexedEXT(GLenum target, GLuint index)
  */
-GLE_API void glEnableIndexedEXT( GLenum target, GLuint index );
+GLE_API void glEnableIndexedEXT(GLenum target, GLuint index);
 
 /**
- * @brief void glDisableIndexedEXT( GLenum target, GLuint index );
+ * @brief void glGetBooleanIndexedvEXT(GLenum target, GLuint index, GLboolean *data)
  */
-GLE_API void glDisableIndexedEXT( GLenum target, GLuint index );
+GLE_API void glGetBooleanIndexedvEXT(GLenum target, GLuint index, GLboolean *data);
 
 /**
- * @brief GLboolean glIsEnabledIndexedEXT( GLenum target, GLuint index );
+ * @brief void glGetIntegerIndexedvEXT(GLenum target, GLuint index, GLint *data)
  */
-GLE_API GLboolean glIsEnabledIndexedEXT( GLenum target, GLuint index );
+GLE_API void glGetIntegerIndexedvEXT(GLenum target, GLuint index, GLint *data);
+
+/**
+ * @brief GLboolean glIsEnabledIndexedEXT(GLenum target, GLuint index)
+ */
+GLE_API GLboolean glIsEnabledIndexedEXT(GLenum target, GLuint index);
 
 //@}
+
+
 
 
 /**
@@ -8188,23 +8855,28 @@ GLE_API GLboolean glIsEnabledIndexedEXT( GLenum target, GLuint index );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_draw_instanced is supported.
- * @return Returns \c true if \b GL_EXT_draw_instanced is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_draw_instanced is supported.
+ * @return Returns \c true if \b GL_EXT_draw_instanced is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_draw_instanced();
 
-/**
- * @brief void glDrawArraysInstancedEXT( GLenum mode, GLint start, GLsizei count, GLsizei primcount );
- */
-GLE_API void glDrawArraysInstancedEXT( GLenum mode, GLint start, GLsizei count, GLsizei primcount );
+
 
 /**
- * @brief void glDrawElementsInstancedEXT( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount );
+ * @brief void glDrawArraysInstancedEXT(GLenum mode, GLint start, GLsizei count, GLsizei primcount)
  */
-GLE_API void glDrawElementsInstancedEXT( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount );
+GLE_API void glDrawArraysInstancedEXT(GLenum mode, GLint start, GLsizei count, GLsizei primcount);
+
+/**
+ * @brief void glDrawElementsInstancedEXT(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount)
+ */
+GLE_API void glDrawElementsInstancedEXT(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount);
 
 //@}
+
+
 
 
 /**
@@ -8214,18 +8886,23 @@ GLE_API void glDrawElementsInstancedEXT( GLenum mode, GLsizei count, GLenum type
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_draw_range_elements is supported.
- * @return Returns \c true if \b GL_EXT_draw_range_elements is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_draw_range_elements is supported.
+ * @return Returns \c true if \b GL_EXT_draw_range_elements is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_draw_range_elements();
 
+
+
 /**
- * @brief void glDrawRangeElementsEXT( GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices );
+ * @brief void glDrawRangeElementsEXT(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices)
  */
-GLE_API void glDrawRangeElementsEXT( GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices );
+GLE_API void glDrawRangeElementsEXT(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices);
 
 //@}
+
+
 
 
 /**
@@ -8235,38 +8912,43 @@ GLE_API void glDrawRangeElementsEXT( GLenum mode, GLuint start, GLuint end, GLsi
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_fog_coord is supported.
- * @return Returns \c true if \b GL_EXT_fog_coord is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_fog_coord is supported.
+ * @return Returns \c true if \b GL_EXT_fog_coord is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_fog_coord();
 
-/**
- * @brief void glFogCoordfEXT( GLfloat coord );
- */
-GLE_API void glFogCoordfEXT( GLfloat coord );
+
 
 /**
- * @brief void glFogCoordfvEXT( const GLfloat *coord );
+ * @brief void glFogCoordPointerEXT(GLenum type, GLsizei stride, const GLvoid *pointer)
  */
-GLE_API void glFogCoordfvEXT( const GLfloat *coord );
+GLE_API void glFogCoordPointerEXT(GLenum type, GLsizei stride, const GLvoid *pointer);
 
 /**
- * @brief void glFogCoorddEXT( GLdouble coord );
+ * @brief void glFogCoorddEXT(GLdouble coord)
  */
-GLE_API void glFogCoorddEXT( GLdouble coord );
+GLE_API void glFogCoorddEXT(GLdouble coord);
 
 /**
- * @brief void glFogCoorddvEXT( const GLdouble *coord );
+ * @brief void glFogCoorddvEXT(const GLdouble *coord)
  */
-GLE_API void glFogCoorddvEXT( const GLdouble *coord );
+GLE_API void glFogCoorddvEXT(const GLdouble *coord);
 
 /**
- * @brief void glFogCoordPointerEXT( GLenum type, GLsizei stride, const GLvoid *pointer );
+ * @brief void glFogCoordfEXT(GLfloat coord)
  */
-GLE_API void glFogCoordPointerEXT( GLenum type, GLsizei stride, const GLvoid *pointer );
+GLE_API void glFogCoordfEXT(GLfloat coord);
+
+/**
+ * @brief void glFogCoordfvEXT(const GLfloat *coord)
+ */
+GLE_API void glFogCoordfvEXT(const GLfloat *coord);
 
 //@}
+
+
 
 
 /**
@@ -8276,18 +8958,23 @@ GLE_API void glFogCoordPointerEXT( GLenum type, GLsizei stride, const GLvoid *po
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_framebuffer_blit is supported.
- * @return Returns \c true if \b GL_EXT_framebuffer_blit is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_framebuffer_blit is supported.
+ * @return Returns \c true if \b GL_EXT_framebuffer_blit is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_framebuffer_blit();
 
+
+
 /**
- * @brief void glBlitFramebufferEXT( GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter );
+ * @brief void glBlitFramebufferEXT(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter)
  */
-GLE_API void glBlitFramebufferEXT( GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter );
+GLE_API void glBlitFramebufferEXT(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
 
 //@}
+
+
 
 
 /**
@@ -8297,18 +8984,23 @@ GLE_API void glBlitFramebufferEXT( GLint srcX0, GLint srcY0, GLint srcX1, GLint 
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_framebuffer_multisample is supported.
- * @return Returns \c true if \b GL_EXT_framebuffer_multisample is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_framebuffer_multisample is supported.
+ * @return Returns \c true if \b GL_EXT_framebuffer_multisample is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_framebuffer_multisample();
 
+
+
 /**
- * @brief void glRenderbufferStorageMultisampleEXT( GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height );
+ * @brief void glRenderbufferStorageMultisampleEXT(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height)
  */
-GLE_API void glRenderbufferStorageMultisampleEXT( GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height );
+GLE_API void glRenderbufferStorageMultisampleEXT(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
 
 //@}
+
+
 
 
 /**
@@ -8318,98 +9010,103 @@ GLE_API void glRenderbufferStorageMultisampleEXT( GLenum target, GLsizei samples
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_framebuffer_object is supported.
- * @return Returns \c true if \b GL_EXT_framebuffer_object is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_framebuffer_object is supported.
+ * @return Returns \c true if \b GL_EXT_framebuffer_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_framebuffer_object();
 
-/**
- * @brief GLboolean glIsRenderbufferEXT( GLuint renderbuffer );
- */
-GLE_API GLboolean glIsRenderbufferEXT( GLuint renderbuffer );
+
 
 /**
- * @brief void glBindRenderbufferEXT( GLenum target, GLuint renderbuffer );
+ * @brief void glBindFramebufferEXT(GLenum target, GLuint framebuffer)
  */
-GLE_API void glBindRenderbufferEXT( GLenum target, GLuint renderbuffer );
+GLE_API void glBindFramebufferEXT(GLenum target, GLuint framebuffer);
 
 /**
- * @brief void glDeleteRenderbuffersEXT( GLsizei n, const GLuint *renderbuffers );
+ * @brief void glBindRenderbufferEXT(GLenum target, GLuint renderbuffer)
  */
-GLE_API void glDeleteRenderbuffersEXT( GLsizei n, const GLuint *renderbuffers );
+GLE_API void glBindRenderbufferEXT(GLenum target, GLuint renderbuffer);
 
 /**
- * @brief void glGenRenderbuffersEXT( GLsizei n, GLuint *renderbuffers );
+ * @brief GLenum glCheckFramebufferStatusEXT(GLenum target)
  */
-GLE_API void glGenRenderbuffersEXT( GLsizei n, GLuint *renderbuffers );
+GLE_API GLenum glCheckFramebufferStatusEXT(GLenum target);
 
 /**
- * @brief void glRenderbufferStorageEXT( GLenum target, GLenum internalformat, GLsizei width, GLsizei height );
+ * @brief void glDeleteFramebuffersEXT(GLsizei n, const GLuint *framebuffers)
  */
-GLE_API void glRenderbufferStorageEXT( GLenum target, GLenum internalformat, GLsizei width, GLsizei height );
+GLE_API void glDeleteFramebuffersEXT(GLsizei n, const GLuint *framebuffers);
 
 /**
- * @brief void glGetRenderbufferParameterivEXT( GLenum target, GLenum pname, GLint *params );
+ * @brief void glDeleteRenderbuffersEXT(GLsizei n, const GLuint *renderbuffers)
  */
-GLE_API void glGetRenderbufferParameterivEXT( GLenum target, GLenum pname, GLint *params );
+GLE_API void glDeleteRenderbuffersEXT(GLsizei n, const GLuint *renderbuffers);
 
 /**
- * @brief GLboolean glIsFramebufferEXT( GLuint framebuffer );
+ * @brief void glFramebufferRenderbufferEXT(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer)
  */
-GLE_API GLboolean glIsFramebufferEXT( GLuint framebuffer );
+GLE_API void glFramebufferRenderbufferEXT(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer);
 
 /**
- * @brief void glBindFramebufferEXT( GLenum target, GLuint framebuffer );
+ * @brief void glFramebufferTexture1DEXT(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level)
  */
-GLE_API void glBindFramebufferEXT( GLenum target, GLuint framebuffer );
+GLE_API void glFramebufferTexture1DEXT(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
 
 /**
- * @brief void glDeleteFramebuffersEXT( GLsizei n, const GLuint *framebuffers );
+ * @brief void glFramebufferTexture2DEXT(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level)
  */
-GLE_API void glDeleteFramebuffersEXT( GLsizei n, const GLuint *framebuffers );
+GLE_API void glFramebufferTexture2DEXT(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
 
 /**
- * @brief void glGenFramebuffersEXT( GLsizei n, GLuint *framebuffers );
+ * @brief void glFramebufferTexture3DEXT(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset)
  */
-GLE_API void glGenFramebuffersEXT( GLsizei n, GLuint *framebuffers );
+GLE_API void glFramebufferTexture3DEXT(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset);
 
 /**
- * @brief GLenum glCheckFramebufferStatusEXT( GLenum target );
+ * @brief void glGenFramebuffersEXT(GLsizei n, GLuint *framebuffers)
  */
-GLE_API GLenum glCheckFramebufferStatusEXT( GLenum target );
+GLE_API void glGenFramebuffersEXT(GLsizei n, GLuint *framebuffers);
 
 /**
- * @brief void glFramebufferTexture1DEXT( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level );
+ * @brief void glGenRenderbuffersEXT(GLsizei n, GLuint *renderbuffers)
  */
-GLE_API void glFramebufferTexture1DEXT( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level );
+GLE_API void glGenRenderbuffersEXT(GLsizei n, GLuint *renderbuffers);
 
 /**
- * @brief void glFramebufferTexture2DEXT( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level );
+ * @brief void glGenerateMipmapEXT(GLenum target)
  */
-GLE_API void glFramebufferTexture2DEXT( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level );
+GLE_API void glGenerateMipmapEXT(GLenum target);
 
 /**
- * @brief void glFramebufferTexture3DEXT( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset );
+ * @brief void glGetFramebufferAttachmentParameterivEXT(GLenum target, GLenum attachment, GLenum pname, GLint *params)
  */
-GLE_API void glFramebufferTexture3DEXT( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset );
+GLE_API void glGetFramebufferAttachmentParameterivEXT(GLenum target, GLenum attachment, GLenum pname, GLint *params);
 
 /**
- * @brief void glFramebufferRenderbufferEXT( GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer );
+ * @brief void glGetRenderbufferParameterivEXT(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glFramebufferRenderbufferEXT( GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer );
+GLE_API void glGetRenderbufferParameterivEXT(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetFramebufferAttachmentParameterivEXT( GLenum target, GLenum attachment, GLenum pname, GLint *params );
+ * @brief GLboolean glIsFramebufferEXT(GLuint framebuffer)
  */
-GLE_API void glGetFramebufferAttachmentParameterivEXT( GLenum target, GLenum attachment, GLenum pname, GLint *params );
+GLE_API GLboolean glIsFramebufferEXT(GLuint framebuffer);
 
 /**
- * @brief void glGenerateMipmapEXT( GLenum target );
+ * @brief GLboolean glIsRenderbufferEXT(GLuint renderbuffer)
  */
-GLE_API void glGenerateMipmapEXT( GLenum target );
+GLE_API GLboolean glIsRenderbufferEXT(GLuint renderbuffer);
+
+/**
+ * @brief void glRenderbufferStorageEXT(GLenum target, GLenum internalformat, GLsizei width, GLsizei height)
+ */
+GLE_API void glRenderbufferStorageEXT(GLenum target, GLenum internalformat, GLsizei width, GLsizei height);
 
 //@}
+
+
 
 
 /**
@@ -8419,13 +9116,17 @@ GLE_API void glGenerateMipmapEXT( GLenum target );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_framebuffer_sRGB is supported.
- * @return Returns \c true if \b GL_EXT_framebuffer_sRGB is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_framebuffer_sRGB is supported.
+ * @return Returns \c true if \b GL_EXT_framebuffer_sRGB is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_framebuffer_sRGB();
 
+
 //@}
+
+
 
 
 /**
@@ -8435,18 +9136,23 @@ GLE_API bool isGL_EXT_framebuffer_sRGB();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_geometry_shader4 is supported.
- * @return Returns \c true if \b GL_EXT_geometry_shader4 is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_geometry_shader4 is supported.
+ * @return Returns \c true if \b GL_EXT_geometry_shader4 is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_geometry_shader4();
 
+
+
 /**
- * @brief void glProgramParameteriEXT( GLuint program, GLenum pname, GLint value );
+ * @brief void glProgramParameteriEXT(GLuint program, GLenum pname, GLint value)
  */
-GLE_API void glProgramParameteriEXT( GLuint program, GLenum pname, GLint value );
+GLE_API void glProgramParameteriEXT(GLuint program, GLenum pname, GLint value);
 
 //@}
+
+
 
 
 /**
@@ -8456,23 +9162,28 @@ GLE_API void glProgramParameteriEXT( GLuint program, GLenum pname, GLint value )
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_gpu_program_parameters is supported.
- * @return Returns \c true if \b GL_EXT_gpu_program_parameters is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_gpu_program_parameters is supported.
+ * @return Returns \c true if \b GL_EXT_gpu_program_parameters is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_gpu_program_parameters();
 
-/**
- * @brief void glProgramEnvParameters4fvEXT( GLenum target, GLuint index, GLsizei count, const GLfloat *params );
- */
-GLE_API void glProgramEnvParameters4fvEXT( GLenum target, GLuint index, GLsizei count, const GLfloat *params );
+
 
 /**
- * @brief void glProgramLocalParameters4fvEXT( GLenum target, GLuint index, GLsizei count, const GLfloat *params );
+ * @brief void glProgramEnvParameters4fvEXT(GLenum target, GLuint index, GLsizei count, const GLfloat *params)
  */
-GLE_API void glProgramLocalParameters4fvEXT( GLenum target, GLuint index, GLsizei count, const GLfloat *params );
+GLE_API void glProgramEnvParameters4fvEXT(GLenum target, GLuint index, GLsizei count, const GLfloat *params);
+
+/**
+ * @brief void glProgramLocalParameters4fvEXT(GLenum target, GLuint index, GLsizei count, const GLfloat *params)
+ */
+GLE_API void glProgramLocalParameters4fvEXT(GLenum target, GLuint index, GLsizei count, const GLfloat *params);
 
 //@}
+
+
 
 
 /**
@@ -8482,68 +9193,73 @@ GLE_API void glProgramLocalParameters4fvEXT( GLenum target, GLuint index, GLsize
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_gpu_shader4 is supported.
- * @return Returns \c true if \b GL_EXT_gpu_shader4 is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_gpu_shader4 is supported.
+ * @return Returns \c true if \b GL_EXT_gpu_shader4 is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_gpu_shader4();
 
-/**
- * @brief void glGetUniformuivEXT( GLuint program, GLint location, GLuint *params );
- */
-GLE_API void glGetUniformuivEXT( GLuint program, GLint location, GLuint *params );
+
 
 /**
- * @brief void glBindFragDataLocationEXT( GLuint program, GLuint color, const GLchar *name );
+ * @brief void glBindFragDataLocationEXT(GLuint program, GLuint color, const GLchar *name)
  */
-GLE_API void glBindFragDataLocationEXT( GLuint program, GLuint color, const GLchar *name );
+GLE_API void glBindFragDataLocationEXT(GLuint program, GLuint color, const GLchar *name);
 
 /**
- * @brief GLint glGetFragDataLocationEXT( GLuint program, const GLchar *name );
+ * @brief GLint glGetFragDataLocationEXT(GLuint program, const GLchar *name)
  */
-GLE_API GLint glGetFragDataLocationEXT( GLuint program, const GLchar *name );
+GLE_API GLint glGetFragDataLocationEXT(GLuint program, const GLchar *name);
 
 /**
- * @brief void glUniform1uiEXT( GLint location, GLuint v0 );
+ * @brief void glGetUniformuivEXT(GLuint program, GLint location, GLuint *params)
  */
-GLE_API void glUniform1uiEXT( GLint location, GLuint v0 );
+GLE_API void glGetUniformuivEXT(GLuint program, GLint location, GLuint *params);
 
 /**
- * @brief void glUniform2uiEXT( GLint location, GLuint v0, GLuint v1 );
+ * @brief void glUniform1uiEXT(GLint location, GLuint v0)
  */
-GLE_API void glUniform2uiEXT( GLint location, GLuint v0, GLuint v1 );
+GLE_API void glUniform1uiEXT(GLint location, GLuint v0);
 
 /**
- * @brief void glUniform3uiEXT( GLint location, GLuint v0, GLuint v1, GLuint v2 );
+ * @brief void glUniform1uivEXT(GLint location, GLsizei count, const GLuint *value)
  */
-GLE_API void glUniform3uiEXT( GLint location, GLuint v0, GLuint v1, GLuint v2 );
+GLE_API void glUniform1uivEXT(GLint location, GLsizei count, const GLuint *value);
 
 /**
- * @brief void glUniform4uiEXT( GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3 );
+ * @brief void glUniform2uiEXT(GLint location, GLuint v0, GLuint v1)
  */
-GLE_API void glUniform4uiEXT( GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3 );
+GLE_API void glUniform2uiEXT(GLint location, GLuint v0, GLuint v1);
 
 /**
- * @brief void glUniform1uivEXT( GLint location, GLsizei count, const GLuint *value );
+ * @brief void glUniform2uivEXT(GLint location, GLsizei count, const GLuint *value)
  */
-GLE_API void glUniform1uivEXT( GLint location, GLsizei count, const GLuint *value );
+GLE_API void glUniform2uivEXT(GLint location, GLsizei count, const GLuint *value);
 
 /**
- * @brief void glUniform2uivEXT( GLint location, GLsizei count, const GLuint *value );
+ * @brief void glUniform3uiEXT(GLint location, GLuint v0, GLuint v1, GLuint v2)
  */
-GLE_API void glUniform2uivEXT( GLint location, GLsizei count, const GLuint *value );
+GLE_API void glUniform3uiEXT(GLint location, GLuint v0, GLuint v1, GLuint v2);
 
 /**
- * @brief void glUniform3uivEXT( GLint location, GLsizei count, const GLuint *value );
+ * @brief void glUniform3uivEXT(GLint location, GLsizei count, const GLuint *value)
  */
-GLE_API void glUniform3uivEXT( GLint location, GLsizei count, const GLuint *value );
+GLE_API void glUniform3uivEXT(GLint location, GLsizei count, const GLuint *value);
 
 /**
- * @brief void glUniform4uivEXT( GLint location, GLsizei count, const GLuint *value );
+ * @brief void glUniform4uiEXT(GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3)
  */
-GLE_API void glUniform4uivEXT( GLint location, GLsizei count, const GLuint *value );
+GLE_API void glUniform4uiEXT(GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3);
+
+/**
+ * @brief void glUniform4uivEXT(GLint location, GLsizei count, const GLuint *value)
+ */
+GLE_API void glUniform4uivEXT(GLint location, GLsizei count, const GLuint *value);
 
 //@}
+
+
 
 
 /**
@@ -8553,63 +9269,68 @@ GLE_API void glUniform4uivEXT( GLint location, GLsizei count, const GLuint *valu
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_histogram is supported.
- * @return Returns \c true if \b GL_EXT_histogram is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_histogram is supported.
+ * @return Returns \c true if \b GL_EXT_histogram is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_histogram();
 
-/**
- * @brief void glGetHistogramEXT( GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values );
- */
-GLE_API void glGetHistogramEXT( GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values );
+
 
 /**
- * @brief void glGetHistogramParameterfvEXT( GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glGetHistogramEXT(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values)
  */
-GLE_API void glGetHistogramParameterfvEXT( GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glGetHistogramEXT(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values);
 
 /**
- * @brief void glGetHistogramParameterivEXT( GLenum target, GLenum pname, GLint *params );
+ * @brief void glGetHistogramParameterfvEXT(GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetHistogramParameterivEXT( GLenum target, GLenum pname, GLint *params );
+GLE_API void glGetHistogramParameterfvEXT(GLenum target, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetMinmaxEXT( GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values );
+ * @brief void glGetHistogramParameterivEXT(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glGetMinmaxEXT( GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values );
+GLE_API void glGetHistogramParameterivEXT(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetMinmaxParameterfvEXT( GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glGetMinmaxEXT(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values)
  */
-GLE_API void glGetMinmaxParameterfvEXT( GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glGetMinmaxEXT(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values);
 
 /**
- * @brief void glGetMinmaxParameterivEXT( GLenum target, GLenum pname, GLint *params );
+ * @brief void glGetMinmaxParameterfvEXT(GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetMinmaxParameterivEXT( GLenum target, GLenum pname, GLint *params );
+GLE_API void glGetMinmaxParameterfvEXT(GLenum target, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glHistogramEXT( GLenum target, GLsizei width, GLenum internalformat, GLboolean sink );
+ * @brief void glGetMinmaxParameterivEXT(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glHistogramEXT( GLenum target, GLsizei width, GLenum internalformat, GLboolean sink );
+GLE_API void glGetMinmaxParameterivEXT(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glMinmaxEXT( GLenum target, GLenum internalformat, GLboolean sink );
+ * @brief void glHistogramEXT(GLenum target, GLsizei width, GLenum internalformat, GLboolean sink)
  */
-GLE_API void glMinmaxEXT( GLenum target, GLenum internalformat, GLboolean sink );
+GLE_API void glHistogramEXT(GLenum target, GLsizei width, GLenum internalformat, GLboolean sink);
 
 /**
- * @brief void glResetHistogramEXT( GLenum target );
+ * @brief void glMinmaxEXT(GLenum target, GLenum internalformat, GLboolean sink)
  */
-GLE_API void glResetHistogramEXT( GLenum target );
+GLE_API void glMinmaxEXT(GLenum target, GLenum internalformat, GLboolean sink);
 
 /**
- * @brief void glResetMinmaxEXT( GLenum target );
+ * @brief void glResetHistogramEXT(GLenum target)
  */
-GLE_API void glResetMinmaxEXT( GLenum target );
+GLE_API void glResetHistogramEXT(GLenum target);
+
+/**
+ * @brief void glResetMinmaxEXT(GLenum target)
+ */
+GLE_API void glResetMinmaxEXT(GLenum target);
 
 //@}
+
+
 
 
 /**
@@ -8619,13 +9340,17 @@ GLE_API void glResetMinmaxEXT( GLenum target );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_index_array_formats is supported.
- * @return Returns \c true if \b GL_EXT_index_array_formats is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_index_array_formats is supported.
+ * @return Returns \c true if \b GL_EXT_index_array_formats is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_index_array_formats();
 
+
 //@}
+
+
 
 
 /**
@@ -8635,18 +9360,23 @@ GLE_API bool isGL_EXT_index_array_formats();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_index_func is supported.
- * @return Returns \c true if \b GL_EXT_index_func is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_index_func is supported.
+ * @return Returns \c true if \b GL_EXT_index_func is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_index_func();
 
+
+
 /**
- * @brief void glIndexFuncEXT( GLenum func, GLclampf ref );
+ * @brief void glIndexFuncEXT(GLenum func, GLclampf ref)
  */
-GLE_API void glIndexFuncEXT( GLenum func, GLclampf ref );
+GLE_API void glIndexFuncEXT(GLenum func, GLclampf ref);
 
 //@}
+
+
 
 
 /**
@@ -8656,18 +9386,23 @@ GLE_API void glIndexFuncEXT( GLenum func, GLclampf ref );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_index_material is supported.
- * @return Returns \c true if \b GL_EXT_index_material is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_index_material is supported.
+ * @return Returns \c true if \b GL_EXT_index_material is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_index_material();
 
+
+
 /**
- * @brief void glIndexMaterialEXT( GLenum face, GLenum mode );
+ * @brief void glIndexMaterialEXT(GLenum face, GLenum mode)
  */
-GLE_API void glIndexMaterialEXT( GLenum face, GLenum mode );
+GLE_API void glIndexMaterialEXT(GLenum face, GLenum mode);
 
 //@}
+
+
 
 
 /**
@@ -8677,13 +9412,17 @@ GLE_API void glIndexMaterialEXT( GLenum face, GLenum mode );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_index_texture is supported.
- * @return Returns \c true if \b GL_EXT_index_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_index_texture is supported.
+ * @return Returns \c true if \b GL_EXT_index_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_index_texture();
 
+
 //@}
+
+
 
 
 /**
@@ -8693,28 +9432,33 @@ GLE_API bool isGL_EXT_index_texture();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_light_texture is supported.
- * @return Returns \c true if \b GL_EXT_light_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_light_texture is supported.
+ * @return Returns \c true if \b GL_EXT_light_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_light_texture();
 
-/**
- * @brief void glApplyTextureEXT( GLenum mode );
- */
-GLE_API void glApplyTextureEXT( GLenum mode );
+
 
 /**
- * @brief void glTextureLightEXT( GLenum pname );
+ * @brief void glApplyTextureEXT(GLenum mode)
  */
-GLE_API void glTextureLightEXT( GLenum pname );
+GLE_API void glApplyTextureEXT(GLenum mode);
 
 /**
- * @brief void glTextureMaterialEXT( GLenum face, GLenum mode );
+ * @brief void glTextureLightEXT(GLenum pname)
  */
-GLE_API void glTextureMaterialEXT( GLenum face, GLenum mode );
+GLE_API void glTextureLightEXT(GLenum pname);
+
+/**
+ * @brief void glTextureMaterialEXT(GLenum face, GLenum mode)
+ */
+GLE_API void glTextureMaterialEXT(GLenum face, GLenum mode);
 
 //@}
+
+
 
 
 /**
@@ -8724,13 +9468,17 @@ GLE_API void glTextureMaterialEXT( GLenum face, GLenum mode );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_misc_attribute is supported.
- * @return Returns \c true if \b GL_EXT_misc_attribute is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_misc_attribute is supported.
+ * @return Returns \c true if \b GL_EXT_misc_attribute is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_misc_attribute();
 
+
 //@}
+
+
 
 
 /**
@@ -8740,23 +9488,28 @@ GLE_API bool isGL_EXT_misc_attribute();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_multi_draw_arrays is supported.
- * @return Returns \c true if \b GL_EXT_multi_draw_arrays is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_multi_draw_arrays is supported.
+ * @return Returns \c true if \b GL_EXT_multi_draw_arrays is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_multi_draw_arrays();
 
-/**
- * @brief void glMultiDrawArraysEXT( GLenum mode, GLint *first, GLsizei *count, GLsizei primcount );
- */
-GLE_API void glMultiDrawArraysEXT( GLenum mode, GLint *first, GLsizei *count, GLsizei primcount );
+
 
 /**
- * @brief void glMultiDrawElementsEXT( GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount );
+ * @brief void glMultiDrawArraysEXT(GLenum mode, GLint *first, GLsizei *count, GLsizei primcount)
  */
-GLE_API void glMultiDrawElementsEXT( GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount );
+GLE_API void glMultiDrawArraysEXT(GLenum mode, GLint *first, GLsizei *count, GLsizei primcount);
+
+/**
+ * @brief void glMultiDrawElementsEXT(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount)
+ */
+GLE_API void glMultiDrawElementsEXT(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount);
 
 //@}
+
+
 
 
 /**
@@ -8766,23 +9519,28 @@ GLE_API void glMultiDrawElementsEXT( GLenum mode, const GLsizei *count, GLenum t
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_multisample is supported.
- * @return Returns \c true if \b GL_EXT_multisample is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_multisample is supported.
+ * @return Returns \c true if \b GL_EXT_multisample is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_multisample();
 
-/**
- * @brief void glSampleMaskEXT( GLclampf value, GLboolean invert );
- */
-GLE_API void glSampleMaskEXT( GLclampf value, GLboolean invert );
+
 
 /**
- * @brief void glSamplePatternEXT( GLenum pattern );
+ * @brief void glSampleMaskEXT(GLclampf value, GLboolean invert)
  */
-GLE_API void glSamplePatternEXT( GLenum pattern );
+GLE_API void glSampleMaskEXT(GLclampf value, GLboolean invert);
+
+/**
+ * @brief void glSamplePatternEXT(GLenum pattern)
+ */
+GLE_API void glSamplePatternEXT(GLenum pattern);
 
 //@}
+
+
 
 
 /**
@@ -8792,13 +9550,17 @@ GLE_API void glSamplePatternEXT( GLenum pattern );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_packed_depth_stencil is supported.
- * @return Returns \c true if \b GL_EXT_packed_depth_stencil is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_packed_depth_stencil is supported.
+ * @return Returns \c true if \b GL_EXT_packed_depth_stencil is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_packed_depth_stencil();
 
+
 //@}
+
+
 
 
 /**
@@ -8808,13 +9570,17 @@ GLE_API bool isGL_EXT_packed_depth_stencil();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_packed_float is supported.
- * @return Returns \c true if \b GL_EXT_packed_float is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_packed_float is supported.
+ * @return Returns \c true if \b GL_EXT_packed_float is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_packed_float();
 
+
 //@}
+
+
 
 
 /**
@@ -8824,13 +9590,17 @@ GLE_API bool isGL_EXT_packed_float();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_packed_pixels is supported.
- * @return Returns \c true if \b GL_EXT_packed_pixels is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_packed_pixels is supported.
+ * @return Returns \c true if \b GL_EXT_packed_pixels is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_packed_pixels();
 
+
 //@}
+
+
 
 
 /**
@@ -8840,33 +9610,38 @@ GLE_API bool isGL_EXT_packed_pixels();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_paletted_texture is supported.
- * @return Returns \c true if \b GL_EXT_paletted_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_paletted_texture is supported.
+ * @return Returns \c true if \b GL_EXT_paletted_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_paletted_texture();
 
-/**
- * @brief void glColorTableEXT( GLenum target, GLenum internalFormat, GLsizei width, GLenum format, GLenum type, const GLvoid *table );
- */
-GLE_API void glColorTableEXT( GLenum target, GLenum internalFormat, GLsizei width, GLenum format, GLenum type, const GLvoid *table );
+
 
 /**
- * @brief void glGetColorTableEXT( GLenum target, GLenum format, GLenum type, GLvoid *data );
+ * @brief void glColorTableEXT(GLenum target, GLenum internalFormat, GLsizei width, GLenum format, GLenum type, const GLvoid *table)
  */
-GLE_API void glGetColorTableEXT( GLenum target, GLenum format, GLenum type, GLvoid *data );
+GLE_API void glColorTableEXT(GLenum target, GLenum internalFormat, GLsizei width, GLenum format, GLenum type, const GLvoid *table);
 
 /**
- * @brief void glGetColorTableParameterivEXT( GLenum target, GLenum pname, GLint *params );
+ * @brief void glGetColorTableEXT(GLenum target, GLenum format, GLenum type, GLvoid *data)
  */
-GLE_API void glGetColorTableParameterivEXT( GLenum target, GLenum pname, GLint *params );
+GLE_API void glGetColorTableEXT(GLenum target, GLenum format, GLenum type, GLvoid *data);
 
 /**
- * @brief void glGetColorTableParameterfvEXT( GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glGetColorTableParameterfvEXT(GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetColorTableParameterfvEXT( GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glGetColorTableParameterfvEXT(GLenum target, GLenum pname, GLfloat *params);
+
+/**
+ * @brief void glGetColorTableParameterivEXT(GLenum target, GLenum pname, GLint *params)
+ */
+GLE_API void glGetColorTableParameterivEXT(GLenum target, GLenum pname, GLint *params);
 
 //@}
+
+
 
 
 /**
@@ -8876,13 +9651,17 @@ GLE_API void glGetColorTableParameterfvEXT( GLenum target, GLenum pname, GLfloat
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_pixel_buffer_object is supported.
- * @return Returns \c true if \b GL_EXT_pixel_buffer_object is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_pixel_buffer_object is supported.
+ * @return Returns \c true if \b GL_EXT_pixel_buffer_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_pixel_buffer_object();
 
+
 //@}
+
+
 
 
 /**
@@ -8892,33 +9671,38 @@ GLE_API bool isGL_EXT_pixel_buffer_object();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_pixel_transform is supported.
- * @return Returns \c true if \b GL_EXT_pixel_transform is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_pixel_transform is supported.
+ * @return Returns \c true if \b GL_EXT_pixel_transform is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_pixel_transform();
 
-/**
- * @brief void glPixelTransformParameteriEXT( GLenum target, GLenum pname, GLint param );
- */
-GLE_API void glPixelTransformParameteriEXT( GLenum target, GLenum pname, GLint param );
+
 
 /**
- * @brief void glPixelTransformParameterfEXT( GLenum target, GLenum pname, GLfloat param );
+ * @brief void glPixelTransformParameterfEXT(GLenum target, GLenum pname, GLfloat param)
  */
-GLE_API void glPixelTransformParameterfEXT( GLenum target, GLenum pname, GLfloat param );
+GLE_API void glPixelTransformParameterfEXT(GLenum target, GLenum pname, GLfloat param);
 
 /**
- * @brief void glPixelTransformParameterivEXT( GLenum target, GLenum pname, const GLint *params );
+ * @brief void glPixelTransformParameterfvEXT(GLenum target, GLenum pname, const GLfloat *params)
  */
-GLE_API void glPixelTransformParameterivEXT( GLenum target, GLenum pname, const GLint *params );
+GLE_API void glPixelTransformParameterfvEXT(GLenum target, GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glPixelTransformParameterfvEXT( GLenum target, GLenum pname, const GLfloat *params );
+ * @brief void glPixelTransformParameteriEXT(GLenum target, GLenum pname, GLint param)
  */
-GLE_API void glPixelTransformParameterfvEXT( GLenum target, GLenum pname, const GLfloat *params );
+GLE_API void glPixelTransformParameteriEXT(GLenum target, GLenum pname, GLint param);
+
+/**
+ * @brief void glPixelTransformParameterivEXT(GLenum target, GLenum pname, const GLint *params)
+ */
+GLE_API void glPixelTransformParameterivEXT(GLenum target, GLenum pname, const GLint *params);
 
 //@}
+
+
 
 
 /**
@@ -8928,13 +9712,17 @@ GLE_API void glPixelTransformParameterfvEXT( GLenum target, GLenum pname, const 
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_pixel_transform_color_table is supported.
- * @return Returns \c true if \b GL_EXT_pixel_transform_color_table is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_pixel_transform_color_table is supported.
+ * @return Returns \c true if \b GL_EXT_pixel_transform_color_table is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_pixel_transform_color_table();
 
+
 //@}
+
+
 
 
 /**
@@ -8944,23 +9732,28 @@ GLE_API bool isGL_EXT_pixel_transform_color_table();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_point_parameters is supported.
- * @return Returns \c true if \b GL_EXT_point_parameters is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_point_parameters is supported.
+ * @return Returns \c true if \b GL_EXT_point_parameters is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_point_parameters();
 
-/**
- * @brief void glPointParameterfEXT( GLenum pname, GLfloat param );
- */
-GLE_API void glPointParameterfEXT( GLenum pname, GLfloat param );
+
 
 /**
- * @brief void glPointParameterfvEXT( GLenum pname, const GLfloat *params );
+ * @brief void glPointParameterfEXT(GLenum pname, GLfloat param)
  */
-GLE_API void glPointParameterfvEXT( GLenum pname, const GLfloat *params );
+GLE_API void glPointParameterfEXT(GLenum pname, GLfloat param);
+
+/**
+ * @brief void glPointParameterfvEXT(GLenum pname, const GLfloat *params)
+ */
+GLE_API void glPointParameterfvEXT(GLenum pname, const GLfloat *params);
 
 //@}
+
+
 
 
 /**
@@ -8970,18 +9763,23 @@ GLE_API void glPointParameterfvEXT( GLenum pname, const GLfloat *params );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_polygon_offset is supported.
- * @return Returns \c true if \b GL_EXT_polygon_offset is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_polygon_offset is supported.
+ * @return Returns \c true if \b GL_EXT_polygon_offset is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_polygon_offset();
 
+
+
 /**
- * @brief void glPolygonOffsetEXT( GLfloat factor, GLfloat bias );
+ * @brief void glPolygonOffsetEXT(GLfloat factor, GLfloat bias)
  */
-GLE_API void glPolygonOffsetEXT( GLfloat factor, GLfloat bias );
+GLE_API void glPolygonOffsetEXT(GLfloat factor, GLfloat bias);
 
 //@}
+
+
 
 
 /**
@@ -8991,18 +9789,23 @@ GLE_API void glPolygonOffsetEXT( GLfloat factor, GLfloat bias );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_provoking_vertex is supported.
- * @return Returns \c true if \b GL_EXT_provoking_vertex is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_provoking_vertex is supported.
+ * @return Returns \c true if \b GL_EXT_provoking_vertex is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_provoking_vertex();
 
+
+
 /**
- * @brief void glProvokingVertexEXT( GLenum mode );
+ * @brief void glProvokingVertexEXT(GLenum mode)
  */
-GLE_API void glProvokingVertexEXT( GLenum mode );
+GLE_API void glProvokingVertexEXT(GLenum mode);
 
 //@}
+
+
 
 
 /**
@@ -9012,13 +9815,17 @@ GLE_API void glProvokingVertexEXT( GLenum mode );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_rescale_normal is supported.
- * @return Returns \c true if \b GL_EXT_rescale_normal is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_rescale_normal is supported.
+ * @return Returns \c true if \b GL_EXT_rescale_normal is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_rescale_normal();
 
+
 //@}
+
+
 
 
 /**
@@ -9028,98 +9835,103 @@ GLE_API bool isGL_EXT_rescale_normal();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_secondary_color is supported.
- * @return Returns \c true if \b GL_EXT_secondary_color is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_secondary_color is supported.
+ * @return Returns \c true if \b GL_EXT_secondary_color is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_secondary_color();
 
-/**
- * @brief void glSecondaryColor3bEXT( GLbyte red, GLbyte green, GLbyte blue );
- */
-GLE_API void glSecondaryColor3bEXT( GLbyte red, GLbyte green, GLbyte blue );
+
 
 /**
- * @brief void glSecondaryColor3bvEXT( const GLbyte *v );
+ * @brief void glSecondaryColor3bEXT(GLbyte red, GLbyte green, GLbyte blue)
  */
-GLE_API void glSecondaryColor3bvEXT( const GLbyte *v );
+GLE_API void glSecondaryColor3bEXT(GLbyte red, GLbyte green, GLbyte blue);
 
 /**
- * @brief void glSecondaryColor3dEXT( GLdouble red, GLdouble green, GLdouble blue );
+ * @brief void glSecondaryColor3bvEXT(const GLbyte *v)
  */
-GLE_API void glSecondaryColor3dEXT( GLdouble red, GLdouble green, GLdouble blue );
+GLE_API void glSecondaryColor3bvEXT(const GLbyte *v);
 
 /**
- * @brief void glSecondaryColor3dvEXT( const GLdouble *v );
+ * @brief void glSecondaryColor3dEXT(GLdouble red, GLdouble green, GLdouble blue)
  */
-GLE_API void glSecondaryColor3dvEXT( const GLdouble *v );
+GLE_API void glSecondaryColor3dEXT(GLdouble red, GLdouble green, GLdouble blue);
 
 /**
- * @brief void glSecondaryColor3fEXT( GLfloat red, GLfloat green, GLfloat blue );
+ * @brief void glSecondaryColor3dvEXT(const GLdouble *v)
  */
-GLE_API void glSecondaryColor3fEXT( GLfloat red, GLfloat green, GLfloat blue );
+GLE_API void glSecondaryColor3dvEXT(const GLdouble *v);
 
 /**
- * @brief void glSecondaryColor3fvEXT( const GLfloat *v );
+ * @brief void glSecondaryColor3fEXT(GLfloat red, GLfloat green, GLfloat blue)
  */
-GLE_API void glSecondaryColor3fvEXT( const GLfloat *v );
+GLE_API void glSecondaryColor3fEXT(GLfloat red, GLfloat green, GLfloat blue);
 
 /**
- * @brief void glSecondaryColor3iEXT( GLint red, GLint green, GLint blue );
+ * @brief void glSecondaryColor3fvEXT(const GLfloat *v)
  */
-GLE_API void glSecondaryColor3iEXT( GLint red, GLint green, GLint blue );
+GLE_API void glSecondaryColor3fvEXT(const GLfloat *v);
 
 /**
- * @brief void glSecondaryColor3ivEXT( const GLint *v );
+ * @brief void glSecondaryColor3iEXT(GLint red, GLint green, GLint blue)
  */
-GLE_API void glSecondaryColor3ivEXT( const GLint *v );
+GLE_API void glSecondaryColor3iEXT(GLint red, GLint green, GLint blue);
 
 /**
- * @brief void glSecondaryColor3sEXT( GLshort red, GLshort green, GLshort blue );
+ * @brief void glSecondaryColor3ivEXT(const GLint *v)
  */
-GLE_API void glSecondaryColor3sEXT( GLshort red, GLshort green, GLshort blue );
+GLE_API void glSecondaryColor3ivEXT(const GLint *v);
 
 /**
- * @brief void glSecondaryColor3svEXT( const GLshort *v );
+ * @brief void glSecondaryColor3sEXT(GLshort red, GLshort green, GLshort blue)
  */
-GLE_API void glSecondaryColor3svEXT( const GLshort *v );
+GLE_API void glSecondaryColor3sEXT(GLshort red, GLshort green, GLshort blue);
 
 /**
- * @brief void glSecondaryColor3ubEXT( GLubyte red, GLubyte green, GLubyte blue );
+ * @brief void glSecondaryColor3svEXT(const GLshort *v)
  */
-GLE_API void glSecondaryColor3ubEXT( GLubyte red, GLubyte green, GLubyte blue );
+GLE_API void glSecondaryColor3svEXT(const GLshort *v);
 
 /**
- * @brief void glSecondaryColor3ubvEXT( const GLubyte *v );
+ * @brief void glSecondaryColor3ubEXT(GLubyte red, GLubyte green, GLubyte blue)
  */
-GLE_API void glSecondaryColor3ubvEXT( const GLubyte *v );
+GLE_API void glSecondaryColor3ubEXT(GLubyte red, GLubyte green, GLubyte blue);
 
 /**
- * @brief void glSecondaryColor3uiEXT( GLuint red, GLuint green, GLuint blue );
+ * @brief void glSecondaryColor3ubvEXT(const GLubyte *v)
  */
-GLE_API void glSecondaryColor3uiEXT( GLuint red, GLuint green, GLuint blue );
+GLE_API void glSecondaryColor3ubvEXT(const GLubyte *v);
 
 /**
- * @brief void glSecondaryColor3uivEXT( const GLuint *v );
+ * @brief void glSecondaryColor3uiEXT(GLuint red, GLuint green, GLuint blue)
  */
-GLE_API void glSecondaryColor3uivEXT( const GLuint *v );
+GLE_API void glSecondaryColor3uiEXT(GLuint red, GLuint green, GLuint blue);
 
 /**
- * @brief void glSecondaryColor3usEXT( GLushort red, GLushort green, GLushort blue );
+ * @brief void glSecondaryColor3uivEXT(const GLuint *v)
  */
-GLE_API void glSecondaryColor3usEXT( GLushort red, GLushort green, GLushort blue );
+GLE_API void glSecondaryColor3uivEXT(const GLuint *v);
 
 /**
- * @brief void glSecondaryColor3usvEXT( const GLushort *v );
+ * @brief void glSecondaryColor3usEXT(GLushort red, GLushort green, GLushort blue)
  */
-GLE_API void glSecondaryColor3usvEXT( const GLushort *v );
+GLE_API void glSecondaryColor3usEXT(GLushort red, GLushort green, GLushort blue);
 
 /**
- * @brief void glSecondaryColorPointerEXT( GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+ * @brief void glSecondaryColor3usvEXT(const GLushort *v)
  */
-GLE_API void glSecondaryColorPointerEXT( GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+GLE_API void glSecondaryColor3usvEXT(const GLushort *v);
+
+/**
+ * @brief void glSecondaryColorPointerEXT(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
+ */
+GLE_API void glSecondaryColorPointerEXT(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
 
 //@}
+
+
 
 
 /**
@@ -9129,28 +9941,33 @@ GLE_API void glSecondaryColorPointerEXT( GLint size, GLenum type, GLsizei stride
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_separate_shader_objects is supported.
- * @return Returns \c true if \b GL_EXT_separate_shader_objects is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_separate_shader_objects is supported.
+ * @return Returns \c true if \b GL_EXT_separate_shader_objects is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_separate_shader_objects();
 
-/**
- * @brief void glUseShaderProgramEXT( GLenum type, GLuint program );
- */
-GLE_API void glUseShaderProgramEXT( GLenum type, GLuint program );
+
 
 /**
- * @brief void glActiveProgramEXT( GLuint program );
+ * @brief void glActiveProgramEXT(GLuint program)
  */
-GLE_API void glActiveProgramEXT( GLuint program );
+GLE_API void glActiveProgramEXT(GLuint program);
 
 /**
- * @brief GLuint glCreateShaderProgramEXT( GLenum type, const GLchar *string );
+ * @brief GLuint glCreateShaderProgramEXT(GLenum type, const GLchar *string)
  */
-GLE_API GLuint glCreateShaderProgramEXT( GLenum type, const GLchar *string );
+GLE_API GLuint glCreateShaderProgramEXT(GLenum type, const GLchar *string);
+
+/**
+ * @brief void glUseShaderProgramEXT(GLenum type, GLuint program)
+ */
+GLE_API void glUseShaderProgramEXT(GLenum type, GLuint program);
 
 //@}
+
+
 
 
 /**
@@ -9160,13 +9977,17 @@ GLE_API GLuint glCreateShaderProgramEXT( GLenum type, const GLchar *string );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_separate_specular_color is supported.
- * @return Returns \c true if \b GL_EXT_separate_specular_color is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_separate_specular_color is supported.
+ * @return Returns \c true if \b GL_EXT_separate_specular_color is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_separate_specular_color();
 
+
 //@}
+
+
 
 
 /**
@@ -9176,13 +9997,17 @@ GLE_API bool isGL_EXT_separate_specular_color();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_shader_image_load_store is supported.
- * @return Returns \c true if \b GL_EXT_shader_image_load_store is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_shader_image_load_store is supported.
+ * @return Returns \c true if \b GL_EXT_shader_image_load_store is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_shader_image_load_store();
 
+
 //@}
+
+
 
 
 /**
@@ -9192,13 +10017,17 @@ GLE_API bool isGL_EXT_shader_image_load_store();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_shadow_funcs is supported.
- * @return Returns \c true if \b GL_EXT_shadow_funcs is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_shadow_funcs is supported.
+ * @return Returns \c true if \b GL_EXT_shadow_funcs is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_shadow_funcs();
 
+
 //@}
+
+
 
 
 /**
@@ -9208,13 +10037,17 @@ GLE_API bool isGL_EXT_shadow_funcs();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_shared_texture_palette is supported.
- * @return Returns \c true if \b GL_EXT_shared_texture_palette is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_shared_texture_palette is supported.
+ * @return Returns \c true if \b GL_EXT_shared_texture_palette is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_shared_texture_palette();
 
+
 //@}
+
+
 
 
 /**
@@ -9224,18 +10057,23 @@ GLE_API bool isGL_EXT_shared_texture_palette();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_stencil_clear_tag is supported.
- * @return Returns \c true if \b GL_EXT_stencil_clear_tag is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_stencil_clear_tag is supported.
+ * @return Returns \c true if \b GL_EXT_stencil_clear_tag is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_stencil_clear_tag();
 
+
+
 /**
- * @brief void glStencilClearTagEXT( GLsizei stencilTagBits, GLuint stencilClearTag );
+ * @brief void glStencilClearTagEXT(GLsizei stencilTagBits, GLuint stencilClearTag)
  */
-GLE_API void glStencilClearTagEXT( GLsizei stencilTagBits, GLuint stencilClearTag );
+GLE_API void glStencilClearTagEXT(GLsizei stencilTagBits, GLuint stencilClearTag);
 
 //@}
+
+
 
 
 /**
@@ -9245,18 +10083,23 @@ GLE_API void glStencilClearTagEXT( GLsizei stencilTagBits, GLuint stencilClearTa
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_stencil_two_side is supported.
- * @return Returns \c true if \b GL_EXT_stencil_two_side is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_stencil_two_side is supported.
+ * @return Returns \c true if \b GL_EXT_stencil_two_side is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_stencil_two_side();
 
+
+
 /**
- * @brief void glActiveStencilFaceEXT( GLenum face );
+ * @brief void glActiveStencilFaceEXT(GLenum face)
  */
-GLE_API void glActiveStencilFaceEXT( GLenum face );
+GLE_API void glActiveStencilFaceEXT(GLenum face);
 
 //@}
+
+
 
 
 /**
@@ -9266,13 +10109,17 @@ GLE_API void glActiveStencilFaceEXT( GLenum face );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_stencil_wrap is supported.
- * @return Returns \c true if \b GL_EXT_stencil_wrap is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_stencil_wrap is supported.
+ * @return Returns \c true if \b GL_EXT_stencil_wrap is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_stencil_wrap();
 
+
 //@}
+
+
 
 
 /**
@@ -9282,23 +10129,28 @@ GLE_API bool isGL_EXT_stencil_wrap();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_subtexture is supported.
- * @return Returns \c true if \b GL_EXT_subtexture is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_subtexture is supported.
+ * @return Returns \c true if \b GL_EXT_subtexture is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_subtexture();
 
-/**
- * @brief void glTexSubImage1DEXT( GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels );
- */
-GLE_API void glTexSubImage1DEXT( GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels );
+
 
 /**
- * @brief void glTexSubImage2DEXT( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glTexSubImage1DEXT(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glTexSubImage2DEXT( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glTexSubImage1DEXT(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid *pixels);
+
+/**
+ * @brief void glTexSubImage2DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels)
+ */
+GLE_API void glTexSubImage2DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels);
 
 //@}
+
+
 
 
 /**
@@ -9308,13 +10160,17 @@ GLE_API void glTexSubImage2DEXT( GLenum target, GLint level, GLint xoffset, GLin
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture is supported.
- * @return Returns \c true if \b GL_EXT_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture is supported.
+ * @return Returns \c true if \b GL_EXT_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture();
 
+
 //@}
+
+
 
 
 /**
@@ -9324,23 +10180,28 @@ GLE_API bool isGL_EXT_texture();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture3D is supported.
- * @return Returns \c true if \b GL_EXT_texture3D is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture3D is supported.
+ * @return Returns \c true if \b GL_EXT_texture3D is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture3D();
 
-/**
- * @brief void glTexImage3DEXT( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
- */
-GLE_API void glTexImage3DEXT( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+
 
 /**
- * @brief void glTexSubImage3DEXT( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glTexImage3DEXT(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glTexSubImage3DEXT( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glTexImage3DEXT(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels);
+
+/**
+ * @brief void glTexSubImage3DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels)
+ */
+GLE_API void glTexSubImage3DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels);
 
 //@}
+
+
 
 
 /**
@@ -9350,13 +10211,17 @@ GLE_API void glTexSubImage3DEXT( GLenum target, GLint level, GLint xoffset, GLin
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_array is supported.
- * @return Returns \c true if \b GL_EXT_texture_array is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_array is supported.
+ * @return Returns \c true if \b GL_EXT_texture_array is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_array();
 
+
 //@}
+
+
 
 
 /**
@@ -9366,18 +10231,23 @@ GLE_API bool isGL_EXT_texture_array();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_buffer_object is supported.
- * @return Returns \c true if \b GL_EXT_texture_buffer_object is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_buffer_object is supported.
+ * @return Returns \c true if \b GL_EXT_texture_buffer_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_buffer_object();
 
+
+
 /**
- * @brief void glTexBufferEXT( GLenum target, GLenum internalformat, GLuint buffer );
+ * @brief void glTexBufferEXT(GLenum target, GLenum internalformat, GLuint buffer)
  */
-GLE_API void glTexBufferEXT( GLenum target, GLenum internalformat, GLuint buffer );
+GLE_API void glTexBufferEXT(GLenum target, GLenum internalformat, GLuint buffer);
 
 //@}
+
+
 
 
 /**
@@ -9387,13 +10257,17 @@ GLE_API void glTexBufferEXT( GLenum target, GLenum internalformat, GLuint buffer
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_compression_latc is supported.
- * @return Returns \c true if \b GL_EXT_texture_compression_latc is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_compression_latc is supported.
+ * @return Returns \c true if \b GL_EXT_texture_compression_latc is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_compression_latc();
 
+
 //@}
+
+
 
 
 /**
@@ -9403,13 +10277,17 @@ GLE_API bool isGL_EXT_texture_compression_latc();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_compression_rgtc is supported.
- * @return Returns \c true if \b GL_EXT_texture_compression_rgtc is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_compression_rgtc is supported.
+ * @return Returns \c true if \b GL_EXT_texture_compression_rgtc is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_compression_rgtc();
 
+
 //@}
+
+
 
 
 /**
@@ -9419,28 +10297,37 @@ GLE_API bool isGL_EXT_texture_compression_rgtc();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_compression_s3tc is supported.
- * @return Returns \c true if \b GL_EXT_texture_compression_s3tc is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_compression_s3tc is supported.
+ * @return Returns \c true if \b GL_EXT_texture_compression_s3tc is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_compression_s3tc();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_EXT_texture_cube_map GL_EXT_texture_cube_map
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_cube_map is supported.
- * @return Returns \c true if \b GL_EXT_texture_cube_map is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_cube_map is supported.
+ * @return Returns \c true if \b GL_EXT_texture_cube_map is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_cube_map();
 
+
 //@}
+
+
 
 
 /**
@@ -9450,13 +10337,17 @@ GLE_API bool isGL_EXT_texture_cube_map();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_env_add is supported.
- * @return Returns \c true if \b GL_EXT_texture_env_add is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_env_add is supported.
+ * @return Returns \c true if \b GL_EXT_texture_env_add is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_env_add();
 
+
 //@}
+
+
 
 
 /**
@@ -9466,13 +10357,17 @@ GLE_API bool isGL_EXT_texture_env_add();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_env_combine is supported.
- * @return Returns \c true if \b GL_EXT_texture_env_combine is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_env_combine is supported.
+ * @return Returns \c true if \b GL_EXT_texture_env_combine is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_env_combine();
 
+
 //@}
+
+
 
 
 /**
@@ -9482,13 +10377,17 @@ GLE_API bool isGL_EXT_texture_env_combine();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_env_dot3 is supported.
- * @return Returns \c true if \b GL_EXT_texture_env_dot3 is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_env_dot3 is supported.
+ * @return Returns \c true if \b GL_EXT_texture_env_dot3 is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_env_dot3();
 
+
 //@}
+
+
 
 
 /**
@@ -9498,13 +10397,17 @@ GLE_API bool isGL_EXT_texture_env_dot3();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_filter_anisotropic is supported.
- * @return Returns \c true if \b GL_EXT_texture_filter_anisotropic is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_filter_anisotropic is supported.
+ * @return Returns \c true if \b GL_EXT_texture_filter_anisotropic is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_filter_anisotropic();
 
+
 //@}
+
+
 
 
 /**
@@ -9514,43 +10417,48 @@ GLE_API bool isGL_EXT_texture_filter_anisotropic();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_integer is supported.
- * @return Returns \c true if \b GL_EXT_texture_integer is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_integer is supported.
+ * @return Returns \c true if \b GL_EXT_texture_integer is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_integer();
 
-/**
- * @brief void glTexParameterIivEXT( GLenum target, GLenum pname, const GLint *params );
- */
-GLE_API void glTexParameterIivEXT( GLenum target, GLenum pname, const GLint *params );
+
 
 /**
- * @brief void glTexParameterIuivEXT( GLenum target, GLenum pname, const GLuint *params );
+ * @brief void glClearColorIiEXT(GLint red, GLint green, GLint blue, GLint alpha)
  */
-GLE_API void glTexParameterIuivEXT( GLenum target, GLenum pname, const GLuint *params );
+GLE_API void glClearColorIiEXT(GLint red, GLint green, GLint blue, GLint alpha);
 
 /**
- * @brief void glGetTexParameterIivEXT( GLenum target, GLenum pname, GLint *params );
+ * @brief void glClearColorIuiEXT(GLuint red, GLuint green, GLuint blue, GLuint alpha)
  */
-GLE_API void glGetTexParameterIivEXT( GLenum target, GLenum pname, GLint *params );
+GLE_API void glClearColorIuiEXT(GLuint red, GLuint green, GLuint blue, GLuint alpha);
 
 /**
- * @brief void glGetTexParameterIuivEXT( GLenum target, GLenum pname, GLuint *params );
+ * @brief void glGetTexParameterIivEXT(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glGetTexParameterIuivEXT( GLenum target, GLenum pname, GLuint *params );
+GLE_API void glGetTexParameterIivEXT(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glClearColorIiEXT( GLint red, GLint green, GLint blue, GLint alpha );
+ * @brief void glGetTexParameterIuivEXT(GLenum target, GLenum pname, GLuint *params)
  */
-GLE_API void glClearColorIiEXT( GLint red, GLint green, GLint blue, GLint alpha );
+GLE_API void glGetTexParameterIuivEXT(GLenum target, GLenum pname, GLuint *params);
 
 /**
- * @brief void glClearColorIuiEXT( GLuint red, GLuint green, GLuint blue, GLuint alpha );
+ * @brief void glTexParameterIivEXT(GLenum target, GLenum pname, const GLint *params)
  */
-GLE_API void glClearColorIuiEXT( GLuint red, GLuint green, GLuint blue, GLuint alpha );
+GLE_API void glTexParameterIivEXT(GLenum target, GLenum pname, const GLint *params);
+
+/**
+ * @brief void glTexParameterIuivEXT(GLenum target, GLenum pname, const GLuint *params)
+ */
+GLE_API void glTexParameterIuivEXT(GLenum target, GLenum pname, const GLuint *params);
 
 //@}
+
+
 
 
 /**
@@ -9560,13 +10468,17 @@ GLE_API void glClearColorIuiEXT( GLuint red, GLuint green, GLuint blue, GLuint a
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_lod_bias is supported.
- * @return Returns \c true if \b GL_EXT_texture_lod_bias is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_lod_bias is supported.
+ * @return Returns \c true if \b GL_EXT_texture_lod_bias is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_lod_bias();
 
+
 //@}
+
+
 
 
 /**
@@ -9576,13 +10488,17 @@ GLE_API bool isGL_EXT_texture_lod_bias();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_mirror_clamp is supported.
- * @return Returns \c true if \b GL_EXT_texture_mirror_clamp is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_mirror_clamp is supported.
+ * @return Returns \c true if \b GL_EXT_texture_mirror_clamp is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_mirror_clamp();
 
+
 //@}
+
+
 
 
 /**
@@ -9592,43 +10508,48 @@ GLE_API bool isGL_EXT_texture_mirror_clamp();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_object is supported.
- * @return Returns \c true if \b GL_EXT_texture_object is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_object is supported.
+ * @return Returns \c true if \b GL_EXT_texture_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_object();
 
-/**
- * @brief GLboolean glAreTexturesResidentEXT( GLsizei n, const GLuint *textures, GLboolean *residences );
- */
-GLE_API GLboolean glAreTexturesResidentEXT( GLsizei n, const GLuint *textures, GLboolean *residences );
+
 
 /**
- * @brief void glBindTextureEXT( GLenum target, GLuint texture );
+ * @brief GLboolean glAreTexturesResidentEXT(GLsizei n, const GLuint *textures, GLboolean *residences)
  */
-GLE_API void glBindTextureEXT( GLenum target, GLuint texture );
+GLE_API GLboolean glAreTexturesResidentEXT(GLsizei n, const GLuint *textures, GLboolean *residences);
 
 /**
- * @brief void glDeleteTexturesEXT( GLsizei n, const GLuint *textures );
+ * @brief void glBindTextureEXT(GLenum target, GLuint texture)
  */
-GLE_API void glDeleteTexturesEXT( GLsizei n, const GLuint *textures );
+GLE_API void glBindTextureEXT(GLenum target, GLuint texture);
 
 /**
- * @brief void glGenTexturesEXT( GLsizei n, GLuint *textures );
+ * @brief void glDeleteTexturesEXT(GLsizei n, const GLuint *textures)
  */
-GLE_API void glGenTexturesEXT( GLsizei n, GLuint *textures );
+GLE_API void glDeleteTexturesEXT(GLsizei n, const GLuint *textures);
 
 /**
- * @brief GLboolean glIsTextureEXT( GLuint texture );
+ * @brief void glGenTexturesEXT(GLsizei n, GLuint *textures)
  */
-GLE_API GLboolean glIsTextureEXT( GLuint texture );
+GLE_API void glGenTexturesEXT(GLsizei n, GLuint *textures);
 
 /**
- * @brief void glPrioritizeTexturesEXT( GLsizei n, const GLuint *textures, const GLclampf *priorities );
+ * @brief GLboolean glIsTextureEXT(GLuint texture)
  */
-GLE_API void glPrioritizeTexturesEXT( GLsizei n, const GLuint *textures, const GLclampf *priorities );
+GLE_API GLboolean glIsTextureEXT(GLuint texture);
+
+/**
+ * @brief void glPrioritizeTexturesEXT(GLsizei n, const GLuint *textures, const GLclampf *priorities)
+ */
+GLE_API void glPrioritizeTexturesEXT(GLsizei n, const GLuint *textures, const GLclampf *priorities);
 
 //@}
+
+
 
 
 /**
@@ -9638,18 +10559,23 @@ GLE_API void glPrioritizeTexturesEXT( GLsizei n, const GLuint *textures, const G
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_perturb_normal is supported.
- * @return Returns \c true if \b GL_EXT_texture_perturb_normal is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_perturb_normal is supported.
+ * @return Returns \c true if \b GL_EXT_texture_perturb_normal is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_perturb_normal();
 
+
+
 /**
- * @brief void glTextureNormalEXT( GLenum mode );
+ * @brief void glTextureNormalEXT(GLenum mode)
  */
-GLE_API void glTextureNormalEXT( GLenum mode );
+GLE_API void glTextureNormalEXT(GLenum mode);
 
 //@}
+
+
 
 
 /**
@@ -9659,13 +10585,17 @@ GLE_API void glTextureNormalEXT( GLenum mode );
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_sRGB is supported.
- * @return Returns \c true if \b GL_EXT_texture_sRGB is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_sRGB is supported.
+ * @return Returns \c true if \b GL_EXT_texture_sRGB is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_sRGB();
 
+
 //@}
+
+
 
 
 /**
@@ -9675,13 +10605,17 @@ GLE_API bool isGL_EXT_texture_sRGB();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_shared_exponent is supported.
- * @return Returns \c true if \b GL_EXT_texture_shared_exponent is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_shared_exponent is supported.
+ * @return Returns \c true if \b GL_EXT_texture_shared_exponent is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_shared_exponent();
 
+
 //@}
+
+
 
 
 /**
@@ -9691,13 +10625,17 @@ GLE_API bool isGL_EXT_texture_shared_exponent();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_snorm is supported.
- * @return Returns \c true if \b GL_EXT_texture_snorm is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_snorm is supported.
+ * @return Returns \c true if \b GL_EXT_texture_snorm is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_snorm();
 
+
 //@}
+
+
 
 
 /**
@@ -9707,13 +10645,17 @@ GLE_API bool isGL_EXT_texture_snorm();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_texture_swizzle is supported.
- * @return Returns \c true if \b GL_EXT_texture_swizzle is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_texture_swizzle is supported.
+ * @return Returns \c true if \b GL_EXT_texture_swizzle is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_swizzle();
 
+
 //@}
+
+
 
 
 /**
@@ -9723,23 +10665,28 @@ GLE_API bool isGL_EXT_texture_swizzle();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_timer_query is supported.
- * @return Returns \c true if \b GL_EXT_timer_query is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_timer_query is supported.
+ * @return Returns \c true if \b GL_EXT_timer_query is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_timer_query();
 
-/**
- * @brief void glGetQueryObjecti64vEXT( GLuint id, GLenum pname, GLint64EXT *params );
- */
-GLE_API void glGetQueryObjecti64vEXT( GLuint id, GLenum pname, GLint64EXT *params );
+
 
 /**
- * @brief void glGetQueryObjectui64vEXT( GLuint id, GLenum pname, GLuint64EXT *params );
+ * @brief void glGetQueryObjecti64vEXT(GLuint id, GLenum pname, GLint64EXT *params)
  */
-GLE_API void glGetQueryObjectui64vEXT( GLuint id, GLenum pname, GLuint64EXT *params );
+GLE_API void glGetQueryObjecti64vEXT(GLuint id, GLenum pname, GLint64EXT *params);
+
+/**
+ * @brief void glGetQueryObjectui64vEXT(GLuint id, GLenum pname, GLuint64EXT *params)
+ */
+GLE_API void glGetQueryObjectui64vEXT(GLuint id, GLenum pname, GLuint64EXT *params);
 
 //@}
+
+
 
 
 /**
@@ -9749,48 +10696,53 @@ GLE_API void glGetQueryObjectui64vEXT( GLuint id, GLenum pname, GLuint64EXT *par
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_transform_feedback is supported.
- * @return Returns \c true if \b GL_EXT_transform_feedback is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_transform_feedback is supported.
+ * @return Returns \c true if \b GL_EXT_transform_feedback is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_transform_feedback();
 
-/**
- * @brief void glBeginTransformFeedbackEXT( GLenum primitiveMode );
- */
-GLE_API void glBeginTransformFeedbackEXT( GLenum primitiveMode );
+
 
 /**
- * @brief void glEndTransformFeedbackEXT( void );
+ * @brief void glBeginTransformFeedbackEXT(GLenum primitiveMode)
  */
-GLE_API void glEndTransformFeedbackEXT( void );
+GLE_API void glBeginTransformFeedbackEXT(GLenum primitiveMode);
 
 /**
- * @brief void glBindBufferRangeEXT( GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size );
+ * @brief void glBindBufferBaseEXT(GLenum target, GLuint index, GLuint buffer)
  */
-GLE_API void glBindBufferRangeEXT( GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size );
+GLE_API void glBindBufferBaseEXT(GLenum target, GLuint index, GLuint buffer);
 
 /**
- * @brief void glBindBufferOffsetEXT( GLenum target, GLuint index, GLuint buffer, GLintptr offset );
+ * @brief void glBindBufferOffsetEXT(GLenum target, GLuint index, GLuint buffer, GLintptr offset)
  */
-GLE_API void glBindBufferOffsetEXT( GLenum target, GLuint index, GLuint buffer, GLintptr offset );
+GLE_API void glBindBufferOffsetEXT(GLenum target, GLuint index, GLuint buffer, GLintptr offset);
 
 /**
- * @brief void glBindBufferBaseEXT( GLenum target, GLuint index, GLuint buffer );
+ * @brief void glBindBufferRangeEXT(GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size)
  */
-GLE_API void glBindBufferBaseEXT( GLenum target, GLuint index, GLuint buffer );
+GLE_API void glBindBufferRangeEXT(GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size);
 
 /**
- * @brief void glTransformFeedbackVaryingsEXT( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
+ * @brief void glEndTransformFeedbackEXT(void)
  */
-GLE_API void glTransformFeedbackVaryingsEXT( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
+GLE_API void glEndTransformFeedbackEXT(void);
 
 /**
- * @brief void glGetTransformFeedbackVaryingEXT( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
+ * @brief void glGetTransformFeedbackVaryingEXT(GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name)
  */
-GLE_API void glGetTransformFeedbackVaryingEXT( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
+GLE_API void glGetTransformFeedbackVaryingEXT(GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name);
+
+/**
+ * @brief void glTransformFeedbackVaryingsEXT(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode)
+ */
+GLE_API void glTransformFeedbackVaryingsEXT(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode);
 
 //@}
+
+
 
 
 /**
@@ -9800,58 +10752,63 @@ GLE_API void glGetTransformFeedbackVaryingEXT( GLuint program, GLuint index, GLs
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_vertex_array is supported.
- * @return Returns \c true if \b GL_EXT_vertex_array is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_vertex_array is supported.
+ * @return Returns \c true if \b GL_EXT_vertex_array is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_vertex_array();
 
-/**
- * @brief void glArrayElementEXT( GLint i );
- */
-GLE_API void glArrayElementEXT( GLint i );
+
 
 /**
- * @brief void glColorPointerEXT( GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer );
+ * @brief void glArrayElementEXT(GLint i)
  */
-GLE_API void glColorPointerEXT( GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer );
+GLE_API void glArrayElementEXT(GLint i);
 
 /**
- * @brief void glDrawArraysEXT( GLenum mode, GLint first, GLsizei count );
+ * @brief void glColorPointerEXT(GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer)
  */
-GLE_API void glDrawArraysEXT( GLenum mode, GLint first, GLsizei count );
+GLE_API void glColorPointerEXT(GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer);
 
 /**
- * @brief void glEdgeFlagPointerEXT( GLsizei stride, GLsizei count, const GLboolean *pointer );
+ * @brief void glDrawArraysEXT(GLenum mode, GLint first, GLsizei count)
  */
-GLE_API void glEdgeFlagPointerEXT( GLsizei stride, GLsizei count, const GLboolean *pointer );
+GLE_API void glDrawArraysEXT(GLenum mode, GLint first, GLsizei count);
 
 /**
- * @brief void glGetPointervEXT( GLenum pname, GLvoid* *params );
+ * @brief void glEdgeFlagPointerEXT(GLsizei stride, GLsizei count, const GLboolean *pointer)
  */
-GLE_API void glGetPointervEXT( GLenum pname, GLvoid* *params );
+GLE_API void glEdgeFlagPointerEXT(GLsizei stride, GLsizei count, const GLboolean *pointer);
 
 /**
- * @brief void glIndexPointerEXT( GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer );
+ * @brief void glGetPointervEXT(GLenum pname, GLvoid* *params)
  */
-GLE_API void glIndexPointerEXT( GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer );
+GLE_API void glGetPointervEXT(GLenum pname, GLvoid* *params);
 
 /**
- * @brief void glNormalPointerEXT( GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer );
+ * @brief void glIndexPointerEXT(GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer)
  */
-GLE_API void glNormalPointerEXT( GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer );
+GLE_API void glIndexPointerEXT(GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer);
 
 /**
- * @brief void glTexCoordPointerEXT( GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer );
+ * @brief void glNormalPointerEXT(GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer)
  */
-GLE_API void glTexCoordPointerEXT( GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer );
+GLE_API void glNormalPointerEXT(GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer);
 
 /**
- * @brief void glVertexPointerEXT( GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer );
+ * @brief void glTexCoordPointerEXT(GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer)
  */
-GLE_API void glVertexPointerEXT( GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer );
+GLE_API void glTexCoordPointerEXT(GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer);
+
+/**
+ * @brief void glVertexPointerEXT(GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer)
+ */
+GLE_API void glVertexPointerEXT(GLint size, GLenum type, GLsizei stride, GLsizei count, const GLvoid *pointer);
 
 //@}
+
+
 
 
 /**
@@ -9861,13 +10818,17 @@ GLE_API void glVertexPointerEXT( GLint size, GLenum type, GLsizei stride, GLsize
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_vertex_array_bgra is supported.
- * @return Returns \c true if \b GL_EXT_vertex_array_bgra is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_vertex_array_bgra is supported.
+ * @return Returns \c true if \b GL_EXT_vertex_array_bgra is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_vertex_array_bgra();
 
+
 //@}
+
+
 
 
 /**
@@ -9877,13 +10838,17 @@ GLE_API bool isGL_EXT_vertex_array_bgra();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_vertex_attrib_64bit is supported.
- * @return Returns \c true if \b GL_EXT_vertex_attrib_64bit is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_vertex_attrib_64bit is supported.
+ * @return Returns \c true if \b GL_EXT_vertex_attrib_64bit is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_vertex_attrib_64bit();
 
+
 //@}
+
+
 
 
 /**
@@ -9893,223 +10858,228 @@ GLE_API bool isGL_EXT_vertex_attrib_64bit();
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_vertex_shader is supported.
- * @return Returns \c true if \b GL_EXT_vertex_shader is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_vertex_shader is supported.
+ * @return Returns \c true if \b GL_EXT_vertex_shader is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_vertex_shader();
 
-/**
- * @brief void glBeginVertexShaderEXT( void );
- */
-GLE_API void glBeginVertexShaderEXT( void );
+
 
 /**
- * @brief void glEndVertexShaderEXT( void );
+ * @brief void glBeginVertexShaderEXT(void)
  */
-GLE_API void glEndVertexShaderEXT( void );
+GLE_API void glBeginVertexShaderEXT(void);
 
 /**
- * @brief void glBindVertexShaderEXT( GLuint id );
+ * @brief GLuint glBindLightParameterEXT(GLenum light, GLenum value)
  */
-GLE_API void glBindVertexShaderEXT( GLuint id );
+GLE_API GLuint glBindLightParameterEXT(GLenum light, GLenum value);
 
 /**
- * @brief GLuint glGenVertexShadersEXT( GLuint range );
+ * @brief GLuint glBindMaterialParameterEXT(GLenum face, GLenum value)
  */
-GLE_API GLuint glGenVertexShadersEXT( GLuint range );
+GLE_API GLuint glBindMaterialParameterEXT(GLenum face, GLenum value);
 
 /**
- * @brief void glDeleteVertexShaderEXT( GLuint id );
+ * @brief GLuint glBindParameterEXT(GLenum value)
  */
-GLE_API void glDeleteVertexShaderEXT( GLuint id );
+GLE_API GLuint glBindParameterEXT(GLenum value);
 
 /**
- * @brief void glShaderOp1EXT( GLenum op, GLuint res, GLuint arg1 );
+ * @brief GLuint glBindTexGenParameterEXT(GLenum unit, GLenum coord, GLenum value)
  */
-GLE_API void glShaderOp1EXT( GLenum op, GLuint res, GLuint arg1 );
+GLE_API GLuint glBindTexGenParameterEXT(GLenum unit, GLenum coord, GLenum value);
 
 /**
- * @brief void glShaderOp2EXT( GLenum op, GLuint res, GLuint arg1, GLuint arg2 );
+ * @brief GLuint glBindTextureUnitParameterEXT(GLenum unit, GLenum value)
  */
-GLE_API void glShaderOp2EXT( GLenum op, GLuint res, GLuint arg1, GLuint arg2 );
+GLE_API GLuint glBindTextureUnitParameterEXT(GLenum unit, GLenum value);
 
 /**
- * @brief void glShaderOp3EXT( GLenum op, GLuint res, GLuint arg1, GLuint arg2, GLuint arg3 );
+ * @brief void glBindVertexShaderEXT(GLuint id)
  */
-GLE_API void glShaderOp3EXT( GLenum op, GLuint res, GLuint arg1, GLuint arg2, GLuint arg3 );
+GLE_API void glBindVertexShaderEXT(GLuint id);
 
 /**
- * @brief void glSwizzleEXT( GLuint res, GLuint in, GLenum outX, GLenum outY, GLenum outZ, GLenum outW );
+ * @brief void glDeleteVertexShaderEXT(GLuint id)
  */
-GLE_API void glSwizzleEXT( GLuint res, GLuint in, GLenum outX, GLenum outY, GLenum outZ, GLenum outW );
+GLE_API void glDeleteVertexShaderEXT(GLuint id);
 
 /**
- * @brief void glWriteMaskEXT( GLuint res, GLuint in, GLenum outX, GLenum outY, GLenum outZ, GLenum outW );
+ * @brief void glDisableVariantClientStateEXT(GLuint id)
  */
-GLE_API void glWriteMaskEXT( GLuint res, GLuint in, GLenum outX, GLenum outY, GLenum outZ, GLenum outW );
+GLE_API void glDisableVariantClientStateEXT(GLuint id);
 
 /**
- * @brief void glInsertComponentEXT( GLuint res, GLuint src, GLuint num );
+ * @brief void glEnableVariantClientStateEXT(GLuint id)
  */
-GLE_API void glInsertComponentEXT( GLuint res, GLuint src, GLuint num );
+GLE_API void glEnableVariantClientStateEXT(GLuint id);
 
 /**
- * @brief void glExtractComponentEXT( GLuint res, GLuint src, GLuint num );
+ * @brief void glEndVertexShaderEXT(void)
  */
-GLE_API void glExtractComponentEXT( GLuint res, GLuint src, GLuint num );
+GLE_API void glEndVertexShaderEXT(void);
 
 /**
- * @brief GLuint glGenSymbolsEXT( GLenum datatype, GLenum storagetype, GLenum range, GLuint components );
+ * @brief void glExtractComponentEXT(GLuint res, GLuint src, GLuint num)
  */
-GLE_API GLuint glGenSymbolsEXT( GLenum datatype, GLenum storagetype, GLenum range, GLuint components );
+GLE_API void glExtractComponentEXT(GLuint res, GLuint src, GLuint num);
 
 /**
- * @brief void glSetInvariantEXT( GLuint id, GLenum type, const GLvoid *addr );
+ * @brief GLuint glGenSymbolsEXT(GLenum datatype, GLenum storagetype, GLenum range, GLuint components)
  */
-GLE_API void glSetInvariantEXT( GLuint id, GLenum type, const GLvoid *addr );
+GLE_API GLuint glGenSymbolsEXT(GLenum datatype, GLenum storagetype, GLenum range, GLuint components);
 
 /**
- * @brief void glSetLocalConstantEXT( GLuint id, GLenum type, const GLvoid *addr );
+ * @brief GLuint glGenVertexShadersEXT(GLuint range)
  */
-GLE_API void glSetLocalConstantEXT( GLuint id, GLenum type, const GLvoid *addr );
+GLE_API GLuint glGenVertexShadersEXT(GLuint range);
 
 /**
- * @brief void glVariantbvEXT( GLuint id, const GLbyte *addr );
+ * @brief void glGetInvariantBooleanvEXT(GLuint id, GLenum value, GLboolean *data)
  */
-GLE_API void glVariantbvEXT( GLuint id, const GLbyte *addr );
+GLE_API void glGetInvariantBooleanvEXT(GLuint id, GLenum value, GLboolean *data);
 
 /**
- * @brief void glVariantsvEXT( GLuint id, const GLshort *addr );
+ * @brief void glGetInvariantFloatvEXT(GLuint id, GLenum value, GLfloat *data)
  */
-GLE_API void glVariantsvEXT( GLuint id, const GLshort *addr );
+GLE_API void glGetInvariantFloatvEXT(GLuint id, GLenum value, GLfloat *data);
 
 /**
- * @brief void glVariantivEXT( GLuint id, const GLint *addr );
+ * @brief void glGetInvariantIntegervEXT(GLuint id, GLenum value, GLint *data)
  */
-GLE_API void glVariantivEXT( GLuint id, const GLint *addr );
+GLE_API void glGetInvariantIntegervEXT(GLuint id, GLenum value, GLint *data);
 
 /**
- * @brief void glVariantfvEXT( GLuint id, const GLfloat *addr );
+ * @brief void glGetLocalConstantBooleanvEXT(GLuint id, GLenum value, GLboolean *data)
  */
-GLE_API void glVariantfvEXT( GLuint id, const GLfloat *addr );
+GLE_API void glGetLocalConstantBooleanvEXT(GLuint id, GLenum value, GLboolean *data);
 
 /**
- * @brief void glVariantdvEXT( GLuint id, const GLdouble *addr );
+ * @brief void glGetLocalConstantFloatvEXT(GLuint id, GLenum value, GLfloat *data)
  */
-GLE_API void glVariantdvEXT( GLuint id, const GLdouble *addr );
+GLE_API void glGetLocalConstantFloatvEXT(GLuint id, GLenum value, GLfloat *data);
 
 /**
- * @brief void glVariantubvEXT( GLuint id, const GLubyte *addr );
+ * @brief void glGetLocalConstantIntegervEXT(GLuint id, GLenum value, GLint *data)
  */
-GLE_API void glVariantubvEXT( GLuint id, const GLubyte *addr );
+GLE_API void glGetLocalConstantIntegervEXT(GLuint id, GLenum value, GLint *data);
 
 /**
- * @brief void glVariantusvEXT( GLuint id, const GLushort *addr );
+ * @brief void glGetVariantBooleanvEXT(GLuint id, GLenum value, GLboolean *data)
  */
-GLE_API void glVariantusvEXT( GLuint id, const GLushort *addr );
+GLE_API void glGetVariantBooleanvEXT(GLuint id, GLenum value, GLboolean *data);
 
 /**
- * @brief void glVariantuivEXT( GLuint id, const GLuint *addr );
+ * @brief void glGetVariantFloatvEXT(GLuint id, GLenum value, GLfloat *data)
  */
-GLE_API void glVariantuivEXT( GLuint id, const GLuint *addr );
+GLE_API void glGetVariantFloatvEXT(GLuint id, GLenum value, GLfloat *data);
 
 /**
- * @brief void glVariantPointerEXT( GLuint id, GLenum type, GLuint stride, const GLvoid *addr );
+ * @brief void glGetVariantIntegervEXT(GLuint id, GLenum value, GLint *data)
  */
-GLE_API void glVariantPointerEXT( GLuint id, GLenum type, GLuint stride, const GLvoid *addr );
+GLE_API void glGetVariantIntegervEXT(GLuint id, GLenum value, GLint *data);
 
 /**
- * @brief void glEnableVariantClientStateEXT( GLuint id );
+ * @brief void glGetVariantPointervEXT(GLuint id, GLenum value, GLvoid* *data)
  */
-GLE_API void glEnableVariantClientStateEXT( GLuint id );
+GLE_API void glGetVariantPointervEXT(GLuint id, GLenum value, GLvoid* *data);
 
 /**
- * @brief void glDisableVariantClientStateEXT( GLuint id );
+ * @brief void glInsertComponentEXT(GLuint res, GLuint src, GLuint num)
  */
-GLE_API void glDisableVariantClientStateEXT( GLuint id );
+GLE_API void glInsertComponentEXT(GLuint res, GLuint src, GLuint num);
 
 /**
- * @brief GLuint glBindLightParameterEXT( GLenum light, GLenum value );
+ * @brief GLboolean glIsVariantEnabledEXT(GLuint id, GLenum cap)
  */
-GLE_API GLuint glBindLightParameterEXT( GLenum light, GLenum value );
+GLE_API GLboolean glIsVariantEnabledEXT(GLuint id, GLenum cap);
 
 /**
- * @brief GLuint glBindMaterialParameterEXT( GLenum face, GLenum value );
+ * @brief void glSetInvariantEXT(GLuint id, GLenum type, const GLvoid *addr)
  */
-GLE_API GLuint glBindMaterialParameterEXT( GLenum face, GLenum value );
+GLE_API void glSetInvariantEXT(GLuint id, GLenum type, const GLvoid *addr);
 
 /**
- * @brief GLuint glBindTexGenParameterEXT( GLenum unit, GLenum coord, GLenum value );
+ * @brief void glSetLocalConstantEXT(GLuint id, GLenum type, const GLvoid *addr)
  */
-GLE_API GLuint glBindTexGenParameterEXT( GLenum unit, GLenum coord, GLenum value );
+GLE_API void glSetLocalConstantEXT(GLuint id, GLenum type, const GLvoid *addr);
 
 /**
- * @brief GLuint glBindTextureUnitParameterEXT( GLenum unit, GLenum value );
+ * @brief void glShaderOp1EXT(GLenum op, GLuint res, GLuint arg1)
  */
-GLE_API GLuint glBindTextureUnitParameterEXT( GLenum unit, GLenum value );
+GLE_API void glShaderOp1EXT(GLenum op, GLuint res, GLuint arg1);
 
 /**
- * @brief GLuint glBindParameterEXT( GLenum value );
+ * @brief void glShaderOp2EXT(GLenum op, GLuint res, GLuint arg1, GLuint arg2)
  */
-GLE_API GLuint glBindParameterEXT( GLenum value );
+GLE_API void glShaderOp2EXT(GLenum op, GLuint res, GLuint arg1, GLuint arg2);
 
 /**
- * @brief GLboolean glIsVariantEnabledEXT( GLuint id, GLenum cap );
+ * @brief void glShaderOp3EXT(GLenum op, GLuint res, GLuint arg1, GLuint arg2, GLuint arg3)
  */
-GLE_API GLboolean glIsVariantEnabledEXT( GLuint id, GLenum cap );
+GLE_API void glShaderOp3EXT(GLenum op, GLuint res, GLuint arg1, GLuint arg2, GLuint arg3);
 
 /**
- * @brief void glGetVariantBooleanvEXT( GLuint id, GLenum value, GLboolean *data );
+ * @brief void glSwizzleEXT(GLuint res, GLuint in, GLenum outX, GLenum outY, GLenum outZ, GLenum outW)
  */
-GLE_API void glGetVariantBooleanvEXT( GLuint id, GLenum value, GLboolean *data );
+GLE_API void glSwizzleEXT(GLuint res, GLuint in, GLenum outX, GLenum outY, GLenum outZ, GLenum outW);
 
 /**
- * @brief void glGetVariantIntegervEXT( GLuint id, GLenum value, GLint *data );
+ * @brief void glVariantPointerEXT(GLuint id, GLenum type, GLuint stride, const GLvoid *addr)
  */
-GLE_API void glGetVariantIntegervEXT( GLuint id, GLenum value, GLint *data );
+GLE_API void glVariantPointerEXT(GLuint id, GLenum type, GLuint stride, const GLvoid *addr);
 
 /**
- * @brief void glGetVariantFloatvEXT( GLuint id, GLenum value, GLfloat *data );
+ * @brief void glVariantbvEXT(GLuint id, const GLbyte *addr)
  */
-GLE_API void glGetVariantFloatvEXT( GLuint id, GLenum value, GLfloat *data );
+GLE_API void glVariantbvEXT(GLuint id, const GLbyte *addr);
 
 /**
- * @brief void glGetVariantPointervEXT( GLuint id, GLenum value, GLvoid* *data );
+ * @brief void glVariantdvEXT(GLuint id, const GLdouble *addr)
  */
-GLE_API void glGetVariantPointervEXT( GLuint id, GLenum value, GLvoid* *data );
+GLE_API void glVariantdvEXT(GLuint id, const GLdouble *addr);
 
 /**
- * @brief void glGetInvariantBooleanvEXT( GLuint id, GLenum value, GLboolean *data );
+ * @brief void glVariantfvEXT(GLuint id, const GLfloat *addr)
  */
-GLE_API void glGetInvariantBooleanvEXT( GLuint id, GLenum value, GLboolean *data );
+GLE_API void glVariantfvEXT(GLuint id, const GLfloat *addr);
 
 /**
- * @brief void glGetInvariantIntegervEXT( GLuint id, GLenum value, GLint *data );
+ * @brief void glVariantivEXT(GLuint id, const GLint *addr)
  */
-GLE_API void glGetInvariantIntegervEXT( GLuint id, GLenum value, GLint *data );
+GLE_API void glVariantivEXT(GLuint id, const GLint *addr);
 
 /**
- * @brief void glGetInvariantFloatvEXT( GLuint id, GLenum value, GLfloat *data );
+ * @brief void glVariantsvEXT(GLuint id, const GLshort *addr)
  */
-GLE_API void glGetInvariantFloatvEXT( GLuint id, GLenum value, GLfloat *data );
+GLE_API void glVariantsvEXT(GLuint id, const GLshort *addr);
 
 /**
- * @brief void glGetLocalConstantBooleanvEXT( GLuint id, GLenum value, GLboolean *data );
+ * @brief void glVariantubvEXT(GLuint id, const GLubyte *addr)
  */
-GLE_API void glGetLocalConstantBooleanvEXT( GLuint id, GLenum value, GLboolean *data );
+GLE_API void glVariantubvEXT(GLuint id, const GLubyte *addr);
 
 /**
- * @brief void glGetLocalConstantIntegervEXT( GLuint id, GLenum value, GLint *data );
+ * @brief void glVariantuivEXT(GLuint id, const GLuint *addr)
  */
-GLE_API void glGetLocalConstantIntegervEXT( GLuint id, GLenum value, GLint *data );
+GLE_API void glVariantuivEXT(GLuint id, const GLuint *addr);
 
 /**
- * @brief void glGetLocalConstantFloatvEXT( GLuint id, GLenum value, GLfloat *data );
+ * @brief void glVariantusvEXT(GLuint id, const GLushort *addr)
  */
-GLE_API void glGetLocalConstantFloatvEXT( GLuint id, GLenum value, GLfloat *data );
+GLE_API void glVariantusvEXT(GLuint id, const GLushort *addr);
+
+/**
+ * @brief void glWriteMaskEXT(GLuint res, GLuint in, GLenum outX, GLenum outY, GLenum outZ, GLenum outW)
+ */
+GLE_API void glWriteMaskEXT(GLuint res, GLuint in, GLenum outX, GLenum outY, GLenum outZ, GLenum outW);
 
 //@}
+
+
 
 
 /**
@@ -10119,43 +11089,53 @@ GLE_API void glGetLocalConstantFloatvEXT( GLuint id, GLenum value, GLfloat *data
  * @ingroup g_GL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_EXT_vertex_weighting is supported.
- * @return Returns \c true if \b GL_EXT_vertex_weighting is supported, false otherwise.
+ * @brief  Tests if \b GL_EXT_vertex_weighting is supported.
+ * @return Returns \c true if \b GL_EXT_vertex_weighting is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_vertex_weighting();
 
-/**
- * @brief void glVertexWeightfEXT( GLfloat weight );
- */
-GLE_API void glVertexWeightfEXT( GLfloat weight );
+
 
 /**
- * @brief void glVertexWeightfvEXT( const GLfloat *weight );
+ * @brief void glVertexWeightPointerEXT(GLsizei size, GLenum type, GLsizei stride, const GLvoid *pointer)
  */
-GLE_API void glVertexWeightfvEXT( const GLfloat *weight );
+GLE_API void glVertexWeightPointerEXT(GLsizei size, GLenum type, GLsizei stride, const GLvoid *pointer);
 
 /**
- * @brief void glVertexWeightPointerEXT( GLsizei size, GLenum type, GLsizei stride, const GLvoid *pointer );
+ * @brief void glVertexWeightfEXT(GLfloat weight)
  */
-GLE_API void glVertexWeightPointerEXT( GLsizei size, GLenum type, GLsizei stride, const GLvoid *pointer );
+GLE_API void glVertexWeightfEXT(GLfloat weight);
+
+/**
+ * @brief void glVertexWeightfvEXT(const GLfloat *weight)
+ */
+GLE_API void glVertexWeightfvEXT(const GLfloat *weight);
 
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_FfdMaskSGIX GL_FfdMaskSGIX
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_FfdMaskSGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_FfdMaskSGIX is supported.
- * @return Returns \c true if \b GL_FfdMaskSGIX is supported, false otherwise.
+ * @brief  Tests if \b GL_FfdMaskSGIX is supported.
+ * @return Returns \c true if \b GL_FfdMaskSGIX is supported, \c false otherwise.
  */
 GLE_API bool isGL_FfdMaskSGIX();
 
+
 //@}
+
+
 
 
 /**
@@ -10165,18 +11145,23 @@ GLE_API bool isGL_FfdMaskSGIX();
  * @ingroup g_GL_GREMEDY g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_GREMEDY_frame_terminator is supported.
- * @return Returns \c true if \b GL_GREMEDY_frame_terminator is supported, false otherwise.
+ * @brief  Tests if \b GL_GREMEDY_frame_terminator is supported.
+ * @return Returns \c true if \b GL_GREMEDY_frame_terminator is supported, \c false otherwise.
  */
 GLE_API bool isGL_GREMEDY_frame_terminator();
 
+
+
 /**
- * @brief void glFrameTerminatorGREMEDY( void );
+ * @brief void glFrameTerminatorGREMEDY(void)
  */
-GLE_API void glFrameTerminatorGREMEDY( void );
+GLE_API void glFrameTerminatorGREMEDY(void);
 
 //@}
+
+
 
 
 /**
@@ -10186,18 +11171,23 @@ GLE_API void glFrameTerminatorGREMEDY( void );
  * @ingroup g_GL_GREMEDY g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_GREMEDY_string_marker is supported.
- * @return Returns \c true if \b GL_GREMEDY_string_marker is supported, false otherwise.
+ * @brief  Tests if \b GL_GREMEDY_string_marker is supported.
+ * @return Returns \c true if \b GL_GREMEDY_string_marker is supported, \c false otherwise.
  */
 GLE_API bool isGL_GREMEDY_string_marker();
 
+
+
 /**
- * @brief void glStringMarkerGREMEDY( GLsizei len, const GLvoid *string );
+ * @brief void glStringMarkerGREMEDY(GLsizei len, const GLvoid *string)
  */
-GLE_API void glStringMarkerGREMEDY( GLsizei len, const GLvoid *string );
+GLE_API void glStringMarkerGREMEDY(GLsizei len, const GLvoid *string);
 
 //@}
+
+
 
 
 /**
@@ -10207,13 +11197,17 @@ GLE_API void glStringMarkerGREMEDY( GLsizei len, const GLvoid *string );
  * @ingroup g_GL_HP g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_HP_convolution_border_modes is supported.
- * @return Returns \c true if \b GL_HP_convolution_border_modes is supported, false otherwise.
+ * @brief  Tests if \b GL_HP_convolution_border_modes is supported.
+ * @return Returns \c true if \b GL_HP_convolution_border_modes is supported, \c false otherwise.
  */
 GLE_API bool isGL_HP_convolution_border_modes();
 
+
 //@}
+
+
 
 
 /**
@@ -10223,43 +11217,48 @@ GLE_API bool isGL_HP_convolution_border_modes();
  * @ingroup g_GL_HP g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_HP_image_transform is supported.
- * @return Returns \c true if \b GL_HP_image_transform is supported, false otherwise.
+ * @brief  Tests if \b GL_HP_image_transform is supported.
+ * @return Returns \c true if \b GL_HP_image_transform is supported, \c false otherwise.
  */
 GLE_API bool isGL_HP_image_transform();
 
-/**
- * @brief void glImageTransformParameteriHP( GLenum target, GLenum pname, GLint param );
- */
-GLE_API void glImageTransformParameteriHP( GLenum target, GLenum pname, GLint param );
+
 
 /**
- * @brief void glImageTransformParameterfHP( GLenum target, GLenum pname, GLfloat param );
+ * @brief void glGetImageTransformParameterfvHP(GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glImageTransformParameterfHP( GLenum target, GLenum pname, GLfloat param );
+GLE_API void glGetImageTransformParameterfvHP(GLenum target, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glImageTransformParameterivHP( GLenum target, GLenum pname, const GLint *params );
+ * @brief void glGetImageTransformParameterivHP(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glImageTransformParameterivHP( GLenum target, GLenum pname, const GLint *params );
+GLE_API void glGetImageTransformParameterivHP(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glImageTransformParameterfvHP( GLenum target, GLenum pname, const GLfloat *params );
+ * @brief void glImageTransformParameterfHP(GLenum target, GLenum pname, GLfloat param)
  */
-GLE_API void glImageTransformParameterfvHP( GLenum target, GLenum pname, const GLfloat *params );
+GLE_API void glImageTransformParameterfHP(GLenum target, GLenum pname, GLfloat param);
 
 /**
- * @brief void glGetImageTransformParameterivHP( GLenum target, GLenum pname, GLint *params );
+ * @brief void glImageTransformParameterfvHP(GLenum target, GLenum pname, const GLfloat *params)
  */
-GLE_API void glGetImageTransformParameterivHP( GLenum target, GLenum pname, GLint *params );
+GLE_API void glImageTransformParameterfvHP(GLenum target, GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glGetImageTransformParameterfvHP( GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glImageTransformParameteriHP(GLenum target, GLenum pname, GLint param)
  */
-GLE_API void glGetImageTransformParameterfvHP( GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glImageTransformParameteriHP(GLenum target, GLenum pname, GLint param);
+
+/**
+ * @brief void glImageTransformParameterivHP(GLenum target, GLenum pname, const GLint *params)
+ */
+GLE_API void glImageTransformParameterivHP(GLenum target, GLenum pname, const GLint *params);
 
 //@}
+
+
 
 
 /**
@@ -10269,13 +11268,17 @@ GLE_API void glGetImageTransformParameterfvHP( GLenum target, GLenum pname, GLfl
  * @ingroup g_GL_HP g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_HP_occlusion_test is supported.
- * @return Returns \c true if \b GL_HP_occlusion_test is supported, false otherwise.
+ * @brief  Tests if \b GL_HP_occlusion_test is supported.
+ * @return Returns \c true if \b GL_HP_occlusion_test is supported, \c false otherwise.
  */
 GLE_API bool isGL_HP_occlusion_test();
 
+
 //@}
+
+
 
 
 /**
@@ -10285,13 +11288,17 @@ GLE_API bool isGL_HP_occlusion_test();
  * @ingroup g_GL_HP g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_HP_texture_lighting is supported.
- * @return Returns \c true if \b GL_HP_texture_lighting is supported, false otherwise.
+ * @brief  Tests if \b GL_HP_texture_lighting is supported.
+ * @return Returns \c true if \b GL_HP_texture_lighting is supported, \c false otherwise.
  */
 GLE_API bool isGL_HP_texture_lighting();
 
+
 //@}
+
+
 
 
 /**
@@ -10301,13 +11308,17 @@ GLE_API bool isGL_HP_texture_lighting();
  * @ingroup g_GL_IBM g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_IBM_cull_vertex is supported.
- * @return Returns \c true if \b GL_IBM_cull_vertex is supported, false otherwise.
+ * @brief  Tests if \b GL_IBM_cull_vertex is supported.
+ * @return Returns \c true if \b GL_IBM_cull_vertex is supported, \c false otherwise.
  */
 GLE_API bool isGL_IBM_cull_vertex();
 
+
 //@}
+
+
 
 
 /**
@@ -10317,23 +11328,28 @@ GLE_API bool isGL_IBM_cull_vertex();
  * @ingroup g_GL_IBM g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_IBM_multimode_draw_arrays is supported.
- * @return Returns \c true if \b GL_IBM_multimode_draw_arrays is supported, false otherwise.
+ * @brief  Tests if \b GL_IBM_multimode_draw_arrays is supported.
+ * @return Returns \c true if \b GL_IBM_multimode_draw_arrays is supported, \c false otherwise.
  */
 GLE_API bool isGL_IBM_multimode_draw_arrays();
 
-/**
- * @brief void glMultiModeDrawArraysIBM( const GLenum *mode, const GLint *first, const GLsizei *count, GLsizei primcount, GLint modestride );
- */
-GLE_API void glMultiModeDrawArraysIBM( const GLenum *mode, const GLint *first, const GLsizei *count, GLsizei primcount, GLint modestride );
+
 
 /**
- * @brief void glMultiModeDrawElementsIBM( const GLenum *mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, GLint modestride );
+ * @brief void glMultiModeDrawArraysIBM(const GLenum *mode, const GLint *first, const GLsizei *count, GLsizei primcount, GLint modestride)
  */
-GLE_API void glMultiModeDrawElementsIBM( const GLenum *mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, GLint modestride );
+GLE_API void glMultiModeDrawArraysIBM(const GLenum *mode, const GLint *first, const GLsizei *count, GLsizei primcount, GLint modestride);
+
+/**
+ * @brief void glMultiModeDrawElementsIBM(const GLenum *mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, GLint modestride)
+ */
+GLE_API void glMultiModeDrawElementsIBM(const GLenum *mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, GLint modestride);
 
 //@}
+
+
 
 
 /**
@@ -10343,13 +11359,17 @@ GLE_API void glMultiModeDrawElementsIBM( const GLenum *mode, const GLsizei *coun
  * @ingroup g_GL_IBM g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_IBM_rasterpos_clip is supported.
- * @return Returns \c true if \b GL_IBM_rasterpos_clip is supported, false otherwise.
+ * @brief  Tests if \b GL_IBM_rasterpos_clip is supported.
+ * @return Returns \c true if \b GL_IBM_rasterpos_clip is supported, \c false otherwise.
  */
 GLE_API bool isGL_IBM_rasterpos_clip();
 
+
 //@}
+
+
 
 
 /**
@@ -10359,13 +11379,17 @@ GLE_API bool isGL_IBM_rasterpos_clip();
  * @ingroup g_GL_IBM g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_IBM_texture_mirrored_repeat is supported.
- * @return Returns \c true if \b GL_IBM_texture_mirrored_repeat is supported, false otherwise.
+ * @brief  Tests if \b GL_IBM_texture_mirrored_repeat is supported.
+ * @return Returns \c true if \b GL_IBM_texture_mirrored_repeat is supported, \c false otherwise.
  */
 GLE_API bool isGL_IBM_texture_mirrored_repeat();
 
+
 //@}
+
+
 
 
 /**
@@ -10375,73 +11399,84 @@ GLE_API bool isGL_IBM_texture_mirrored_repeat();
  * @ingroup g_GL_IBM g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_IBM_vertex_array_lists is supported.
- * @return Returns \c true if \b GL_IBM_vertex_array_lists is supported, false otherwise.
+ * @brief  Tests if \b GL_IBM_vertex_array_lists is supported.
+ * @return Returns \c true if \b GL_IBM_vertex_array_lists is supported, \c false otherwise.
  */
 GLE_API bool isGL_IBM_vertex_array_lists();
 
-/**
- * @brief void glColorPointerListIBM( GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
- */
-GLE_API void glColorPointerListIBM( GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
+
 
 /**
- * @brief void glSecondaryColorPointerListIBM( GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
+ * @brief void glColorPointerListIBM(GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride)
  */
-GLE_API void glSecondaryColorPointerListIBM( GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
+GLE_API void glColorPointerListIBM(GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride);
 
 /**
- * @brief void glEdgeFlagPointerListIBM( GLint stride, const GLboolean* *pointer, GLint ptrstride );
+ * @brief void glEdgeFlagPointerListIBM(GLint stride, const GLboolean* *pointer, GLint ptrstride)
  */
-GLE_API void glEdgeFlagPointerListIBM( GLint stride, const GLboolean* *pointer, GLint ptrstride );
+GLE_API void glEdgeFlagPointerListIBM(GLint stride, const GLboolean* *pointer, GLint ptrstride);
 
 /**
- * @brief void glFogCoordPointerListIBM( GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
+ * @brief void glFogCoordPointerListIBM(GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride)
  */
-GLE_API void glFogCoordPointerListIBM( GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
+GLE_API void glFogCoordPointerListIBM(GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride);
 
 /**
- * @brief void glIndexPointerListIBM( GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
+ * @brief void glIndexPointerListIBM(GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride)
  */
-GLE_API void glIndexPointerListIBM( GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
+GLE_API void glIndexPointerListIBM(GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride);
 
 /**
- * @brief void glNormalPointerListIBM( GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
+ * @brief void glNormalPointerListIBM(GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride)
  */
-GLE_API void glNormalPointerListIBM( GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
+GLE_API void glNormalPointerListIBM(GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride);
 
 /**
- * @brief void glTexCoordPointerListIBM( GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
+ * @brief void glSecondaryColorPointerListIBM(GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride)
  */
-GLE_API void glTexCoordPointerListIBM( GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
+GLE_API void glSecondaryColorPointerListIBM(GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride);
 
 /**
- * @brief void glVertexPointerListIBM( GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
+ * @brief void glTexCoordPointerListIBM(GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride)
  */
-GLE_API void glVertexPointerListIBM( GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride );
+GLE_API void glTexCoordPointerListIBM(GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride);
+
+/**
+ * @brief void glVertexPointerListIBM(GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride)
+ */
+GLE_API void glVertexPointerListIBM(GLint size, GLenum type, GLint stride, const GLvoid* *pointer, GLint ptrstride);
 
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_INGR_blend_func_separate GL_INGR_blend_func_separate
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_INGR g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_INGR_blend_func_separate is supported.
- * @return Returns \c true if \b GL_INGR_blend_func_separate is supported, false otherwise.
+ * @brief  Tests if \b GL_INGR_blend_func_separate is supported.
+ * @return Returns \c true if \b GL_INGR_blend_func_separate is supported, \c false otherwise.
  */
 GLE_API bool isGL_INGR_blend_func_separate();
 
+
+
 /**
- * @brief void glBlendFuncSeparateINGR( GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha );
+ * @brief void glBlendFuncSeparateINGR(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha)
  */
-GLE_API void glBlendFuncSeparateINGR( GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha );
+GLE_API void glBlendFuncSeparateINGR(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
 
 //@}
+
+
 
 
 /**
@@ -10451,13 +11486,17 @@ GLE_API void glBlendFuncSeparateINGR( GLenum sfactorRGB, GLenum dfactorRGB, GLen
  * @ingroup g_GL_INGR g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_INGR_color_clamp is supported.
- * @return Returns \c true if \b GL_INGR_color_clamp is supported, false otherwise.
+ * @brief  Tests if \b GL_INGR_color_clamp is supported.
+ * @return Returns \c true if \b GL_INGR_color_clamp is supported, \c false otherwise.
  */
 GLE_API bool isGL_INGR_color_clamp();
 
+
 //@}
+
+
 
 
 /**
@@ -10467,28 +11506,37 @@ GLE_API bool isGL_INGR_color_clamp();
  * @ingroup g_GL_INGR g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_INGR_interlace_read is supported.
- * @return Returns \c true if \b GL_INGR_interlace_read is supported, false otherwise.
+ * @brief  Tests if \b GL_INGR_interlace_read is supported.
+ * @return Returns \c true if \b GL_INGR_interlace_read is supported, \c false otherwise.
  */
 GLE_API bool isGL_INGR_interlace_read();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_INGR_palette_buffer GL_INGR_palette_buffer
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_INGR g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_INGR_palette_buffer is supported.
- * @return Returns \c true if \b GL_INGR_palette_buffer is supported, false otherwise.
+ * @brief  Tests if \b GL_INGR_palette_buffer is supported.
+ * @return Returns \c true if \b GL_INGR_palette_buffer is supported, \c false otherwise.
  */
 GLE_API bool isGL_INGR_palette_buffer();
 
+
 //@}
+
+
 
 
 /**
@@ -10498,33 +11546,38 @@ GLE_API bool isGL_INGR_palette_buffer();
  * @ingroup g_GL_INTEL g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_INTEL_parallel_arrays is supported.
- * @return Returns \c true if \b GL_INTEL_parallel_arrays is supported, false otherwise.
+ * @brief  Tests if \b GL_INTEL_parallel_arrays is supported.
+ * @return Returns \c true if \b GL_INTEL_parallel_arrays is supported, \c false otherwise.
  */
 GLE_API bool isGL_INTEL_parallel_arrays();
 
-/**
- * @brief void glVertexPointervINTEL( GLint size, GLenum type, const GLvoid* *pointer );
- */
-GLE_API void glVertexPointervINTEL( GLint size, GLenum type, const GLvoid* *pointer );
+
 
 /**
- * @brief void glNormalPointervINTEL( GLenum type, const GLvoid* *pointer );
+ * @brief void glColorPointervINTEL(GLint size, GLenum type, const GLvoid* *pointer)
  */
-GLE_API void glNormalPointervINTEL( GLenum type, const GLvoid* *pointer );
+GLE_API void glColorPointervINTEL(GLint size, GLenum type, const GLvoid* *pointer);
 
 /**
- * @brief void glColorPointervINTEL( GLint size, GLenum type, const GLvoid* *pointer );
+ * @brief void glNormalPointervINTEL(GLenum type, const GLvoid* *pointer)
  */
-GLE_API void glColorPointervINTEL( GLint size, GLenum type, const GLvoid* *pointer );
+GLE_API void glNormalPointervINTEL(GLenum type, const GLvoid* *pointer);
 
 /**
- * @brief void glTexCoordPointervINTEL( GLint size, GLenum type, const GLvoid* *pointer );
+ * @brief void glTexCoordPointervINTEL(GLint size, GLenum type, const GLvoid* *pointer)
  */
-GLE_API void glTexCoordPointervINTEL( GLint size, GLenum type, const GLvoid* *pointer );
+GLE_API void glTexCoordPointervINTEL(GLint size, GLenum type, const GLvoid* *pointer);
+
+/**
+ * @brief void glVertexPointervINTEL(GLint size, GLenum type, const GLvoid* *pointer)
+ */
+GLE_API void glVertexPointervINTEL(GLint size, GLenum type, const GLvoid* *pointer);
 
 //@}
+
+
 
 
 /**
@@ -10534,13 +11587,17 @@ GLE_API void glTexCoordPointervINTEL( GLint size, GLenum type, const GLvoid* *po
  * @ingroup g_GL_INTEL g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_INTEL_texture_scissor is supported.
- * @return Returns \c true if \b GL_INTEL_texture_scissor is supported, false otherwise.
+ * @brief  Tests if \b GL_INTEL_texture_scissor is supported.
+ * @return Returns \c true if \b GL_INTEL_texture_scissor is supported, \c false otherwise.
  */
 GLE_API bool isGL_INTEL_texture_scissor();
 
+
 //@}
+
+
 
 
 /**
@@ -10550,13 +11607,17 @@ GLE_API bool isGL_INTEL_texture_scissor();
  * @ingroup g_GL_MESAX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_MESAX_texture_stack is supported.
- * @return Returns \c true if \b GL_MESAX_texture_stack is supported, false otherwise.
+ * @brief  Tests if \b GL_MESAX_texture_stack is supported.
+ * @return Returns \c true if \b GL_MESAX_texture_stack is supported, \c false otherwise.
  */
 GLE_API bool isGL_MESAX_texture_stack();
 
+
 //@}
+
+
 
 
 /**
@@ -10566,13 +11627,17 @@ GLE_API bool isGL_MESAX_texture_stack();
  * @ingroup g_GL_MESA g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_MESA_pack_invert is supported.
- * @return Returns \c true if \b GL_MESA_pack_invert is supported, false otherwise.
+ * @brief  Tests if \b GL_MESA_pack_invert is supported.
+ * @return Returns \c true if \b GL_MESA_pack_invert is supported, \c false otherwise.
  */
 GLE_API bool isGL_MESA_pack_invert();
 
+
 //@}
+
+
 
 
 /**
@@ -10582,18 +11647,23 @@ GLE_API bool isGL_MESA_pack_invert();
  * @ingroup g_GL_MESA g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_MESA_resize_buffers is supported.
- * @return Returns \c true if \b GL_MESA_resize_buffers is supported, false otherwise.
+ * @brief  Tests if \b GL_MESA_resize_buffers is supported.
+ * @return Returns \c true if \b GL_MESA_resize_buffers is supported, \c false otherwise.
  */
 GLE_API bool isGL_MESA_resize_buffers();
 
+
+
 /**
- * @brief void glResizeBuffersMESA( void );
+ * @brief void glResizeBuffersMESA(void)
  */
-GLE_API void glResizeBuffersMESA( void );
+GLE_API void glResizeBuffersMESA(void);
 
 //@}
+
+
 
 
 /**
@@ -10603,133 +11673,138 @@ GLE_API void glResizeBuffersMESA( void );
  * @ingroup g_GL_MESA g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_MESA_window_pos is supported.
- * @return Returns \c true if \b GL_MESA_window_pos is supported, false otherwise.
+ * @brief  Tests if \b GL_MESA_window_pos is supported.
+ * @return Returns \c true if \b GL_MESA_window_pos is supported, \c false otherwise.
  */
 GLE_API bool isGL_MESA_window_pos();
 
-/**
- * @brief void glWindowPos2dMESA( GLdouble x, GLdouble y );
- */
-GLE_API void glWindowPos2dMESA( GLdouble x, GLdouble y );
+
 
 /**
- * @brief void glWindowPos2dvMESA( const GLdouble *v );
+ * @brief void glWindowPos2dMESA(GLdouble x, GLdouble y)
  */
-GLE_API void glWindowPos2dvMESA( const GLdouble *v );
+GLE_API void glWindowPos2dMESA(GLdouble x, GLdouble y);
 
 /**
- * @brief void glWindowPos2fMESA( GLfloat x, GLfloat y );
+ * @brief void glWindowPos2dvMESA(const GLdouble *v)
  */
-GLE_API void glWindowPos2fMESA( GLfloat x, GLfloat y );
+GLE_API void glWindowPos2dvMESA(const GLdouble *v);
 
 /**
- * @brief void glWindowPos2fvMESA( const GLfloat *v );
+ * @brief void glWindowPos2fMESA(GLfloat x, GLfloat y)
  */
-GLE_API void glWindowPos2fvMESA( const GLfloat *v );
+GLE_API void glWindowPos2fMESA(GLfloat x, GLfloat y);
 
 /**
- * @brief void glWindowPos2iMESA( GLint x, GLint y );
+ * @brief void glWindowPos2fvMESA(const GLfloat *v)
  */
-GLE_API void glWindowPos2iMESA( GLint x, GLint y );
+GLE_API void glWindowPos2fvMESA(const GLfloat *v);
 
 /**
- * @brief void glWindowPos2ivMESA( const GLint *v );
+ * @brief void glWindowPos2iMESA(GLint x, GLint y)
  */
-GLE_API void glWindowPos2ivMESA( const GLint *v );
+GLE_API void glWindowPos2iMESA(GLint x, GLint y);
 
 /**
- * @brief void glWindowPos2sMESA( GLshort x, GLshort y );
+ * @brief void glWindowPos2ivMESA(const GLint *v)
  */
-GLE_API void glWindowPos2sMESA( GLshort x, GLshort y );
+GLE_API void glWindowPos2ivMESA(const GLint *v);
 
 /**
- * @brief void glWindowPos2svMESA( const GLshort *v );
+ * @brief void glWindowPos2sMESA(GLshort x, GLshort y)
  */
-GLE_API void glWindowPos2svMESA( const GLshort *v );
+GLE_API void glWindowPos2sMESA(GLshort x, GLshort y);
 
 /**
- * @brief void glWindowPos3dMESA( GLdouble x, GLdouble y, GLdouble z );
+ * @brief void glWindowPos2svMESA(const GLshort *v)
  */
-GLE_API void glWindowPos3dMESA( GLdouble x, GLdouble y, GLdouble z );
+GLE_API void glWindowPos2svMESA(const GLshort *v);
 
 /**
- * @brief void glWindowPos3dvMESA( const GLdouble *v );
+ * @brief void glWindowPos3dMESA(GLdouble x, GLdouble y, GLdouble z)
  */
-GLE_API void glWindowPos3dvMESA( const GLdouble *v );
+GLE_API void glWindowPos3dMESA(GLdouble x, GLdouble y, GLdouble z);
 
 /**
- * @brief void glWindowPos3fMESA( GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glWindowPos3dvMESA(const GLdouble *v)
  */
-GLE_API void glWindowPos3fMESA( GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glWindowPos3dvMESA(const GLdouble *v);
 
 /**
- * @brief void glWindowPos3fvMESA( const GLfloat *v );
+ * @brief void glWindowPos3fMESA(GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glWindowPos3fvMESA( const GLfloat *v );
+GLE_API void glWindowPos3fMESA(GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glWindowPos3iMESA( GLint x, GLint y, GLint z );
+ * @brief void glWindowPos3fvMESA(const GLfloat *v)
  */
-GLE_API void glWindowPos3iMESA( GLint x, GLint y, GLint z );
+GLE_API void glWindowPos3fvMESA(const GLfloat *v);
 
 /**
- * @brief void glWindowPos3ivMESA( const GLint *v );
+ * @brief void glWindowPos3iMESA(GLint x, GLint y, GLint z)
  */
-GLE_API void glWindowPos3ivMESA( const GLint *v );
+GLE_API void glWindowPos3iMESA(GLint x, GLint y, GLint z);
 
 /**
- * @brief void glWindowPos3sMESA( GLshort x, GLshort y, GLshort z );
+ * @brief void glWindowPos3ivMESA(const GLint *v)
  */
-GLE_API void glWindowPos3sMESA( GLshort x, GLshort y, GLshort z );
+GLE_API void glWindowPos3ivMESA(const GLint *v);
 
 /**
- * @brief void glWindowPos3svMESA( const GLshort *v );
+ * @brief void glWindowPos3sMESA(GLshort x, GLshort y, GLshort z)
  */
-GLE_API void glWindowPos3svMESA( const GLshort *v );
+GLE_API void glWindowPos3sMESA(GLshort x, GLshort y, GLshort z);
 
 /**
- * @brief void glWindowPos4dMESA( GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+ * @brief void glWindowPos3svMESA(const GLshort *v)
  */
-GLE_API void glWindowPos4dMESA( GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+GLE_API void glWindowPos3svMESA(const GLshort *v);
 
 /**
- * @brief void glWindowPos4dvMESA( const GLdouble *v );
+ * @brief void glWindowPos4dMESA(GLdouble x, GLdouble y, GLdouble z, GLdouble w)
  */
-GLE_API void glWindowPos4dvMESA( const GLdouble *v );
+GLE_API void glWindowPos4dMESA(GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 
 /**
- * @brief void glWindowPos4fMESA( GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+ * @brief void glWindowPos4dvMESA(const GLdouble *v)
  */
-GLE_API void glWindowPos4fMESA( GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+GLE_API void glWindowPos4dvMESA(const GLdouble *v);
 
 /**
- * @brief void glWindowPos4fvMESA( const GLfloat *v );
+ * @brief void glWindowPos4fMESA(GLfloat x, GLfloat y, GLfloat z, GLfloat w)
  */
-GLE_API void glWindowPos4fvMESA( const GLfloat *v );
+GLE_API void glWindowPos4fMESA(GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 
 /**
- * @brief void glWindowPos4iMESA( GLint x, GLint y, GLint z, GLint w );
+ * @brief void glWindowPos4fvMESA(const GLfloat *v)
  */
-GLE_API void glWindowPos4iMESA( GLint x, GLint y, GLint z, GLint w );
+GLE_API void glWindowPos4fvMESA(const GLfloat *v);
 
 /**
- * @brief void glWindowPos4ivMESA( const GLint *v );
+ * @brief void glWindowPos4iMESA(GLint x, GLint y, GLint z, GLint w)
  */
-GLE_API void glWindowPos4ivMESA( const GLint *v );
+GLE_API void glWindowPos4iMESA(GLint x, GLint y, GLint z, GLint w);
 
 /**
- * @brief void glWindowPos4sMESA( GLshort x, GLshort y, GLshort z, GLshort w );
+ * @brief void glWindowPos4ivMESA(const GLint *v)
  */
-GLE_API void glWindowPos4sMESA( GLshort x, GLshort y, GLshort z, GLshort w );
+GLE_API void glWindowPos4ivMESA(const GLint *v);
 
 /**
- * @brief void glWindowPos4svMESA( const GLshort *v );
+ * @brief void glWindowPos4sMESA(GLshort x, GLshort y, GLshort z, GLshort w)
  */
-GLE_API void glWindowPos4svMESA( const GLshort *v );
+GLE_API void glWindowPos4sMESA(GLshort x, GLshort y, GLshort z, GLshort w);
+
+/**
+ * @brief void glWindowPos4svMESA(const GLshort *v)
+ */
+GLE_API void glWindowPos4svMESA(const GLshort *v);
 
 //@}
+
+
 
 
 /**
@@ -10739,13 +11814,17 @@ GLE_API void glWindowPos4svMESA( const GLshort *v );
  * @ingroup g_GL_MESA g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_MESA_ycbcr_texture is supported.
- * @return Returns \c true if \b GL_MESA_ycbcr_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_MESA_ycbcr_texture is supported.
+ * @return Returns \c true if \b GL_MESA_ycbcr_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_MESA_ycbcr_texture();
 
+
 //@}
+
+
 
 
 /**
@@ -10755,13 +11834,17 @@ GLE_API bool isGL_MESA_ycbcr_texture();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_blend_square is supported.
- * @return Returns \c true if \b GL_NV_blend_square is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_blend_square is supported.
+ * @return Returns \c true if \b GL_NV_blend_square is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_blend_square();
 
+
 //@}
+
+
 
 
 /**
@@ -10771,23 +11854,28 @@ GLE_API bool isGL_NV_blend_square();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_conditional_render is supported.
- * @return Returns \c true if \b GL_NV_conditional_render is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_conditional_render is supported.
+ * @return Returns \c true if \b GL_NV_conditional_render is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_conditional_render();
 
-/**
- * @brief void glBeginConditionalRenderNV( GLuint id, GLenum mode );
- */
-GLE_API void glBeginConditionalRenderNV( GLuint id, GLenum mode );
+
 
 /**
- * @brief void glEndConditionalRenderNV( void );
+ * @brief void glBeginConditionalRenderNV(GLuint id, GLenum mode)
  */
-GLE_API void glEndConditionalRenderNV( void );
+GLE_API void glBeginConditionalRenderNV(GLuint id, GLenum mode);
+
+/**
+ * @brief void glEndConditionalRenderNV(void)
+ */
+GLE_API void glEndConditionalRenderNV(void);
 
 //@}
+
+
 
 
 /**
@@ -10797,13 +11885,17 @@ GLE_API void glEndConditionalRenderNV( void );
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_copy_depth_to_color is supported.
- * @return Returns \c true if \b GL_NV_copy_depth_to_color is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_copy_depth_to_color is supported.
+ * @return Returns \c true if \b GL_NV_copy_depth_to_color is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_copy_depth_to_color();
 
+
 //@}
+
+
 
 
 /**
@@ -10813,18 +11905,23 @@ GLE_API bool isGL_NV_copy_depth_to_color();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_copy_image is supported.
- * @return Returns \c true if \b GL_NV_copy_image is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_copy_image is supported.
+ * @return Returns \c true if \b GL_NV_copy_image is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_copy_image();
 
+
+
 /**
- * @brief void glCopyImageSubDataNV( GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth );
+ * @brief void glCopyImageSubDataNV(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth)
  */
-GLE_API void glCopyImageSubDataNV( GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth );
+GLE_API void glCopyImageSubDataNV(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
 
 //@}
+
+
 
 
 /**
@@ -10834,28 +11931,33 @@ GLE_API void glCopyImageSubDataNV( GLuint srcName, GLenum srcTarget, GLint srcLe
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_depth_buffer_float is supported.
- * @return Returns \c true if \b GL_NV_depth_buffer_float is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_depth_buffer_float is supported.
+ * @return Returns \c true if \b GL_NV_depth_buffer_float is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_depth_buffer_float();
 
-/**
- * @brief void glDepthRangedNV( GLdouble zNear, GLdouble zFar );
- */
-GLE_API void glDepthRangedNV( GLdouble zNear, GLdouble zFar );
+
 
 /**
- * @brief void glClearDepthdNV( GLdouble depth );
+ * @brief void glClearDepthdNV(GLdouble depth)
  */
-GLE_API void glClearDepthdNV( GLdouble depth );
+GLE_API void glClearDepthdNV(GLdouble depth);
 
 /**
- * @brief void glDepthBoundsdNV( GLdouble zmin, GLdouble zmax );
+ * @brief void glDepthBoundsdNV(GLdouble zmin, GLdouble zmax)
  */
-GLE_API void glDepthBoundsdNV( GLdouble zmin, GLdouble zmax );
+GLE_API void glDepthBoundsdNV(GLdouble zmin, GLdouble zmax);
+
+/**
+ * @brief void glDepthRangedNV(GLdouble zNear, GLdouble zFar)
+ */
+GLE_API void glDepthRangedNV(GLdouble zNear, GLdouble zFar);
 
 //@}
+
+
 
 
 /**
@@ -10865,13 +11967,17 @@ GLE_API void glDepthBoundsdNV( GLdouble zmin, GLdouble zmax );
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_depth_clamp is supported.
- * @return Returns \c true if \b GL_NV_depth_clamp is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_depth_clamp is supported.
+ * @return Returns \c true if \b GL_NV_depth_clamp is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_depth_clamp();
 
+
 //@}
+
+
 
 
 /**
@@ -10881,58 +11987,63 @@ GLE_API bool isGL_NV_depth_clamp();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_evaluators is supported.
- * @return Returns \c true if \b GL_NV_evaluators is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_evaluators is supported.
+ * @return Returns \c true if \b GL_NV_evaluators is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_evaluators();
 
-/**
- * @brief void glMapControlPointsNV( GLenum target, GLuint index, GLenum type, GLsizei ustride, GLsizei vstride, GLint uorder, GLint vorder, GLboolean packed, const GLvoid *points );
- */
-GLE_API void glMapControlPointsNV( GLenum target, GLuint index, GLenum type, GLsizei ustride, GLsizei vstride, GLint uorder, GLint vorder, GLboolean packed, const GLvoid *points );
+
 
 /**
- * @brief void glMapParameterivNV( GLenum target, GLenum pname, const GLint *params );
+ * @brief void glEvalMapsNV(GLenum target, GLenum mode)
  */
-GLE_API void glMapParameterivNV( GLenum target, GLenum pname, const GLint *params );
+GLE_API void glEvalMapsNV(GLenum target, GLenum mode);
 
 /**
- * @brief void glMapParameterfvNV( GLenum target, GLenum pname, const GLfloat *params );
+ * @brief void glGetMapAttribParameterfvNV(GLenum target, GLuint index, GLenum pname, GLfloat *params)
  */
-GLE_API void glMapParameterfvNV( GLenum target, GLenum pname, const GLfloat *params );
+GLE_API void glGetMapAttribParameterfvNV(GLenum target, GLuint index, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetMapControlPointsNV( GLenum target, GLuint index, GLenum type, GLsizei ustride, GLsizei vstride, GLboolean packed, GLvoid *points );
+ * @brief void glGetMapAttribParameterivNV(GLenum target, GLuint index, GLenum pname, GLint *params)
  */
-GLE_API void glGetMapControlPointsNV( GLenum target, GLuint index, GLenum type, GLsizei ustride, GLsizei vstride, GLboolean packed, GLvoid *points );
+GLE_API void glGetMapAttribParameterivNV(GLenum target, GLuint index, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetMapParameterivNV( GLenum target, GLenum pname, GLint *params );
+ * @brief void glGetMapControlPointsNV(GLenum target, GLuint index, GLenum type, GLsizei ustride, GLsizei vstride, GLboolean packed, GLvoid *points)
  */
-GLE_API void glGetMapParameterivNV( GLenum target, GLenum pname, GLint *params );
+GLE_API void glGetMapControlPointsNV(GLenum target, GLuint index, GLenum type, GLsizei ustride, GLsizei vstride, GLboolean packed, GLvoid *points);
 
 /**
- * @brief void glGetMapParameterfvNV( GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glGetMapParameterfvNV(GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetMapParameterfvNV( GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glGetMapParameterfvNV(GLenum target, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetMapAttribParameterivNV( GLenum target, GLuint index, GLenum pname, GLint *params );
+ * @brief void glGetMapParameterivNV(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glGetMapAttribParameterivNV( GLenum target, GLuint index, GLenum pname, GLint *params );
+GLE_API void glGetMapParameterivNV(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetMapAttribParameterfvNV( GLenum target, GLuint index, GLenum pname, GLfloat *params );
+ * @brief void glMapControlPointsNV(GLenum target, GLuint index, GLenum type, GLsizei ustride, GLsizei vstride, GLint uorder, GLint vorder, GLboolean packed, const GLvoid *points)
  */
-GLE_API void glGetMapAttribParameterfvNV( GLenum target, GLuint index, GLenum pname, GLfloat *params );
+GLE_API void glMapControlPointsNV(GLenum target, GLuint index, GLenum type, GLsizei ustride, GLsizei vstride, GLint uorder, GLint vorder, GLboolean packed, const GLvoid *points);
 
 /**
- * @brief void glEvalMapsNV( GLenum target, GLenum mode );
+ * @brief void glMapParameterfvNV(GLenum target, GLenum pname, const GLfloat *params)
  */
-GLE_API void glEvalMapsNV( GLenum target, GLenum mode );
+GLE_API void glMapParameterfvNV(GLenum target, GLenum pname, const GLfloat *params);
+
+/**
+ * @brief void glMapParameterivNV(GLenum target, GLenum pname, const GLint *params)
+ */
+GLE_API void glMapParameterivNV(GLenum target, GLenum pname, const GLint *params);
 
 //@}
+
+
 
 
 /**
@@ -10942,28 +12053,33 @@ GLE_API void glEvalMapsNV( GLenum target, GLenum mode );
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_explicit_multisample is supported.
- * @return Returns \c true if \b GL_NV_explicit_multisample is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_explicit_multisample is supported.
+ * @return Returns \c true if \b GL_NV_explicit_multisample is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_explicit_multisample();
 
-/**
- * @brief void glGetMultisamplefvNV( GLenum pname, GLuint index, GLfloat *val );
- */
-GLE_API void glGetMultisamplefvNV( GLenum pname, GLuint index, GLfloat *val );
+
 
 /**
- * @brief void glSampleMaskIndexedNV( GLuint index, GLbitfield mask );
+ * @brief void glGetMultisamplefvNV(GLenum pname, GLuint index, GLfloat *val)
  */
-GLE_API void glSampleMaskIndexedNV( GLuint index, GLbitfield mask );
+GLE_API void glGetMultisamplefvNV(GLenum pname, GLuint index, GLfloat *val);
 
 /**
- * @brief void glTexRenderbufferNV( GLenum target, GLuint renderbuffer );
+ * @brief void glSampleMaskIndexedNV(GLuint index, GLbitfield mask)
  */
-GLE_API void glTexRenderbufferNV( GLenum target, GLuint renderbuffer );
+GLE_API void glSampleMaskIndexedNV(GLuint index, GLbitfield mask);
+
+/**
+ * @brief void glTexRenderbufferNV(GLenum target, GLuint renderbuffer)
+ */
+GLE_API void glTexRenderbufferNV(GLenum target, GLuint renderbuffer);
 
 //@}
+
+
 
 
 /**
@@ -10973,48 +12089,53 @@ GLE_API void glTexRenderbufferNV( GLenum target, GLuint renderbuffer );
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_fence is supported.
- * @return Returns \c true if \b GL_NV_fence is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_fence is supported.
+ * @return Returns \c true if \b GL_NV_fence is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_fence();
 
-/**
- * @brief void glDeleteFencesNV( GLsizei n, const GLuint *fences );
- */
-GLE_API void glDeleteFencesNV( GLsizei n, const GLuint *fences );
+
 
 /**
- * @brief void glGenFencesNV( GLsizei n, GLuint *fences );
+ * @brief void glDeleteFencesNV(GLsizei n, const GLuint *fences)
  */
-GLE_API void glGenFencesNV( GLsizei n, GLuint *fences );
+GLE_API void glDeleteFencesNV(GLsizei n, const GLuint *fences);
 
 /**
- * @brief GLboolean glIsFenceNV( GLuint fence );
+ * @brief void glFinishFenceNV(GLuint fence)
  */
-GLE_API GLboolean glIsFenceNV( GLuint fence );
+GLE_API void glFinishFenceNV(GLuint fence);
 
 /**
- * @brief GLboolean glTestFenceNV( GLuint fence );
+ * @brief void glGenFencesNV(GLsizei n, GLuint *fences)
  */
-GLE_API GLboolean glTestFenceNV( GLuint fence );
+GLE_API void glGenFencesNV(GLsizei n, GLuint *fences);
 
 /**
- * @brief void glGetFenceivNV( GLuint fence, GLenum pname, GLint *params );
+ * @brief void glGetFenceivNV(GLuint fence, GLenum pname, GLint *params)
  */
-GLE_API void glGetFenceivNV( GLuint fence, GLenum pname, GLint *params );
+GLE_API void glGetFenceivNV(GLuint fence, GLenum pname, GLint *params);
 
 /**
- * @brief void glFinishFenceNV( GLuint fence );
+ * @brief GLboolean glIsFenceNV(GLuint fence)
  */
-GLE_API void glFinishFenceNV( GLuint fence );
+GLE_API GLboolean glIsFenceNV(GLuint fence);
 
 /**
- * @brief void glSetFenceNV( GLuint fence, GLenum condition );
+ * @brief void glSetFenceNV(GLuint fence, GLenum condition)
  */
-GLE_API void glSetFenceNV( GLuint fence, GLenum condition );
+GLE_API void glSetFenceNV(GLuint fence, GLenum condition);
+
+/**
+ * @brief GLboolean glTestFenceNV(GLuint fence)
+ */
+GLE_API GLboolean glTestFenceNV(GLuint fence);
 
 //@}
+
+
 
 
 /**
@@ -11024,13 +12145,17 @@ GLE_API void glSetFenceNV( GLuint fence, GLenum condition );
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_float_buffer is supported.
- * @return Returns \c true if \b GL_NV_float_buffer is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_float_buffer is supported.
+ * @return Returns \c true if \b GL_NV_float_buffer is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_float_buffer();
 
+
 //@}
+
+
 
 
 /**
@@ -11040,13 +12165,17 @@ GLE_API bool isGL_NV_float_buffer();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_fog_distance is supported.
- * @return Returns \c true if \b GL_NV_fog_distance is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_fog_distance is supported.
+ * @return Returns \c true if \b GL_NV_fog_distance is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_fog_distance();
 
+
 //@}
+
+
 
 
 /**
@@ -11056,43 +12185,48 @@ GLE_API bool isGL_NV_fog_distance();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_fragment_program is supported.
- * @return Returns \c true if \b GL_NV_fragment_program is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_fragment_program is supported.
+ * @return Returns \c true if \b GL_NV_fragment_program is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_fragment_program();
 
-/**
- * @brief void glProgramNamedParameter4fNV( GLuint id, GLsizei len, const GLubyte *name, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
- */
-GLE_API void glProgramNamedParameter4fNV( GLuint id, GLsizei len, const GLubyte *name, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+
 
 /**
- * @brief void glProgramNamedParameter4dNV( GLuint id, GLsizei len, const GLubyte *name, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+ * @brief void glGetProgramNamedParameterdvNV(GLuint id, GLsizei len, const GLubyte *name, GLdouble *params)
  */
-GLE_API void glProgramNamedParameter4dNV( GLuint id, GLsizei len, const GLubyte *name, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+GLE_API void glGetProgramNamedParameterdvNV(GLuint id, GLsizei len, const GLubyte *name, GLdouble *params);
 
 /**
- * @brief void glProgramNamedParameter4fvNV( GLuint id, GLsizei len, const GLubyte *name, const GLfloat *v );
+ * @brief void glGetProgramNamedParameterfvNV(GLuint id, GLsizei len, const GLubyte *name, GLfloat *params)
  */
-GLE_API void glProgramNamedParameter4fvNV( GLuint id, GLsizei len, const GLubyte *name, const GLfloat *v );
+GLE_API void glGetProgramNamedParameterfvNV(GLuint id, GLsizei len, const GLubyte *name, GLfloat *params);
 
 /**
- * @brief void glProgramNamedParameter4dvNV( GLuint id, GLsizei len, const GLubyte *name, const GLdouble *v );
+ * @brief void glProgramNamedParameter4dNV(GLuint id, GLsizei len, const GLubyte *name, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
  */
-GLE_API void glProgramNamedParameter4dvNV( GLuint id, GLsizei len, const GLubyte *name, const GLdouble *v );
+GLE_API void glProgramNamedParameter4dNV(GLuint id, GLsizei len, const GLubyte *name, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 
 /**
- * @brief void glGetProgramNamedParameterfvNV( GLuint id, GLsizei len, const GLubyte *name, GLfloat *params );
+ * @brief void glProgramNamedParameter4dvNV(GLuint id, GLsizei len, const GLubyte *name, const GLdouble *v)
  */
-GLE_API void glGetProgramNamedParameterfvNV( GLuint id, GLsizei len, const GLubyte *name, GLfloat *params );
+GLE_API void glProgramNamedParameter4dvNV(GLuint id, GLsizei len, const GLubyte *name, const GLdouble *v);
 
 /**
- * @brief void glGetProgramNamedParameterdvNV( GLuint id, GLsizei len, const GLubyte *name, GLdouble *params );
+ * @brief void glProgramNamedParameter4fNV(GLuint id, GLsizei len, const GLubyte *name, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
  */
-GLE_API void glGetProgramNamedParameterdvNV( GLuint id, GLsizei len, const GLubyte *name, GLdouble *params );
+GLE_API void glProgramNamedParameter4fNV(GLuint id, GLsizei len, const GLubyte *name, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
+
+/**
+ * @brief void glProgramNamedParameter4fvNV(GLuint id, GLsizei len, const GLubyte *name, const GLfloat *v)
+ */
+GLE_API void glProgramNamedParameter4fvNV(GLuint id, GLsizei len, const GLubyte *name, const GLfloat *v);
 
 //@}
+
+
 
 
 /**
@@ -11102,13 +12236,17 @@ GLE_API void glGetProgramNamedParameterdvNV( GLuint id, GLsizei len, const GLuby
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_fragment_program2 is supported.
- * @return Returns \c true if \b GL_NV_fragment_program2 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_fragment_program2 is supported.
+ * @return Returns \c true if \b GL_NV_fragment_program2 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_fragment_program2();
 
+
 //@}
+
+
 
 
 /**
@@ -11118,13 +12256,17 @@ GLE_API bool isGL_NV_fragment_program2();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_fragment_program4 is supported.
- * @return Returns \c true if \b GL_NV_fragment_program4 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_fragment_program4 is supported.
+ * @return Returns \c true if \b GL_NV_fragment_program4 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_fragment_program4();
 
+
 //@}
+
+
 
 
 /**
@@ -11134,13 +12276,17 @@ GLE_API bool isGL_NV_fragment_program4();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_fragment_program_option is supported.
- * @return Returns \c true if \b GL_NV_fragment_program_option is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_fragment_program_option is supported.
+ * @return Returns \c true if \b GL_NV_fragment_program_option is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_fragment_program_option();
 
+
 //@}
+
+
 
 
 /**
@@ -11150,18 +12296,23 @@ GLE_API bool isGL_NV_fragment_program_option();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_framebuffer_multisample_coverage is supported.
- * @return Returns \c true if \b GL_NV_framebuffer_multisample_coverage is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_framebuffer_multisample_coverage is supported.
+ * @return Returns \c true if \b GL_NV_framebuffer_multisample_coverage is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_framebuffer_multisample_coverage();
 
+
+
 /**
- * @brief void glRenderbufferStorageMultisampleCoverageNV( GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height );
+ * @brief void glRenderbufferStorageMultisampleCoverageNV(GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height)
  */
-GLE_API void glRenderbufferStorageMultisampleCoverageNV( GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height );
+GLE_API void glRenderbufferStorageMultisampleCoverageNV(GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height);
 
 //@}
+
+
 
 
 /**
@@ -11171,33 +12322,38 @@ GLE_API void glRenderbufferStorageMultisampleCoverageNV( GLenum target, GLsizei 
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_geometry_program4 is supported.
- * @return Returns \c true if \b GL_NV_geometry_program4 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_geometry_program4 is supported.
+ * @return Returns \c true if \b GL_NV_geometry_program4 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_geometry_program4();
 
-/**
- * @brief void glProgramVertexLimitNV( GLenum target, GLint limit );
- */
-GLE_API void glProgramVertexLimitNV( GLenum target, GLint limit );
+
 
 /**
- * @brief void glFramebufferTextureEXT( GLenum target, GLenum attachment, GLuint texture, GLint level );
+ * @brief void glFramebufferTextureEXT(GLenum target, GLenum attachment, GLuint texture, GLint level)
  */
-GLE_API void glFramebufferTextureEXT( GLenum target, GLenum attachment, GLuint texture, GLint level );
+GLE_API void glFramebufferTextureEXT(GLenum target, GLenum attachment, GLuint texture, GLint level);
 
 /**
- * @brief void glFramebufferTextureLayerEXT( GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer );
+ * @brief void glFramebufferTextureFaceEXT(GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face)
  */
-GLE_API void glFramebufferTextureLayerEXT( GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer );
+GLE_API void glFramebufferTextureFaceEXT(GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face);
 
 /**
- * @brief void glFramebufferTextureFaceEXT( GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face );
+ * @brief void glFramebufferTextureLayerEXT(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer)
  */
-GLE_API void glFramebufferTextureFaceEXT( GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face );
+GLE_API void glFramebufferTextureLayerEXT(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer);
+
+/**
+ * @brief void glProgramVertexLimitNV(GLenum target, GLint limit)
+ */
+GLE_API void glProgramVertexLimitNV(GLenum target, GLint limit);
 
 //@}
+
+
 
 
 /**
@@ -11207,13 +12363,17 @@ GLE_API void glFramebufferTextureFaceEXT( GLenum target, GLenum attachment, GLui
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_geometry_shader4 is supported.
- * @return Returns \c true if \b GL_NV_geometry_shader4 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_geometry_shader4 is supported.
+ * @return Returns \c true if \b GL_NV_geometry_shader4 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_geometry_shader4();
 
+
 //@}
+
+
 
 
 /**
@@ -11223,93 +12383,98 @@ GLE_API bool isGL_NV_geometry_shader4();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_gpu_program4 is supported.
- * @return Returns \c true if \b GL_NV_gpu_program4 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_gpu_program4 is supported.
+ * @return Returns \c true if \b GL_NV_gpu_program4 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_gpu_program4();
 
-/**
- * @brief void glProgramLocalParameterI4iNV( GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w );
- */
-GLE_API void glProgramLocalParameterI4iNV( GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w );
+
 
 /**
- * @brief void glProgramLocalParameterI4ivNV( GLenum target, GLuint index, const GLint *params );
+ * @brief void glGetProgramEnvParameterIivNV(GLenum target, GLuint index, GLint *params)
  */
-GLE_API void glProgramLocalParameterI4ivNV( GLenum target, GLuint index, const GLint *params );
+GLE_API void glGetProgramEnvParameterIivNV(GLenum target, GLuint index, GLint *params);
 
 /**
- * @brief void glProgramLocalParametersI4ivNV( GLenum target, GLuint index, GLsizei count, const GLint *params );
+ * @brief void glGetProgramEnvParameterIuivNV(GLenum target, GLuint index, GLuint *params)
  */
-GLE_API void glProgramLocalParametersI4ivNV( GLenum target, GLuint index, GLsizei count, const GLint *params );
+GLE_API void glGetProgramEnvParameterIuivNV(GLenum target, GLuint index, GLuint *params);
 
 /**
- * @brief void glProgramLocalParameterI4uiNV( GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+ * @brief void glGetProgramLocalParameterIivNV(GLenum target, GLuint index, GLint *params)
  */
-GLE_API void glProgramLocalParameterI4uiNV( GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+GLE_API void glGetProgramLocalParameterIivNV(GLenum target, GLuint index, GLint *params);
 
 /**
- * @brief void glProgramLocalParameterI4uivNV( GLenum target, GLuint index, const GLuint *params );
+ * @brief void glGetProgramLocalParameterIuivNV(GLenum target, GLuint index, GLuint *params)
  */
-GLE_API void glProgramLocalParameterI4uivNV( GLenum target, GLuint index, const GLuint *params );
+GLE_API void glGetProgramLocalParameterIuivNV(GLenum target, GLuint index, GLuint *params);
 
 /**
- * @brief void glProgramLocalParametersI4uivNV( GLenum target, GLuint index, GLsizei count, const GLuint *params );
+ * @brief void glProgramEnvParameterI4iNV(GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w)
  */
-GLE_API void glProgramLocalParametersI4uivNV( GLenum target, GLuint index, GLsizei count, const GLuint *params );
+GLE_API void glProgramEnvParameterI4iNV(GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w);
 
 /**
- * @brief void glProgramEnvParameterI4iNV( GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w );
+ * @brief void glProgramEnvParameterI4ivNV(GLenum target, GLuint index, const GLint *params)
  */
-GLE_API void glProgramEnvParameterI4iNV( GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w );
+GLE_API void glProgramEnvParameterI4ivNV(GLenum target, GLuint index, const GLint *params);
 
 /**
- * @brief void glProgramEnvParameterI4ivNV( GLenum target, GLuint index, const GLint *params );
+ * @brief void glProgramEnvParameterI4uiNV(GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w)
  */
-GLE_API void glProgramEnvParameterI4ivNV( GLenum target, GLuint index, const GLint *params );
+GLE_API void glProgramEnvParameterI4uiNV(GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w);
 
 /**
- * @brief void glProgramEnvParametersI4ivNV( GLenum target, GLuint index, GLsizei count, const GLint *params );
+ * @brief void glProgramEnvParameterI4uivNV(GLenum target, GLuint index, const GLuint *params)
  */
-GLE_API void glProgramEnvParametersI4ivNV( GLenum target, GLuint index, GLsizei count, const GLint *params );
+GLE_API void glProgramEnvParameterI4uivNV(GLenum target, GLuint index, const GLuint *params);
 
 /**
- * @brief void glProgramEnvParameterI4uiNV( GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+ * @brief void glProgramEnvParametersI4ivNV(GLenum target, GLuint index, GLsizei count, const GLint *params)
  */
-GLE_API void glProgramEnvParameterI4uiNV( GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+GLE_API void glProgramEnvParametersI4ivNV(GLenum target, GLuint index, GLsizei count, const GLint *params);
 
 /**
- * @brief void glProgramEnvParameterI4uivNV( GLenum target, GLuint index, const GLuint *params );
+ * @brief void glProgramEnvParametersI4uivNV(GLenum target, GLuint index, GLsizei count, const GLuint *params)
  */
-GLE_API void glProgramEnvParameterI4uivNV( GLenum target, GLuint index, const GLuint *params );
+GLE_API void glProgramEnvParametersI4uivNV(GLenum target, GLuint index, GLsizei count, const GLuint *params);
 
 /**
- * @brief void glProgramEnvParametersI4uivNV( GLenum target, GLuint index, GLsizei count, const GLuint *params );
+ * @brief void glProgramLocalParameterI4iNV(GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w)
  */
-GLE_API void glProgramEnvParametersI4uivNV( GLenum target, GLuint index, GLsizei count, const GLuint *params );
+GLE_API void glProgramLocalParameterI4iNV(GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w);
 
 /**
- * @brief void glGetProgramLocalParameterIivNV( GLenum target, GLuint index, GLint *params );
+ * @brief void glProgramLocalParameterI4ivNV(GLenum target, GLuint index, const GLint *params)
  */
-GLE_API void glGetProgramLocalParameterIivNV( GLenum target, GLuint index, GLint *params );
+GLE_API void glProgramLocalParameterI4ivNV(GLenum target, GLuint index, const GLint *params);
 
 /**
- * @brief void glGetProgramLocalParameterIuivNV( GLenum target, GLuint index, GLuint *params );
+ * @brief void glProgramLocalParameterI4uiNV(GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w)
  */
-GLE_API void glGetProgramLocalParameterIuivNV( GLenum target, GLuint index, GLuint *params );
+GLE_API void glProgramLocalParameterI4uiNV(GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w);
 
 /**
- * @brief void glGetProgramEnvParameterIivNV( GLenum target, GLuint index, GLint *params );
+ * @brief void glProgramLocalParameterI4uivNV(GLenum target, GLuint index, const GLuint *params)
  */
-GLE_API void glGetProgramEnvParameterIivNV( GLenum target, GLuint index, GLint *params );
+GLE_API void glProgramLocalParameterI4uivNV(GLenum target, GLuint index, const GLuint *params);
 
 /**
- * @brief void glGetProgramEnvParameterIuivNV( GLenum target, GLuint index, GLuint *params );
+ * @brief void glProgramLocalParametersI4ivNV(GLenum target, GLuint index, GLsizei count, const GLint *params)
  */
-GLE_API void glGetProgramEnvParameterIuivNV( GLenum target, GLuint index, GLuint *params );
+GLE_API void glProgramLocalParametersI4ivNV(GLenum target, GLuint index, GLsizei count, const GLint *params);
+
+/**
+ * @brief void glProgramLocalParametersI4uivNV(GLenum target, GLuint index, GLsizei count, const GLuint *params)
+ */
+GLE_API void glProgramLocalParametersI4uivNV(GLenum target, GLuint index, GLsizei count, const GLuint *params);
 
 //@}
+
+
 
 
 /**
@@ -11319,13 +12484,17 @@ GLE_API void glGetProgramEnvParameterIuivNV( GLenum target, GLuint index, GLuint
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_gpu_program5 is supported.
- * @return Returns \c true if \b GL_NV_gpu_program5 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_gpu_program5 is supported.
+ * @return Returns \c true if \b GL_NV_gpu_program5 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_gpu_program5();
 
+
 //@}
+
+
 
 
 /**
@@ -11335,13 +12504,17 @@ GLE_API bool isGL_NV_gpu_program5();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_gpu_shader5 is supported.
- * @return Returns \c true if \b GL_NV_gpu_shader5 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_gpu_shader5 is supported.
+ * @return Returns \c true if \b GL_NV_gpu_shader5 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_gpu_shader5();
 
+
 //@}
+
+
 
 
 /**
@@ -11351,243 +12524,248 @@ GLE_API bool isGL_NV_gpu_shader5();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_half_float is supported.
- * @return Returns \c true if \b GL_NV_half_float is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_half_float is supported.
+ * @return Returns \c true if \b GL_NV_half_float is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_half_float();
 
-/**
- * @brief void glVertex2hNV( GLhalfNV x, GLhalfNV y );
- */
-GLE_API void glVertex2hNV( GLhalfNV x, GLhalfNV y );
+
 
 /**
- * @brief void glVertex2hvNV( const GLhalfNV *v );
+ * @brief void glColor3hNV(GLhalfNV red, GLhalfNV green, GLhalfNV blue)
  */
-GLE_API void glVertex2hvNV( const GLhalfNV *v );
+GLE_API void glColor3hNV(GLhalfNV red, GLhalfNV green, GLhalfNV blue);
 
 /**
- * @brief void glVertex3hNV( GLhalfNV x, GLhalfNV y, GLhalfNV z );
+ * @brief void glColor3hvNV(const GLhalfNV *v)
  */
-GLE_API void glVertex3hNV( GLhalfNV x, GLhalfNV y, GLhalfNV z );
+GLE_API void glColor3hvNV(const GLhalfNV *v);
 
 /**
- * @brief void glVertex3hvNV( const GLhalfNV *v );
+ * @brief void glColor4hNV(GLhalfNV red, GLhalfNV green, GLhalfNV blue, GLhalfNV alpha)
  */
-GLE_API void glVertex3hvNV( const GLhalfNV *v );
+GLE_API void glColor4hNV(GLhalfNV red, GLhalfNV green, GLhalfNV blue, GLhalfNV alpha);
 
 /**
- * @brief void glVertex4hNV( GLhalfNV x, GLhalfNV y, GLhalfNV z, GLhalfNV w );
+ * @brief void glColor4hvNV(const GLhalfNV *v)
  */
-GLE_API void glVertex4hNV( GLhalfNV x, GLhalfNV y, GLhalfNV z, GLhalfNV w );
+GLE_API void glColor4hvNV(const GLhalfNV *v);
 
 /**
- * @brief void glVertex4hvNV( const GLhalfNV *v );
+ * @brief void glFogCoordhNV(GLhalfNV fog)
  */
-GLE_API void glVertex4hvNV( const GLhalfNV *v );
+GLE_API void glFogCoordhNV(GLhalfNV fog);
 
 /**
- * @brief void glNormal3hNV( GLhalfNV nx, GLhalfNV ny, GLhalfNV nz );
+ * @brief void glFogCoordhvNV(const GLhalfNV *fog)
  */
-GLE_API void glNormal3hNV( GLhalfNV nx, GLhalfNV ny, GLhalfNV nz );
+GLE_API void glFogCoordhvNV(const GLhalfNV *fog);
 
 /**
- * @brief void glNormal3hvNV( const GLhalfNV *v );
+ * @brief void glMultiTexCoord1hNV(GLenum target, GLhalfNV s)
  */
-GLE_API void glNormal3hvNV( const GLhalfNV *v );
+GLE_API void glMultiTexCoord1hNV(GLenum target, GLhalfNV s);
 
 /**
- * @brief void glColor3hNV( GLhalfNV red, GLhalfNV green, GLhalfNV blue );
+ * @brief void glMultiTexCoord1hvNV(GLenum target, const GLhalfNV *v)
  */
-GLE_API void glColor3hNV( GLhalfNV red, GLhalfNV green, GLhalfNV blue );
+GLE_API void glMultiTexCoord1hvNV(GLenum target, const GLhalfNV *v);
 
 /**
- * @brief void glColor3hvNV( const GLhalfNV *v );
+ * @brief void glMultiTexCoord2hNV(GLenum target, GLhalfNV s, GLhalfNV t)
  */
-GLE_API void glColor3hvNV( const GLhalfNV *v );
+GLE_API void glMultiTexCoord2hNV(GLenum target, GLhalfNV s, GLhalfNV t);
 
 /**
- * @brief void glColor4hNV( GLhalfNV red, GLhalfNV green, GLhalfNV blue, GLhalfNV alpha );
+ * @brief void glMultiTexCoord2hvNV(GLenum target, const GLhalfNV *v)
  */
-GLE_API void glColor4hNV( GLhalfNV red, GLhalfNV green, GLhalfNV blue, GLhalfNV alpha );
+GLE_API void glMultiTexCoord2hvNV(GLenum target, const GLhalfNV *v);
 
 /**
- * @brief void glColor4hvNV( const GLhalfNV *v );
+ * @brief void glMultiTexCoord3hNV(GLenum target, GLhalfNV s, GLhalfNV t, GLhalfNV r)
  */
-GLE_API void glColor4hvNV( const GLhalfNV *v );
+GLE_API void glMultiTexCoord3hNV(GLenum target, GLhalfNV s, GLhalfNV t, GLhalfNV r);
 
 /**
- * @brief void glTexCoord1hNV( GLhalfNV s );
+ * @brief void glMultiTexCoord3hvNV(GLenum target, const GLhalfNV *v)
  */
-GLE_API void glTexCoord1hNV( GLhalfNV s );
+GLE_API void glMultiTexCoord3hvNV(GLenum target, const GLhalfNV *v);
 
 /**
- * @brief void glTexCoord1hvNV( const GLhalfNV *v );
+ * @brief void glMultiTexCoord4hNV(GLenum target, GLhalfNV s, GLhalfNV t, GLhalfNV r, GLhalfNV q)
  */
-GLE_API void glTexCoord1hvNV( const GLhalfNV *v );
+GLE_API void glMultiTexCoord4hNV(GLenum target, GLhalfNV s, GLhalfNV t, GLhalfNV r, GLhalfNV q);
 
 /**
- * @brief void glTexCoord2hNV( GLhalfNV s, GLhalfNV t );
+ * @brief void glMultiTexCoord4hvNV(GLenum target, const GLhalfNV *v)
  */
-GLE_API void glTexCoord2hNV( GLhalfNV s, GLhalfNV t );
+GLE_API void glMultiTexCoord4hvNV(GLenum target, const GLhalfNV *v);
 
 /**
- * @brief void glTexCoord2hvNV( const GLhalfNV *v );
+ * @brief void glNormal3hNV(GLhalfNV nx, GLhalfNV ny, GLhalfNV nz)
  */
-GLE_API void glTexCoord2hvNV( const GLhalfNV *v );
+GLE_API void glNormal3hNV(GLhalfNV nx, GLhalfNV ny, GLhalfNV nz);
 
 /**
- * @brief void glTexCoord3hNV( GLhalfNV s, GLhalfNV t, GLhalfNV r );
+ * @brief void glNormal3hvNV(const GLhalfNV *v)
  */
-GLE_API void glTexCoord3hNV( GLhalfNV s, GLhalfNV t, GLhalfNV r );
+GLE_API void glNormal3hvNV(const GLhalfNV *v);
 
 /**
- * @brief void glTexCoord3hvNV( const GLhalfNV *v );
+ * @brief void glSecondaryColor3hNV(GLhalfNV red, GLhalfNV green, GLhalfNV blue)
  */
-GLE_API void glTexCoord3hvNV( const GLhalfNV *v );
+GLE_API void glSecondaryColor3hNV(GLhalfNV red, GLhalfNV green, GLhalfNV blue);
 
 /**
- * @brief void glTexCoord4hNV( GLhalfNV s, GLhalfNV t, GLhalfNV r, GLhalfNV q );
+ * @brief void glSecondaryColor3hvNV(const GLhalfNV *v)
  */
-GLE_API void glTexCoord4hNV( GLhalfNV s, GLhalfNV t, GLhalfNV r, GLhalfNV q );
+GLE_API void glSecondaryColor3hvNV(const GLhalfNV *v);
 
 /**
- * @brief void glTexCoord4hvNV( const GLhalfNV *v );
+ * @brief void glTexCoord1hNV(GLhalfNV s)
  */
-GLE_API void glTexCoord4hvNV( const GLhalfNV *v );
+GLE_API void glTexCoord1hNV(GLhalfNV s);
 
 /**
- * @brief void glMultiTexCoord1hNV( GLenum target, GLhalfNV s );
+ * @brief void glTexCoord1hvNV(const GLhalfNV *v)
  */
-GLE_API void glMultiTexCoord1hNV( GLenum target, GLhalfNV s );
+GLE_API void glTexCoord1hvNV(const GLhalfNV *v);
 
 /**
- * @brief void glMultiTexCoord1hvNV( GLenum target, const GLhalfNV *v );
+ * @brief void glTexCoord2hNV(GLhalfNV s, GLhalfNV t)
  */
-GLE_API void glMultiTexCoord1hvNV( GLenum target, const GLhalfNV *v );
+GLE_API void glTexCoord2hNV(GLhalfNV s, GLhalfNV t);
 
 /**
- * @brief void glMultiTexCoord2hNV( GLenum target, GLhalfNV s, GLhalfNV t );
+ * @brief void glTexCoord2hvNV(const GLhalfNV *v)
  */
-GLE_API void glMultiTexCoord2hNV( GLenum target, GLhalfNV s, GLhalfNV t );
+GLE_API void glTexCoord2hvNV(const GLhalfNV *v);
 
 /**
- * @brief void glMultiTexCoord2hvNV( GLenum target, const GLhalfNV *v );
+ * @brief void glTexCoord3hNV(GLhalfNV s, GLhalfNV t, GLhalfNV r)
  */
-GLE_API void glMultiTexCoord2hvNV( GLenum target, const GLhalfNV *v );
+GLE_API void glTexCoord3hNV(GLhalfNV s, GLhalfNV t, GLhalfNV r);
 
 /**
- * @brief void glMultiTexCoord3hNV( GLenum target, GLhalfNV s, GLhalfNV t, GLhalfNV r );
+ * @brief void glTexCoord3hvNV(const GLhalfNV *v)
  */
-GLE_API void glMultiTexCoord3hNV( GLenum target, GLhalfNV s, GLhalfNV t, GLhalfNV r );
+GLE_API void glTexCoord3hvNV(const GLhalfNV *v);
 
 /**
- * @brief void glMultiTexCoord3hvNV( GLenum target, const GLhalfNV *v );
+ * @brief void glTexCoord4hNV(GLhalfNV s, GLhalfNV t, GLhalfNV r, GLhalfNV q)
  */
-GLE_API void glMultiTexCoord3hvNV( GLenum target, const GLhalfNV *v );
+GLE_API void glTexCoord4hNV(GLhalfNV s, GLhalfNV t, GLhalfNV r, GLhalfNV q);
 
 /**
- * @brief void glMultiTexCoord4hNV( GLenum target, GLhalfNV s, GLhalfNV t, GLhalfNV r, GLhalfNV q );
+ * @brief void glTexCoord4hvNV(const GLhalfNV *v)
  */
-GLE_API void glMultiTexCoord4hNV( GLenum target, GLhalfNV s, GLhalfNV t, GLhalfNV r, GLhalfNV q );
+GLE_API void glTexCoord4hvNV(const GLhalfNV *v);
 
 /**
- * @brief void glMultiTexCoord4hvNV( GLenum target, const GLhalfNV *v );
+ * @brief void glVertex2hNV(GLhalfNV x, GLhalfNV y)
  */
-GLE_API void glMultiTexCoord4hvNV( GLenum target, const GLhalfNV *v );
+GLE_API void glVertex2hNV(GLhalfNV x, GLhalfNV y);
 
 /**
- * @brief void glFogCoordhNV( GLhalfNV fog );
+ * @brief void glVertex2hvNV(const GLhalfNV *v)
  */
-GLE_API void glFogCoordhNV( GLhalfNV fog );
+GLE_API void glVertex2hvNV(const GLhalfNV *v);
 
 /**
- * @brief void glFogCoordhvNV( const GLhalfNV *fog );
+ * @brief void glVertex3hNV(GLhalfNV x, GLhalfNV y, GLhalfNV z)
  */
-GLE_API void glFogCoordhvNV( const GLhalfNV *fog );
+GLE_API void glVertex3hNV(GLhalfNV x, GLhalfNV y, GLhalfNV z);
 
 /**
- * @brief void glSecondaryColor3hNV( GLhalfNV red, GLhalfNV green, GLhalfNV blue );
+ * @brief void glVertex3hvNV(const GLhalfNV *v)
  */
-GLE_API void glSecondaryColor3hNV( GLhalfNV red, GLhalfNV green, GLhalfNV blue );
+GLE_API void glVertex3hvNV(const GLhalfNV *v);
 
 /**
- * @brief void glSecondaryColor3hvNV( const GLhalfNV *v );
+ * @brief void glVertex4hNV(GLhalfNV x, GLhalfNV y, GLhalfNV z, GLhalfNV w)
  */
-GLE_API void glSecondaryColor3hvNV( const GLhalfNV *v );
+GLE_API void glVertex4hNV(GLhalfNV x, GLhalfNV y, GLhalfNV z, GLhalfNV w);
 
 /**
- * @brief void glVertexWeighthNV( GLhalfNV weight );
+ * @brief void glVertex4hvNV(const GLhalfNV *v)
  */
-GLE_API void glVertexWeighthNV( GLhalfNV weight );
+GLE_API void glVertex4hvNV(const GLhalfNV *v);
 
 /**
- * @brief void glVertexWeighthvNV( const GLhalfNV *weight );
+ * @brief void glVertexAttrib1hNV(GLuint index, GLhalfNV x)
  */
-GLE_API void glVertexWeighthvNV( const GLhalfNV *weight );
+GLE_API void glVertexAttrib1hNV(GLuint index, GLhalfNV x);
 
 /**
- * @brief void glVertexAttrib1hNV( GLuint index, GLhalfNV x );
+ * @brief void glVertexAttrib1hvNV(GLuint index, const GLhalfNV *v)
  */
-GLE_API void glVertexAttrib1hNV( GLuint index, GLhalfNV x );
+GLE_API void glVertexAttrib1hvNV(GLuint index, const GLhalfNV *v);
 
 /**
- * @brief void glVertexAttrib1hvNV( GLuint index, const GLhalfNV *v );
+ * @brief void glVertexAttrib2hNV(GLuint index, GLhalfNV x, GLhalfNV y)
  */
-GLE_API void glVertexAttrib1hvNV( GLuint index, const GLhalfNV *v );
+GLE_API void glVertexAttrib2hNV(GLuint index, GLhalfNV x, GLhalfNV y);
 
 /**
- * @brief void glVertexAttrib2hNV( GLuint index, GLhalfNV x, GLhalfNV y );
+ * @brief void glVertexAttrib2hvNV(GLuint index, const GLhalfNV *v)
  */
-GLE_API void glVertexAttrib2hNV( GLuint index, GLhalfNV x, GLhalfNV y );
+GLE_API void glVertexAttrib2hvNV(GLuint index, const GLhalfNV *v);
 
 /**
- * @brief void glVertexAttrib2hvNV( GLuint index, const GLhalfNV *v );
+ * @brief void glVertexAttrib3hNV(GLuint index, GLhalfNV x, GLhalfNV y, GLhalfNV z)
  */
-GLE_API void glVertexAttrib2hvNV( GLuint index, const GLhalfNV *v );
+GLE_API void glVertexAttrib3hNV(GLuint index, GLhalfNV x, GLhalfNV y, GLhalfNV z);
 
 /**
- * @brief void glVertexAttrib3hNV( GLuint index, GLhalfNV x, GLhalfNV y, GLhalfNV z );
+ * @brief void glVertexAttrib3hvNV(GLuint index, const GLhalfNV *v)
  */
-GLE_API void glVertexAttrib3hNV( GLuint index, GLhalfNV x, GLhalfNV y, GLhalfNV z );
+GLE_API void glVertexAttrib3hvNV(GLuint index, const GLhalfNV *v);
 
 /**
- * @brief void glVertexAttrib3hvNV( GLuint index, const GLhalfNV *v );
+ * @brief void glVertexAttrib4hNV(GLuint index, GLhalfNV x, GLhalfNV y, GLhalfNV z, GLhalfNV w)
  */
-GLE_API void glVertexAttrib3hvNV( GLuint index, const GLhalfNV *v );
+GLE_API void glVertexAttrib4hNV(GLuint index, GLhalfNV x, GLhalfNV y, GLhalfNV z, GLhalfNV w);
 
 /**
- * @brief void glVertexAttrib4hNV( GLuint index, GLhalfNV x, GLhalfNV y, GLhalfNV z, GLhalfNV w );
+ * @brief void glVertexAttrib4hvNV(GLuint index, const GLhalfNV *v)
  */
-GLE_API void glVertexAttrib4hNV( GLuint index, GLhalfNV x, GLhalfNV y, GLhalfNV z, GLhalfNV w );
+GLE_API void glVertexAttrib4hvNV(GLuint index, const GLhalfNV *v);
 
 /**
- * @brief void glVertexAttrib4hvNV( GLuint index, const GLhalfNV *v );
+ * @brief void glVertexAttribs1hvNV(GLuint index, GLsizei n, const GLhalfNV *v)
  */
-GLE_API void glVertexAttrib4hvNV( GLuint index, const GLhalfNV *v );
+GLE_API void glVertexAttribs1hvNV(GLuint index, GLsizei n, const GLhalfNV *v);
 
 /**
- * @brief void glVertexAttribs1hvNV( GLuint index, GLsizei n, const GLhalfNV *v );
+ * @brief void glVertexAttribs2hvNV(GLuint index, GLsizei n, const GLhalfNV *v)
  */
-GLE_API void glVertexAttribs1hvNV( GLuint index, GLsizei n, const GLhalfNV *v );
+GLE_API void glVertexAttribs2hvNV(GLuint index, GLsizei n, const GLhalfNV *v);
 
 /**
- * @brief void glVertexAttribs2hvNV( GLuint index, GLsizei n, const GLhalfNV *v );
+ * @brief void glVertexAttribs3hvNV(GLuint index, GLsizei n, const GLhalfNV *v)
  */
-GLE_API void glVertexAttribs2hvNV( GLuint index, GLsizei n, const GLhalfNV *v );
+GLE_API void glVertexAttribs3hvNV(GLuint index, GLsizei n, const GLhalfNV *v);
 
 /**
- * @brief void glVertexAttribs3hvNV( GLuint index, GLsizei n, const GLhalfNV *v );
+ * @brief void glVertexAttribs4hvNV(GLuint index, GLsizei n, const GLhalfNV *v)
  */
-GLE_API void glVertexAttribs3hvNV( GLuint index, GLsizei n, const GLhalfNV *v );
+GLE_API void glVertexAttribs4hvNV(GLuint index, GLsizei n, const GLhalfNV *v);
 
 /**
- * @brief void glVertexAttribs4hvNV( GLuint index, GLsizei n, const GLhalfNV *v );
+ * @brief void glVertexWeighthNV(GLhalfNV weight)
  */
-GLE_API void glVertexAttribs4hvNV( GLuint index, GLsizei n, const GLhalfNV *v );
+GLE_API void glVertexWeighthNV(GLhalfNV weight);
+
+/**
+ * @brief void glVertexWeighthvNV(const GLhalfNV *weight)
+ */
+GLE_API void glVertexWeighthvNV(const GLhalfNV *weight);
 
 //@}
+
+
 
 
 /**
@@ -11597,13 +12775,17 @@ GLE_API void glVertexAttribs4hvNV( GLuint index, GLsizei n, const GLhalfNV *v );
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_light_max_exponent is supported.
- * @return Returns \c true if \b GL_NV_light_max_exponent is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_light_max_exponent is supported.
+ * @return Returns \c true if \b GL_NV_light_max_exponent is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_light_max_exponent();
 
+
 //@}
+
+
 
 
 /**
@@ -11613,13 +12795,17 @@ GLE_API bool isGL_NV_light_max_exponent();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_multisample_coverage is supported.
- * @return Returns \c true if \b GL_NV_multisample_coverage is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_multisample_coverage is supported.
+ * @return Returns \c true if \b GL_NV_multisample_coverage is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_multisample_coverage();
 
+
 //@}
+
+
 
 
 /**
@@ -11629,13 +12815,17 @@ GLE_API bool isGL_NV_multisample_coverage();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_multisample_filter_hint is supported.
- * @return Returns \c true if \b GL_NV_multisample_filter_hint is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_multisample_filter_hint is supported.
+ * @return Returns \c true if \b GL_NV_multisample_filter_hint is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_multisample_filter_hint();
 
+
 //@}
+
+
 
 
 /**
@@ -11645,48 +12835,53 @@ GLE_API bool isGL_NV_multisample_filter_hint();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_occlusion_query is supported.
- * @return Returns \c true if \b GL_NV_occlusion_query is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_occlusion_query is supported.
+ * @return Returns \c true if \b GL_NV_occlusion_query is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_occlusion_query();
 
-/**
- * @brief void glGenOcclusionQueriesNV( GLsizei n, GLuint *ids );
- */
-GLE_API void glGenOcclusionQueriesNV( GLsizei n, GLuint *ids );
+
 
 /**
- * @brief void glDeleteOcclusionQueriesNV( GLsizei n, const GLuint *ids );
+ * @brief void glBeginOcclusionQueryNV(GLuint id)
  */
-GLE_API void glDeleteOcclusionQueriesNV( GLsizei n, const GLuint *ids );
+GLE_API void glBeginOcclusionQueryNV(GLuint id);
 
 /**
- * @brief GLboolean glIsOcclusionQueryNV( GLuint id );
+ * @brief void glDeleteOcclusionQueriesNV(GLsizei n, const GLuint *ids)
  */
-GLE_API GLboolean glIsOcclusionQueryNV( GLuint id );
+GLE_API void glDeleteOcclusionQueriesNV(GLsizei n, const GLuint *ids);
 
 /**
- * @brief void glBeginOcclusionQueryNV( GLuint id );
+ * @brief void glEndOcclusionQueryNV(void)
  */
-GLE_API void glBeginOcclusionQueryNV( GLuint id );
+GLE_API void glEndOcclusionQueryNV(void);
 
 /**
- * @brief void glEndOcclusionQueryNV( void );
+ * @brief void glGenOcclusionQueriesNV(GLsizei n, GLuint *ids)
  */
-GLE_API void glEndOcclusionQueryNV( void );
+GLE_API void glGenOcclusionQueriesNV(GLsizei n, GLuint *ids);
 
 /**
- * @brief void glGetOcclusionQueryivNV( GLuint id, GLenum pname, GLint *params );
+ * @brief void glGetOcclusionQueryivNV(GLuint id, GLenum pname, GLint *params)
  */
-GLE_API void glGetOcclusionQueryivNV( GLuint id, GLenum pname, GLint *params );
+GLE_API void glGetOcclusionQueryivNV(GLuint id, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetOcclusionQueryuivNV( GLuint id, GLenum pname, GLuint *params );
+ * @brief void glGetOcclusionQueryuivNV(GLuint id, GLenum pname, GLuint *params)
  */
-GLE_API void glGetOcclusionQueryuivNV( GLuint id, GLenum pname, GLuint *params );
+GLE_API void glGetOcclusionQueryuivNV(GLuint id, GLenum pname, GLuint *params);
+
+/**
+ * @brief GLboolean glIsOcclusionQueryNV(GLuint id)
+ */
+GLE_API GLboolean glIsOcclusionQueryNV(GLuint id);
 
 //@}
+
+
 
 
 /**
@@ -11696,13 +12891,17 @@ GLE_API void glGetOcclusionQueryuivNV( GLuint id, GLenum pname, GLuint *params )
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_packed_depth_stencil is supported.
- * @return Returns \c true if \b GL_NV_packed_depth_stencil is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_packed_depth_stencil is supported.
+ * @return Returns \c true if \b GL_NV_packed_depth_stencil is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_packed_depth_stencil();
 
+
 //@}
+
+
 
 
 /**
@@ -11712,28 +12911,33 @@ GLE_API bool isGL_NV_packed_depth_stencil();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_parameter_buffer_object is supported.
- * @return Returns \c true if \b GL_NV_parameter_buffer_object is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_parameter_buffer_object is supported.
+ * @return Returns \c true if \b GL_NV_parameter_buffer_object is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_parameter_buffer_object();
 
-/**
- * @brief void glProgramBufferParametersfvNV( GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLfloat *params );
- */
-GLE_API void glProgramBufferParametersfvNV( GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLfloat *params );
+
 
 /**
- * @brief void glProgramBufferParametersIivNV( GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLint *params );
+ * @brief void glProgramBufferParametersIivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLint *params)
  */
-GLE_API void glProgramBufferParametersIivNV( GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLint *params );
+GLE_API void glProgramBufferParametersIivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLint *params);
 
 /**
- * @brief void glProgramBufferParametersIuivNV( GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLuint *params );
+ * @brief void glProgramBufferParametersIuivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLuint *params)
  */
-GLE_API void glProgramBufferParametersIuivNV( GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLuint *params );
+GLE_API void glProgramBufferParametersIuivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLuint *params);
+
+/**
+ * @brief void glProgramBufferParametersfvNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLfloat *params)
+ */
+GLE_API void glProgramBufferParametersfvNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLfloat *params);
 
 //@}
+
+
 
 
 /**
@@ -11743,13 +12947,17 @@ GLE_API void glProgramBufferParametersIuivNV( GLenum target, GLuint buffer, GLui
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_parameter_buffer_object2 is supported.
- * @return Returns \c true if \b GL_NV_parameter_buffer_object2 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_parameter_buffer_object2 is supported.
+ * @return Returns \c true if \b GL_NV_parameter_buffer_object2 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_parameter_buffer_object2();
 
+
 //@}
+
+
 
 
 /**
@@ -11759,23 +12967,28 @@ GLE_API bool isGL_NV_parameter_buffer_object2();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_pixel_data_range is supported.
- * @return Returns \c true if \b GL_NV_pixel_data_range is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_pixel_data_range is supported.
+ * @return Returns \c true if \b GL_NV_pixel_data_range is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_pixel_data_range();
 
-/**
- * @brief void glPixelDataRangeNV( GLenum target, GLsizei length, GLvoid *pointer );
- */
-GLE_API void glPixelDataRangeNV( GLenum target, GLsizei length, GLvoid *pointer );
+
 
 /**
- * @brief void glFlushPixelDataRangeNV( GLenum target );
+ * @brief void glFlushPixelDataRangeNV(GLenum target)
  */
-GLE_API void glFlushPixelDataRangeNV( GLenum target );
+GLE_API void glFlushPixelDataRangeNV(GLenum target);
+
+/**
+ * @brief void glPixelDataRangeNV(GLenum target, GLsizei length, GLvoid *pointer)
+ */
+GLE_API void glPixelDataRangeNV(GLenum target, GLsizei length, GLvoid *pointer);
 
 //@}
+
+
 
 
 /**
@@ -11785,23 +12998,28 @@ GLE_API void glFlushPixelDataRangeNV( GLenum target );
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_point_sprite is supported.
- * @return Returns \c true if \b GL_NV_point_sprite is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_point_sprite is supported.
+ * @return Returns \c true if \b GL_NV_point_sprite is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_point_sprite();
 
-/**
- * @brief void glPointParameteriNV( GLenum pname, GLint param );
- */
-GLE_API void glPointParameteriNV( GLenum pname, GLint param );
+
 
 /**
- * @brief void glPointParameterivNV( GLenum pname, const GLint *params );
+ * @brief void glPointParameteriNV(GLenum pname, GLint param)
  */
-GLE_API void glPointParameterivNV( GLenum pname, const GLint *params );
+GLE_API void glPointParameteriNV(GLenum pname, GLint param);
+
+/**
+ * @brief void glPointParameterivNV(GLenum pname, const GLint *params)
+ */
+GLE_API void glPointParameterivNV(GLenum pname, const GLint *params);
 
 //@}
+
+
 
 
 /**
@@ -11811,43 +13029,48 @@ GLE_API void glPointParameterivNV( GLenum pname, const GLint *params );
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_present_video is supported.
- * @return Returns \c true if \b GL_NV_present_video is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_present_video is supported.
+ * @return Returns \c true if \b GL_NV_present_video is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_present_video();
 
-/**
- * @brief void glPresentFrameKeyedNV( GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLuint key0, GLenum target1, GLuint fill1, GLuint key1 );
- */
-GLE_API void glPresentFrameKeyedNV( GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLuint key0, GLenum target1, GLuint fill1, GLuint key1 );
+
 
 /**
- * @brief void glPresentFrameDualFillNV( GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLenum target1, GLuint fill1, GLenum target2, GLuint fill2, GLenum target3, GLuint fill3 );
+ * @brief void glGetVideoi64vNV(GLuint video_slot, GLenum pname, GLint64EXT *params)
  */
-GLE_API void glPresentFrameDualFillNV( GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLenum target1, GLuint fill1, GLenum target2, GLuint fill2, GLenum target3, GLuint fill3 );
+GLE_API void glGetVideoi64vNV(GLuint video_slot, GLenum pname, GLint64EXT *params);
 
 /**
- * @brief void glGetVideoivNV( GLuint video_slot, GLenum pname, GLint *params );
+ * @brief void glGetVideoivNV(GLuint video_slot, GLenum pname, GLint *params)
  */
-GLE_API void glGetVideoivNV( GLuint video_slot, GLenum pname, GLint *params );
+GLE_API void glGetVideoivNV(GLuint video_slot, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetVideouivNV( GLuint video_slot, GLenum pname, GLuint *params );
+ * @brief void glGetVideoui64vNV(GLuint video_slot, GLenum pname, GLuint64EXT *params)
  */
-GLE_API void glGetVideouivNV( GLuint video_slot, GLenum pname, GLuint *params );
+GLE_API void glGetVideoui64vNV(GLuint video_slot, GLenum pname, GLuint64EXT *params);
 
 /**
- * @brief void glGetVideoi64vNV( GLuint video_slot, GLenum pname, GLint64EXT *params );
+ * @brief void glGetVideouivNV(GLuint video_slot, GLenum pname, GLuint *params)
  */
-GLE_API void glGetVideoi64vNV( GLuint video_slot, GLenum pname, GLint64EXT *params );
+GLE_API void glGetVideouivNV(GLuint video_slot, GLenum pname, GLuint *params);
 
 /**
- * @brief void glGetVideoui64vNV( GLuint video_slot, GLenum pname, GLuint64EXT *params );
+ * @brief void glPresentFrameDualFillNV(GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLenum target1, GLuint fill1, GLenum target2, GLuint fill2, GLenum target3, GLuint fill3)
  */
-GLE_API void glGetVideoui64vNV( GLuint video_slot, GLenum pname, GLuint64EXT *params );
+GLE_API void glPresentFrameDualFillNV(GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLenum target1, GLuint fill1, GLenum target2, GLuint fill2, GLenum target3, GLuint fill3);
+
+/**
+ * @brief void glPresentFrameKeyedNV(GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLuint key0, GLenum target1, GLuint fill1, GLuint key1)
+ */
+GLE_API void glPresentFrameKeyedNV(GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLuint key0, GLenum target1, GLuint fill1, GLuint key1);
 
 //@}
+
+
 
 
 /**
@@ -11857,23 +13080,28 @@ GLE_API void glGetVideoui64vNV( GLuint video_slot, GLenum pname, GLuint64EXT *pa
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_primitive_restart is supported.
- * @return Returns \c true if \b GL_NV_primitive_restart is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_primitive_restart is supported.
+ * @return Returns \c true if \b GL_NV_primitive_restart is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_primitive_restart();
 
-/**
- * @brief void glPrimitiveRestartNV( void );
- */
-GLE_API void glPrimitiveRestartNV( void );
+
 
 /**
- * @brief void glPrimitiveRestartIndexNV( GLuint index );
+ * @brief void glPrimitiveRestartIndexNV(GLuint index)
  */
-GLE_API void glPrimitiveRestartIndexNV( GLuint index );
+GLE_API void glPrimitiveRestartIndexNV(GLuint index);
+
+/**
+ * @brief void glPrimitiveRestartNV(void)
+ */
+GLE_API void glPrimitiveRestartNV(void);
 
 //@}
+
+
 
 
 /**
@@ -11883,78 +13111,83 @@ GLE_API void glPrimitiveRestartIndexNV( GLuint index );
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_register_combiners is supported.
- * @return Returns \c true if \b GL_NV_register_combiners is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_register_combiners is supported.
+ * @return Returns \c true if \b GL_NV_register_combiners is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_register_combiners();
 
-/**
- * @brief void glCombinerParameterfvNV( GLenum pname, const GLfloat *params );
- */
-GLE_API void glCombinerParameterfvNV( GLenum pname, const GLfloat *params );
+
 
 /**
- * @brief void glCombinerParameterfNV( GLenum pname, GLfloat param );
+ * @brief void glCombinerInputNV(GLenum stage, GLenum portion, GLenum variable, GLenum input, GLenum mapping, GLenum componentUsage)
  */
-GLE_API void glCombinerParameterfNV( GLenum pname, GLfloat param );
+GLE_API void glCombinerInputNV(GLenum stage, GLenum portion, GLenum variable, GLenum input, GLenum mapping, GLenum componentUsage);
 
 /**
- * @brief void glCombinerParameterivNV( GLenum pname, const GLint *params );
+ * @brief void glCombinerOutputNV(GLenum stage, GLenum portion, GLenum abOutput, GLenum cdOutput, GLenum sumOutput, GLenum scale, GLenum bias, GLboolean abDotProduct, GLboolean cdDotProduct, GLboolean muxSum)
  */
-GLE_API void glCombinerParameterivNV( GLenum pname, const GLint *params );
+GLE_API void glCombinerOutputNV(GLenum stage, GLenum portion, GLenum abOutput, GLenum cdOutput, GLenum sumOutput, GLenum scale, GLenum bias, GLboolean abDotProduct, GLboolean cdDotProduct, GLboolean muxSum);
 
 /**
- * @brief void glCombinerParameteriNV( GLenum pname, GLint param );
+ * @brief void glCombinerParameterfNV(GLenum pname, GLfloat param)
  */
-GLE_API void glCombinerParameteriNV( GLenum pname, GLint param );
+GLE_API void glCombinerParameterfNV(GLenum pname, GLfloat param);
 
 /**
- * @brief void glCombinerInputNV( GLenum stage, GLenum portion, GLenum variable, GLenum input, GLenum mapping, GLenum componentUsage );
+ * @brief void glCombinerParameterfvNV(GLenum pname, const GLfloat *params)
  */
-GLE_API void glCombinerInputNV( GLenum stage, GLenum portion, GLenum variable, GLenum input, GLenum mapping, GLenum componentUsage );
+GLE_API void glCombinerParameterfvNV(GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glCombinerOutputNV( GLenum stage, GLenum portion, GLenum abOutput, GLenum cdOutput, GLenum sumOutput, GLenum scale, GLenum bias, GLboolean abDotProduct, GLboolean cdDotProduct, GLboolean muxSum );
+ * @brief void glCombinerParameteriNV(GLenum pname, GLint param)
  */
-GLE_API void glCombinerOutputNV( GLenum stage, GLenum portion, GLenum abOutput, GLenum cdOutput, GLenum sumOutput, GLenum scale, GLenum bias, GLboolean abDotProduct, GLboolean cdDotProduct, GLboolean muxSum );
+GLE_API void glCombinerParameteriNV(GLenum pname, GLint param);
 
 /**
- * @brief void glFinalCombinerInputNV( GLenum variable, GLenum input, GLenum mapping, GLenum componentUsage );
+ * @brief void glCombinerParameterivNV(GLenum pname, const GLint *params)
  */
-GLE_API void glFinalCombinerInputNV( GLenum variable, GLenum input, GLenum mapping, GLenum componentUsage );
+GLE_API void glCombinerParameterivNV(GLenum pname, const GLint *params);
 
 /**
- * @brief void glGetCombinerInputParameterfvNV( GLenum stage, GLenum portion, GLenum variable, GLenum pname, GLfloat *params );
+ * @brief void glFinalCombinerInputNV(GLenum variable, GLenum input, GLenum mapping, GLenum componentUsage)
  */
-GLE_API void glGetCombinerInputParameterfvNV( GLenum stage, GLenum portion, GLenum variable, GLenum pname, GLfloat *params );
+GLE_API void glFinalCombinerInputNV(GLenum variable, GLenum input, GLenum mapping, GLenum componentUsage);
 
 /**
- * @brief void glGetCombinerInputParameterivNV( GLenum stage, GLenum portion, GLenum variable, GLenum pname, GLint *params );
+ * @brief void glGetCombinerInputParameterfvNV(GLenum stage, GLenum portion, GLenum variable, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetCombinerInputParameterivNV( GLenum stage, GLenum portion, GLenum variable, GLenum pname, GLint *params );
+GLE_API void glGetCombinerInputParameterfvNV(GLenum stage, GLenum portion, GLenum variable, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetCombinerOutputParameterfvNV( GLenum stage, GLenum portion, GLenum pname, GLfloat *params );
+ * @brief void glGetCombinerInputParameterivNV(GLenum stage, GLenum portion, GLenum variable, GLenum pname, GLint *params)
  */
-GLE_API void glGetCombinerOutputParameterfvNV( GLenum stage, GLenum portion, GLenum pname, GLfloat *params );
+GLE_API void glGetCombinerInputParameterivNV(GLenum stage, GLenum portion, GLenum variable, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetCombinerOutputParameterivNV( GLenum stage, GLenum portion, GLenum pname, GLint *params );
+ * @brief void glGetCombinerOutputParameterfvNV(GLenum stage, GLenum portion, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetCombinerOutputParameterivNV( GLenum stage, GLenum portion, GLenum pname, GLint *params );
+GLE_API void glGetCombinerOutputParameterfvNV(GLenum stage, GLenum portion, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetFinalCombinerInputParameterfvNV( GLenum variable, GLenum pname, GLfloat *params );
+ * @brief void glGetCombinerOutputParameterivNV(GLenum stage, GLenum portion, GLenum pname, GLint *params)
  */
-GLE_API void glGetFinalCombinerInputParameterfvNV( GLenum variable, GLenum pname, GLfloat *params );
+GLE_API void glGetCombinerOutputParameterivNV(GLenum stage, GLenum portion, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetFinalCombinerInputParameterivNV( GLenum variable, GLenum pname, GLint *params );
+ * @brief void glGetFinalCombinerInputParameterfvNV(GLenum variable, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetFinalCombinerInputParameterivNV( GLenum variable, GLenum pname, GLint *params );
+GLE_API void glGetFinalCombinerInputParameterfvNV(GLenum variable, GLenum pname, GLfloat *params);
+
+/**
+ * @brief void glGetFinalCombinerInputParameterivNV(GLenum variable, GLenum pname, GLint *params)
+ */
+GLE_API void glGetFinalCombinerInputParameterivNV(GLenum variable, GLenum pname, GLint *params);
 
 //@}
+
+
 
 
 /**
@@ -11964,23 +13197,28 @@ GLE_API void glGetFinalCombinerInputParameterivNV( GLenum variable, GLenum pname
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_register_combiners2 is supported.
- * @return Returns \c true if \b GL_NV_register_combiners2 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_register_combiners2 is supported.
+ * @return Returns \c true if \b GL_NV_register_combiners2 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_register_combiners2();
 
-/**
- * @brief void glCombinerStageParameterfvNV( GLenum stage, GLenum pname, const GLfloat *params );
- */
-GLE_API void glCombinerStageParameterfvNV( GLenum stage, GLenum pname, const GLfloat *params );
+
 
 /**
- * @brief void glGetCombinerStageParameterfvNV( GLenum stage, GLenum pname, GLfloat *params );
+ * @brief void glCombinerStageParameterfvNV(GLenum stage, GLenum pname, const GLfloat *params)
  */
-GLE_API void glGetCombinerStageParameterfvNV( GLenum stage, GLenum pname, GLfloat *params );
+GLE_API void glCombinerStageParameterfvNV(GLenum stage, GLenum pname, const GLfloat *params);
+
+/**
+ * @brief void glGetCombinerStageParameterfvNV(GLenum stage, GLenum pname, GLfloat *params)
+ */
+GLE_API void glGetCombinerStageParameterfvNV(GLenum stage, GLenum pname, GLfloat *params);
 
 //@}
+
+
 
 
 /**
@@ -11990,83 +13228,88 @@ GLE_API void glGetCombinerStageParameterfvNV( GLenum stage, GLenum pname, GLfloa
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_shader_buffer_load is supported.
- * @return Returns \c true if \b GL_NV_shader_buffer_load is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_shader_buffer_load is supported.
+ * @return Returns \c true if \b GL_NV_shader_buffer_load is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_shader_buffer_load();
 
-/**
- * @brief void glMakeBufferResidentNV( GLenum target, GLenum access );
- */
-GLE_API void glMakeBufferResidentNV( GLenum target, GLenum access );
+
 
 /**
- * @brief void glMakeBufferNonResidentNV( GLenum target );
+ * @brief void glGetBufferParameterui64vNV(GLenum target, GLenum pname, GLuint64EXT *params)
  */
-GLE_API void glMakeBufferNonResidentNV( GLenum target );
+GLE_API void glGetBufferParameterui64vNV(GLenum target, GLenum pname, GLuint64EXT *params);
 
 /**
- * @brief GLboolean glIsBufferResidentNV( GLenum target );
+ * @brief void glGetIntegerui64vNV(GLenum value, GLuint64EXT *result)
  */
-GLE_API GLboolean glIsBufferResidentNV( GLenum target );
+GLE_API void glGetIntegerui64vNV(GLenum value, GLuint64EXT *result);
 
 /**
- * @brief void glMakeNamedBufferResidentNV( GLuint buffer, GLenum access );
+ * @brief void glGetNamedBufferParameterui64vNV(GLuint buffer, GLenum pname, GLuint64EXT *params)
  */
-GLE_API void glMakeNamedBufferResidentNV( GLuint buffer, GLenum access );
+GLE_API void glGetNamedBufferParameterui64vNV(GLuint buffer, GLenum pname, GLuint64EXT *params);
 
 /**
- * @brief void glMakeNamedBufferNonResidentNV( GLuint buffer );
+ * @brief void glGetUniformui64vNV(GLuint program, GLint location, GLuint64EXT *params)
  */
-GLE_API void glMakeNamedBufferNonResidentNV( GLuint buffer );
+GLE_API void glGetUniformui64vNV(GLuint program, GLint location, GLuint64EXT *params);
 
 /**
- * @brief GLboolean glIsNamedBufferResidentNV( GLuint buffer );
+ * @brief GLboolean glIsBufferResidentNV(GLenum target)
  */
-GLE_API GLboolean glIsNamedBufferResidentNV( GLuint buffer );
+GLE_API GLboolean glIsBufferResidentNV(GLenum target);
 
 /**
- * @brief void glGetBufferParameterui64vNV( GLenum target, GLenum pname, GLuint64EXT *params );
+ * @brief GLboolean glIsNamedBufferResidentNV(GLuint buffer)
  */
-GLE_API void glGetBufferParameterui64vNV( GLenum target, GLenum pname, GLuint64EXT *params );
+GLE_API GLboolean glIsNamedBufferResidentNV(GLuint buffer);
 
 /**
- * @brief void glGetNamedBufferParameterui64vNV( GLuint buffer, GLenum pname, GLuint64EXT *params );
+ * @brief void glMakeBufferNonResidentNV(GLenum target)
  */
-GLE_API void glGetNamedBufferParameterui64vNV( GLuint buffer, GLenum pname, GLuint64EXT *params );
+GLE_API void glMakeBufferNonResidentNV(GLenum target);
 
 /**
- * @brief void glGetIntegerui64vNV( GLenum value, GLuint64EXT *result );
+ * @brief void glMakeBufferResidentNV(GLenum target, GLenum access)
  */
-GLE_API void glGetIntegerui64vNV( GLenum value, GLuint64EXT *result );
+GLE_API void glMakeBufferResidentNV(GLenum target, GLenum access);
 
 /**
- * @brief void glUniformui64NV( GLint location, GLuint64EXT value );
+ * @brief void glMakeNamedBufferNonResidentNV(GLuint buffer)
  */
-GLE_API void glUniformui64NV( GLint location, GLuint64EXT value );
+GLE_API void glMakeNamedBufferNonResidentNV(GLuint buffer);
 
 /**
- * @brief void glUniformui64vNV( GLint location, GLsizei count, const GLuint64EXT *value );
+ * @brief void glMakeNamedBufferResidentNV(GLuint buffer, GLenum access)
  */
-GLE_API void glUniformui64vNV( GLint location, GLsizei count, const GLuint64EXT *value );
+GLE_API void glMakeNamedBufferResidentNV(GLuint buffer, GLenum access);
 
 /**
- * @brief void glGetUniformui64vNV( GLuint program, GLint location, GLuint64EXT *params );
+ * @brief void glProgramUniformui64NV(GLuint program, GLint location, GLuint64EXT value)
  */
-GLE_API void glGetUniformui64vNV( GLuint program, GLint location, GLuint64EXT *params );
+GLE_API void glProgramUniformui64NV(GLuint program, GLint location, GLuint64EXT value);
 
 /**
- * @brief void glProgramUniformui64NV( GLuint program, GLint location, GLuint64EXT value );
+ * @brief void glProgramUniformui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value)
  */
-GLE_API void glProgramUniformui64NV( GLuint program, GLint location, GLuint64EXT value );
+GLE_API void glProgramUniformui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
 
 /**
- * @brief void glProgramUniformui64vNV( GLuint program, GLint location, GLsizei count, const GLuint64EXT *value );
+ * @brief void glUniformui64NV(GLint location, GLuint64EXT value)
  */
-GLE_API void glProgramUniformui64vNV( GLuint program, GLint location, GLsizei count, const GLuint64EXT *value );
+GLE_API void glUniformui64NV(GLint location, GLuint64EXT value);
+
+/**
+ * @brief void glUniformui64vNV(GLint location, GLsizei count, const GLuint64EXT *value)
+ */
+GLE_API void glUniformui64vNV(GLint location, GLsizei count, const GLuint64EXT *value);
 
 //@}
+
+
 
 
 /**
@@ -12076,13 +13319,17 @@ GLE_API void glProgramUniformui64vNV( GLuint program, GLint location, GLsizei co
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_shader_buffer_store is supported.
- * @return Returns \c true if \b GL_NV_shader_buffer_store is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_shader_buffer_store is supported.
+ * @return Returns \c true if \b GL_NV_shader_buffer_store is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_shader_buffer_store();
 
+
 //@}
+
+
 
 
 /**
@@ -12092,13 +13339,17 @@ GLE_API bool isGL_NV_shader_buffer_store();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_tessellation_program5 is supported.
- * @return Returns \c true if \b GL_NV_tessellation_program5 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_tessellation_program5 is supported.
+ * @return Returns \c true if \b GL_NV_tessellation_program5 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_tessellation_program5();
 
+
 //@}
+
+
 
 
 /**
@@ -12108,13 +13359,17 @@ GLE_API bool isGL_NV_tessellation_program5();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_texgen_emboss is supported.
- * @return Returns \c true if \b GL_NV_texgen_emboss is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_texgen_emboss is supported.
+ * @return Returns \c true if \b GL_NV_texgen_emboss is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_texgen_emboss();
 
+
 //@}
+
+
 
 
 /**
@@ -12124,13 +13379,17 @@ GLE_API bool isGL_NV_texgen_emboss();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_texgen_reflection is supported.
- * @return Returns \c true if \b GL_NV_texgen_reflection is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_texgen_reflection is supported.
+ * @return Returns \c true if \b GL_NV_texgen_reflection is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_texgen_reflection();
 
+
 //@}
+
+
 
 
 /**
@@ -12140,18 +13399,23 @@ GLE_API bool isGL_NV_texgen_reflection();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_texture_barrier is supported.
- * @return Returns \c true if \b GL_NV_texture_barrier is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_texture_barrier is supported.
+ * @return Returns \c true if \b GL_NV_texture_barrier is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_texture_barrier();
 
+
+
 /**
- * @brief void glTextureBarrierNV( void );
+ * @brief void glTextureBarrierNV(void)
  */
-GLE_API void glTextureBarrierNV( void );
+GLE_API void glTextureBarrierNV(void);
 
 //@}
+
+
 
 
 /**
@@ -12161,13 +13425,17 @@ GLE_API void glTextureBarrierNV( void );
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_texture_compression_vtc is supported.
- * @return Returns \c true if \b GL_NV_texture_compression_vtc is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_texture_compression_vtc is supported.
+ * @return Returns \c true if \b GL_NV_texture_compression_vtc is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_texture_compression_vtc();
 
+
 //@}
+
+
 
 
 /**
@@ -12177,13 +13445,17 @@ GLE_API bool isGL_NV_texture_compression_vtc();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_texture_env_combine4 is supported.
- * @return Returns \c true if \b GL_NV_texture_env_combine4 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_texture_env_combine4 is supported.
+ * @return Returns \c true if \b GL_NV_texture_env_combine4 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_texture_env_combine4();
 
+
 //@}
+
+
 
 
 /**
@@ -12193,13 +13465,17 @@ GLE_API bool isGL_NV_texture_env_combine4();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_texture_expand_normal is supported.
- * @return Returns \c true if \b GL_NV_texture_expand_normal is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_texture_expand_normal is supported.
+ * @return Returns \c true if \b GL_NV_texture_expand_normal is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_texture_expand_normal();
 
+
 //@}
+
+
 
 
 /**
@@ -12209,13 +13485,17 @@ GLE_API bool isGL_NV_texture_expand_normal();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_texture_rectangle is supported.
- * @return Returns \c true if \b GL_NV_texture_rectangle is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_texture_rectangle is supported.
+ * @return Returns \c true if \b GL_NV_texture_rectangle is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_texture_rectangle();
 
+
 //@}
+
+
 
 
 /**
@@ -12225,13 +13505,17 @@ GLE_API bool isGL_NV_texture_rectangle();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_texture_shader is supported.
- * @return Returns \c true if \b GL_NV_texture_shader is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_texture_shader is supported.
+ * @return Returns \c true if \b GL_NV_texture_shader is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_texture_shader();
 
+
 //@}
+
+
 
 
 /**
@@ -12241,13 +13525,17 @@ GLE_API bool isGL_NV_texture_shader();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_texture_shader2 is supported.
- * @return Returns \c true if \b GL_NV_texture_shader2 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_texture_shader2 is supported.
+ * @return Returns \c true if \b GL_NV_texture_shader2 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_texture_shader2();
 
+
 //@}
+
+
 
 
 /**
@@ -12257,13 +13545,17 @@ GLE_API bool isGL_NV_texture_shader2();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_texture_shader3 is supported.
- * @return Returns \c true if \b GL_NV_texture_shader3 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_texture_shader3 is supported.
+ * @return Returns \c true if \b GL_NV_texture_shader3 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_texture_shader3();
 
+
 //@}
+
+
 
 
 /**
@@ -12273,68 +13565,73 @@ GLE_API bool isGL_NV_texture_shader3();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_transform_feedback is supported.
- * @return Returns \c true if \b GL_NV_transform_feedback is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_transform_feedback is supported.
+ * @return Returns \c true if \b GL_NV_transform_feedback is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_transform_feedback();
 
-/**
- * @brief void glBeginTransformFeedbackNV( GLenum primitiveMode );
- */
-GLE_API void glBeginTransformFeedbackNV( GLenum primitiveMode );
+
 
 /**
- * @brief void glEndTransformFeedbackNV( void );
+ * @brief void glActiveVaryingNV(GLuint program, const GLchar *name)
  */
-GLE_API void glEndTransformFeedbackNV( void );
+GLE_API void glActiveVaryingNV(GLuint program, const GLchar *name);
 
 /**
- * @brief void glTransformFeedbackAttribsNV( GLuint count, const GLint *attribs, GLenum bufferMode );
+ * @brief void glBeginTransformFeedbackNV(GLenum primitiveMode)
  */
-GLE_API void glTransformFeedbackAttribsNV( GLuint count, const GLint *attribs, GLenum bufferMode );
+GLE_API void glBeginTransformFeedbackNV(GLenum primitiveMode);
 
 /**
- * @brief void glBindBufferRangeNV( GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size );
+ * @brief void glBindBufferBaseNV(GLenum target, GLuint index, GLuint buffer)
  */
-GLE_API void glBindBufferRangeNV( GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size );
+GLE_API void glBindBufferBaseNV(GLenum target, GLuint index, GLuint buffer);
 
 /**
- * @brief void glBindBufferOffsetNV( GLenum target, GLuint index, GLuint buffer, GLintptr offset );
+ * @brief void glBindBufferOffsetNV(GLenum target, GLuint index, GLuint buffer, GLintptr offset)
  */
-GLE_API void glBindBufferOffsetNV( GLenum target, GLuint index, GLuint buffer, GLintptr offset );
+GLE_API void glBindBufferOffsetNV(GLenum target, GLuint index, GLuint buffer, GLintptr offset);
 
 /**
- * @brief void glBindBufferBaseNV( GLenum target, GLuint index, GLuint buffer );
+ * @brief void glBindBufferRangeNV(GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size)
  */
-GLE_API void glBindBufferBaseNV( GLenum target, GLuint index, GLuint buffer );
+GLE_API void glBindBufferRangeNV(GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size);
 
 /**
- * @brief void glTransformFeedbackVaryingsNV( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
+ * @brief void glEndTransformFeedbackNV(void)
  */
-GLE_API void glTransformFeedbackVaryingsNV( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
+GLE_API void glEndTransformFeedbackNV(void);
 
 /**
- * @brief void glActiveVaryingNV( GLuint program, const GLchar *name );
+ * @brief void glGetActiveVaryingNV(GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name)
  */
-GLE_API void glActiveVaryingNV( GLuint program, const GLchar *name );
+GLE_API void glGetActiveVaryingNV(GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name);
 
 /**
- * @brief GLint glGetVaryingLocationNV( GLuint program, const GLchar *name );
+ * @brief void glGetTransformFeedbackVaryingNV(GLuint program, GLuint index, GLint *location)
  */
-GLE_API GLint glGetVaryingLocationNV( GLuint program, const GLchar *name );
+GLE_API void glGetTransformFeedbackVaryingNV(GLuint program, GLuint index, GLint *location);
 
 /**
- * @brief void glGetActiveVaryingNV( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
+ * @brief GLint glGetVaryingLocationNV(GLuint program, const GLchar *name)
  */
-GLE_API void glGetActiveVaryingNV( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
+GLE_API GLint glGetVaryingLocationNV(GLuint program, const GLchar *name);
 
 /**
- * @brief void glGetTransformFeedbackVaryingNV( GLuint program, GLuint index, GLint *location );
+ * @brief void glTransformFeedbackAttribsNV(GLuint count, const GLint *attribs, GLenum bufferMode)
  */
-GLE_API void glGetTransformFeedbackVaryingNV( GLuint program, GLuint index, GLint *location );
+GLE_API void glTransformFeedbackAttribsNV(GLuint count, const GLint *attribs, GLenum bufferMode);
+
+/**
+ * @brief void glTransformFeedbackVaryingsNV(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode)
+ */
+GLE_API void glTransformFeedbackVaryingsNV(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode);
 
 //@}
+
+
 
 
 /**
@@ -12344,48 +13641,53 @@ GLE_API void glGetTransformFeedbackVaryingNV( GLuint program, GLuint index, GLin
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_transform_feedback2 is supported.
- * @return Returns \c true if \b GL_NV_transform_feedback2 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_transform_feedback2 is supported.
+ * @return Returns \c true if \b GL_NV_transform_feedback2 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_transform_feedback2();
 
-/**
- * @brief void glBindTransformFeedbackNV( GLenum target, GLuint id );
- */
-GLE_API void glBindTransformFeedbackNV( GLenum target, GLuint id );
+
 
 /**
- * @brief void glDeleteTransformFeedbacksNV( GLsizei n, const GLuint *ids );
+ * @brief void glBindTransformFeedbackNV(GLenum target, GLuint id)
  */
-GLE_API void glDeleteTransformFeedbacksNV( GLsizei n, const GLuint *ids );
+GLE_API void glBindTransformFeedbackNV(GLenum target, GLuint id);
 
 /**
- * @brief void glGenTransformFeedbacksNV( GLsizei n, GLuint *ids );
+ * @brief void glDeleteTransformFeedbacksNV(GLsizei n, const GLuint *ids)
  */
-GLE_API void glGenTransformFeedbacksNV( GLsizei n, GLuint *ids );
+GLE_API void glDeleteTransformFeedbacksNV(GLsizei n, const GLuint *ids);
 
 /**
- * @brief GLboolean glIsTransformFeedbackNV( GLuint id );
+ * @brief void glDrawTransformFeedbackNV(GLenum mode, GLuint id)
  */
-GLE_API GLboolean glIsTransformFeedbackNV( GLuint id );
+GLE_API void glDrawTransformFeedbackNV(GLenum mode, GLuint id);
 
 /**
- * @brief void glPauseTransformFeedbackNV( void );
+ * @brief void glGenTransformFeedbacksNV(GLsizei n, GLuint *ids)
  */
-GLE_API void glPauseTransformFeedbackNV( void );
+GLE_API void glGenTransformFeedbacksNV(GLsizei n, GLuint *ids);
 
 /**
- * @brief void glResumeTransformFeedbackNV( void );
+ * @brief GLboolean glIsTransformFeedbackNV(GLuint id)
  */
-GLE_API void glResumeTransformFeedbackNV( void );
+GLE_API GLboolean glIsTransformFeedbackNV(GLuint id);
 
 /**
- * @brief void glDrawTransformFeedbackNV( GLenum mode, GLuint id );
+ * @brief void glPauseTransformFeedbackNV(void)
  */
-GLE_API void glDrawTransformFeedbackNV( GLenum mode, GLuint id );
+GLE_API void glPauseTransformFeedbackNV(void);
+
+/**
+ * @brief void glResumeTransformFeedbackNV(void)
+ */
+GLE_API void glResumeTransformFeedbackNV(void);
 
 //@}
+
+
 
 
 /**
@@ -12395,13 +13697,17 @@ GLE_API void glDrawTransformFeedbackNV( GLenum mode, GLuint id );
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_vdpau_interop is supported.
- * @return Returns \c true if \b GL_NV_vdpau_interop is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_vdpau_interop is supported.
+ * @return Returns \c true if \b GL_NV_vdpau_interop is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_vdpau_interop();
 
+
 //@}
+
+
 
 
 /**
@@ -12411,23 +13717,28 @@ GLE_API bool isGL_NV_vdpau_interop();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_vertex_array_range is supported.
- * @return Returns \c true if \b GL_NV_vertex_array_range is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_vertex_array_range is supported.
+ * @return Returns \c true if \b GL_NV_vertex_array_range is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_vertex_array_range();
 
-/**
- * @brief void glFlushVertexArrayRangeNV( void );
- */
-GLE_API void glFlushVertexArrayRangeNV( void );
+
 
 /**
- * @brief void glVertexArrayRangeNV( GLsizei length, const GLvoid *pointer );
+ * @brief void glFlushVertexArrayRangeNV(void)
  */
-GLE_API void glVertexArrayRangeNV( GLsizei length, const GLvoid *pointer );
+GLE_API void glFlushVertexArrayRangeNV(void);
+
+/**
+ * @brief void glVertexArrayRangeNV(GLsizei length, const GLvoid *pointer)
+ */
+GLE_API void glVertexArrayRangeNV(GLsizei length, const GLvoid *pointer);
 
 //@}
+
+
 
 
 /**
@@ -12437,13 +13748,17 @@ GLE_API void glVertexArrayRangeNV( GLsizei length, const GLvoid *pointer );
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_vertex_array_range2 is supported.
- * @return Returns \c true if \b GL_NV_vertex_array_range2 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_vertex_array_range2 is supported.
+ * @return Returns \c true if \b GL_NV_vertex_array_range2 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_vertex_array_range2();
 
+
 //@}
+
+
 
 
 /**
@@ -12453,13 +13768,17 @@ GLE_API bool isGL_NV_vertex_array_range2();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_vertex_attrib_integer_64bit is supported.
- * @return Returns \c true if \b GL_NV_vertex_attrib_integer_64bit is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_vertex_attrib_integer_64bit is supported.
+ * @return Returns \c true if \b GL_NV_vertex_attrib_integer_64bit is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_vertex_attrib_integer_64bit();
 
+
 //@}
+
+
 
 
 /**
@@ -12469,73 +13788,78 @@ GLE_API bool isGL_NV_vertex_attrib_integer_64bit();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_vertex_buffer_unified_memory is supported.
- * @return Returns \c true if \b GL_NV_vertex_buffer_unified_memory is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_vertex_buffer_unified_memory is supported.
+ * @return Returns \c true if \b GL_NV_vertex_buffer_unified_memory is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_vertex_buffer_unified_memory();
 
-/**
- * @brief void glBufferAddressRangeNV( GLenum pname, GLuint index, GLuint64EXT address, GLsizeiptr length );
- */
-GLE_API void glBufferAddressRangeNV( GLenum pname, GLuint index, GLuint64EXT address, GLsizeiptr length );
+
 
 /**
- * @brief void glVertexFormatNV( GLint size, GLenum type, GLsizei stride );
+ * @brief void glBufferAddressRangeNV(GLenum pname, GLuint index, GLuint64EXT address, GLsizeiptr length)
  */
-GLE_API void glVertexFormatNV( GLint size, GLenum type, GLsizei stride );
+GLE_API void glBufferAddressRangeNV(GLenum pname, GLuint index, GLuint64EXT address, GLsizeiptr length);
 
 /**
- * @brief void glNormalFormatNV( GLenum type, GLsizei stride );
+ * @brief void glColorFormatNV(GLint size, GLenum type, GLsizei stride)
  */
-GLE_API void glNormalFormatNV( GLenum type, GLsizei stride );
+GLE_API void glColorFormatNV(GLint size, GLenum type, GLsizei stride);
 
 /**
- * @brief void glColorFormatNV( GLint size, GLenum type, GLsizei stride );
+ * @brief void glEdgeFlagFormatNV(GLsizei stride)
  */
-GLE_API void glColorFormatNV( GLint size, GLenum type, GLsizei stride );
+GLE_API void glEdgeFlagFormatNV(GLsizei stride);
 
 /**
- * @brief void glIndexFormatNV( GLenum type, GLsizei stride );
+ * @brief void glFogCoordFormatNV(GLenum type, GLsizei stride)
  */
-GLE_API void glIndexFormatNV( GLenum type, GLsizei stride );
+GLE_API void glFogCoordFormatNV(GLenum type, GLsizei stride);
 
 /**
- * @brief void glTexCoordFormatNV( GLint size, GLenum type, GLsizei stride );
+ * @brief void glGetIntegerui64i_vNV(GLenum value, GLuint index, GLuint64EXT *result)
  */
-GLE_API void glTexCoordFormatNV( GLint size, GLenum type, GLsizei stride );
+GLE_API void glGetIntegerui64i_vNV(GLenum value, GLuint index, GLuint64EXT *result);
 
 /**
- * @brief void glEdgeFlagFormatNV( GLsizei stride );
+ * @brief void glIndexFormatNV(GLenum type, GLsizei stride)
  */
-GLE_API void glEdgeFlagFormatNV( GLsizei stride );
+GLE_API void glIndexFormatNV(GLenum type, GLsizei stride);
 
 /**
- * @brief void glSecondaryColorFormatNV( GLint size, GLenum type, GLsizei stride );
+ * @brief void glNormalFormatNV(GLenum type, GLsizei stride)
  */
-GLE_API void glSecondaryColorFormatNV( GLint size, GLenum type, GLsizei stride );
+GLE_API void glNormalFormatNV(GLenum type, GLsizei stride);
 
 /**
- * @brief void glFogCoordFormatNV( GLenum type, GLsizei stride );
+ * @brief void glSecondaryColorFormatNV(GLint size, GLenum type, GLsizei stride)
  */
-GLE_API void glFogCoordFormatNV( GLenum type, GLsizei stride );
+GLE_API void glSecondaryColorFormatNV(GLint size, GLenum type, GLsizei stride);
 
 /**
- * @brief void glVertexAttribFormatNV( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride );
+ * @brief void glTexCoordFormatNV(GLint size, GLenum type, GLsizei stride)
  */
-GLE_API void glVertexAttribFormatNV( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride );
+GLE_API void glTexCoordFormatNV(GLint size, GLenum type, GLsizei stride);
 
 /**
- * @brief void glVertexAttribIFormatNV( GLuint index, GLint size, GLenum type, GLsizei stride );
+ * @brief void glVertexAttribFormatNV(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride)
  */
-GLE_API void glVertexAttribIFormatNV( GLuint index, GLint size, GLenum type, GLsizei stride );
+GLE_API void glVertexAttribFormatNV(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride);
 
 /**
- * @brief void glGetIntegerui64i_vNV( GLenum value, GLuint index, GLuint64EXT *result );
+ * @brief void glVertexAttribIFormatNV(GLuint index, GLint size, GLenum type, GLsizei stride)
  */
-GLE_API void glGetIntegerui64i_vNV( GLenum value, GLuint index, GLuint64EXT *result );
+GLE_API void glVertexAttribIFormatNV(GLuint index, GLint size, GLenum type, GLsizei stride);
+
+/**
+ * @brief void glVertexFormatNV(GLint size, GLenum type, GLsizei stride)
+ */
+GLE_API void glVertexFormatNV(GLint size, GLenum type, GLsizei stride);
 
 //@}
+
+
 
 
 /**
@@ -12545,333 +13869,338 @@ GLE_API void glGetIntegerui64i_vNV( GLenum value, GLuint index, GLuint64EXT *res
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_vertex_program is supported.
- * @return Returns \c true if \b GL_NV_vertex_program is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_vertex_program is supported.
+ * @return Returns \c true if \b GL_NV_vertex_program is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_vertex_program();
 
-/**
- * @brief GLboolean glAreProgramsResidentNV( GLsizei n, const GLuint *programs, GLboolean *residences );
- */
-GLE_API GLboolean glAreProgramsResidentNV( GLsizei n, const GLuint *programs, GLboolean *residences );
+
 
 /**
- * @brief void glBindProgramNV( GLenum target, GLuint id );
+ * @brief GLboolean glAreProgramsResidentNV(GLsizei n, const GLuint *programs, GLboolean *residences)
  */
-GLE_API void glBindProgramNV( GLenum target, GLuint id );
+GLE_API GLboolean glAreProgramsResidentNV(GLsizei n, const GLuint *programs, GLboolean *residences);
 
 /**
- * @brief void glDeleteProgramsNV( GLsizei n, const GLuint *programs );
+ * @brief void glBindProgramNV(GLenum target, GLuint id)
  */
-GLE_API void glDeleteProgramsNV( GLsizei n, const GLuint *programs );
+GLE_API void glBindProgramNV(GLenum target, GLuint id);
 
 /**
- * @brief void glExecuteProgramNV( GLenum target, GLuint id, const GLfloat *params );
+ * @brief void glDeleteProgramsNV(GLsizei n, const GLuint *programs)
  */
-GLE_API void glExecuteProgramNV( GLenum target, GLuint id, const GLfloat *params );
+GLE_API void glDeleteProgramsNV(GLsizei n, const GLuint *programs);
 
 /**
- * @brief void glGenProgramsNV( GLsizei n, GLuint *programs );
+ * @brief void glExecuteProgramNV(GLenum target, GLuint id, const GLfloat *params)
  */
-GLE_API void glGenProgramsNV( GLsizei n, GLuint *programs );
+GLE_API void glExecuteProgramNV(GLenum target, GLuint id, const GLfloat *params);
 
 /**
- * @brief void glGetProgramParameterdvNV( GLenum target, GLuint index, GLenum pname, GLdouble *params );
+ * @brief void glGenProgramsNV(GLsizei n, GLuint *programs)
  */
-GLE_API void glGetProgramParameterdvNV( GLenum target, GLuint index, GLenum pname, GLdouble *params );
+GLE_API void glGenProgramsNV(GLsizei n, GLuint *programs);
 
 /**
- * @brief void glGetProgramParameterfvNV( GLenum target, GLuint index, GLenum pname, GLfloat *params );
+ * @brief void glGetProgramParameterdvNV(GLenum target, GLuint index, GLenum pname, GLdouble *params)
  */
-GLE_API void glGetProgramParameterfvNV( GLenum target, GLuint index, GLenum pname, GLfloat *params );
+GLE_API void glGetProgramParameterdvNV(GLenum target, GLuint index, GLenum pname, GLdouble *params);
 
 /**
- * @brief void glGetProgramivNV( GLuint id, GLenum pname, GLint *params );
+ * @brief void glGetProgramParameterfvNV(GLenum target, GLuint index, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetProgramivNV( GLuint id, GLenum pname, GLint *params );
+GLE_API void glGetProgramParameterfvNV(GLenum target, GLuint index, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetProgramStringNV( GLuint id, GLenum pname, GLubyte *program );
+ * @brief void glGetProgramStringNV(GLuint id, GLenum pname, GLubyte *program)
  */
-GLE_API void glGetProgramStringNV( GLuint id, GLenum pname, GLubyte *program );
+GLE_API void glGetProgramStringNV(GLuint id, GLenum pname, GLubyte *program);
 
 /**
- * @brief void glGetTrackMatrixivNV( GLenum target, GLuint address, GLenum pname, GLint *params );
+ * @brief void glGetProgramivNV(GLuint id, GLenum pname, GLint *params)
  */
-GLE_API void glGetTrackMatrixivNV( GLenum target, GLuint address, GLenum pname, GLint *params );
+GLE_API void glGetProgramivNV(GLuint id, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetVertexAttribdvNV( GLuint index, GLenum pname, GLdouble *params );
+ * @brief void glGetTrackMatrixivNV(GLenum target, GLuint address, GLenum pname, GLint *params)
  */
-GLE_API void glGetVertexAttribdvNV( GLuint index, GLenum pname, GLdouble *params );
+GLE_API void glGetTrackMatrixivNV(GLenum target, GLuint address, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetVertexAttribfvNV( GLuint index, GLenum pname, GLfloat *params );
+ * @brief void glGetVertexAttribPointervNV(GLuint index, GLenum pname, GLvoid* *pointer)
  */
-GLE_API void glGetVertexAttribfvNV( GLuint index, GLenum pname, GLfloat *params );
+GLE_API void glGetVertexAttribPointervNV(GLuint index, GLenum pname, GLvoid* *pointer);
 
 /**
- * @brief void glGetVertexAttribivNV( GLuint index, GLenum pname, GLint *params );
+ * @brief void glGetVertexAttribdvNV(GLuint index, GLenum pname, GLdouble *params)
  */
-GLE_API void glGetVertexAttribivNV( GLuint index, GLenum pname, GLint *params );
+GLE_API void glGetVertexAttribdvNV(GLuint index, GLenum pname, GLdouble *params);
 
 /**
- * @brief void glGetVertexAttribPointervNV( GLuint index, GLenum pname, GLvoid* *pointer );
+ * @brief void glGetVertexAttribfvNV(GLuint index, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetVertexAttribPointervNV( GLuint index, GLenum pname, GLvoid* *pointer );
+GLE_API void glGetVertexAttribfvNV(GLuint index, GLenum pname, GLfloat *params);
 
 /**
- * @brief GLboolean glIsProgramNV( GLuint id );
+ * @brief void glGetVertexAttribivNV(GLuint index, GLenum pname, GLint *params)
  */
-GLE_API GLboolean glIsProgramNV( GLuint id );
+GLE_API void glGetVertexAttribivNV(GLuint index, GLenum pname, GLint *params);
 
 /**
- * @brief void glLoadProgramNV( GLenum target, GLuint id, GLsizei len, const GLubyte *program );
+ * @brief GLboolean glIsProgramNV(GLuint id)
  */
-GLE_API void glLoadProgramNV( GLenum target, GLuint id, GLsizei len, const GLubyte *program );
+GLE_API GLboolean glIsProgramNV(GLuint id);
 
 /**
- * @brief void glProgramParameter4dNV( GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+ * @brief void glLoadProgramNV(GLenum target, GLuint id, GLsizei len, const GLubyte *program)
  */
-GLE_API void glProgramParameter4dNV( GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+GLE_API void glLoadProgramNV(GLenum target, GLuint id, GLsizei len, const GLubyte *program);
 
 /**
- * @brief void glProgramParameter4dvNV( GLenum target, GLuint index, const GLdouble *v );
+ * @brief void glProgramParameter4dNV(GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
  */
-GLE_API void glProgramParameter4dvNV( GLenum target, GLuint index, const GLdouble *v );
+GLE_API void glProgramParameter4dNV(GLenum target, GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 
 /**
- * @brief void glProgramParameter4fNV( GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+ * @brief void glProgramParameter4dvNV(GLenum target, GLuint index, const GLdouble *v)
  */
-GLE_API void glProgramParameter4fNV( GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+GLE_API void glProgramParameter4dvNV(GLenum target, GLuint index, const GLdouble *v);
 
 /**
- * @brief void glProgramParameter4fvNV( GLenum target, GLuint index, const GLfloat *v );
+ * @brief void glProgramParameter4fNV(GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
  */
-GLE_API void glProgramParameter4fvNV( GLenum target, GLuint index, const GLfloat *v );
+GLE_API void glProgramParameter4fNV(GLenum target, GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 
 /**
- * @brief void glProgramParameters4dvNV( GLenum target, GLuint index, GLuint count, const GLdouble *v );
+ * @brief void glProgramParameter4fvNV(GLenum target, GLuint index, const GLfloat *v)
  */
-GLE_API void glProgramParameters4dvNV( GLenum target, GLuint index, GLuint count, const GLdouble *v );
+GLE_API void glProgramParameter4fvNV(GLenum target, GLuint index, const GLfloat *v);
 
 /**
- * @brief void glProgramParameters4fvNV( GLenum target, GLuint index, GLuint count, const GLfloat *v );
+ * @brief void glProgramParameters4dvNV(GLenum target, GLuint index, GLuint count, const GLdouble *v)
  */
-GLE_API void glProgramParameters4fvNV( GLenum target, GLuint index, GLuint count, const GLfloat *v );
+GLE_API void glProgramParameters4dvNV(GLenum target, GLuint index, GLuint count, const GLdouble *v);
 
 /**
- * @brief void glRequestResidentProgramsNV( GLsizei n, const GLuint *programs );
+ * @brief void glProgramParameters4fvNV(GLenum target, GLuint index, GLuint count, const GLfloat *v)
  */
-GLE_API void glRequestResidentProgramsNV( GLsizei n, const GLuint *programs );
+GLE_API void glProgramParameters4fvNV(GLenum target, GLuint index, GLuint count, const GLfloat *v);
 
 /**
- * @brief void glTrackMatrixNV( GLenum target, GLuint address, GLenum matrix, GLenum transform );
+ * @brief void glRequestResidentProgramsNV(GLsizei n, const GLuint *programs)
  */
-GLE_API void glTrackMatrixNV( GLenum target, GLuint address, GLenum matrix, GLenum transform );
+GLE_API void glRequestResidentProgramsNV(GLsizei n, const GLuint *programs);
 
 /**
- * @brief void glVertexAttribPointerNV( GLuint index, GLint fsize, GLenum type, GLsizei stride, const GLvoid *pointer );
+ * @brief void glTrackMatrixNV(GLenum target, GLuint address, GLenum matrix, GLenum transform)
  */
-GLE_API void glVertexAttribPointerNV( GLuint index, GLint fsize, GLenum type, GLsizei stride, const GLvoid *pointer );
+GLE_API void glTrackMatrixNV(GLenum target, GLuint address, GLenum matrix, GLenum transform);
 
 /**
- * @brief void glVertexAttrib1dNV( GLuint index, GLdouble x );
+ * @brief void glVertexAttrib1dNV(GLuint index, GLdouble x)
  */
-GLE_API void glVertexAttrib1dNV( GLuint index, GLdouble x );
+GLE_API void glVertexAttrib1dNV(GLuint index, GLdouble x);
 
 /**
- * @brief void glVertexAttrib1dvNV( GLuint index, const GLdouble *v );
+ * @brief void glVertexAttrib1dvNV(GLuint index, const GLdouble *v)
  */
-GLE_API void glVertexAttrib1dvNV( GLuint index, const GLdouble *v );
+GLE_API void glVertexAttrib1dvNV(GLuint index, const GLdouble *v);
 
 /**
- * @brief void glVertexAttrib1fNV( GLuint index, GLfloat x );
+ * @brief void glVertexAttrib1fNV(GLuint index, GLfloat x)
  */
-GLE_API void glVertexAttrib1fNV( GLuint index, GLfloat x );
+GLE_API void glVertexAttrib1fNV(GLuint index, GLfloat x);
 
 /**
- * @brief void glVertexAttrib1fvNV( GLuint index, const GLfloat *v );
+ * @brief void glVertexAttrib1fvNV(GLuint index, const GLfloat *v)
  */
-GLE_API void glVertexAttrib1fvNV( GLuint index, const GLfloat *v );
+GLE_API void glVertexAttrib1fvNV(GLuint index, const GLfloat *v);
 
 /**
- * @brief void glVertexAttrib1sNV( GLuint index, GLshort x );
+ * @brief void glVertexAttrib1sNV(GLuint index, GLshort x)
  */
-GLE_API void glVertexAttrib1sNV( GLuint index, GLshort x );
+GLE_API void glVertexAttrib1sNV(GLuint index, GLshort x);
 
 /**
- * @brief void glVertexAttrib1svNV( GLuint index, const GLshort *v );
+ * @brief void glVertexAttrib1svNV(GLuint index, const GLshort *v)
  */
-GLE_API void glVertexAttrib1svNV( GLuint index, const GLshort *v );
+GLE_API void glVertexAttrib1svNV(GLuint index, const GLshort *v);
 
 /**
- * @brief void glVertexAttrib2dNV( GLuint index, GLdouble x, GLdouble y );
+ * @brief void glVertexAttrib2dNV(GLuint index, GLdouble x, GLdouble y)
  */
-GLE_API void glVertexAttrib2dNV( GLuint index, GLdouble x, GLdouble y );
+GLE_API void glVertexAttrib2dNV(GLuint index, GLdouble x, GLdouble y);
 
 /**
- * @brief void glVertexAttrib2dvNV( GLuint index, const GLdouble *v );
+ * @brief void glVertexAttrib2dvNV(GLuint index, const GLdouble *v)
  */
-GLE_API void glVertexAttrib2dvNV( GLuint index, const GLdouble *v );
+GLE_API void glVertexAttrib2dvNV(GLuint index, const GLdouble *v);
 
 /**
- * @brief void glVertexAttrib2fNV( GLuint index, GLfloat x, GLfloat y );
+ * @brief void glVertexAttrib2fNV(GLuint index, GLfloat x, GLfloat y)
  */
-GLE_API void glVertexAttrib2fNV( GLuint index, GLfloat x, GLfloat y );
+GLE_API void glVertexAttrib2fNV(GLuint index, GLfloat x, GLfloat y);
 
 /**
- * @brief void glVertexAttrib2fvNV( GLuint index, const GLfloat *v );
+ * @brief void glVertexAttrib2fvNV(GLuint index, const GLfloat *v)
  */
-GLE_API void glVertexAttrib2fvNV( GLuint index, const GLfloat *v );
+GLE_API void glVertexAttrib2fvNV(GLuint index, const GLfloat *v);
 
 /**
- * @brief void glVertexAttrib2sNV( GLuint index, GLshort x, GLshort y );
+ * @brief void glVertexAttrib2sNV(GLuint index, GLshort x, GLshort y)
  */
-GLE_API void glVertexAttrib2sNV( GLuint index, GLshort x, GLshort y );
+GLE_API void glVertexAttrib2sNV(GLuint index, GLshort x, GLshort y);
 
 /**
- * @brief void glVertexAttrib2svNV( GLuint index, const GLshort *v );
+ * @brief void glVertexAttrib2svNV(GLuint index, const GLshort *v)
  */
-GLE_API void glVertexAttrib2svNV( GLuint index, const GLshort *v );
+GLE_API void glVertexAttrib2svNV(GLuint index, const GLshort *v);
 
 /**
- * @brief void glVertexAttrib3dNV( GLuint index, GLdouble x, GLdouble y, GLdouble z );
+ * @brief void glVertexAttrib3dNV(GLuint index, GLdouble x, GLdouble y, GLdouble z)
  */
-GLE_API void glVertexAttrib3dNV( GLuint index, GLdouble x, GLdouble y, GLdouble z );
+GLE_API void glVertexAttrib3dNV(GLuint index, GLdouble x, GLdouble y, GLdouble z);
 
 /**
- * @brief void glVertexAttrib3dvNV( GLuint index, const GLdouble *v );
+ * @brief void glVertexAttrib3dvNV(GLuint index, const GLdouble *v)
  */
-GLE_API void glVertexAttrib3dvNV( GLuint index, const GLdouble *v );
+GLE_API void glVertexAttrib3dvNV(GLuint index, const GLdouble *v);
 
 /**
- * @brief void glVertexAttrib3fNV( GLuint index, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glVertexAttrib3fNV(GLuint index, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glVertexAttrib3fNV( GLuint index, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glVertexAttrib3fNV(GLuint index, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glVertexAttrib3fvNV( GLuint index, const GLfloat *v );
+ * @brief void glVertexAttrib3fvNV(GLuint index, const GLfloat *v)
  */
-GLE_API void glVertexAttrib3fvNV( GLuint index, const GLfloat *v );
+GLE_API void glVertexAttrib3fvNV(GLuint index, const GLfloat *v);
 
 /**
- * @brief void glVertexAttrib3sNV( GLuint index, GLshort x, GLshort y, GLshort z );
+ * @brief void glVertexAttrib3sNV(GLuint index, GLshort x, GLshort y, GLshort z)
  */
-GLE_API void glVertexAttrib3sNV( GLuint index, GLshort x, GLshort y, GLshort z );
+GLE_API void glVertexAttrib3sNV(GLuint index, GLshort x, GLshort y, GLshort z);
 
 /**
- * @brief void glVertexAttrib3svNV( GLuint index, const GLshort *v );
+ * @brief void glVertexAttrib3svNV(GLuint index, const GLshort *v)
  */
-GLE_API void glVertexAttrib3svNV( GLuint index, const GLshort *v );
+GLE_API void glVertexAttrib3svNV(GLuint index, const GLshort *v);
 
 /**
- * @brief void glVertexAttrib4dNV( GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+ * @brief void glVertexAttrib4dNV(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
  */
-GLE_API void glVertexAttrib4dNV( GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+GLE_API void glVertexAttrib4dNV(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 
 /**
- * @brief void glVertexAttrib4dvNV( GLuint index, const GLdouble *v );
+ * @brief void glVertexAttrib4dvNV(GLuint index, const GLdouble *v)
  */
-GLE_API void glVertexAttrib4dvNV( GLuint index, const GLdouble *v );
+GLE_API void glVertexAttrib4dvNV(GLuint index, const GLdouble *v);
 
 /**
- * @brief void glVertexAttrib4fNV( GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+ * @brief void glVertexAttrib4fNV(GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
  */
-GLE_API void glVertexAttrib4fNV( GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+GLE_API void glVertexAttrib4fNV(GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 
 /**
- * @brief void glVertexAttrib4fvNV( GLuint index, const GLfloat *v );
+ * @brief void glVertexAttrib4fvNV(GLuint index, const GLfloat *v)
  */
-GLE_API void glVertexAttrib4fvNV( GLuint index, const GLfloat *v );
+GLE_API void glVertexAttrib4fvNV(GLuint index, const GLfloat *v);
 
 /**
- * @brief void glVertexAttrib4sNV( GLuint index, GLshort x, GLshort y, GLshort z, GLshort w );
+ * @brief void glVertexAttrib4sNV(GLuint index, GLshort x, GLshort y, GLshort z, GLshort w)
  */
-GLE_API void glVertexAttrib4sNV( GLuint index, GLshort x, GLshort y, GLshort z, GLshort w );
+GLE_API void glVertexAttrib4sNV(GLuint index, GLshort x, GLshort y, GLshort z, GLshort w);
 
 /**
- * @brief void glVertexAttrib4svNV( GLuint index, const GLshort *v );
+ * @brief void glVertexAttrib4svNV(GLuint index, const GLshort *v)
  */
-GLE_API void glVertexAttrib4svNV( GLuint index, const GLshort *v );
+GLE_API void glVertexAttrib4svNV(GLuint index, const GLshort *v);
 
 /**
- * @brief void glVertexAttrib4ubNV( GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w );
+ * @brief void glVertexAttrib4ubNV(GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w)
  */
-GLE_API void glVertexAttrib4ubNV( GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w );
+GLE_API void glVertexAttrib4ubNV(GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w);
 
 /**
- * @brief void glVertexAttrib4ubvNV( GLuint index, const GLubyte *v );
+ * @brief void glVertexAttrib4ubvNV(GLuint index, const GLubyte *v)
  */
-GLE_API void glVertexAttrib4ubvNV( GLuint index, const GLubyte *v );
+GLE_API void glVertexAttrib4ubvNV(GLuint index, const GLubyte *v);
 
 /**
- * @brief void glVertexAttribs1dvNV( GLuint index, GLsizei count, const GLdouble *v );
+ * @brief void glVertexAttribPointerNV(GLuint index, GLint fsize, GLenum type, GLsizei stride, const GLvoid *pointer)
  */
-GLE_API void glVertexAttribs1dvNV( GLuint index, GLsizei count, const GLdouble *v );
+GLE_API void glVertexAttribPointerNV(GLuint index, GLint fsize, GLenum type, GLsizei stride, const GLvoid *pointer);
 
 /**
- * @brief void glVertexAttribs1fvNV( GLuint index, GLsizei count, const GLfloat *v );
+ * @brief void glVertexAttribs1dvNV(GLuint index, GLsizei count, const GLdouble *v)
  */
-GLE_API void glVertexAttribs1fvNV( GLuint index, GLsizei count, const GLfloat *v );
+GLE_API void glVertexAttribs1dvNV(GLuint index, GLsizei count, const GLdouble *v);
 
 /**
- * @brief void glVertexAttribs1svNV( GLuint index, GLsizei count, const GLshort *v );
+ * @brief void glVertexAttribs1fvNV(GLuint index, GLsizei count, const GLfloat *v)
  */
-GLE_API void glVertexAttribs1svNV( GLuint index, GLsizei count, const GLshort *v );
+GLE_API void glVertexAttribs1fvNV(GLuint index, GLsizei count, const GLfloat *v);
 
 /**
- * @brief void glVertexAttribs2dvNV( GLuint index, GLsizei count, const GLdouble *v );
+ * @brief void glVertexAttribs1svNV(GLuint index, GLsizei count, const GLshort *v)
  */
-GLE_API void glVertexAttribs2dvNV( GLuint index, GLsizei count, const GLdouble *v );
+GLE_API void glVertexAttribs1svNV(GLuint index, GLsizei count, const GLshort *v);
 
 /**
- * @brief void glVertexAttribs2fvNV( GLuint index, GLsizei count, const GLfloat *v );
+ * @brief void glVertexAttribs2dvNV(GLuint index, GLsizei count, const GLdouble *v)
  */
-GLE_API void glVertexAttribs2fvNV( GLuint index, GLsizei count, const GLfloat *v );
+GLE_API void glVertexAttribs2dvNV(GLuint index, GLsizei count, const GLdouble *v);
 
 /**
- * @brief void glVertexAttribs2svNV( GLuint index, GLsizei count, const GLshort *v );
+ * @brief void glVertexAttribs2fvNV(GLuint index, GLsizei count, const GLfloat *v)
  */
-GLE_API void glVertexAttribs2svNV( GLuint index, GLsizei count, const GLshort *v );
+GLE_API void glVertexAttribs2fvNV(GLuint index, GLsizei count, const GLfloat *v);
 
 /**
- * @brief void glVertexAttribs3dvNV( GLuint index, GLsizei count, const GLdouble *v );
+ * @brief void glVertexAttribs2svNV(GLuint index, GLsizei count, const GLshort *v)
  */
-GLE_API void glVertexAttribs3dvNV( GLuint index, GLsizei count, const GLdouble *v );
+GLE_API void glVertexAttribs2svNV(GLuint index, GLsizei count, const GLshort *v);
 
 /**
- * @brief void glVertexAttribs3fvNV( GLuint index, GLsizei count, const GLfloat *v );
+ * @brief void glVertexAttribs3dvNV(GLuint index, GLsizei count, const GLdouble *v)
  */
-GLE_API void glVertexAttribs3fvNV( GLuint index, GLsizei count, const GLfloat *v );
+GLE_API void glVertexAttribs3dvNV(GLuint index, GLsizei count, const GLdouble *v);
 
 /**
- * @brief void glVertexAttribs3svNV( GLuint index, GLsizei count, const GLshort *v );
+ * @brief void glVertexAttribs3fvNV(GLuint index, GLsizei count, const GLfloat *v)
  */
-GLE_API void glVertexAttribs3svNV( GLuint index, GLsizei count, const GLshort *v );
+GLE_API void glVertexAttribs3fvNV(GLuint index, GLsizei count, const GLfloat *v);
 
 /**
- * @brief void glVertexAttribs4dvNV( GLuint index, GLsizei count, const GLdouble *v );
+ * @brief void glVertexAttribs3svNV(GLuint index, GLsizei count, const GLshort *v)
  */
-GLE_API void glVertexAttribs4dvNV( GLuint index, GLsizei count, const GLdouble *v );
+GLE_API void glVertexAttribs3svNV(GLuint index, GLsizei count, const GLshort *v);
 
 /**
- * @brief void glVertexAttribs4fvNV( GLuint index, GLsizei count, const GLfloat *v );
+ * @brief void glVertexAttribs4dvNV(GLuint index, GLsizei count, const GLdouble *v)
  */
-GLE_API void glVertexAttribs4fvNV( GLuint index, GLsizei count, const GLfloat *v );
+GLE_API void glVertexAttribs4dvNV(GLuint index, GLsizei count, const GLdouble *v);
 
 /**
- * @brief void glVertexAttribs4svNV( GLuint index, GLsizei count, const GLshort *v );
+ * @brief void glVertexAttribs4fvNV(GLuint index, GLsizei count, const GLfloat *v)
  */
-GLE_API void glVertexAttribs4svNV( GLuint index, GLsizei count, const GLshort *v );
+GLE_API void glVertexAttribs4fvNV(GLuint index, GLsizei count, const GLfloat *v);
 
 /**
- * @brief void glVertexAttribs4ubvNV( GLuint index, GLsizei count, const GLubyte *v );
+ * @brief void glVertexAttribs4svNV(GLuint index, GLsizei count, const GLshort *v)
  */
-GLE_API void glVertexAttribs4ubvNV( GLuint index, GLsizei count, const GLubyte *v );
+GLE_API void glVertexAttribs4svNV(GLuint index, GLsizei count, const GLshort *v);
+
+/**
+ * @brief void glVertexAttribs4ubvNV(GLuint index, GLsizei count, const GLubyte *v)
+ */
+GLE_API void glVertexAttribs4ubvNV(GLuint index, GLsizei count, const GLubyte *v);
 
 //@}
+
+
 
 
 /**
@@ -12881,13 +14210,17 @@ GLE_API void glVertexAttribs4ubvNV( GLuint index, GLsizei count, const GLubyte *
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_vertex_program1_1 is supported.
- * @return Returns \c true if \b GL_NV_vertex_program1_1 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_vertex_program1_1 is supported.
+ * @return Returns \c true if \b GL_NV_vertex_program1_1 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_vertex_program1_1();
 
+
 //@}
+
+
 
 
 /**
@@ -12897,13 +14230,17 @@ GLE_API bool isGL_NV_vertex_program1_1();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_vertex_program2 is supported.
- * @return Returns \c true if \b GL_NV_vertex_program2 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_vertex_program2 is supported.
+ * @return Returns \c true if \b GL_NV_vertex_program2 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_vertex_program2();
 
+
 //@}
+
+
 
 
 /**
@@ -12913,13 +14250,17 @@ GLE_API bool isGL_NV_vertex_program2();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_vertex_program2_option is supported.
- * @return Returns \c true if \b GL_NV_vertex_program2_option is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_vertex_program2_option is supported.
+ * @return Returns \c true if \b GL_NV_vertex_program2_option is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_vertex_program2_option();
 
+
 //@}
+
+
 
 
 /**
@@ -12929,13 +14270,17 @@ GLE_API bool isGL_NV_vertex_program2_option();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_vertex_program3 is supported.
- * @return Returns \c true if \b GL_NV_vertex_program3 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_vertex_program3 is supported.
+ * @return Returns \c true if \b GL_NV_vertex_program3 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_vertex_program3();
 
+
 //@}
+
+
 
 
 /**
@@ -12945,128 +14290,133 @@ GLE_API bool isGL_NV_vertex_program3();
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_vertex_program4 is supported.
- * @return Returns \c true if \b GL_NV_vertex_program4 is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_vertex_program4 is supported.
+ * @return Returns \c true if \b GL_NV_vertex_program4 is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_vertex_program4();
 
-/**
- * @brief void glVertexAttribI1iEXT( GLuint index, GLint x );
- */
-GLE_API void glVertexAttribI1iEXT( GLuint index, GLint x );
+
 
 /**
- * @brief void glVertexAttribI2iEXT( GLuint index, GLint x, GLint y );
+ * @brief void glGetVertexAttribIivEXT(GLuint index, GLenum pname, GLint *params)
  */
-GLE_API void glVertexAttribI2iEXT( GLuint index, GLint x, GLint y );
+GLE_API void glGetVertexAttribIivEXT(GLuint index, GLenum pname, GLint *params);
 
 /**
- * @brief void glVertexAttribI3iEXT( GLuint index, GLint x, GLint y, GLint z );
+ * @brief void glGetVertexAttribIuivEXT(GLuint index, GLenum pname, GLuint *params)
  */
-GLE_API void glVertexAttribI3iEXT( GLuint index, GLint x, GLint y, GLint z );
+GLE_API void glGetVertexAttribIuivEXT(GLuint index, GLenum pname, GLuint *params);
 
 /**
- * @brief void glVertexAttribI4iEXT( GLuint index, GLint x, GLint y, GLint z, GLint w );
+ * @brief void glVertexAttribI1iEXT(GLuint index, GLint x)
  */
-GLE_API void glVertexAttribI4iEXT( GLuint index, GLint x, GLint y, GLint z, GLint w );
+GLE_API void glVertexAttribI1iEXT(GLuint index, GLint x);
 
 /**
- * @brief void glVertexAttribI1uiEXT( GLuint index, GLuint x );
+ * @brief void glVertexAttribI1ivEXT(GLuint index, const GLint *v)
  */
-GLE_API void glVertexAttribI1uiEXT( GLuint index, GLuint x );
+GLE_API void glVertexAttribI1ivEXT(GLuint index, const GLint *v);
 
 /**
- * @brief void glVertexAttribI2uiEXT( GLuint index, GLuint x, GLuint y );
+ * @brief void glVertexAttribI1uiEXT(GLuint index, GLuint x)
  */
-GLE_API void glVertexAttribI2uiEXT( GLuint index, GLuint x, GLuint y );
+GLE_API void glVertexAttribI1uiEXT(GLuint index, GLuint x);
 
 /**
- * @brief void glVertexAttribI3uiEXT( GLuint index, GLuint x, GLuint y, GLuint z );
+ * @brief void glVertexAttribI1uivEXT(GLuint index, const GLuint *v)
  */
-GLE_API void glVertexAttribI3uiEXT( GLuint index, GLuint x, GLuint y, GLuint z );
+GLE_API void glVertexAttribI1uivEXT(GLuint index, const GLuint *v);
 
 /**
- * @brief void glVertexAttribI4uiEXT( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+ * @brief void glVertexAttribI2iEXT(GLuint index, GLint x, GLint y)
  */
-GLE_API void glVertexAttribI4uiEXT( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+GLE_API void glVertexAttribI2iEXT(GLuint index, GLint x, GLint y);
 
 /**
- * @brief void glVertexAttribI1ivEXT( GLuint index, const GLint *v );
+ * @brief void glVertexAttribI2ivEXT(GLuint index, const GLint *v)
  */
-GLE_API void glVertexAttribI1ivEXT( GLuint index, const GLint *v );
+GLE_API void glVertexAttribI2ivEXT(GLuint index, const GLint *v);
 
 /**
- * @brief void glVertexAttribI2ivEXT( GLuint index, const GLint *v );
+ * @brief void glVertexAttribI2uiEXT(GLuint index, GLuint x, GLuint y)
  */
-GLE_API void glVertexAttribI2ivEXT( GLuint index, const GLint *v );
+GLE_API void glVertexAttribI2uiEXT(GLuint index, GLuint x, GLuint y);
 
 /**
- * @brief void glVertexAttribI3ivEXT( GLuint index, const GLint *v );
+ * @brief void glVertexAttribI2uivEXT(GLuint index, const GLuint *v)
  */
-GLE_API void glVertexAttribI3ivEXT( GLuint index, const GLint *v );
+GLE_API void glVertexAttribI2uivEXT(GLuint index, const GLuint *v);
 
 /**
- * @brief void glVertexAttribI4ivEXT( GLuint index, const GLint *v );
+ * @brief void glVertexAttribI3iEXT(GLuint index, GLint x, GLint y, GLint z)
  */
-GLE_API void glVertexAttribI4ivEXT( GLuint index, const GLint *v );
+GLE_API void glVertexAttribI3iEXT(GLuint index, GLint x, GLint y, GLint z);
 
 /**
- * @brief void glVertexAttribI1uivEXT( GLuint index, const GLuint *v );
+ * @brief void glVertexAttribI3ivEXT(GLuint index, const GLint *v)
  */
-GLE_API void glVertexAttribI1uivEXT( GLuint index, const GLuint *v );
+GLE_API void glVertexAttribI3ivEXT(GLuint index, const GLint *v);
 
 /**
- * @brief void glVertexAttribI2uivEXT( GLuint index, const GLuint *v );
+ * @brief void glVertexAttribI3uiEXT(GLuint index, GLuint x, GLuint y, GLuint z)
  */
-GLE_API void glVertexAttribI2uivEXT( GLuint index, const GLuint *v );
+GLE_API void glVertexAttribI3uiEXT(GLuint index, GLuint x, GLuint y, GLuint z);
 
 /**
- * @brief void glVertexAttribI3uivEXT( GLuint index, const GLuint *v );
+ * @brief void glVertexAttribI3uivEXT(GLuint index, const GLuint *v)
  */
-GLE_API void glVertexAttribI3uivEXT( GLuint index, const GLuint *v );
+GLE_API void glVertexAttribI3uivEXT(GLuint index, const GLuint *v);
 
 /**
- * @brief void glVertexAttribI4uivEXT( GLuint index, const GLuint *v );
+ * @brief void glVertexAttribI4bvEXT(GLuint index, const GLbyte *v)
  */
-GLE_API void glVertexAttribI4uivEXT( GLuint index, const GLuint *v );
+GLE_API void glVertexAttribI4bvEXT(GLuint index, const GLbyte *v);
 
 /**
- * @brief void glVertexAttribI4bvEXT( GLuint index, const GLbyte *v );
+ * @brief void glVertexAttribI4iEXT(GLuint index, GLint x, GLint y, GLint z, GLint w)
  */
-GLE_API void glVertexAttribI4bvEXT( GLuint index, const GLbyte *v );
+GLE_API void glVertexAttribI4iEXT(GLuint index, GLint x, GLint y, GLint z, GLint w);
 
 /**
- * @brief void glVertexAttribI4svEXT( GLuint index, const GLshort *v );
+ * @brief void glVertexAttribI4ivEXT(GLuint index, const GLint *v)
  */
-GLE_API void glVertexAttribI4svEXT( GLuint index, const GLshort *v );
+GLE_API void glVertexAttribI4ivEXT(GLuint index, const GLint *v);
 
 /**
- * @brief void glVertexAttribI4ubvEXT( GLuint index, const GLubyte *v );
+ * @brief void glVertexAttribI4svEXT(GLuint index, const GLshort *v)
  */
-GLE_API void glVertexAttribI4ubvEXT( GLuint index, const GLubyte *v );
+GLE_API void glVertexAttribI4svEXT(GLuint index, const GLshort *v);
 
 /**
- * @brief void glVertexAttribI4usvEXT( GLuint index, const GLushort *v );
+ * @brief void glVertexAttribI4ubvEXT(GLuint index, const GLubyte *v)
  */
-GLE_API void glVertexAttribI4usvEXT( GLuint index, const GLushort *v );
+GLE_API void glVertexAttribI4ubvEXT(GLuint index, const GLubyte *v);
 
 /**
- * @brief void glVertexAttribIPointerEXT( GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+ * @brief void glVertexAttribI4uiEXT(GLuint index, GLuint x, GLuint y, GLuint z, GLuint w)
  */
-GLE_API void glVertexAttribIPointerEXT( GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+GLE_API void glVertexAttribI4uiEXT(GLuint index, GLuint x, GLuint y, GLuint z, GLuint w);
 
 /**
- * @brief void glGetVertexAttribIivEXT( GLuint index, GLenum pname, GLint *params );
+ * @brief void glVertexAttribI4uivEXT(GLuint index, const GLuint *v)
  */
-GLE_API void glGetVertexAttribIivEXT( GLuint index, GLenum pname, GLint *params );
+GLE_API void glVertexAttribI4uivEXT(GLuint index, const GLuint *v);
 
 /**
- * @brief void glGetVertexAttribIuivEXT( GLuint index, GLenum pname, GLuint *params );
+ * @brief void glVertexAttribI4usvEXT(GLuint index, const GLushort *v)
  */
-GLE_API void glGetVertexAttribIuivEXT( GLuint index, GLenum pname, GLuint *params );
+GLE_API void glVertexAttribI4usvEXT(GLuint index, const GLushort *v);
+
+/**
+ * @brief void glVertexAttribIPointerEXT(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
+ */
+GLE_API void glVertexAttribIPointerEXT(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
 
 //@}
+
+
 
 
 /**
@@ -13076,73 +14426,78 @@ GLE_API void glGetVertexAttribIuivEXT( GLuint index, GLenum pname, GLuint *param
  * @ingroup g_GL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_NV_video_capture is supported.
- * @return Returns \c true if \b GL_NV_video_capture is supported, false otherwise.
+ * @brief  Tests if \b GL_NV_video_capture is supported.
+ * @return Returns \c true if \b GL_NV_video_capture is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_video_capture();
 
-/**
- * @brief void glBeginVideoCaptureNV( GLuint video_capture_slot );
- */
-GLE_API void glBeginVideoCaptureNV( GLuint video_capture_slot );
+
 
 /**
- * @brief void glBindVideoCaptureStreamBufferNV( GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLintptrARB offset );
+ * @brief void glBeginVideoCaptureNV(GLuint video_capture_slot)
  */
-GLE_API void glBindVideoCaptureStreamBufferNV( GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLintptrARB offset );
+GLE_API void glBeginVideoCaptureNV(GLuint video_capture_slot);
 
 /**
- * @brief void glBindVideoCaptureStreamTextureNV( GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLenum target, GLuint texture );
+ * @brief void glBindVideoCaptureStreamBufferNV(GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLintptrARB offset)
  */
-GLE_API void glBindVideoCaptureStreamTextureNV( GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLenum target, GLuint texture );
+GLE_API void glBindVideoCaptureStreamBufferNV(GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLintptrARB offset);
 
 /**
- * @brief void glEndVideoCaptureNV( GLuint video_capture_slot );
+ * @brief void glBindVideoCaptureStreamTextureNV(GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLenum target, GLuint texture)
  */
-GLE_API void glEndVideoCaptureNV( GLuint video_capture_slot );
+GLE_API void glBindVideoCaptureStreamTextureNV(GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLenum target, GLuint texture);
 
 /**
- * @brief void glGetVideoCaptureivNV( GLuint video_capture_slot, GLenum pname, GLint *params );
+ * @brief void glEndVideoCaptureNV(GLuint video_capture_slot)
  */
-GLE_API void glGetVideoCaptureivNV( GLuint video_capture_slot, GLenum pname, GLint *params );
+GLE_API void glEndVideoCaptureNV(GLuint video_capture_slot);
 
 /**
- * @brief void glGetVideoCaptureStreamivNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLint *params );
+ * @brief void glGetVideoCaptureStreamdvNV(GLuint video_capture_slot, GLuint stream, GLenum pname, GLdouble *params)
  */
-GLE_API void glGetVideoCaptureStreamivNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLint *params );
+GLE_API void glGetVideoCaptureStreamdvNV(GLuint video_capture_slot, GLuint stream, GLenum pname, GLdouble *params);
 
 /**
- * @brief void glGetVideoCaptureStreamfvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLfloat *params );
+ * @brief void glGetVideoCaptureStreamfvNV(GLuint video_capture_slot, GLuint stream, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetVideoCaptureStreamfvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLfloat *params );
+GLE_API void glGetVideoCaptureStreamfvNV(GLuint video_capture_slot, GLuint stream, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetVideoCaptureStreamdvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLdouble *params );
+ * @brief void glGetVideoCaptureStreamivNV(GLuint video_capture_slot, GLuint stream, GLenum pname, GLint *params)
  */
-GLE_API void glGetVideoCaptureStreamdvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, GLdouble *params );
+GLE_API void glGetVideoCaptureStreamivNV(GLuint video_capture_slot, GLuint stream, GLenum pname, GLint *params);
 
 /**
- * @brief GLenum glVideoCaptureNV( GLuint video_capture_slot, GLuint *sequence_num, GLuint64EXT *capture_time );
+ * @brief void glGetVideoCaptureivNV(GLuint video_capture_slot, GLenum pname, GLint *params)
  */
-GLE_API GLenum glVideoCaptureNV( GLuint video_capture_slot, GLuint *sequence_num, GLuint64EXT *capture_time );
+GLE_API void glGetVideoCaptureivNV(GLuint video_capture_slot, GLenum pname, GLint *params);
 
 /**
- * @brief void glVideoCaptureStreamParameterivNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLint *params );
+ * @brief GLenum glVideoCaptureNV(GLuint video_capture_slot, GLuint *sequence_num, GLuint64EXT *capture_time)
  */
-GLE_API void glVideoCaptureStreamParameterivNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLint *params );
+GLE_API GLenum glVideoCaptureNV(GLuint video_capture_slot, GLuint *sequence_num, GLuint64EXT *capture_time);
 
 /**
- * @brief void glVideoCaptureStreamParameterfvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLfloat *params );
+ * @brief void glVideoCaptureStreamParameterdvNV(GLuint video_capture_slot, GLuint stream, GLenum pname, const GLdouble *params)
  */
-GLE_API void glVideoCaptureStreamParameterfvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLfloat *params );
+GLE_API void glVideoCaptureStreamParameterdvNV(GLuint video_capture_slot, GLuint stream, GLenum pname, const GLdouble *params);
 
 /**
- * @brief void glVideoCaptureStreamParameterdvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLdouble *params );
+ * @brief void glVideoCaptureStreamParameterfvNV(GLuint video_capture_slot, GLuint stream, GLenum pname, const GLfloat *params)
  */
-GLE_API void glVideoCaptureStreamParameterdvNV( GLuint video_capture_slot, GLuint stream, GLenum pname, const GLdouble *params );
+GLE_API void glVideoCaptureStreamParameterfvNV(GLuint video_capture_slot, GLuint stream, GLenum pname, const GLfloat *params);
+
+/**
+ * @brief void glVideoCaptureStreamParameterivNV(GLuint video_capture_slot, GLuint stream, GLenum pname, const GLint *params)
+ */
+GLE_API void glVideoCaptureStreamParameterivNV(GLuint video_capture_slot, GLuint stream, GLenum pname, const GLint *params);
 
 //@}
+
+
 
 
 /**
@@ -13152,13 +14507,17 @@ GLE_API void glVideoCaptureStreamParameterdvNV( GLuint video_capture_slot, GLuin
  * @ingroup g_GL_OES g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_OES_read_format is supported.
- * @return Returns \c true if \b GL_OES_read_format is supported, false otherwise.
+ * @brief  Tests if \b GL_OES_read_format is supported.
+ * @return Returns \c true if \b GL_OES_read_format is supported, \c false otherwise.
  */
 GLE_API bool isGL_OES_read_format();
 
+
 //@}
+
+
 
 
 /**
@@ -13168,13 +14527,17 @@ GLE_API bool isGL_OES_read_format();
  * @ingroup g_GL_OML g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_OML_interlace is supported.
- * @return Returns \c true if \b GL_OML_interlace is supported, false otherwise.
+ * @brief  Tests if \b GL_OML_interlace is supported.
+ * @return Returns \c true if \b GL_OML_interlace is supported, \c false otherwise.
  */
 GLE_API bool isGL_OML_interlace();
 
+
 //@}
+
+
 
 
 /**
@@ -13184,13 +14547,17 @@ GLE_API bool isGL_OML_interlace();
  * @ingroup g_GL_OML g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_OML_resample is supported.
- * @return Returns \c true if \b GL_OML_resample is supported, false otherwise.
+ * @brief  Tests if \b GL_OML_resample is supported.
+ * @return Returns \c true if \b GL_OML_resample is supported, \c false otherwise.
  */
 GLE_API bool isGL_OML_resample();
 
+
 //@}
+
+
 
 
 /**
@@ -13200,13 +14567,17 @@ GLE_API bool isGL_OML_resample();
  * @ingroup g_GL_OML g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_OML_subsample is supported.
- * @return Returns \c true if \b GL_OML_subsample is supported, false otherwise.
+ * @brief  Tests if \b GL_OML_subsample is supported.
+ * @return Returns \c true if \b GL_OML_subsample is supported, \c false otherwise.
  */
 GLE_API bool isGL_OML_subsample();
 
+
 //@}
+
+
 
 
 /**
@@ -13216,18 +14587,23 @@ GLE_API bool isGL_OML_subsample();
  * @ingroup g_GL_PGI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_PGI_misc_hints is supported.
- * @return Returns \c true if \b GL_PGI_misc_hints is supported, false otherwise.
+ * @brief  Tests if \b GL_PGI_misc_hints is supported.
+ * @return Returns \c true if \b GL_PGI_misc_hints is supported, \c false otherwise.
  */
 GLE_API bool isGL_PGI_misc_hints();
 
+
+
 /**
- * @brief void glHintPGI( GLenum target, GLint mode );
+ * @brief void glHintPGI(GLenum target, GLint mode)
  */
-GLE_API void glHintPGI( GLenum target, GLint mode );
+GLE_API void glHintPGI(GLenum target, GLint mode);
 
 //@}
+
+
 
 
 /**
@@ -13237,13 +14613,17 @@ GLE_API void glHintPGI( GLenum target, GLint mode );
  * @ingroup g_GL_PGI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_PGI_vertex_hints is supported.
- * @return Returns \c true if \b GL_PGI_vertex_hints is supported, false otherwise.
+ * @brief  Tests if \b GL_PGI_vertex_hints is supported.
+ * @return Returns \c true if \b GL_PGI_vertex_hints is supported, \c false otherwise.
  */
 GLE_API bool isGL_PGI_vertex_hints();
 
+
 //@}
+
+
 
 
 /**
@@ -13253,13 +14633,17 @@ GLE_API bool isGL_PGI_vertex_hints();
  * @ingroup g_GL_REND g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_REND_screen_coordinates is supported.
- * @return Returns \c true if \b GL_REND_screen_coordinates is supported, false otherwise.
+ * @brief  Tests if \b GL_REND_screen_coordinates is supported.
+ * @return Returns \c true if \b GL_REND_screen_coordinates is supported, \c false otherwise.
  */
 GLE_API bool isGL_REND_screen_coordinates();
 
+
 //@}
+
+
 
 
 /**
@@ -13269,13 +14653,17 @@ GLE_API bool isGL_REND_screen_coordinates();
  * @ingroup g_GL_S3 g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_S3_s3tc is supported.
- * @return Returns \c true if \b GL_S3_s3tc is supported, false otherwise.
+ * @brief  Tests if \b GL_S3_s3tc is supported.
+ * @return Returns \c true if \b GL_S3_s3tc is supported, \c false otherwise.
  */
 GLE_API bool isGL_S3_s3tc();
 
+
 //@}
+
+
 
 
 /**
@@ -13285,23 +14673,28 @@ GLE_API bool isGL_S3_s3tc();
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_detail_texture is supported.
- * @return Returns \c true if \b GL_SGIS_detail_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_detail_texture is supported.
+ * @return Returns \c true if \b GL_SGIS_detail_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_detail_texture();
 
-/**
- * @brief void glDetailTexFuncSGIS( GLenum target, GLsizei n, const GLfloat *points );
- */
-GLE_API void glDetailTexFuncSGIS( GLenum target, GLsizei n, const GLfloat *points );
+
 
 /**
- * @brief void glGetDetailTexFuncSGIS( GLenum target, GLfloat *points );
+ * @brief void glDetailTexFuncSGIS(GLenum target, GLsizei n, const GLfloat *points)
  */
-GLE_API void glGetDetailTexFuncSGIS( GLenum target, GLfloat *points );
+GLE_API void glDetailTexFuncSGIS(GLenum target, GLsizei n, const GLfloat *points);
+
+/**
+ * @brief void glGetDetailTexFuncSGIS(GLenum target, GLfloat *points)
+ */
+GLE_API void glGetDetailTexFuncSGIS(GLenum target, GLfloat *points);
 
 //@}
+
+
 
 
 /**
@@ -13311,23 +14704,28 @@ GLE_API void glGetDetailTexFuncSGIS( GLenum target, GLfloat *points );
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_fog_function is supported.
- * @return Returns \c true if \b GL_SGIS_fog_function is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_fog_function is supported.
+ * @return Returns \c true if \b GL_SGIS_fog_function is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_fog_function();
 
-/**
- * @brief void glFogFuncSGIS( GLsizei n, const GLfloat *points );
- */
-GLE_API void glFogFuncSGIS( GLsizei n, const GLfloat *points );
+
 
 /**
- * @brief void glGetFogFuncSGIS( GLfloat *points );
+ * @brief void glFogFuncSGIS(GLsizei n, const GLfloat *points)
  */
-GLE_API void glGetFogFuncSGIS( GLfloat *points );
+GLE_API void glFogFuncSGIS(GLsizei n, const GLfloat *points);
+
+/**
+ * @brief void glGetFogFuncSGIS(GLfloat *points)
+ */
+GLE_API void glGetFogFuncSGIS(GLfloat *points);
 
 //@}
+
+
 
 
 /**
@@ -13337,13 +14735,17 @@ GLE_API void glGetFogFuncSGIS( GLfloat *points );
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_generate_mipmap is supported.
- * @return Returns \c true if \b GL_SGIS_generate_mipmap is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_generate_mipmap is supported.
+ * @return Returns \c true if \b GL_SGIS_generate_mipmap is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_generate_mipmap();
 
+
 //@}
+
+
 
 
 /**
@@ -13353,23 +14755,28 @@ GLE_API bool isGL_SGIS_generate_mipmap();
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_multisample is supported.
- * @return Returns \c true if \b GL_SGIS_multisample is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_multisample is supported.
+ * @return Returns \c true if \b GL_SGIS_multisample is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_multisample();
 
-/**
- * @brief void glSampleMaskSGIS( GLclampf value, GLboolean invert );
- */
-GLE_API void glSampleMaskSGIS( GLclampf value, GLboolean invert );
+
 
 /**
- * @brief void glSamplePatternSGIS( GLenum pattern );
+ * @brief void glSampleMaskSGIS(GLclampf value, GLboolean invert)
  */
-GLE_API void glSamplePatternSGIS( GLenum pattern );
+GLE_API void glSampleMaskSGIS(GLclampf value, GLboolean invert);
+
+/**
+ * @brief void glSamplePatternSGIS(GLenum pattern)
+ */
+GLE_API void glSamplePatternSGIS(GLenum pattern);
 
 //@}
+
+
 
 
 /**
@@ -13379,43 +14786,48 @@ GLE_API void glSamplePatternSGIS( GLenum pattern );
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_pixel_texture is supported.
- * @return Returns \c true if \b GL_SGIS_pixel_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_pixel_texture is supported.
+ * @return Returns \c true if \b GL_SGIS_pixel_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_pixel_texture();
 
-/**
- * @brief void glPixelTexGenParameteriSGIS( GLenum pname, GLint param );
- */
-GLE_API void glPixelTexGenParameteriSGIS( GLenum pname, GLint param );
+
 
 /**
- * @brief void glPixelTexGenParameterivSGIS( GLenum pname, const GLint *params );
+ * @brief void glGetPixelTexGenParameterfvSGIS(GLenum pname, GLfloat *params)
  */
-GLE_API void glPixelTexGenParameterivSGIS( GLenum pname, const GLint *params );
+GLE_API void glGetPixelTexGenParameterfvSGIS(GLenum pname, GLfloat *params);
 
 /**
- * @brief void glPixelTexGenParameterfSGIS( GLenum pname, GLfloat param );
+ * @brief void glGetPixelTexGenParameterivSGIS(GLenum pname, GLint *params)
  */
-GLE_API void glPixelTexGenParameterfSGIS( GLenum pname, GLfloat param );
+GLE_API void glGetPixelTexGenParameterivSGIS(GLenum pname, GLint *params);
 
 /**
- * @brief void glPixelTexGenParameterfvSGIS( GLenum pname, const GLfloat *params );
+ * @brief void glPixelTexGenParameterfSGIS(GLenum pname, GLfloat param)
  */
-GLE_API void glPixelTexGenParameterfvSGIS( GLenum pname, const GLfloat *params );
+GLE_API void glPixelTexGenParameterfSGIS(GLenum pname, GLfloat param);
 
 /**
- * @brief void glGetPixelTexGenParameterivSGIS( GLenum pname, GLint *params );
+ * @brief void glPixelTexGenParameterfvSGIS(GLenum pname, const GLfloat *params)
  */
-GLE_API void glGetPixelTexGenParameterivSGIS( GLenum pname, GLint *params );
+GLE_API void glPixelTexGenParameterfvSGIS(GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glGetPixelTexGenParameterfvSGIS( GLenum pname, GLfloat *params );
+ * @brief void glPixelTexGenParameteriSGIS(GLenum pname, GLint param)
  */
-GLE_API void glGetPixelTexGenParameterfvSGIS( GLenum pname, GLfloat *params );
+GLE_API void glPixelTexGenParameteriSGIS(GLenum pname, GLint param);
+
+/**
+ * @brief void glPixelTexGenParameterivSGIS(GLenum pname, const GLint *params)
+ */
+GLE_API void glPixelTexGenParameterivSGIS(GLenum pname, const GLint *params);
 
 //@}
+
+
 
 
 /**
@@ -13425,38 +14837,48 @@ GLE_API void glGetPixelTexGenParameterfvSGIS( GLenum pname, GLfloat *params );
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_point_line_texgen is supported.
- * @return Returns \c true if \b GL_SGIS_point_line_texgen is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_point_line_texgen is supported.
+ * @return Returns \c true if \b GL_SGIS_point_line_texgen is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_point_line_texgen();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIS_point_parameters GL_SGIS_point_parameters
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_point_parameters is supported.
- * @return Returns \c true if \b GL_SGIS_point_parameters is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_point_parameters is supported.
+ * @return Returns \c true if \b GL_SGIS_point_parameters is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_point_parameters();
 
-/**
- * @brief void glPointParameterfSGIS( GLenum pname, GLfloat param );
- */
-GLE_API void glPointParameterfSGIS( GLenum pname, GLfloat param );
+
 
 /**
- * @brief void glPointParameterfvSGIS( GLenum pname, const GLfloat *params );
+ * @brief void glPointParameterfSGIS(GLenum pname, GLfloat param)
  */
-GLE_API void glPointParameterfvSGIS( GLenum pname, const GLfloat *params );
+GLE_API void glPointParameterfSGIS(GLenum pname, GLfloat param);
+
+/**
+ * @brief void glPointParameterfvSGIS(GLenum pname, const GLfloat *params)
+ */
+GLE_API void glPointParameterfvSGIS(GLenum pname, const GLfloat *params);
 
 //@}
+
+
 
 
 /**
@@ -13466,23 +14888,28 @@ GLE_API void glPointParameterfvSGIS( GLenum pname, const GLfloat *params );
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_sharpen_texture is supported.
- * @return Returns \c true if \b GL_SGIS_sharpen_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_sharpen_texture is supported.
+ * @return Returns \c true if \b GL_SGIS_sharpen_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_sharpen_texture();
 
-/**
- * @brief void glSharpenTexFuncSGIS( GLenum target, GLsizei n, const GLfloat *points );
- */
-GLE_API void glSharpenTexFuncSGIS( GLenum target, GLsizei n, const GLfloat *points );
+
 
 /**
- * @brief void glGetSharpenTexFuncSGIS( GLenum target, GLfloat *points );
+ * @brief void glGetSharpenTexFuncSGIS(GLenum target, GLfloat *points)
  */
-GLE_API void glGetSharpenTexFuncSGIS( GLenum target, GLfloat *points );
+GLE_API void glGetSharpenTexFuncSGIS(GLenum target, GLfloat *points);
+
+/**
+ * @brief void glSharpenTexFuncSGIS(GLenum target, GLsizei n, const GLfloat *points)
+ */
+GLE_API void glSharpenTexFuncSGIS(GLenum target, GLsizei n, const GLfloat *points);
 
 //@}
+
+
 
 
 /**
@@ -13492,23 +14919,28 @@ GLE_API void glGetSharpenTexFuncSGIS( GLenum target, GLfloat *points );
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_texture4D is supported.
- * @return Returns \c true if \b GL_SGIS_texture4D is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_texture4D is supported.
+ * @return Returns \c true if \b GL_SGIS_texture4D is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_texture4D();
 
-/**
- * @brief void glTexImage4DSGIS( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLsizei size4d, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
- */
-GLE_API void glTexImage4DSGIS( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLsizei size4d, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+
 
 /**
- * @brief void glTexSubImage4DSGIS( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint woffset, GLsizei width, GLsizei height, GLsizei depth, GLsizei size4d, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glTexImage4DSGIS(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLsizei size4d, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glTexSubImage4DSGIS( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint woffset, GLsizei width, GLsizei height, GLsizei depth, GLsizei size4d, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glTexImage4DSGIS(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLsizei size4d, GLint border, GLenum format, GLenum type, const GLvoid *pixels);
+
+/**
+ * @brief void glTexSubImage4DSGIS(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint woffset, GLsizei width, GLsizei height, GLsizei depth, GLsizei size4d, GLenum format, GLenum type, const GLvoid *pixels)
+ */
+GLE_API void glTexSubImage4DSGIS(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint woffset, GLsizei width, GLsizei height, GLsizei depth, GLsizei size4d, GLenum format, GLenum type, const GLvoid *pixels);
 
 //@}
+
+
 
 
 /**
@@ -13518,13 +14950,17 @@ GLE_API void glTexSubImage4DSGIS( GLenum target, GLint level, GLint xoffset, GLi
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_texture_border_clamp is supported.
- * @return Returns \c true if \b GL_SGIS_texture_border_clamp is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_texture_border_clamp is supported.
+ * @return Returns \c true if \b GL_SGIS_texture_border_clamp is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_texture_border_clamp();
 
+
 //@}
+
+
 
 
 /**
@@ -13534,18 +14970,23 @@ GLE_API bool isGL_SGIS_texture_border_clamp();
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_texture_color_mask is supported.
- * @return Returns \c true if \b GL_SGIS_texture_color_mask is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_texture_color_mask is supported.
+ * @return Returns \c true if \b GL_SGIS_texture_color_mask is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_texture_color_mask();
 
+
+
 /**
- * @brief void glTextureColorMaskSGIS( GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha );
+ * @brief void glTextureColorMaskSGIS(GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha)
  */
-GLE_API void glTextureColorMaskSGIS( GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha );
+GLE_API void glTextureColorMaskSGIS(GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha);
 
 //@}
+
+
 
 
 /**
@@ -13555,13 +14996,17 @@ GLE_API void glTextureColorMaskSGIS( GLboolean red, GLboolean green, GLboolean b
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_texture_edge_clamp is supported.
- * @return Returns \c true if \b GL_SGIS_texture_edge_clamp is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_texture_edge_clamp is supported.
+ * @return Returns \c true if \b GL_SGIS_texture_edge_clamp is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_texture_edge_clamp();
 
+
 //@}
+
+
 
 
 /**
@@ -13571,23 +15016,28 @@ GLE_API bool isGL_SGIS_texture_edge_clamp();
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_texture_filter4 is supported.
- * @return Returns \c true if \b GL_SGIS_texture_filter4 is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_texture_filter4 is supported.
+ * @return Returns \c true if \b GL_SGIS_texture_filter4 is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_texture_filter4();
 
-/**
- * @brief void glGetTexFilterFuncSGIS( GLenum target, GLenum filter, GLfloat *weights );
- */
-GLE_API void glGetTexFilterFuncSGIS( GLenum target, GLenum filter, GLfloat *weights );
+
 
 /**
- * @brief void glTexFilterFuncSGIS( GLenum target, GLenum filter, GLsizei n, const GLfloat *weights );
+ * @brief void glGetTexFilterFuncSGIS(GLenum target, GLenum filter, GLfloat *weights)
  */
-GLE_API void glTexFilterFuncSGIS( GLenum target, GLenum filter, GLsizei n, const GLfloat *weights );
+GLE_API void glGetTexFilterFuncSGIS(GLenum target, GLenum filter, GLfloat *weights);
+
+/**
+ * @brief void glTexFilterFuncSGIS(GLenum target, GLenum filter, GLsizei n, const GLfloat *weights)
+ */
+GLE_API void glTexFilterFuncSGIS(GLenum target, GLenum filter, GLsizei n, const GLfloat *weights);
 
 //@}
+
+
 
 
 /**
@@ -13597,13 +15047,17 @@ GLE_API void glTexFilterFuncSGIS( GLenum target, GLenum filter, GLsizei n, const
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_texture_lod is supported.
- * @return Returns \c true if \b GL_SGIS_texture_lod is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_texture_lod is supported.
+ * @return Returns \c true if \b GL_SGIS_texture_lod is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_texture_lod();
 
+
 //@}
+
+
 
 
 /**
@@ -13613,13 +15067,17 @@ GLE_API bool isGL_SGIS_texture_lod();
  * @ingroup g_GL_SGIS g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIS_texture_select is supported.
- * @return Returns \c true if \b GL_SGIS_texture_select is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIS_texture_select is supported.
+ * @return Returns \c true if \b GL_SGIS_texture_select is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIS_texture_select();
 
+
 //@}
+
+
 
 
 /**
@@ -13629,43 +15087,48 @@ GLE_API bool isGL_SGIS_texture_select();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_async is supported.
- * @return Returns \c true if \b GL_SGIX_async is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_async is supported.
+ * @return Returns \c true if \b GL_SGIX_async is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_async();
 
-/**
- * @brief void glAsyncMarkerSGIX( GLuint marker );
- */
-GLE_API void glAsyncMarkerSGIX( GLuint marker );
+
 
 /**
- * @brief GLint glFinishAsyncSGIX( GLuint *markerp );
+ * @brief void glAsyncMarkerSGIX(GLuint marker)
  */
-GLE_API GLint glFinishAsyncSGIX( GLuint *markerp );
+GLE_API void glAsyncMarkerSGIX(GLuint marker);
 
 /**
- * @brief GLint glPollAsyncSGIX( GLuint *markerp );
+ * @brief void glDeleteAsyncMarkersSGIX(GLuint marker, GLsizei range)
  */
-GLE_API GLint glPollAsyncSGIX( GLuint *markerp );
+GLE_API void glDeleteAsyncMarkersSGIX(GLuint marker, GLsizei range);
 
 /**
- * @brief GLuint glGenAsyncMarkersSGIX( GLsizei range );
+ * @brief GLint glFinishAsyncSGIX(GLuint *markerp)
  */
-GLE_API GLuint glGenAsyncMarkersSGIX( GLsizei range );
+GLE_API GLint glFinishAsyncSGIX(GLuint *markerp);
 
 /**
- * @brief void glDeleteAsyncMarkersSGIX( GLuint marker, GLsizei range );
+ * @brief GLuint glGenAsyncMarkersSGIX(GLsizei range)
  */
-GLE_API void glDeleteAsyncMarkersSGIX( GLuint marker, GLsizei range );
+GLE_API GLuint glGenAsyncMarkersSGIX(GLsizei range);
 
 /**
- * @brief GLboolean glIsAsyncMarkerSGIX( GLuint marker );
+ * @brief GLboolean glIsAsyncMarkerSGIX(GLuint marker)
  */
-GLE_API GLboolean glIsAsyncMarkerSGIX( GLuint marker );
+GLE_API GLboolean glIsAsyncMarkerSGIX(GLuint marker);
+
+/**
+ * @brief GLint glPollAsyncSGIX(GLuint *markerp)
+ */
+GLE_API GLint glPollAsyncSGIX(GLuint *markerp);
 
 //@}
+
+
 
 
 /**
@@ -13675,13 +15138,17 @@ GLE_API GLboolean glIsAsyncMarkerSGIX( GLuint marker );
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_async_histogram is supported.
- * @return Returns \c true if \b GL_SGIX_async_histogram is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_async_histogram is supported.
+ * @return Returns \c true if \b GL_SGIX_async_histogram is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_async_histogram();
 
+
 //@}
+
+
 
 
 /**
@@ -13691,13 +15158,17 @@ GLE_API bool isGL_SGIX_async_histogram();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_async_pixel is supported.
- * @return Returns \c true if \b GL_SGIX_async_pixel is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_async_pixel is supported.
+ * @return Returns \c true if \b GL_SGIX_async_pixel is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_async_pixel();
 
+
 //@}
+
+
 
 
 /**
@@ -13707,28 +15178,37 @@ GLE_API bool isGL_SGIX_async_pixel();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_blend_alpha_minmax is supported.
- * @return Returns \c true if \b GL_SGIX_blend_alpha_minmax is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_blend_alpha_minmax is supported.
+ * @return Returns \c true if \b GL_SGIX_blend_alpha_minmax is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_blend_alpha_minmax();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIX_calligraphic_fragment GL_SGIX_calligraphic_fragment
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_calligraphic_fragment is supported.
- * @return Returns \c true if \b GL_SGIX_calligraphic_fragment is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_calligraphic_fragment is supported.
+ * @return Returns \c true if \b GL_SGIX_calligraphic_fragment is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_calligraphic_fragment();
 
+
 //@}
+
+
 
 
 /**
@@ -13738,13 +15218,17 @@ GLE_API bool isGL_SGIX_calligraphic_fragment();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_clipmap is supported.
- * @return Returns \c true if \b GL_SGIX_clipmap is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_clipmap is supported.
+ * @return Returns \c true if \b GL_SGIX_clipmap is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_clipmap();
 
+
 //@}
+
+
 
 
 /**
@@ -13754,28 +15238,37 @@ GLE_API bool isGL_SGIX_clipmap();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_convolution_accuracy is supported.
- * @return Returns \c true if \b GL_SGIX_convolution_accuracy is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_convolution_accuracy is supported.
+ * @return Returns \c true if \b GL_SGIX_convolution_accuracy is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_convolution_accuracy();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIX_depth_pass_instrument GL_SGIX_depth_pass_instrument
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_depth_pass_instrument is supported.
- * @return Returns \c true if \b GL_SGIX_depth_pass_instrument is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_depth_pass_instrument is supported.
+ * @return Returns \c true if \b GL_SGIX_depth_pass_instrument is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_depth_pass_instrument();
 
+
 //@}
+
+
 
 
 /**
@@ -13785,13 +15278,17 @@ GLE_API bool isGL_SGIX_depth_pass_instrument();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_depth_texture is supported.
- * @return Returns \c true if \b GL_SGIX_depth_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_depth_texture is supported.
+ * @return Returns \c true if \b GL_SGIX_depth_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_depth_texture();
 
+
 //@}
+
+
 
 
 /**
@@ -13801,18 +15298,23 @@ GLE_API bool isGL_SGIX_depth_texture();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_flush_raster is supported.
- * @return Returns \c true if \b GL_SGIX_flush_raster is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_flush_raster is supported.
+ * @return Returns \c true if \b GL_SGIX_flush_raster is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_flush_raster();
 
+
+
 /**
- * @brief void glFlushRasterSGIX( void );
+ * @brief void glFlushRasterSGIX(void)
  */
-GLE_API void glFlushRasterSGIX( void );
+GLE_API void glFlushRasterSGIX(void);
 
 //@}
+
+
 
 
 /**
@@ -13822,133 +15324,148 @@ GLE_API void glFlushRasterSGIX( void );
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_fog_offset is supported.
- * @return Returns \c true if \b GL_SGIX_fog_offset is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_fog_offset is supported.
+ * @return Returns \c true if \b GL_SGIX_fog_offset is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_fog_offset();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIX_fog_scale GL_SGIX_fog_scale
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_fog_scale is supported.
- * @return Returns \c true if \b GL_SGIX_fog_scale is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_fog_scale is supported.
+ * @return Returns \c true if \b GL_SGIX_fog_scale is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_fog_scale();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIX_fragment_lighting GL_SGIX_fragment_lighting
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_fragment_lighting is supported.
- * @return Returns \c true if \b GL_SGIX_fragment_lighting is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_fragment_lighting is supported.
+ * @return Returns \c true if \b GL_SGIX_fragment_lighting is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_fragment_lighting();
 
-/**
- * @brief void glFragmentColorMaterialSGIX( GLenum face, GLenum mode );
- */
-GLE_API void glFragmentColorMaterialSGIX( GLenum face, GLenum mode );
+
 
 /**
- * @brief void glFragmentLightfSGIX( GLenum light, GLenum pname, GLfloat param );
+ * @brief void glFragmentColorMaterialSGIX(GLenum face, GLenum mode)
  */
-GLE_API void glFragmentLightfSGIX( GLenum light, GLenum pname, GLfloat param );
+GLE_API void glFragmentColorMaterialSGIX(GLenum face, GLenum mode);
 
 /**
- * @brief void glFragmentLightfvSGIX( GLenum light, GLenum pname, const GLfloat *params );
+ * @brief void glFragmentLightModelfSGIX(GLenum pname, GLfloat param)
  */
-GLE_API void glFragmentLightfvSGIX( GLenum light, GLenum pname, const GLfloat *params );
+GLE_API void glFragmentLightModelfSGIX(GLenum pname, GLfloat param);
 
 /**
- * @brief void glFragmentLightiSGIX( GLenum light, GLenum pname, GLint param );
+ * @brief void glFragmentLightModelfvSGIX(GLenum pname, const GLfloat *params)
  */
-GLE_API void glFragmentLightiSGIX( GLenum light, GLenum pname, GLint param );
+GLE_API void glFragmentLightModelfvSGIX(GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glFragmentLightivSGIX( GLenum light, GLenum pname, const GLint *params );
+ * @brief void glFragmentLightModeliSGIX(GLenum pname, GLint param)
  */
-GLE_API void glFragmentLightivSGIX( GLenum light, GLenum pname, const GLint *params );
+GLE_API void glFragmentLightModeliSGIX(GLenum pname, GLint param);
 
 /**
- * @brief void glFragmentLightModelfSGIX( GLenum pname, GLfloat param );
+ * @brief void glFragmentLightModelivSGIX(GLenum pname, const GLint *params)
  */
-GLE_API void glFragmentLightModelfSGIX( GLenum pname, GLfloat param );
+GLE_API void glFragmentLightModelivSGIX(GLenum pname, const GLint *params);
 
 /**
- * @brief void glFragmentLightModelfvSGIX( GLenum pname, const GLfloat *params );
+ * @brief void glFragmentLightfSGIX(GLenum light, GLenum pname, GLfloat param)
  */
-GLE_API void glFragmentLightModelfvSGIX( GLenum pname, const GLfloat *params );
+GLE_API void glFragmentLightfSGIX(GLenum light, GLenum pname, GLfloat param);
 
 /**
- * @brief void glFragmentLightModeliSGIX( GLenum pname, GLint param );
+ * @brief void glFragmentLightfvSGIX(GLenum light, GLenum pname, const GLfloat *params)
  */
-GLE_API void glFragmentLightModeliSGIX( GLenum pname, GLint param );
+GLE_API void glFragmentLightfvSGIX(GLenum light, GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glFragmentLightModelivSGIX( GLenum pname, const GLint *params );
+ * @brief void glFragmentLightiSGIX(GLenum light, GLenum pname, GLint param)
  */
-GLE_API void glFragmentLightModelivSGIX( GLenum pname, const GLint *params );
+GLE_API void glFragmentLightiSGIX(GLenum light, GLenum pname, GLint param);
 
 /**
- * @brief void glFragmentMaterialfSGIX( GLenum face, GLenum pname, GLfloat param );
+ * @brief void glFragmentLightivSGIX(GLenum light, GLenum pname, const GLint *params)
  */
-GLE_API void glFragmentMaterialfSGIX( GLenum face, GLenum pname, GLfloat param );
+GLE_API void glFragmentLightivSGIX(GLenum light, GLenum pname, const GLint *params);
 
 /**
- * @brief void glFragmentMaterialfvSGIX( GLenum face, GLenum pname, const GLfloat *params );
+ * @brief void glFragmentMaterialfSGIX(GLenum face, GLenum pname, GLfloat param)
  */
-GLE_API void glFragmentMaterialfvSGIX( GLenum face, GLenum pname, const GLfloat *params );
+GLE_API void glFragmentMaterialfSGIX(GLenum face, GLenum pname, GLfloat param);
 
 /**
- * @brief void glFragmentMaterialiSGIX( GLenum face, GLenum pname, GLint param );
+ * @brief void glFragmentMaterialfvSGIX(GLenum face, GLenum pname, const GLfloat *params)
  */
-GLE_API void glFragmentMaterialiSGIX( GLenum face, GLenum pname, GLint param );
+GLE_API void glFragmentMaterialfvSGIX(GLenum face, GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glFragmentMaterialivSGIX( GLenum face, GLenum pname, const GLint *params );
+ * @brief void glFragmentMaterialiSGIX(GLenum face, GLenum pname, GLint param)
  */
-GLE_API void glFragmentMaterialivSGIX( GLenum face, GLenum pname, const GLint *params );
+GLE_API void glFragmentMaterialiSGIX(GLenum face, GLenum pname, GLint param);
 
 /**
- * @brief void glGetFragmentLightfvSGIX( GLenum light, GLenum pname, GLfloat *params );
+ * @brief void glFragmentMaterialivSGIX(GLenum face, GLenum pname, const GLint *params)
  */
-GLE_API void glGetFragmentLightfvSGIX( GLenum light, GLenum pname, GLfloat *params );
+GLE_API void glFragmentMaterialivSGIX(GLenum face, GLenum pname, const GLint *params);
 
 /**
- * @brief void glGetFragmentLightivSGIX( GLenum light, GLenum pname, GLint *params );
+ * @brief void glGetFragmentLightfvSGIX(GLenum light, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetFragmentLightivSGIX( GLenum light, GLenum pname, GLint *params );
+GLE_API void glGetFragmentLightfvSGIX(GLenum light, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetFragmentMaterialfvSGIX( GLenum face, GLenum pname, GLfloat *params );
+ * @brief void glGetFragmentLightivSGIX(GLenum light, GLenum pname, GLint *params)
  */
-GLE_API void glGetFragmentMaterialfvSGIX( GLenum face, GLenum pname, GLfloat *params );
+GLE_API void glGetFragmentLightivSGIX(GLenum light, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetFragmentMaterialivSGIX( GLenum face, GLenum pname, GLint *params );
+ * @brief void glGetFragmentMaterialfvSGIX(GLenum face, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetFragmentMaterialivSGIX( GLenum face, GLenum pname, GLint *params );
+GLE_API void glGetFragmentMaterialfvSGIX(GLenum face, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glLightEnviSGIX( GLenum pname, GLint param );
+ * @brief void glGetFragmentMaterialivSGIX(GLenum face, GLenum pname, GLint *params)
  */
-GLE_API void glLightEnviSGIX( GLenum pname, GLint param );
+GLE_API void glGetFragmentMaterialivSGIX(GLenum face, GLenum pname, GLint *params);
+
+/**
+ * @brief void glLightEnviSGIX(GLenum pname, GLint param)
+ */
+GLE_API void glLightEnviSGIX(GLenum pname, GLint param);
 
 //@}
+
+
 
 
 /**
@@ -13958,53 +15475,69 @@ GLE_API void glLightEnviSGIX( GLenum pname, GLint param );
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_framezoom is supported.
- * @return Returns \c true if \b GL_SGIX_framezoom is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_framezoom is supported.
+ * @return Returns \c true if \b GL_SGIX_framezoom is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_framezoom();
 
+
+
 /**
- * @brief void glFrameZoomSGIX( GLint factor );
+ * @brief void glFrameZoomSGIX(GLint factor)
  */
-GLE_API void glFrameZoomSGIX( GLint factor );
+GLE_API void glFrameZoomSGIX(GLint factor);
 
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIX_igloo_interface GL_SGIX_igloo_interface
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_igloo_interface is supported.
- * @return Returns \c true if \b GL_SGIX_igloo_interface is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_igloo_interface is supported.
+ * @return Returns \c true if \b GL_SGIX_igloo_interface is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_igloo_interface();
 
+
+
 /**
- * @brief void glIglooInterfaceSGIX( GLenum pname, const GLvoid *params );
+ * @brief void glIglooInterfaceSGIX(GLenum pname, const GLvoid *params)
  */
-GLE_API void glIglooInterfaceSGIX( GLenum pname, const GLvoid *params );
+GLE_API void glIglooInterfaceSGIX(GLenum pname, const GLvoid *params);
 
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIX_impact_pixel_texture GL_SGIX_impact_pixel_texture
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_impact_pixel_texture is supported.
- * @return Returns \c true if \b GL_SGIX_impact_pixel_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_impact_pixel_texture is supported.
+ * @return Returns \c true if \b GL_SGIX_impact_pixel_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_impact_pixel_texture();
 
+
 //@}
+
+
 
 
 /**
@@ -14014,43 +15547,48 @@ GLE_API bool isGL_SGIX_impact_pixel_texture();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_instruments is supported.
- * @return Returns \c true if \b GL_SGIX_instruments is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_instruments is supported.
+ * @return Returns \c true if \b GL_SGIX_instruments is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_instruments();
 
-/**
- * @brief GLint glGetInstrumentsSGIX( void );
- */
-GLE_API GLint glGetInstrumentsSGIX( void );
+
 
 /**
- * @brief void glInstrumentsBufferSGIX( GLsizei size, GLint *buffer );
+ * @brief GLint glGetInstrumentsSGIX(void)
  */
-GLE_API void glInstrumentsBufferSGIX( GLsizei size, GLint *buffer );
+GLE_API GLint glGetInstrumentsSGIX(void);
 
 /**
- * @brief GLint glPollInstrumentsSGIX( GLint *marker_p );
+ * @brief void glInstrumentsBufferSGIX(GLsizei size, GLint *buffer)
  */
-GLE_API GLint glPollInstrumentsSGIX( GLint *marker_p );
+GLE_API void glInstrumentsBufferSGIX(GLsizei size, GLint *buffer);
 
 /**
- * @brief void glReadInstrumentsSGIX( GLint marker );
+ * @brief GLint glPollInstrumentsSGIX(GLint *marker_p)
  */
-GLE_API void glReadInstrumentsSGIX( GLint marker );
+GLE_API GLint glPollInstrumentsSGIX(GLint *marker_p);
 
 /**
- * @brief void glStartInstrumentsSGIX( void );
+ * @brief void glReadInstrumentsSGIX(GLint marker)
  */
-GLE_API void glStartInstrumentsSGIX( void );
+GLE_API void glReadInstrumentsSGIX(GLint marker);
 
 /**
- * @brief void glStopInstrumentsSGIX( GLint marker );
+ * @brief void glStartInstrumentsSGIX(void)
  */
-GLE_API void glStopInstrumentsSGIX( GLint marker );
+GLE_API void glStartInstrumentsSGIX(void);
+
+/**
+ * @brief void glStopInstrumentsSGIX(GLint marker)
+ */
+GLE_API void glStopInstrumentsSGIX(GLint marker);
 
 //@}
+
+
 
 
 /**
@@ -14060,13 +15598,17 @@ GLE_API void glStopInstrumentsSGIX( GLint marker );
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_interlace is supported.
- * @return Returns \c true if \b GL_SGIX_interlace is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_interlace is supported.
+ * @return Returns \c true if \b GL_SGIX_interlace is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_interlace();
 
+
 //@}
+
+
 
 
 /**
@@ -14076,13 +15618,17 @@ GLE_API bool isGL_SGIX_interlace();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_ir_instrument1 is supported.
- * @return Returns \c true if \b GL_SGIX_ir_instrument1 is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_ir_instrument1 is supported.
+ * @return Returns \c true if \b GL_SGIX_ir_instrument1 is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_ir_instrument1();
 
+
 //@}
+
+
 
 
 /**
@@ -14092,114 +15638,135 @@ GLE_API bool isGL_SGIX_ir_instrument1();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_list_priority is supported.
- * @return Returns \c true if \b GL_SGIX_list_priority is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_list_priority is supported.
+ * @return Returns \c true if \b GL_SGIX_list_priority is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_list_priority();
 
-/**
- * @brief void glGetListParameterfvSGIX( GLuint list, GLenum pname, GLfloat *params );
- */
-GLE_API void glGetListParameterfvSGIX( GLuint list, GLenum pname, GLfloat *params );
+
 
 /**
- * @brief void glGetListParameterivSGIX( GLuint list, GLenum pname, GLint *params );
+ * @brief void glGetListParameterfvSGIX(GLuint list, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetListParameterivSGIX( GLuint list, GLenum pname, GLint *params );
+GLE_API void glGetListParameterfvSGIX(GLuint list, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glListParameterfSGIX( GLuint list, GLenum pname, GLfloat param );
+ * @brief void glGetListParameterivSGIX(GLuint list, GLenum pname, GLint *params)
  */
-GLE_API void glListParameterfSGIX( GLuint list, GLenum pname, GLfloat param );
+GLE_API void glGetListParameterivSGIX(GLuint list, GLenum pname, GLint *params);
 
 /**
- * @brief void glListParameterfvSGIX( GLuint list, GLenum pname, const GLfloat *params );
+ * @brief void glListParameterfSGIX(GLuint list, GLenum pname, GLfloat param)
  */
-GLE_API void glListParameterfvSGIX( GLuint list, GLenum pname, const GLfloat *params );
+GLE_API void glListParameterfSGIX(GLuint list, GLenum pname, GLfloat param);
 
 /**
- * @brief void glListParameteriSGIX( GLuint list, GLenum pname, GLint param );
+ * @brief void glListParameterfvSGIX(GLuint list, GLenum pname, const GLfloat *params)
  */
-GLE_API void glListParameteriSGIX( GLuint list, GLenum pname, GLint param );
+GLE_API void glListParameterfvSGIX(GLuint list, GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glListParameterivSGIX( GLuint list, GLenum pname, const GLint *params );
+ * @brief void glListParameteriSGIX(GLuint list, GLenum pname, GLint param)
  */
-GLE_API void glListParameterivSGIX( GLuint list, GLenum pname, const GLint *params );
+GLE_API void glListParameteriSGIX(GLuint list, GLenum pname, GLint param);
+
+/**
+ * @brief void glListParameterivSGIX(GLuint list, GLenum pname, const GLint *params)
+ */
+GLE_API void glListParameterivSGIX(GLuint list, GLenum pname, const GLint *params);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_SGIX_pixel_texture GL_SGIX_pixel_texture
- * Extension number in OpenGL registry : 15a
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/SGIX/sgix_pixel_texture.txt
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_pixel_texture is supported.
- * @return Returns \c true if \b GL_SGIX_pixel_texture is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_pixel_texture is supported.
+ * @return Returns \c true if \b GL_SGIX_pixel_texture is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_pixel_texture();
 
+
+
 /**
- * @brief void glPixelTexGenSGIX( GLenum mode );
+ * @brief void glPixelTexGenSGIX(GLenum mode)
  */
-GLE_API void glPixelTexGenSGIX( GLenum mode );
+GLE_API void glPixelTexGenSGIX(GLenum mode);
 
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIX_pixel_tiles GL_SGIX_pixel_tiles
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_pixel_tiles is supported.
- * @return Returns \c true if \b GL_SGIX_pixel_tiles is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_pixel_tiles is supported.
+ * @return Returns \c true if \b GL_SGIX_pixel_tiles is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_pixel_tiles();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIX_polynomial_ffd GL_SGIX_polynomial_ffd
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_polynomial_ffd is supported.
- * @return Returns \c true if \b GL_SGIX_polynomial_ffd is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_polynomial_ffd is supported.
+ * @return Returns \c true if \b GL_SGIX_polynomial_ffd is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_polynomial_ffd();
 
-/**
- * @brief void glDeformationMap3dSGIX( GLenum target, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, GLdouble w1, GLdouble w2, GLint wstride, GLint worder, const GLdouble *points );
- */
-GLE_API void glDeformationMap3dSGIX( GLenum target, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, GLdouble w1, GLdouble w2, GLint wstride, GLint worder, const GLdouble *points );
+
 
 /**
- * @brief void glDeformationMap3fSGIX( GLenum target, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, GLfloat w1, GLfloat w2, GLint wstride, GLint worder, const GLfloat *points );
+ * @brief void glDeformSGIX(GLbitfield mask)
  */
-GLE_API void glDeformationMap3fSGIX( GLenum target, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, GLfloat w1, GLfloat w2, GLint wstride, GLint worder, const GLfloat *points );
+GLE_API void glDeformSGIX(GLbitfield mask);
 
 /**
- * @brief void glDeformSGIX( GLbitfield mask );
+ * @brief void glDeformationMap3dSGIX(GLenum target, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, GLdouble w1, GLdouble w2, GLint wstride, GLint worder, const GLdouble *points)
  */
-GLE_API void glDeformSGIX( GLbitfield mask );
+GLE_API void glDeformationMap3dSGIX(GLenum target, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, GLdouble w1, GLdouble w2, GLint wstride, GLint worder, const GLdouble *points);
 
 /**
- * @brief void glLoadIdentityDeformationMapSGIX( GLbitfield mask );
+ * @brief void glDeformationMap3fSGIX(GLenum target, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, GLfloat w1, GLfloat w2, GLint wstride, GLint worder, const GLfloat *points)
  */
-GLE_API void glLoadIdentityDeformationMapSGIX( GLbitfield mask );
+GLE_API void glDeformationMap3fSGIX(GLenum target, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, GLfloat w1, GLfloat w2, GLint wstride, GLint worder, const GLfloat *points);
+
+/**
+ * @brief void glLoadIdentityDeformationMapSGIX(GLbitfield mask)
+ */
+GLE_API void glLoadIdentityDeformationMapSGIX(GLbitfield mask);
 
 //@}
+
+
 
 
 /**
@@ -14209,18 +15776,23 @@ GLE_API void glLoadIdentityDeformationMapSGIX( GLbitfield mask );
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_reference_plane is supported.
- * @return Returns \c true if \b GL_SGIX_reference_plane is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_reference_plane is supported.
+ * @return Returns \c true if \b GL_SGIX_reference_plane is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_reference_plane();
 
+
+
 /**
- * @brief void glReferencePlaneSGIX( const GLdouble *equation );
+ * @brief void glReferencePlaneSGIX(const GLdouble *equation)
  */
-GLE_API void glReferencePlaneSGIX( const GLdouble *equation );
+GLE_API void glReferencePlaneSGIX(const GLdouble *equation);
 
 //@}
+
+
 
 
 /**
@@ -14230,28 +15802,37 @@ GLE_API void glReferencePlaneSGIX( const GLdouble *equation );
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_resample is supported.
- * @return Returns \c true if \b GL_SGIX_resample is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_resample is supported.
+ * @return Returns \c true if \b GL_SGIX_resample is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_resample();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIX_scalebias_hint GL_SGIX_scalebias_hint
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_scalebias_hint is supported.
- * @return Returns \c true if \b GL_SGIX_scalebias_hint is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_scalebias_hint is supported.
+ * @return Returns \c true if \b GL_SGIX_scalebias_hint is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_scalebias_hint();
 
+
 //@}
+
+
 
 
 /**
@@ -14261,13 +15842,17 @@ GLE_API bool isGL_SGIX_scalebias_hint();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_shadow is supported.
- * @return Returns \c true if \b GL_SGIX_shadow is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_shadow is supported.
+ * @return Returns \c true if \b GL_SGIX_shadow is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_shadow();
 
+
 //@}
+
+
 
 
 /**
@@ -14277,13 +15862,17 @@ GLE_API bool isGL_SGIX_shadow();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_shadow_ambient is supported.
- * @return Returns \c true if \b GL_SGIX_shadow_ambient is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_shadow_ambient is supported.
+ * @return Returns \c true if \b GL_SGIX_shadow_ambient is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_shadow_ambient();
 
+
 //@}
+
+
 
 
 /**
@@ -14293,48 +15882,58 @@ GLE_API bool isGL_SGIX_shadow_ambient();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_sprite is supported.
- * @return Returns \c true if \b GL_SGIX_sprite is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_sprite is supported.
+ * @return Returns \c true if \b GL_SGIX_sprite is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_sprite();
 
-/**
- * @brief void glSpriteParameterfSGIX( GLenum pname, GLfloat param );
- */
-GLE_API void glSpriteParameterfSGIX( GLenum pname, GLfloat param );
+
 
 /**
- * @brief void glSpriteParameterfvSGIX( GLenum pname, const GLfloat *params );
+ * @brief void glSpriteParameterfSGIX(GLenum pname, GLfloat param)
  */
-GLE_API void glSpriteParameterfvSGIX( GLenum pname, const GLfloat *params );
+GLE_API void glSpriteParameterfSGIX(GLenum pname, GLfloat param);
 
 /**
- * @brief void glSpriteParameteriSGIX( GLenum pname, GLint param );
+ * @brief void glSpriteParameterfvSGIX(GLenum pname, const GLfloat *params)
  */
-GLE_API void glSpriteParameteriSGIX( GLenum pname, GLint param );
+GLE_API void glSpriteParameterfvSGIX(GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glSpriteParameterivSGIX( GLenum pname, const GLint *params );
+ * @brief void glSpriteParameteriSGIX(GLenum pname, GLint param)
  */
-GLE_API void glSpriteParameterivSGIX( GLenum pname, const GLint *params );
+GLE_API void glSpriteParameteriSGIX(GLenum pname, GLint param);
+
+/**
+ * @brief void glSpriteParameterivSGIX(GLenum pname, const GLint *params)
+ */
+GLE_API void glSpriteParameterivSGIX(GLenum pname, const GLint *params);
 
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIX_subsample GL_SGIX_subsample
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_subsample is supported.
- * @return Returns \c true if \b GL_SGIX_subsample is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_subsample is supported.
+ * @return Returns \c true if \b GL_SGIX_subsample is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_subsample();
 
+
 //@}
+
+
 
 
 /**
@@ -14344,18 +15943,23 @@ GLE_API bool isGL_SGIX_subsample();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_tag_sample_buffer is supported.
- * @return Returns \c true if \b GL_SGIX_tag_sample_buffer is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_tag_sample_buffer is supported.
+ * @return Returns \c true if \b GL_SGIX_tag_sample_buffer is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_tag_sample_buffer();
 
+
+
 /**
- * @brief void glTagSampleBufferSGIX( void );
+ * @brief void glTagSampleBufferSGIX(void)
  */
-GLE_API void glTagSampleBufferSGIX( void );
+GLE_API void glTagSampleBufferSGIX(void);
 
 //@}
+
+
 
 
 /**
@@ -14365,13 +15969,17 @@ GLE_API void glTagSampleBufferSGIX( void );
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_texture_add_env is supported.
- * @return Returns \c true if \b GL_SGIX_texture_add_env is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_texture_add_env is supported.
+ * @return Returns \c true if \b GL_SGIX_texture_add_env is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_texture_add_env();
 
+
 //@}
+
+
 
 
 /**
@@ -14381,13 +15989,17 @@ GLE_API bool isGL_SGIX_texture_add_env();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_texture_coordinate_clamp is supported.
- * @return Returns \c true if \b GL_SGIX_texture_coordinate_clamp is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_texture_coordinate_clamp is supported.
+ * @return Returns \c true if \b GL_SGIX_texture_coordinate_clamp is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_texture_coordinate_clamp();
 
+
 //@}
+
+
 
 
 /**
@@ -14397,13 +16009,17 @@ GLE_API bool isGL_SGIX_texture_coordinate_clamp();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_texture_lod_bias is supported.
- * @return Returns \c true if \b GL_SGIX_texture_lod_bias is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_texture_lod_bias is supported.
+ * @return Returns \c true if \b GL_SGIX_texture_lod_bias is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_texture_lod_bias();
 
+
 //@}
+
+
 
 
 /**
@@ -14413,13 +16029,17 @@ GLE_API bool isGL_SGIX_texture_lod_bias();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_texture_multi_buffer is supported.
- * @return Returns \c true if \b GL_SGIX_texture_multi_buffer is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_texture_multi_buffer is supported.
+ * @return Returns \c true if \b GL_SGIX_texture_multi_buffer is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_texture_multi_buffer();
 
+
 //@}
+
+
 
 
 /**
@@ -14429,28 +16049,37 @@ GLE_API bool isGL_SGIX_texture_multi_buffer();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_texture_scale_bias is supported.
- * @return Returns \c true if \b GL_SGIX_texture_scale_bias is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_texture_scale_bias is supported.
+ * @return Returns \c true if \b GL_SGIX_texture_scale_bias is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_texture_scale_bias();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIX_texture_select GL_SGIX_texture_select
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_texture_select is supported.
- * @return Returns \c true if \b GL_SGIX_texture_select is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_texture_select is supported.
+ * @return Returns \c true if \b GL_SGIX_texture_select is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_texture_select();
 
+
 //@}
+
+
 
 
 /**
@@ -14460,13 +16089,17 @@ GLE_API bool isGL_SGIX_texture_select();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_vertex_preclip is supported.
- * @return Returns \c true if \b GL_SGIX_vertex_preclip is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_vertex_preclip is supported.
+ * @return Returns \c true if \b GL_SGIX_vertex_preclip is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_vertex_preclip();
 
+
 //@}
+
+
 
 
 /**
@@ -14476,43 +16109,57 @@ GLE_API bool isGL_SGIX_vertex_preclip();
  * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_ycrcb is supported.
- * @return Returns \c true if \b GL_SGIX_ycrcb is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_ycrcb is supported.
+ * @return Returns \c true if \b GL_SGIX_ycrcb is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_ycrcb();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIX_ycrcb_subsample GL_SGIX_ycrcb_subsample
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_ycrcb_subsample is supported.
- * @return Returns \c true if \b GL_SGIX_ycrcb_subsample is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_ycrcb_subsample is supported.
+ * @return Returns \c true if \b GL_SGIX_ycrcb_subsample is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_ycrcb_subsample();
 
+
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGIX_ycrcba GL_SGIX_ycrcba
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGIX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGIX_ycrcba is supported.
- * @return Returns \c true if \b GL_SGIX_ycrcba is supported, false otherwise.
+ * @brief  Tests if \b GL_SGIX_ycrcba is supported.
+ * @return Returns \c true if \b GL_SGIX_ycrcba is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGIX_ycrcba();
 
+
 //@}
+
+
 
 
 /**
@@ -14522,13 +16169,17 @@ GLE_API bool isGL_SGIX_ycrcba();
  * @ingroup g_GL_SGI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGI_color_matrix is supported.
- * @return Returns \c true if \b GL_SGI_color_matrix is supported, false otherwise.
+ * @brief  Tests if \b GL_SGI_color_matrix is supported.
+ * @return Returns \c true if \b GL_SGI_color_matrix is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGI_color_matrix();
 
+
 //@}
+
+
 
 
 /**
@@ -14538,63 +16189,73 @@ GLE_API bool isGL_SGI_color_matrix();
  * @ingroup g_GL_SGI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGI_color_table is supported.
- * @return Returns \c true if \b GL_SGI_color_table is supported, false otherwise.
+ * @brief  Tests if \b GL_SGI_color_table is supported.
+ * @return Returns \c true if \b GL_SGI_color_table is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGI_color_table();
 
-/**
- * @brief void glColorTableSGI( GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *table );
- */
-GLE_API void glColorTableSGI( GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *table );
+
 
 /**
- * @brief void glColorTableParameterfvSGI( GLenum target, GLenum pname, const GLfloat *params );
+ * @brief void glColorTableParameterfvSGI(GLenum target, GLenum pname, const GLfloat *params)
  */
-GLE_API void glColorTableParameterfvSGI( GLenum target, GLenum pname, const GLfloat *params );
+GLE_API void glColorTableParameterfvSGI(GLenum target, GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glColorTableParameterivSGI( GLenum target, GLenum pname, const GLint *params );
+ * @brief void glColorTableParameterivSGI(GLenum target, GLenum pname, const GLint *params)
  */
-GLE_API void glColorTableParameterivSGI( GLenum target, GLenum pname, const GLint *params );
+GLE_API void glColorTableParameterivSGI(GLenum target, GLenum pname, const GLint *params);
 
 /**
- * @brief void glCopyColorTableSGI( GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width );
+ * @brief void glColorTableSGI(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *table)
  */
-GLE_API void glCopyColorTableSGI( GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width );
+GLE_API void glColorTableSGI(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *table);
 
 /**
- * @brief void glGetColorTableSGI( GLenum target, GLenum format, GLenum type, GLvoid *table );
+ * @brief void glCopyColorTableSGI(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width)
  */
-GLE_API void glGetColorTableSGI( GLenum target, GLenum format, GLenum type, GLvoid *table );
+GLE_API void glCopyColorTableSGI(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width);
 
 /**
- * @brief void glGetColorTableParameterfvSGI( GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glGetColorTableParameterfvSGI(GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetColorTableParameterfvSGI( GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glGetColorTableParameterfvSGI(GLenum target, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetColorTableParameterivSGI( GLenum target, GLenum pname, GLint *params );
+ * @brief void glGetColorTableParameterivSGI(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glGetColorTableParameterivSGI( GLenum target, GLenum pname, GLint *params );
+GLE_API void glGetColorTableParameterivSGI(GLenum target, GLenum pname, GLint *params);
+
+/**
+ * @brief void glGetColorTableSGI(GLenum target, GLenum format, GLenum type, GLvoid *table)
+ */
+GLE_API void glGetColorTableSGI(GLenum target, GLenum format, GLenum type, GLvoid *table);
 
 //@}
 
-			
-/**	
+
+
+
+/**
  * @defgroup GL_SGI_depth_pass_instrument GL_SGI_depth_pass_instrument
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_SGI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGI_depth_pass_instrument is supported.
- * @return Returns \c true if \b GL_SGI_depth_pass_instrument is supported, false otherwise.
+ * @brief  Tests if \b GL_SGI_depth_pass_instrument is supported.
+ * @return Returns \c true if \b GL_SGI_depth_pass_instrument is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGI_depth_pass_instrument();
 
+
 //@}
+
+
 
 
 /**
@@ -14604,13 +16265,17 @@ GLE_API bool isGL_SGI_depth_pass_instrument();
  * @ingroup g_GL_SGI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SGI_texture_color_table is supported.
- * @return Returns \c true if \b GL_SGI_texture_color_table is supported, false otherwise.
+ * @brief  Tests if \b GL_SGI_texture_color_table is supported.
+ * @return Returns \c true if \b GL_SGI_texture_color_table is supported, \c false otherwise.
  */
 GLE_API bool isGL_SGI_texture_color_table();
 
+
 //@}
+
+
 
 
 /**
@@ -14620,18 +16285,23 @@ GLE_API bool isGL_SGI_texture_color_table();
  * @ingroup g_GL_SUNX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SUNX_constant_data is supported.
- * @return Returns \c true if \b GL_SUNX_constant_data is supported, false otherwise.
+ * @brief  Tests if \b GL_SUNX_constant_data is supported.
+ * @return Returns \c true if \b GL_SUNX_constant_data is supported, \c false otherwise.
  */
 GLE_API bool isGL_SUNX_constant_data();
 
+
+
 /**
- * @brief void glFinishTextureSUNX( void );
+ * @brief void glFinishTextureSUNX(void)
  */
-GLE_API void glFinishTextureSUNX( void );
+GLE_API void glFinishTextureSUNX(void);
 
 //@}
+
+
 
 
 /**
@@ -14641,13 +16311,17 @@ GLE_API void glFinishTextureSUNX( void );
  * @ingroup g_GL_SUN g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SUN_convolution_border_modes is supported.
- * @return Returns \c true if \b GL_SUN_convolution_border_modes is supported, false otherwise.
+ * @brief  Tests if \b GL_SUN_convolution_border_modes is supported.
+ * @return Returns \c true if \b GL_SUN_convolution_border_modes is supported, \c false otherwise.
  */
 GLE_API bool isGL_SUN_convolution_border_modes();
 
+
 //@}
+
+
 
 
 /**
@@ -14657,53 +16331,58 @@ GLE_API bool isGL_SUN_convolution_border_modes();
  * @ingroup g_GL_SUN g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SUN_global_alpha is supported.
- * @return Returns \c true if \b GL_SUN_global_alpha is supported, false otherwise.
+ * @brief  Tests if \b GL_SUN_global_alpha is supported.
+ * @return Returns \c true if \b GL_SUN_global_alpha is supported, \c false otherwise.
  */
 GLE_API bool isGL_SUN_global_alpha();
 
-/**
- * @brief void glGlobalAlphaFactorbSUN( GLbyte factor );
- */
-GLE_API void glGlobalAlphaFactorbSUN( GLbyte factor );
+
 
 /**
- * @brief void glGlobalAlphaFactorsSUN( GLshort factor );
+ * @brief void glGlobalAlphaFactorbSUN(GLbyte factor)
  */
-GLE_API void glGlobalAlphaFactorsSUN( GLshort factor );
+GLE_API void glGlobalAlphaFactorbSUN(GLbyte factor);
 
 /**
- * @brief void glGlobalAlphaFactoriSUN( GLint factor );
+ * @brief void glGlobalAlphaFactordSUN(GLdouble factor)
  */
-GLE_API void glGlobalAlphaFactoriSUN( GLint factor );
+GLE_API void glGlobalAlphaFactordSUN(GLdouble factor);
 
 /**
- * @brief void glGlobalAlphaFactorfSUN( GLfloat factor );
+ * @brief void glGlobalAlphaFactorfSUN(GLfloat factor)
  */
-GLE_API void glGlobalAlphaFactorfSUN( GLfloat factor );
+GLE_API void glGlobalAlphaFactorfSUN(GLfloat factor);
 
 /**
- * @brief void glGlobalAlphaFactordSUN( GLdouble factor );
+ * @brief void glGlobalAlphaFactoriSUN(GLint factor)
  */
-GLE_API void glGlobalAlphaFactordSUN( GLdouble factor );
+GLE_API void glGlobalAlphaFactoriSUN(GLint factor);
 
 /**
- * @brief void glGlobalAlphaFactorubSUN( GLubyte factor );
+ * @brief void glGlobalAlphaFactorsSUN(GLshort factor)
  */
-GLE_API void glGlobalAlphaFactorubSUN( GLubyte factor );
+GLE_API void glGlobalAlphaFactorsSUN(GLshort factor);
 
 /**
- * @brief void glGlobalAlphaFactorusSUN( GLushort factor );
+ * @brief void glGlobalAlphaFactorubSUN(GLubyte factor)
  */
-GLE_API void glGlobalAlphaFactorusSUN( GLushort factor );
+GLE_API void glGlobalAlphaFactorubSUN(GLubyte factor);
 
 /**
- * @brief void glGlobalAlphaFactoruiSUN( GLuint factor );
+ * @brief void glGlobalAlphaFactoruiSUN(GLuint factor)
  */
-GLE_API void glGlobalAlphaFactoruiSUN( GLuint factor );
+GLE_API void glGlobalAlphaFactoruiSUN(GLuint factor);
+
+/**
+ * @brief void glGlobalAlphaFactorusSUN(GLushort factor)
+ */
+GLE_API void glGlobalAlphaFactorusSUN(GLushort factor);
 
 //@}
+
+
 
 
 /**
@@ -14713,18 +16392,23 @@ GLE_API void glGlobalAlphaFactoruiSUN( GLuint factor );
  * @ingroup g_GL_SUN g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SUN_mesh_array is supported.
- * @return Returns \c true if \b GL_SUN_mesh_array is supported, false otherwise.
+ * @brief  Tests if \b GL_SUN_mesh_array is supported.
+ * @return Returns \c true if \b GL_SUN_mesh_array is supported, \c false otherwise.
  */
 GLE_API bool isGL_SUN_mesh_array();
 
+
+
 /**
- * @brief void glDrawMeshArraysSUN( GLenum mode, GLint first, GLsizei count, GLsizei width );
+ * @brief void glDrawMeshArraysSUN(GLenum mode, GLint first, GLsizei count, GLsizei width)
  */
-GLE_API void glDrawMeshArraysSUN( GLenum mode, GLint first, GLsizei count, GLsizei width );
+GLE_API void glDrawMeshArraysSUN(GLenum mode, GLint first, GLsizei count, GLsizei width);
 
 //@}
+
+
 
 
 /**
@@ -14734,13 +16418,17 @@ GLE_API void glDrawMeshArraysSUN( GLenum mode, GLint first, GLsizei count, GLsiz
  * @ingroup g_GL_SUN g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SUN_slice_accum is supported.
- * @return Returns \c true if \b GL_SUN_slice_accum is supported, false otherwise.
+ * @brief  Tests if \b GL_SUN_slice_accum is supported.
+ * @return Returns \c true if \b GL_SUN_slice_accum is supported, \c false otherwise.
  */
 GLE_API bool isGL_SUN_slice_accum();
 
+
 //@}
+
+
 
 
 /**
@@ -14750,48 +16438,53 @@ GLE_API bool isGL_SUN_slice_accum();
  * @ingroup g_GL_SUN g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SUN_triangle_list is supported.
- * @return Returns \c true if \b GL_SUN_triangle_list is supported, false otherwise.
+ * @brief  Tests if \b GL_SUN_triangle_list is supported.
+ * @return Returns \c true if \b GL_SUN_triangle_list is supported, \c false otherwise.
  */
 GLE_API bool isGL_SUN_triangle_list();
 
-/**
- * @brief void glReplacementCodeuiSUN( GLuint code );
- */
-GLE_API void glReplacementCodeuiSUN( GLuint code );
+
 
 /**
- * @brief void glReplacementCodeusSUN( GLushort code );
+ * @brief void glReplacementCodePointerSUN(GLenum type, GLsizei stride, const GLvoid* *pointer)
  */
-GLE_API void glReplacementCodeusSUN( GLushort code );
+GLE_API void glReplacementCodePointerSUN(GLenum type, GLsizei stride, const GLvoid* *pointer);
 
 /**
- * @brief void glReplacementCodeubSUN( GLubyte code );
+ * @brief void glReplacementCodeubSUN(GLubyte code)
  */
-GLE_API void glReplacementCodeubSUN( GLubyte code );
+GLE_API void glReplacementCodeubSUN(GLubyte code);
 
 /**
- * @brief void glReplacementCodeuivSUN( const GLuint *code );
+ * @brief void glReplacementCodeubvSUN(const GLubyte *code)
  */
-GLE_API void glReplacementCodeuivSUN( const GLuint *code );
+GLE_API void glReplacementCodeubvSUN(const GLubyte *code);
 
 /**
- * @brief void glReplacementCodeusvSUN( const GLushort *code );
+ * @brief void glReplacementCodeuiSUN(GLuint code)
  */
-GLE_API void glReplacementCodeusvSUN( const GLushort *code );
+GLE_API void glReplacementCodeuiSUN(GLuint code);
 
 /**
- * @brief void glReplacementCodeubvSUN( const GLubyte *code );
+ * @brief void glReplacementCodeuivSUN(const GLuint *code)
  */
-GLE_API void glReplacementCodeubvSUN( const GLubyte *code );
+GLE_API void glReplacementCodeuivSUN(const GLuint *code);
 
 /**
- * @brief void glReplacementCodePointerSUN( GLenum type, GLsizei stride, const GLvoid* *pointer );
+ * @brief void glReplacementCodeusSUN(GLushort code)
  */
-GLE_API void glReplacementCodePointerSUN( GLenum type, GLsizei stride, const GLvoid* *pointer );
+GLE_API void glReplacementCodeusSUN(GLushort code);
+
+/**
+ * @brief void glReplacementCodeusvSUN(const GLushort *code)
+ */
+GLE_API void glReplacementCodeusvSUN(const GLushort *code);
 
 //@}
+
+
 
 
 /**
@@ -14801,2030 +16494,2155 @@ GLE_API void glReplacementCodePointerSUN( GLenum type, GLsizei stride, const GLv
  * @ingroup g_GL_SUN g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_SUN_vertex is supported.
- * @return Returns \c true if \b GL_SUN_vertex is supported, false otherwise.
+ * @brief  Tests if \b GL_SUN_vertex is supported.
+ * @return Returns \c true if \b GL_SUN_vertex is supported, \c false otherwise.
  */
 GLE_API bool isGL_SUN_vertex();
 
-/**
- * @brief void glColor4ubVertex2fSUN( GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y );
- */
-GLE_API void glColor4ubVertex2fSUN( GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y );
+
 
 /**
- * @brief void glColor4ubVertex2fvSUN( const GLubyte *c, const GLfloat *v );
+ * @brief void glColor3fVertex3fSUN(GLfloat r, GLfloat g, GLfloat b, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glColor4ubVertex2fvSUN( const GLubyte *c, const GLfloat *v );
+GLE_API void glColor3fVertex3fSUN(GLfloat r, GLfloat g, GLfloat b, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glColor4ubVertex3fSUN( GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glColor3fVertex3fvSUN(const GLfloat *c, const GLfloat *v)
  */
-GLE_API void glColor4ubVertex3fSUN( GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glColor3fVertex3fvSUN(const GLfloat *c, const GLfloat *v);
 
 /**
- * @brief void glColor4ubVertex3fvSUN( const GLubyte *c, const GLfloat *v );
+ * @brief void glColor4fNormal3fVertex3fSUN(GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glColor4ubVertex3fvSUN( const GLubyte *c, const GLfloat *v );
+GLE_API void glColor4fNormal3fVertex3fSUN(GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glColor3fVertex3fSUN( GLfloat r, GLfloat g, GLfloat b, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glColor4fNormal3fVertex3fvSUN(const GLfloat *c, const GLfloat *n, const GLfloat *v)
  */
-GLE_API void glColor3fVertex3fSUN( GLfloat r, GLfloat g, GLfloat b, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glColor4fNormal3fVertex3fvSUN(const GLfloat *c, const GLfloat *n, const GLfloat *v);
 
 /**
- * @brief void glColor3fVertex3fvSUN( const GLfloat *c, const GLfloat *v );
+ * @brief void glColor4ubVertex2fSUN(GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y)
  */
-GLE_API void glColor3fVertex3fvSUN( const GLfloat *c, const GLfloat *v );
+GLE_API void glColor4ubVertex2fSUN(GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y);
 
 /**
- * @brief void glNormal3fVertex3fSUN( GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glColor4ubVertex2fvSUN(const GLubyte *c, const GLfloat *v)
  */
-GLE_API void glNormal3fVertex3fSUN( GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glColor4ubVertex2fvSUN(const GLubyte *c, const GLfloat *v);
 
 /**
- * @brief void glNormal3fVertex3fvSUN( const GLfloat *n, const GLfloat *v );
+ * @brief void glColor4ubVertex3fSUN(GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glNormal3fVertex3fvSUN( const GLfloat *n, const GLfloat *v );
+GLE_API void glColor4ubVertex3fSUN(GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glColor4fNormal3fVertex3fSUN( GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glColor4ubVertex3fvSUN(const GLubyte *c, const GLfloat *v)
  */
-GLE_API void glColor4fNormal3fVertex3fSUN( GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glColor4ubVertex3fvSUN(const GLubyte *c, const GLfloat *v);
 
 /**
- * @brief void glColor4fNormal3fVertex3fvSUN( const GLfloat *c, const GLfloat *n, const GLfloat *v );
+ * @brief void glNormal3fVertex3fSUN(GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glColor4fNormal3fVertex3fvSUN( const GLfloat *c, const GLfloat *n, const GLfloat *v );
+GLE_API void glNormal3fVertex3fSUN(GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glTexCoord2fVertex3fSUN( GLfloat s, GLfloat t, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glNormal3fVertex3fvSUN(const GLfloat *n, const GLfloat *v)
  */
-GLE_API void glTexCoord2fVertex3fSUN( GLfloat s, GLfloat t, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glNormal3fVertex3fvSUN(const GLfloat *n, const GLfloat *v);
 
 /**
- * @brief void glTexCoord2fVertex3fvSUN( const GLfloat *tc, const GLfloat *v );
+ * @brief void glReplacementCodeuiColor3fVertex3fSUN(GLuint rc, GLfloat r, GLfloat g, GLfloat b, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glTexCoord2fVertex3fvSUN( const GLfloat *tc, const GLfloat *v );
+GLE_API void glReplacementCodeuiColor3fVertex3fSUN(GLuint rc, GLfloat r, GLfloat g, GLfloat b, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glTexCoord4fVertex4fSUN( GLfloat s, GLfloat t, GLfloat p, GLfloat q, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+ * @brief void glReplacementCodeuiColor3fVertex3fvSUN(const GLuint *rc, const GLfloat *c, const GLfloat *v)
  */
-GLE_API void glTexCoord4fVertex4fSUN( GLfloat s, GLfloat t, GLfloat p, GLfloat q, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+GLE_API void glReplacementCodeuiColor3fVertex3fvSUN(const GLuint *rc, const GLfloat *c, const GLfloat *v);
 
 /**
- * @brief void glTexCoord4fVertex4fvSUN( const GLfloat *tc, const GLfloat *v );
+ * @brief void glReplacementCodeuiColor4fNormal3fVertex3fSUN(GLuint rc, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glTexCoord4fVertex4fvSUN( const GLfloat *tc, const GLfloat *v );
+GLE_API void glReplacementCodeuiColor4fNormal3fVertex3fSUN(GLuint rc, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glTexCoord2fColor4ubVertex3fSUN( GLfloat s, GLfloat t, GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glReplacementCodeuiColor4fNormal3fVertex3fvSUN(const GLuint *rc, const GLfloat *c, const GLfloat *n, const GLfloat *v)
  */
-GLE_API void glTexCoord2fColor4ubVertex3fSUN( GLfloat s, GLfloat t, GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glReplacementCodeuiColor4fNormal3fVertex3fvSUN(const GLuint *rc, const GLfloat *c, const GLfloat *n, const GLfloat *v);
 
 /**
- * @brief void glTexCoord2fColor4ubVertex3fvSUN( const GLfloat *tc, const GLubyte *c, const GLfloat *v );
+ * @brief void glReplacementCodeuiColor4ubVertex3fSUN(GLuint rc, GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glTexCoord2fColor4ubVertex3fvSUN( const GLfloat *tc, const GLubyte *c, const GLfloat *v );
+GLE_API void glReplacementCodeuiColor4ubVertex3fSUN(GLuint rc, GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glTexCoord2fColor3fVertex3fSUN( GLfloat s, GLfloat t, GLfloat r, GLfloat g, GLfloat b, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glReplacementCodeuiColor4ubVertex3fvSUN(const GLuint *rc, const GLubyte *c, const GLfloat *v)
  */
-GLE_API void glTexCoord2fColor3fVertex3fSUN( GLfloat s, GLfloat t, GLfloat r, GLfloat g, GLfloat b, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glReplacementCodeuiColor4ubVertex3fvSUN(const GLuint *rc, const GLubyte *c, const GLfloat *v);
 
 /**
- * @brief void glTexCoord2fColor3fVertex3fvSUN( const GLfloat *tc, const GLfloat *c, const GLfloat *v );
+ * @brief void glReplacementCodeuiNormal3fVertex3fSUN(GLuint rc, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glTexCoord2fColor3fVertex3fvSUN( const GLfloat *tc, const GLfloat *c, const GLfloat *v );
+GLE_API void glReplacementCodeuiNormal3fVertex3fSUN(GLuint rc, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glTexCoord2fNormal3fVertex3fSUN( GLfloat s, GLfloat t, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glReplacementCodeuiNormal3fVertex3fvSUN(const GLuint *rc, const GLfloat *n, const GLfloat *v)
  */
-GLE_API void glTexCoord2fNormal3fVertex3fSUN( GLfloat s, GLfloat t, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glReplacementCodeuiNormal3fVertex3fvSUN(const GLuint *rc, const GLfloat *n, const GLfloat *v);
 
 /**
- * @brief void glTexCoord2fNormal3fVertex3fvSUN( const GLfloat *tc, const GLfloat *n, const GLfloat *v );
+ * @brief void glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(GLuint rc, GLfloat s, GLfloat t, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glTexCoord2fNormal3fVertex3fvSUN( const GLfloat *tc, const GLfloat *n, const GLfloat *v );
+GLE_API void glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(GLuint rc, GLfloat s, GLfloat t, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glTexCoord2fColor4fNormal3fVertex3fSUN( GLfloat s, GLfloat t, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(const GLuint *rc, const GLfloat *tc, const GLfloat *c, const GLfloat *n, const GLfloat *v)
  */
-GLE_API void glTexCoord2fColor4fNormal3fVertex3fSUN( GLfloat s, GLfloat t, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(const GLuint *rc, const GLfloat *tc, const GLfloat *c, const GLfloat *n, const GLfloat *v);
 
 /**
- * @brief void glTexCoord2fColor4fNormal3fVertex3fvSUN( const GLfloat *tc, const GLfloat *c, const GLfloat *n, const GLfloat *v );
+ * @brief void glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(GLuint rc, GLfloat s, GLfloat t, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glTexCoord2fColor4fNormal3fVertex3fvSUN( const GLfloat *tc, const GLfloat *c, const GLfloat *n, const GLfloat *v );
+GLE_API void glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(GLuint rc, GLfloat s, GLfloat t, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glTexCoord4fColor4fNormal3fVertex4fSUN( GLfloat s, GLfloat t, GLfloat p, GLfloat q, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+ * @brief void glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(const GLuint *rc, const GLfloat *tc, const GLfloat *n, const GLfloat *v)
  */
-GLE_API void glTexCoord4fColor4fNormal3fVertex4fSUN( GLfloat s, GLfloat t, GLfloat p, GLfloat q, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+GLE_API void glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(const GLuint *rc, const GLfloat *tc, const GLfloat *n, const GLfloat *v);
 
 /**
- * @brief void glTexCoord4fColor4fNormal3fVertex4fvSUN( const GLfloat *tc, const GLfloat *c, const GLfloat *n, const GLfloat *v );
+ * @brief void glReplacementCodeuiTexCoord2fVertex3fSUN(GLuint rc, GLfloat s, GLfloat t, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glTexCoord4fColor4fNormal3fVertex4fvSUN( const GLfloat *tc, const GLfloat *c, const GLfloat *n, const GLfloat *v );
+GLE_API void glReplacementCodeuiTexCoord2fVertex3fSUN(GLuint rc, GLfloat s, GLfloat t, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glReplacementCodeuiVertex3fSUN( GLuint rc, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glReplacementCodeuiTexCoord2fVertex3fvSUN(const GLuint *rc, const GLfloat *tc, const GLfloat *v)
  */
-GLE_API void glReplacementCodeuiVertex3fSUN( GLuint rc, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glReplacementCodeuiTexCoord2fVertex3fvSUN(const GLuint *rc, const GLfloat *tc, const GLfloat *v);
 
 /**
- * @brief void glReplacementCodeuiVertex3fvSUN( const GLuint *rc, const GLfloat *v );
+ * @brief void glReplacementCodeuiVertex3fSUN(GLuint rc, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glReplacementCodeuiVertex3fvSUN( const GLuint *rc, const GLfloat *v );
+GLE_API void glReplacementCodeuiVertex3fSUN(GLuint rc, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glReplacementCodeuiColor4ubVertex3fSUN( GLuint rc, GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glReplacementCodeuiVertex3fvSUN(const GLuint *rc, const GLfloat *v)
  */
-GLE_API void glReplacementCodeuiColor4ubVertex3fSUN( GLuint rc, GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glReplacementCodeuiVertex3fvSUN(const GLuint *rc, const GLfloat *v);
 
 /**
- * @brief void glReplacementCodeuiColor4ubVertex3fvSUN( const GLuint *rc, const GLubyte *c, const GLfloat *v );
+ * @brief void glTexCoord2fColor3fVertex3fSUN(GLfloat s, GLfloat t, GLfloat r, GLfloat g, GLfloat b, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glReplacementCodeuiColor4ubVertex3fvSUN( const GLuint *rc, const GLubyte *c, const GLfloat *v );
+GLE_API void glTexCoord2fColor3fVertex3fSUN(GLfloat s, GLfloat t, GLfloat r, GLfloat g, GLfloat b, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glReplacementCodeuiColor3fVertex3fSUN( GLuint rc, GLfloat r, GLfloat g, GLfloat b, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glTexCoord2fColor3fVertex3fvSUN(const GLfloat *tc, const GLfloat *c, const GLfloat *v)
  */
-GLE_API void glReplacementCodeuiColor3fVertex3fSUN( GLuint rc, GLfloat r, GLfloat g, GLfloat b, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glTexCoord2fColor3fVertex3fvSUN(const GLfloat *tc, const GLfloat *c, const GLfloat *v);
 
 /**
- * @brief void glReplacementCodeuiColor3fVertex3fvSUN( const GLuint *rc, const GLfloat *c, const GLfloat *v );
+ * @brief void glTexCoord2fColor4fNormal3fVertex3fSUN(GLfloat s, GLfloat t, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glReplacementCodeuiColor3fVertex3fvSUN( const GLuint *rc, const GLfloat *c, const GLfloat *v );
+GLE_API void glTexCoord2fColor4fNormal3fVertex3fSUN(GLfloat s, GLfloat t, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glReplacementCodeuiNormal3fVertex3fSUN( GLuint rc, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glTexCoord2fColor4fNormal3fVertex3fvSUN(const GLfloat *tc, const GLfloat *c, const GLfloat *n, const GLfloat *v)
  */
-GLE_API void glReplacementCodeuiNormal3fVertex3fSUN( GLuint rc, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glTexCoord2fColor4fNormal3fVertex3fvSUN(const GLfloat *tc, const GLfloat *c, const GLfloat *n, const GLfloat *v);
 
 /**
- * @brief void glReplacementCodeuiNormal3fVertex3fvSUN( const GLuint *rc, const GLfloat *n, const GLfloat *v );
+ * @brief void glTexCoord2fColor4ubVertex3fSUN(GLfloat s, GLfloat t, GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glReplacementCodeuiNormal3fVertex3fvSUN( const GLuint *rc, const GLfloat *n, const GLfloat *v );
+GLE_API void glTexCoord2fColor4ubVertex3fSUN(GLfloat s, GLfloat t, GLubyte r, GLubyte g, GLubyte b, GLubyte a, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glReplacementCodeuiColor4fNormal3fVertex3fSUN( GLuint rc, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glTexCoord2fColor4ubVertex3fvSUN(const GLfloat *tc, const GLubyte *c, const GLfloat *v)
  */
-GLE_API void glReplacementCodeuiColor4fNormal3fVertex3fSUN( GLuint rc, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glTexCoord2fColor4ubVertex3fvSUN(const GLfloat *tc, const GLubyte *c, const GLfloat *v);
 
 /**
- * @brief void glReplacementCodeuiColor4fNormal3fVertex3fvSUN( const GLuint *rc, const GLfloat *c, const GLfloat *n, const GLfloat *v );
+ * @brief void glTexCoord2fNormal3fVertex3fSUN(GLfloat s, GLfloat t, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glReplacementCodeuiColor4fNormal3fVertex3fvSUN( const GLuint *rc, const GLfloat *c, const GLfloat *n, const GLfloat *v );
+GLE_API void glTexCoord2fNormal3fVertex3fSUN(GLfloat s, GLfloat t, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glReplacementCodeuiTexCoord2fVertex3fSUN( GLuint rc, GLfloat s, GLfloat t, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glTexCoord2fNormal3fVertex3fvSUN(const GLfloat *tc, const GLfloat *n, const GLfloat *v)
  */
-GLE_API void glReplacementCodeuiTexCoord2fVertex3fSUN( GLuint rc, GLfloat s, GLfloat t, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glTexCoord2fNormal3fVertex3fvSUN(const GLfloat *tc, const GLfloat *n, const GLfloat *v);
 
 /**
- * @brief void glReplacementCodeuiTexCoord2fVertex3fvSUN( const GLuint *rc, const GLfloat *tc, const GLfloat *v );
+ * @brief void glTexCoord2fVertex3fSUN(GLfloat s, GLfloat t, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glReplacementCodeuiTexCoord2fVertex3fvSUN( const GLuint *rc, const GLfloat *tc, const GLfloat *v );
+GLE_API void glTexCoord2fVertex3fSUN(GLfloat s, GLfloat t, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN( GLuint rc, GLfloat s, GLfloat t, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glTexCoord2fVertex3fvSUN(const GLfloat *tc, const GLfloat *v)
  */
-GLE_API void glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN( GLuint rc, GLfloat s, GLfloat t, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glTexCoord2fVertex3fvSUN(const GLfloat *tc, const GLfloat *v);
 
 /**
- * @brief void glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN( const GLuint *rc, const GLfloat *tc, const GLfloat *n, const GLfloat *v );
+ * @brief void glTexCoord4fColor4fNormal3fVertex4fSUN(GLfloat s, GLfloat t, GLfloat p, GLfloat q, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
  */
-GLE_API void glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN( const GLuint *rc, const GLfloat *tc, const GLfloat *n, const GLfloat *v );
+GLE_API void glTexCoord4fColor4fNormal3fVertex4fSUN(GLfloat s, GLfloat t, GLfloat p, GLfloat q, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 
 /**
- * @brief void glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN( GLuint rc, GLfloat s, GLfloat t, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glTexCoord4fColor4fNormal3fVertex4fvSUN(const GLfloat *tc, const GLfloat *c, const GLfloat *n, const GLfloat *v)
  */
-GLE_API void glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN( GLuint rc, GLfloat s, GLfloat t, GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glTexCoord4fColor4fNormal3fVertex4fvSUN(const GLfloat *tc, const GLfloat *c, const GLfloat *n, const GLfloat *v);
 
 /**
- * @brief void glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN( const GLuint *rc, const GLfloat *tc, const GLfloat *c, const GLfloat *n, const GLfloat *v );
+ * @brief void glTexCoord4fVertex4fSUN(GLfloat s, GLfloat t, GLfloat p, GLfloat q, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
  */
-GLE_API void glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN( const GLuint *rc, const GLfloat *tc, const GLfloat *c, const GLfloat *n, const GLfloat *v );
+GLE_API void glTexCoord4fVertex4fSUN(GLfloat s, GLfloat t, GLfloat p, GLfloat q, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
+
+/**
+ * @brief void glTexCoord4fVertex4fvSUN(const GLfloat *tc, const GLfloat *v)
+ */
+GLE_API void glTexCoord4fVertex4fvSUN(const GLfloat *tc, const GLfloat *v);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_1_2 GL_VERSION_1_2
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_1_2 is supported.
- * @return Returns \c true if \b GL_VERSION_1_2 is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_1_2 is supported.
+ * @return Returns \c true if \b GL_VERSION_1_2 is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_1_2();
 
-/**
- * @brief void glBlendColor( GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha );
- */
-GLE_API void glBlendColor( GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha );
+
 
 /**
- * @brief void glBlendEquation( GLenum mode );
+ * @brief void glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
  */
-GLE_API void glBlendEquation( GLenum mode );
+GLE_API void glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
 
 /**
- * @brief void glDrawRangeElements( GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices );
+ * @brief void glBlendEquation(GLenum mode)
  */
-GLE_API void glDrawRangeElements( GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices );
+GLE_API void glBlendEquation(GLenum mode);
 
 /**
- * @brief void glTexImage3D( GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height)
  */
-GLE_API void glTexImage3D( GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
 
 /**
- * @brief void glTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels );
+ * @brief void glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices)
  */
-GLE_API void glTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels );
+GLE_API void glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices);
 
 /**
- * @brief void glCopyTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+ * @brief void glTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
  */
-GLE_API void glCopyTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height );
+GLE_API void glTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels);
+
+/**
+ * @brief void glTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels)
+ */
+GLE_API void glTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_1_2_DEPRECATED GL_VERSION_1_2_DEPRECATED
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_1_2_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_1_2_DEPRECATED is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_1_2_DEPRECATED is supported.
+ * @return Returns \c true if \b GL_VERSION_1_2_DEPRECATED is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_1_2_DEPRECATED();
 
-/**
- * @brief void glColorTable( GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *table );
- */
-GLE_API void glColorTable( GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *table );
+
 
 /**
- * @brief void glColorTableParameterfv( GLenum target, GLenum pname, const GLfloat *params );
+ * @brief void glColorSubTable(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const GLvoid *data)
  */
-GLE_API void glColorTableParameterfv( GLenum target, GLenum pname, const GLfloat *params );
+GLE_API void glColorSubTable(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const GLvoid *data);
 
 /**
- * @brief void glColorTableParameteriv( GLenum target, GLenum pname, const GLint *params );
+ * @brief void glColorTable(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *table)
  */
-GLE_API void glColorTableParameteriv( GLenum target, GLenum pname, const GLint *params );
+GLE_API void glColorTable(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *table);
 
 /**
- * @brief void glCopyColorTable( GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width );
+ * @brief void glColorTableParameterfv(GLenum target, GLenum pname, const GLfloat *params)
  */
-GLE_API void glCopyColorTable( GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width );
+GLE_API void glColorTableParameterfv(GLenum target, GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glGetColorTable( GLenum target, GLenum format, GLenum type, GLvoid *table );
+ * @brief void glColorTableParameteriv(GLenum target, GLenum pname, const GLint *params)
  */
-GLE_API void glGetColorTable( GLenum target, GLenum format, GLenum type, GLvoid *table );
+GLE_API void glColorTableParameteriv(GLenum target, GLenum pname, const GLint *params);
 
 /**
- * @brief void glGetColorTableParameterfv( GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glConvolutionFilter1D(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *image)
  */
-GLE_API void glGetColorTableParameterfv( GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glConvolutionFilter1D(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *image);
 
 /**
- * @brief void glGetColorTableParameteriv( GLenum target, GLenum pname, GLint *params );
+ * @brief void glConvolutionFilter2D(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *image)
  */
-GLE_API void glGetColorTableParameteriv( GLenum target, GLenum pname, GLint *params );
+GLE_API void glConvolutionFilter2D(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *image);
 
 /**
- * @brief void glColorSubTable( GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const GLvoid *data );
+ * @brief void glConvolutionParameterf(GLenum target, GLenum pname, GLfloat params)
  */
-GLE_API void glColorSubTable( GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const GLvoid *data );
+GLE_API void glConvolutionParameterf(GLenum target, GLenum pname, GLfloat params);
 
 /**
- * @brief void glCopyColorSubTable( GLenum target, GLsizei start, GLint x, GLint y, GLsizei width );
+ * @brief void glConvolutionParameterfv(GLenum target, GLenum pname, const GLfloat *params)
  */
-GLE_API void glCopyColorSubTable( GLenum target, GLsizei start, GLint x, GLint y, GLsizei width );
+GLE_API void glConvolutionParameterfv(GLenum target, GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glConvolutionFilter1D( GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *image );
+ * @brief void glConvolutionParameteri(GLenum target, GLenum pname, GLint params)
  */
-GLE_API void glConvolutionFilter1D( GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const GLvoid *image );
+GLE_API void glConvolutionParameteri(GLenum target, GLenum pname, GLint params);
 
 /**
- * @brief void glConvolutionFilter2D( GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *image );
+ * @brief void glConvolutionParameteriv(GLenum target, GLenum pname, const GLint *params)
  */
-GLE_API void glConvolutionFilter2D( GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *image );
+GLE_API void glConvolutionParameteriv(GLenum target, GLenum pname, const GLint *params);
 
 /**
- * @brief void glConvolutionParameterf( GLenum target, GLenum pname, GLfloat params );
+ * @brief void glCopyColorSubTable(GLenum target, GLsizei start, GLint x, GLint y, GLsizei width)
  */
-GLE_API void glConvolutionParameterf( GLenum target, GLenum pname, GLfloat params );
+GLE_API void glCopyColorSubTable(GLenum target, GLsizei start, GLint x, GLint y, GLsizei width);
 
 /**
- * @brief void glConvolutionParameterfv( GLenum target, GLenum pname, const GLfloat *params );
+ * @brief void glCopyColorTable(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width)
  */
-GLE_API void glConvolutionParameterfv( GLenum target, GLenum pname, const GLfloat *params );
+GLE_API void glCopyColorTable(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width);
 
 /**
- * @brief void glConvolutionParameteri( GLenum target, GLenum pname, GLint params );
+ * @brief void glCopyConvolutionFilter1D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width)
  */
-GLE_API void glConvolutionParameteri( GLenum target, GLenum pname, GLint params );
+GLE_API void glCopyConvolutionFilter1D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width);
 
 /**
- * @brief void glConvolutionParameteriv( GLenum target, GLenum pname, const GLint *params );
+ * @brief void glCopyConvolutionFilter2D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height)
  */
-GLE_API void glConvolutionParameteriv( GLenum target, GLenum pname, const GLint *params );
+GLE_API void glCopyConvolutionFilter2D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height);
 
 /**
- * @brief void glCopyConvolutionFilter1D( GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width );
+ * @brief void glGetColorTable(GLenum target, GLenum format, GLenum type, GLvoid *table)
  */
-GLE_API void glCopyConvolutionFilter1D( GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width );
+GLE_API void glGetColorTable(GLenum target, GLenum format, GLenum type, GLvoid *table);
 
 /**
- * @brief void glCopyConvolutionFilter2D( GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height );
+ * @brief void glGetColorTableParameterfv(GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glCopyConvolutionFilter2D( GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height );
+GLE_API void glGetColorTableParameterfv(GLenum target, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetConvolutionFilter( GLenum target, GLenum format, GLenum type, GLvoid *image );
+ * @brief void glGetColorTableParameteriv(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glGetConvolutionFilter( GLenum target, GLenum format, GLenum type, GLvoid *image );
+GLE_API void glGetColorTableParameteriv(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetConvolutionParameterfv( GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glGetConvolutionFilter(GLenum target, GLenum format, GLenum type, GLvoid *image)
  */
-GLE_API void glGetConvolutionParameterfv( GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glGetConvolutionFilter(GLenum target, GLenum format, GLenum type, GLvoid *image);
 
 /**
- * @brief void glGetConvolutionParameteriv( GLenum target, GLenum pname, GLint *params );
+ * @brief void glGetConvolutionParameterfv(GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetConvolutionParameteriv( GLenum target, GLenum pname, GLint *params );
+GLE_API void glGetConvolutionParameterfv(GLenum target, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetSeparableFilter( GLenum target, GLenum format, GLenum type, GLvoid *row, GLvoid *column, GLvoid *span );
+ * @brief void glGetConvolutionParameteriv(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glGetSeparableFilter( GLenum target, GLenum format, GLenum type, GLvoid *row, GLvoid *column, GLvoid *span );
+GLE_API void glGetConvolutionParameteriv(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glSeparableFilter2D( GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *row, const GLvoid *column );
+ * @brief void glGetHistogram(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values)
  */
-GLE_API void glSeparableFilter2D( GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *row, const GLvoid *column );
+GLE_API void glGetHistogram(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values);
 
 /**
- * @brief void glGetHistogram( GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values );
+ * @brief void glGetHistogramParameterfv(GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetHistogram( GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values );
+GLE_API void glGetHistogramParameterfv(GLenum target, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetHistogramParameterfv( GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glGetHistogramParameteriv(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glGetHistogramParameterfv( GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glGetHistogramParameteriv(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetHistogramParameteriv( GLenum target, GLenum pname, GLint *params );
+ * @brief void glGetMinmax(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values)
  */
-GLE_API void glGetHistogramParameteriv( GLenum target, GLenum pname, GLint *params );
+GLE_API void glGetMinmax(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values);
 
 /**
- * @brief void glGetMinmax( GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values );
+ * @brief void glGetMinmaxParameterfv(GLenum target, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetMinmax( GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid *values );
+GLE_API void glGetMinmaxParameterfv(GLenum target, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetMinmaxParameterfv( GLenum target, GLenum pname, GLfloat *params );
+ * @brief void glGetMinmaxParameteriv(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glGetMinmaxParameterfv( GLenum target, GLenum pname, GLfloat *params );
+GLE_API void glGetMinmaxParameteriv(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetMinmaxParameteriv( GLenum target, GLenum pname, GLint *params );
+ * @brief void glGetSeparableFilter(GLenum target, GLenum format, GLenum type, GLvoid *row, GLvoid *column, GLvoid *span)
  */
-GLE_API void glGetMinmaxParameteriv( GLenum target, GLenum pname, GLint *params );
+GLE_API void glGetSeparableFilter(GLenum target, GLenum format, GLenum type, GLvoid *row, GLvoid *column, GLvoid *span);
 
 /**
- * @brief void glHistogram( GLenum target, GLsizei width, GLenum internalformat, GLboolean sink );
+ * @brief void glHistogram(GLenum target, GLsizei width, GLenum internalformat, GLboolean sink)
  */
-GLE_API void glHistogram( GLenum target, GLsizei width, GLenum internalformat, GLboolean sink );
+GLE_API void glHistogram(GLenum target, GLsizei width, GLenum internalformat, GLboolean sink);
 
 /**
- * @brief void glMinmax( GLenum target, GLenum internalformat, GLboolean sink );
+ * @brief void glMinmax(GLenum target, GLenum internalformat, GLboolean sink)
  */
-GLE_API void glMinmax( GLenum target, GLenum internalformat, GLboolean sink );
+GLE_API void glMinmax(GLenum target, GLenum internalformat, GLboolean sink);
 
 /**
- * @brief void glResetHistogram( GLenum target );
+ * @brief void glResetHistogram(GLenum target)
  */
-GLE_API void glResetHistogram( GLenum target );
+GLE_API void glResetHistogram(GLenum target);
 
 /**
- * @brief void glResetMinmax( GLenum target );
+ * @brief void glResetMinmax(GLenum target)
  */
-GLE_API void glResetMinmax( GLenum target );
+GLE_API void glResetMinmax(GLenum target);
+
+/**
+ * @brief void glSeparableFilter2D(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *row, const GLvoid *column)
+ */
+GLE_API void glSeparableFilter2D(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *row, const GLvoid *column);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_1_3 GL_VERSION_1_3
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_1_3 is supported.
- * @return Returns \c true if \b GL_VERSION_1_3 is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_1_3 is supported.
+ * @return Returns \c true if \b GL_VERSION_1_3 is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_1_3();
 
-/**
- * @brief void glActiveTexture( GLenum texture );
- */
-GLE_API void glActiveTexture( GLenum texture );
+
 
 /**
- * @brief void glSampleCoverage( GLclampf value, GLboolean invert );
+ * @brief void glActiveTexture(GLenum texture)
  */
-GLE_API void glSampleCoverage( GLclampf value, GLboolean invert );
+GLE_API void glActiveTexture(GLenum texture);
 
 /**
- * @brief void glCompressedTexImage3D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *data );
+ * @brief void glCompressedTexImage1D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *data)
  */
-GLE_API void glCompressedTexImage3D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *data );
+GLE_API void glCompressedTexImage1D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *data);
 
 /**
- * @brief void glCompressedTexImage2D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *data );
+ * @brief void glCompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *data)
  */
-GLE_API void glCompressedTexImage2D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *data );
+GLE_API void glCompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid *data);
 
 /**
- * @brief void glCompressedTexImage1D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *data );
+ * @brief void glCompressedTexImage3D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *data)
  */
-GLE_API void glCompressedTexImage1D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *data );
+GLE_API void glCompressedTexImage3D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid *data);
 
 /**
- * @brief void glCompressedTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *data );
+ * @brief void glCompressedTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *data)
  */
-GLE_API void glCompressedTexSubImage3D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *data );
+GLE_API void glCompressedTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *data);
 
 /**
- * @brief void glCompressedTexSubImage2D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *data );
+ * @brief void glCompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *data)
  */
-GLE_API void glCompressedTexSubImage2D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *data );
+GLE_API void glCompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const GLvoid *data);
 
 /**
- * @brief void glCompressedTexSubImage1D( GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *data );
+ * @brief void glCompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *data)
  */
-GLE_API void glCompressedTexSubImage1D( GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const GLvoid *data );
+GLE_API void glCompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid *data);
 
 /**
- * @brief void glGetCompressedTexImage( GLenum target, GLint level, GLvoid *img );
+ * @brief void glGetCompressedTexImage(GLenum target, GLint level, GLvoid *img)
  */
-GLE_API void glGetCompressedTexImage( GLenum target, GLint level, GLvoid *img );
+GLE_API void glGetCompressedTexImage(GLenum target, GLint level, GLvoid *img);
+
+/**
+ * @brief void glSampleCoverage(GLclampf value, GLboolean invert)
+ */
+GLE_API void glSampleCoverage(GLclampf value, GLboolean invert);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_1_3_DEPRECATED GL_VERSION_1_3_DEPRECATED
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_1_3_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_1_3_DEPRECATED is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_1_3_DEPRECATED is supported.
+ * @return Returns \c true if \b GL_VERSION_1_3_DEPRECATED is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_1_3_DEPRECATED();
 
-/**
- * @brief void glClientActiveTexture( GLenum texture );
- */
-GLE_API void glClientActiveTexture( GLenum texture );
+
 
 /**
- * @brief void glMultiTexCoord1d( GLenum target, GLdouble s );
+ * @brief void glClientActiveTexture(GLenum texture)
  */
-GLE_API void glMultiTexCoord1d( GLenum target, GLdouble s );
+GLE_API void glClientActiveTexture(GLenum texture);
 
 /**
- * @brief void glMultiTexCoord1dv( GLenum target, const GLdouble *v );
+ * @brief void glLoadTransposeMatrixd(const GLdouble *m)
  */
-GLE_API void glMultiTexCoord1dv( GLenum target, const GLdouble *v );
+GLE_API void glLoadTransposeMatrixd(const GLdouble *m);
 
 /**
- * @brief void glMultiTexCoord1f( GLenum target, GLfloat s );
+ * @brief void glLoadTransposeMatrixf(const GLfloat *m)
  */
-GLE_API void glMultiTexCoord1f( GLenum target, GLfloat s );
+GLE_API void glLoadTransposeMatrixf(const GLfloat *m);
 
 /**
- * @brief void glMultiTexCoord1fv( GLenum target, const GLfloat *v );
+ * @brief void glMultTransposeMatrixd(const GLdouble *m)
  */
-GLE_API void glMultiTexCoord1fv( GLenum target, const GLfloat *v );
+GLE_API void glMultTransposeMatrixd(const GLdouble *m);
 
 /**
- * @brief void glMultiTexCoord1i( GLenum target, GLint s );
+ * @brief void glMultTransposeMatrixf(const GLfloat *m)
  */
-GLE_API void glMultiTexCoord1i( GLenum target, GLint s );
+GLE_API void glMultTransposeMatrixf(const GLfloat *m);
 
 /**
- * @brief void glMultiTexCoord1iv( GLenum target, const GLint *v );
+ * @brief void glMultiTexCoord1d(GLenum target, GLdouble s)
  */
-GLE_API void glMultiTexCoord1iv( GLenum target, const GLint *v );
+GLE_API void glMultiTexCoord1d(GLenum target, GLdouble s);
 
 /**
- * @brief void glMultiTexCoord1s( GLenum target, GLshort s );
+ * @brief void glMultiTexCoord1dv(GLenum target, const GLdouble *v)
  */
-GLE_API void glMultiTexCoord1s( GLenum target, GLshort s );
+GLE_API void glMultiTexCoord1dv(GLenum target, const GLdouble *v);
 
 /**
- * @brief void glMultiTexCoord1sv( GLenum target, const GLshort *v );
+ * @brief void glMultiTexCoord1f(GLenum target, GLfloat s)
  */
-GLE_API void glMultiTexCoord1sv( GLenum target, const GLshort *v );
+GLE_API void glMultiTexCoord1f(GLenum target, GLfloat s);
 
 /**
- * @brief void glMultiTexCoord2d( GLenum target, GLdouble s, GLdouble t );
+ * @brief void glMultiTexCoord1fv(GLenum target, const GLfloat *v)
  */
-GLE_API void glMultiTexCoord2d( GLenum target, GLdouble s, GLdouble t );
+GLE_API void glMultiTexCoord1fv(GLenum target, const GLfloat *v);
 
 /**
- * @brief void glMultiTexCoord2dv( GLenum target, const GLdouble *v );
+ * @brief void glMultiTexCoord1i(GLenum target, GLint s)
  */
-GLE_API void glMultiTexCoord2dv( GLenum target, const GLdouble *v );
+GLE_API void glMultiTexCoord1i(GLenum target, GLint s);
 
 /**
- * @brief void glMultiTexCoord2f( GLenum target, GLfloat s, GLfloat t );
+ * @brief void glMultiTexCoord1iv(GLenum target, const GLint *v)
  */
-GLE_API void glMultiTexCoord2f( GLenum target, GLfloat s, GLfloat t );
+GLE_API void glMultiTexCoord1iv(GLenum target, const GLint *v);
 
 /**
- * @brief void glMultiTexCoord2fv( GLenum target, const GLfloat *v );
+ * @brief void glMultiTexCoord1s(GLenum target, GLshort s)
  */
-GLE_API void glMultiTexCoord2fv( GLenum target, const GLfloat *v );
+GLE_API void glMultiTexCoord1s(GLenum target, GLshort s);
 
 /**
- * @brief void glMultiTexCoord2i( GLenum target, GLint s, GLint t );
+ * @brief void glMultiTexCoord1sv(GLenum target, const GLshort *v)
  */
-GLE_API void glMultiTexCoord2i( GLenum target, GLint s, GLint t );
+GLE_API void glMultiTexCoord1sv(GLenum target, const GLshort *v);
 
 /**
- * @brief void glMultiTexCoord2iv( GLenum target, const GLint *v );
+ * @brief void glMultiTexCoord2d(GLenum target, GLdouble s, GLdouble t)
  */
-GLE_API void glMultiTexCoord2iv( GLenum target, const GLint *v );
+GLE_API void glMultiTexCoord2d(GLenum target, GLdouble s, GLdouble t);
 
 /**
- * @brief void glMultiTexCoord2s( GLenum target, GLshort s, GLshort t );
+ * @brief void glMultiTexCoord2dv(GLenum target, const GLdouble *v)
  */
-GLE_API void glMultiTexCoord2s( GLenum target, GLshort s, GLshort t );
+GLE_API void glMultiTexCoord2dv(GLenum target, const GLdouble *v);
 
 /**
- * @brief void glMultiTexCoord2sv( GLenum target, const GLshort *v );
+ * @brief void glMultiTexCoord2f(GLenum target, GLfloat s, GLfloat t)
  */
-GLE_API void glMultiTexCoord2sv( GLenum target, const GLshort *v );
+GLE_API void glMultiTexCoord2f(GLenum target, GLfloat s, GLfloat t);
 
 /**
- * @brief void glMultiTexCoord3d( GLenum target, GLdouble s, GLdouble t, GLdouble r );
+ * @brief void glMultiTexCoord2fv(GLenum target, const GLfloat *v)
  */
-GLE_API void glMultiTexCoord3d( GLenum target, GLdouble s, GLdouble t, GLdouble r );
+GLE_API void glMultiTexCoord2fv(GLenum target, const GLfloat *v);
 
 /**
- * @brief void glMultiTexCoord3dv( GLenum target, const GLdouble *v );
+ * @brief void glMultiTexCoord2i(GLenum target, GLint s, GLint t)
  */
-GLE_API void glMultiTexCoord3dv( GLenum target, const GLdouble *v );
+GLE_API void glMultiTexCoord2i(GLenum target, GLint s, GLint t);
 
 /**
- * @brief void glMultiTexCoord3f( GLenum target, GLfloat s, GLfloat t, GLfloat r );
+ * @brief void glMultiTexCoord2iv(GLenum target, const GLint *v)
  */
-GLE_API void glMultiTexCoord3f( GLenum target, GLfloat s, GLfloat t, GLfloat r );
+GLE_API void glMultiTexCoord2iv(GLenum target, const GLint *v);
 
 /**
- * @brief void glMultiTexCoord3fv( GLenum target, const GLfloat *v );
+ * @brief void glMultiTexCoord2s(GLenum target, GLshort s, GLshort t)
  */
-GLE_API void glMultiTexCoord3fv( GLenum target, const GLfloat *v );
+GLE_API void glMultiTexCoord2s(GLenum target, GLshort s, GLshort t);
 
 /**
- * @brief void glMultiTexCoord3i( GLenum target, GLint s, GLint t, GLint r );
+ * @brief void glMultiTexCoord2sv(GLenum target, const GLshort *v)
  */
-GLE_API void glMultiTexCoord3i( GLenum target, GLint s, GLint t, GLint r );
+GLE_API void glMultiTexCoord2sv(GLenum target, const GLshort *v);
 
 /**
- * @brief void glMultiTexCoord3iv( GLenum target, const GLint *v );
+ * @brief void glMultiTexCoord3d(GLenum target, GLdouble s, GLdouble t, GLdouble r)
  */
-GLE_API void glMultiTexCoord3iv( GLenum target, const GLint *v );
+GLE_API void glMultiTexCoord3d(GLenum target, GLdouble s, GLdouble t, GLdouble r);
 
 /**
- * @brief void glMultiTexCoord3s( GLenum target, GLshort s, GLshort t, GLshort r );
+ * @brief void glMultiTexCoord3dv(GLenum target, const GLdouble *v)
  */
-GLE_API void glMultiTexCoord3s( GLenum target, GLshort s, GLshort t, GLshort r );
+GLE_API void glMultiTexCoord3dv(GLenum target, const GLdouble *v);
 
 /**
- * @brief void glMultiTexCoord3sv( GLenum target, const GLshort *v );
+ * @brief void glMultiTexCoord3f(GLenum target, GLfloat s, GLfloat t, GLfloat r)
  */
-GLE_API void glMultiTexCoord3sv( GLenum target, const GLshort *v );
+GLE_API void glMultiTexCoord3f(GLenum target, GLfloat s, GLfloat t, GLfloat r);
 
 /**
- * @brief void glMultiTexCoord4d( GLenum target, GLdouble s, GLdouble t, GLdouble r, GLdouble q );
+ * @brief void glMultiTexCoord3fv(GLenum target, const GLfloat *v)
  */
-GLE_API void glMultiTexCoord4d( GLenum target, GLdouble s, GLdouble t, GLdouble r, GLdouble q );
+GLE_API void glMultiTexCoord3fv(GLenum target, const GLfloat *v);
 
 /**
- * @brief void glMultiTexCoord4dv( GLenum target, const GLdouble *v );
+ * @brief void glMultiTexCoord3i(GLenum target, GLint s, GLint t, GLint r)
  */
-GLE_API void glMultiTexCoord4dv( GLenum target, const GLdouble *v );
+GLE_API void glMultiTexCoord3i(GLenum target, GLint s, GLint t, GLint r);
 
 /**
- * @brief void glMultiTexCoord4f( GLenum target, GLfloat s, GLfloat t, GLfloat r, GLfloat q );
+ * @brief void glMultiTexCoord3iv(GLenum target, const GLint *v)
  */
-GLE_API void glMultiTexCoord4f( GLenum target, GLfloat s, GLfloat t, GLfloat r, GLfloat q );
+GLE_API void glMultiTexCoord3iv(GLenum target, const GLint *v);
 
 /**
- * @brief void glMultiTexCoord4fv( GLenum target, const GLfloat *v );
+ * @brief void glMultiTexCoord3s(GLenum target, GLshort s, GLshort t, GLshort r)
  */
-GLE_API void glMultiTexCoord4fv( GLenum target, const GLfloat *v );
+GLE_API void glMultiTexCoord3s(GLenum target, GLshort s, GLshort t, GLshort r);
 
 /**
- * @brief void glMultiTexCoord4i( GLenum target, GLint s, GLint t, GLint r, GLint q );
+ * @brief void glMultiTexCoord3sv(GLenum target, const GLshort *v)
  */
-GLE_API void glMultiTexCoord4i( GLenum target, GLint s, GLint t, GLint r, GLint q );
+GLE_API void glMultiTexCoord3sv(GLenum target, const GLshort *v);
 
 /**
- * @brief void glMultiTexCoord4iv( GLenum target, const GLint *v );
+ * @brief void glMultiTexCoord4d(GLenum target, GLdouble s, GLdouble t, GLdouble r, GLdouble q)
  */
-GLE_API void glMultiTexCoord4iv( GLenum target, const GLint *v );
+GLE_API void glMultiTexCoord4d(GLenum target, GLdouble s, GLdouble t, GLdouble r, GLdouble q);
 
 /**
- * @brief void glMultiTexCoord4s( GLenum target, GLshort s, GLshort t, GLshort r, GLshort q );
+ * @brief void glMultiTexCoord4dv(GLenum target, const GLdouble *v)
  */
-GLE_API void glMultiTexCoord4s( GLenum target, GLshort s, GLshort t, GLshort r, GLshort q );
+GLE_API void glMultiTexCoord4dv(GLenum target, const GLdouble *v);
 
 /**
- * @brief void glMultiTexCoord4sv( GLenum target, const GLshort *v );
+ * @brief void glMultiTexCoord4f(GLenum target, GLfloat s, GLfloat t, GLfloat r, GLfloat q)
  */
-GLE_API void glMultiTexCoord4sv( GLenum target, const GLshort *v );
+GLE_API void glMultiTexCoord4f(GLenum target, GLfloat s, GLfloat t, GLfloat r, GLfloat q);
 
 /**
- * @brief void glLoadTransposeMatrixf( const GLfloat *m );
+ * @brief void glMultiTexCoord4fv(GLenum target, const GLfloat *v)
  */
-GLE_API void glLoadTransposeMatrixf( const GLfloat *m );
+GLE_API void glMultiTexCoord4fv(GLenum target, const GLfloat *v);
 
 /**
- * @brief void glLoadTransposeMatrixd( const GLdouble *m );
+ * @brief void glMultiTexCoord4i(GLenum target, GLint s, GLint t, GLint r, GLint q)
  */
-GLE_API void glLoadTransposeMatrixd( const GLdouble *m );
+GLE_API void glMultiTexCoord4i(GLenum target, GLint s, GLint t, GLint r, GLint q);
 
 /**
- * @brief void glMultTransposeMatrixf( const GLfloat *m );
+ * @brief void glMultiTexCoord4iv(GLenum target, const GLint *v)
  */
-GLE_API void glMultTransposeMatrixf( const GLfloat *m );
+GLE_API void glMultiTexCoord4iv(GLenum target, const GLint *v);
 
 /**
- * @brief void glMultTransposeMatrixd( const GLdouble *m );
+ * @brief void glMultiTexCoord4s(GLenum target, GLshort s, GLshort t, GLshort r, GLshort q)
  */
-GLE_API void glMultTransposeMatrixd( const GLdouble *m );
+GLE_API void glMultiTexCoord4s(GLenum target, GLshort s, GLshort t, GLshort r, GLshort q);
+
+/**
+ * @brief void glMultiTexCoord4sv(GLenum target, const GLshort *v)
+ */
+GLE_API void glMultiTexCoord4sv(GLenum target, const GLshort *v);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_1_4 GL_VERSION_1_4
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_1_4 is supported.
- * @return Returns \c true if \b GL_VERSION_1_4 is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_1_4 is supported.
+ * @return Returns \c true if \b GL_VERSION_1_4 is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_1_4();
 
-/**
- * @brief void glBlendFuncSeparate( GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha );
- */
-GLE_API void glBlendFuncSeparate( GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha );
+
 
 /**
- * @brief void glMultiDrawArrays( GLenum mode, GLint *first, GLsizei *count, GLsizei primcount );
+ * @brief void glBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha)
  */
-GLE_API void glMultiDrawArrays( GLenum mode, GLint *first, GLsizei *count, GLsizei primcount );
+GLE_API void glBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
 
 /**
- * @brief void glMultiDrawElements( GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount );
+ * @brief void glMultiDrawArrays(GLenum mode, GLint *first, GLsizei *count, GLsizei primcount)
  */
-GLE_API void glMultiDrawElements( GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount );
+GLE_API void glMultiDrawArrays(GLenum mode, GLint *first, GLsizei *count, GLsizei primcount);
 
 /**
- * @brief void glPointParameterf( GLenum pname, GLfloat param );
+ * @brief void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount)
  */
-GLE_API void glPointParameterf( GLenum pname, GLfloat param );
+GLE_API void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount);
 
 /**
- * @brief void glPointParameterfv( GLenum pname, const GLfloat *params );
+ * @brief void glPointParameterf(GLenum pname, GLfloat param)
  */
-GLE_API void glPointParameterfv( GLenum pname, const GLfloat *params );
+GLE_API void glPointParameterf(GLenum pname, GLfloat param);
 
 /**
- * @brief void glPointParameteri( GLenum pname, GLint param );
+ * @brief void glPointParameterfv(GLenum pname, const GLfloat *params)
  */
-GLE_API void glPointParameteri( GLenum pname, GLint param );
+GLE_API void glPointParameterfv(GLenum pname, const GLfloat *params);
 
 /**
- * @brief void glPointParameteriv( GLenum pname, const GLint *params );
+ * @brief void glPointParameteri(GLenum pname, GLint param)
  */
-GLE_API void glPointParameteriv( GLenum pname, const GLint *params );
+GLE_API void glPointParameteri(GLenum pname, GLint param);
+
+/**
+ * @brief void glPointParameteriv(GLenum pname, const GLint *params)
+ */
+GLE_API void glPointParameteriv(GLenum pname, const GLint *params);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_1_4_DEPRECATED GL_VERSION_1_4_DEPRECATED
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_1_4_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_1_4_DEPRECATED is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_1_4_DEPRECATED is supported.
+ * @return Returns \c true if \b GL_VERSION_1_4_DEPRECATED is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_1_4_DEPRECATED();
 
-/**
- * @brief void glFogCoordf( GLfloat coord );
- */
-GLE_API void glFogCoordf( GLfloat coord );
+
 
 /**
- * @brief void glFogCoordfv( const GLfloat *coord );
+ * @brief void glFogCoordPointer(GLenum type, GLsizei stride, const GLvoid *pointer)
  */
-GLE_API void glFogCoordfv( const GLfloat *coord );
+GLE_API void glFogCoordPointer(GLenum type, GLsizei stride, const GLvoid *pointer);
 
 /**
- * @brief void glFogCoordd( GLdouble coord );
+ * @brief void glFogCoordd(GLdouble coord)
  */
-GLE_API void glFogCoordd( GLdouble coord );
+GLE_API void glFogCoordd(GLdouble coord);
 
 /**
- * @brief void glFogCoorddv( const GLdouble *coord );
+ * @brief void glFogCoorddv(const GLdouble *coord)
  */
-GLE_API void glFogCoorddv( const GLdouble *coord );
+GLE_API void glFogCoorddv(const GLdouble *coord);
 
 /**
- * @brief void glFogCoordPointer( GLenum type, GLsizei stride, const GLvoid *pointer );
+ * @brief void glFogCoordf(GLfloat coord)
  */
-GLE_API void glFogCoordPointer( GLenum type, GLsizei stride, const GLvoid *pointer );
+GLE_API void glFogCoordf(GLfloat coord);
 
 /**
- * @brief void glSecondaryColor3b( GLbyte red, GLbyte green, GLbyte blue );
+ * @brief void glFogCoordfv(const GLfloat *coord)
  */
-GLE_API void glSecondaryColor3b( GLbyte red, GLbyte green, GLbyte blue );
+GLE_API void glFogCoordfv(const GLfloat *coord);
 
 /**
- * @brief void glSecondaryColor3bv( const GLbyte *v );
+ * @brief void glSecondaryColor3b(GLbyte red, GLbyte green, GLbyte blue)
  */
-GLE_API void glSecondaryColor3bv( const GLbyte *v );
+GLE_API void glSecondaryColor3b(GLbyte red, GLbyte green, GLbyte blue);
 
 /**
- * @brief void glSecondaryColor3d( GLdouble red, GLdouble green, GLdouble blue );
+ * @brief void glSecondaryColor3bv(const GLbyte *v)
  */
-GLE_API void glSecondaryColor3d( GLdouble red, GLdouble green, GLdouble blue );
+GLE_API void glSecondaryColor3bv(const GLbyte *v);
 
 /**
- * @brief void glSecondaryColor3dv( const GLdouble *v );
+ * @brief void glSecondaryColor3d(GLdouble red, GLdouble green, GLdouble blue)
  */
-GLE_API void glSecondaryColor3dv( const GLdouble *v );
+GLE_API void glSecondaryColor3d(GLdouble red, GLdouble green, GLdouble blue);
 
 /**
- * @brief void glSecondaryColor3f( GLfloat red, GLfloat green, GLfloat blue );
+ * @brief void glSecondaryColor3dv(const GLdouble *v)
  */
-GLE_API void glSecondaryColor3f( GLfloat red, GLfloat green, GLfloat blue );
+GLE_API void glSecondaryColor3dv(const GLdouble *v);
 
 /**
- * @brief void glSecondaryColor3fv( const GLfloat *v );
+ * @brief void glSecondaryColor3f(GLfloat red, GLfloat green, GLfloat blue)
  */
-GLE_API void glSecondaryColor3fv( const GLfloat *v );
+GLE_API void glSecondaryColor3f(GLfloat red, GLfloat green, GLfloat blue);
 
 /**
- * @brief void glSecondaryColor3i( GLint red, GLint green, GLint blue );
+ * @brief void glSecondaryColor3fv(const GLfloat *v)
  */
-GLE_API void glSecondaryColor3i( GLint red, GLint green, GLint blue );
+GLE_API void glSecondaryColor3fv(const GLfloat *v);
 
 /**
- * @brief void glSecondaryColor3iv( const GLint *v );
+ * @brief void glSecondaryColor3i(GLint red, GLint green, GLint blue)
  */
-GLE_API void glSecondaryColor3iv( const GLint *v );
+GLE_API void glSecondaryColor3i(GLint red, GLint green, GLint blue);
 
 /**
- * @brief void glSecondaryColor3s( GLshort red, GLshort green, GLshort blue );
+ * @brief void glSecondaryColor3iv(const GLint *v)
  */
-GLE_API void glSecondaryColor3s( GLshort red, GLshort green, GLshort blue );
+GLE_API void glSecondaryColor3iv(const GLint *v);
 
 /**
- * @brief void glSecondaryColor3sv( const GLshort *v );
+ * @brief void glSecondaryColor3s(GLshort red, GLshort green, GLshort blue)
  */
-GLE_API void glSecondaryColor3sv( const GLshort *v );
+GLE_API void glSecondaryColor3s(GLshort red, GLshort green, GLshort blue);
 
 /**
- * @brief void glSecondaryColor3ub( GLubyte red, GLubyte green, GLubyte blue );
+ * @brief void glSecondaryColor3sv(const GLshort *v)
  */
-GLE_API void glSecondaryColor3ub( GLubyte red, GLubyte green, GLubyte blue );
+GLE_API void glSecondaryColor3sv(const GLshort *v);
 
 /**
- * @brief void glSecondaryColor3ubv( const GLubyte *v );
+ * @brief void glSecondaryColor3ub(GLubyte red, GLubyte green, GLubyte blue)
  */
-GLE_API void glSecondaryColor3ubv( const GLubyte *v );
+GLE_API void glSecondaryColor3ub(GLubyte red, GLubyte green, GLubyte blue);
 
 /**
- * @brief void glSecondaryColor3ui( GLuint red, GLuint green, GLuint blue );
+ * @brief void glSecondaryColor3ubv(const GLubyte *v)
  */
-GLE_API void glSecondaryColor3ui( GLuint red, GLuint green, GLuint blue );
+GLE_API void glSecondaryColor3ubv(const GLubyte *v);
 
 /**
- * @brief void glSecondaryColor3uiv( const GLuint *v );
+ * @brief void glSecondaryColor3ui(GLuint red, GLuint green, GLuint blue)
  */
-GLE_API void glSecondaryColor3uiv( const GLuint *v );
+GLE_API void glSecondaryColor3ui(GLuint red, GLuint green, GLuint blue);
 
 /**
- * @brief void glSecondaryColor3us( GLushort red, GLushort green, GLushort blue );
+ * @brief void glSecondaryColor3uiv(const GLuint *v)
  */
-GLE_API void glSecondaryColor3us( GLushort red, GLushort green, GLushort blue );
+GLE_API void glSecondaryColor3uiv(const GLuint *v);
 
 /**
- * @brief void glSecondaryColor3usv( const GLushort *v );
+ * @brief void glSecondaryColor3us(GLushort red, GLushort green, GLushort blue)
  */
-GLE_API void glSecondaryColor3usv( const GLushort *v );
+GLE_API void glSecondaryColor3us(GLushort red, GLushort green, GLushort blue);
 
 /**
- * @brief void glSecondaryColorPointer( GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+ * @brief void glSecondaryColor3usv(const GLushort *v)
  */
-GLE_API void glSecondaryColorPointer( GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+GLE_API void glSecondaryColor3usv(const GLushort *v);
 
 /**
- * @brief void glWindowPos2d( GLdouble x, GLdouble y );
+ * @brief void glSecondaryColorPointer(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
  */
-GLE_API void glWindowPos2d( GLdouble x, GLdouble y );
+GLE_API void glSecondaryColorPointer(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
 
 /**
- * @brief void glWindowPos2dv( const GLdouble *v );
+ * @brief void glWindowPos2d(GLdouble x, GLdouble y)
  */
-GLE_API void glWindowPos2dv( const GLdouble *v );
+GLE_API void glWindowPos2d(GLdouble x, GLdouble y);
 
 /**
- * @brief void glWindowPos2f( GLfloat x, GLfloat y );
+ * @brief void glWindowPos2dv(const GLdouble *v)
  */
-GLE_API void glWindowPos2f( GLfloat x, GLfloat y );
+GLE_API void glWindowPos2dv(const GLdouble *v);
 
 /**
- * @brief void glWindowPos2fv( const GLfloat *v );
+ * @brief void glWindowPos2f(GLfloat x, GLfloat y)
  */
-GLE_API void glWindowPos2fv( const GLfloat *v );
+GLE_API void glWindowPos2f(GLfloat x, GLfloat y);
 
 /**
- * @brief void glWindowPos2i( GLint x, GLint y );
+ * @brief void glWindowPos2fv(const GLfloat *v)
  */
-GLE_API void glWindowPos2i( GLint x, GLint y );
+GLE_API void glWindowPos2fv(const GLfloat *v);
 
 /**
- * @brief void glWindowPos2iv( const GLint *v );
+ * @brief void glWindowPos2i(GLint x, GLint y)
  */
-GLE_API void glWindowPos2iv( const GLint *v );
+GLE_API void glWindowPos2i(GLint x, GLint y);
 
 /**
- * @brief void glWindowPos2s( GLshort x, GLshort y );
+ * @brief void glWindowPos2iv(const GLint *v)
  */
-GLE_API void glWindowPos2s( GLshort x, GLshort y );
+GLE_API void glWindowPos2iv(const GLint *v);
 
 /**
- * @brief void glWindowPos2sv( const GLshort *v );
+ * @brief void glWindowPos2s(GLshort x, GLshort y)
  */
-GLE_API void glWindowPos2sv( const GLshort *v );
+GLE_API void glWindowPos2s(GLshort x, GLshort y);
 
 /**
- * @brief void glWindowPos3d( GLdouble x, GLdouble y, GLdouble z );
+ * @brief void glWindowPos2sv(const GLshort *v)
  */
-GLE_API void glWindowPos3d( GLdouble x, GLdouble y, GLdouble z );
+GLE_API void glWindowPos2sv(const GLshort *v);
 
 /**
- * @brief void glWindowPos3dv( const GLdouble *v );
+ * @brief void glWindowPos3d(GLdouble x, GLdouble y, GLdouble z)
  */
-GLE_API void glWindowPos3dv( const GLdouble *v );
+GLE_API void glWindowPos3d(GLdouble x, GLdouble y, GLdouble z);
 
 /**
- * @brief void glWindowPos3f( GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glWindowPos3dv(const GLdouble *v)
  */
-GLE_API void glWindowPos3f( GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glWindowPos3dv(const GLdouble *v);
 
 /**
- * @brief void glWindowPos3fv( const GLfloat *v );
+ * @brief void glWindowPos3f(GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glWindowPos3fv( const GLfloat *v );
+GLE_API void glWindowPos3f(GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glWindowPos3i( GLint x, GLint y, GLint z );
+ * @brief void glWindowPos3fv(const GLfloat *v)
  */
-GLE_API void glWindowPos3i( GLint x, GLint y, GLint z );
+GLE_API void glWindowPos3fv(const GLfloat *v);
 
 /**
- * @brief void glWindowPos3iv( const GLint *v );
+ * @brief void glWindowPos3i(GLint x, GLint y, GLint z)
  */
-GLE_API void glWindowPos3iv( const GLint *v );
+GLE_API void glWindowPos3i(GLint x, GLint y, GLint z);
 
 /**
- * @brief void glWindowPos3s( GLshort x, GLshort y, GLshort z );
+ * @brief void glWindowPos3iv(const GLint *v)
  */
-GLE_API void glWindowPos3s( GLshort x, GLshort y, GLshort z );
+GLE_API void glWindowPos3iv(const GLint *v);
 
 /**
- * @brief void glWindowPos3sv( const GLshort *v );
+ * @brief void glWindowPos3s(GLshort x, GLshort y, GLshort z)
  */
-GLE_API void glWindowPos3sv( const GLshort *v );
+GLE_API void glWindowPos3s(GLshort x, GLshort y, GLshort z);
+
+/**
+ * @brief void glWindowPos3sv(const GLshort *v)
+ */
+GLE_API void glWindowPos3sv(const GLshort *v);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_1_5 GL_VERSION_1_5
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_1_5 is supported.
- * @return Returns \c true if \b GL_VERSION_1_5 is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_1_5 is supported.
+ * @return Returns \c true if \b GL_VERSION_1_5 is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_1_5();
 
-/**
- * @brief void glGenQueries( GLsizei n, GLuint *ids );
- */
-GLE_API void glGenQueries( GLsizei n, GLuint *ids );
+
 
 /**
- * @brief void glDeleteQueries( GLsizei n, const GLuint *ids );
+ * @brief void glBeginQuery(GLenum target, GLuint id)
  */
-GLE_API void glDeleteQueries( GLsizei n, const GLuint *ids );
+GLE_API void glBeginQuery(GLenum target, GLuint id);
 
 /**
- * @brief GLboolean glIsQuery( GLuint id );
+ * @brief void glBindBuffer(GLenum target, GLuint buffer)
  */
-GLE_API GLboolean glIsQuery( GLuint id );
+GLE_API void glBindBuffer(GLenum target, GLuint buffer);
 
 /**
- * @brief void glBeginQuery( GLenum target, GLuint id );
+ * @brief void glBufferData(GLenum target, GLsizeiptr size, const GLvoid *data, GLenum usage)
  */
-GLE_API void glBeginQuery( GLenum target, GLuint id );
+GLE_API void glBufferData(GLenum target, GLsizeiptr size, const GLvoid *data, GLenum usage);
 
 /**
- * @brief void glEndQuery( GLenum target );
+ * @brief void glBufferSubData(GLenum target, GLintptr offset, GLsizeiptr size, const GLvoid *data)
  */
-GLE_API void glEndQuery( GLenum target );
+GLE_API void glBufferSubData(GLenum target, GLintptr offset, GLsizeiptr size, const GLvoid *data);
 
 /**
- * @brief void glGetQueryiv( GLenum target, GLenum pname, GLint *params );
+ * @brief void glDeleteBuffers(GLsizei n, const GLuint *buffers)
  */
-GLE_API void glGetQueryiv( GLenum target, GLenum pname, GLint *params );
+GLE_API void glDeleteBuffers(GLsizei n, const GLuint *buffers);
 
 /**
- * @brief void glGetQueryObjectiv( GLuint id, GLenum pname, GLint *params );
+ * @brief void glDeleteQueries(GLsizei n, const GLuint *ids)
  */
-GLE_API void glGetQueryObjectiv( GLuint id, GLenum pname, GLint *params );
+GLE_API void glDeleteQueries(GLsizei n, const GLuint *ids);
 
 /**
- * @brief void glGetQueryObjectuiv( GLuint id, GLenum pname, GLuint *params );
+ * @brief void glEndQuery(GLenum target)
  */
-GLE_API void glGetQueryObjectuiv( GLuint id, GLenum pname, GLuint *params );
+GLE_API void glEndQuery(GLenum target);
 
 /**
- * @brief void glBindBuffer( GLenum target, GLuint buffer );
+ * @brief void glGenBuffers(GLsizei n, GLuint *buffers)
  */
-GLE_API void glBindBuffer( GLenum target, GLuint buffer );
+GLE_API void glGenBuffers(GLsizei n, GLuint *buffers);
 
 /**
- * @brief void glDeleteBuffers( GLsizei n, const GLuint *buffers );
+ * @brief void glGenQueries(GLsizei n, GLuint *ids)
  */
-GLE_API void glDeleteBuffers( GLsizei n, const GLuint *buffers );
+GLE_API void glGenQueries(GLsizei n, GLuint *ids);
 
 /**
- * @brief void glGenBuffers( GLsizei n, GLuint *buffers );
+ * @brief void glGetBufferParameteriv(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glGenBuffers( GLsizei n, GLuint *buffers );
+GLE_API void glGetBufferParameteriv(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief GLboolean glIsBuffer( GLuint buffer );
+ * @brief void glGetBufferPointerv(GLenum target, GLenum pname, GLvoid* *params)
  */
-GLE_API GLboolean glIsBuffer( GLuint buffer );
+GLE_API void glGetBufferPointerv(GLenum target, GLenum pname, GLvoid* *params);
 
 /**
- * @brief void glBufferData( GLenum target, GLsizeiptr size, const GLvoid *data, GLenum usage );
+ * @brief void glGetBufferSubData(GLenum target, GLintptr offset, GLsizeiptr size, GLvoid *data)
  */
-GLE_API void glBufferData( GLenum target, GLsizeiptr size, const GLvoid *data, GLenum usage );
+GLE_API void glGetBufferSubData(GLenum target, GLintptr offset, GLsizeiptr size, GLvoid *data);
 
 /**
- * @brief void glBufferSubData( GLenum target, GLintptr offset, GLsizeiptr size, const GLvoid *data );
+ * @brief void glGetQueryObjectiv(GLuint id, GLenum pname, GLint *params)
  */
-GLE_API void glBufferSubData( GLenum target, GLintptr offset, GLsizeiptr size, const GLvoid *data );
+GLE_API void glGetQueryObjectiv(GLuint id, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetBufferSubData( GLenum target, GLintptr offset, GLsizeiptr size, GLvoid *data );
+ * @brief void glGetQueryObjectuiv(GLuint id, GLenum pname, GLuint *params)
  */
-GLE_API void glGetBufferSubData( GLenum target, GLintptr offset, GLsizeiptr size, GLvoid *data );
+GLE_API void glGetQueryObjectuiv(GLuint id, GLenum pname, GLuint *params);
 
 /**
- * @brief GLvoid* glMapBuffer( GLenum target, GLenum access );
+ * @brief void glGetQueryiv(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API GLvoid* glMapBuffer( GLenum target, GLenum access );
+GLE_API void glGetQueryiv(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief GLboolean glUnmapBuffer( GLenum target );
+ * @brief GLboolean glIsBuffer(GLuint buffer)
  */
-GLE_API GLboolean glUnmapBuffer( GLenum target );
+GLE_API GLboolean glIsBuffer(GLuint buffer);
 
 /**
- * @brief void glGetBufferParameteriv( GLenum target, GLenum pname, GLint *params );
+ * @brief GLboolean glIsQuery(GLuint id)
  */
-GLE_API void glGetBufferParameteriv( GLenum target, GLenum pname, GLint *params );
+GLE_API GLboolean glIsQuery(GLuint id);
 
 /**
- * @brief void glGetBufferPointerv( GLenum target, GLenum pname, GLvoid* *params );
+ * @brief GLvoid* glMapBuffer(GLenum target, GLenum access)
  */
-GLE_API void glGetBufferPointerv( GLenum target, GLenum pname, GLvoid* *params );
+GLE_API GLvoid* glMapBuffer(GLenum target, GLenum access);
+
+/**
+ * @brief GLboolean glUnmapBuffer(GLenum target)
+ */
+GLE_API GLboolean glUnmapBuffer(GLenum target);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_1_5_DEPRECATED GL_VERSION_1_5_DEPRECATED
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_1_5_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_1_5_DEPRECATED is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_1_5_DEPRECATED is supported.
+ * @return Returns \c true if \b GL_VERSION_1_5_DEPRECATED is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_1_5_DEPRECATED();
 
+
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_2_0 GL_VERSION_2_0
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_2_0 is supported.
- * @return Returns \c true if \b GL_VERSION_2_0 is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_2_0 is supported.
+ * @return Returns \c true if \b GL_VERSION_2_0 is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_2_0();
 
+
+
 /**
- * @brief void glBlendEquationSeparate( GLenum modeRGB, GLenum modeAlpha );
+ * @brief void glAttachShader(GLuint program, GLuint shader)
  */
-GLE_API void glBlendEquationSeparate( GLenum modeRGB, GLenum modeAlpha );
+GLE_API void glAttachShader(GLuint program, GLuint shader);
 
 /**
- * @brief void glDrawBuffers( GLsizei n, const GLenum *bufs );
+ * @brief void glBindAttribLocation(GLuint program, GLuint index, const GLchar *name)
  */
-GLE_API void glDrawBuffers( GLsizei n, const GLenum *bufs );
+GLE_API void glBindAttribLocation(GLuint program, GLuint index, const GLchar *name);
 
 /**
- * @brief void glStencilOpSeparate( GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass );
+ * @brief void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha)
  */
-GLE_API void glStencilOpSeparate( GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass );
+GLE_API void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha);
 
 /**
- * @brief void glStencilFuncSeparate( GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask );
+ * @brief void glCompileShader(GLuint shader)
  */
-GLE_API void glStencilFuncSeparate( GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask );
+GLE_API void glCompileShader(GLuint shader);
 
 /**
- * @brief void glStencilMaskSeparate( GLenum face, GLuint mask );
+ * @brief GLuint glCreateProgram(void)
  */
-GLE_API void glStencilMaskSeparate( GLenum face, GLuint mask );
+GLE_API GLuint glCreateProgram(void);
 
 /**
- * @brief void glAttachShader( GLuint program, GLuint shader );
+ * @brief GLuint glCreateShader(GLenum type)
  */
-GLE_API void glAttachShader( GLuint program, GLuint shader );
+GLE_API GLuint glCreateShader(GLenum type);
 
 /**
- * @brief void glBindAttribLocation( GLuint program, GLuint index, const GLchar *name );
+ * @brief void glDeleteProgram(GLuint program)
  */
-GLE_API void glBindAttribLocation( GLuint program, GLuint index, const GLchar *name );
+GLE_API void glDeleteProgram(GLuint program);
 
 /**
- * @brief void glCompileShader( GLuint shader );
+ * @brief void glDeleteShader(GLuint shader)
  */
-GLE_API void glCompileShader( GLuint shader );
+GLE_API void glDeleteShader(GLuint shader);
 
 /**
- * @brief GLuint glCreateProgram( void );
+ * @brief void glDetachShader(GLuint program, GLuint shader)
  */
-GLE_API GLuint glCreateProgram( void );
+GLE_API void glDetachShader(GLuint program, GLuint shader);
 
 /**
- * @brief GLuint glCreateShader( GLenum type );
+ * @brief void glDisableVertexAttribArray(GLuint index)
  */
-GLE_API GLuint glCreateShader( GLenum type );
+GLE_API void glDisableVertexAttribArray(GLuint index);
 
 /**
- * @brief void glDeleteProgram( GLuint program );
+ * @brief void glDrawBuffers(GLsizei n, const GLenum *bufs)
  */
-GLE_API void glDeleteProgram( GLuint program );
+GLE_API void glDrawBuffers(GLsizei n, const GLenum *bufs);
 
 /**
- * @brief void glDeleteShader( GLuint shader );
+ * @brief void glEnableVertexAttribArray(GLuint index)
  */
-GLE_API void glDeleteShader( GLuint shader );
+GLE_API void glEnableVertexAttribArray(GLuint index);
 
 /**
- * @brief void glDetachShader( GLuint program, GLuint shader );
+ * @brief void glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLint *size, GLenum *type, GLchar *name)
  */
-GLE_API void glDetachShader( GLuint program, GLuint shader );
+GLE_API void glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLint *size, GLenum *type, GLchar *name);
 
 /**
- * @brief void glDisableVertexAttribArray( GLuint index );
+ * @brief void glGetActiveUniform(GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLint *size, GLenum *type, GLchar *name)
  */
-GLE_API void glDisableVertexAttribArray( GLuint index );
+GLE_API void glGetActiveUniform(GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLint *size, GLenum *type, GLchar *name);
 
 /**
- * @brief void glEnableVertexAttribArray( GLuint index );
+ * @brief void glGetAttachedShaders(GLuint program, GLsizei maxCount, GLsizei *count, GLuint *obj)
  */
-GLE_API void glEnableVertexAttribArray( GLuint index );
+GLE_API void glGetAttachedShaders(GLuint program, GLsizei maxCount, GLsizei *count, GLuint *obj);
 
 /**
- * @brief void glGetActiveAttrib( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLint *size, GLenum *type, GLchar *name );
+ * @brief GLint glGetAttribLocation(GLuint program, const GLchar *name)
  */
-GLE_API void glGetActiveAttrib( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLint *size, GLenum *type, GLchar *name );
+GLE_API GLint glGetAttribLocation(GLuint program, const GLchar *name);
 
 /**
- * @brief void glGetActiveUniform( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLint *size, GLenum *type, GLchar *name );
+ * @brief void glGetProgramInfoLog(GLuint program, GLsizei bufSize, GLsizei *length, GLchar *infoLog)
  */
-GLE_API void glGetActiveUniform( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLint *size, GLenum *type, GLchar *name );
+GLE_API void glGetProgramInfoLog(GLuint program, GLsizei bufSize, GLsizei *length, GLchar *infoLog);
 
 /**
- * @brief void glGetAttachedShaders( GLuint program, GLsizei maxCount, GLsizei *count, GLuint *obj );
+ * @brief void glGetProgramiv(GLuint program, GLenum pname, GLint *params)
  */
-GLE_API void glGetAttachedShaders( GLuint program, GLsizei maxCount, GLsizei *count, GLuint *obj );
+GLE_API void glGetProgramiv(GLuint program, GLenum pname, GLint *params);
 
 /**
- * @brief GLint glGetAttribLocation( GLuint program, const GLchar *name );
+ * @brief void glGetShaderInfoLog(GLuint shader, GLsizei bufSize, GLsizei *length, GLchar *infoLog)
  */
-GLE_API GLint glGetAttribLocation( GLuint program, const GLchar *name );
+GLE_API void glGetShaderInfoLog(GLuint shader, GLsizei bufSize, GLsizei *length, GLchar *infoLog);
 
 /**
- * @brief void glGetProgramiv( GLuint program, GLenum pname, GLint *params );
+ * @brief void glGetShaderSource(GLuint shader, GLsizei bufSize, GLsizei *length, GLchar *source)
  */
-GLE_API void glGetProgramiv( GLuint program, GLenum pname, GLint *params );
+GLE_API void glGetShaderSource(GLuint shader, GLsizei bufSize, GLsizei *length, GLchar *source);
 
 /**
- * @brief void glGetProgramInfoLog( GLuint program, GLsizei bufSize, GLsizei *length, GLchar *infoLog );
+ * @brief void glGetShaderiv(GLuint shader, GLenum pname, GLint *params)
  */
-GLE_API void glGetProgramInfoLog( GLuint program, GLsizei bufSize, GLsizei *length, GLchar *infoLog );
+GLE_API void glGetShaderiv(GLuint shader, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetShaderiv( GLuint shader, GLenum pname, GLint *params );
+ * @brief GLint glGetUniformLocation(GLuint program, const GLchar *name)
  */
-GLE_API void glGetShaderiv( GLuint shader, GLenum pname, GLint *params );
+GLE_API GLint glGetUniformLocation(GLuint program, const GLchar *name);
 
 /**
- * @brief void glGetShaderInfoLog( GLuint shader, GLsizei bufSize, GLsizei *length, GLchar *infoLog );
+ * @brief void glGetUniformfv(GLuint program, GLint location, GLfloat *params)
  */
-GLE_API void glGetShaderInfoLog( GLuint shader, GLsizei bufSize, GLsizei *length, GLchar *infoLog );
+GLE_API void glGetUniformfv(GLuint program, GLint location, GLfloat *params);
 
 /**
- * @brief void glGetShaderSource( GLuint shader, GLsizei bufSize, GLsizei *length, GLchar *source );
+ * @brief void glGetUniformiv(GLuint program, GLint location, GLint *params)
  */
-GLE_API void glGetShaderSource( GLuint shader, GLsizei bufSize, GLsizei *length, GLchar *source );
+GLE_API void glGetUniformiv(GLuint program, GLint location, GLint *params);
 
 /**
- * @brief GLint glGetUniformLocation( GLuint program, const GLchar *name );
+ * @brief void glGetVertexAttribPointerv(GLuint index, GLenum pname, GLvoid* *pointer)
  */
-GLE_API GLint glGetUniformLocation( GLuint program, const GLchar *name );
+GLE_API void glGetVertexAttribPointerv(GLuint index, GLenum pname, GLvoid* *pointer);
 
 /**
- * @brief void glGetUniformfv( GLuint program, GLint location, GLfloat *params );
+ * @brief void glGetVertexAttribdv(GLuint index, GLenum pname, GLdouble *params)
  */
-GLE_API void glGetUniformfv( GLuint program, GLint location, GLfloat *params );
+GLE_API void glGetVertexAttribdv(GLuint index, GLenum pname, GLdouble *params);
 
 /**
- * @brief void glGetUniformiv( GLuint program, GLint location, GLint *params );
+ * @brief void glGetVertexAttribfv(GLuint index, GLenum pname, GLfloat *params)
  */
-GLE_API void glGetUniformiv( GLuint program, GLint location, GLint *params );
+GLE_API void glGetVertexAttribfv(GLuint index, GLenum pname, GLfloat *params);
 
 /**
- * @brief void glGetVertexAttribdv( GLuint index, GLenum pname, GLdouble *params );
+ * @brief void glGetVertexAttribiv(GLuint index, GLenum pname, GLint *params)
  */
-GLE_API void glGetVertexAttribdv( GLuint index, GLenum pname, GLdouble *params );
+GLE_API void glGetVertexAttribiv(GLuint index, GLenum pname, GLint *params);
 
 /**
- * @brief void glGetVertexAttribfv( GLuint index, GLenum pname, GLfloat *params );
+ * @brief GLboolean glIsProgram(GLuint program)
  */
-GLE_API void glGetVertexAttribfv( GLuint index, GLenum pname, GLfloat *params );
+GLE_API GLboolean glIsProgram(GLuint program);
 
 /**
- * @brief void glGetVertexAttribiv( GLuint index, GLenum pname, GLint *params );
+ * @brief GLboolean glIsShader(GLuint shader)
  */
-GLE_API void glGetVertexAttribiv( GLuint index, GLenum pname, GLint *params );
+GLE_API GLboolean glIsShader(GLuint shader);
 
 /**
- * @brief void glGetVertexAttribPointerv( GLuint index, GLenum pname, GLvoid* *pointer );
+ * @brief void glLinkProgram(GLuint program)
  */
-GLE_API void glGetVertexAttribPointerv( GLuint index, GLenum pname, GLvoid* *pointer );
+GLE_API void glLinkProgram(GLuint program);
 
 /**
- * @brief GLboolean glIsProgram( GLuint program );
+ * @brief void glShaderSource(GLuint shader, GLsizei count, const GLchar* *string, const GLint *length)
  */
-GLE_API GLboolean glIsProgram( GLuint program );
+GLE_API void glShaderSource(GLuint shader, GLsizei count, const GLchar* *string, const GLint *length);
 
 /**
- * @brief GLboolean glIsShader( GLuint shader );
+ * @brief void glStencilFuncSeparate(GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask)
  */
-GLE_API GLboolean glIsShader( GLuint shader );
+GLE_API void glStencilFuncSeparate(GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask);
 
 /**
- * @brief void glLinkProgram( GLuint program );
+ * @brief void glStencilMaskSeparate(GLenum face, GLuint mask)
  */
-GLE_API void glLinkProgram( GLuint program );
+GLE_API void glStencilMaskSeparate(GLenum face, GLuint mask);
 
 /**
- * @brief void glShaderSource( GLuint shader, GLsizei count, const GLchar* *string, const GLint *length );
+ * @brief void glStencilOpSeparate(GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass)
  */
-GLE_API void glShaderSource( GLuint shader, GLsizei count, const GLchar* *string, const GLint *length );
+GLE_API void glStencilOpSeparate(GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass);
 
 /**
- * @brief void glUseProgram( GLuint program );
+ * @brief void glUniform1f(GLint location, GLfloat v0)
  */
-GLE_API void glUseProgram( GLuint program );
+GLE_API void glUniform1f(GLint location, GLfloat v0);
 
 /**
- * @brief void glUniform1f( GLint location, GLfloat v0 );
+ * @brief void glUniform1fv(GLint location, GLsizei count, const GLfloat *value)
  */
-GLE_API void glUniform1f( GLint location, GLfloat v0 );
+GLE_API void glUniform1fv(GLint location, GLsizei count, const GLfloat *value);
 
 /**
- * @brief void glUniform2f( GLint location, GLfloat v0, GLfloat v1 );
+ * @brief void glUniform1i(GLint location, GLint v0)
  */
-GLE_API void glUniform2f( GLint location, GLfloat v0, GLfloat v1 );
+GLE_API void glUniform1i(GLint location, GLint v0);
 
 /**
- * @brief void glUniform3f( GLint location, GLfloat v0, GLfloat v1, GLfloat v2 );
+ * @brief void glUniform1iv(GLint location, GLsizei count, const GLint *value)
  */
-GLE_API void glUniform3f( GLint location, GLfloat v0, GLfloat v1, GLfloat v2 );
+GLE_API void glUniform1iv(GLint location, GLsizei count, const GLint *value);
 
 /**
- * @brief void glUniform4f( GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3 );
+ * @brief void glUniform2f(GLint location, GLfloat v0, GLfloat v1)
  */
-GLE_API void glUniform4f( GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3 );
+GLE_API void glUniform2f(GLint location, GLfloat v0, GLfloat v1);
 
 /**
- * @brief void glUniform1i( GLint location, GLint v0 );
+ * @brief void glUniform2fv(GLint location, GLsizei count, const GLfloat *value)
  */
-GLE_API void glUniform1i( GLint location, GLint v0 );
+GLE_API void glUniform2fv(GLint location, GLsizei count, const GLfloat *value);
 
 /**
- * @brief void glUniform2i( GLint location, GLint v0, GLint v1 );
+ * @brief void glUniform2i(GLint location, GLint v0, GLint v1)
  */
-GLE_API void glUniform2i( GLint location, GLint v0, GLint v1 );
+GLE_API void glUniform2i(GLint location, GLint v0, GLint v1);
 
 /**
- * @brief void glUniform3i( GLint location, GLint v0, GLint v1, GLint v2 );
+ * @brief void glUniform2iv(GLint location, GLsizei count, const GLint *value)
  */
-GLE_API void glUniform3i( GLint location, GLint v0, GLint v1, GLint v2 );
+GLE_API void glUniform2iv(GLint location, GLsizei count, const GLint *value);
 
 /**
- * @brief void glUniform4i( GLint location, GLint v0, GLint v1, GLint v2, GLint v3 );
+ * @brief void glUniform3f(GLint location, GLfloat v0, GLfloat v1, GLfloat v2)
  */
-GLE_API void glUniform4i( GLint location, GLint v0, GLint v1, GLint v2, GLint v3 );
+GLE_API void glUniform3f(GLint location, GLfloat v0, GLfloat v1, GLfloat v2);
 
 /**
- * @brief void glUniform1fv( GLint location, GLsizei count, const GLfloat *value );
+ * @brief void glUniform3fv(GLint location, GLsizei count, const GLfloat *value)
  */
-GLE_API void glUniform1fv( GLint location, GLsizei count, const GLfloat *value );
+GLE_API void glUniform3fv(GLint location, GLsizei count, const GLfloat *value);
 
 /**
- * @brief void glUniform2fv( GLint location, GLsizei count, const GLfloat *value );
+ * @brief void glUniform3i(GLint location, GLint v0, GLint v1, GLint v2)
  */
-GLE_API void glUniform2fv( GLint location, GLsizei count, const GLfloat *value );
+GLE_API void glUniform3i(GLint location, GLint v0, GLint v1, GLint v2);
 
 /**
- * @brief void glUniform3fv( GLint location, GLsizei count, const GLfloat *value );
+ * @brief void glUniform3iv(GLint location, GLsizei count, const GLint *value)
  */
-GLE_API void glUniform3fv( GLint location, GLsizei count, const GLfloat *value );
+GLE_API void glUniform3iv(GLint location, GLsizei count, const GLint *value);
 
 /**
- * @brief void glUniform4fv( GLint location, GLsizei count, const GLfloat *value );
+ * @brief void glUniform4f(GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3)
  */
-GLE_API void glUniform4fv( GLint location, GLsizei count, const GLfloat *value );
+GLE_API void glUniform4f(GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3);
 
 /**
- * @brief void glUniform1iv( GLint location, GLsizei count, const GLint *value );
+ * @brief void glUniform4fv(GLint location, GLsizei count, const GLfloat *value)
  */
-GLE_API void glUniform1iv( GLint location, GLsizei count, const GLint *value );
+GLE_API void glUniform4fv(GLint location, GLsizei count, const GLfloat *value);
 
 /**
- * @brief void glUniform2iv( GLint location, GLsizei count, const GLint *value );
+ * @brief void glUniform4i(GLint location, GLint v0, GLint v1, GLint v2, GLint v3)
  */
-GLE_API void glUniform2iv( GLint location, GLsizei count, const GLint *value );
+GLE_API void glUniform4i(GLint location, GLint v0, GLint v1, GLint v2, GLint v3);
 
 /**
- * @brief void glUniform3iv( GLint location, GLsizei count, const GLint *value );
+ * @brief void glUniform4iv(GLint location, GLsizei count, const GLint *value)
  */
-GLE_API void glUniform3iv( GLint location, GLsizei count, const GLint *value );
+GLE_API void glUniform4iv(GLint location, GLsizei count, const GLint *value);
 
 /**
- * @brief void glUniform4iv( GLint location, GLsizei count, const GLint *value );
+ * @brief void glUniformMatrix2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glUniform4iv( GLint location, GLsizei count, const GLint *value );
+GLE_API void glUniformMatrix2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glUniformMatrix2fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glUniformMatrix3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glUniformMatrix2fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glUniformMatrix3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glUniformMatrix3fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glUniformMatrix4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glUniformMatrix3fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glUniformMatrix4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glUniformMatrix4fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glUseProgram(GLuint program)
  */
-GLE_API void glUniformMatrix4fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glUseProgram(GLuint program);
 
 /**
- * @brief void glValidateProgram( GLuint program );
+ * @brief void glValidateProgram(GLuint program)
  */
-GLE_API void glValidateProgram( GLuint program );
+GLE_API void glValidateProgram(GLuint program);
 
 /**
- * @brief void glVertexAttrib1d( GLuint index, GLdouble x );
+ * @brief void glVertexAttrib1d(GLuint index, GLdouble x)
  */
-GLE_API void glVertexAttrib1d( GLuint index, GLdouble x );
+GLE_API void glVertexAttrib1d(GLuint index, GLdouble x);
 
 /**
- * @brief void glVertexAttrib1dv( GLuint index, const GLdouble *v );
+ * @brief void glVertexAttrib1dv(GLuint index, const GLdouble *v)
  */
-GLE_API void glVertexAttrib1dv( GLuint index, const GLdouble *v );
+GLE_API void glVertexAttrib1dv(GLuint index, const GLdouble *v);
 
 /**
- * @brief void glVertexAttrib1f( GLuint index, GLfloat x );
+ * @brief void glVertexAttrib1f(GLuint index, GLfloat x)
  */
-GLE_API void glVertexAttrib1f( GLuint index, GLfloat x );
+GLE_API void glVertexAttrib1f(GLuint index, GLfloat x);
 
 /**
- * @brief void glVertexAttrib1fv( GLuint index, const GLfloat *v );
+ * @brief void glVertexAttrib1fv(GLuint index, const GLfloat *v)
  */
-GLE_API void glVertexAttrib1fv( GLuint index, const GLfloat *v );
+GLE_API void glVertexAttrib1fv(GLuint index, const GLfloat *v);
 
 /**
- * @brief void glVertexAttrib1s( GLuint index, GLshort x );
+ * @brief void glVertexAttrib1s(GLuint index, GLshort x)
  */
-GLE_API void glVertexAttrib1s( GLuint index, GLshort x );
+GLE_API void glVertexAttrib1s(GLuint index, GLshort x);
 
 /**
- * @brief void glVertexAttrib1sv( GLuint index, const GLshort *v );
+ * @brief void glVertexAttrib1sv(GLuint index, const GLshort *v)
  */
-GLE_API void glVertexAttrib1sv( GLuint index, const GLshort *v );
+GLE_API void glVertexAttrib1sv(GLuint index, const GLshort *v);
 
 /**
- * @brief void glVertexAttrib2d( GLuint index, GLdouble x, GLdouble y );
+ * @brief void glVertexAttrib2d(GLuint index, GLdouble x, GLdouble y)
  */
-GLE_API void glVertexAttrib2d( GLuint index, GLdouble x, GLdouble y );
+GLE_API void glVertexAttrib2d(GLuint index, GLdouble x, GLdouble y);
 
 /**
- * @brief void glVertexAttrib2dv( GLuint index, const GLdouble *v );
+ * @brief void glVertexAttrib2dv(GLuint index, const GLdouble *v)
  */
-GLE_API void glVertexAttrib2dv( GLuint index, const GLdouble *v );
+GLE_API void glVertexAttrib2dv(GLuint index, const GLdouble *v);
 
 /**
- * @brief void glVertexAttrib2f( GLuint index, GLfloat x, GLfloat y );
+ * @brief void glVertexAttrib2f(GLuint index, GLfloat x, GLfloat y)
  */
-GLE_API void glVertexAttrib2f( GLuint index, GLfloat x, GLfloat y );
+GLE_API void glVertexAttrib2f(GLuint index, GLfloat x, GLfloat y);
 
 /**
- * @brief void glVertexAttrib2fv( GLuint index, const GLfloat *v );
+ * @brief void glVertexAttrib2fv(GLuint index, const GLfloat *v)
  */
-GLE_API void glVertexAttrib2fv( GLuint index, const GLfloat *v );
+GLE_API void glVertexAttrib2fv(GLuint index, const GLfloat *v);
 
 /**
- * @brief void glVertexAttrib2s( GLuint index, GLshort x, GLshort y );
+ * @brief void glVertexAttrib2s(GLuint index, GLshort x, GLshort y)
  */
-GLE_API void glVertexAttrib2s( GLuint index, GLshort x, GLshort y );
+GLE_API void glVertexAttrib2s(GLuint index, GLshort x, GLshort y);
 
 /**
- * @brief void glVertexAttrib2sv( GLuint index, const GLshort *v );
+ * @brief void glVertexAttrib2sv(GLuint index, const GLshort *v)
  */
-GLE_API void glVertexAttrib2sv( GLuint index, const GLshort *v );
+GLE_API void glVertexAttrib2sv(GLuint index, const GLshort *v);
 
 /**
- * @brief void glVertexAttrib3d( GLuint index, GLdouble x, GLdouble y, GLdouble z );
+ * @brief void glVertexAttrib3d(GLuint index, GLdouble x, GLdouble y, GLdouble z)
  */
-GLE_API void glVertexAttrib3d( GLuint index, GLdouble x, GLdouble y, GLdouble z );
+GLE_API void glVertexAttrib3d(GLuint index, GLdouble x, GLdouble y, GLdouble z);
 
 /**
- * @brief void glVertexAttrib3dv( GLuint index, const GLdouble *v );
+ * @brief void glVertexAttrib3dv(GLuint index, const GLdouble *v)
  */
-GLE_API void glVertexAttrib3dv( GLuint index, const GLdouble *v );
+GLE_API void glVertexAttrib3dv(GLuint index, const GLdouble *v);
 
 /**
- * @brief void glVertexAttrib3f( GLuint index, GLfloat x, GLfloat y, GLfloat z );
+ * @brief void glVertexAttrib3f(GLuint index, GLfloat x, GLfloat y, GLfloat z)
  */
-GLE_API void glVertexAttrib3f( GLuint index, GLfloat x, GLfloat y, GLfloat z );
+GLE_API void glVertexAttrib3f(GLuint index, GLfloat x, GLfloat y, GLfloat z);
 
 /**
- * @brief void glVertexAttrib3fv( GLuint index, const GLfloat *v );
+ * @brief void glVertexAttrib3fv(GLuint index, const GLfloat *v)
  */
-GLE_API void glVertexAttrib3fv( GLuint index, const GLfloat *v );
+GLE_API void glVertexAttrib3fv(GLuint index, const GLfloat *v);
 
 /**
- * @brief void glVertexAttrib3s( GLuint index, GLshort x, GLshort y, GLshort z );
+ * @brief void glVertexAttrib3s(GLuint index, GLshort x, GLshort y, GLshort z)
  */
-GLE_API void glVertexAttrib3s( GLuint index, GLshort x, GLshort y, GLshort z );
+GLE_API void glVertexAttrib3s(GLuint index, GLshort x, GLshort y, GLshort z);
 
 /**
- * @brief void glVertexAttrib3sv( GLuint index, const GLshort *v );
+ * @brief void glVertexAttrib3sv(GLuint index, const GLshort *v)
  */
-GLE_API void glVertexAttrib3sv( GLuint index, const GLshort *v );
+GLE_API void glVertexAttrib3sv(GLuint index, const GLshort *v);
 
 /**
- * @brief void glVertexAttrib4Nbv( GLuint index, const GLbyte *v );
+ * @brief void glVertexAttrib4Nbv(GLuint index, const GLbyte *v)
  */
-GLE_API void glVertexAttrib4Nbv( GLuint index, const GLbyte *v );
+GLE_API void glVertexAttrib4Nbv(GLuint index, const GLbyte *v);
 
 /**
- * @brief void glVertexAttrib4Niv( GLuint index, const GLint *v );
+ * @brief void glVertexAttrib4Niv(GLuint index, const GLint *v)
  */
-GLE_API void glVertexAttrib4Niv( GLuint index, const GLint *v );
+GLE_API void glVertexAttrib4Niv(GLuint index, const GLint *v);
 
 /**
- * @brief void glVertexAttrib4Nsv( GLuint index, const GLshort *v );
+ * @brief void glVertexAttrib4Nsv(GLuint index, const GLshort *v)
  */
-GLE_API void glVertexAttrib4Nsv( GLuint index, const GLshort *v );
+GLE_API void glVertexAttrib4Nsv(GLuint index, const GLshort *v);
 
 /**
- * @brief void glVertexAttrib4Nub( GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w );
+ * @brief void glVertexAttrib4Nub(GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w)
  */
-GLE_API void glVertexAttrib4Nub( GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w );
+GLE_API void glVertexAttrib4Nub(GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w);
 
 /**
- * @brief void glVertexAttrib4Nubv( GLuint index, const GLubyte *v );
+ * @brief void glVertexAttrib4Nubv(GLuint index, const GLubyte *v)
  */
-GLE_API void glVertexAttrib4Nubv( GLuint index, const GLubyte *v );
+GLE_API void glVertexAttrib4Nubv(GLuint index, const GLubyte *v);
 
 /**
- * @brief void glVertexAttrib4Nuiv( GLuint index, const GLuint *v );
+ * @brief void glVertexAttrib4Nuiv(GLuint index, const GLuint *v)
  */
-GLE_API void glVertexAttrib4Nuiv( GLuint index, const GLuint *v );
+GLE_API void glVertexAttrib4Nuiv(GLuint index, const GLuint *v);
 
 /**
- * @brief void glVertexAttrib4Nusv( GLuint index, const GLushort *v );
+ * @brief void glVertexAttrib4Nusv(GLuint index, const GLushort *v)
  */
-GLE_API void glVertexAttrib4Nusv( GLuint index, const GLushort *v );
+GLE_API void glVertexAttrib4Nusv(GLuint index, const GLushort *v);
 
 /**
- * @brief void glVertexAttrib4bv( GLuint index, const GLbyte *v );
+ * @brief void glVertexAttrib4bv(GLuint index, const GLbyte *v)
  */
-GLE_API void glVertexAttrib4bv( GLuint index, const GLbyte *v );
+GLE_API void glVertexAttrib4bv(GLuint index, const GLbyte *v);
 
 /**
- * @brief void glVertexAttrib4d( GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+ * @brief void glVertexAttrib4d(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
  */
-GLE_API void glVertexAttrib4d( GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w );
+GLE_API void glVertexAttrib4d(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 
 /**
- * @brief void glVertexAttrib4dv( GLuint index, const GLdouble *v );
+ * @brief void glVertexAttrib4dv(GLuint index, const GLdouble *v)
  */
-GLE_API void glVertexAttrib4dv( GLuint index, const GLdouble *v );
+GLE_API void glVertexAttrib4dv(GLuint index, const GLdouble *v);
 
 /**
- * @brief void glVertexAttrib4f( GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+ * @brief void glVertexAttrib4f(GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
  */
-GLE_API void glVertexAttrib4f( GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w );
+GLE_API void glVertexAttrib4f(GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 
 /**
- * @brief void glVertexAttrib4fv( GLuint index, const GLfloat *v );
+ * @brief void glVertexAttrib4fv(GLuint index, const GLfloat *v)
  */
-GLE_API void glVertexAttrib4fv( GLuint index, const GLfloat *v );
+GLE_API void glVertexAttrib4fv(GLuint index, const GLfloat *v);
 
 /**
- * @brief void glVertexAttrib4iv( GLuint index, const GLint *v );
+ * @brief void glVertexAttrib4iv(GLuint index, const GLint *v)
  */
-GLE_API void glVertexAttrib4iv( GLuint index, const GLint *v );
+GLE_API void glVertexAttrib4iv(GLuint index, const GLint *v);
 
 /**
- * @brief void glVertexAttrib4s( GLuint index, GLshort x, GLshort y, GLshort z, GLshort w );
+ * @brief void glVertexAttrib4s(GLuint index, GLshort x, GLshort y, GLshort z, GLshort w)
  */
-GLE_API void glVertexAttrib4s( GLuint index, GLshort x, GLshort y, GLshort z, GLshort w );
+GLE_API void glVertexAttrib4s(GLuint index, GLshort x, GLshort y, GLshort z, GLshort w);
 
 /**
- * @brief void glVertexAttrib4sv( GLuint index, const GLshort *v );
+ * @brief void glVertexAttrib4sv(GLuint index, const GLshort *v)
  */
-GLE_API void glVertexAttrib4sv( GLuint index, const GLshort *v );
+GLE_API void glVertexAttrib4sv(GLuint index, const GLshort *v);
 
 /**
- * @brief void glVertexAttrib4ubv( GLuint index, const GLubyte *v );
+ * @brief void glVertexAttrib4ubv(GLuint index, const GLubyte *v)
  */
-GLE_API void glVertexAttrib4ubv( GLuint index, const GLubyte *v );
+GLE_API void glVertexAttrib4ubv(GLuint index, const GLubyte *v);
 
 /**
- * @brief void glVertexAttrib4uiv( GLuint index, const GLuint *v );
+ * @brief void glVertexAttrib4uiv(GLuint index, const GLuint *v)
  */
-GLE_API void glVertexAttrib4uiv( GLuint index, const GLuint *v );
+GLE_API void glVertexAttrib4uiv(GLuint index, const GLuint *v);
 
 /**
- * @brief void glVertexAttrib4usv( GLuint index, const GLushort *v );
+ * @brief void glVertexAttrib4usv(GLuint index, const GLushort *v)
  */
-GLE_API void glVertexAttrib4usv( GLuint index, const GLushort *v );
+GLE_API void glVertexAttrib4usv(GLuint index, const GLushort *v);
 
 /**
- * @brief void glVertexAttribPointer( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid *pointer );
+ * @brief void glVertexAttribPointer(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid *pointer)
  */
-GLE_API void glVertexAttribPointer( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid *pointer );
+GLE_API void glVertexAttribPointer(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid *pointer);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_2_0_DEPRECATED GL_VERSION_2_0_DEPRECATED
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_2_0_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_2_0_DEPRECATED is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_2_0_DEPRECATED is supported.
+ * @return Returns \c true if \b GL_VERSION_2_0_DEPRECATED is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_2_0_DEPRECATED();
 
+
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_2_1 GL_VERSION_2_1
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_2_1 is supported.
- * @return Returns \c true if \b GL_VERSION_2_1 is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_2_1 is supported.
+ * @return Returns \c true if \b GL_VERSION_2_1 is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_2_1();
 
-/**
- * @brief void glUniformMatrix2x3fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
- */
-GLE_API void glUniformMatrix2x3fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+
 
 /**
- * @brief void glUniformMatrix3x2fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glUniformMatrix2x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glUniformMatrix3x2fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glUniformMatrix2x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glUniformMatrix2x4fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glUniformMatrix2x4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glUniformMatrix2x4fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glUniformMatrix2x4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glUniformMatrix4x2fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glUniformMatrix3x2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glUniformMatrix4x2fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glUniformMatrix3x2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glUniformMatrix3x4fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glUniformMatrix3x4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glUniformMatrix3x4fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glUniformMatrix3x4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
- * @brief void glUniformMatrix4x3fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+ * @brief void glUniformMatrix4x2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
-GLE_API void glUniformMatrix4x3fv( GLint location, GLsizei count, GLboolean transpose, const GLfloat *value );
+GLE_API void glUniformMatrix4x2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glUniformMatrix4x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+ */
+GLE_API void glUniformMatrix4x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_2_1_DEPRECATED GL_VERSION_2_1_DEPRECATED
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_2_1_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_2_1_DEPRECATED is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_2_1_DEPRECATED is supported.
+ * @return Returns \c true if \b GL_VERSION_2_1_DEPRECATED is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_2_1_DEPRECATED();
 
+
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_3_0 GL_VERSION_3_0
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_3_0 is supported.
- * @return Returns \c true if \b GL_VERSION_3_0 is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_3_0 is supported.
+ * @return Returns \c true if \b GL_VERSION_3_0 is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_3_0();
 
-/**
- * @brief void glColorMaski( GLuint index, GLboolean r, GLboolean g, GLboolean b, GLboolean a );
- */
-GLE_API void glColorMaski( GLuint index, GLboolean r, GLboolean g, GLboolean b, GLboolean a );
+
 
 /**
- * @brief void glGetBooleani_v( GLenum target, GLuint index, GLboolean *data );
+ * @brief void glBeginConditionalRender(GLuint id, GLenum mode)
  */
-GLE_API void glGetBooleani_v( GLenum target, GLuint index, GLboolean *data );
+GLE_API void glBeginConditionalRender(GLuint id, GLenum mode);
 
 /**
- * @brief void glGetIntegeri_v( GLenum target, GLuint index, GLint *data );
+ * @brief void glBeginTransformFeedback(GLenum primitiveMode)
  */
-GLE_API void glGetIntegeri_v( GLenum target, GLuint index, GLint *data );
+GLE_API void glBeginTransformFeedback(GLenum primitiveMode);
 
 /**
- * @brief void glEnablei( GLenum target, GLuint index );
+ * @brief void glBindBufferBase(GLenum target, GLuint index, GLuint buffer)
  */
-GLE_API void glEnablei( GLenum target, GLuint index );
+GLE_API void glBindBufferBase(GLenum target, GLuint index, GLuint buffer);
 
 /**
- * @brief void glDisablei( GLenum target, GLuint index );
+ * @brief void glBindBufferRange(GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size)
  */
-GLE_API void glDisablei( GLenum target, GLuint index );
+GLE_API void glBindBufferRange(GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size);
 
 /**
- * @brief GLboolean glIsEnabledi( GLenum target, GLuint index );
+ * @brief void glBindFragDataLocation(GLuint program, GLuint color, const GLchar *name)
  */
-GLE_API GLboolean glIsEnabledi( GLenum target, GLuint index );
+GLE_API void glBindFragDataLocation(GLuint program, GLuint color, const GLchar *name);
 
 /**
- * @brief void glBeginTransformFeedback( GLenum primitiveMode );
+ * @brief void glClampColor(GLenum target, GLenum clamp)
  */
-GLE_API void glBeginTransformFeedback( GLenum primitiveMode );
+GLE_API void glClampColor(GLenum target, GLenum clamp);
 
 /**
- * @brief void glEndTransformFeedback( void );
+ * @brief void glClearBufferfi(GLenum buffer, GLint drawbuffer, GLfloat depth, GLint stencil)
  */
-GLE_API void glEndTransformFeedback( void );
+GLE_API void glClearBufferfi(GLenum buffer, GLint drawbuffer, GLfloat depth, GLint stencil);
 
 /**
- * @brief void glBindBufferRange( GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size );
+ * @brief void glClearBufferfv(GLenum buffer, GLint drawbuffer, const GLfloat *value)
  */
-GLE_API void glBindBufferRange( GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size );
+GLE_API void glClearBufferfv(GLenum buffer, GLint drawbuffer, const GLfloat *value);
 
 /**
- * @brief void glBindBufferBase( GLenum target, GLuint index, GLuint buffer );
+ * @brief void glClearBufferiv(GLenum buffer, GLint drawbuffer, const GLint *value)
  */
-GLE_API void glBindBufferBase( GLenum target, GLuint index, GLuint buffer );
+GLE_API void glClearBufferiv(GLenum buffer, GLint drawbuffer, const GLint *value);
 
 /**
- * @brief void glTransformFeedbackVaryings( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
+ * @brief void glClearBufferuiv(GLenum buffer, GLint drawbuffer, const GLuint *value)
  */
-GLE_API void glTransformFeedbackVaryings( GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode );
+GLE_API void glClearBufferuiv(GLenum buffer, GLint drawbuffer, const GLuint *value);
 
 /**
- * @brief void glGetTransformFeedbackVarying( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
+ * @brief void glColorMaski(GLuint index, GLboolean r, GLboolean g, GLboolean b, GLboolean a)
  */
-GLE_API void glGetTransformFeedbackVarying( GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name );
+GLE_API void glColorMaski(GLuint index, GLboolean r, GLboolean g, GLboolean b, GLboolean a);
 
 /**
- * @brief void glClampColor( GLenum target, GLenum clamp );
+ * @brief void glDisablei(GLenum target, GLuint index)
  */
-GLE_API void glClampColor( GLenum target, GLenum clamp );
+GLE_API void glDisablei(GLenum target, GLuint index);
 
 /**
- * @brief void glBeginConditionalRender( GLuint id, GLenum mode );
+ * @brief void glEnablei(GLenum target, GLuint index)
  */
-GLE_API void glBeginConditionalRender( GLuint id, GLenum mode );
+GLE_API void glEnablei(GLenum target, GLuint index);
 
 /**
- * @brief void glEndConditionalRender( void );
+ * @brief void glEndConditionalRender(void)
  */
-GLE_API void glEndConditionalRender( void );
+GLE_API void glEndConditionalRender(void);
 
 /**
- * @brief void glVertexAttribIPointer( GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+ * @brief void glEndTransformFeedback(void)
  */
-GLE_API void glVertexAttribIPointer( GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer );
+GLE_API void glEndTransformFeedback(void);
 
 /**
- * @brief void glGetVertexAttribIiv( GLuint index, GLenum pname, GLint *params );
+ * @brief void glGetBooleani_v(GLenum target, GLuint index, GLboolean *data)
  */
-GLE_API void glGetVertexAttribIiv( GLuint index, GLenum pname, GLint *params );
+GLE_API void glGetBooleani_v(GLenum target, GLuint index, GLboolean *data);
 
 /**
- * @brief void glGetVertexAttribIuiv( GLuint index, GLenum pname, GLuint *params );
+ * @brief GLint glGetFragDataLocation(GLuint program, const GLchar *name)
  */
-GLE_API void glGetVertexAttribIuiv( GLuint index, GLenum pname, GLuint *params );
+GLE_API GLint glGetFragDataLocation(GLuint program, const GLchar *name);
 
 /**
- * @brief void glVertexAttribI1i( GLuint index, GLint x );
+ * @brief void glGetIntegeri_v(GLenum target, GLuint index, GLint *data)
  */
-GLE_API void glVertexAttribI1i( GLuint index, GLint x );
+GLE_API void glGetIntegeri_v(GLenum target, GLuint index, GLint *data);
 
 /**
- * @brief void glVertexAttribI2i( GLuint index, GLint x, GLint y );
+ * @brief const GLubyte * glGetStringi(GLenum name, GLuint index)
  */
-GLE_API void glVertexAttribI2i( GLuint index, GLint x, GLint y );
+GLE_API const GLubyte * glGetStringi(GLenum name, GLuint index);
 
 /**
- * @brief void glVertexAttribI3i( GLuint index, GLint x, GLint y, GLint z );
+ * @brief void glGetTexParameterIiv(GLenum target, GLenum pname, GLint *params)
  */
-GLE_API void glVertexAttribI3i( GLuint index, GLint x, GLint y, GLint z );
+GLE_API void glGetTexParameterIiv(GLenum target, GLenum pname, GLint *params);
 
 /**
- * @brief void glVertexAttribI4i( GLuint index, GLint x, GLint y, GLint z, GLint w );
+ * @brief void glGetTexParameterIuiv(GLenum target, GLenum pname, GLuint *params)
  */
-GLE_API void glVertexAttribI4i( GLuint index, GLint x, GLint y, GLint z, GLint w );
+GLE_API void glGetTexParameterIuiv(GLenum target, GLenum pname, GLuint *params);
 
 /**
- * @brief void glVertexAttribI1ui( GLuint index, GLuint x );
+ * @brief void glGetTransformFeedbackVarying(GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name)
  */
-GLE_API void glVertexAttribI1ui( GLuint index, GLuint x );
+GLE_API void glGetTransformFeedbackVarying(GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name);
 
 /**
- * @brief void glVertexAttribI2ui( GLuint index, GLuint x, GLuint y );
+ * @brief void glGetUniformuiv(GLuint program, GLint location, GLuint *params)
  */
-GLE_API void glVertexAttribI2ui( GLuint index, GLuint x, GLuint y );
+GLE_API void glGetUniformuiv(GLuint program, GLint location, GLuint *params);
 
 /**
- * @brief void glVertexAttribI3ui( GLuint index, GLuint x, GLuint y, GLuint z );
+ * @brief void glGetVertexAttribIiv(GLuint index, GLenum pname, GLint *params)
  */
-GLE_API void glVertexAttribI3ui( GLuint index, GLuint x, GLuint y, GLuint z );
+GLE_API void glGetVertexAttribIiv(GLuint index, GLenum pname, GLint *params);
 
 /**
- * @brief void glVertexAttribI4ui( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+ * @brief void glGetVertexAttribIuiv(GLuint index, GLenum pname, GLuint *params)
  */
-GLE_API void glVertexAttribI4ui( GLuint index, GLuint x, GLuint y, GLuint z, GLuint w );
+GLE_API void glGetVertexAttribIuiv(GLuint index, GLenum pname, GLuint *params);
 
 /**
- * @brief void glVertexAttribI1iv( GLuint index, const GLint *v );
+ * @brief GLboolean glIsEnabledi(GLenum target, GLuint index)
  */
-GLE_API void glVertexAttribI1iv( GLuint index, const GLint *v );
+GLE_API GLboolean glIsEnabledi(GLenum target, GLuint index);
 
 /**
- * @brief void glVertexAttribI2iv( GLuint index, const GLint *v );
+ * @brief void glTexParameterIiv(GLenum target, GLenum pname, const GLint *params)
  */
-GLE_API void glVertexAttribI2iv( GLuint index, const GLint *v );
+GLE_API void glTexParameterIiv(GLenum target, GLenum pname, const GLint *params);
 
 /**
- * @brief void glVertexAttribI3iv( GLuint index, const GLint *v );
+ * @brief void glTexParameterIuiv(GLenum target, GLenum pname, const GLuint *params)
  */
-GLE_API void glVertexAttribI3iv( GLuint index, const GLint *v );
+GLE_API void glTexParameterIuiv(GLenum target, GLenum pname, const GLuint *params);
 
 /**
- * @brief void glVertexAttribI4iv( GLuint index, const GLint *v );
+ * @brief void glTransformFeedbackVaryings(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode)
  */
-GLE_API void glVertexAttribI4iv( GLuint index, const GLint *v );
+GLE_API void glTransformFeedbackVaryings(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode);
 
 /**
- * @brief void glVertexAttribI1uiv( GLuint index, const GLuint *v );
+ * @brief void glUniform1ui(GLint location, GLuint v0)
  */
-GLE_API void glVertexAttribI1uiv( GLuint index, const GLuint *v );
+GLE_API void glUniform1ui(GLint location, GLuint v0);
 
 /**
- * @brief void glVertexAttribI2uiv( GLuint index, const GLuint *v );
+ * @brief void glUniform1uiv(GLint location, GLsizei count, const GLuint *value)
  */
-GLE_API void glVertexAttribI2uiv( GLuint index, const GLuint *v );
+GLE_API void glUniform1uiv(GLint location, GLsizei count, const GLuint *value);
 
 /**
- * @brief void glVertexAttribI3uiv( GLuint index, const GLuint *v );
+ * @brief void glUniform2ui(GLint location, GLuint v0, GLuint v1)
  */
-GLE_API void glVertexAttribI3uiv( GLuint index, const GLuint *v );
+GLE_API void glUniform2ui(GLint location, GLuint v0, GLuint v1);
 
 /**
- * @brief void glVertexAttribI4uiv( GLuint index, const GLuint *v );
+ * @brief void glUniform2uiv(GLint location, GLsizei count, const GLuint *value)
  */
-GLE_API void glVertexAttribI4uiv( GLuint index, const GLuint *v );
+GLE_API void glUniform2uiv(GLint location, GLsizei count, const GLuint *value);
 
 /**
- * @brief void glVertexAttribI4bv( GLuint index, const GLbyte *v );
+ * @brief void glUniform3ui(GLint location, GLuint v0, GLuint v1, GLuint v2)
  */
-GLE_API void glVertexAttribI4bv( GLuint index, const GLbyte *v );
+GLE_API void glUniform3ui(GLint location, GLuint v0, GLuint v1, GLuint v2);
 
 /**
- * @brief void glVertexAttribI4sv( GLuint index, const GLshort *v );
+ * @brief void glUniform3uiv(GLint location, GLsizei count, const GLuint *value)
  */
-GLE_API void glVertexAttribI4sv( GLuint index, const GLshort *v );
+GLE_API void glUniform3uiv(GLint location, GLsizei count, const GLuint *value);
 
 /**
- * @brief void glVertexAttribI4ubv( GLuint index, const GLubyte *v );
+ * @brief void glUniform4ui(GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3)
  */
-GLE_API void glVertexAttribI4ubv( GLuint index, const GLubyte *v );
+GLE_API void glUniform4ui(GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3);
 
 /**
- * @brief void glVertexAttribI4usv( GLuint index, const GLushort *v );
+ * @brief void glUniform4uiv(GLint location, GLsizei count, const GLuint *value)
  */
-GLE_API void glVertexAttribI4usv( GLuint index, const GLushort *v );
+GLE_API void glUniform4uiv(GLint location, GLsizei count, const GLuint *value);
 
 /**
- * @brief void glGetUniformuiv( GLuint program, GLint location, GLuint *params );
+ * @brief void glVertexAttribI1i(GLuint index, GLint x)
  */
-GLE_API void glGetUniformuiv( GLuint program, GLint location, GLuint *params );
+GLE_API void glVertexAttribI1i(GLuint index, GLint x);
 
 /**
- * @brief void glBindFragDataLocation( GLuint program, GLuint color, const GLchar *name );
+ * @brief void glVertexAttribI1iv(GLuint index, const GLint *v)
  */
-GLE_API void glBindFragDataLocation( GLuint program, GLuint color, const GLchar *name );
+GLE_API void glVertexAttribI1iv(GLuint index, const GLint *v);
 
 /**
- * @brief GLint glGetFragDataLocation( GLuint program, const GLchar *name );
+ * @brief void glVertexAttribI1ui(GLuint index, GLuint x)
  */
-GLE_API GLint glGetFragDataLocation( GLuint program, const GLchar *name );
+GLE_API void glVertexAttribI1ui(GLuint index, GLuint x);
 
 /**
- * @brief void glUniform1ui( GLint location, GLuint v0 );
+ * @brief void glVertexAttribI1uiv(GLuint index, const GLuint *v)
  */
-GLE_API void glUniform1ui( GLint location, GLuint v0 );
+GLE_API void glVertexAttribI1uiv(GLuint index, const GLuint *v);
 
 /**
- * @brief void glUniform2ui( GLint location, GLuint v0, GLuint v1 );
+ * @brief void glVertexAttribI2i(GLuint index, GLint x, GLint y)
  */
-GLE_API void glUniform2ui( GLint location, GLuint v0, GLuint v1 );
+GLE_API void glVertexAttribI2i(GLuint index, GLint x, GLint y);
 
 /**
- * @brief void glUniform3ui( GLint location, GLuint v0, GLuint v1, GLuint v2 );
+ * @brief void glVertexAttribI2iv(GLuint index, const GLint *v)
  */
-GLE_API void glUniform3ui( GLint location, GLuint v0, GLuint v1, GLuint v2 );
+GLE_API void glVertexAttribI2iv(GLuint index, const GLint *v);
 
 /**
- * @brief void glUniform4ui( GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3 );
+ * @brief void glVertexAttribI2ui(GLuint index, GLuint x, GLuint y)
  */
-GLE_API void glUniform4ui( GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3 );
+GLE_API void glVertexAttribI2ui(GLuint index, GLuint x, GLuint y);
 
 /**
- * @brief void glUniform1uiv( GLint location, GLsizei count, const GLuint *value );
+ * @brief void glVertexAttribI2uiv(GLuint index, const GLuint *v)
  */
-GLE_API void glUniform1uiv( GLint location, GLsizei count, const GLuint *value );
+GLE_API void glVertexAttribI2uiv(GLuint index, const GLuint *v);
 
 /**
- * @brief void glUniform2uiv( GLint location, GLsizei count, const GLuint *value );
+ * @brief void glVertexAttribI3i(GLuint index, GLint x, GLint y, GLint z)
  */
-GLE_API void glUniform2uiv( GLint location, GLsizei count, const GLuint *value );
+GLE_API void glVertexAttribI3i(GLuint index, GLint x, GLint y, GLint z);
 
 /**
- * @brief void glUniform3uiv( GLint location, GLsizei count, const GLuint *value );
+ * @brief void glVertexAttribI3iv(GLuint index, const GLint *v)
  */
-GLE_API void glUniform3uiv( GLint location, GLsizei count, const GLuint *value );
+GLE_API void glVertexAttribI3iv(GLuint index, const GLint *v);
 
 /**
- * @brief void glUniform4uiv( GLint location, GLsizei count, const GLuint *value );
+ * @brief void glVertexAttribI3ui(GLuint index, GLuint x, GLuint y, GLuint z)
  */
-GLE_API void glUniform4uiv( GLint location, GLsizei count, const GLuint *value );
+GLE_API void glVertexAttribI3ui(GLuint index, GLuint x, GLuint y, GLuint z);
 
 /**
- * @brief void glTexParameterIiv( GLenum target, GLenum pname, const GLint *params );
+ * @brief void glVertexAttribI3uiv(GLuint index, const GLuint *v)
  */
-GLE_API void glTexParameterIiv( GLenum target, GLenum pname, const GLint *params );
+GLE_API void glVertexAttribI3uiv(GLuint index, const GLuint *v);
 
 /**
- * @brief void glTexParameterIuiv( GLenum target, GLenum pname, const GLuint *params );
+ * @brief void glVertexAttribI4bv(GLuint index, const GLbyte *v)
  */
-GLE_API void glTexParameterIuiv( GLenum target, GLenum pname, const GLuint *params );
+GLE_API void glVertexAttribI4bv(GLuint index, const GLbyte *v);
 
 /**
- * @brief void glGetTexParameterIiv( GLenum target, GLenum pname, GLint *params );
+ * @brief void glVertexAttribI4i(GLuint index, GLint x, GLint y, GLint z, GLint w)
  */
-GLE_API void glGetTexParameterIiv( GLenum target, GLenum pname, GLint *params );
+GLE_API void glVertexAttribI4i(GLuint index, GLint x, GLint y, GLint z, GLint w);
 
 /**
- * @brief void glGetTexParameterIuiv( GLenum target, GLenum pname, GLuint *params );
+ * @brief void glVertexAttribI4iv(GLuint index, const GLint *v)
  */
-GLE_API void glGetTexParameterIuiv( GLenum target, GLenum pname, GLuint *params );
+GLE_API void glVertexAttribI4iv(GLuint index, const GLint *v);
 
 /**
- * @brief void glClearBufferiv( GLenum buffer, GLint drawbuffer, const GLint *value );
+ * @brief void glVertexAttribI4sv(GLuint index, const GLshort *v)
  */
-GLE_API void glClearBufferiv( GLenum buffer, GLint drawbuffer, const GLint *value );
+GLE_API void glVertexAttribI4sv(GLuint index, const GLshort *v);
 
 /**
- * @brief void glClearBufferuiv( GLenum buffer, GLint drawbuffer, const GLuint *value );
+ * @brief void glVertexAttribI4ubv(GLuint index, const GLubyte *v)
  */
-GLE_API void glClearBufferuiv( GLenum buffer, GLint drawbuffer, const GLuint *value );
+GLE_API void glVertexAttribI4ubv(GLuint index, const GLubyte *v);
 
 /**
- * @brief void glClearBufferfv( GLenum buffer, GLint drawbuffer, const GLfloat *value );
+ * @brief void glVertexAttribI4ui(GLuint index, GLuint x, GLuint y, GLuint z, GLuint w)
  */
-GLE_API void glClearBufferfv( GLenum buffer, GLint drawbuffer, const GLfloat *value );
+GLE_API void glVertexAttribI4ui(GLuint index, GLuint x, GLuint y, GLuint z, GLuint w);
 
 /**
- * @brief void glClearBufferfi( GLenum buffer, GLint drawbuffer, GLfloat depth, GLint stencil );
+ * @brief void glVertexAttribI4uiv(GLuint index, const GLuint *v)
  */
-GLE_API void glClearBufferfi( GLenum buffer, GLint drawbuffer, GLfloat depth, GLint stencil );
+GLE_API void glVertexAttribI4uiv(GLuint index, const GLuint *v);
 
 /**
- * @brief const GLubyte * glGetStringi( GLenum name, GLuint index );
+ * @brief void glVertexAttribI4usv(GLuint index, const GLushort *v)
  */
-GLE_API const GLubyte * glGetStringi( GLenum name, GLuint index );
+GLE_API void glVertexAttribI4usv(GLuint index, const GLushort *v);
+
+/**
+ * @brief void glVertexAttribIPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
+ */
+GLE_API void glVertexAttribIPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_3_0_DEPRECATED GL_VERSION_3_0_DEPRECATED
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_3_0_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_3_0_DEPRECATED is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_3_0_DEPRECATED is supported.
+ * @return Returns \c true if \b GL_VERSION_3_0_DEPRECATED is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_3_0_DEPRECATED();
 
+
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_3_1 GL_VERSION_3_1
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_3_1 is supported.
- * @return Returns \c true if \b GL_VERSION_3_1 is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_3_1 is supported.
+ * @return Returns \c true if \b GL_VERSION_3_1 is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_3_1();
 
-/**
- * @brief void glDrawArraysInstanced( GLenum mode, GLint first, GLsizei count, GLsizei primcount );
- */
-GLE_API void glDrawArraysInstanced( GLenum mode, GLint first, GLsizei count, GLsizei primcount );
+
 
 /**
- * @brief void glDrawElementsInstanced( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount );
+ * @brief void glDrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei primcount)
  */
-GLE_API void glDrawElementsInstanced( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount );
+GLE_API void glDrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei primcount);
 
 /**
- * @brief void glTexBuffer( GLenum target, GLenum internalformat, GLuint buffer );
+ * @brief void glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount)
  */
-GLE_API void glTexBuffer( GLenum target, GLenum internalformat, GLuint buffer );
+GLE_API void glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount);
 
 /**
- * @brief void glPrimitiveRestartIndex( GLuint index );
+ * @brief void glPrimitiveRestartIndex(GLuint index)
  */
-GLE_API void glPrimitiveRestartIndex( GLuint index );
+GLE_API void glPrimitiveRestartIndex(GLuint index);
+
+/**
+ * @brief void glTexBuffer(GLenum target, GLenum internalformat, GLuint buffer)
+ */
+GLE_API void glTexBuffer(GLenum target, GLenum internalformat, GLuint buffer);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_3_2 GL_VERSION_3_2
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_3_2 is supported.
- * @return Returns \c true if \b GL_VERSION_3_2 is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_3_2 is supported.
+ * @return Returns \c true if \b GL_VERSION_3_2 is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_3_2();
 
-/**
- * @brief void glGetInteger64i_v( GLenum target, GLuint index, GLint64 *data );
- */
-GLE_API void glGetInteger64i_v( GLenum target, GLuint index, GLint64 *data );
+
 
 /**
- * @brief void glGetBufferParameteri64v( GLenum target, GLenum pname, GLint64 *params );
+ * @brief void glFramebufferTexture(GLenum target, GLenum attachment, GLuint texture, GLint level)
  */
-GLE_API void glGetBufferParameteri64v( GLenum target, GLenum pname, GLint64 *params );
+GLE_API void glFramebufferTexture(GLenum target, GLenum attachment, GLuint texture, GLint level);
 
 /**
- * @brief void glProgramParameteri( GLuint program, GLenum pname, GLint value );
+ * @brief void glGetBufferParameteri64v(GLenum target, GLenum pname, GLint64 *params)
  */
-GLE_API void glProgramParameteri( GLuint program, GLenum pname, GLint value );
+GLE_API void glGetBufferParameteri64v(GLenum target, GLenum pname, GLint64 *params);
 
 /**
- * @brief void glFramebufferTexture( GLenum target, GLenum attachment, GLuint texture, GLint level );
+ * @brief void glGetInteger64i_v(GLenum target, GLuint index, GLint64 *data)
  */
-GLE_API void glFramebufferTexture( GLenum target, GLenum attachment, GLuint texture, GLint level );
+GLE_API void glGetInteger64i_v(GLenum target, GLuint index, GLint64 *data);
+
+/**
+ * @brief void glProgramParameteri(GLuint program, GLenum pname, GLint value)
+ */
+GLE_API void glProgramParameteri(GLuint program, GLenum pname, GLint value);
 
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_3_3 GL_VERSION_3_3
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_3_3 is supported.
- * @return Returns \c true if \b GL_VERSION_3_3 is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_3_3 is supported.
+ * @return Returns \c true if \b GL_VERSION_3_3 is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_3_3();
 
+
 //@}
+
+
 
 
 /**
  * @defgroup GL_VERSION_4_0 GL_VERSION_4_0
- * @ingroup g_virtualExtensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_VERSION_4_0 is supported.
- * @return Returns \c true if \b GL_VERSION_4_0 is supported, false otherwise.
+ * @brief  Tests if \b GL_VERSION_4_0 is supported.
+ * @return Returns \c true if \b GL_VERSION_4_0 is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_4_0();
 
+
 //@}
+
+
 
 
 /**
@@ -16834,13 +18652,17 @@ GLE_API bool isGL_VERSION_4_0();
  * @ingroup g_GL_WIN g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_WIN_phong_shading is supported.
- * @return Returns \c true if \b GL_WIN_phong_shading is supported, false otherwise.
+ * @brief  Tests if \b GL_WIN_phong_shading is supported.
+ * @return Returns \c true if \b GL_WIN_phong_shading is supported, \c false otherwise.
  */
 GLE_API bool isGL_WIN_phong_shading();
 
+
 //@}
+
+
 
 
 /**
@@ -16850,41 +18672,40 @@ GLE_API bool isGL_WIN_phong_shading();
  * @ingroup g_GL_WIN g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b GL_WIN_specular_fog is supported.
- * @return Returns \c true if \b GL_WIN_specular_fog is supported, false otherwise.
+ * @brief  Tests if \b GL_WIN_specular_fog is supported.
+ * @return Returns \c true if \b GL_WIN_specular_fog is supported, \c false otherwise.
  */
 GLE_API bool isGL_WIN_specular_fog();
 
+
 //@}
 
 
 
 #ifdef WIN32
-
-			
-/**	
+/**
  * @defgroup WGL_3DFX_multisample WGL_3DFX_multisample
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_WGL_3DFX g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_3DFX_multisample is supported.
- * @return Returns \c true if \b WGL_3DFX_multisample is supported, false otherwise.
+ * @brief  Tests if \b WGL_3DFX_multisample is supported.
+ * @return Returns \c true if \b WGL_3DFX_multisample is supported, \c false otherwise.
  */
 GLE_API bool isWGL_3DFX_multisample();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_3DL_stereo_control WGL_3DL_stereo_control
  * Extension number in OpenGL registry : 313
@@ -16892,27 +18713,26 @@ GLE_API bool isWGL_3DFX_multisample();
  * @ingroup g_WGL_3DL g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_3DL_stereo_control is supported.
- * @return Returns \c true if \b WGL_3DL_stereo_control is supported, false otherwise.
+ * @brief  Tests if \b WGL_3DL_stereo_control is supported.
+ * @return Returns \c true if \b WGL_3DL_stereo_control is supported, \c false otherwise.
  */
 GLE_API bool isWGL_3DL_stereo_control();
 
+
+
 /**
- * @brief BOOL  wglSetStereoEmitterState3DL( HDC hDC, UINT uState );
+ * @brief BOOL wglSetStereoEmitterState3DL(HDC hDC, UINT uState)
  */
-GLE_API BOOL  wglSetStereoEmitterState3DL( HDC hDC, UINT uState );
+GLE_API BOOL wglSetStereoEmitterState3DL(HDC hDC, UINT uState);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_AMD_gpu_association WGL_AMD_gpu_association
  * Extension number in OpenGL registry : 361
@@ -16920,67 +18740,66 @@ GLE_API BOOL  wglSetStereoEmitterState3DL( HDC hDC, UINT uState );
  * @ingroup g_WGL_AMD g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_AMD_gpu_association is supported.
- * @return Returns \c true if \b WGL_AMD_gpu_association is supported, false otherwise.
+ * @brief  Tests if \b WGL_AMD_gpu_association is supported.
+ * @return Returns \c true if \b WGL_AMD_gpu_association is supported, \c false otherwise.
  */
 GLE_API bool isWGL_AMD_gpu_association();
 
-/**
- * @brief UINT  wglGetGPUIDsAMD( UINT maxCount, UINT *ids );
- */
-GLE_API UINT  wglGetGPUIDsAMD( UINT maxCount, UINT *ids );
+
 
 /**
- * @brief INT  wglGetGPUInfoAMD( UINT id, int property, GLenum dataType, UINT size, void *data );
+ * @brief VOID wglBlitContextFramebufferAMD(HGLRC dstCtx, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter)
  */
-GLE_API INT  wglGetGPUInfoAMD( UINT id, int property, GLenum dataType, UINT size, void *data );
+GLE_API VOID wglBlitContextFramebufferAMD(HGLRC dstCtx, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
 
 /**
- * @brief UINT  wglGetContextGPUIDAMD( HGLRC hglrc );
+ * @brief HGLRC wglCreateAssociatedContextAMD(UINT id)
  */
-GLE_API UINT  wglGetContextGPUIDAMD( HGLRC hglrc );
+GLE_API HGLRC wglCreateAssociatedContextAMD(UINT id);
 
 /**
- * @brief HGLRC  wglCreateAssociatedContextAMD( UINT id );
+ * @brief HGLRC wglCreateAssociatedContextAttribsAMD(UINT id, HGLRC hShareContext, const int *attribList)
  */
-GLE_API HGLRC  wglCreateAssociatedContextAMD( UINT id );
+GLE_API HGLRC wglCreateAssociatedContextAttribsAMD(UINT id, HGLRC hShareContext, const int *attribList);
 
 /**
- * @brief HGLRC  wglCreateAssociatedContextAttribsAMD( UINT id, HGLRC hShareContext, const int *attribList );
+ * @brief BOOL wglDeleteAssociatedContextAMD(HGLRC hglrc)
  */
-GLE_API HGLRC  wglCreateAssociatedContextAttribsAMD( UINT id, HGLRC hShareContext, const int *attribList );
+GLE_API BOOL wglDeleteAssociatedContextAMD(HGLRC hglrc);
 
 /**
- * @brief BOOL  wglDeleteAssociatedContextAMD( HGLRC hglrc );
+ * @brief UINT wglGetContextGPUIDAMD(HGLRC hglrc)
  */
-GLE_API BOOL  wglDeleteAssociatedContextAMD( HGLRC hglrc );
+GLE_API UINT wglGetContextGPUIDAMD(HGLRC hglrc);
 
 /**
- * @brief BOOL  wglMakeAssociatedContextCurrentAMD( HGLRC hglrc );
+ * @brief HGLRC wglGetCurrentAssociatedContextAMD(void)
  */
-GLE_API BOOL  wglMakeAssociatedContextCurrentAMD( HGLRC hglrc );
+GLE_API HGLRC wglGetCurrentAssociatedContextAMD(void);
 
 /**
- * @brief HGLRC  wglGetCurrentAssociatedContextAMD( void );
+ * @brief UINT wglGetGPUIDsAMD(UINT maxCount, UINT *ids)
  */
-GLE_API HGLRC  wglGetCurrentAssociatedContextAMD( void );
+GLE_API UINT wglGetGPUIDsAMD(UINT maxCount, UINT *ids);
 
 /**
- * @brief VOID  wglBlitContextFramebufferAMD( HGLRC dstCtx, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter );
+ * @brief INT wglGetGPUInfoAMD(UINT id, int property, GLenum dataType, UINT size, void *data)
  */
-GLE_API VOID  wglBlitContextFramebufferAMD( HGLRC dstCtx, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter );
+GLE_API INT wglGetGPUInfoAMD(UINT id, int property, GLenum dataType, UINT size, void *data);
+
+/**
+ * @brief BOOL wglMakeAssociatedContextCurrentAMD(HGLRC hglrc)
+ */
+GLE_API BOOL wglMakeAssociatedContextCurrentAMD(HGLRC hglrc);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_ARB_buffer_region WGL_ARB_buffer_region
  * Extension number in OpenGL registry : 4
@@ -16988,42 +18807,41 @@ GLE_API VOID  wglBlitContextFramebufferAMD( HGLRC dstCtx, GLint srcX0, GLint src
  * @ingroup g_WGL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_ARB_buffer_region is supported.
- * @return Returns \c true if \b WGL_ARB_buffer_region is supported, false otherwise.
+ * @brief  Tests if \b WGL_ARB_buffer_region is supported.
+ * @return Returns \c true if \b WGL_ARB_buffer_region is supported, \c false otherwise.
  */
 GLE_API bool isWGL_ARB_buffer_region();
 
-/**
- * @brief HANDLE  wglCreateBufferRegionARB( HDC hDC, int iLayerPlane, UINT uType );
- */
-GLE_API HANDLE  wglCreateBufferRegionARB( HDC hDC, int iLayerPlane, UINT uType );
+
 
 /**
- * @brief VOID  wglDeleteBufferRegionARB( HANDLE hRegion );
+ * @brief HANDLE wglCreateBufferRegionARB(HDC hDC, int iLayerPlane, UINT uType)
  */
-GLE_API VOID  wglDeleteBufferRegionARB( HANDLE hRegion );
+GLE_API HANDLE wglCreateBufferRegionARB(HDC hDC, int iLayerPlane, UINT uType);
 
 /**
- * @brief BOOL  wglSaveBufferRegionARB( HANDLE hRegion, int x, int y, int width, int height );
+ * @brief VOID wglDeleteBufferRegionARB(HANDLE hRegion)
  */
-GLE_API BOOL  wglSaveBufferRegionARB( HANDLE hRegion, int x, int y, int width, int height );
+GLE_API VOID wglDeleteBufferRegionARB(HANDLE hRegion);
 
 /**
- * @brief BOOL  wglRestoreBufferRegionARB( HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc );
+ * @brief BOOL wglRestoreBufferRegionARB(HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc)
  */
-GLE_API BOOL  wglRestoreBufferRegionARB( HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc );
+GLE_API BOOL wglRestoreBufferRegionARB(HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc);
+
+/**
+ * @brief BOOL wglSaveBufferRegionARB(HANDLE hRegion, int x, int y, int width, int height)
+ */
+GLE_API BOOL wglSaveBufferRegionARB(HANDLE hRegion, int x, int y, int width, int height);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_ARB_create_context WGL_ARB_create_context
  * Extension number in OpenGL registry : 55
@@ -17031,27 +18849,26 @@ GLE_API BOOL  wglRestoreBufferRegionARB( HANDLE hRegion, int x, int y, int width
  * @ingroup g_WGL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_ARB_create_context is supported.
- * @return Returns \c true if \b WGL_ARB_create_context is supported, false otherwise.
+ * @brief  Tests if \b WGL_ARB_create_context is supported.
+ * @return Returns \c true if \b WGL_ARB_create_context is supported, \c false otherwise.
  */
 GLE_API bool isWGL_ARB_create_context();
 
+
+
 /**
- * @brief HGLRC  wglCreateContextAttribsARB( HDC hDC, HGLRC hShareContext, const int *attribList );
+ * @brief HGLRC wglCreateContextAttribsARB(HDC hDC, HGLRC hShareContext, const int *attribList)
  */
-GLE_API HGLRC  wglCreateContextAttribsARB( HDC hDC, HGLRC hShareContext, const int *attribList );
+GLE_API HGLRC wglCreateContextAttribsARB(HDC hDC, HGLRC hShareContext, const int *attribList);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_ARB_create_context_profile WGL_ARB_create_context_profile
  * Extension number in OpenGL registry : 74
@@ -17059,22 +18876,20 @@ GLE_API HGLRC  wglCreateContextAttribsARB( HDC hDC, HGLRC hShareContext, const i
  * @ingroup g_WGL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_ARB_create_context_profile is supported.
- * @return Returns \c true if \b WGL_ARB_create_context_profile is supported, false otherwise.
+ * @brief  Tests if \b WGL_ARB_create_context_profile is supported.
+ * @return Returns \c true if \b WGL_ARB_create_context_profile is supported, \c false otherwise.
  */
 GLE_API bool isWGL_ARB_create_context_profile();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_ARB_extensions_string WGL_ARB_extensions_string
  * Extension number in OpenGL registry : 8
@@ -17082,27 +18897,26 @@ GLE_API bool isWGL_ARB_create_context_profile();
  * @ingroup g_WGL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_ARB_extensions_string is supported.
- * @return Returns \c true if \b WGL_ARB_extensions_string is supported, false otherwise.
+ * @brief  Tests if \b WGL_ARB_extensions_string is supported.
+ * @return Returns \c true if \b WGL_ARB_extensions_string is supported, \c false otherwise.
  */
 GLE_API bool isWGL_ARB_extensions_string();
 
+
+
 /**
- * @brief const char *  wglGetExtensionsStringARB( HDC hdc );
+ * @brief const char * wglGetExtensionsStringARB(HDC hdc)
  */
-GLE_API const char *  wglGetExtensionsStringARB( HDC hdc );
+GLE_API const char * wglGetExtensionsStringARB(HDC hdc);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_ARB_make_current_read WGL_ARB_make_current_read
  * Extension number in OpenGL registry : 10
@@ -17110,32 +18924,31 @@ GLE_API const char *  wglGetExtensionsStringARB( HDC hdc );
  * @ingroup g_WGL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_ARB_make_current_read is supported.
- * @return Returns \c true if \b WGL_ARB_make_current_read is supported, false otherwise.
+ * @brief  Tests if \b WGL_ARB_make_current_read is supported.
+ * @return Returns \c true if \b WGL_ARB_make_current_read is supported, \c false otherwise.
  */
 GLE_API bool isWGL_ARB_make_current_read();
 
-/**
- * @brief BOOL  wglMakeContextCurrentARB( HDC hDrawDC, HDC hReadDC, HGLRC hglrc );
- */
-GLE_API BOOL  wglMakeContextCurrentARB( HDC hDrawDC, HDC hReadDC, HGLRC hglrc );
+
 
 /**
- * @brief HDC  wglGetCurrentReadDCARB( void );
+ * @brief HDC wglGetCurrentReadDCARB(void)
  */
-GLE_API HDC  wglGetCurrentReadDCARB( void );
+GLE_API HDC wglGetCurrentReadDCARB(void);
+
+/**
+ * @brief BOOL wglMakeContextCurrentARB(HDC hDrawDC, HDC hReadDC, HGLRC hglrc)
+ */
+GLE_API BOOL wglMakeContextCurrentARB(HDC hDrawDC, HDC hReadDC, HGLRC hglrc);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_ARB_multisample WGL_ARB_multisample
  * Extension number in OpenGL registry : 5
@@ -17143,22 +18956,20 @@ GLE_API HDC  wglGetCurrentReadDCARB( void );
  * @ingroup g_WGL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_ARB_multisample is supported.
- * @return Returns \c true if \b WGL_ARB_multisample is supported, false otherwise.
+ * @brief  Tests if \b WGL_ARB_multisample is supported.
+ * @return Returns \c true if \b WGL_ARB_multisample is supported, \c false otherwise.
  */
 GLE_API bool isWGL_ARB_multisample();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_ARB_pbuffer WGL_ARB_pbuffer
  * Extension number in OpenGL registry : 11
@@ -17166,47 +18977,46 @@ GLE_API bool isWGL_ARB_multisample();
  * @ingroup g_WGL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_ARB_pbuffer is supported.
- * @return Returns \c true if \b WGL_ARB_pbuffer is supported, false otherwise.
+ * @brief  Tests if \b WGL_ARB_pbuffer is supported.
+ * @return Returns \c true if \b WGL_ARB_pbuffer is supported, \c false otherwise.
  */
 GLE_API bool isWGL_ARB_pbuffer();
 
-/**
- * @brief HPBUFFERARB  wglCreatePbufferARB( HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList );
- */
-GLE_API HPBUFFERARB  wglCreatePbufferARB( HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList );
+
 
 /**
- * @brief HDC  wglGetPbufferDCARB( HPBUFFERARB hPbuffer );
+ * @brief HPBUFFERARB wglCreatePbufferARB(HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList)
  */
-GLE_API HDC  wglGetPbufferDCARB( HPBUFFERARB hPbuffer );
+GLE_API HPBUFFERARB wglCreatePbufferARB(HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList);
 
 /**
- * @brief int  wglReleasePbufferDCARB( HPBUFFERARB hPbuffer, HDC hDC );
+ * @brief BOOL wglDestroyPbufferARB(HPBUFFERARB hPbuffer)
  */
-GLE_API int  wglReleasePbufferDCARB( HPBUFFERARB hPbuffer, HDC hDC );
+GLE_API BOOL wglDestroyPbufferARB(HPBUFFERARB hPbuffer);
 
 /**
- * @brief BOOL  wglDestroyPbufferARB( HPBUFFERARB hPbuffer );
+ * @brief HDC wglGetPbufferDCARB(HPBUFFERARB hPbuffer)
  */
-GLE_API BOOL  wglDestroyPbufferARB( HPBUFFERARB hPbuffer );
+GLE_API HDC wglGetPbufferDCARB(HPBUFFERARB hPbuffer);
 
 /**
- * @brief BOOL  wglQueryPbufferARB( HPBUFFERARB hPbuffer, int iAttribute, int *piValue );
+ * @brief BOOL wglQueryPbufferARB(HPBUFFERARB hPbuffer, int iAttribute, int *piValue)
  */
-GLE_API BOOL  wglQueryPbufferARB( HPBUFFERARB hPbuffer, int iAttribute, int *piValue );
+GLE_API BOOL wglQueryPbufferARB(HPBUFFERARB hPbuffer, int iAttribute, int *piValue);
+
+/**
+ * @brief int wglReleasePbufferDCARB(HPBUFFERARB hPbuffer, HDC hDC)
+ */
+GLE_API int wglReleasePbufferDCARB(HPBUFFERARB hPbuffer, HDC hDC);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_ARB_pixel_format WGL_ARB_pixel_format
  * Extension number in OpenGL registry : 9
@@ -17214,37 +19024,36 @@ GLE_API BOOL  wglQueryPbufferARB( HPBUFFERARB hPbuffer, int iAttribute, int *piV
  * @ingroup g_WGL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_ARB_pixel_format is supported.
- * @return Returns \c true if \b WGL_ARB_pixel_format is supported, false otherwise.
+ * @brief  Tests if \b WGL_ARB_pixel_format is supported.
+ * @return Returns \c true if \b WGL_ARB_pixel_format is supported, \c false otherwise.
  */
 GLE_API bool isWGL_ARB_pixel_format();
 
-/**
- * @brief BOOL  wglGetPixelFormatAttribivARB( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, int *piValues );
- */
-GLE_API BOOL  wglGetPixelFormatAttribivARB( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, int *piValues );
+
 
 /**
- * @brief BOOL  wglGetPixelFormatAttribfvARB( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, FLOAT *pfValues );
+ * @brief BOOL wglChoosePixelFormatARB(HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats)
  */
-GLE_API BOOL  wglGetPixelFormatAttribfvARB( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, FLOAT *pfValues );
+GLE_API BOOL wglChoosePixelFormatARB(HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats);
 
 /**
- * @brief BOOL  wglChoosePixelFormatARB( HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats );
+ * @brief BOOL wglGetPixelFormatAttribfvARB(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, FLOAT *pfValues)
  */
-GLE_API BOOL  wglChoosePixelFormatARB( HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats );
+GLE_API BOOL wglGetPixelFormatAttribfvARB(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, FLOAT *pfValues);
+
+/**
+ * @brief BOOL wglGetPixelFormatAttribivARB(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, int *piValues)
+ */
+GLE_API BOOL wglGetPixelFormatAttribivARB(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, const int *piAttributes, int *piValues);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_ARB_pixel_format_float WGL_ARB_pixel_format_float
  * Extension number in OpenGL registry : 39
@@ -17252,22 +19061,20 @@ GLE_API BOOL  wglChoosePixelFormatARB( HDC hdc, const int *piAttribIList, const 
  * @ingroup g_WGL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_ARB_pixel_format_float is supported.
- * @return Returns \c true if \b WGL_ARB_pixel_format_float is supported, false otherwise.
+ * @brief  Tests if \b WGL_ARB_pixel_format_float is supported.
+ * @return Returns \c true if \b WGL_ARB_pixel_format_float is supported, \c false otherwise.
  */
 GLE_API bool isWGL_ARB_pixel_format_float();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_ARB_render_texture WGL_ARB_render_texture
  * Extension number in OpenGL registry : 20
@@ -17275,37 +19082,36 @@ GLE_API bool isWGL_ARB_pixel_format_float();
  * @ingroup g_WGL_ARB g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_ARB_render_texture is supported.
- * @return Returns \c true if \b WGL_ARB_render_texture is supported, false otherwise.
+ * @brief  Tests if \b WGL_ARB_render_texture is supported.
+ * @return Returns \c true if \b WGL_ARB_render_texture is supported, \c false otherwise.
  */
 GLE_API bool isWGL_ARB_render_texture();
 
-/**
- * @brief BOOL  wglBindTexImageARB( HPBUFFERARB hPbuffer, int iBuffer );
- */
-GLE_API BOOL  wglBindTexImageARB( HPBUFFERARB hPbuffer, int iBuffer );
+
 
 /**
- * @brief BOOL  wglReleaseTexImageARB( HPBUFFERARB hPbuffer, int iBuffer );
+ * @brief BOOL wglBindTexImageARB(HPBUFFERARB hPbuffer, int iBuffer)
  */
-GLE_API BOOL  wglReleaseTexImageARB( HPBUFFERARB hPbuffer, int iBuffer );
+GLE_API BOOL wglBindTexImageARB(HPBUFFERARB hPbuffer, int iBuffer);
 
 /**
- * @brief BOOL  wglSetPbufferAttribARB( HPBUFFERARB hPbuffer, const int *piAttribList );
+ * @brief BOOL wglReleaseTexImageARB(HPBUFFERARB hPbuffer, int iBuffer)
  */
-GLE_API BOOL  wglSetPbufferAttribARB( HPBUFFERARB hPbuffer, const int *piAttribList );
+GLE_API BOOL wglReleaseTexImageARB(HPBUFFERARB hPbuffer, int iBuffer);
+
+/**
+ * @brief BOOL wglSetPbufferAttribARB(HPBUFFERARB hPbuffer, const int *piAttribList)
+ */
+GLE_API BOOL wglSetPbufferAttribARB(HPBUFFERARB hPbuffer, const int *piAttribList);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_ATI_pixel_format_float WGL_ATI_pixel_format_float
  * Extension number in OpenGL registry : 278
@@ -17313,22 +19119,20 @@ GLE_API BOOL  wglSetPbufferAttribARB( HPBUFFERARB hPbuffer, const int *piAttribL
  * @ingroup g_WGL_ATI g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_ATI_pixel_format_float is supported.
- * @return Returns \c true if \b WGL_ATI_pixel_format_float is supported, false otherwise.
+ * @brief  Tests if \b WGL_ATI_pixel_format_float is supported.
+ * @return Returns \c true if \b WGL_ATI_pixel_format_float is supported, \c false otherwise.
  */
 GLE_API bool isWGL_ATI_pixel_format_float();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_EXT_depth_float WGL_EXT_depth_float
  * Extension number in OpenGL registry : 177
@@ -17336,22 +19140,20 @@ GLE_API bool isWGL_ATI_pixel_format_float();
  * @ingroup g_WGL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_EXT_depth_float is supported.
- * @return Returns \c true if \b WGL_EXT_depth_float is supported, false otherwise.
+ * @brief  Tests if \b WGL_EXT_depth_float is supported.
+ * @return Returns \c true if \b WGL_EXT_depth_float is supported, \c false otherwise.
  */
 GLE_API bool isWGL_EXT_depth_float();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_EXT_display_color_table WGL_EXT_display_color_table
  * Extension number in OpenGL registry : 167
@@ -17359,42 +19161,41 @@ GLE_API bool isWGL_EXT_depth_float();
  * @ingroup g_WGL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_EXT_display_color_table is supported.
- * @return Returns \c true if \b WGL_EXT_display_color_table is supported, false otherwise.
+ * @brief  Tests if \b WGL_EXT_display_color_table is supported.
+ * @return Returns \c true if \b WGL_EXT_display_color_table is supported, \c false otherwise.
  */
 GLE_API bool isWGL_EXT_display_color_table();
 
-/**
- * @brief GLboolean  wglCreateDisplayColorTableEXT( GLushort id );
- */
-GLE_API GLboolean  wglCreateDisplayColorTableEXT( GLushort id );
+
 
 /**
- * @brief GLboolean  wglLoadDisplayColorTableEXT( const GLushort *table, GLuint length );
+ * @brief GLboolean wglBindDisplayColorTableEXT(GLushort id)
  */
-GLE_API GLboolean  wglLoadDisplayColorTableEXT( const GLushort *table, GLuint length );
+GLE_API GLboolean wglBindDisplayColorTableEXT(GLushort id);
 
 /**
- * @brief GLboolean  wglBindDisplayColorTableEXT( GLushort id );
+ * @brief GLboolean wglCreateDisplayColorTableEXT(GLushort id)
  */
-GLE_API GLboolean  wglBindDisplayColorTableEXT( GLushort id );
+GLE_API GLboolean wglCreateDisplayColorTableEXT(GLushort id);
 
 /**
- * @brief VOID  wglDestroyDisplayColorTableEXT( GLushort id );
+ * @brief VOID wglDestroyDisplayColorTableEXT(GLushort id)
  */
-GLE_API VOID  wglDestroyDisplayColorTableEXT( GLushort id );
+GLE_API VOID wglDestroyDisplayColorTableEXT(GLushort id);
+
+/**
+ * @brief GLboolean wglLoadDisplayColorTableEXT(const GLushort *table, GLuint length)
+ */
+GLE_API GLboolean wglLoadDisplayColorTableEXT(const GLushort *table, GLuint length);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_EXT_extensions_string WGL_EXT_extensions_string
  * Extension number in OpenGL registry : 168
@@ -17402,27 +19203,26 @@ GLE_API VOID  wglDestroyDisplayColorTableEXT( GLushort id );
  * @ingroup g_WGL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_EXT_extensions_string is supported.
- * @return Returns \c true if \b WGL_EXT_extensions_string is supported, false otherwise.
+ * @brief  Tests if \b WGL_EXT_extensions_string is supported.
+ * @return Returns \c true if \b WGL_EXT_extensions_string is supported, \c false otherwise.
  */
 GLE_API bool isWGL_EXT_extensions_string();
 
+
+
 /**
- * @brief const char *  wglGetExtensionsStringEXT( void );
+ * @brief const char * wglGetExtensionsStringEXT(void)
  */
-GLE_API const char *  wglGetExtensionsStringEXT( void );
+GLE_API const char * wglGetExtensionsStringEXT(void);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_EXT_framebuffer_sRGB WGL_EXT_framebuffer_sRGB
  * Extension number in OpenGL registry : 337
@@ -17430,22 +19230,20 @@ GLE_API const char *  wglGetExtensionsStringEXT( void );
  * @ingroup g_WGL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_EXT_framebuffer_sRGB is supported.
- * @return Returns \c true if \b WGL_EXT_framebuffer_sRGB is supported, false otherwise.
+ * @brief  Tests if \b WGL_EXT_framebuffer_sRGB is supported.
+ * @return Returns \c true if \b WGL_EXT_framebuffer_sRGB is supported, \c false otherwise.
  */
 GLE_API bool isWGL_EXT_framebuffer_sRGB();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_EXT_make_current_read WGL_EXT_make_current_read
  * Extension number in OpenGL registry : 169
@@ -17453,32 +19251,31 @@ GLE_API bool isWGL_EXT_framebuffer_sRGB();
  * @ingroup g_WGL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_EXT_make_current_read is supported.
- * @return Returns \c true if \b WGL_EXT_make_current_read is supported, false otherwise.
+ * @brief  Tests if \b WGL_EXT_make_current_read is supported.
+ * @return Returns \c true if \b WGL_EXT_make_current_read is supported, \c false otherwise.
  */
 GLE_API bool isWGL_EXT_make_current_read();
 
-/**
- * @brief BOOL  wglMakeContextCurrentEXT( HDC hDrawDC, HDC hReadDC, HGLRC hglrc );
- */
-GLE_API BOOL  wglMakeContextCurrentEXT( HDC hDrawDC, HDC hReadDC, HGLRC hglrc );
+
 
 /**
- * @brief HDC  wglGetCurrentReadDCEXT( void );
+ * @brief HDC wglGetCurrentReadDCEXT(void)
  */
-GLE_API HDC  wglGetCurrentReadDCEXT( void );
+GLE_API HDC wglGetCurrentReadDCEXT(void);
+
+/**
+ * @brief BOOL wglMakeContextCurrentEXT(HDC hDrawDC, HDC hReadDC, HGLRC hglrc)
+ */
+GLE_API BOOL wglMakeContextCurrentEXT(HDC hDrawDC, HDC hReadDC, HGLRC hglrc);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_EXT_multisample WGL_EXT_multisample
  * Extension number in OpenGL registry : 209
@@ -17486,22 +19283,20 @@ GLE_API HDC  wglGetCurrentReadDCEXT( void );
  * @ingroup g_WGL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_EXT_multisample is supported.
- * @return Returns \c true if \b WGL_EXT_multisample is supported, false otherwise.
+ * @brief  Tests if \b WGL_EXT_multisample is supported.
+ * @return Returns \c true if \b WGL_EXT_multisample is supported, \c false otherwise.
  */
 GLE_API bool isWGL_EXT_multisample();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_EXT_pbuffer WGL_EXT_pbuffer
  * Extension number in OpenGL registry : 171
@@ -17509,47 +19304,46 @@ GLE_API bool isWGL_EXT_multisample();
  * @ingroup g_WGL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_EXT_pbuffer is supported.
- * @return Returns \c true if \b WGL_EXT_pbuffer is supported, false otherwise.
+ * @brief  Tests if \b WGL_EXT_pbuffer is supported.
+ * @return Returns \c true if \b WGL_EXT_pbuffer is supported, \c false otherwise.
  */
 GLE_API bool isWGL_EXT_pbuffer();
 
-/**
- * @brief HPBUFFEREXT  wglCreatePbufferEXT( HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList );
- */
-GLE_API HPBUFFEREXT  wglCreatePbufferEXT( HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList );
+
 
 /**
- * @brief HDC  wglGetPbufferDCEXT( HPBUFFEREXT hPbuffer );
+ * @brief HPBUFFEREXT wglCreatePbufferEXT(HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList)
  */
-GLE_API HDC  wglGetPbufferDCEXT( HPBUFFEREXT hPbuffer );
+GLE_API HPBUFFEREXT wglCreatePbufferEXT(HDC hDC, int iPixelFormat, int iWidth, int iHeight, const int *piAttribList);
 
 /**
- * @brief int  wglReleasePbufferDCEXT( HPBUFFEREXT hPbuffer, HDC hDC );
+ * @brief BOOL wglDestroyPbufferEXT(HPBUFFEREXT hPbuffer)
  */
-GLE_API int  wglReleasePbufferDCEXT( HPBUFFEREXT hPbuffer, HDC hDC );
+GLE_API BOOL wglDestroyPbufferEXT(HPBUFFEREXT hPbuffer);
 
 /**
- * @brief BOOL  wglDestroyPbufferEXT( HPBUFFEREXT hPbuffer );
+ * @brief HDC wglGetPbufferDCEXT(HPBUFFEREXT hPbuffer)
  */
-GLE_API BOOL  wglDestroyPbufferEXT( HPBUFFEREXT hPbuffer );
+GLE_API HDC wglGetPbufferDCEXT(HPBUFFEREXT hPbuffer);
 
 /**
- * @brief BOOL  wglQueryPbufferEXT( HPBUFFEREXT hPbuffer, int iAttribute, int *piValue );
+ * @brief BOOL wglQueryPbufferEXT(HPBUFFEREXT hPbuffer, int iAttribute, int *piValue)
  */
-GLE_API BOOL  wglQueryPbufferEXT( HPBUFFEREXT hPbuffer, int iAttribute, int *piValue );
+GLE_API BOOL wglQueryPbufferEXT(HPBUFFEREXT hPbuffer, int iAttribute, int *piValue);
+
+/**
+ * @brief int wglReleasePbufferDCEXT(HPBUFFEREXT hPbuffer, HDC hDC)
+ */
+GLE_API int wglReleasePbufferDCEXT(HPBUFFEREXT hPbuffer, HDC hDC);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_EXT_pixel_format WGL_EXT_pixel_format
  * Extension number in OpenGL registry : 170
@@ -17557,37 +19351,36 @@ GLE_API BOOL  wglQueryPbufferEXT( HPBUFFEREXT hPbuffer, int iAttribute, int *piV
  * @ingroup g_WGL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_EXT_pixel_format is supported.
- * @return Returns \c true if \b WGL_EXT_pixel_format is supported, false otherwise.
+ * @brief  Tests if \b WGL_EXT_pixel_format is supported.
+ * @return Returns \c true if \b WGL_EXT_pixel_format is supported, \c false otherwise.
  */
 GLE_API bool isWGL_EXT_pixel_format();
 
-/**
- * @brief BOOL  wglGetPixelFormatAttribivEXT( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, int *piValues );
- */
-GLE_API BOOL  wglGetPixelFormatAttribivEXT( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, int *piValues );
+
 
 /**
- * @brief BOOL  wglGetPixelFormatAttribfvEXT( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, FLOAT *pfValues );
+ * @brief BOOL wglChoosePixelFormatEXT(HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats)
  */
-GLE_API BOOL  wglGetPixelFormatAttribfvEXT( HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, FLOAT *pfValues );
+GLE_API BOOL wglChoosePixelFormatEXT(HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats);
 
 /**
- * @brief BOOL  wglChoosePixelFormatEXT( HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats );
+ * @brief BOOL wglGetPixelFormatAttribfvEXT(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, FLOAT *pfValues)
  */
-GLE_API BOOL  wglChoosePixelFormatEXT( HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, UINT nMaxFormats, int *piFormats, UINT *nNumFormats );
+GLE_API BOOL wglGetPixelFormatAttribfvEXT(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, FLOAT *pfValues);
+
+/**
+ * @brief BOOL wglGetPixelFormatAttribivEXT(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, int *piValues)
+ */
+GLE_API BOOL wglGetPixelFormatAttribivEXT(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int *piAttributes, int *piValues);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_EXT_pixel_format_packed_float WGL_EXT_pixel_format_packed_float
  * Extension number in OpenGL registry : 328
@@ -17595,22 +19388,20 @@ GLE_API BOOL  wglChoosePixelFormatEXT( HDC hdc, const int *piAttribIList, const 
  * @ingroup g_WGL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_EXT_pixel_format_packed_float is supported.
- * @return Returns \c true if \b WGL_EXT_pixel_format_packed_float is supported, false otherwise.
+ * @brief  Tests if \b WGL_EXT_pixel_format_packed_float is supported.
+ * @return Returns \c true if \b WGL_EXT_pixel_format_packed_float is supported, \c false otherwise.
  */
 GLE_API bool isWGL_EXT_pixel_format_packed_float();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_EXT_swap_control WGL_EXT_swap_control
  * Extension number in OpenGL registry : 172
@@ -17618,32 +19409,31 @@ GLE_API bool isWGL_EXT_pixel_format_packed_float();
  * @ingroup g_WGL_EXT g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_EXT_swap_control is supported.
- * @return Returns \c true if \b WGL_EXT_swap_control is supported, false otherwise.
+ * @brief  Tests if \b WGL_EXT_swap_control is supported.
+ * @return Returns \c true if \b WGL_EXT_swap_control is supported, \c false otherwise.
  */
 GLE_API bool isWGL_EXT_swap_control();
 
-/**
- * @brief BOOL  wglSwapIntervalEXT( int interval );
- */
-GLE_API BOOL  wglSwapIntervalEXT( int interval );
+
 
 /**
- * @brief int  wglGetSwapIntervalEXT( void );
+ * @brief int wglGetSwapIntervalEXT(void)
  */
-GLE_API int  wglGetSwapIntervalEXT( void );
+GLE_API int wglGetSwapIntervalEXT(void);
+
+/**
+ * @brief BOOL wglSwapIntervalEXT(int interval)
+ */
+GLE_API BOOL wglSwapIntervalEXT(int interval);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_I3D_digital_video_control WGL_I3D_digital_video_control
  * Extension number in OpenGL registry : 250
@@ -17651,32 +19441,31 @@ GLE_API int  wglGetSwapIntervalEXT( void );
  * @ingroup g_WGL_I3D g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_I3D_digital_video_control is supported.
- * @return Returns \c true if \b WGL_I3D_digital_video_control is supported, false otherwise.
+ * @brief  Tests if \b WGL_I3D_digital_video_control is supported.
+ * @return Returns \c true if \b WGL_I3D_digital_video_control is supported, \c false otherwise.
  */
 GLE_API bool isWGL_I3D_digital_video_control();
 
-/**
- * @brief BOOL  wglGetDigitalVideoParametersI3D( HDC hDC, int iAttribute, int *piValue );
- */
-GLE_API BOOL  wglGetDigitalVideoParametersI3D( HDC hDC, int iAttribute, int *piValue );
+
 
 /**
- * @brief BOOL  wglSetDigitalVideoParametersI3D( HDC hDC, int iAttribute, const int *piValue );
+ * @brief BOOL wglGetDigitalVideoParametersI3D(HDC hDC, int iAttribute, int *piValue)
  */
-GLE_API BOOL  wglSetDigitalVideoParametersI3D( HDC hDC, int iAttribute, const int *piValue );
+GLE_API BOOL wglGetDigitalVideoParametersI3D(HDC hDC, int iAttribute, int *piValue);
+
+/**
+ * @brief BOOL wglSetDigitalVideoParametersI3D(HDC hDC, int iAttribute, const int *piValue)
+ */
+GLE_API BOOL wglSetDigitalVideoParametersI3D(HDC hDC, int iAttribute, const int *piValue);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_I3D_gamma WGL_I3D_gamma
  * Extension number in OpenGL registry : 251
@@ -17684,42 +19473,41 @@ GLE_API BOOL  wglSetDigitalVideoParametersI3D( HDC hDC, int iAttribute, const in
  * @ingroup g_WGL_I3D g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_I3D_gamma is supported.
- * @return Returns \c true if \b WGL_I3D_gamma is supported, false otherwise.
+ * @brief  Tests if \b WGL_I3D_gamma is supported.
+ * @return Returns \c true if \b WGL_I3D_gamma is supported, \c false otherwise.
  */
 GLE_API bool isWGL_I3D_gamma();
 
-/**
- * @brief BOOL  wglGetGammaTableParametersI3D( HDC hDC, int iAttribute, int *piValue );
- */
-GLE_API BOOL  wglGetGammaTableParametersI3D( HDC hDC, int iAttribute, int *piValue );
+
 
 /**
- * @brief BOOL  wglSetGammaTableParametersI3D( HDC hDC, int iAttribute, const int *piValue );
+ * @brief BOOL wglGetGammaTableI3D(HDC hDC, int iEntries, USHORT *puRed, USHORT *puGreen, USHORT *puBlue)
  */
-GLE_API BOOL  wglSetGammaTableParametersI3D( HDC hDC, int iAttribute, const int *piValue );
+GLE_API BOOL wglGetGammaTableI3D(HDC hDC, int iEntries, USHORT *puRed, USHORT *puGreen, USHORT *puBlue);
 
 /**
- * @brief BOOL  wglGetGammaTableI3D( HDC hDC, int iEntries, USHORT *puRed, USHORT *puGreen, USHORT *puBlue );
+ * @brief BOOL wglGetGammaTableParametersI3D(HDC hDC, int iAttribute, int *piValue)
  */
-GLE_API BOOL  wglGetGammaTableI3D( HDC hDC, int iEntries, USHORT *puRed, USHORT *puGreen, USHORT *puBlue );
+GLE_API BOOL wglGetGammaTableParametersI3D(HDC hDC, int iAttribute, int *piValue);
 
 /**
- * @brief BOOL  wglSetGammaTableI3D( HDC hDC, int iEntries, const USHORT *puRed, const USHORT *puGreen, const USHORT *puBlue );
+ * @brief BOOL wglSetGammaTableI3D(HDC hDC, int iEntries, const USHORT *puRed, const USHORT *puGreen, const USHORT *puBlue)
  */
-GLE_API BOOL  wglSetGammaTableI3D( HDC hDC, int iEntries, const USHORT *puRed, const USHORT *puGreen, const USHORT *puBlue );
+GLE_API BOOL wglSetGammaTableI3D(HDC hDC, int iEntries, const USHORT *puRed, const USHORT *puGreen, const USHORT *puBlue);
+
+/**
+ * @brief BOOL wglSetGammaTableParametersI3D(HDC hDC, int iAttribute, const int *piValue)
+ */
+GLE_API BOOL wglSetGammaTableParametersI3D(HDC hDC, int iAttribute, const int *piValue);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_I3D_genlock WGL_I3D_genlock
  * Extension number in OpenGL registry : 252
@@ -17727,82 +19515,81 @@ GLE_API BOOL  wglSetGammaTableI3D( HDC hDC, int iEntries, const USHORT *puRed, c
  * @ingroup g_WGL_I3D g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_I3D_genlock is supported.
- * @return Returns \c true if \b WGL_I3D_genlock is supported, false otherwise.
+ * @brief  Tests if \b WGL_I3D_genlock is supported.
+ * @return Returns \c true if \b WGL_I3D_genlock is supported, \c false otherwise.
  */
 GLE_API bool isWGL_I3D_genlock();
 
-/**
- * @brief BOOL  wglEnableGenlockI3D( HDC hDC );
- */
-GLE_API BOOL  wglEnableGenlockI3D( HDC hDC );
+
 
 /**
- * @brief BOOL  wglDisableGenlockI3D( HDC hDC );
+ * @brief BOOL wglDisableGenlockI3D(HDC hDC)
  */
-GLE_API BOOL  wglDisableGenlockI3D( HDC hDC );
+GLE_API BOOL wglDisableGenlockI3D(HDC hDC);
 
 /**
- * @brief BOOL  wglIsEnabledGenlockI3D( HDC hDC, BOOL *pFlag );
+ * @brief BOOL wglEnableGenlockI3D(HDC hDC)
  */
-GLE_API BOOL  wglIsEnabledGenlockI3D( HDC hDC, BOOL *pFlag );
+GLE_API BOOL wglEnableGenlockI3D(HDC hDC);
 
 /**
- * @brief BOOL  wglGenlockSourceI3D( HDC hDC, UINT uSource );
+ * @brief BOOL wglGenlockSampleRateI3D(HDC hDC, UINT uRate)
  */
-GLE_API BOOL  wglGenlockSourceI3D( HDC hDC, UINT uSource );
+GLE_API BOOL wglGenlockSampleRateI3D(HDC hDC, UINT uRate);
 
 /**
- * @brief BOOL  wglGetGenlockSourceI3D( HDC hDC, UINT *uSource );
+ * @brief BOOL wglGenlockSourceDelayI3D(HDC hDC, UINT uDelay)
  */
-GLE_API BOOL  wglGetGenlockSourceI3D( HDC hDC, UINT *uSource );
+GLE_API BOOL wglGenlockSourceDelayI3D(HDC hDC, UINT uDelay);
 
 /**
- * @brief BOOL  wglGenlockSourceEdgeI3D( HDC hDC, UINT uEdge );
+ * @brief BOOL wglGenlockSourceEdgeI3D(HDC hDC, UINT uEdge)
  */
-GLE_API BOOL  wglGenlockSourceEdgeI3D( HDC hDC, UINT uEdge );
+GLE_API BOOL wglGenlockSourceEdgeI3D(HDC hDC, UINT uEdge);
 
 /**
- * @brief BOOL  wglGetGenlockSourceEdgeI3D( HDC hDC, UINT *uEdge );
+ * @brief BOOL wglGenlockSourceI3D(HDC hDC, UINT uSource)
  */
-GLE_API BOOL  wglGetGenlockSourceEdgeI3D( HDC hDC, UINT *uEdge );
+GLE_API BOOL wglGenlockSourceI3D(HDC hDC, UINT uSource);
 
 /**
- * @brief BOOL  wglGenlockSampleRateI3D( HDC hDC, UINT uRate );
+ * @brief BOOL wglGetGenlockSampleRateI3D(HDC hDC, UINT *uRate)
  */
-GLE_API BOOL  wglGenlockSampleRateI3D( HDC hDC, UINT uRate );
+GLE_API BOOL wglGetGenlockSampleRateI3D(HDC hDC, UINT *uRate);
 
 /**
- * @brief BOOL  wglGetGenlockSampleRateI3D( HDC hDC, UINT *uRate );
+ * @brief BOOL wglGetGenlockSourceDelayI3D(HDC hDC, UINT *uDelay)
  */
-GLE_API BOOL  wglGetGenlockSampleRateI3D( HDC hDC, UINT *uRate );
+GLE_API BOOL wglGetGenlockSourceDelayI3D(HDC hDC, UINT *uDelay);
 
 /**
- * @brief BOOL  wglGenlockSourceDelayI3D( HDC hDC, UINT uDelay );
+ * @brief BOOL wglGetGenlockSourceEdgeI3D(HDC hDC, UINT *uEdge)
  */
-GLE_API BOOL  wglGenlockSourceDelayI3D( HDC hDC, UINT uDelay );
+GLE_API BOOL wglGetGenlockSourceEdgeI3D(HDC hDC, UINT *uEdge);
 
 /**
- * @brief BOOL  wglGetGenlockSourceDelayI3D( HDC hDC, UINT *uDelay );
+ * @brief BOOL wglGetGenlockSourceI3D(HDC hDC, UINT *uSource)
  */
-GLE_API BOOL  wglGetGenlockSourceDelayI3D( HDC hDC, UINT *uDelay );
+GLE_API BOOL wglGetGenlockSourceI3D(HDC hDC, UINT *uSource);
 
 /**
- * @brief BOOL  wglQueryGenlockMaxSourceDelayI3D( HDC hDC, UINT *uMaxLineDelay, UINT *uMaxPixelDelay );
+ * @brief BOOL wglIsEnabledGenlockI3D(HDC hDC, BOOL *pFlag)
  */
-GLE_API BOOL  wglQueryGenlockMaxSourceDelayI3D( HDC hDC, UINT *uMaxLineDelay, UINT *uMaxPixelDelay );
+GLE_API BOOL wglIsEnabledGenlockI3D(HDC hDC, BOOL *pFlag);
+
+/**
+ * @brief BOOL wglQueryGenlockMaxSourceDelayI3D(HDC hDC, UINT *uMaxLineDelay, UINT *uMaxPixelDelay)
+ */
+GLE_API BOOL wglQueryGenlockMaxSourceDelayI3D(HDC hDC, UINT *uMaxLineDelay, UINT *uMaxPixelDelay);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_I3D_image_buffer WGL_I3D_image_buffer
  * Extension number in OpenGL registry : 253
@@ -17810,42 +19597,41 @@ GLE_API BOOL  wglQueryGenlockMaxSourceDelayI3D( HDC hDC, UINT *uMaxLineDelay, UI
  * @ingroup g_WGL_I3D g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_I3D_image_buffer is supported.
- * @return Returns \c true if \b WGL_I3D_image_buffer is supported, false otherwise.
+ * @brief  Tests if \b WGL_I3D_image_buffer is supported.
+ * @return Returns \c true if \b WGL_I3D_image_buffer is supported, \c false otherwise.
  */
 GLE_API bool isWGL_I3D_image_buffer();
 
-/**
- * @brief LPVOID  wglCreateImageBufferI3D( HDC hDC, DWORD dwSize, UINT uFlags );
- */
-GLE_API LPVOID  wglCreateImageBufferI3D( HDC hDC, DWORD dwSize, UINT uFlags );
+
 
 /**
- * @brief BOOL  wglDestroyImageBufferI3D( HDC hDC, LPVOID pAddress );
+ * @brief BOOL wglAssociateImageBufferEventsI3D(HDC hDC, const HANDLE *pEvent, const LPVOID *pAddress, const DWORD *pSize, UINT count)
  */
-GLE_API BOOL  wglDestroyImageBufferI3D( HDC hDC, LPVOID pAddress );
+GLE_API BOOL wglAssociateImageBufferEventsI3D(HDC hDC, const HANDLE *pEvent, const LPVOID *pAddress, const DWORD *pSize, UINT count);
 
 /**
- * @brief BOOL  wglAssociateImageBufferEventsI3D( HDC hDC, const HANDLE *pEvent, const LPVOID *pAddress, const DWORD *pSize, UINT count );
+ * @brief LPVOID wglCreateImageBufferI3D(HDC hDC, DWORD dwSize, UINT uFlags)
  */
-GLE_API BOOL  wglAssociateImageBufferEventsI3D( HDC hDC, const HANDLE *pEvent, const LPVOID *pAddress, const DWORD *pSize, UINT count );
+GLE_API LPVOID wglCreateImageBufferI3D(HDC hDC, DWORD dwSize, UINT uFlags);
 
 /**
- * @brief BOOL  wglReleaseImageBufferEventsI3D( HDC hDC, const LPVOID *pAddress, UINT count );
+ * @brief BOOL wglDestroyImageBufferI3D(HDC hDC, LPVOID pAddress)
  */
-GLE_API BOOL  wglReleaseImageBufferEventsI3D( HDC hDC, const LPVOID *pAddress, UINT count );
+GLE_API BOOL wglDestroyImageBufferI3D(HDC hDC, LPVOID pAddress);
+
+/**
+ * @brief BOOL wglReleaseImageBufferEventsI3D(HDC hDC, const LPVOID *pAddress, UINT count)
+ */
+GLE_API BOOL wglReleaseImageBufferEventsI3D(HDC hDC, const LPVOID *pAddress, UINT count);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_I3D_swap_frame_lock WGL_I3D_swap_frame_lock
  * Extension number in OpenGL registry : 254
@@ -17853,42 +19639,41 @@ GLE_API BOOL  wglReleaseImageBufferEventsI3D( HDC hDC, const LPVOID *pAddress, U
  * @ingroup g_WGL_I3D g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_I3D_swap_frame_lock is supported.
- * @return Returns \c true if \b WGL_I3D_swap_frame_lock is supported, false otherwise.
+ * @brief  Tests if \b WGL_I3D_swap_frame_lock is supported.
+ * @return Returns \c true if \b WGL_I3D_swap_frame_lock is supported, \c false otherwise.
  */
 GLE_API bool isWGL_I3D_swap_frame_lock();
 
-/**
- * @brief BOOL  wglEnableFrameLockI3D( void );
- */
-GLE_API BOOL  wglEnableFrameLockI3D( void );
+
 
 /**
- * @brief BOOL  wglDisableFrameLockI3D( void );
+ * @brief BOOL wglDisableFrameLockI3D(void)
  */
-GLE_API BOOL  wglDisableFrameLockI3D( void );
+GLE_API BOOL wglDisableFrameLockI3D(void);
 
 /**
- * @brief BOOL  wglIsEnabledFrameLockI3D( BOOL *pFlag );
+ * @brief BOOL wglEnableFrameLockI3D(void)
  */
-GLE_API BOOL  wglIsEnabledFrameLockI3D( BOOL *pFlag );
+GLE_API BOOL wglEnableFrameLockI3D(void);
 
 /**
- * @brief BOOL  wglQueryFrameLockMasterI3D( BOOL *pFlag );
+ * @brief BOOL wglIsEnabledFrameLockI3D(BOOL *pFlag)
  */
-GLE_API BOOL  wglQueryFrameLockMasterI3D( BOOL *pFlag );
+GLE_API BOOL wglIsEnabledFrameLockI3D(BOOL *pFlag);
+
+/**
+ * @brief BOOL wglQueryFrameLockMasterI3D(BOOL *pFlag)
+ */
+GLE_API BOOL wglQueryFrameLockMasterI3D(BOOL *pFlag);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_I3D_swap_frame_usage WGL_I3D_swap_frame_usage
  * Extension number in OpenGL registry : 255
@@ -17896,42 +19681,41 @@ GLE_API BOOL  wglQueryFrameLockMasterI3D( BOOL *pFlag );
  * @ingroup g_WGL_I3D g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_I3D_swap_frame_usage is supported.
- * @return Returns \c true if \b WGL_I3D_swap_frame_usage is supported, false otherwise.
+ * @brief  Tests if \b WGL_I3D_swap_frame_usage is supported.
+ * @return Returns \c true if \b WGL_I3D_swap_frame_usage is supported, \c false otherwise.
  */
 GLE_API bool isWGL_I3D_swap_frame_usage();
 
-/**
- * @brief BOOL  wglGetFrameUsageI3D( float *pUsage );
- */
-GLE_API BOOL  wglGetFrameUsageI3D( float *pUsage );
+
 
 /**
- * @brief BOOL  wglBeginFrameTrackingI3D( void );
+ * @brief BOOL wglBeginFrameTrackingI3D(void)
  */
-GLE_API BOOL  wglBeginFrameTrackingI3D( void );
+GLE_API BOOL wglBeginFrameTrackingI3D(void);
 
 /**
- * @brief BOOL  wglEndFrameTrackingI3D( void );
+ * @brief BOOL wglEndFrameTrackingI3D(void)
  */
-GLE_API BOOL  wglEndFrameTrackingI3D( void );
+GLE_API BOOL wglEndFrameTrackingI3D(void);
 
 /**
- * @brief BOOL  wglQueryFrameTrackingI3D( DWORD *pFrameCount, DWORD *pMissedFrames, float *pLastMissedUsage );
+ * @brief BOOL wglGetFrameUsageI3D(float *pUsage)
  */
-GLE_API BOOL  wglQueryFrameTrackingI3D( DWORD *pFrameCount, DWORD *pMissedFrames, float *pLastMissedUsage );
+GLE_API BOOL wglGetFrameUsageI3D(float *pUsage);
+
+/**
+ * @brief BOOL wglQueryFrameTrackingI3D(DWORD *pFrameCount, DWORD *pMissedFrames, float *pLastMissedUsage)
+ */
+GLE_API BOOL wglQueryFrameTrackingI3D(DWORD *pFrameCount, DWORD *pMissedFrames, float *pLastMissedUsage);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_NV_copy_image WGL_NV_copy_image
  * Extension number in OpenGL registry : 376
@@ -17939,27 +19723,26 @@ GLE_API BOOL  wglQueryFrameTrackingI3D( DWORD *pFrameCount, DWORD *pMissedFrames
  * @ingroup g_WGL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_NV_copy_image is supported.
- * @return Returns \c true if \b WGL_NV_copy_image is supported, false otherwise.
+ * @brief  Tests if \b WGL_NV_copy_image is supported.
+ * @return Returns \c true if \b WGL_NV_copy_image is supported, \c false otherwise.
  */
 GLE_API bool isWGL_NV_copy_image();
 
+
+
 /**
- * @brief BOOL  wglCopyImageSubDataNV( HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth );
+ * @brief BOOL wglCopyImageSubDataNV(HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth)
  */
-GLE_API BOOL  wglCopyImageSubDataNV( HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth );
+GLE_API BOOL wglCopyImageSubDataNV(HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_NV_float_buffer WGL_NV_float_buffer
  * Extension number in OpenGL registry : 281
@@ -17967,22 +19750,20 @@ GLE_API BOOL  wglCopyImageSubDataNV( HGLRC hSrcRC, GLuint srcName, GLenum srcTar
  * @ingroup g_WGL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_NV_float_buffer is supported.
- * @return Returns \c true if \b WGL_NV_float_buffer is supported, false otherwise.
+ * @brief  Tests if \b WGL_NV_float_buffer is supported.
+ * @return Returns \c true if \b WGL_NV_float_buffer is supported, \c false otherwise.
  */
 GLE_API bool isWGL_NV_float_buffer();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_NV_gpu_affinity WGL_NV_gpu_affinity
  * Extension number in OpenGL registry : 355
@@ -17990,69 +19771,67 @@ GLE_API bool isWGL_NV_float_buffer();
  * @ingroup g_WGL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_NV_gpu_affinity is supported.
- * @return Returns \c true if \b WGL_NV_gpu_affinity is supported, false otherwise.
+ * @brief  Tests if \b WGL_NV_gpu_affinity is supported.
+ * @return Returns \c true if \b WGL_NV_gpu_affinity is supported, \c false otherwise.
  */
 GLE_API bool isWGL_NV_gpu_affinity();
 
-/**
- * @brief BOOL  wglEnumGpusNV( UINT iGpuIndex, HGPUNV *phGpu );
- */
-GLE_API BOOL  wglEnumGpusNV( UINT iGpuIndex, HGPUNV *phGpu );
+
 
 /**
- * @brief BOOL  wglEnumGpuDevicesNV( HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice );
+ * @brief HDC wglCreateAffinityDCNV(const HGPUNV *phGpuList)
  */
-GLE_API BOOL  wglEnumGpuDevicesNV( HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice );
+GLE_API HDC wglCreateAffinityDCNV(const HGPUNV *phGpuList);
 
 /**
- * @brief HDC  wglCreateAffinityDCNV( const HGPUNV *phGpuList );
+ * @brief BOOL wglDeleteDCNV(HDC hdc)
  */
-GLE_API HDC  wglCreateAffinityDCNV( const HGPUNV *phGpuList );
+GLE_API BOOL wglDeleteDCNV(HDC hdc);
 
 /**
- * @brief BOOL  wglEnumGpusFromAffinityDCNV( HDC hAffinityDC, UINT iGpuIndex, HGPUNV *hGpu );
+ * @brief BOOL wglEnumGpuDevicesNV(HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice)
  */
-GLE_API BOOL  wglEnumGpusFromAffinityDCNV( HDC hAffinityDC, UINT iGpuIndex, HGPUNV *hGpu );
+GLE_API BOOL wglEnumGpuDevicesNV(HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice);
 
 /**
- * @brief BOOL  wglDeleteDCNV( HDC hdc );
+ * @brief BOOL wglEnumGpusFromAffinityDCNV(HDC hAffinityDC, UINT iGpuIndex, HGPUNV *hGpu)
  */
-GLE_API BOOL  wglDeleteDCNV( HDC hdc );
+GLE_API BOOL wglEnumGpusFromAffinityDCNV(HDC hAffinityDC, UINT iGpuIndex, HGPUNV *hGpu);
+
+/**
+ * @brief BOOL wglEnumGpusNV(UINT iGpuIndex, HGPUNV *phGpu)
+ */
+GLE_API BOOL wglEnumGpusNV(UINT iGpuIndex, HGPUNV *phGpu);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-			
-/**	
+/**
  * @defgroup WGL_NV_multisample_coverage WGL_NV_multisample_coverage
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_WGL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_NV_multisample_coverage is supported.
- * @return Returns \c true if \b WGL_NV_multisample_coverage is supported, false otherwise.
+ * @brief  Tests if \b WGL_NV_multisample_coverage is supported.
+ * @return Returns \c true if \b WGL_NV_multisample_coverage is supported, \c false otherwise.
  */
 GLE_API bool isWGL_NV_multisample_coverage();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_NV_present_video WGL_NV_present_video
  * Extension number in OpenGL registry : 347
@@ -18060,37 +19839,36 @@ GLE_API bool isWGL_NV_multisample_coverage();
  * @ingroup g_WGL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_NV_present_video is supported.
- * @return Returns \c true if \b WGL_NV_present_video is supported, false otherwise.
+ * @brief  Tests if \b WGL_NV_present_video is supported.
+ * @return Returns \c true if \b WGL_NV_present_video is supported, \c false otherwise.
  */
 GLE_API bool isWGL_NV_present_video();
 
-/**
- * @brief int  wglEnumerateVideoDevicesNV( HDC hDC, HVIDEOOUTPUTDEVICENV *phDeviceList );
- */
-GLE_API int  wglEnumerateVideoDevicesNV( HDC hDC, HVIDEOOUTPUTDEVICENV *phDeviceList );
+
 
 /**
- * @brief BOOL  wglBindVideoDeviceNV( HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, const int *piAttribList );
+ * @brief BOOL wglBindVideoDeviceNV(HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, const int *piAttribList)
  */
-GLE_API BOOL  wglBindVideoDeviceNV( HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, const int *piAttribList );
+GLE_API BOOL wglBindVideoDeviceNV(HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, const int *piAttribList);
 
 /**
- * @brief BOOL  wglQueryCurrentContextNV( int iAttribute, int *piValue );
+ * @brief int wglEnumerateVideoDevicesNV(HDC hDC, HVIDEOOUTPUTDEVICENV *phDeviceList)
  */
-GLE_API BOOL  wglQueryCurrentContextNV( int iAttribute, int *piValue );
+GLE_API int wglEnumerateVideoDevicesNV(HDC hDC, HVIDEOOUTPUTDEVICENV *phDeviceList);
+
+/**
+ * @brief BOOL wglQueryCurrentContextNV(int iAttribute, int *piValue)
+ */
+GLE_API BOOL wglQueryCurrentContextNV(int iAttribute, int *piValue);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_NV_render_depth_texture WGL_NV_render_depth_texture
  * Extension number in OpenGL registry : 263
@@ -18098,22 +19876,20 @@ GLE_API BOOL  wglQueryCurrentContextNV( int iAttribute, int *piValue );
  * @ingroup g_WGL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_NV_render_depth_texture is supported.
- * @return Returns \c true if \b WGL_NV_render_depth_texture is supported, false otherwise.
+ * @brief  Tests if \b WGL_NV_render_depth_texture is supported.
+ * @return Returns \c true if \b WGL_NV_render_depth_texture is supported, \c false otherwise.
  */
 GLE_API bool isWGL_NV_render_depth_texture();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_NV_render_texture_rectangle WGL_NV_render_texture_rectangle
  * Extension number in OpenGL registry : 264
@@ -18121,22 +19897,20 @@ GLE_API bool isWGL_NV_render_depth_texture();
  * @ingroup g_WGL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_NV_render_texture_rectangle is supported.
- * @return Returns \c true if \b WGL_NV_render_texture_rectangle is supported, false otherwise.
+ * @brief  Tests if \b WGL_NV_render_texture_rectangle is supported.
+ * @return Returns \c true if \b WGL_NV_render_texture_rectangle is supported, \c false otherwise.
  */
 GLE_API bool isWGL_NV_render_texture_rectangle();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_NV_swap_group WGL_NV_swap_group
  * Extension number in OpenGL registry : 351
@@ -18144,84 +19918,83 @@ GLE_API bool isWGL_NV_render_texture_rectangle();
  * @ingroup g_WGL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_NV_swap_group is supported.
- * @return Returns \c true if \b WGL_NV_swap_group is supported, false otherwise.
+ * @brief  Tests if \b WGL_NV_swap_group is supported.
+ * @return Returns \c true if \b WGL_NV_swap_group is supported, \c false otherwise.
  */
 GLE_API bool isWGL_NV_swap_group();
 
-/**
- * @brief BOOL  wglJoinSwapGroupNV( HDC hDC, GLuint group );
- */
-GLE_API BOOL  wglJoinSwapGroupNV( HDC hDC, GLuint group );
+
 
 /**
- * @brief BOOL  wglBindSwapBarrierNV( GLuint group, GLuint barrier );
+ * @brief BOOL wglBindSwapBarrierNV(GLuint group, GLuint barrier)
  */
-GLE_API BOOL  wglBindSwapBarrierNV( GLuint group, GLuint barrier );
+GLE_API BOOL wglBindSwapBarrierNV(GLuint group, GLuint barrier);
 
 /**
- * @brief BOOL  wglQuerySwapGroupNV( HDC hDC, GLuint *group, GLuint *barrier );
+ * @brief BOOL wglJoinSwapGroupNV(HDC hDC, GLuint group)
  */
-GLE_API BOOL  wglQuerySwapGroupNV( HDC hDC, GLuint *group, GLuint *barrier );
+GLE_API BOOL wglJoinSwapGroupNV(HDC hDC, GLuint group);
 
 /**
- * @brief BOOL  wglQueryMaxSwapGroupsNV( HDC hDC, GLuint *maxGroups, GLuint *maxBarriers );
+ * @brief BOOL wglQueryFrameCountNV(HDC hDC, GLuint *count)
  */
-GLE_API BOOL  wglQueryMaxSwapGroupsNV( HDC hDC, GLuint *maxGroups, GLuint *maxBarriers );
+GLE_API BOOL wglQueryFrameCountNV(HDC hDC, GLuint *count);
 
 /**
- * @brief BOOL  wglQueryFrameCountNV( HDC hDC, GLuint *count );
+ * @brief BOOL wglQueryMaxSwapGroupsNV(HDC hDC, GLuint *maxGroups, GLuint *maxBarriers)
  */
-GLE_API BOOL  wglQueryFrameCountNV( HDC hDC, GLuint *count );
+GLE_API BOOL wglQueryMaxSwapGroupsNV(HDC hDC, GLuint *maxGroups, GLuint *maxBarriers);
 
 /**
- * @brief BOOL  wglResetFrameCountNV( HDC hDC );
+ * @brief BOOL wglQuerySwapGroupNV(HDC hDC, GLuint *group, GLuint *barrier)
  */
-GLE_API BOOL  wglResetFrameCountNV( HDC hDC );
+GLE_API BOOL wglQuerySwapGroupNV(HDC hDC, GLuint *group, GLuint *barrier);
+
+/**
+ * @brief BOOL wglResetFrameCountNV(HDC hDC)
+ */
+GLE_API BOOL wglResetFrameCountNV(HDC hDC);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-			
-/**	
+/**
  * @defgroup WGL_NV_vertex_array_range WGL_NV_vertex_array_range
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_WGL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_NV_vertex_array_range is supported.
- * @return Returns \c true if \b WGL_NV_vertex_array_range is supported, false otherwise.
+ * @brief  Tests if \b WGL_NV_vertex_array_range is supported.
+ * @return Returns \c true if \b WGL_NV_vertex_array_range is supported, \c false otherwise.
  */
 GLE_API bool isWGL_NV_vertex_array_range();
 
-/**
- * @brief void*  wglAllocateMemoryNV( GLsizei size, GLfloat readfreq, GLfloat writefreq, GLfloat priority );
- */
-GLE_API void*  wglAllocateMemoryNV( GLsizei size, GLfloat readfreq, GLfloat writefreq, GLfloat priority );
+
 
 /**
- * @brief void  wglFreeMemoryNV( void *pointer );
+ * @brief void* wglAllocateMemoryNV(GLsizei size, GLfloat readfreq, GLfloat writefreq, GLfloat priority)
  */
-GLE_API void  wglFreeMemoryNV( void *pointer );
+GLE_API void* wglAllocateMemoryNV(GLsizei size, GLfloat readfreq, GLfloat writefreq, GLfloat priority);
+
+/**
+ * @brief void wglFreeMemoryNV(void *pointer)
+ */
+GLE_API void wglFreeMemoryNV(void *pointer);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_NV_video_capture WGL_NV_video_capture
  * Extension number in OpenGL registry : 374
@@ -18229,69 +20002,67 @@ GLE_API void  wglFreeMemoryNV( void *pointer );
  * @ingroup g_WGL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_NV_video_capture is supported.
- * @return Returns \c true if \b WGL_NV_video_capture is supported, false otherwise.
+ * @brief  Tests if \b WGL_NV_video_capture is supported.
+ * @return Returns \c true if \b WGL_NV_video_capture is supported, \c false otherwise.
  */
 GLE_API bool isWGL_NV_video_capture();
 
-/**
- * @brief BOOL  wglBindVideoCaptureDeviceNV( UINT uVideoSlot, HVIDEOINPUTDEVICENV hDevice );
- */
-GLE_API BOOL  wglBindVideoCaptureDeviceNV( UINT uVideoSlot, HVIDEOINPUTDEVICENV hDevice );
+
 
 /**
- * @brief UINT  wglEnumerateVideoCaptureDevicesNV( HDC hDc, HVIDEOINPUTDEVICENV *phDeviceList );
+ * @brief BOOL wglBindVideoCaptureDeviceNV(UINT uVideoSlot, HVIDEOINPUTDEVICENV hDevice)
  */
-GLE_API UINT  wglEnumerateVideoCaptureDevicesNV( HDC hDc, HVIDEOINPUTDEVICENV *phDeviceList );
+GLE_API BOOL wglBindVideoCaptureDeviceNV(UINT uVideoSlot, HVIDEOINPUTDEVICENV hDevice);
 
 /**
- * @brief BOOL  wglLockVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice );
+ * @brief UINT wglEnumerateVideoCaptureDevicesNV(HDC hDc, HVIDEOINPUTDEVICENV *phDeviceList)
  */
-GLE_API BOOL  wglLockVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice );
+GLE_API UINT wglEnumerateVideoCaptureDevicesNV(HDC hDc, HVIDEOINPUTDEVICENV *phDeviceList);
 
 /**
- * @brief BOOL  wglQueryVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice, int iAttribute, int *piValue );
+ * @brief BOOL wglLockVideoCaptureDeviceNV(HDC hDc, HVIDEOINPUTDEVICENV hDevice)
  */
-GLE_API BOOL  wglQueryVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice, int iAttribute, int *piValue );
+GLE_API BOOL wglLockVideoCaptureDeviceNV(HDC hDc, HVIDEOINPUTDEVICENV hDevice);
 
 /**
- * @brief BOOL  wglReleaseVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice );
+ * @brief BOOL wglQueryVideoCaptureDeviceNV(HDC hDc, HVIDEOINPUTDEVICENV hDevice, int iAttribute, int *piValue)
  */
-GLE_API BOOL  wglReleaseVideoCaptureDeviceNV( HDC hDc, HVIDEOINPUTDEVICENV hDevice );
+GLE_API BOOL wglQueryVideoCaptureDeviceNV(HDC hDc, HVIDEOINPUTDEVICENV hDevice, int iAttribute, int *piValue);
+
+/**
+ * @brief BOOL wglReleaseVideoCaptureDeviceNV(HDC hDc, HVIDEOINPUTDEVICENV hDevice)
+ */
+GLE_API BOOL wglReleaseVideoCaptureDeviceNV(HDC hDc, HVIDEOINPUTDEVICENV hDevice);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-			
-/**	
+/**
  * @defgroup WGL_NV_video_out WGL_NV_video_out
- * Extension not found in OpenGL extensions registry !!!
- * @ingroup g_Not_in_OpenGL_Extension_Registry g_extensions
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_WGL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_NV_video_out is supported.
- * @return Returns \c true if \b WGL_NV_video_out is supported, false otherwise.
+ * @brief  Tests if \b WGL_NV_video_out is supported.
+ * @return Returns \c true if \b WGL_NV_video_out is supported, \c false otherwise.
  */
 GLE_API bool isWGL_NV_video_out();
 
+
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_NV_video_output WGL_NV_video_output
  * Extension number in OpenGL registry : 349
@@ -18299,52 +20070,51 @@ GLE_API bool isWGL_NV_video_out();
  * @ingroup g_WGL_NV g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_NV_video_output is supported.
- * @return Returns \c true if \b WGL_NV_video_output is supported, false otherwise.
+ * @brief  Tests if \b WGL_NV_video_output is supported.
+ * @return Returns \c true if \b WGL_NV_video_output is supported, \c false otherwise.
  */
 GLE_API bool isWGL_NV_video_output();
 
-/**
- * @brief BOOL  wglGetVideoDeviceNV( HDC hDC, int numDevices, HPVIDEODEV *hVideoDevice );
- */
-GLE_API BOOL  wglGetVideoDeviceNV( HDC hDC, int numDevices, HPVIDEODEV *hVideoDevice );
+
 
 /**
- * @brief BOOL  wglReleaseVideoDeviceNV( HPVIDEODEV hVideoDevice );
+ * @brief BOOL wglBindVideoImageNV(HPVIDEODEV hVideoDevice, HPBUFFERARB hPbuffer, int iVideoBuffer)
  */
-GLE_API BOOL  wglReleaseVideoDeviceNV( HPVIDEODEV hVideoDevice );
+GLE_API BOOL wglBindVideoImageNV(HPVIDEODEV hVideoDevice, HPBUFFERARB hPbuffer, int iVideoBuffer);
 
 /**
- * @brief BOOL  wglBindVideoImageNV( HPVIDEODEV hVideoDevice, HPBUFFERARB hPbuffer, int iVideoBuffer );
+ * @brief BOOL wglGetVideoDeviceNV(HDC hDC, int numDevices, HPVIDEODEV *hVideoDevice)
  */
-GLE_API BOOL  wglBindVideoImageNV( HPVIDEODEV hVideoDevice, HPBUFFERARB hPbuffer, int iVideoBuffer );
+GLE_API BOOL wglGetVideoDeviceNV(HDC hDC, int numDevices, HPVIDEODEV *hVideoDevice);
 
 /**
- * @brief BOOL  wglReleaseVideoImageNV( HPBUFFERARB hPbuffer, int iVideoBuffer );
+ * @brief BOOL wglGetVideoInfoNV(HPVIDEODEV hpVideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo)
  */
-GLE_API BOOL  wglReleaseVideoImageNV( HPBUFFERARB hPbuffer, int iVideoBuffer );
+GLE_API BOOL wglGetVideoInfoNV(HPVIDEODEV hpVideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo);
 
 /**
- * @brief BOOL  wglSendPbufferToVideoNV( HPBUFFERARB hPbuffer, int iBufferType, unsigned long *pulCounterPbuffer, BOOL bBlock );
+ * @brief BOOL wglReleaseVideoDeviceNV(HPVIDEODEV hVideoDevice)
  */
-GLE_API BOOL  wglSendPbufferToVideoNV( HPBUFFERARB hPbuffer, int iBufferType, unsigned long *pulCounterPbuffer, BOOL bBlock );
+GLE_API BOOL wglReleaseVideoDeviceNV(HPVIDEODEV hVideoDevice);
 
 /**
- * @brief BOOL  wglGetVideoInfoNV( HPVIDEODEV hpVideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo );
+ * @brief BOOL wglReleaseVideoImageNV(HPBUFFERARB hPbuffer, int iVideoBuffer)
  */
-GLE_API BOOL  wglGetVideoInfoNV( HPVIDEODEV hpVideoDevice, unsigned long *pulCounterOutputPbuffer, unsigned long *pulCounterOutputVideo );
+GLE_API BOOL wglReleaseVideoImageNV(HPBUFFERARB hPbuffer, int iVideoBuffer);
+
+/**
+ * @brief BOOL wglSendPbufferToVideoNV(HPBUFFERARB hPbuffer, int iBufferType, unsigned long *pulCounterPbuffer, BOOL bBlock)
+ */
+GLE_API BOOL wglSendPbufferToVideoNV(HPBUFFERARB hPbuffer, int iBufferType, unsigned long *pulCounterPbuffer, BOOL bBlock);
 
 //@}
-
-
-#endif // WIN32
+#endif //WIN32
 
 
 
 #ifdef WIN32
-
-
 /**
  * @defgroup WGL_OML_sync_control WGL_OML_sync_control
  * Extension number in OpenGL registry : 242
@@ -18352,46 +20122,48 @@ GLE_API BOOL  wglGetVideoInfoNV( HPVIDEODEV hpVideoDevice, unsigned long *pulCou
  * @ingroup g_WGL_OML g_extensions
  */
 //@{
+
 /**
- * @brief Test if \b WGL_OML_sync_control is supported.
- * @return Returns \c true if \b WGL_OML_sync_control is supported, false otherwise.
+ * @brief  Tests if \b WGL_OML_sync_control is supported.
+ * @return Returns \c true if \b WGL_OML_sync_control is supported, \c false otherwise.
  */
 GLE_API bool isWGL_OML_sync_control();
 
-/**
- * @brief BOOL  wglGetSyncValuesOML( HDC hdc, INT64 *ust, INT64 *msc, INT64 *sbc );
- */
-GLE_API BOOL  wglGetSyncValuesOML( HDC hdc, INT64 *ust, INT64 *msc, INT64 *sbc );
+
 
 /**
- * @brief BOOL  wglGetMscRateOML( HDC hdc, INT32 *numerator, INT32 *denominator );
+ * @brief BOOL wglGetMscRateOML(HDC hdc, INT32 *numerator, INT32 *denominator)
  */
-GLE_API BOOL  wglGetMscRateOML( HDC hdc, INT32 *numerator, INT32 *denominator );
+GLE_API BOOL wglGetMscRateOML(HDC hdc, INT32 *numerator, INT32 *denominator);
 
 /**
- * @brief INT64  wglSwapBuffersMscOML( HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder );
+ * @brief BOOL wglGetSyncValuesOML(HDC hdc, INT64 *ust, INT64 *msc, INT64 *sbc)
  */
-GLE_API INT64  wglSwapBuffersMscOML( HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder );
+GLE_API BOOL wglGetSyncValuesOML(HDC hdc, INT64 *ust, INT64 *msc, INT64 *sbc);
 
 /**
- * @brief INT64  wglSwapLayerBuffersMscOML( HDC hdc, int fuPlanes, INT64 target_msc, INT64 divisor, INT64 remainder );
+ * @brief INT64 wglSwapBuffersMscOML(HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder)
  */
-GLE_API INT64  wglSwapLayerBuffersMscOML( HDC hdc, int fuPlanes, INT64 target_msc, INT64 divisor, INT64 remainder );
+GLE_API INT64 wglSwapBuffersMscOML(HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder);
 
 /**
- * @brief BOOL  wglWaitForMscOML( HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder, INT64 *ust, INT64 *msc, INT64 *sbc );
+ * @brief INT64 wglSwapLayerBuffersMscOML(HDC hdc, int fuPlanes, INT64 target_msc, INT64 divisor, INT64 remainder)
  */
-GLE_API BOOL  wglWaitForMscOML( HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder, INT64 *ust, INT64 *msc, INT64 *sbc );
+GLE_API INT64 wglSwapLayerBuffersMscOML(HDC hdc, int fuPlanes, INT64 target_msc, INT64 divisor, INT64 remainder);
 
 /**
- * @brief BOOL  wglWaitForSbcOML( HDC hdc, INT64 target_sbc, INT64 *ust, INT64 *msc, INT64 *sbc );
+ * @brief BOOL wglWaitForMscOML(HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder, INT64 *ust, INT64 *msc, INT64 *sbc)
  */
-GLE_API BOOL  wglWaitForSbcOML( HDC hdc, INT64 target_sbc, INT64 *ust, INT64 *msc, INT64 *sbc );
+GLE_API BOOL wglWaitForMscOML(HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder, INT64 *ust, INT64 *msc, INT64 *sbc);
+
+/**
+ * @brief BOOL wglWaitForSbcOML(HDC hdc, INT64 target_sbc, INT64 *ust, INT64 *msc, INT64 *sbc)
+ */
+GLE_API BOOL wglWaitForSbcOML(HDC hdc, INT64 target_sbc, INT64 *ust, INT64 *msc, INT64 *sbc);
 
 //@}
+#endif //WIN32
 
-
-#endif // WIN32
 
 
 #endif // #ifndef _GLE_WRAPPERGEN_HPP
