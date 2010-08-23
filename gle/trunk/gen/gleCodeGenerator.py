@@ -3,6 +3,7 @@
 # as published by the Free Software Foundation.
 # Author Nicolas Papier
 
+from os.path import join
 from time import gmtime, strftime
 from gleOpenGL import opengl, getOSTag, getOSTestExtensionSupport, getTypedefPFNPROC, getGroup
 
@@ -14,6 +15,10 @@ from gleOpenGL import opengl, getOSTag, getOSTestExtensionSupport, getTypedefPFN
 
 
 ###
+
+includePath = '../include/gle'
+srcPath = '../src'
+
 buildTime = strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime())
 
 fileStamp = '// This file was generated at {0} with gle, please do not modify.'.format( buildTime )
@@ -26,6 +31,7 @@ copyright = """// GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicola
 ###
 # @todo not very cute
 def doICare( extensionName ):
+	return True
 	return getGroup(extensionName) != 'GL_VERSION'# or\
 	#	extensionName[0:12] == 'GL_VERSION_3' or\
 	#	extensionName[0:12] == 'GL_VERSION_4'
@@ -336,17 +342,25 @@ void OpenGLExtensionsGen::initialize{extensionGroup}()
 			if osTag:
 				cppclass['initializeGROUP'] += """
 #ifdef {osTag}
-""".format( osTag=osTag )
+
+	// ****** {extensionName} ******
+""".format( osTag=osTag, extensionName=extensionName )
+
+			#
+			if getGroup(extensionName) == 'GL_VERSION':
+				cppclass['initializeGROUP'] += """
+	is{extensionName} = true;
+""".format(extensionName=extensionName)
+			else:
+				cppclass['initializeGROUP'] += """
+	is{extensionName} = {isExtensionSupported}("{extensionName}");
+""".format( extensionName=extensionName, isExtensionSupported=isExtensionSupported )
 
 			#
 			cppclass['initializeGROUP'] += """
-	// ****** {extensionName} ******
-
-	is{extensionName} = {isExtensionSupported}("{extensionName}");
-	
 	localSupportedProcCount		= {localSupportedProcCount};
 	localInitializedProcCount	= 0;
-""".format( extensionName=extensionName, isExtensionSupported=isExtensionSupported, localSupportedProcCount=len(functions) )
+""".format( localSupportedProcCount=len(functions) )
 
 			#
 			if doICare(extensionName) and len(functions)>0:
@@ -363,7 +377,13 @@ void OpenGLExtensionsGen::initialize{extensionGroup}()
 """.format( function=function, functionTypedef=getTypedefPFNPROC(function) )
 
 				#
-				cppclass['initializeGROUP'] += """	}} // if ( is{extensionName} )
+				if getGroup(extensionName) == 'GL_VERSION':
+					cppclass['initializeGROUP'] += """
+		is{extensionName} = (localInitializedProcCount == localSupportedProcCount);""".format(extensionName=extensionName)
+
+				#
+				cppclass['initializeGROUP'] += """
+	}} // if ( is{extensionName} )
 """.format(extensionName=extensionName)
 
 			# Final log for a single extension initialization
@@ -371,13 +391,13 @@ void OpenGLExtensionsGen::initialize{extensionGroup}()
 	if ( is{extensionName} )
 	{{
 		std::stringstream strStream;
-		strStream << "{extensionName}                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "{extensionName}{xspace}: detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{{
 			std::stringstream strStream;
-			strStream << "{extensionName}                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "{extensionName}{xspace}: " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}}
@@ -390,8 +410,10 @@ void OpenGLExtensionsGen::initialize{extensionGroup}()
 	}}
 	else
 	{{
-		logEndl( "{extensionName}                                      : not detected." );
-	}}""".format( extensionName=extensionName )
+		logEndl( "{extensionName}{xspace}: not detected." );
+	}}
+
+""".format( extensionName=extensionName, xspace = ' ' * (50-len(extensionName)) )
 
 			#
 			if osTag:
@@ -635,23 +657,23 @@ GLE_API {functionProto};
 	### Generates files
 
 	### Generates class files
-	with open('OpenGLExtensionsGen.hpp', 'w') as file:
+	with open( join(includePath, 'OpenGLExtensionsGen.hpp'), 'w') as file:
 		sections = ['begin', 'initializeGROUP', 'privateData', 'end']
 		for section in sections:
 			file.write( hppclass[section] )
 
-	with open('OpenGLExtensionsGen.cpp', 'w') as file:
+	with open( join(srcPath, 'OpenGLExtensionsGen.cpp'), 'w') as file:
 		sections = ['begin', 'clear', 'initialize', 'initializeGROUP', 'end']
 		for section in sections:
 			file.write( cppclass[section] )
 
 	### Generates wrapper files
-	with open('WrapperGen.hpp', 'w') as file:
+	with open( join(includePath, 'WrapperGen.hpp'), 'w') as file:
 		sections = ['begin', 'doxgroup', 'api', 'end']
 		for section in sections:
 			file.write( hppwrap[section] )
 
-	with open('WrapperGen.cpp', 'w') as file:
+	with open( join(srcPath, 'WrapperGen.cpp'), 'w') as file:
 		sections = ['begin', 'api']
 		for section in sections:
 			file.write( cppwrap[section] )

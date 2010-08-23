@@ -1,4 +1,4 @@
-// This file was generated at Mon, 26 Jul 2010 15:33:39 +0000 with gle, please do not modify.
+// This file was generated at Wed, 28 Jul 2010 12:51:41 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -4032,13 +4032,13 @@ void OpenGLExtensionsGen::initializeGLX_3DFX()
 	if ( isGLX_3DFX_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_3DFX_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_3DFX_multisample                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_3DFX_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_3DFX_multisample                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4051,7 +4051,7 @@ void OpenGLExtensionsGen::initializeGLX_3DFX()
 	}
 	else
 	{
-		logEndl( "GLX_3DFX_multisample                                      : not detected." );
+		logEndl( "GLX_3DFX_multisample                              : not detected." );
 	}
 
 
@@ -4084,13 +4084,13 @@ void OpenGLExtensionsGen::initializeGLX_ARB()
 	if ( isGLX_ARB_create_context )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_ARB_create_context                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_ARB_create_context                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_ARB_create_context                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_ARB_create_context                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4103,7 +4103,7 @@ void OpenGLExtensionsGen::initializeGLX_ARB()
 	}
 	else
 	{
-		logEndl( "GLX_ARB_create_context                                      : not detected." );
+		logEndl( "GLX_ARB_create_context                            : not detected." );
 	}
 
 
@@ -4121,13 +4121,13 @@ void OpenGLExtensionsGen::initializeGLX_ARB()
 	if ( isGLX_ARB_create_context_profile )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_ARB_create_context_profile                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_ARB_create_context_profile                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_ARB_create_context_profile                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_ARB_create_context_profile                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4140,7 +4140,7 @@ void OpenGLExtensionsGen::initializeGLX_ARB()
 	}
 	else
 	{
-		logEndl( "GLX_ARB_create_context_profile                                      : not detected." );
+		logEndl( "GLX_ARB_create_context_profile                    : not detected." );
 	}
 
 
@@ -4158,13 +4158,13 @@ void OpenGLExtensionsGen::initializeGLX_ARB()
 	if ( isGLX_ARB_fbconfig_float )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_ARB_fbconfig_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_ARB_fbconfig_float                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_ARB_fbconfig_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_ARB_fbconfig_float                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4177,7 +4177,7 @@ void OpenGLExtensionsGen::initializeGLX_ARB()
 	}
 	else
 	{
-		logEndl( "GLX_ARB_fbconfig_float                                      : not detected." );
+		logEndl( "GLX_ARB_fbconfig_float                            : not detected." );
 	}
 
 
@@ -4202,13 +4202,13 @@ void OpenGLExtensionsGen::initializeGLX_ARB()
 	if ( isGLX_ARB_get_proc_address )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_ARB_get_proc_address                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_ARB_get_proc_address                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_ARB_get_proc_address                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_ARB_get_proc_address                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4221,7 +4221,7 @@ void OpenGLExtensionsGen::initializeGLX_ARB()
 	}
 	else
 	{
-		logEndl( "GLX_ARB_get_proc_address                                      : not detected." );
+		logEndl( "GLX_ARB_get_proc_address                          : not detected." );
 	}
 
 
@@ -4239,13 +4239,13 @@ void OpenGLExtensionsGen::initializeGLX_ARB()
 	if ( isGLX_ARB_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_ARB_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_ARB_multisample                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_ARB_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_ARB_multisample                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4258,7 +4258,7 @@ void OpenGLExtensionsGen::initializeGLX_ARB()
 	}
 	else
 	{
-		logEndl( "GLX_ARB_multisample                                      : not detected." );
+		logEndl( "GLX_ARB_multisample                               : not detected." );
 	}
 
 
@@ -4276,13 +4276,13 @@ void OpenGLExtensionsGen::initializeGLX_ARB()
 	if ( isGLX_ARB_vertex_buffer_object )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_ARB_vertex_buffer_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_ARB_vertex_buffer_object                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_ARB_vertex_buffer_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_ARB_vertex_buffer_object                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4295,7 +4295,7 @@ void OpenGLExtensionsGen::initializeGLX_ARB()
 	}
 	else
 	{
-		logEndl( "GLX_ARB_vertex_buffer_object                                      : not detected." );
+		logEndl( "GLX_ARB_vertex_buffer_object                      : not detected." );
 	}
 
 
@@ -4321,13 +4321,13 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	if ( isGLX_EXT_fbconfig_packed_float )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_EXT_fbconfig_packed_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_EXT_fbconfig_packed_float                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_EXT_fbconfig_packed_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_EXT_fbconfig_packed_float                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4340,7 +4340,7 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	}
 	else
 	{
-		logEndl( "GLX_EXT_fbconfig_packed_float                                      : not detected." );
+		logEndl( "GLX_EXT_fbconfig_packed_float                     : not detected." );
 	}
 
 
@@ -4358,13 +4358,13 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	if ( isGLX_EXT_framebuffer_sRGB )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_EXT_framebuffer_sRGB                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_EXT_framebuffer_sRGB                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_EXT_framebuffer_sRGB                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_EXT_framebuffer_sRGB                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4377,7 +4377,7 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	}
 	else
 	{
-		logEndl( "GLX_EXT_framebuffer_sRGB                                      : not detected." );
+		logEndl( "GLX_EXT_framebuffer_sRGB                          : not detected." );
 	}
 
 
@@ -4414,13 +4414,13 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	if ( isGLX_EXT_import_context )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_EXT_import_context                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_EXT_import_context                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_EXT_import_context                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_EXT_import_context                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4433,7 +4433,7 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	}
 	else
 	{
-		logEndl( "GLX_EXT_import_context                                      : not detected." );
+		logEndl( "GLX_EXT_import_context                            : not detected." );
 	}
 
 
@@ -4458,13 +4458,13 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	if ( isGLX_EXT_swap_control )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_EXT_swap_control                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_EXT_swap_control                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_EXT_swap_control                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_EXT_swap_control                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4477,7 +4477,7 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	}
 	else
 	{
-		logEndl( "GLX_EXT_swap_control                                      : not detected." );
+		logEndl( "GLX_EXT_swap_control                              : not detected." );
 	}
 
 
@@ -4505,13 +4505,13 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	if ( isGLX_EXT_texture_from_pixmap )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_EXT_texture_from_pixmap                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_EXT_texture_from_pixmap                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_EXT_texture_from_pixmap                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_EXT_texture_from_pixmap                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4524,7 +4524,7 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	}
 	else
 	{
-		logEndl( "GLX_EXT_texture_from_pixmap                                      : not detected." );
+		logEndl( "GLX_EXT_texture_from_pixmap                       : not detected." );
 	}
 
 
@@ -4542,13 +4542,13 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	if ( isGLX_EXT_visual_info )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_EXT_visual_info                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_EXT_visual_info                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_EXT_visual_info                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_EXT_visual_info                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4561,7 +4561,7 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	}
 	else
 	{
-		logEndl( "GLX_EXT_visual_info                                      : not detected." );
+		logEndl( "GLX_EXT_visual_info                               : not detected." );
 	}
 
 
@@ -4579,13 +4579,13 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	if ( isGLX_EXT_visual_rating )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_EXT_visual_rating                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_EXT_visual_rating                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_EXT_visual_rating                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_EXT_visual_rating                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4598,7 +4598,7 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	}
 	else
 	{
-		logEndl( "GLX_EXT_visual_rating                                      : not detected." );
+		logEndl( "GLX_EXT_visual_rating                             : not detected." );
 	}
 
 
@@ -4624,13 +4624,13 @@ void OpenGLExtensionsGen::initializeGLX_GLX()
 	if ( isGLX_GLX_AMD_gpu_association )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_GLX_AMD_gpu_association                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_GLX_AMD_gpu_association                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_GLX_AMD_gpu_association                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_GLX_AMD_gpu_association                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4643,7 +4643,7 @@ void OpenGLExtensionsGen::initializeGLX_GLX()
 	}
 	else
 	{
-		logEndl( "GLX_GLX_AMD_gpu_association                                      : not detected." );
+		logEndl( "GLX_GLX_AMD_gpu_association                       : not detected." );
 	}
 
 
@@ -4669,13 +4669,13 @@ void OpenGLExtensionsGen::initializeGLX_INTEL()
 	if ( isGLX_INTEL_swap_event )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_INTEL_swap_event                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_INTEL_swap_event                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_INTEL_swap_event                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_INTEL_swap_event                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4688,7 +4688,7 @@ void OpenGLExtensionsGen::initializeGLX_INTEL()
 	}
 	else
 	{
-		logEndl( "GLX_INTEL_swap_event                                      : not detected." );
+		logEndl( "GLX_INTEL_swap_event                              : not detected." );
 	}
 
 
@@ -4721,13 +4721,13 @@ void OpenGLExtensionsGen::initializeGLX_MESA()
 	if ( isGLX_MESA_agp_offset )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_MESA_agp_offset                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_MESA_agp_offset                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_MESA_agp_offset                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_MESA_agp_offset                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4740,7 +4740,7 @@ void OpenGLExtensionsGen::initializeGLX_MESA()
 	}
 	else
 	{
-		logEndl( "GLX_MESA_agp_offset                                      : not detected." );
+		logEndl( "GLX_MESA_agp_offset                               : not detected." );
 	}
 
 
@@ -4765,13 +4765,13 @@ void OpenGLExtensionsGen::initializeGLX_MESA()
 	if ( isGLX_MESA_copy_sub_buffer )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_MESA_copy_sub_buffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_MESA_copy_sub_buffer                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_MESA_copy_sub_buffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_MESA_copy_sub_buffer                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4784,7 +4784,7 @@ void OpenGLExtensionsGen::initializeGLX_MESA()
 	}
 	else
 	{
-		logEndl( "GLX_MESA_copy_sub_buffer                                      : not detected." );
+		logEndl( "GLX_MESA_copy_sub_buffer                          : not detected." );
 	}
 
 
@@ -4809,13 +4809,13 @@ void OpenGLExtensionsGen::initializeGLX_MESA()
 	if ( isGLX_MESA_pixmap_colormap )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_MESA_pixmap_colormap                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_MESA_pixmap_colormap                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_MESA_pixmap_colormap                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_MESA_pixmap_colormap                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4828,7 +4828,7 @@ void OpenGLExtensionsGen::initializeGLX_MESA()
 	}
 	else
 	{
-		logEndl( "GLX_MESA_pixmap_colormap                                      : not detected." );
+		logEndl( "GLX_MESA_pixmap_colormap                          : not detected." );
 	}
 
 
@@ -4853,13 +4853,13 @@ void OpenGLExtensionsGen::initializeGLX_MESA()
 	if ( isGLX_MESA_release_buffers )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_MESA_release_buffers                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_MESA_release_buffers                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_MESA_release_buffers                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_MESA_release_buffers                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4872,7 +4872,7 @@ void OpenGLExtensionsGen::initializeGLX_MESA()
 	}
 	else
 	{
-		logEndl( "GLX_MESA_release_buffers                                      : not detected." );
+		logEndl( "GLX_MESA_release_buffers                          : not detected." );
 	}
 
 
@@ -4897,13 +4897,13 @@ void OpenGLExtensionsGen::initializeGLX_MESA()
 	if ( isGLX_MESA_set_3dfx_mode )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_MESA_set_3dfx_mode                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_MESA_set_3dfx_mode                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_MESA_set_3dfx_mode                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_MESA_set_3dfx_mode                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4916,7 +4916,7 @@ void OpenGLExtensionsGen::initializeGLX_MESA()
 	}
 	else
 	{
-		logEndl( "GLX_MESA_set_3dfx_mode                                      : not detected." );
+		logEndl( "GLX_MESA_set_3dfx_mode                            : not detected." );
 	}
 
 
@@ -4949,13 +4949,13 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	if ( isGLX_NV_copy_image )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_NV_copy_image                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_NV_copy_image                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_NV_copy_image                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_NV_copy_image                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -4968,7 +4968,7 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	}
 	else
 	{
-		logEndl( "GLX_NV_copy_image                                      : not detected." );
+		logEndl( "GLX_NV_copy_image                                 : not detected." );
 	}
 
 
@@ -4986,13 +4986,13 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	if ( isGLX_NV_float_buffer )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_NV_float_buffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_NV_float_buffer                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_NV_float_buffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_NV_float_buffer                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5005,7 +5005,7 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	}
 	else
 	{
-		logEndl( "GLX_NV_float_buffer                                      : not detected." );
+		logEndl( "GLX_NV_float_buffer                               : not detected." );
 	}
 
 
@@ -5023,13 +5023,13 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	if ( isGLX_NV_multisample_coverage )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_NV_multisample_coverage                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_NV_multisample_coverage                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_NV_multisample_coverage                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_NV_multisample_coverage                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5042,7 +5042,7 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	}
 	else
 	{
-		logEndl( "GLX_NV_multisample_coverage                                      : not detected." );
+		logEndl( "GLX_NV_multisample_coverage                       : not detected." );
 	}
 
 
@@ -5070,13 +5070,13 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	if ( isGLX_NV_present_video )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_NV_present_video                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_NV_present_video                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_NV_present_video                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_NV_present_video                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5089,7 +5089,7 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	}
 	else
 	{
-		logEndl( "GLX_NV_present_video                                      : not detected." );
+		logEndl( "GLX_NV_present_video                              : not detected." );
 	}
 
 
@@ -5129,13 +5129,13 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	if ( isGLX_NV_swap_group )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_NV_swap_group                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_NV_swap_group                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_NV_swap_group                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_NV_swap_group                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5148,7 +5148,7 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	}
 	else
 	{
-		logEndl( "GLX_NV_swap_group                                      : not detected." );
+		logEndl( "GLX_NV_swap_group                                 : not detected." );
 	}
 
 
@@ -5185,13 +5185,13 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	if ( isGLX_NV_video_capture )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_NV_video_capture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_NV_video_capture                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_NV_video_capture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_NV_video_capture                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5204,7 +5204,7 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	}
 	else
 	{
-		logEndl( "GLX_NV_video_capture                                      : not detected." );
+		logEndl( "GLX_NV_video_capture                              : not detected." );
 	}
 
 
@@ -5222,13 +5222,13 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	if ( isGLX_NV_video_out )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_NV_video_out                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_NV_video_out                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_NV_video_out                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_NV_video_out                                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5241,7 +5241,7 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	}
 	else
 	{
-		logEndl( "GLX_NV_video_out                                      : not detected." );
+		logEndl( "GLX_NV_video_out                                  : not detected." );
 	}
 
 
@@ -5281,13 +5281,13 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	if ( isGLX_NV_video_output )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_NV_video_output                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_NV_video_output                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_NV_video_output                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_NV_video_output                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5300,7 +5300,7 @@ void OpenGLExtensionsGen::initializeGLX_NV()
 	}
 	else
 	{
-		logEndl( "GLX_NV_video_output                                      : not detected." );
+		logEndl( "GLX_NV_video_output                               : not detected." );
 	}
 
 
@@ -5326,13 +5326,13 @@ void OpenGLExtensionsGen::initializeGLX_OML()
 	if ( isGLX_OML_swap_method )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_OML_swap_method                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_OML_swap_method                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_OML_swap_method                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_OML_swap_method                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5345,7 +5345,7 @@ void OpenGLExtensionsGen::initializeGLX_OML()
 	}
 	else
 	{
-		logEndl( "GLX_OML_swap_method                                      : not detected." );
+		logEndl( "GLX_OML_swap_method                               : not detected." );
 	}
 
 
@@ -5382,13 +5382,13 @@ void OpenGLExtensionsGen::initializeGLX_OML()
 	if ( isGLX_OML_sync_control )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_OML_sync_control                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_OML_sync_control                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_OML_sync_control                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_OML_sync_control                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5401,7 +5401,7 @@ void OpenGLExtensionsGen::initializeGLX_OML()
 	}
 	else
 	{
-		logEndl( "GLX_OML_sync_control                                      : not detected." );
+		logEndl( "GLX_OML_sync_control                              : not detected." );
 	}
 
 
@@ -5434,13 +5434,13 @@ void OpenGLExtensionsGen::initializeGLX_SGI()
 	if ( isGLX_SGI_cushion )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGI_cushion                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGI_cushion                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGI_cushion                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGI_cushion                                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5453,7 +5453,7 @@ void OpenGLExtensionsGen::initializeGLX_SGI()
 	}
 	else
 	{
-		logEndl( "GLX_SGI_cushion                                      : not detected." );
+		logEndl( "GLX_SGI_cushion                                   : not detected." );
 	}
 
 
@@ -5481,13 +5481,13 @@ void OpenGLExtensionsGen::initializeGLX_SGI()
 	if ( isGLX_SGI_make_current_read )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGI_make_current_read                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGI_make_current_read                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGI_make_current_read                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGI_make_current_read                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5500,7 +5500,7 @@ void OpenGLExtensionsGen::initializeGLX_SGI()
 	}
 	else
 	{
-		logEndl( "GLX_SGI_make_current_read                                      : not detected." );
+		logEndl( "GLX_SGI_make_current_read                         : not detected." );
 	}
 
 
@@ -5525,13 +5525,13 @@ void OpenGLExtensionsGen::initializeGLX_SGI()
 	if ( isGLX_SGI_swap_control )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGI_swap_control                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGI_swap_control                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGI_swap_control                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGI_swap_control                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5544,7 +5544,7 @@ void OpenGLExtensionsGen::initializeGLX_SGI()
 	}
 	else
 	{
-		logEndl( "GLX_SGI_swap_control                                      : not detected." );
+		logEndl( "GLX_SGI_swap_control                              : not detected." );
 	}
 
 
@@ -5572,13 +5572,13 @@ void OpenGLExtensionsGen::initializeGLX_SGI()
 	if ( isGLX_SGI_video_sync )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGI_video_sync                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGI_video_sync                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGI_video_sync                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGI_video_sync                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5591,7 +5591,7 @@ void OpenGLExtensionsGen::initializeGLX_SGI()
 	}
 	else
 	{
-		logEndl( "GLX_SGI_video_sync                                      : not detected." );
+		logEndl( "GLX_SGI_video_sync                                : not detected." );
 	}
 
 
@@ -5617,13 +5617,13 @@ void OpenGLExtensionsGen::initializeGLX_SGIS()
 	if ( isGLX_SGIS_blended_overlay )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGIS_blended_overlay                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGIS_blended_overlay                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGIS_blended_overlay                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGIS_blended_overlay                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5636,7 +5636,7 @@ void OpenGLExtensionsGen::initializeGLX_SGIS()
 	}
 	else
 	{
-		logEndl( "GLX_SGIS_blended_overlay                                      : not detected." );
+		logEndl( "GLX_SGIS_blended_overlay                          : not detected." );
 	}
 
 
@@ -5654,13 +5654,13 @@ void OpenGLExtensionsGen::initializeGLX_SGIS()
 	if ( isGLX_SGIS_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGIS_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGIS_multisample                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGIS_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGIS_multisample                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5673,7 +5673,7 @@ void OpenGLExtensionsGen::initializeGLX_SGIS()
 	}
 	else
 	{
-		logEndl( "GLX_SGIS_multisample                                      : not detected." );
+		logEndl( "GLX_SGIS_multisample                              : not detected." );
 	}
 
 
@@ -5691,13 +5691,13 @@ void OpenGLExtensionsGen::initializeGLX_SGIS()
 	if ( isGLX_SGIS_shared_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGIS_shared_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGIS_shared_multisample                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGIS_shared_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGIS_shared_multisample                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5710,7 +5710,7 @@ void OpenGLExtensionsGen::initializeGLX_SGIS()
 	}
 	else
 	{
-		logEndl( "GLX_SGIS_shared_multisample                                      : not detected." );
+		logEndl( "GLX_SGIS_shared_multisample                       : not detected." );
 	}
 
 
@@ -5743,13 +5743,13 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	if ( isGLX_SGIX_dmbuffer )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGIX_dmbuffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGIX_dmbuffer                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGIX_dmbuffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGIX_dmbuffer                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5762,7 +5762,7 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	}
 	else
 	{
-		logEndl( "GLX_SGIX_dmbuffer                                      : not detected." );
+		logEndl( "GLX_SGIX_dmbuffer                                 : not detected." );
 	}
 
 
@@ -5802,13 +5802,13 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	if ( isGLX_SGIX_fbconfig )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGIX_fbconfig                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGIX_fbconfig                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGIX_fbconfig                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGIX_fbconfig                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5821,7 +5821,7 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	}
 	else
 	{
-		logEndl( "GLX_SGIX_fbconfig                                      : not detected." );
+		logEndl( "GLX_SGIX_fbconfig                                 : not detected." );
 	}
 
 
@@ -5867,13 +5867,13 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	if ( isGLX_SGIX_hyperpipe )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGIX_hyperpipe                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGIX_hyperpipe                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGIX_hyperpipe                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGIX_hyperpipe                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5886,7 +5886,7 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	}
 	else
 	{
-		logEndl( "GLX_SGIX_hyperpipe                                      : not detected." );
+		logEndl( "GLX_SGIX_hyperpipe                                : not detected." );
 	}
 
 
@@ -5923,13 +5923,13 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	if ( isGLX_SGIX_pbuffer )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGIX_pbuffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGIX_pbuffer                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGIX_pbuffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGIX_pbuffer                                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5942,7 +5942,7 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	}
 	else
 	{
-		logEndl( "GLX_SGIX_pbuffer                                      : not detected." );
+		logEndl( "GLX_SGIX_pbuffer                                  : not detected." );
 	}
 
 
@@ -5970,13 +5970,13 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	if ( isGLX_SGIX_swap_barrier )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGIX_swap_barrier                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGIX_swap_barrier                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGIX_swap_barrier                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGIX_swap_barrier                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -5989,7 +5989,7 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	}
 	else
 	{
-		logEndl( "GLX_SGIX_swap_barrier                                      : not detected." );
+		logEndl( "GLX_SGIX_swap_barrier                             : not detected." );
 	}
 
 
@@ -6014,13 +6014,13 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	if ( isGLX_SGIX_swap_group )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGIX_swap_group                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGIX_swap_group                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGIX_swap_group                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGIX_swap_group                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6033,7 +6033,7 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	}
 	else
 	{
-		logEndl( "GLX_SGIX_swap_group                                      : not detected." );
+		logEndl( "GLX_SGIX_swap_group                               : not detected." );
 	}
 
 
@@ -6070,13 +6070,13 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	if ( isGLX_SGIX_video_resize )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGIX_video_resize                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGIX_video_resize                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGIX_video_resize                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGIX_video_resize                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6089,7 +6089,7 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	}
 	else
 	{
-		logEndl( "GLX_SGIX_video_resize                                      : not detected." );
+		logEndl( "GLX_SGIX_video_resize                             : not detected." );
 	}
 
 
@@ -6117,13 +6117,13 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	if ( isGLX_SGIX_video_source )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGIX_video_source                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGIX_video_source                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGIX_video_source                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGIX_video_source                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6136,7 +6136,7 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	}
 	else
 	{
-		logEndl( "GLX_SGIX_video_source                                      : not detected." );
+		logEndl( "GLX_SGIX_video_source                             : not detected." );
 	}
 
 
@@ -6154,13 +6154,13 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	if ( isGLX_SGIX_visual_select_group )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SGIX_visual_select_group                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SGIX_visual_select_group                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SGIX_visual_select_group                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SGIX_visual_select_group                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6173,7 +6173,7 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 	}
 	else
 	{
-		logEndl( "GLX_SGIX_visual_select_group                                      : not detected." );
+		logEndl( "GLX_SGIX_visual_select_group                      : not detected." );
 	}
 
 
@@ -6206,13 +6206,13 @@ void OpenGLExtensionsGen::initializeGLX_SUN()
 	if ( isGLX_SUN_get_transparent_index )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_SUN_get_transparent_index                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_SUN_get_transparent_index                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_SUN_get_transparent_index                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_SUN_get_transparent_index                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6225,7 +6225,7 @@ void OpenGLExtensionsGen::initializeGLX_SUN()
 	}
 	else
 	{
-		logEndl( "GLX_SUN_get_transparent_index                                      : not detected." );
+		logEndl( "GLX_SUN_get_transparent_index                     : not detected." );
 	}
 
 
@@ -6309,13 +6309,13 @@ void OpenGLExtensionsGen::initializeGLX_VERSION()
 	if ( isGLX_VERSION_1_3 )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_VERSION_1_3                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_VERSION_1_3                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_VERSION_1_3                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_VERSION_1_3                                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6328,7 +6328,7 @@ void OpenGLExtensionsGen::initializeGLX_VERSION()
 	}
 	else
 	{
-		logEndl( "GLX_VERSION_1_3                                      : not detected." );
+		logEndl( "GLX_VERSION_1_3                                   : not detected." );
 	}
 
 
@@ -6353,13 +6353,13 @@ void OpenGLExtensionsGen::initializeGLX_VERSION()
 	if ( isGLX_VERSION_1_4 )
 	{
 		std::stringstream strStream;
-		strStream << "GLX_VERSION_1_4                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GLX_VERSION_1_4                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GLX_VERSION_1_4                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GLX_VERSION_1_4                                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6372,7 +6372,7 @@ void OpenGLExtensionsGen::initializeGLX_VERSION()
 	}
 	else
 	{
-		logEndl( "GLX_VERSION_1_4                                      : not detected." );
+		logEndl( "GLX_VERSION_1_4                                   : not detected." );
 	}
 
 
@@ -6394,13 +6394,13 @@ void OpenGLExtensionsGen::initializeGL_3DFX()
 	if ( isGL_3DFX_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "GL_3DFX_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_3DFX_multisample                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_3DFX_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_3DFX_multisample                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6413,7 +6413,7 @@ void OpenGLExtensionsGen::initializeGL_3DFX()
 	}
 	else
 	{
-		logEndl( "GL_3DFX_multisample                                      : not detected." );
+		logEndl( "GL_3DFX_multisample                               : not detected." );
 	}
 
 
@@ -6432,13 +6432,13 @@ void OpenGLExtensionsGen::initializeGL_3DFX()
 	if ( isGL_3DFX_tbuffer )
 	{
 		std::stringstream strStream;
-		strStream << "GL_3DFX_tbuffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_3DFX_tbuffer                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_3DFX_tbuffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_3DFX_tbuffer                                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6451,7 +6451,7 @@ void OpenGLExtensionsGen::initializeGL_3DFX()
 	}
 	else
 	{
-		logEndl( "GL_3DFX_tbuffer                                      : not detected." );
+		logEndl( "GL_3DFX_tbuffer                                   : not detected." );
 	}
 
 
@@ -6463,13 +6463,13 @@ void OpenGLExtensionsGen::initializeGL_3DFX()
 	if ( isGL_3DFX_texture_compression_FXT1 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_3DFX_texture_compression_FXT1                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_3DFX_texture_compression_FXT1                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_3DFX_texture_compression_FXT1                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_3DFX_texture_compression_FXT1                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6482,7 +6482,7 @@ void OpenGLExtensionsGen::initializeGL_3DFX()
 	}
 	else
 	{
-		logEndl( "GL_3DFX_texture_compression_FXT1                                      : not detected." );
+		logEndl( "GL_3DFX_texture_compression_FXT1                  : not detected." );
 	}
 
 
@@ -6502,13 +6502,13 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	if ( isGL_AMD_conservative_depth )
 	{
 		std::stringstream strStream;
-		strStream << "GL_AMD_conservative_depth                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_AMD_conservative_depth                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_AMD_conservative_depth                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_AMD_conservative_depth                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6521,7 +6521,7 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 	else
 	{
-		logEndl( "GL_AMD_conservative_depth                                      : not detected." );
+		logEndl( "GL_AMD_conservative_depth                         : not detected." );
 	}
 
 
@@ -6533,13 +6533,13 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	if ( isGL_AMD_debug_output )
 	{
 		std::stringstream strStream;
-		strStream << "GL_AMD_debug_output                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_AMD_debug_output                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_AMD_debug_output                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_AMD_debug_output                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6552,7 +6552,7 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 	else
 	{
-		logEndl( "GL_AMD_debug_output                                      : not detected." );
+		logEndl( "GL_AMD_debug_output                               : not detected." );
 	}
 
 
@@ -6580,13 +6580,13 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	if ( isGL_AMD_draw_buffers_blend )
 	{
 		std::stringstream strStream;
-		strStream << "GL_AMD_draw_buffers_blend                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_AMD_draw_buffers_blend                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_AMD_draw_buffers_blend                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_AMD_draw_buffers_blend                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6599,7 +6599,7 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 	else
 	{
-		logEndl( "GL_AMD_draw_buffers_blend                                      : not detected." );
+		logEndl( "GL_AMD_draw_buffers_blend                         : not detected." );
 	}
 
 
@@ -6611,13 +6611,13 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	if ( isGL_AMD_name_gen_delete )
 	{
 		std::stringstream strStream;
-		strStream << "GL_AMD_name_gen_delete                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_AMD_name_gen_delete                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_AMD_name_gen_delete                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_AMD_name_gen_delete                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6630,7 +6630,7 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 	else
 	{
-		logEndl( "GL_AMD_name_gen_delete                                      : not detected." );
+		logEndl( "GL_AMD_name_gen_delete                            : not detected." );
 	}
 
 
@@ -6679,13 +6679,13 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	if ( isGL_AMD_performance_monitor )
 	{
 		std::stringstream strStream;
-		strStream << "GL_AMD_performance_monitor                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_AMD_performance_monitor                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_AMD_performance_monitor                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_AMD_performance_monitor                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6698,7 +6698,7 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 	else
 	{
-		logEndl( "GL_AMD_performance_monitor                                      : not detected." );
+		logEndl( "GL_AMD_performance_monitor                        : not detected." );
 	}
 
 
@@ -6710,13 +6710,13 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	if ( isGL_AMD_seamless_cubemap_per_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_AMD_seamless_cubemap_per_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_AMD_seamless_cubemap_per_texture               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_AMD_seamless_cubemap_per_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_AMD_seamless_cubemap_per_texture               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6729,7 +6729,7 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 	else
 	{
-		logEndl( "GL_AMD_seamless_cubemap_per_texture                                      : not detected." );
+		logEndl( "GL_AMD_seamless_cubemap_per_texture               : not detected." );
 	}
 
 
@@ -6741,13 +6741,13 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	if ( isGL_AMD_shader_stencil_export )
 	{
 		std::stringstream strStream;
-		strStream << "GL_AMD_shader_stencil_export                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_AMD_shader_stencil_export                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_AMD_shader_stencil_export                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_AMD_shader_stencil_export                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6760,7 +6760,7 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 	else
 	{
-		logEndl( "GL_AMD_shader_stencil_export                                      : not detected." );
+		logEndl( "GL_AMD_shader_stencil_export                      : not detected." );
 	}
 
 
@@ -6772,13 +6772,13 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	if ( isGL_AMD_texture_texture4 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_AMD_texture_texture4                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_AMD_texture_texture4                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_AMD_texture_texture4                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_AMD_texture_texture4                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6791,7 +6791,7 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 	else
 	{
-		logEndl( "GL_AMD_texture_texture4                                      : not detected." );
+		logEndl( "GL_AMD_texture_texture4                           : not detected." );
 	}
 
 
@@ -6803,13 +6803,13 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	if ( isGL_AMD_transform_feedback3_lines_triangles )
 	{
 		std::stringstream strStream;
-		strStream << "GL_AMD_transform_feedback3_lines_triangles                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_AMD_transform_feedback3_lines_triangles        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_AMD_transform_feedback3_lines_triangles                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_AMD_transform_feedback3_lines_triangles        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6822,7 +6822,7 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 	else
 	{
-		logEndl( "GL_AMD_transform_feedback3_lines_triangles                                      : not detected." );
+		logEndl( "GL_AMD_transform_feedback3_lines_triangles        : not detected." );
 	}
 
 
@@ -6844,13 +6844,13 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	if ( isGL_AMD_vertex_shader_tesselator )
 	{
 		std::stringstream strStream;
-		strStream << "GL_AMD_vertex_shader_tesselator                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_AMD_vertex_shader_tesselator                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_AMD_vertex_shader_tesselator                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_AMD_vertex_shader_tesselator                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6863,7 +6863,7 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 	else
 	{
-		logEndl( "GL_AMD_vertex_shader_tesselator                                      : not detected." );
+		logEndl( "GL_AMD_vertex_shader_tesselator                   : not detected." );
 	}
 
 
@@ -6883,13 +6883,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_aux_depth_stencil )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_aux_depth_stencil                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_aux_depth_stencil                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_aux_depth_stencil                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_aux_depth_stencil                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6902,7 +6902,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_aux_depth_stencil                                      : not detected." );
+		logEndl( "GL_APPLE_aux_depth_stencil                        : not detected." );
 	}
 
 
@@ -6914,13 +6914,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_client_storage )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_client_storage                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_client_storage                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_client_storage                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_client_storage                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6933,7 +6933,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_client_storage                                      : not detected." );
+		logEndl( "GL_APPLE_client_storage                           : not detected." );
 	}
 
 
@@ -6964,13 +6964,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_element_array )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_element_array                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_element_array                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_element_array                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_element_array                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -6983,7 +6983,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_element_array                                      : not detected." );
+		logEndl( "GL_APPLE_element_array                            : not detected." );
 	}
 
 
@@ -7023,13 +7023,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_fence )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_fence                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_fence                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_fence                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_fence                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7042,7 +7042,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_fence                                      : not detected." );
+		logEndl( "GL_APPLE_fence                                    : not detected." );
 	}
 
 
@@ -7054,13 +7054,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_float_pixels )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_float_pixels                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_float_pixels                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_float_pixels                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_float_pixels                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7073,7 +7073,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_float_pixels                                      : not detected." );
+		logEndl( "GL_APPLE_float_pixels                             : not detected." );
 	}
 
 
@@ -7095,13 +7095,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_flush_buffer_range )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_flush_buffer_range                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_flush_buffer_range                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_flush_buffer_range                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_flush_buffer_range                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7114,7 +7114,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_flush_buffer_range                                      : not detected." );
+		logEndl( "GL_APPLE_flush_buffer_range                       : not detected." );
 	}
 
 
@@ -7139,13 +7139,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_object_purgeable )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_object_purgeable                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_object_purgeable                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_object_purgeable                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_object_purgeable                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7158,7 +7158,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_object_purgeable                                      : not detected." );
+		logEndl( "GL_APPLE_object_purgeable                         : not detected." );
 	}
 
 
@@ -7170,13 +7170,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_rgb_422 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_rgb_422                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_rgb_422                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_rgb_422                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_rgb_422                                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7189,7 +7189,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_rgb_422                                      : not detected." );
+		logEndl( "GL_APPLE_rgb_422                                  : not detected." );
 	}
 
 
@@ -7201,13 +7201,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_row_bytes )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_row_bytes                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_row_bytes                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_row_bytes                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_row_bytes                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7220,7 +7220,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_row_bytes                                      : not detected." );
+		logEndl( "GL_APPLE_row_bytes                                : not detected." );
 	}
 
 
@@ -7232,13 +7232,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_specular_vector )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_specular_vector                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_specular_vector                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_specular_vector                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_specular_vector                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7251,7 +7251,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_specular_vector                                      : not detected." );
+		logEndl( "GL_APPLE_specular_vector                          : not detected." );
 	}
 
 
@@ -7273,13 +7273,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_texture_range )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_texture_range                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_texture_range                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_texture_range                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_texture_range                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7292,7 +7292,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_texture_range                                      : not detected." );
+		logEndl( "GL_APPLE_texture_range                            : not detected." );
 	}
 
 
@@ -7304,13 +7304,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_transform_hint )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_transform_hint                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_transform_hint                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_transform_hint                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_transform_hint                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7323,7 +7323,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_transform_hint                                      : not detected." );
+		logEndl( "GL_APPLE_transform_hint                           : not detected." );
 	}
 
 
@@ -7351,13 +7351,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_vertex_array_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_vertex_array_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_vertex_array_object                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_vertex_array_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_vertex_array_object                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7370,7 +7370,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_vertex_array_object                                      : not detected." );
+		logEndl( "GL_APPLE_vertex_array_object                      : not detected." );
 	}
 
 
@@ -7395,13 +7395,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_vertex_array_range )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_vertex_array_range                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_vertex_array_range                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_vertex_array_range                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_vertex_array_range                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7414,7 +7414,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_vertex_array_range                                      : not detected." );
+		logEndl( "GL_APPLE_vertex_array_range                       : not detected." );
 	}
 
 
@@ -7451,13 +7451,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_vertex_program_evaluators )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_vertex_program_evaluators                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_vertex_program_evaluators                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_vertex_program_evaluators                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_vertex_program_evaluators                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7470,7 +7470,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_vertex_program_evaluators                                      : not detected." );
+		logEndl( "GL_APPLE_vertex_program_evaluators                : not detected." );
 	}
 
 
@@ -7482,13 +7482,13 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	if ( isGL_APPLE_ycbcr_422 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_APPLE_ycbcr_422                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_APPLE_ycbcr_422                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_APPLE_ycbcr_422                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_APPLE_ycbcr_422                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7501,7 +7501,7 @@ void OpenGLExtensionsGen::initializeGL_APPLE()
 	}
 	else
 	{
-		logEndl( "GL_APPLE_ycbcr_422                                      : not detected." );
+		logEndl( "GL_APPLE_ycbcr_422                                : not detected." );
 	}
 
 
@@ -7531,13 +7531,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_blend_func_extended )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_blend_func_extended                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_blend_func_extended                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_blend_func_extended                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_blend_func_extended                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7550,7 +7550,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_blend_func_extended                                      : not detected." );
+		logEndl( "GL_ARB_blend_func_extended                        : not detected." );
 	}
 
 
@@ -7569,13 +7569,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_color_buffer_float )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_color_buffer_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_color_buffer_float                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_color_buffer_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_color_buffer_float                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7588,7 +7588,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_color_buffer_float                                      : not detected." );
+		logEndl( "GL_ARB_color_buffer_float                         : not detected." );
 	}
 
 
@@ -7600,13 +7600,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_compatibility )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_compatibility                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_compatibility                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_compatibility                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_compatibility                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7619,7 +7619,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_compatibility                                      : not detected." );
+		logEndl( "GL_ARB_compatibility                              : not detected." );
 	}
 
 
@@ -7638,13 +7638,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_copy_buffer )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_copy_buffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_copy_buffer                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_copy_buffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_copy_buffer                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7657,7 +7657,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_copy_buffer                                      : not detected." );
+		logEndl( "GL_ARB_copy_buffer                                : not detected." );
 	}
 
 
@@ -7669,13 +7669,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_depth_buffer_float )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_depth_buffer_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_depth_buffer_float                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_depth_buffer_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_depth_buffer_float                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7688,7 +7688,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_depth_buffer_float                                      : not detected." );
+		logEndl( "GL_ARB_depth_buffer_float                         : not detected." );
 	}
 
 
@@ -7700,13 +7700,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_depth_clamp )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_depth_clamp                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_depth_clamp                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_depth_clamp                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_depth_clamp                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7719,7 +7719,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_depth_clamp                                      : not detected." );
+		logEndl( "GL_ARB_depth_clamp                                : not detected." );
 	}
 
 
@@ -7731,13 +7731,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_depth_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_depth_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_depth_texture                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_depth_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_depth_texture                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7750,7 +7750,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_depth_texture                                      : not detected." );
+		logEndl( "GL_ARB_depth_texture                              : not detected." );
 	}
 
 
@@ -7769,13 +7769,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_draw_buffers )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_draw_buffers                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_draw_buffers                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_draw_buffers                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_draw_buffers                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7788,7 +7788,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_draw_buffers                                      : not detected." );
+		logEndl( "GL_ARB_draw_buffers                               : not detected." );
 	}
 
 
@@ -7816,13 +7816,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_draw_buffers_blend )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_draw_buffers_blend                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_draw_buffers_blend                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_draw_buffers_blend                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_draw_buffers_blend                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7835,7 +7835,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_draw_buffers_blend                                      : not detected." );
+		logEndl( "GL_ARB_draw_buffers_blend                         : not detected." );
 	}
 
 
@@ -7863,13 +7863,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_draw_elements_base_vertex )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_draw_elements_base_vertex                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_draw_elements_base_vertex                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_draw_elements_base_vertex                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_draw_elements_base_vertex                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7882,7 +7882,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_draw_elements_base_vertex                                      : not detected." );
+		logEndl( "GL_ARB_draw_elements_base_vertex                  : not detected." );
 	}
 
 
@@ -7904,13 +7904,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_draw_indirect )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_draw_indirect                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_draw_indirect                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_draw_indirect                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_draw_indirect                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7923,7 +7923,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_draw_indirect                                      : not detected." );
+		logEndl( "GL_ARB_draw_indirect                              : not detected." );
 	}
 
 
@@ -7945,13 +7945,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_draw_instanced )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_draw_instanced                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_draw_instanced                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_draw_instanced                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_draw_instanced                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7964,7 +7964,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_draw_instanced                                      : not detected." );
+		logEndl( "GL_ARB_draw_instanced                             : not detected." );
 	}
 
 
@@ -7976,13 +7976,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_explicit_attrib_location )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_explicit_attrib_location                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_explicit_attrib_location                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_explicit_attrib_location                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_explicit_attrib_location                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -7995,7 +7995,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_explicit_attrib_location                                      : not detected." );
+		logEndl( "GL_ARB_explicit_attrib_location                   : not detected." );
 	}
 
 
@@ -8007,13 +8007,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_fragment_coord_conventions )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_fragment_coord_conventions                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_fragment_coord_conventions                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_fragment_coord_conventions                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_fragment_coord_conventions                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8026,7 +8026,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_fragment_coord_conventions                                      : not detected." );
+		logEndl( "GL_ARB_fragment_coord_conventions                 : not detected." );
 	}
 
 
@@ -8038,13 +8038,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_fragment_program )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_fragment_program                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_fragment_program                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_fragment_program                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_fragment_program                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8057,7 +8057,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_fragment_program                                      : not detected." );
+		logEndl( "GL_ARB_fragment_program                           : not detected." );
 	}
 
 
@@ -8069,13 +8069,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_fragment_program_shadow )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_fragment_program_shadow                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_fragment_program_shadow                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_fragment_program_shadow                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_fragment_program_shadow                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8088,7 +8088,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_fragment_program_shadow                                      : not detected." );
+		logEndl( "GL_ARB_fragment_program_shadow                    : not detected." );
 	}
 
 
@@ -8100,13 +8100,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_fragment_shader )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_fragment_shader                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_fragment_shader                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_fragment_shader                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_fragment_shader                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8119,7 +8119,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_fragment_shader                                      : not detected." );
+		logEndl( "GL_ARB_fragment_shader                            : not detected." );
 	}
 
 
@@ -8195,13 +8195,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_framebuffer_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_framebuffer_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_framebuffer_object                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_framebuffer_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_framebuffer_object                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8214,7 +8214,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_framebuffer_object                                      : not detected." );
+		logEndl( "GL_ARB_framebuffer_object                         : not detected." );
 	}
 
 
@@ -8226,13 +8226,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_framebuffer_object_DEPRECATED )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_framebuffer_object_DEPRECATED                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_framebuffer_object_DEPRECATED              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_framebuffer_object_DEPRECATED                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_framebuffer_object_DEPRECATED              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8245,7 +8245,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_framebuffer_object_DEPRECATED                                      : not detected." );
+		logEndl( "GL_ARB_framebuffer_object_DEPRECATED              : not detected." );
 	}
 
 
@@ -8257,13 +8257,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_framebuffer_sRGB )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_framebuffer_sRGB                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_framebuffer_sRGB                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_framebuffer_sRGB                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_framebuffer_sRGB                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8276,7 +8276,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_framebuffer_sRGB                                      : not detected." );
+		logEndl( "GL_ARB_framebuffer_sRGB                           : not detected." );
 	}
 
 
@@ -8304,13 +8304,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_geometry_shader4 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_geometry_shader4                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_geometry_shader4                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_geometry_shader4                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_geometry_shader4                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8323,7 +8323,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_geometry_shader4                                      : not detected." );
+		logEndl( "GL_ARB_geometry_shader4                           : not detected." );
 	}
 
 
@@ -8335,13 +8335,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_gpu_shader5 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_gpu_shader5                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_gpu_shader5                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_gpu_shader5                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_gpu_shader5                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8354,7 +8354,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_gpu_shader5                                      : not detected." );
+		logEndl( "GL_ARB_gpu_shader5                                : not detected." );
 	}
 
 
@@ -8475,13 +8475,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_gpu_shader_fp64 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_gpu_shader_fp64                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_gpu_shader_fp64                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_gpu_shader_fp64                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_gpu_shader_fp64                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8494,7 +8494,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_gpu_shader_fp64                                      : not detected." );
+		logEndl( "GL_ARB_gpu_shader_fp64                            : not detected." );
 	}
 
 
@@ -8506,13 +8506,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_half_float_pixel )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_half_float_pixel                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_half_float_pixel                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_half_float_pixel                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_half_float_pixel                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8525,7 +8525,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_half_float_pixel                                      : not detected." );
+		logEndl( "GL_ARB_half_float_pixel                           : not detected." );
 	}
 
 
@@ -8537,13 +8537,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_half_float_vertex )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_half_float_vertex                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_half_float_vertex                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_half_float_vertex                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_half_float_vertex                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8556,7 +8556,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_half_float_vertex                                      : not detected." );
+		logEndl( "GL_ARB_half_float_vertex                          : not detected." );
 	}
 
 
@@ -8568,13 +8568,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_imaging )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_imaging                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_imaging                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_imaging                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_imaging                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8587,7 +8587,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_imaging                                      : not detected." );
+		logEndl( "GL_ARB_imaging                                    : not detected." );
 	}
 
 
@@ -8599,13 +8599,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_imaging_DEPRECATED )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_imaging_DEPRECATED                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_imaging_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_imaging_DEPRECATED                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_imaging_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8618,7 +8618,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_imaging_DEPRECATED                                      : not detected." );
+		logEndl( "GL_ARB_imaging_DEPRECATED                         : not detected." );
 	}
 
 
@@ -8637,13 +8637,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_instanced_arrays )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_instanced_arrays                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_instanced_arrays                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_instanced_arrays                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_instanced_arrays                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8656,7 +8656,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_instanced_arrays                                      : not detected." );
+		logEndl( "GL_ARB_instanced_arrays                           : not detected." );
 	}
 
 
@@ -8678,13 +8678,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_map_buffer_range )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_map_buffer_range                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_map_buffer_range                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_map_buffer_range                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_map_buffer_range                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8697,7 +8697,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_map_buffer_range                                      : not detected." );
+		logEndl( "GL_ARB_map_buffer_range                           : not detected." );
 	}
 
 
@@ -8728,13 +8728,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_matrix_palette )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_matrix_palette                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_matrix_palette                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_matrix_palette                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_matrix_palette                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8747,7 +8747,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_matrix_palette                                      : not detected." );
+		logEndl( "GL_ARB_matrix_palette                             : not detected." );
 	}
 
 
@@ -8766,13 +8766,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_multisample                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_multisample                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8785,7 +8785,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_multisample                                      : not detected." );
+		logEndl( "GL_ARB_multisample                                : not detected." );
 	}
 
 
@@ -8903,13 +8903,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_multitexture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_multitexture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_multitexture                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_multitexture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_multitexture                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8922,7 +8922,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_multitexture                                      : not detected." );
+		logEndl( "GL_ARB_multitexture                               : not detected." );
 	}
 
 
@@ -8962,13 +8962,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_occlusion_query )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_occlusion_query                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_occlusion_query                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_occlusion_query                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_occlusion_query                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -8981,7 +8981,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_occlusion_query                                      : not detected." );
+		logEndl( "GL_ARB_occlusion_query                            : not detected." );
 	}
 
 
@@ -8993,13 +8993,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_occlusion_query2 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_occlusion_query2                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_occlusion_query2                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_occlusion_query2                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_occlusion_query2                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9012,7 +9012,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_occlusion_query2                                      : not detected." );
+		logEndl( "GL_ARB_occlusion_query2                           : not detected." );
 	}
 
 
@@ -9024,13 +9024,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_pixel_buffer_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_pixel_buffer_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_pixel_buffer_object                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_pixel_buffer_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_pixel_buffer_object                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9043,7 +9043,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_pixel_buffer_object                                      : not detected." );
+		logEndl( "GL_ARB_pixel_buffer_object                        : not detected." );
 	}
 
 
@@ -9065,13 +9065,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_point_parameters )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_point_parameters                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_point_parameters                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_point_parameters                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_point_parameters                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9084,7 +9084,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_point_parameters                                      : not detected." );
+		logEndl( "GL_ARB_point_parameters                           : not detected." );
 	}
 
 
@@ -9096,13 +9096,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_point_sprite )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_point_sprite                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_point_sprite                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_point_sprite                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_point_sprite                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9115,7 +9115,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_point_sprite                                      : not detected." );
+		logEndl( "GL_ARB_point_sprite                               : not detected." );
 	}
 
 
@@ -9134,13 +9134,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_provoking_vertex )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_provoking_vertex                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_provoking_vertex                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_provoking_vertex                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_provoking_vertex                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9153,7 +9153,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_provoking_vertex                                      : not detected." );
+		logEndl( "GL_ARB_provoking_vertex                           : not detected." );
 	}
 
 
@@ -9172,13 +9172,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_sample_shading )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_sample_shading                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_sample_shading                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_sample_shading                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_sample_shading                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9191,7 +9191,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_sample_shading                                      : not detected." );
+		logEndl( "GL_ARB_sample_shading                             : not detected." );
 	}
 
 
@@ -9249,13 +9249,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_sampler_objects )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_sampler_objects                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_sampler_objects                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_sampler_objects                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_sampler_objects                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9268,7 +9268,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_sampler_objects                                      : not detected." );
+		logEndl( "GL_ARB_sampler_objects                            : not detected." );
 	}
 
 
@@ -9280,13 +9280,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_seamless_cube_map )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_seamless_cube_map                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_seamless_cube_map                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_seamless_cube_map                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_seamless_cube_map                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9299,7 +9299,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_seamless_cube_map                                      : not detected." );
+		logEndl( "GL_ARB_seamless_cube_map                          : not detected." );
 	}
 
 
@@ -9311,13 +9311,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_shader_bit_encoding )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_shader_bit_encoding                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_shader_bit_encoding                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_shader_bit_encoding                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_shader_bit_encoding                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9330,7 +9330,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_shader_bit_encoding                                      : not detected." );
+		logEndl( "GL_ARB_shader_bit_encoding                        : not detected." );
 	}
 
 
@@ -9463,13 +9463,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_shader_objects )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_shader_objects                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_shader_objects                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_shader_objects                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_shader_objects                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9482,7 +9482,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_shader_objects                                      : not detected." );
+		logEndl( "GL_ARB_shader_objects                             : not detected." );
 	}
 
 
@@ -9522,13 +9522,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_shader_subroutine )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_shader_subroutine                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_shader_subroutine                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_shader_subroutine                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_shader_subroutine                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9541,7 +9541,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_shader_subroutine                                      : not detected." );
+		logEndl( "GL_ARB_shader_subroutine                          : not detected." );
 	}
 
 
@@ -9553,13 +9553,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_shader_texture_lod )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_shader_texture_lod                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_shader_texture_lod                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_shader_texture_lod                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_shader_texture_lod                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9572,7 +9572,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_shader_texture_lod                                      : not detected." );
+		logEndl( "GL_ARB_shader_texture_lod                         : not detected." );
 	}
 
 
@@ -9584,13 +9584,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_shading_language_100 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_shading_language_100                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_shading_language_100                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_shading_language_100                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_shading_language_100                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9603,7 +9603,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_shading_language_100                                      : not detected." );
+		logEndl( "GL_ARB_shading_language_100                       : not detected." );
 	}
 
 
@@ -9637,13 +9637,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_shading_language_include )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_shading_language_include                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_shading_language_include                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_shading_language_include                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_shading_language_include                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9656,7 +9656,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_shading_language_include                                      : not detected." );
+		logEndl( "GL_ARB_shading_language_include                   : not detected." );
 	}
 
 
@@ -9668,13 +9668,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_shadow )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_shadow                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_shadow                                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_shadow                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_shadow                                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9687,7 +9687,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_shadow                                      : not detected." );
+		logEndl( "GL_ARB_shadow                                     : not detected." );
 	}
 
 
@@ -9699,13 +9699,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_shadow_ambient )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_shadow_ambient                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_shadow_ambient                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_shadow_ambient                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_shadow_ambient                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9718,7 +9718,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_shadow_ambient                                      : not detected." );
+		logEndl( "GL_ARB_shadow_ambient                             : not detected." );
 	}
 
 
@@ -9755,13 +9755,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_sync )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_sync                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_sync                                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_sync                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_sync                                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9774,7 +9774,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_sync                                      : not detected." );
+		logEndl( "GL_ARB_sync                                       : not detected." );
 	}
 
 
@@ -9796,13 +9796,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_tessellation_shader )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_tessellation_shader                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_tessellation_shader                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_tessellation_shader                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_tessellation_shader                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9815,7 +9815,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_tessellation_shader                                      : not detected." );
+		logEndl( "GL_ARB_tessellation_shader                        : not detected." );
 	}
 
 
@@ -9827,13 +9827,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_border_clamp )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_border_clamp                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_border_clamp                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_border_clamp                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_border_clamp                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9846,7 +9846,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_border_clamp                                      : not detected." );
+		logEndl( "GL_ARB_texture_border_clamp                       : not detected." );
 	}
 
 
@@ -9865,13 +9865,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_buffer_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_buffer_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_buffer_object                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_buffer_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_buffer_object                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9884,7 +9884,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_buffer_object                                      : not detected." );
+		logEndl( "GL_ARB_texture_buffer_object                      : not detected." );
 	}
 
 
@@ -9896,13 +9896,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_buffer_object_rgb32 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_buffer_object_rgb32                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_buffer_object_rgb32                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_buffer_object_rgb32                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_buffer_object_rgb32                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9915,7 +9915,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_buffer_object_rgb32                                      : not detected." );
+		logEndl( "GL_ARB_texture_buffer_object_rgb32                : not detected." );
 	}
 
 
@@ -9952,13 +9952,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_compression )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_compression                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_compression                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_compression                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_compression                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -9971,7 +9971,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_compression                                      : not detected." );
+		logEndl( "GL_ARB_texture_compression                        : not detected." );
 	}
 
 
@@ -9983,13 +9983,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_compression_bptc )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_compression_bptc                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_compression_bptc                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_compression_bptc                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_compression_bptc                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10002,7 +10002,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_compression_bptc                                      : not detected." );
+		logEndl( "GL_ARB_texture_compression_bptc                   : not detected." );
 	}
 
 
@@ -10014,13 +10014,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_compression_rgtc )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_compression_rgtc                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_compression_rgtc                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_compression_rgtc                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_compression_rgtc                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10033,7 +10033,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_compression_rgtc                                      : not detected." );
+		logEndl( "GL_ARB_texture_compression_rgtc                   : not detected." );
 	}
 
 
@@ -10045,13 +10045,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_cube_map )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_cube_map                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_cube_map                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_cube_map                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_cube_map                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10064,7 +10064,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_cube_map                                      : not detected." );
+		logEndl( "GL_ARB_texture_cube_map                           : not detected." );
 	}
 
 
@@ -10076,13 +10076,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_cube_map_array )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_cube_map_array                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_cube_map_array                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_cube_map_array                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_cube_map_array                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10095,7 +10095,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_cube_map_array                                      : not detected." );
+		logEndl( "GL_ARB_texture_cube_map_array                     : not detected." );
 	}
 
 
@@ -10107,13 +10107,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_env_add )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_env_add                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_env_add                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_env_add                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_env_add                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10126,7 +10126,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_env_add                                      : not detected." );
+		logEndl( "GL_ARB_texture_env_add                            : not detected." );
 	}
 
 
@@ -10138,13 +10138,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_env_combine )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_env_combine                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_env_combine                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_env_combine                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_env_combine                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10157,7 +10157,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_env_combine                                      : not detected." );
+		logEndl( "GL_ARB_texture_env_combine                        : not detected." );
 	}
 
 
@@ -10169,13 +10169,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_env_crossbar )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_env_crossbar                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_env_crossbar                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_env_crossbar                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_env_crossbar                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10188,7 +10188,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_env_crossbar                                      : not detected." );
+		logEndl( "GL_ARB_texture_env_crossbar                       : not detected." );
 	}
 
 
@@ -10200,13 +10200,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_env_dot3 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_env_dot3                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_env_dot3                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_env_dot3                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_env_dot3                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10219,7 +10219,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_env_dot3                                      : not detected." );
+		logEndl( "GL_ARB_texture_env_dot3                           : not detected." );
 	}
 
 
@@ -10231,13 +10231,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_float )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_float                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_float                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10250,7 +10250,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_float                                      : not detected." );
+		logEndl( "GL_ARB_texture_float                              : not detected." );
 	}
 
 
@@ -10262,13 +10262,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_gather )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_gather                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_gather                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_gather                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_gather                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10281,7 +10281,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_gather                                      : not detected." );
+		logEndl( "GL_ARB_texture_gather                             : not detected." );
 	}
 
 
@@ -10293,13 +10293,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_mirrored_repeat )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_mirrored_repeat                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_mirrored_repeat                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_mirrored_repeat                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_mirrored_repeat                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10312,7 +10312,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_mirrored_repeat                                      : not detected." );
+		logEndl( "GL_ARB_texture_mirrored_repeat                    : not detected." );
 	}
 
 
@@ -10340,13 +10340,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_multisample                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_multisample                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10359,7 +10359,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_multisample                                      : not detected." );
+		logEndl( "GL_ARB_texture_multisample                        : not detected." );
 	}
 
 
@@ -10371,13 +10371,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_non_power_of_two )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_non_power_of_two                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_non_power_of_two                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_non_power_of_two                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_non_power_of_two                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10390,7 +10390,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_non_power_of_two                                      : not detected." );
+		logEndl( "GL_ARB_texture_non_power_of_two                   : not detected." );
 	}
 
 
@@ -10402,13 +10402,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_query_lod )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_query_lod                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_query_lod                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_query_lod                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_query_lod                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10421,7 +10421,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_query_lod                                      : not detected." );
+		logEndl( "GL_ARB_texture_query_lod                          : not detected." );
 	}
 
 
@@ -10433,13 +10433,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_rectangle )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_rectangle                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_rectangle                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_rectangle                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_rectangle                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10452,7 +10452,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_rectangle                                      : not detected." );
+		logEndl( "GL_ARB_texture_rectangle                          : not detected." );
 	}
 
 
@@ -10464,13 +10464,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_rg )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_rg                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_rg                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_rg                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_rg                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10483,7 +10483,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_rg                                      : not detected." );
+		logEndl( "GL_ARB_texture_rg                                 : not detected." );
 	}
 
 
@@ -10495,13 +10495,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_rgb10_a2ui )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_rgb10_a2ui                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_rgb10_a2ui                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_rgb10_a2ui                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_rgb10_a2ui                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10514,7 +10514,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_rgb10_a2ui                                      : not detected." );
+		logEndl( "GL_ARB_texture_rgb10_a2ui                         : not detected." );
 	}
 
 
@@ -10526,13 +10526,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_texture_swizzle )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_texture_swizzle                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_texture_swizzle                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_texture_swizzle                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_texture_swizzle                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10545,7 +10545,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_texture_swizzle                                      : not detected." );
+		logEndl( "GL_ARB_texture_swizzle                            : not detected." );
 	}
 
 
@@ -10570,13 +10570,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_timer_query )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_timer_query                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_timer_query                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_timer_query                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_timer_query                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10589,7 +10589,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_timer_query                                      : not detected." );
+		logEndl( "GL_ARB_timer_query                                : not detected." );
 	}
 
 
@@ -10626,13 +10626,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_transform_feedback2 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_transform_feedback2                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_transform_feedback2                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_transform_feedback2                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_transform_feedback2                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10645,7 +10645,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_transform_feedback2                                      : not detected." );
+		logEndl( "GL_ARB_transform_feedback2                        : not detected." );
 	}
 
 
@@ -10673,13 +10673,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_transform_feedback3 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_transform_feedback3                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_transform_feedback3                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_transform_feedback3                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_transform_feedback3                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10692,7 +10692,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_transform_feedback3                                      : not detected." );
+		logEndl( "GL_ARB_transform_feedback3                        : not detected." );
 	}
 
 
@@ -10720,13 +10720,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_transpose_matrix )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_transpose_matrix                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_transpose_matrix                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_transpose_matrix                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_transpose_matrix                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10739,7 +10739,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_transpose_matrix                                      : not detected." );
+		logEndl( "GL_ARB_transpose_matrix                           : not detected." );
 	}
 
 
@@ -10776,13 +10776,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_uniform_buffer_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_uniform_buffer_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_uniform_buffer_object                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_uniform_buffer_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_uniform_buffer_object                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10795,7 +10795,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_uniform_buffer_object                                      : not detected." );
+		logEndl( "GL_ARB_uniform_buffer_object                      : not detected." );
 	}
 
 
@@ -10807,13 +10807,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_vertex_array_bgra )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_vertex_array_bgra                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_vertex_array_bgra                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_vertex_array_bgra                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_vertex_array_bgra                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10826,7 +10826,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_vertex_array_bgra                                      : not detected." );
+		logEndl( "GL_ARB_vertex_array_bgra                          : not detected." );
 	}
 
 
@@ -10854,13 +10854,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_vertex_array_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_vertex_array_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_vertex_array_object                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_vertex_array_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_vertex_array_object                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10873,7 +10873,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_vertex_array_object                                      : not detected." );
+		logEndl( "GL_ARB_vertex_array_object                        : not detected." );
 	}
 
 
@@ -10919,13 +10919,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_vertex_blend )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_vertex_blend                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_vertex_blend                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_vertex_blend                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_vertex_blend                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -10938,7 +10938,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_vertex_blend                                      : not detected." );
+		logEndl( "GL_ARB_vertex_blend                               : not detected." );
 	}
 
 
@@ -10987,13 +10987,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_vertex_buffer_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_vertex_buffer_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_vertex_buffer_object                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_vertex_buffer_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_vertex_buffer_object                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11006,7 +11006,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_vertex_buffer_object                                      : not detected." );
+		logEndl( "GL_ARB_vertex_buffer_object                       : not detected." );
 	}
 
 
@@ -11208,13 +11208,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_vertex_program )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_vertex_program                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_vertex_program                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_vertex_program                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_vertex_program                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11227,7 +11227,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_vertex_program                                      : not detected." );
+		logEndl( "GL_ARB_vertex_program                             : not detected." );
 	}
 
 
@@ -11252,13 +11252,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_vertex_shader )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_vertex_shader                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_vertex_shader                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_vertex_shader                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_vertex_shader                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11271,7 +11271,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_vertex_shader                                      : not detected." );
+		logEndl( "GL_ARB_vertex_shader                              : not detected." );
 	}
 
 
@@ -11401,13 +11401,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_vertex_type_2_10_10_10_rev )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_vertex_type_2_10_10_10_rev                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_vertex_type_2_10_10_10_rev                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_vertex_type_2_10_10_10_rev                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_vertex_type_2_10_10_10_rev                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11420,7 +11420,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_vertex_type_2_10_10_10_rev                                      : not detected." );
+		logEndl( "GL_ARB_vertex_type_2_10_10_10_rev                 : not detected." );
 	}
 
 
@@ -11484,13 +11484,13 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	if ( isGL_ARB_window_pos )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ARB_window_pos                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ARB_window_pos                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ARB_window_pos                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ARB_window_pos                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11503,7 +11503,7 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 	else
 	{
-		logEndl( "GL_ARB_window_pos                                      : not detected." );
+		logEndl( "GL_ARB_window_pos                                 : not detected." );
 	}
 
 
@@ -11530,13 +11530,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_draw_buffers )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_draw_buffers                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_draw_buffers                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_draw_buffers                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_draw_buffers                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11549,7 +11549,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_draw_buffers                                      : not detected." );
+		logEndl( "GL_ATI_draw_buffers                               : not detected." );
 	}
 
 
@@ -11574,13 +11574,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_element_array )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_element_array                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_element_array                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_element_array                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_element_array                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11593,7 +11593,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_element_array                                      : not detected." );
+		logEndl( "GL_ATI_element_array                              : not detected." );
 	}
 
 
@@ -11621,13 +11621,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_envmap_bumpmap )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_envmap_bumpmap                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_envmap_bumpmap                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_envmap_bumpmap                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_envmap_bumpmap                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11640,7 +11640,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_envmap_bumpmap                                      : not detected." );
+		logEndl( "GL_ATI_envmap_bumpmap                             : not detected." );
 	}
 
 
@@ -11698,13 +11698,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_fragment_shader )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_fragment_shader                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_fragment_shader                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_fragment_shader                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_fragment_shader                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11717,7 +11717,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_fragment_shader                                      : not detected." );
+		logEndl( "GL_ATI_fragment_shader                            : not detected." );
 	}
 
 
@@ -11739,13 +11739,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_map_object_buffer )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_map_object_buffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_map_object_buffer                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_map_object_buffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_map_object_buffer                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11758,7 +11758,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_map_object_buffer                                      : not detected." );
+		logEndl( "GL_ATI_map_object_buffer                          : not detected." );
 	}
 
 
@@ -11770,13 +11770,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_meminfo )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_meminfo                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_meminfo                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_meminfo                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_meminfo                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11789,7 +11789,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_meminfo                                      : not detected." );
+		logEndl( "GL_ATI_meminfo                                    : not detected." );
 	}
 
 
@@ -11801,13 +11801,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_pixel_format_float )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_pixel_format_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_pixel_format_float                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_pixel_format_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_pixel_format_float                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11820,7 +11820,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_pixel_format_float                                      : not detected." );
+		logEndl( "GL_ATI_pixel_format_float                         : not detected." );
 	}
 
 
@@ -11842,13 +11842,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_pn_triangles )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_pn_triangles                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_pn_triangles                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_pn_triangles                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_pn_triangles                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11861,7 +11861,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_pn_triangles                                      : not detected." );
+		logEndl( "GL_ATI_pn_triangles                               : not detected." );
 	}
 
 
@@ -11883,13 +11883,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_separate_stencil )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_separate_stencil                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_separate_stencil                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_separate_stencil                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_separate_stencil                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11902,7 +11902,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_separate_stencil                                      : not detected." );
+		logEndl( "GL_ATI_separate_stencil                           : not detected." );
 	}
 
 
@@ -11914,13 +11914,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_text_fragment_shader )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_text_fragment_shader                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_text_fragment_shader                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_text_fragment_shader                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_text_fragment_shader                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11933,7 +11933,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_text_fragment_shader                                      : not detected." );
+		logEndl( "GL_ATI_text_fragment_shader                       : not detected." );
 	}
 
 
@@ -11945,13 +11945,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_texture_env_combine3 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_texture_env_combine3                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_texture_env_combine3                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_texture_env_combine3                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_texture_env_combine3                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11964,7 +11964,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_texture_env_combine3                                      : not detected." );
+		logEndl( "GL_ATI_texture_env_combine3                       : not detected." );
 	}
 
 
@@ -11976,13 +11976,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_texture_float )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_texture_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_texture_float                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_texture_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_texture_float                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -11995,7 +11995,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_texture_float                                      : not detected." );
+		logEndl( "GL_ATI_texture_float                              : not detected." );
 	}
 
 
@@ -12007,13 +12007,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_texture_mirror_once )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_texture_mirror_once                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_texture_mirror_once                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_texture_mirror_once                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_texture_mirror_once                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12026,7 +12026,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_texture_mirror_once                                      : not detected." );
+		logEndl( "GL_ATI_texture_mirror_once                        : not detected." );
 	}
 
 
@@ -12078,13 +12078,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_vertex_array_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_vertex_array_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_vertex_array_object                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_vertex_array_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_vertex_array_object                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12097,7 +12097,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_vertex_array_object                                      : not detected." );
+		logEndl( "GL_ATI_vertex_array_object                        : not detected." );
 	}
 
 
@@ -12122,13 +12122,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_vertex_attrib_array_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_vertex_attrib_array_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_vertex_attrib_array_object                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_vertex_attrib_array_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_vertex_attrib_array_object                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12141,7 +12141,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_vertex_attrib_array_object                                      : not detected." );
+		logEndl( "GL_ATI_vertex_attrib_array_object                 : not detected." );
 	}
 
 
@@ -12292,13 +12292,13 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	if ( isGL_ATI_vertex_streams )
 	{
 		std::stringstream strStream;
-		strStream << "GL_ATI_vertex_streams                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_ATI_vertex_streams                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_ATI_vertex_streams                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_ATI_vertex_streams                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12311,7 +12311,7 @@ void OpenGLExtensionsGen::initializeGL_ATI()
 	}
 	else
 	{
-		logEndl( "GL_ATI_vertex_streams                                      : not detected." );
+		logEndl( "GL_ATI_vertex_streams                             : not detected." );
 	}
 
 
@@ -12331,13 +12331,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_422_pixels )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_422_pixels                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_422_pixels                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_422_pixels                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_422_pixels                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12350,7 +12350,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_422_pixels                                      : not detected." );
+		logEndl( "GL_EXT_422_pixels                                 : not detected." );
 	}
 
 
@@ -12362,13 +12362,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_abgr )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_abgr                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_abgr                                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_abgr                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_abgr                                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12381,7 +12381,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_abgr                                      : not detected." );
+		logEndl( "GL_EXT_abgr                                       : not detected." );
 	}
 
 
@@ -12393,13 +12393,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_bgra )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_bgra                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_bgra                                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_bgra                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_bgra                                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12412,7 +12412,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_bgra                                      : not detected." );
+		logEndl( "GL_EXT_bgra                                       : not detected." );
 	}
 
 
@@ -12437,13 +12437,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_bindable_uniform )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_bindable_uniform                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_bindable_uniform                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_bindable_uniform                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_bindable_uniform                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12456,7 +12456,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_bindable_uniform                                      : not detected." );
+		logEndl( "GL_EXT_bindable_uniform                           : not detected." );
 	}
 
 
@@ -12475,13 +12475,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_blend_color )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_blend_color                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_blend_color                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_blend_color                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_blend_color                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12494,7 +12494,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_blend_color                                      : not detected." );
+		logEndl( "GL_EXT_blend_color                                : not detected." );
 	}
 
 
@@ -12513,13 +12513,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_blend_equation_separate )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_blend_equation_separate                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_blend_equation_separate                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_blend_equation_separate                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_blend_equation_separate                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12532,7 +12532,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_blend_equation_separate                                      : not detected." );
+		logEndl( "GL_EXT_blend_equation_separate                    : not detected." );
 	}
 
 
@@ -12551,13 +12551,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_blend_func_separate )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_blend_func_separate                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_blend_func_separate                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_blend_func_separate                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_blend_func_separate                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12570,7 +12570,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_blend_func_separate                                      : not detected." );
+		logEndl( "GL_EXT_blend_func_separate                        : not detected." );
 	}
 
 
@@ -12582,13 +12582,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_blend_logic_op )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_blend_logic_op                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_blend_logic_op                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_blend_logic_op                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_blend_logic_op                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12601,7 +12601,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_blend_logic_op                                      : not detected." );
+		logEndl( "GL_EXT_blend_logic_op                             : not detected." );
 	}
 
 
@@ -12620,13 +12620,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_blend_minmax )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_blend_minmax                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_blend_minmax                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_blend_minmax                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_blend_minmax                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12639,7 +12639,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_blend_minmax                                      : not detected." );
+		logEndl( "GL_EXT_blend_minmax                               : not detected." );
 	}
 
 
@@ -12651,13 +12651,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_blend_subtract )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_blend_subtract                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_blend_subtract                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_blend_subtract                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_blend_subtract                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12670,7 +12670,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_blend_subtract                                      : not detected." );
+		logEndl( "GL_EXT_blend_subtract                             : not detected." );
 	}
 
 
@@ -12682,13 +12682,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_clip_volume_hint )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_clip_volume_hint                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_clip_volume_hint                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_clip_volume_hint                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_clip_volume_hint                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12701,7 +12701,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_clip_volume_hint                                      : not detected." );
+		logEndl( "GL_EXT_clip_volume_hint                           : not detected." );
 	}
 
 
@@ -12754,13 +12754,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_color_subtable )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_color_subtable                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_color_subtable                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_color_subtable                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_color_subtable                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12773,7 +12773,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_color_subtable                                      : not detected." );
+		logEndl( "GL_EXT_color_subtable                             : not detected." );
 	}
 
 
@@ -12795,13 +12795,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_compiled_vertex_array )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_compiled_vertex_array                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_compiled_vertex_array                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_compiled_vertex_array                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_compiled_vertex_array                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12814,7 +12814,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_compiled_vertex_array                                      : not detected." );
+		logEndl( "GL_EXT_compiled_vertex_array                      : not detected." );
 	}
 
 
@@ -12869,13 +12869,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_convolution )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_convolution                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_convolution                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_convolution                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_convolution                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12888,7 +12888,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_convolution                                      : not detected." );
+		logEndl( "GL_EXT_convolution                                : not detected." );
 	}
 
 
@@ -12970,13 +12970,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_coordinate_frame )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_coordinate_frame                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_coordinate_frame                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_coordinate_frame                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_coordinate_frame                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -12989,7 +12989,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_coordinate_frame                                      : not detected." );
+		logEndl( "GL_EXT_coordinate_frame                           : not detected." );
 	}
 
 
@@ -13020,13 +13020,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_copy_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_copy_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_copy_texture                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_copy_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_copy_texture                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -13039,7 +13039,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_copy_texture                                      : not detected." );
+		logEndl( "GL_EXT_copy_texture                               : not detected." );
 	}
 
 
@@ -13061,13 +13061,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_cull_vertex )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_cull_vertex                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_cull_vertex                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_cull_vertex                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_cull_vertex                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -13080,7 +13080,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_cull_vertex                                      : not detected." );
+		logEndl( "GL_EXT_cull_vertex                                : not detected." );
 	}
 
 
@@ -13099,13 +13099,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_depth_bounds_test )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_depth_bounds_test                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_depth_bounds_test                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_depth_bounds_test                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_depth_bounds_test                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -13118,7 +13118,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_depth_bounds_test                                      : not detected." );
+		logEndl( "GL_EXT_depth_bounds_test                          : not detected." );
 	}
 
 
@@ -13701,13 +13701,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_direct_state_access )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_direct_state_access                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_direct_state_access                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_direct_state_access                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_direct_state_access                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -13720,7 +13720,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_direct_state_access                                      : not detected." );
+		logEndl( "GL_EXT_direct_state_access                        : not detected." );
 	}
 
 
@@ -13754,13 +13754,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_draw_buffers2 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_draw_buffers2                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_draw_buffers2                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_draw_buffers2                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_draw_buffers2                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -13773,7 +13773,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_draw_buffers2                                      : not detected." );
+		logEndl( "GL_EXT_draw_buffers2                              : not detected." );
 	}
 
 
@@ -13795,13 +13795,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_draw_instanced )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_draw_instanced                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_draw_instanced                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_draw_instanced                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_draw_instanced                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -13814,7 +13814,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_draw_instanced                                      : not detected." );
+		logEndl( "GL_EXT_draw_instanced                             : not detected." );
 	}
 
 
@@ -13833,13 +13833,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_draw_range_elements )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_draw_range_elements                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_draw_range_elements                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_draw_range_elements                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_draw_range_elements                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -13852,7 +13852,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_draw_range_elements                                      : not detected." );
+		logEndl( "GL_EXT_draw_range_elements                        : not detected." );
 	}
 
 
@@ -13883,13 +13883,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_fog_coord )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_fog_coord                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_fog_coord                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_fog_coord                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_fog_coord                                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -13902,7 +13902,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_fog_coord                                      : not detected." );
+		logEndl( "GL_EXT_fog_coord                                  : not detected." );
 	}
 
 
@@ -13921,13 +13921,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_framebuffer_blit )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_framebuffer_blit                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_framebuffer_blit                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_framebuffer_blit                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_framebuffer_blit                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -13940,7 +13940,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_framebuffer_blit                                      : not detected." );
+		logEndl( "GL_EXT_framebuffer_blit                           : not detected." );
 	}
 
 
@@ -13959,13 +13959,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_framebuffer_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_framebuffer_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_framebuffer_multisample                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_framebuffer_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_framebuffer_multisample                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -13978,7 +13978,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_framebuffer_multisample                                      : not detected." );
+		logEndl( "GL_EXT_framebuffer_multisample                    : not detected." );
 	}
 
 
@@ -14045,13 +14045,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_framebuffer_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_framebuffer_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_framebuffer_object                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_framebuffer_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_framebuffer_object                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14064,7 +14064,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_framebuffer_object                                      : not detected." );
+		logEndl( "GL_EXT_framebuffer_object                         : not detected." );
 	}
 
 
@@ -14076,13 +14076,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_framebuffer_sRGB )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_framebuffer_sRGB                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_framebuffer_sRGB                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_framebuffer_sRGB                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_framebuffer_sRGB                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14095,7 +14095,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_framebuffer_sRGB                                      : not detected." );
+		logEndl( "GL_EXT_framebuffer_sRGB                           : not detected." );
 	}
 
 
@@ -14114,13 +14114,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_geometry_shader4 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_geometry_shader4                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_geometry_shader4                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_geometry_shader4                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_geometry_shader4                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14133,7 +14133,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_geometry_shader4                                      : not detected." );
+		logEndl( "GL_EXT_geometry_shader4                           : not detected." );
 	}
 
 
@@ -14155,13 +14155,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_gpu_program_parameters )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_gpu_program_parameters                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_gpu_program_parameters                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_gpu_program_parameters                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_gpu_program_parameters                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14174,7 +14174,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_gpu_program_parameters                                      : not detected." );
+		logEndl( "GL_EXT_gpu_program_parameters                     : not detected." );
 	}
 
 
@@ -14223,13 +14223,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_gpu_shader4 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_gpu_shader4                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_gpu_shader4                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_gpu_shader4                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_gpu_shader4                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14242,7 +14242,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_gpu_shader4                                      : not detected." );
+		logEndl( "GL_EXT_gpu_shader4                                : not detected." );
 	}
 
 
@@ -14288,13 +14288,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_histogram )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_histogram                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_histogram                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_histogram                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_histogram                                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14307,7 +14307,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_histogram                                      : not detected." );
+		logEndl( "GL_EXT_histogram                                  : not detected." );
 	}
 
 
@@ -14319,13 +14319,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_index_array_formats )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_index_array_formats                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_index_array_formats                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_index_array_formats                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_index_array_formats                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14338,7 +14338,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_index_array_formats                                      : not detected." );
+		logEndl( "GL_EXT_index_array_formats                        : not detected." );
 	}
 
 
@@ -14357,13 +14357,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_index_func )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_index_func                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_index_func                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_index_func                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_index_func                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14376,7 +14376,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_index_func                                      : not detected." );
+		logEndl( "GL_EXT_index_func                                 : not detected." );
 	}
 
 
@@ -14395,13 +14395,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_index_material )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_index_material                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_index_material                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_index_material                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_index_material                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14414,7 +14414,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_index_material                                      : not detected." );
+		logEndl( "GL_EXT_index_material                             : not detected." );
 	}
 
 
@@ -14426,13 +14426,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_index_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_index_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_index_texture                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_index_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_index_texture                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14445,7 +14445,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_index_texture                                      : not detected." );
+		logEndl( "GL_EXT_index_texture                              : not detected." );
 	}
 
 
@@ -14470,13 +14470,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_light_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_light_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_light_texture                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_light_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_light_texture                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14489,7 +14489,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_light_texture                                      : not detected." );
+		logEndl( "GL_EXT_light_texture                              : not detected." );
 	}
 
 
@@ -14501,13 +14501,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_misc_attribute )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_misc_attribute                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_misc_attribute                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_misc_attribute                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_misc_attribute                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14520,7 +14520,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_misc_attribute                                      : not detected." );
+		logEndl( "GL_EXT_misc_attribute                             : not detected." );
 	}
 
 
@@ -14542,13 +14542,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_multi_draw_arrays )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_multi_draw_arrays                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_multi_draw_arrays                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_multi_draw_arrays                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_multi_draw_arrays                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14561,7 +14561,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_multi_draw_arrays                                      : not detected." );
+		logEndl( "GL_EXT_multi_draw_arrays                          : not detected." );
 	}
 
 
@@ -14583,13 +14583,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_multisample                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_multisample                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14602,7 +14602,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_multisample                                      : not detected." );
+		logEndl( "GL_EXT_multisample                                : not detected." );
 	}
 
 
@@ -14614,13 +14614,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_packed_depth_stencil )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_packed_depth_stencil                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_packed_depth_stencil                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_packed_depth_stencil                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_packed_depth_stencil                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14633,7 +14633,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_packed_depth_stencil                                      : not detected." );
+		logEndl( "GL_EXT_packed_depth_stencil                       : not detected." );
 	}
 
 
@@ -14645,13 +14645,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_packed_float )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_packed_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_packed_float                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_packed_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_packed_float                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14664,7 +14664,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_packed_float                                      : not detected." );
+		logEndl( "GL_EXT_packed_float                               : not detected." );
 	}
 
 
@@ -14676,13 +14676,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_packed_pixels )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_packed_pixels                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_packed_pixels                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_packed_pixels                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_packed_pixels                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14695,7 +14695,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_packed_pixels                                      : not detected." );
+		logEndl( "GL_EXT_packed_pixels                              : not detected." );
 	}
 
 
@@ -14723,13 +14723,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_paletted_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_paletted_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_paletted_texture                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_paletted_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_paletted_texture                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14742,7 +14742,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_paletted_texture                                      : not detected." );
+		logEndl( "GL_EXT_paletted_texture                           : not detected." );
 	}
 
 
@@ -14754,13 +14754,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_pixel_buffer_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_pixel_buffer_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_pixel_buffer_object                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_pixel_buffer_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_pixel_buffer_object                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14773,7 +14773,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_pixel_buffer_object                                      : not detected." );
+		logEndl( "GL_EXT_pixel_buffer_object                        : not detected." );
 	}
 
 
@@ -14801,13 +14801,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_pixel_transform )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_pixel_transform                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_pixel_transform                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_pixel_transform                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_pixel_transform                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14820,7 +14820,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_pixel_transform                                      : not detected." );
+		logEndl( "GL_EXT_pixel_transform                            : not detected." );
 	}
 
 
@@ -14832,13 +14832,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_pixel_transform_color_table )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_pixel_transform_color_table                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_pixel_transform_color_table                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_pixel_transform_color_table                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_pixel_transform_color_table                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14851,7 +14851,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_pixel_transform_color_table                                      : not detected." );
+		logEndl( "GL_EXT_pixel_transform_color_table                : not detected." );
 	}
 
 
@@ -14873,13 +14873,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_point_parameters )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_point_parameters                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_point_parameters                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_point_parameters                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_point_parameters                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14892,7 +14892,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_point_parameters                                      : not detected." );
+		logEndl( "GL_EXT_point_parameters                           : not detected." );
 	}
 
 
@@ -14911,13 +14911,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_polygon_offset )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_polygon_offset                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_polygon_offset                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_polygon_offset                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_polygon_offset                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14930,7 +14930,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_polygon_offset                                      : not detected." );
+		logEndl( "GL_EXT_polygon_offset                             : not detected." );
 	}
 
 
@@ -14949,13 +14949,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_provoking_vertex )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_provoking_vertex                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_provoking_vertex                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_provoking_vertex                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_provoking_vertex                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14968,7 +14968,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_provoking_vertex                                      : not detected." );
+		logEndl( "GL_EXT_provoking_vertex                           : not detected." );
 	}
 
 
@@ -14980,13 +14980,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_rescale_normal )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_rescale_normal                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_rescale_normal                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_rescale_normal                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_rescale_normal                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -14999,7 +14999,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_rescale_normal                                      : not detected." );
+		logEndl( "GL_EXT_rescale_normal                             : not detected." );
 	}
 
 
@@ -15066,13 +15066,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_secondary_color )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_secondary_color                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_secondary_color                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_secondary_color                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_secondary_color                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15085,7 +15085,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_secondary_color                                      : not detected." );
+		logEndl( "GL_EXT_secondary_color                            : not detected." );
 	}
 
 
@@ -15110,13 +15110,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_separate_shader_objects )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_separate_shader_objects                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_separate_shader_objects                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_separate_shader_objects                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_separate_shader_objects                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15129,7 +15129,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_separate_shader_objects                                      : not detected." );
+		logEndl( "GL_EXT_separate_shader_objects                    : not detected." );
 	}
 
 
@@ -15141,13 +15141,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_separate_specular_color )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_separate_specular_color                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_separate_specular_color                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_separate_specular_color                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_separate_specular_color                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15160,7 +15160,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_separate_specular_color                                      : not detected." );
+		logEndl( "GL_EXT_separate_specular_color                    : not detected." );
 	}
 
 
@@ -15172,13 +15172,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_shader_image_load_store )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_shader_image_load_store                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_shader_image_load_store                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_shader_image_load_store                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_shader_image_load_store                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15191,7 +15191,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_shader_image_load_store                                      : not detected." );
+		logEndl( "GL_EXT_shader_image_load_store                    : not detected." );
 	}
 
 
@@ -15203,13 +15203,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_shadow_funcs )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_shadow_funcs                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_shadow_funcs                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_shadow_funcs                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_shadow_funcs                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15222,7 +15222,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_shadow_funcs                                      : not detected." );
+		logEndl( "GL_EXT_shadow_funcs                               : not detected." );
 	}
 
 
@@ -15234,13 +15234,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_shared_texture_palette )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_shared_texture_palette                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_shared_texture_palette                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_shared_texture_palette                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_shared_texture_palette                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15253,7 +15253,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_shared_texture_palette                                      : not detected." );
+		logEndl( "GL_EXT_shared_texture_palette                     : not detected." );
 	}
 
 
@@ -15272,13 +15272,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_stencil_clear_tag )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_stencil_clear_tag                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_stencil_clear_tag                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_stencil_clear_tag                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_stencil_clear_tag                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15291,7 +15291,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_stencil_clear_tag                                      : not detected." );
+		logEndl( "GL_EXT_stencil_clear_tag                          : not detected." );
 	}
 
 
@@ -15310,13 +15310,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_stencil_two_side )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_stencil_two_side                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_stencil_two_side                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_stencil_two_side                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_stencil_two_side                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15329,7 +15329,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_stencil_two_side                                      : not detected." );
+		logEndl( "GL_EXT_stencil_two_side                           : not detected." );
 	}
 
 
@@ -15341,13 +15341,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_stencil_wrap )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_stencil_wrap                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_stencil_wrap                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_stencil_wrap                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_stencil_wrap                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15360,7 +15360,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_stencil_wrap                                      : not detected." );
+		logEndl( "GL_EXT_stencil_wrap                               : not detected." );
 	}
 
 
@@ -15382,13 +15382,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_subtexture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_subtexture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_subtexture                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_subtexture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_subtexture                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15401,7 +15401,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_subtexture                                      : not detected." );
+		logEndl( "GL_EXT_subtexture                                 : not detected." );
 	}
 
 
@@ -15413,13 +15413,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15432,7 +15432,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture                                      : not detected." );
+		logEndl( "GL_EXT_texture                                    : not detected." );
 	}
 
 
@@ -15454,13 +15454,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture3D )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture3D                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture3D                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture3D                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture3D                                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15473,7 +15473,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture3D                                      : not detected." );
+		logEndl( "GL_EXT_texture3D                                  : not detected." );
 	}
 
 
@@ -15485,13 +15485,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_array )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_array                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_array                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_array                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_array                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15504,7 +15504,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_array                                      : not detected." );
+		logEndl( "GL_EXT_texture_array                              : not detected." );
 	}
 
 
@@ -15523,13 +15523,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_buffer_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_buffer_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_buffer_object                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_buffer_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_buffer_object                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15542,7 +15542,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_buffer_object                                      : not detected." );
+		logEndl( "GL_EXT_texture_buffer_object                      : not detected." );
 	}
 
 
@@ -15554,13 +15554,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_compression_latc )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_compression_latc                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_compression_latc                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_compression_latc                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_compression_latc                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15573,7 +15573,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_compression_latc                                      : not detected." );
+		logEndl( "GL_EXT_texture_compression_latc                   : not detected." );
 	}
 
 
@@ -15585,13 +15585,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_compression_rgtc )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_compression_rgtc                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_compression_rgtc                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_compression_rgtc                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_compression_rgtc                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15604,7 +15604,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_compression_rgtc                                      : not detected." );
+		logEndl( "GL_EXT_texture_compression_rgtc                   : not detected." );
 	}
 
 
@@ -15616,13 +15616,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_compression_s3tc )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_compression_s3tc                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_compression_s3tc                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_compression_s3tc                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_compression_s3tc                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15635,7 +15635,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_compression_s3tc                                      : not detected." );
+		logEndl( "GL_EXT_texture_compression_s3tc                   : not detected." );
 	}
 
 
@@ -15647,13 +15647,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_cube_map )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_cube_map                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_cube_map                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_cube_map                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_cube_map                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15666,7 +15666,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_cube_map                                      : not detected." );
+		logEndl( "GL_EXT_texture_cube_map                           : not detected." );
 	}
 
 
@@ -15678,13 +15678,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_env_add )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_env_add                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_env_add                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_env_add                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_env_add                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15697,7 +15697,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_env_add                                      : not detected." );
+		logEndl( "GL_EXT_texture_env_add                            : not detected." );
 	}
 
 
@@ -15709,13 +15709,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_env_combine )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_env_combine                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_env_combine                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_env_combine                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_env_combine                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15728,7 +15728,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_env_combine                                      : not detected." );
+		logEndl( "GL_EXT_texture_env_combine                        : not detected." );
 	}
 
 
@@ -15740,13 +15740,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_env_dot3 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_env_dot3                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_env_dot3                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_env_dot3                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_env_dot3                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15759,7 +15759,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_env_dot3                                      : not detected." );
+		logEndl( "GL_EXT_texture_env_dot3                           : not detected." );
 	}
 
 
@@ -15771,13 +15771,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_filter_anisotropic )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_filter_anisotropic                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_filter_anisotropic                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_filter_anisotropic                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_filter_anisotropic                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15790,7 +15790,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_filter_anisotropic                                      : not detected." );
+		logEndl( "GL_EXT_texture_filter_anisotropic                 : not detected." );
 	}
 
 
@@ -15824,13 +15824,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_integer )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_integer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_integer                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_integer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_integer                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15843,7 +15843,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_integer                                      : not detected." );
+		logEndl( "GL_EXT_texture_integer                            : not detected." );
 	}
 
 
@@ -15855,13 +15855,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_lod_bias )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_lod_bias                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_lod_bias                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_lod_bias                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_lod_bias                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15874,7 +15874,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_lod_bias                                      : not detected." );
+		logEndl( "GL_EXT_texture_lod_bias                           : not detected." );
 	}
 
 
@@ -15886,13 +15886,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_mirror_clamp )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_mirror_clamp                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_mirror_clamp                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_mirror_clamp                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_mirror_clamp                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15905,7 +15905,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_mirror_clamp                                      : not detected." );
+		logEndl( "GL_EXT_texture_mirror_clamp                       : not detected." );
 	}
 
 
@@ -15939,13 +15939,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_object                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_object                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15958,7 +15958,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_object                                      : not detected." );
+		logEndl( "GL_EXT_texture_object                             : not detected." );
 	}
 
 
@@ -15977,13 +15977,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_perturb_normal )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_perturb_normal                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_perturb_normal                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_perturb_normal                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_perturb_normal                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -15996,7 +15996,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_perturb_normal                                      : not detected." );
+		logEndl( "GL_EXT_texture_perturb_normal                     : not detected." );
 	}
 
 
@@ -16008,13 +16008,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_sRGB )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_sRGB                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_sRGB                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_sRGB                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_sRGB                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16027,7 +16027,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_sRGB                                      : not detected." );
+		logEndl( "GL_EXT_texture_sRGB                               : not detected." );
 	}
 
 
@@ -16039,13 +16039,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_shared_exponent )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_shared_exponent                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_shared_exponent                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_shared_exponent                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_shared_exponent                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16058,7 +16058,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_shared_exponent                                      : not detected." );
+		logEndl( "GL_EXT_texture_shared_exponent                    : not detected." );
 	}
 
 
@@ -16070,13 +16070,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_snorm )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_snorm                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_snorm                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_snorm                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_snorm                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16089,7 +16089,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_snorm                                      : not detected." );
+		logEndl( "GL_EXT_texture_snorm                              : not detected." );
 	}
 
 
@@ -16101,13 +16101,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_texture_swizzle )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_texture_swizzle                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_texture_swizzle                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_texture_swizzle                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_texture_swizzle                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16120,7 +16120,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_texture_swizzle                                      : not detected." );
+		logEndl( "GL_EXT_texture_swizzle                            : not detected." );
 	}
 
 
@@ -16142,13 +16142,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_timer_query )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_timer_query                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_timer_query                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_timer_query                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_timer_query                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16161,7 +16161,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_timer_query                                      : not detected." );
+		logEndl( "GL_EXT_timer_query                                : not detected." );
 	}
 
 
@@ -16198,13 +16198,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_transform_feedback )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_transform_feedback                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_transform_feedback                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_transform_feedback                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_transform_feedback                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16217,7 +16217,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_transform_feedback                                      : not detected." );
+		logEndl( "GL_EXT_transform_feedback                         : not detected." );
 	}
 
 
@@ -16260,13 +16260,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_vertex_array )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_vertex_array                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_vertex_array                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_vertex_array                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_vertex_array                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16279,7 +16279,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_vertex_array                                      : not detected." );
+		logEndl( "GL_EXT_vertex_array                               : not detected." );
 	}
 
 
@@ -16291,13 +16291,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_vertex_array_bgra )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_vertex_array_bgra                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_vertex_array_bgra                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_vertex_array_bgra                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_vertex_array_bgra                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16310,7 +16310,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_vertex_array_bgra                                      : not detected." );
+		logEndl( "GL_EXT_vertex_array_bgra                          : not detected." );
 	}
 
 
@@ -16322,13 +16322,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_vertex_attrib_64bit )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_vertex_attrib_64bit                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_vertex_attrib_64bit                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_vertex_attrib_64bit                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_vertex_attrib_64bit                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16341,7 +16341,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_vertex_attrib_64bit                                      : not detected." );
+		logEndl( "GL_EXT_vertex_attrib_64bit                        : not detected." );
 	}
 
 
@@ -16483,13 +16483,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_vertex_shader )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_vertex_shader                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_vertex_shader                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_vertex_shader                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_vertex_shader                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16502,7 +16502,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_vertex_shader                                      : not detected." );
+		logEndl( "GL_EXT_vertex_shader                              : not detected." );
 	}
 
 
@@ -16527,13 +16527,13 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	if ( isGL_EXT_vertex_weighting )
 	{
 		std::stringstream strStream;
-		strStream << "GL_EXT_vertex_weighting                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_EXT_vertex_weighting                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_EXT_vertex_weighting                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_EXT_vertex_weighting                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16546,7 +16546,7 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 	else
 	{
-		logEndl( "GL_EXT_vertex_weighting                                      : not detected." );
+		logEndl( "GL_EXT_vertex_weighting                           : not detected." );
 	}
 
 
@@ -16566,13 +16566,13 @@ void OpenGLExtensionsGen::initializeGL_FfdMaskSGIX()
 	if ( isGL_FfdMaskSGIX )
 	{
 		std::stringstream strStream;
-		strStream << "GL_FfdMaskSGIX                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_FfdMaskSGIX                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_FfdMaskSGIX                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_FfdMaskSGIX                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16585,7 +16585,7 @@ void OpenGLExtensionsGen::initializeGL_FfdMaskSGIX()
 	}
 	else
 	{
-		logEndl( "GL_FfdMaskSGIX                                      : not detected." );
+		logEndl( "GL_FfdMaskSGIX                                    : not detected." );
 	}
 
 
@@ -16612,13 +16612,13 @@ void OpenGLExtensionsGen::initializeGL_GREMEDY()
 	if ( isGL_GREMEDY_frame_terminator )
 	{
 		std::stringstream strStream;
-		strStream << "GL_GREMEDY_frame_terminator                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_GREMEDY_frame_terminator                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_GREMEDY_frame_terminator                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_GREMEDY_frame_terminator                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16631,7 +16631,7 @@ void OpenGLExtensionsGen::initializeGL_GREMEDY()
 	}
 	else
 	{
-		logEndl( "GL_GREMEDY_frame_terminator                                      : not detected." );
+		logEndl( "GL_GREMEDY_frame_terminator                       : not detected." );
 	}
 
 
@@ -16650,13 +16650,13 @@ void OpenGLExtensionsGen::initializeGL_GREMEDY()
 	if ( isGL_GREMEDY_string_marker )
 	{
 		std::stringstream strStream;
-		strStream << "GL_GREMEDY_string_marker                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_GREMEDY_string_marker                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_GREMEDY_string_marker                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_GREMEDY_string_marker                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16669,7 +16669,7 @@ void OpenGLExtensionsGen::initializeGL_GREMEDY()
 	}
 	else
 	{
-		logEndl( "GL_GREMEDY_string_marker                                      : not detected." );
+		logEndl( "GL_GREMEDY_string_marker                          : not detected." );
 	}
 
 
@@ -16689,13 +16689,13 @@ void OpenGLExtensionsGen::initializeGL_HP()
 	if ( isGL_HP_convolution_border_modes )
 	{
 		std::stringstream strStream;
-		strStream << "GL_HP_convolution_border_modes                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_HP_convolution_border_modes                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_HP_convolution_border_modes                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_HP_convolution_border_modes                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16708,7 +16708,7 @@ void OpenGLExtensionsGen::initializeGL_HP()
 	}
 	else
 	{
-		logEndl( "GL_HP_convolution_border_modes                                      : not detected." );
+		logEndl( "GL_HP_convolution_border_modes                    : not detected." );
 	}
 
 
@@ -16742,13 +16742,13 @@ void OpenGLExtensionsGen::initializeGL_HP()
 	if ( isGL_HP_image_transform )
 	{
 		std::stringstream strStream;
-		strStream << "GL_HP_image_transform                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_HP_image_transform                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_HP_image_transform                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_HP_image_transform                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16761,7 +16761,7 @@ void OpenGLExtensionsGen::initializeGL_HP()
 	}
 	else
 	{
-		logEndl( "GL_HP_image_transform                                      : not detected." );
+		logEndl( "GL_HP_image_transform                             : not detected." );
 	}
 
 
@@ -16773,13 +16773,13 @@ void OpenGLExtensionsGen::initializeGL_HP()
 	if ( isGL_HP_occlusion_test )
 	{
 		std::stringstream strStream;
-		strStream << "GL_HP_occlusion_test                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_HP_occlusion_test                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_HP_occlusion_test                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_HP_occlusion_test                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16792,7 +16792,7 @@ void OpenGLExtensionsGen::initializeGL_HP()
 	}
 	else
 	{
-		logEndl( "GL_HP_occlusion_test                                      : not detected." );
+		logEndl( "GL_HP_occlusion_test                              : not detected." );
 	}
 
 
@@ -16804,13 +16804,13 @@ void OpenGLExtensionsGen::initializeGL_HP()
 	if ( isGL_HP_texture_lighting )
 	{
 		std::stringstream strStream;
-		strStream << "GL_HP_texture_lighting                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_HP_texture_lighting                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_HP_texture_lighting                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_HP_texture_lighting                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16823,7 +16823,7 @@ void OpenGLExtensionsGen::initializeGL_HP()
 	}
 	else
 	{
-		logEndl( "GL_HP_texture_lighting                                      : not detected." );
+		logEndl( "GL_HP_texture_lighting                            : not detected." );
 	}
 
 
@@ -16843,13 +16843,13 @@ void OpenGLExtensionsGen::initializeGL_IBM()
 	if ( isGL_IBM_cull_vertex )
 	{
 		std::stringstream strStream;
-		strStream << "GL_IBM_cull_vertex                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_IBM_cull_vertex                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_IBM_cull_vertex                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_IBM_cull_vertex                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16862,7 +16862,7 @@ void OpenGLExtensionsGen::initializeGL_IBM()
 	}
 	else
 	{
-		logEndl( "GL_IBM_cull_vertex                                      : not detected." );
+		logEndl( "GL_IBM_cull_vertex                                : not detected." );
 	}
 
 
@@ -16884,13 +16884,13 @@ void OpenGLExtensionsGen::initializeGL_IBM()
 	if ( isGL_IBM_multimode_draw_arrays )
 	{
 		std::stringstream strStream;
-		strStream << "GL_IBM_multimode_draw_arrays                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_IBM_multimode_draw_arrays                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_IBM_multimode_draw_arrays                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_IBM_multimode_draw_arrays                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16903,7 +16903,7 @@ void OpenGLExtensionsGen::initializeGL_IBM()
 	}
 	else
 	{
-		logEndl( "GL_IBM_multimode_draw_arrays                                      : not detected." );
+		logEndl( "GL_IBM_multimode_draw_arrays                      : not detected." );
 	}
 
 
@@ -16915,13 +16915,13 @@ void OpenGLExtensionsGen::initializeGL_IBM()
 	if ( isGL_IBM_rasterpos_clip )
 	{
 		std::stringstream strStream;
-		strStream << "GL_IBM_rasterpos_clip                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_IBM_rasterpos_clip                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_IBM_rasterpos_clip                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_IBM_rasterpos_clip                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16934,7 +16934,7 @@ void OpenGLExtensionsGen::initializeGL_IBM()
 	}
 	else
 	{
-		logEndl( "GL_IBM_rasterpos_clip                                      : not detected." );
+		logEndl( "GL_IBM_rasterpos_clip                             : not detected." );
 	}
 
 
@@ -16946,13 +16946,13 @@ void OpenGLExtensionsGen::initializeGL_IBM()
 	if ( isGL_IBM_texture_mirrored_repeat )
 	{
 		std::stringstream strStream;
-		strStream << "GL_IBM_texture_mirrored_repeat                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_IBM_texture_mirrored_repeat                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_IBM_texture_mirrored_repeat                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_IBM_texture_mirrored_repeat                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -16965,7 +16965,7 @@ void OpenGLExtensionsGen::initializeGL_IBM()
 	}
 	else
 	{
-		logEndl( "GL_IBM_texture_mirrored_repeat                                      : not detected." );
+		logEndl( "GL_IBM_texture_mirrored_repeat                    : not detected." );
 	}
 
 
@@ -17005,13 +17005,13 @@ void OpenGLExtensionsGen::initializeGL_IBM()
 	if ( isGL_IBM_vertex_array_lists )
 	{
 		std::stringstream strStream;
-		strStream << "GL_IBM_vertex_array_lists                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_IBM_vertex_array_lists                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_IBM_vertex_array_lists                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_IBM_vertex_array_lists                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17024,7 +17024,7 @@ void OpenGLExtensionsGen::initializeGL_IBM()
 	}
 	else
 	{
-		logEndl( "GL_IBM_vertex_array_lists                                      : not detected." );
+		logEndl( "GL_IBM_vertex_array_lists                         : not detected." );
 	}
 
 
@@ -17051,13 +17051,13 @@ void OpenGLExtensionsGen::initializeGL_INGR()
 	if ( isGL_INGR_blend_func_separate )
 	{
 		std::stringstream strStream;
-		strStream << "GL_INGR_blend_func_separate                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_INGR_blend_func_separate                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_INGR_blend_func_separate                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_INGR_blend_func_separate                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17070,7 +17070,7 @@ void OpenGLExtensionsGen::initializeGL_INGR()
 	}
 	else
 	{
-		logEndl( "GL_INGR_blend_func_separate                                      : not detected." );
+		logEndl( "GL_INGR_blend_func_separate                       : not detected." );
 	}
 
 
@@ -17082,13 +17082,13 @@ void OpenGLExtensionsGen::initializeGL_INGR()
 	if ( isGL_INGR_color_clamp )
 	{
 		std::stringstream strStream;
-		strStream << "GL_INGR_color_clamp                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_INGR_color_clamp                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_INGR_color_clamp                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_INGR_color_clamp                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17101,7 +17101,7 @@ void OpenGLExtensionsGen::initializeGL_INGR()
 	}
 	else
 	{
-		logEndl( "GL_INGR_color_clamp                                      : not detected." );
+		logEndl( "GL_INGR_color_clamp                               : not detected." );
 	}
 
 
@@ -17113,13 +17113,13 @@ void OpenGLExtensionsGen::initializeGL_INGR()
 	if ( isGL_INGR_interlace_read )
 	{
 		std::stringstream strStream;
-		strStream << "GL_INGR_interlace_read                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_INGR_interlace_read                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_INGR_interlace_read                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_INGR_interlace_read                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17132,7 +17132,7 @@ void OpenGLExtensionsGen::initializeGL_INGR()
 	}
 	else
 	{
-		logEndl( "GL_INGR_interlace_read                                      : not detected." );
+		logEndl( "GL_INGR_interlace_read                            : not detected." );
 	}
 
 
@@ -17144,13 +17144,13 @@ void OpenGLExtensionsGen::initializeGL_INGR()
 	if ( isGL_INGR_palette_buffer )
 	{
 		std::stringstream strStream;
-		strStream << "GL_INGR_palette_buffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_INGR_palette_buffer                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_INGR_palette_buffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_INGR_palette_buffer                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17163,7 +17163,7 @@ void OpenGLExtensionsGen::initializeGL_INGR()
 	}
 	else
 	{
-		logEndl( "GL_INGR_palette_buffer                                      : not detected." );
+		logEndl( "GL_INGR_palette_buffer                            : not detected." );
 	}
 
 
@@ -17199,13 +17199,13 @@ void OpenGLExtensionsGen::initializeGL_INTEL()
 	if ( isGL_INTEL_parallel_arrays )
 	{
 		std::stringstream strStream;
-		strStream << "GL_INTEL_parallel_arrays                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_INTEL_parallel_arrays                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_INTEL_parallel_arrays                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_INTEL_parallel_arrays                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17218,7 +17218,7 @@ void OpenGLExtensionsGen::initializeGL_INTEL()
 	}
 	else
 	{
-		logEndl( "GL_INTEL_parallel_arrays                                      : not detected." );
+		logEndl( "GL_INTEL_parallel_arrays                          : not detected." );
 	}
 
 
@@ -17230,13 +17230,13 @@ void OpenGLExtensionsGen::initializeGL_INTEL()
 	if ( isGL_INTEL_texture_scissor )
 	{
 		std::stringstream strStream;
-		strStream << "GL_INTEL_texture_scissor                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_INTEL_texture_scissor                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_INTEL_texture_scissor                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_INTEL_texture_scissor                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17249,7 +17249,7 @@ void OpenGLExtensionsGen::initializeGL_INTEL()
 	}
 	else
 	{
-		logEndl( "GL_INTEL_texture_scissor                                      : not detected." );
+		logEndl( "GL_INTEL_texture_scissor                          : not detected." );
 	}
 
 
@@ -17269,13 +17269,13 @@ void OpenGLExtensionsGen::initializeGL_MESA()
 	if ( isGL_MESA_pack_invert )
 	{
 		std::stringstream strStream;
-		strStream << "GL_MESA_pack_invert                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_MESA_pack_invert                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_MESA_pack_invert                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_MESA_pack_invert                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17288,7 +17288,7 @@ void OpenGLExtensionsGen::initializeGL_MESA()
 	}
 	else
 	{
-		logEndl( "GL_MESA_pack_invert                                      : not detected." );
+		logEndl( "GL_MESA_pack_invert                               : not detected." );
 	}
 
 
@@ -17307,13 +17307,13 @@ void OpenGLExtensionsGen::initializeGL_MESA()
 	if ( isGL_MESA_resize_buffers )
 	{
 		std::stringstream strStream;
-		strStream << "GL_MESA_resize_buffers                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_MESA_resize_buffers                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_MESA_resize_buffers                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_MESA_resize_buffers                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17326,7 +17326,7 @@ void OpenGLExtensionsGen::initializeGL_MESA()
 	}
 	else
 	{
-		logEndl( "GL_MESA_resize_buffers                                      : not detected." );
+		logEndl( "GL_MESA_resize_buffers                            : not detected." );
 	}
 
 
@@ -17414,13 +17414,13 @@ void OpenGLExtensionsGen::initializeGL_MESA()
 	if ( isGL_MESA_window_pos )
 	{
 		std::stringstream strStream;
-		strStream << "GL_MESA_window_pos                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_MESA_window_pos                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_MESA_window_pos                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_MESA_window_pos                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17433,7 +17433,7 @@ void OpenGLExtensionsGen::initializeGL_MESA()
 	}
 	else
 	{
-		logEndl( "GL_MESA_window_pos                                      : not detected." );
+		logEndl( "GL_MESA_window_pos                                : not detected." );
 	}
 
 
@@ -17445,13 +17445,13 @@ void OpenGLExtensionsGen::initializeGL_MESA()
 	if ( isGL_MESA_ycbcr_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_MESA_ycbcr_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_MESA_ycbcr_texture                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_MESA_ycbcr_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_MESA_ycbcr_texture                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17464,7 +17464,7 @@ void OpenGLExtensionsGen::initializeGL_MESA()
 	}
 	else
 	{
-		logEndl( "GL_MESA_ycbcr_texture                                      : not detected." );
+		logEndl( "GL_MESA_ycbcr_texture                             : not detected." );
 	}
 
 
@@ -17484,13 +17484,13 @@ void OpenGLExtensionsGen::initializeGL_MESAX()
 	if ( isGL_MESAX_texture_stack )
 	{
 		std::stringstream strStream;
-		strStream << "GL_MESAX_texture_stack                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_MESAX_texture_stack                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_MESAX_texture_stack                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_MESAX_texture_stack                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17503,7 +17503,7 @@ void OpenGLExtensionsGen::initializeGL_MESAX()
 	}
 	else
 	{
-		logEndl( "GL_MESAX_texture_stack                                      : not detected." );
+		logEndl( "GL_MESAX_texture_stack                            : not detected." );
 	}
 
 
@@ -17523,13 +17523,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_blend_square )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_blend_square                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_blend_square                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_blend_square                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_blend_square                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17542,7 +17542,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_blend_square                                      : not detected." );
+		logEndl( "GL_NV_blend_square                                : not detected." );
 	}
 
 
@@ -17564,13 +17564,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_conditional_render )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_conditional_render                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_conditional_render                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_conditional_render                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_conditional_render                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17583,7 +17583,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_conditional_render                                      : not detected." );
+		logEndl( "GL_NV_conditional_render                          : not detected." );
 	}
 
 
@@ -17595,13 +17595,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_copy_depth_to_color )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_copy_depth_to_color                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_copy_depth_to_color                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_copy_depth_to_color                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_copy_depth_to_color                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17614,7 +17614,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_copy_depth_to_color                                      : not detected." );
+		logEndl( "GL_NV_copy_depth_to_color                         : not detected." );
 	}
 
 
@@ -17633,13 +17633,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_copy_image )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_copy_image                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_copy_image                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_copy_image                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_copy_image                                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17652,7 +17652,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_copy_image                                      : not detected." );
+		logEndl( "GL_NV_copy_image                                  : not detected." );
 	}
 
 
@@ -17677,13 +17677,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_depth_buffer_float )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_depth_buffer_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_depth_buffer_float                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_depth_buffer_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_depth_buffer_float                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17696,7 +17696,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_depth_buffer_float                                      : not detected." );
+		logEndl( "GL_NV_depth_buffer_float                          : not detected." );
 	}
 
 
@@ -17708,13 +17708,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_depth_clamp )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_depth_clamp                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_depth_clamp                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_depth_clamp                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_depth_clamp                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17727,7 +17727,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_depth_clamp                                      : not detected." );
+		logEndl( "GL_NV_depth_clamp                                 : not detected." );
 	}
 
 
@@ -17770,13 +17770,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_evaluators )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_evaluators                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_evaluators                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_evaluators                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_evaluators                                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17789,7 +17789,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_evaluators                                      : not detected." );
+		logEndl( "GL_NV_evaluators                                  : not detected." );
 	}
 
 
@@ -17814,13 +17814,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_explicit_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_explicit_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_explicit_multisample                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_explicit_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_explicit_multisample                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17833,7 +17833,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_explicit_multisample                                      : not detected." );
+		logEndl( "GL_NV_explicit_multisample                        : not detected." );
 	}
 
 
@@ -17870,13 +17870,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_fence )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_fence                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_fence                                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_fence                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_fence                                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17889,7 +17889,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_fence                                      : not detected." );
+		logEndl( "GL_NV_fence                                       : not detected." );
 	}
 
 
@@ -17901,13 +17901,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_float_buffer )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_float_buffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_float_buffer                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_float_buffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_float_buffer                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17920,7 +17920,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_float_buffer                                      : not detected." );
+		logEndl( "GL_NV_float_buffer                                : not detected." );
 	}
 
 
@@ -17932,13 +17932,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_fog_distance )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_fog_distance                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_fog_distance                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_fog_distance                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_fog_distance                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -17951,7 +17951,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_fog_distance                                      : not detected." );
+		logEndl( "GL_NV_fog_distance                                : not detected." );
 	}
 
 
@@ -17985,13 +17985,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_fragment_program )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_fragment_program                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_fragment_program                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_fragment_program                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_fragment_program                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18004,7 +18004,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_fragment_program                                      : not detected." );
+		logEndl( "GL_NV_fragment_program                            : not detected." );
 	}
 
 
@@ -18016,13 +18016,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_fragment_program2 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_fragment_program2                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_fragment_program2                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_fragment_program2                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_fragment_program2                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18035,7 +18035,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_fragment_program2                                      : not detected." );
+		logEndl( "GL_NV_fragment_program2                           : not detected." );
 	}
 
 
@@ -18047,13 +18047,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_fragment_program4 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_fragment_program4                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_fragment_program4                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_fragment_program4                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_fragment_program4                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18066,7 +18066,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_fragment_program4                                      : not detected." );
+		logEndl( "GL_NV_fragment_program4                           : not detected." );
 	}
 
 
@@ -18078,13 +18078,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_fragment_program_option )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_fragment_program_option                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_fragment_program_option                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_fragment_program_option                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_fragment_program_option                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18097,7 +18097,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_fragment_program_option                                      : not detected." );
+		logEndl( "GL_NV_fragment_program_option                     : not detected." );
 	}
 
 
@@ -18116,13 +18116,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_framebuffer_multisample_coverage )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_framebuffer_multisample_coverage                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_framebuffer_multisample_coverage            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_framebuffer_multisample_coverage                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_framebuffer_multisample_coverage            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18135,7 +18135,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_framebuffer_multisample_coverage                                      : not detected." );
+		logEndl( "GL_NV_framebuffer_multisample_coverage            : not detected." );
 	}
 
 
@@ -18163,13 +18163,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_geometry_program4 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_geometry_program4                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_geometry_program4                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_geometry_program4                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_geometry_program4                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18182,7 +18182,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_geometry_program4                                      : not detected." );
+		logEndl( "GL_NV_geometry_program4                           : not detected." );
 	}
 
 
@@ -18194,13 +18194,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_geometry_shader4 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_geometry_shader4                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_geometry_shader4                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_geometry_shader4                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_geometry_shader4                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18213,7 +18213,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_geometry_shader4                                      : not detected." );
+		logEndl( "GL_NV_geometry_shader4                            : not detected." );
 	}
 
 
@@ -18277,13 +18277,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_gpu_program4 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_gpu_program4                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_gpu_program4                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_gpu_program4                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_gpu_program4                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18296,7 +18296,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_gpu_program4                                      : not detected." );
+		logEndl( "GL_NV_gpu_program4                                : not detected." );
 	}
 
 
@@ -18308,13 +18308,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_gpu_program5 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_gpu_program5                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_gpu_program5                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_gpu_program5                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_gpu_program5                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18327,7 +18327,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_gpu_program5                                      : not detected." );
+		logEndl( "GL_NV_gpu_program5                                : not detected." );
 	}
 
 
@@ -18339,13 +18339,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_gpu_shader5 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_gpu_shader5                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_gpu_shader5                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_gpu_shader5                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_gpu_shader5                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18358,7 +18358,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_gpu_shader5                                      : not detected." );
+		logEndl( "GL_NV_gpu_shader5                                 : not detected." );
 	}
 
 
@@ -18512,13 +18512,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_half_float )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_half_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_half_float                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_half_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_half_float                                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18531,7 +18531,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_half_float                                      : not detected." );
+		logEndl( "GL_NV_half_float                                  : not detected." );
 	}
 
 
@@ -18543,13 +18543,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_light_max_exponent )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_light_max_exponent                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_light_max_exponent                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_light_max_exponent                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_light_max_exponent                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18562,7 +18562,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_light_max_exponent                                      : not detected." );
+		logEndl( "GL_NV_light_max_exponent                          : not detected." );
 	}
 
 
@@ -18574,13 +18574,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_multisample_coverage )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_multisample_coverage                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_multisample_coverage                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_multisample_coverage                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_multisample_coverage                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18593,7 +18593,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_multisample_coverage                                      : not detected." );
+		logEndl( "GL_NV_multisample_coverage                        : not detected." );
 	}
 
 
@@ -18605,13 +18605,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_multisample_filter_hint )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_multisample_filter_hint                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_multisample_filter_hint                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_multisample_filter_hint                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_multisample_filter_hint                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18624,7 +18624,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_multisample_filter_hint                                      : not detected." );
+		logEndl( "GL_NV_multisample_filter_hint                     : not detected." );
 	}
 
 
@@ -18661,13 +18661,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_occlusion_query )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_occlusion_query                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_occlusion_query                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_occlusion_query                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_occlusion_query                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18680,7 +18680,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_occlusion_query                                      : not detected." );
+		logEndl( "GL_NV_occlusion_query                             : not detected." );
 	}
 
 
@@ -18692,13 +18692,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_packed_depth_stencil )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_packed_depth_stencil                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_packed_depth_stencil                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_packed_depth_stencil                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_packed_depth_stencil                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18711,7 +18711,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_packed_depth_stencil                                      : not detected." );
+		logEndl( "GL_NV_packed_depth_stencil                        : not detected." );
 	}
 
 
@@ -18736,13 +18736,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_parameter_buffer_object )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_parameter_buffer_object                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_parameter_buffer_object                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_parameter_buffer_object                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_parameter_buffer_object                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18755,7 +18755,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_parameter_buffer_object                                      : not detected." );
+		logEndl( "GL_NV_parameter_buffer_object                     : not detected." );
 	}
 
 
@@ -18767,13 +18767,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_parameter_buffer_object2 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_parameter_buffer_object2                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_parameter_buffer_object2                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_parameter_buffer_object2                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_parameter_buffer_object2                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18786,7 +18786,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_parameter_buffer_object2                                      : not detected." );
+		logEndl( "GL_NV_parameter_buffer_object2                    : not detected." );
 	}
 
 
@@ -18808,13 +18808,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_pixel_data_range )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_pixel_data_range                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_pixel_data_range                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_pixel_data_range                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_pixel_data_range                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18827,7 +18827,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_pixel_data_range                                      : not detected." );
+		logEndl( "GL_NV_pixel_data_range                            : not detected." );
 	}
 
 
@@ -18849,13 +18849,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_point_sprite )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_point_sprite                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_point_sprite                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_point_sprite                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_point_sprite                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18868,7 +18868,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_point_sprite                                      : not detected." );
+		logEndl( "GL_NV_point_sprite                                : not detected." );
 	}
 
 
@@ -18902,13 +18902,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_present_video )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_present_video                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_present_video                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_present_video                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_present_video                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18921,7 +18921,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_present_video                                      : not detected." );
+		logEndl( "GL_NV_present_video                               : not detected." );
 	}
 
 
@@ -18943,13 +18943,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_primitive_restart )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_primitive_restart                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_primitive_restart                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_primitive_restart                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_primitive_restart                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -18962,7 +18962,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_primitive_restart                                      : not detected." );
+		logEndl( "GL_NV_primitive_restart                           : not detected." );
 	}
 
 
@@ -19017,13 +19017,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_register_combiners )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_register_combiners                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_register_combiners                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_register_combiners                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_register_combiners                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19036,7 +19036,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_register_combiners                                      : not detected." );
+		logEndl( "GL_NV_register_combiners                          : not detected." );
 	}
 
 
@@ -19058,13 +19058,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_register_combiners2 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_register_combiners2                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_register_combiners2                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_register_combiners2                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_register_combiners2                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19077,7 +19077,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_register_combiners2                                      : not detected." );
+		logEndl( "GL_NV_register_combiners2                         : not detected." );
 	}
 
 
@@ -19135,13 +19135,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_shader_buffer_load )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_shader_buffer_load                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_shader_buffer_load                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_shader_buffer_load                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_shader_buffer_load                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19154,7 +19154,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_shader_buffer_load                                      : not detected." );
+		logEndl( "GL_NV_shader_buffer_load                          : not detected." );
 	}
 
 
@@ -19166,13 +19166,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_shader_buffer_store )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_shader_buffer_store                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_shader_buffer_store                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_shader_buffer_store                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_shader_buffer_store                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19185,7 +19185,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_shader_buffer_store                                      : not detected." );
+		logEndl( "GL_NV_shader_buffer_store                         : not detected." );
 	}
 
 
@@ -19197,13 +19197,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_tessellation_program5 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_tessellation_program5                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_tessellation_program5                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_tessellation_program5                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_tessellation_program5                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19216,7 +19216,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_tessellation_program5                                      : not detected." );
+		logEndl( "GL_NV_tessellation_program5                       : not detected." );
 	}
 
 
@@ -19228,13 +19228,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_texgen_emboss )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_texgen_emboss                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_texgen_emboss                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_texgen_emboss                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_texgen_emboss                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19247,7 +19247,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_texgen_emboss                                      : not detected." );
+		logEndl( "GL_NV_texgen_emboss                               : not detected." );
 	}
 
 
@@ -19259,13 +19259,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_texgen_reflection )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_texgen_reflection                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_texgen_reflection                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_texgen_reflection                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_texgen_reflection                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19278,7 +19278,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_texgen_reflection                                      : not detected." );
+		logEndl( "GL_NV_texgen_reflection                           : not detected." );
 	}
 
 
@@ -19297,13 +19297,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_texture_barrier )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_texture_barrier                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_texture_barrier                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_texture_barrier                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_texture_barrier                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19316,7 +19316,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_texture_barrier                                      : not detected." );
+		logEndl( "GL_NV_texture_barrier                             : not detected." );
 	}
 
 
@@ -19328,13 +19328,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_texture_compression_vtc )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_texture_compression_vtc                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_texture_compression_vtc                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_texture_compression_vtc                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_texture_compression_vtc                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19347,7 +19347,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_texture_compression_vtc                                      : not detected." );
+		logEndl( "GL_NV_texture_compression_vtc                     : not detected." );
 	}
 
 
@@ -19359,13 +19359,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_texture_env_combine4 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_texture_env_combine4                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_texture_env_combine4                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_texture_env_combine4                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_texture_env_combine4                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19378,7 +19378,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_texture_env_combine4                                      : not detected." );
+		logEndl( "GL_NV_texture_env_combine4                        : not detected." );
 	}
 
 
@@ -19390,13 +19390,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_texture_expand_normal )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_texture_expand_normal                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_texture_expand_normal                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_texture_expand_normal                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_texture_expand_normal                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19409,7 +19409,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_texture_expand_normal                                      : not detected." );
+		logEndl( "GL_NV_texture_expand_normal                       : not detected." );
 	}
 
 
@@ -19421,13 +19421,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_texture_rectangle )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_texture_rectangle                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_texture_rectangle                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_texture_rectangle                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_texture_rectangle                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19440,7 +19440,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_texture_rectangle                                      : not detected." );
+		logEndl( "GL_NV_texture_rectangle                           : not detected." );
 	}
 
 
@@ -19452,13 +19452,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_texture_shader )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_texture_shader                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_texture_shader                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_texture_shader                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_texture_shader                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19471,7 +19471,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_texture_shader                                      : not detected." );
+		logEndl( "GL_NV_texture_shader                              : not detected." );
 	}
 
 
@@ -19483,13 +19483,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_texture_shader2 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_texture_shader2                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_texture_shader2                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_texture_shader2                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_texture_shader2                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19502,7 +19502,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_texture_shader2                                      : not detected." );
+		logEndl( "GL_NV_texture_shader2                             : not detected." );
 	}
 
 
@@ -19514,13 +19514,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_texture_shader3 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_texture_shader3                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_texture_shader3                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_texture_shader3                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_texture_shader3                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19533,7 +19533,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_texture_shader3                                      : not detected." );
+		logEndl( "GL_NV_texture_shader3                             : not detected." );
 	}
 
 
@@ -19582,13 +19582,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_transform_feedback )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_transform_feedback                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_transform_feedback                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_transform_feedback                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_transform_feedback                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19601,7 +19601,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_transform_feedback                                      : not detected." );
+		logEndl( "GL_NV_transform_feedback                          : not detected." );
 	}
 
 
@@ -19638,13 +19638,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_transform_feedback2 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_transform_feedback2                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_transform_feedback2                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_transform_feedback2                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_transform_feedback2                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19657,7 +19657,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_transform_feedback2                                      : not detected." );
+		logEndl( "GL_NV_transform_feedback2                         : not detected." );
 	}
 
 
@@ -19669,13 +19669,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_vdpau_interop )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_vdpau_interop                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_vdpau_interop                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_vdpau_interop                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_vdpau_interop                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19688,7 +19688,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_vdpau_interop                                      : not detected." );
+		logEndl( "GL_NV_vdpau_interop                               : not detected." );
 	}
 
 
@@ -19710,13 +19710,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_vertex_array_range )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_vertex_array_range                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_vertex_array_range                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_vertex_array_range                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_vertex_array_range                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19729,7 +19729,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_vertex_array_range                                      : not detected." );
+		logEndl( "GL_NV_vertex_array_range                          : not detected." );
 	}
 
 
@@ -19741,13 +19741,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_vertex_array_range2 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_vertex_array_range2                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_vertex_array_range2                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_vertex_array_range2                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_vertex_array_range2                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19760,7 +19760,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_vertex_array_range2                                      : not detected." );
+		logEndl( "GL_NV_vertex_array_range2                         : not detected." );
 	}
 
 
@@ -19772,13 +19772,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_vertex_attrib_integer_64bit )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_vertex_attrib_integer_64bit                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_vertex_attrib_integer_64bit                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_vertex_attrib_integer_64bit                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_vertex_attrib_integer_64bit                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19791,7 +19791,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_vertex_attrib_integer_64bit                                      : not detected." );
+		logEndl( "GL_NV_vertex_attrib_integer_64bit                 : not detected." );
 	}
 
 
@@ -19843,13 +19843,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_vertex_buffer_unified_memory )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_vertex_buffer_unified_memory                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_vertex_buffer_unified_memory                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_vertex_buffer_unified_memory                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_vertex_buffer_unified_memory                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -19862,7 +19862,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_vertex_buffer_unified_memory                                      : not detected." );
+		logEndl( "GL_NV_vertex_buffer_unified_memory                : not detected." );
 	}
 
 
@@ -20070,13 +20070,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_vertex_program )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_vertex_program                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_vertex_program                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_vertex_program                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_vertex_program                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20089,7 +20089,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_vertex_program                                      : not detected." );
+		logEndl( "GL_NV_vertex_program                              : not detected." );
 	}
 
 
@@ -20101,13 +20101,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_vertex_program1_1 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_vertex_program1_1                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_vertex_program1_1                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_vertex_program1_1                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_vertex_program1_1                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20120,7 +20120,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_vertex_program1_1                                      : not detected." );
+		logEndl( "GL_NV_vertex_program1_1                           : not detected." );
 	}
 
 
@@ -20132,13 +20132,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_vertex_program2 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_vertex_program2                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_vertex_program2                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_vertex_program2                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_vertex_program2                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20151,7 +20151,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_vertex_program2                                      : not detected." );
+		logEndl( "GL_NV_vertex_program2                             : not detected." );
 	}
 
 
@@ -20163,13 +20163,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_vertex_program2_option )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_vertex_program2_option                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_vertex_program2_option                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_vertex_program2_option                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_vertex_program2_option                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20182,7 +20182,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_vertex_program2_option                                      : not detected." );
+		logEndl( "GL_NV_vertex_program2_option                      : not detected." );
 	}
 
 
@@ -20194,13 +20194,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_vertex_program3 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_vertex_program3                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_vertex_program3                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_vertex_program3                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_vertex_program3                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20213,7 +20213,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_vertex_program3                                      : not detected." );
+		logEndl( "GL_NV_vertex_program3                             : not detected." );
 	}
 
 
@@ -20298,13 +20298,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_vertex_program4 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_vertex_program4                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_vertex_program4                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_vertex_program4                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_vertex_program4                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20317,7 +20317,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_vertex_program4                                      : not detected." );
+		logEndl( "GL_NV_vertex_program4                             : not detected." );
 	}
 
 
@@ -20369,13 +20369,13 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	if ( isGL_NV_video_capture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_NV_video_capture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_NV_video_capture                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_NV_video_capture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_NV_video_capture                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20388,7 +20388,7 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 	else
 	{
-		logEndl( "GL_NV_video_capture                                      : not detected." );
+		logEndl( "GL_NV_video_capture                               : not detected." );
 	}
 
 
@@ -20408,13 +20408,13 @@ void OpenGLExtensionsGen::initializeGL_OES()
 	if ( isGL_OES_read_format )
 	{
 		std::stringstream strStream;
-		strStream << "GL_OES_read_format                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_OES_read_format                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_OES_read_format                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_OES_read_format                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20427,7 +20427,7 @@ void OpenGLExtensionsGen::initializeGL_OES()
 	}
 	else
 	{
-		logEndl( "GL_OES_read_format                                      : not detected." );
+		logEndl( "GL_OES_read_format                                : not detected." );
 	}
 
 
@@ -20447,13 +20447,13 @@ void OpenGLExtensionsGen::initializeGL_OML()
 	if ( isGL_OML_interlace )
 	{
 		std::stringstream strStream;
-		strStream << "GL_OML_interlace                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_OML_interlace                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_OML_interlace                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_OML_interlace                                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20466,7 +20466,7 @@ void OpenGLExtensionsGen::initializeGL_OML()
 	}
 	else
 	{
-		logEndl( "GL_OML_interlace                                      : not detected." );
+		logEndl( "GL_OML_interlace                                  : not detected." );
 	}
 
 
@@ -20478,13 +20478,13 @@ void OpenGLExtensionsGen::initializeGL_OML()
 	if ( isGL_OML_resample )
 	{
 		std::stringstream strStream;
-		strStream << "GL_OML_resample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_OML_resample                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_OML_resample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_OML_resample                                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20497,7 +20497,7 @@ void OpenGLExtensionsGen::initializeGL_OML()
 	}
 	else
 	{
-		logEndl( "GL_OML_resample                                      : not detected." );
+		logEndl( "GL_OML_resample                                   : not detected." );
 	}
 
 
@@ -20509,13 +20509,13 @@ void OpenGLExtensionsGen::initializeGL_OML()
 	if ( isGL_OML_subsample )
 	{
 		std::stringstream strStream;
-		strStream << "GL_OML_subsample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_OML_subsample                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_OML_subsample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_OML_subsample                                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20528,7 +20528,7 @@ void OpenGLExtensionsGen::initializeGL_OML()
 	}
 	else
 	{
-		logEndl( "GL_OML_subsample                                      : not detected." );
+		logEndl( "GL_OML_subsample                                  : not detected." );
 	}
 
 
@@ -20555,13 +20555,13 @@ void OpenGLExtensionsGen::initializeGL_PGI()
 	if ( isGL_PGI_misc_hints )
 	{
 		std::stringstream strStream;
-		strStream << "GL_PGI_misc_hints                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_PGI_misc_hints                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_PGI_misc_hints                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_PGI_misc_hints                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20574,7 +20574,7 @@ void OpenGLExtensionsGen::initializeGL_PGI()
 	}
 	else
 	{
-		logEndl( "GL_PGI_misc_hints                                      : not detected." );
+		logEndl( "GL_PGI_misc_hints                                 : not detected." );
 	}
 
 
@@ -20586,13 +20586,13 @@ void OpenGLExtensionsGen::initializeGL_PGI()
 	if ( isGL_PGI_vertex_hints )
 	{
 		std::stringstream strStream;
-		strStream << "GL_PGI_vertex_hints                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_PGI_vertex_hints                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_PGI_vertex_hints                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_PGI_vertex_hints                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20605,7 +20605,7 @@ void OpenGLExtensionsGen::initializeGL_PGI()
 	}
 	else
 	{
-		logEndl( "GL_PGI_vertex_hints                                      : not detected." );
+		logEndl( "GL_PGI_vertex_hints                               : not detected." );
 	}
 
 
@@ -20625,13 +20625,13 @@ void OpenGLExtensionsGen::initializeGL_REND()
 	if ( isGL_REND_screen_coordinates )
 	{
 		std::stringstream strStream;
-		strStream << "GL_REND_screen_coordinates                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_REND_screen_coordinates                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_REND_screen_coordinates                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_REND_screen_coordinates                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20644,7 +20644,7 @@ void OpenGLExtensionsGen::initializeGL_REND()
 	}
 	else
 	{
-		logEndl( "GL_REND_screen_coordinates                                      : not detected." );
+		logEndl( "GL_REND_screen_coordinates                        : not detected." );
 	}
 
 
@@ -20664,13 +20664,13 @@ void OpenGLExtensionsGen::initializeGL_S3()
 	if ( isGL_S3_s3tc )
 	{
 		std::stringstream strStream;
-		strStream << "GL_S3_s3tc                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_S3_s3tc                                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_S3_s3tc                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_S3_s3tc                                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20683,7 +20683,7 @@ void OpenGLExtensionsGen::initializeGL_S3()
 	}
 	else
 	{
-		logEndl( "GL_S3_s3tc                                      : not detected." );
+		logEndl( "GL_S3_s3tc                                        : not detected." );
 	}
 
 
@@ -20703,13 +20703,13 @@ void OpenGLExtensionsGen::initializeGL_SGI()
 	if ( isGL_SGI_color_matrix )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGI_color_matrix                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGI_color_matrix                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGI_color_matrix                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGI_color_matrix                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20722,7 +20722,7 @@ void OpenGLExtensionsGen::initializeGL_SGI()
 	}
 	else
 	{
-		logEndl( "GL_SGI_color_matrix                                      : not detected." );
+		logEndl( "GL_SGI_color_matrix                               : not detected." );
 	}
 
 
@@ -20759,13 +20759,13 @@ void OpenGLExtensionsGen::initializeGL_SGI()
 	if ( isGL_SGI_color_table )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGI_color_table                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGI_color_table                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGI_color_table                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGI_color_table                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20778,7 +20778,7 @@ void OpenGLExtensionsGen::initializeGL_SGI()
 	}
 	else
 	{
-		logEndl( "GL_SGI_color_table                                      : not detected." );
+		logEndl( "GL_SGI_color_table                                : not detected." );
 	}
 
 
@@ -20790,13 +20790,13 @@ void OpenGLExtensionsGen::initializeGL_SGI()
 	if ( isGL_SGI_depth_pass_instrument )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGI_depth_pass_instrument                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGI_depth_pass_instrument                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGI_depth_pass_instrument                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGI_depth_pass_instrument                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20809,7 +20809,7 @@ void OpenGLExtensionsGen::initializeGL_SGI()
 	}
 	else
 	{
-		logEndl( "GL_SGI_depth_pass_instrument                                      : not detected." );
+		logEndl( "GL_SGI_depth_pass_instrument                      : not detected." );
 	}
 
 
@@ -20821,13 +20821,13 @@ void OpenGLExtensionsGen::initializeGL_SGI()
 	if ( isGL_SGI_texture_color_table )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGI_texture_color_table                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGI_texture_color_table                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGI_texture_color_table                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGI_texture_color_table                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20840,7 +20840,7 @@ void OpenGLExtensionsGen::initializeGL_SGI()
 	}
 	else
 	{
-		logEndl( "GL_SGI_texture_color_table                                      : not detected." );
+		logEndl( "GL_SGI_texture_color_table                        : not detected." );
 	}
 
 
@@ -20870,13 +20870,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_detail_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_detail_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_detail_texture                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_detail_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_detail_texture                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20889,7 +20889,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_detail_texture                                      : not detected." );
+		logEndl( "GL_SGIS_detail_texture                            : not detected." );
 	}
 
 
@@ -20911,13 +20911,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_fog_function )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_fog_function                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_fog_function                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_fog_function                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_fog_function                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20930,7 +20930,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_fog_function                                      : not detected." );
+		logEndl( "GL_SGIS_fog_function                              : not detected." );
 	}
 
 
@@ -20942,13 +20942,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_generate_mipmap )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_generate_mipmap                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_generate_mipmap                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_generate_mipmap                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_generate_mipmap                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -20961,7 +20961,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_generate_mipmap                                      : not detected." );
+		logEndl( "GL_SGIS_generate_mipmap                           : not detected." );
 	}
 
 
@@ -20983,13 +20983,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_multisample                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_multisample                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21002,7 +21002,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_multisample                                      : not detected." );
+		logEndl( "GL_SGIS_multisample                               : not detected." );
 	}
 
 
@@ -21036,13 +21036,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_pixel_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_pixel_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_pixel_texture                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_pixel_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_pixel_texture                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21055,7 +21055,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_pixel_texture                                      : not detected." );
+		logEndl( "GL_SGIS_pixel_texture                             : not detected." );
 	}
 
 
@@ -21067,13 +21067,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_point_line_texgen )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_point_line_texgen                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_point_line_texgen                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_point_line_texgen                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_point_line_texgen                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21086,7 +21086,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_point_line_texgen                                      : not detected." );
+		logEndl( "GL_SGIS_point_line_texgen                         : not detected." );
 	}
 
 
@@ -21108,13 +21108,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_point_parameters )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_point_parameters                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_point_parameters                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_point_parameters                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_point_parameters                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21127,7 +21127,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_point_parameters                                      : not detected." );
+		logEndl( "GL_SGIS_point_parameters                          : not detected." );
 	}
 
 
@@ -21149,13 +21149,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_sharpen_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_sharpen_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_sharpen_texture                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_sharpen_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_sharpen_texture                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21168,7 +21168,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_sharpen_texture                                      : not detected." );
+		logEndl( "GL_SGIS_sharpen_texture                           : not detected." );
 	}
 
 
@@ -21190,13 +21190,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_texture4D )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_texture4D                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_texture4D                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_texture4D                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_texture4D                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21209,7 +21209,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_texture4D                                      : not detected." );
+		logEndl( "GL_SGIS_texture4D                                 : not detected." );
 	}
 
 
@@ -21221,13 +21221,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_texture_border_clamp )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_texture_border_clamp                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_texture_border_clamp                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_texture_border_clamp                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_texture_border_clamp                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21240,7 +21240,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_texture_border_clamp                                      : not detected." );
+		logEndl( "GL_SGIS_texture_border_clamp                      : not detected." );
 	}
 
 
@@ -21259,13 +21259,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_texture_color_mask )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_texture_color_mask                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_texture_color_mask                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_texture_color_mask                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_texture_color_mask                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21278,7 +21278,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_texture_color_mask                                      : not detected." );
+		logEndl( "GL_SGIS_texture_color_mask                        : not detected." );
 	}
 
 
@@ -21290,13 +21290,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_texture_edge_clamp )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_texture_edge_clamp                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_texture_edge_clamp                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_texture_edge_clamp                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_texture_edge_clamp                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21309,7 +21309,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_texture_edge_clamp                                      : not detected." );
+		logEndl( "GL_SGIS_texture_edge_clamp                        : not detected." );
 	}
 
 
@@ -21331,13 +21331,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_texture_filter4 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_texture_filter4                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_texture_filter4                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_texture_filter4                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_texture_filter4                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21350,7 +21350,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_texture_filter4                                      : not detected." );
+		logEndl( "GL_SGIS_texture_filter4                           : not detected." );
 	}
 
 
@@ -21362,13 +21362,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_texture_lod )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_texture_lod                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_texture_lod                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_texture_lod                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_texture_lod                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21381,7 +21381,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_texture_lod                                      : not detected." );
+		logEndl( "GL_SGIS_texture_lod                               : not detected." );
 	}
 
 
@@ -21393,13 +21393,13 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	if ( isGL_SGIS_texture_select )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIS_texture_select                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIS_texture_select                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIS_texture_select                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIS_texture_select                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21412,7 +21412,7 @@ void OpenGLExtensionsGen::initializeGL_SGIS()
 	}
 	else
 	{
-		logEndl( "GL_SGIS_texture_select                                      : not detected." );
+		logEndl( "GL_SGIS_texture_select                            : not detected." );
 	}
 
 
@@ -21454,13 +21454,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_async )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_async                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_async                                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_async                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_async                                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21473,7 +21473,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_async                                      : not detected." );
+		logEndl( "GL_SGIX_async                                     : not detected." );
 	}
 
 
@@ -21485,13 +21485,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_async_histogram )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_async_histogram                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_async_histogram                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_async_histogram                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_async_histogram                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21504,7 +21504,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_async_histogram                                      : not detected." );
+		logEndl( "GL_SGIX_async_histogram                           : not detected." );
 	}
 
 
@@ -21516,13 +21516,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_async_pixel )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_async_pixel                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_async_pixel                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_async_pixel                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_async_pixel                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21535,7 +21535,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_async_pixel                                      : not detected." );
+		logEndl( "GL_SGIX_async_pixel                               : not detected." );
 	}
 
 
@@ -21547,13 +21547,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_blend_alpha_minmax )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_blend_alpha_minmax                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_blend_alpha_minmax                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_blend_alpha_minmax                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_blend_alpha_minmax                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21566,7 +21566,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_blend_alpha_minmax                                      : not detected." );
+		logEndl( "GL_SGIX_blend_alpha_minmax                        : not detected." );
 	}
 
 
@@ -21578,13 +21578,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_calligraphic_fragment )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_calligraphic_fragment                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_calligraphic_fragment                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_calligraphic_fragment                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_calligraphic_fragment                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21597,7 +21597,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_calligraphic_fragment                                      : not detected." );
+		logEndl( "GL_SGIX_calligraphic_fragment                     : not detected." );
 	}
 
 
@@ -21609,13 +21609,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_clipmap )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_clipmap                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_clipmap                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_clipmap                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_clipmap                                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21628,7 +21628,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_clipmap                                      : not detected." );
+		logEndl( "GL_SGIX_clipmap                                   : not detected." );
 	}
 
 
@@ -21640,13 +21640,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_convolution_accuracy )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_convolution_accuracy                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_convolution_accuracy                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_convolution_accuracy                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_convolution_accuracy                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21659,7 +21659,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_convolution_accuracy                                      : not detected." );
+		logEndl( "GL_SGIX_convolution_accuracy                      : not detected." );
 	}
 
 
@@ -21671,13 +21671,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_depth_pass_instrument )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_depth_pass_instrument                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_depth_pass_instrument                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_depth_pass_instrument                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_depth_pass_instrument                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21690,7 +21690,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_depth_pass_instrument                                      : not detected." );
+		logEndl( "GL_SGIX_depth_pass_instrument                     : not detected." );
 	}
 
 
@@ -21702,13 +21702,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_depth_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_depth_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_depth_texture                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_depth_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_depth_texture                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21721,7 +21721,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_depth_texture                                      : not detected." );
+		logEndl( "GL_SGIX_depth_texture                             : not detected." );
 	}
 
 
@@ -21740,13 +21740,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_flush_raster )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_flush_raster                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_flush_raster                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_flush_raster                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_flush_raster                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21759,7 +21759,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_flush_raster                                      : not detected." );
+		logEndl( "GL_SGIX_flush_raster                              : not detected." );
 	}
 
 
@@ -21771,13 +21771,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_fog_offset )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_fog_offset                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_fog_offset                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_fog_offset                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_fog_offset                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21790,7 +21790,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_fog_offset                                      : not detected." );
+		logEndl( "GL_SGIX_fog_offset                                : not detected." );
 	}
 
 
@@ -21802,13 +21802,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_fog_scale )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_fog_scale                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_fog_scale                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_fog_scale                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_fog_scale                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21821,7 +21821,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_fog_scale                                      : not detected." );
+		logEndl( "GL_SGIX_fog_scale                                 : not detected." );
 	}
 
 
@@ -21891,13 +21891,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_fragment_lighting )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_fragment_lighting                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_fragment_lighting                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_fragment_lighting                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_fragment_lighting                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21910,7 +21910,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_fragment_lighting                                      : not detected." );
+		logEndl( "GL_SGIX_fragment_lighting                         : not detected." );
 	}
 
 
@@ -21929,13 +21929,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_framezoom )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_framezoom                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_framezoom                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_framezoom                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_framezoom                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21948,7 +21948,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_framezoom                                      : not detected." );
+		logEndl( "GL_SGIX_framezoom                                 : not detected." );
 	}
 
 
@@ -21967,13 +21967,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_igloo_interface )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_igloo_interface                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_igloo_interface                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_igloo_interface                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_igloo_interface                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -21986,7 +21986,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_igloo_interface                                      : not detected." );
+		logEndl( "GL_SGIX_igloo_interface                           : not detected." );
 	}
 
 
@@ -21998,13 +21998,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_impact_pixel_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_impact_pixel_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_impact_pixel_texture                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_impact_pixel_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_impact_pixel_texture                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22017,7 +22017,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_impact_pixel_texture                                      : not detected." );
+		logEndl( "GL_SGIX_impact_pixel_texture                      : not detected." );
 	}
 
 
@@ -22051,13 +22051,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_instruments )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_instruments                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_instruments                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_instruments                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_instruments                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22070,7 +22070,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_instruments                                      : not detected." );
+		logEndl( "GL_SGIX_instruments                               : not detected." );
 	}
 
 
@@ -22082,13 +22082,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_interlace )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_interlace                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_interlace                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_interlace                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_interlace                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22101,7 +22101,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_interlace                                      : not detected." );
+		logEndl( "GL_SGIX_interlace                                 : not detected." );
 	}
 
 
@@ -22113,13 +22113,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_ir_instrument1 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_ir_instrument1                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_ir_instrument1                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_ir_instrument1                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_ir_instrument1                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22132,7 +22132,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_ir_instrument1                                      : not detected." );
+		logEndl( "GL_SGIX_ir_instrument1                            : not detected." );
 	}
 
 
@@ -22166,13 +22166,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_list_priority )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_list_priority                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_list_priority                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_list_priority                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_list_priority                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22185,7 +22185,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_list_priority                                      : not detected." );
+		logEndl( "GL_SGIX_list_priority                             : not detected." );
 	}
 
 
@@ -22204,13 +22204,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_pixel_texture )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_pixel_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_pixel_texture                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_pixel_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_pixel_texture                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22223,7 +22223,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_pixel_texture                                      : not detected." );
+		logEndl( "GL_SGIX_pixel_texture                             : not detected." );
 	}
 
 
@@ -22235,13 +22235,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_pixel_tiles )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_pixel_tiles                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_pixel_tiles                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_pixel_tiles                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_pixel_tiles                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22254,7 +22254,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_pixel_tiles                                      : not detected." );
+		logEndl( "GL_SGIX_pixel_tiles                               : not detected." );
 	}
 
 
@@ -22282,13 +22282,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_polynomial_ffd )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_polynomial_ffd                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_polynomial_ffd                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_polynomial_ffd                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_polynomial_ffd                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22301,7 +22301,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_polynomial_ffd                                      : not detected." );
+		logEndl( "GL_SGIX_polynomial_ffd                            : not detected." );
 	}
 
 
@@ -22320,13 +22320,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_reference_plane )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_reference_plane                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_reference_plane                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_reference_plane                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_reference_plane                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22339,7 +22339,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_reference_plane                                      : not detected." );
+		logEndl( "GL_SGIX_reference_plane                           : not detected." );
 	}
 
 
@@ -22351,13 +22351,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_resample )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_resample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_resample                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_resample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_resample                                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22370,7 +22370,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_resample                                      : not detected." );
+		logEndl( "GL_SGIX_resample                                  : not detected." );
 	}
 
 
@@ -22382,13 +22382,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_scalebias_hint )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_scalebias_hint                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_scalebias_hint                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_scalebias_hint                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_scalebias_hint                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22401,7 +22401,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_scalebias_hint                                      : not detected." );
+		logEndl( "GL_SGIX_scalebias_hint                            : not detected." );
 	}
 
 
@@ -22413,13 +22413,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_shadow )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_shadow                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_shadow                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_shadow                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_shadow                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22432,7 +22432,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_shadow                                      : not detected." );
+		logEndl( "GL_SGIX_shadow                                    : not detected." );
 	}
 
 
@@ -22444,13 +22444,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_shadow_ambient )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_shadow_ambient                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_shadow_ambient                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_shadow_ambient                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_shadow_ambient                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22463,7 +22463,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_shadow_ambient                                      : not detected." );
+		logEndl( "GL_SGIX_shadow_ambient                            : not detected." );
 	}
 
 
@@ -22491,13 +22491,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_sprite )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_sprite                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_sprite                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_sprite                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_sprite                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22510,7 +22510,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_sprite                                      : not detected." );
+		logEndl( "GL_SGIX_sprite                                    : not detected." );
 	}
 
 
@@ -22522,13 +22522,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_subsample )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_subsample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_subsample                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_subsample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_subsample                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22541,7 +22541,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_subsample                                      : not detected." );
+		logEndl( "GL_SGIX_subsample                                 : not detected." );
 	}
 
 
@@ -22560,13 +22560,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_tag_sample_buffer )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_tag_sample_buffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_tag_sample_buffer                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_tag_sample_buffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_tag_sample_buffer                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22579,7 +22579,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_tag_sample_buffer                                      : not detected." );
+		logEndl( "GL_SGIX_tag_sample_buffer                         : not detected." );
 	}
 
 
@@ -22591,13 +22591,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_texture_add_env )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_texture_add_env                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_texture_add_env                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_texture_add_env                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_texture_add_env                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22610,7 +22610,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_texture_add_env                                      : not detected." );
+		logEndl( "GL_SGIX_texture_add_env                           : not detected." );
 	}
 
 
@@ -22622,13 +22622,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_texture_coordinate_clamp )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_texture_coordinate_clamp                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_texture_coordinate_clamp                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_texture_coordinate_clamp                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_texture_coordinate_clamp                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22641,7 +22641,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_texture_coordinate_clamp                                      : not detected." );
+		logEndl( "GL_SGIX_texture_coordinate_clamp                  : not detected." );
 	}
 
 
@@ -22653,13 +22653,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_texture_lod_bias )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_texture_lod_bias                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_texture_lod_bias                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_texture_lod_bias                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_texture_lod_bias                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22672,7 +22672,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_texture_lod_bias                                      : not detected." );
+		logEndl( "GL_SGIX_texture_lod_bias                          : not detected." );
 	}
 
 
@@ -22684,13 +22684,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_texture_multi_buffer )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_texture_multi_buffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_texture_multi_buffer                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_texture_multi_buffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_texture_multi_buffer                      : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22703,7 +22703,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_texture_multi_buffer                                      : not detected." );
+		logEndl( "GL_SGIX_texture_multi_buffer                      : not detected." );
 	}
 
 
@@ -22715,13 +22715,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_texture_scale_bias )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_texture_scale_bias                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_texture_scale_bias                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_texture_scale_bias                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_texture_scale_bias                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22734,7 +22734,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_texture_scale_bias                                      : not detected." );
+		logEndl( "GL_SGIX_texture_scale_bias                        : not detected." );
 	}
 
 
@@ -22746,13 +22746,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_texture_select )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_texture_select                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_texture_select                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_texture_select                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_texture_select                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22765,7 +22765,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_texture_select                                      : not detected." );
+		logEndl( "GL_SGIX_texture_select                            : not detected." );
 	}
 
 
@@ -22777,13 +22777,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_vertex_preclip )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_vertex_preclip                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_vertex_preclip                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_vertex_preclip                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_vertex_preclip                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22796,7 +22796,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_vertex_preclip                                      : not detected." );
+		logEndl( "GL_SGIX_vertex_preclip                            : not detected." );
 	}
 
 
@@ -22808,13 +22808,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_ycrcb )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_ycrcb                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_ycrcb                                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_ycrcb                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_ycrcb                                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22827,7 +22827,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_ycrcb                                      : not detected." );
+		logEndl( "GL_SGIX_ycrcb                                     : not detected." );
 	}
 
 
@@ -22839,13 +22839,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_ycrcb_subsample )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_ycrcb_subsample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_ycrcb_subsample                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_ycrcb_subsample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_ycrcb_subsample                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22858,7 +22858,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_ycrcb_subsample                                      : not detected." );
+		logEndl( "GL_SGIX_ycrcb_subsample                           : not detected." );
 	}
 
 
@@ -22870,13 +22870,13 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	if ( isGL_SGIX_ycrcba )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SGIX_ycrcba                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SGIX_ycrcba                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SGIX_ycrcba                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SGIX_ycrcba                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22889,7 +22889,7 @@ void OpenGLExtensionsGen::initializeGL_SGIX()
 	}
 	else
 	{
-		logEndl( "GL_SGIX_ycrcba                                      : not detected." );
+		logEndl( "GL_SGIX_ycrcba                                    : not detected." );
 	}
 
 
@@ -22909,13 +22909,13 @@ void OpenGLExtensionsGen::initializeGL_SUN()
 	if ( isGL_SUN_convolution_border_modes )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SUN_convolution_border_modes                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SUN_convolution_border_modes                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SUN_convolution_border_modes                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SUN_convolution_border_modes                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22928,7 +22928,7 @@ void OpenGLExtensionsGen::initializeGL_SUN()
 	}
 	else
 	{
-		logEndl( "GL_SUN_convolution_border_modes                                      : not detected." );
+		logEndl( "GL_SUN_convolution_border_modes                   : not detected." );
 	}
 
 
@@ -22968,13 +22968,13 @@ void OpenGLExtensionsGen::initializeGL_SUN()
 	if ( isGL_SUN_global_alpha )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SUN_global_alpha                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SUN_global_alpha                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SUN_global_alpha                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SUN_global_alpha                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -22987,7 +22987,7 @@ void OpenGLExtensionsGen::initializeGL_SUN()
 	}
 	else
 	{
-		logEndl( "GL_SUN_global_alpha                                      : not detected." );
+		logEndl( "GL_SUN_global_alpha                               : not detected." );
 	}
 
 
@@ -23006,13 +23006,13 @@ void OpenGLExtensionsGen::initializeGL_SUN()
 	if ( isGL_SUN_mesh_array )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SUN_mesh_array                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SUN_mesh_array                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SUN_mesh_array                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SUN_mesh_array                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -23025,7 +23025,7 @@ void OpenGLExtensionsGen::initializeGL_SUN()
 	}
 	else
 	{
-		logEndl( "GL_SUN_mesh_array                                      : not detected." );
+		logEndl( "GL_SUN_mesh_array                                 : not detected." );
 	}
 
 
@@ -23037,13 +23037,13 @@ void OpenGLExtensionsGen::initializeGL_SUN()
 	if ( isGL_SUN_slice_accum )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SUN_slice_accum                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SUN_slice_accum                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SUN_slice_accum                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SUN_slice_accum                                : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -23056,7 +23056,7 @@ void OpenGLExtensionsGen::initializeGL_SUN()
 	}
 	else
 	{
-		logEndl( "GL_SUN_slice_accum                                      : not detected." );
+		logEndl( "GL_SUN_slice_accum                                : not detected." );
 	}
 
 
@@ -23093,13 +23093,13 @@ void OpenGLExtensionsGen::initializeGL_SUN()
 	if ( isGL_SUN_triangle_list )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SUN_triangle_list                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SUN_triangle_list                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SUN_triangle_list                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SUN_triangle_list                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -23112,7 +23112,7 @@ void OpenGLExtensionsGen::initializeGL_SUN()
 	}
 	else
 	{
-		logEndl( "GL_SUN_triangle_list                                      : not detected." );
+		logEndl( "GL_SUN_triangle_list                              : not detected." );
 	}
 
 
@@ -23248,13 +23248,13 @@ void OpenGLExtensionsGen::initializeGL_SUN()
 	if ( isGL_SUN_vertex )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SUN_vertex                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SUN_vertex                                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SUN_vertex                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SUN_vertex                                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -23267,7 +23267,7 @@ void OpenGLExtensionsGen::initializeGL_SUN()
 	}
 	else
 	{
-		logEndl( "GL_SUN_vertex                                      : not detected." );
+		logEndl( "GL_SUN_vertex                                     : not detected." );
 	}
 
 
@@ -23294,13 +23294,13 @@ void OpenGLExtensionsGen::initializeGL_SUNX()
 	if ( isGL_SUNX_constant_data )
 	{
 		std::stringstream strStream;
-		strStream << "GL_SUNX_constant_data                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_SUNX_constant_data                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_SUNX_constant_data                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_SUNX_constant_data                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -23313,7 +23313,7 @@ void OpenGLExtensionsGen::initializeGL_SUNX()
 	}
 	else
 	{
-		logEndl( "GL_SUNX_constant_data                                      : not detected." );
+		logEndl( "GL_SUNX_constant_data                             : not detected." );
 	}
 
 
@@ -23356,13 +23356,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_1_2 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_1_2                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_1_2                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_1_2                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_1_2                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -23375,7 +23375,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_1_2                                      : not detected." );
+		logEndl( "GL_VERSION_1_2                                    : not detected." );
 	}
 
 
@@ -23488,13 +23488,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_1_2_DEPRECATED )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_1_2_DEPRECATED                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_1_2_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_1_2_DEPRECATED                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_1_2_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -23507,7 +23507,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_1_2_DEPRECATED                                      : not detected." );
+		logEndl( "GL_VERSION_1_2_DEPRECATED                         : not detected." );
 	}
 
 
@@ -23551,13 +23551,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_1_3 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_1_3                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_1_3                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_1_3                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_1_3                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -23570,7 +23570,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_1_3                                      : not detected." );
+		logEndl( "GL_VERSION_1_3                                    : not detected." );
 	}
 
 
@@ -23698,13 +23698,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_1_3_DEPRECATED )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_1_3_DEPRECATED                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_1_3_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_1_3_DEPRECATED                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_1_3_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -23717,7 +23717,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_1_3_DEPRECATED                                      : not detected." );
+		logEndl( "GL_VERSION_1_3_DEPRECATED                         : not detected." );
 	}
 
 
@@ -23755,13 +23755,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_1_4 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_1_4                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_1_4                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_1_4                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_1_4                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -23774,7 +23774,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_1_4                                      : not detected." );
+		logEndl( "GL_VERSION_1_4                                    : not detected." );
 	}
 
 
@@ -23905,13 +23905,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_1_4_DEPRECATED )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_1_4_DEPRECATED                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_1_4_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_1_4_DEPRECATED                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_1_4_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -23924,7 +23924,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_1_4_DEPRECATED                                      : not detected." );
+		logEndl( "GL_VERSION_1_4_DEPRECATED                         : not detected." );
 	}
 
 
@@ -23998,13 +23998,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_1_5 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_1_5                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_1_5                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_1_5                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_1_5                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24017,7 +24017,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_1_5                                      : not detected." );
+		logEndl( "GL_VERSION_1_5                                    : not detected." );
 	}
 
 
@@ -24029,13 +24029,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_1_5_DEPRECATED )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_1_5_DEPRECATED                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_1_5_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_1_5_DEPRECATED                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_1_5_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24048,7 +24048,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_1_5_DEPRECATED                                      : not detected." );
+		logEndl( "GL_VERSION_1_5_DEPRECATED                         : not detected." );
 	}
 
 
@@ -24344,13 +24344,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_2_0 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_2_0                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_2_0                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_2_0                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_2_0                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24363,7 +24363,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_2_0                                      : not detected." );
+		logEndl( "GL_VERSION_2_0                                    : not detected." );
 	}
 
 
@@ -24375,13 +24375,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_2_0_DEPRECATED )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_2_0_DEPRECATED                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_2_0_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_2_0_DEPRECATED                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_2_0_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24394,7 +24394,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_2_0_DEPRECATED                                      : not detected." );
+		logEndl( "GL_VERSION_2_0_DEPRECATED                         : not detected." );
 	}
 
 
@@ -24429,13 +24429,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_2_1 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_2_1                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_2_1                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_2_1                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_2_1                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24448,7 +24448,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_2_1                                      : not detected." );
+		logEndl( "GL_VERSION_2_1                                    : not detected." );
 	}
 
 
@@ -24460,13 +24460,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_2_1_DEPRECATED )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_2_1_DEPRECATED                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_2_1_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_2_1_DEPRECATED                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_2_1_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24479,7 +24479,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_2_1_DEPRECATED                                      : not detected." );
+		logEndl( "GL_VERSION_2_1_DEPRECATED                         : not detected." );
 	}
 
 
@@ -24670,13 +24670,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_3_0 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_3_0                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_3_0                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_3_0                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_3_0                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24689,7 +24689,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_3_0                                      : not detected." );
+		logEndl( "GL_VERSION_3_0                                    : not detected." );
 	}
 
 
@@ -24701,13 +24701,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_3_0_DEPRECATED )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_3_0_DEPRECATED                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_3_0_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_3_0_DEPRECATED                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_3_0_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24720,7 +24720,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_3_0_DEPRECATED                                      : not detected." );
+		logEndl( "GL_VERSION_3_0_DEPRECATED                         : not detected." );
 	}
 
 
@@ -24749,13 +24749,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_3_1 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_3_1                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_3_1                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_3_1                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_3_1                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24768,7 +24768,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_3_1                                      : not detected." );
+		logEndl( "GL_VERSION_3_1                                    : not detected." );
 	}
 
 
@@ -24797,13 +24797,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_3_2 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_3_2                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_3_2                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_3_2                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_3_2                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24816,7 +24816,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_3_2                                      : not detected." );
+		logEndl( "GL_VERSION_3_2                                    : not detected." );
 	}
 
 
@@ -24828,13 +24828,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_3_3 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_3_3                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_3_3                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_3_3                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_3_3                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24847,7 +24847,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_3_3                                      : not detected." );
+		logEndl( "GL_VERSION_3_3                                    : not detected." );
 	}
 
 
@@ -24859,13 +24859,13 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	if ( isGL_VERSION_4_0 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_4_0                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_4_0                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_4_0                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_4_0                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24878,7 +24878,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 	else
 	{
-		logEndl( "GL_VERSION_4_0                                      : not detected." );
+		logEndl( "GL_VERSION_4_0                                    : not detected." );
 	}
 
 
@@ -24898,13 +24898,13 @@ void OpenGLExtensionsGen::initializeGL_WIN()
 	if ( isGL_WIN_phong_shading )
 	{
 		std::stringstream strStream;
-		strStream << "GL_WIN_phong_shading                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_WIN_phong_shading                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_WIN_phong_shading                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_WIN_phong_shading                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24917,7 +24917,7 @@ void OpenGLExtensionsGen::initializeGL_WIN()
 	}
 	else
 	{
-		logEndl( "GL_WIN_phong_shading                                      : not detected." );
+		logEndl( "GL_WIN_phong_shading                              : not detected." );
 	}
 
 
@@ -24929,13 +24929,13 @@ void OpenGLExtensionsGen::initializeGL_WIN()
 	if ( isGL_WIN_specular_fog )
 	{
 		std::stringstream strStream;
-		strStream << "GL_WIN_specular_fog                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_WIN_specular_fog                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_WIN_specular_fog                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_WIN_specular_fog                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24948,7 +24948,7 @@ void OpenGLExtensionsGen::initializeGL_WIN()
 	}
 	else
 	{
-		logEndl( "GL_WIN_specular_fog                                      : not detected." );
+		logEndl( "GL_WIN_specular_fog                               : not detected." );
 	}
 
 
@@ -24972,13 +24972,13 @@ void OpenGLExtensionsGen::initializeWGL_3DFX()
 	if ( isWGL_3DFX_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_3DFX_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_3DFX_multisample                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_3DFX_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_3DFX_multisample                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -24991,7 +24991,7 @@ void OpenGLExtensionsGen::initializeWGL_3DFX()
 	}
 	else
 	{
-		logEndl( "WGL_3DFX_multisample                                      : not detected." );
+		logEndl( "WGL_3DFX_multisample                              : not detected." );
 	}
 
 
@@ -25024,13 +25024,13 @@ void OpenGLExtensionsGen::initializeWGL_3DL()
 	if ( isWGL_3DL_stereo_control )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_3DL_stereo_control                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_3DL_stereo_control                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_3DL_stereo_control                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_3DL_stereo_control                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25043,7 +25043,7 @@ void OpenGLExtensionsGen::initializeWGL_3DL()
 	}
 	else
 	{
-		logEndl( "WGL_3DL_stereo_control                                      : not detected." );
+		logEndl( "WGL_3DL_stereo_control                            : not detected." );
 	}
 
 
@@ -25100,13 +25100,13 @@ void OpenGLExtensionsGen::initializeWGL_AMD()
 	if ( isWGL_AMD_gpu_association )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_AMD_gpu_association                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_AMD_gpu_association                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_AMD_gpu_association                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_AMD_gpu_association                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25119,7 +25119,7 @@ void OpenGLExtensionsGen::initializeWGL_AMD()
 	}
 	else
 	{
-		logEndl( "WGL_AMD_gpu_association                                      : not detected." );
+		logEndl( "WGL_AMD_gpu_association                           : not detected." );
 	}
 
 
@@ -25161,13 +25161,13 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	if ( isWGL_ARB_buffer_region )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_ARB_buffer_region                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_ARB_buffer_region                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_ARB_buffer_region                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_ARB_buffer_region                             : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25180,7 +25180,7 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	}
 	else
 	{
-		logEndl( "WGL_ARB_buffer_region                                      : not detected." );
+		logEndl( "WGL_ARB_buffer_region                             : not detected." );
 	}
 
 
@@ -25205,13 +25205,13 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	if ( isWGL_ARB_create_context )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_ARB_create_context                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_ARB_create_context                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_ARB_create_context                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_ARB_create_context                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25224,7 +25224,7 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	}
 	else
 	{
-		logEndl( "WGL_ARB_create_context                                      : not detected." );
+		logEndl( "WGL_ARB_create_context                            : not detected." );
 	}
 
 
@@ -25242,13 +25242,13 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	if ( isWGL_ARB_create_context_profile )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_ARB_create_context_profile                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_ARB_create_context_profile                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_ARB_create_context_profile                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_ARB_create_context_profile                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25261,7 +25261,7 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	}
 	else
 	{
-		logEndl( "WGL_ARB_create_context_profile                                      : not detected." );
+		logEndl( "WGL_ARB_create_context_profile                    : not detected." );
 	}
 
 
@@ -25286,13 +25286,13 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	if ( isWGL_ARB_extensions_string )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_ARB_extensions_string                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_ARB_extensions_string                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_ARB_extensions_string                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_ARB_extensions_string                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25305,7 +25305,7 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	}
 	else
 	{
-		logEndl( "WGL_ARB_extensions_string                                      : not detected." );
+		logEndl( "WGL_ARB_extensions_string                         : not detected." );
 	}
 
 
@@ -25333,13 +25333,13 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	if ( isWGL_ARB_make_current_read )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_ARB_make_current_read                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_ARB_make_current_read                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_ARB_make_current_read                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_ARB_make_current_read                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25352,7 +25352,7 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	}
 	else
 	{
-		logEndl( "WGL_ARB_make_current_read                                      : not detected." );
+		logEndl( "WGL_ARB_make_current_read                         : not detected." );
 	}
 
 
@@ -25370,13 +25370,13 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	if ( isWGL_ARB_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_ARB_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_ARB_multisample                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_ARB_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_ARB_multisample                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25389,7 +25389,7 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	}
 	else
 	{
-		logEndl( "WGL_ARB_multisample                                      : not detected." );
+		logEndl( "WGL_ARB_multisample                               : not detected." );
 	}
 
 
@@ -25426,13 +25426,13 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	if ( isWGL_ARB_pbuffer )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_ARB_pbuffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_ARB_pbuffer                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_ARB_pbuffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_ARB_pbuffer                                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25445,7 +25445,7 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	}
 	else
 	{
-		logEndl( "WGL_ARB_pbuffer                                      : not detected." );
+		logEndl( "WGL_ARB_pbuffer                                   : not detected." );
 	}
 
 
@@ -25476,13 +25476,13 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	if ( isWGL_ARB_pixel_format )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_ARB_pixel_format                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_ARB_pixel_format                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_ARB_pixel_format                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_ARB_pixel_format                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25495,7 +25495,7 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	}
 	else
 	{
-		logEndl( "WGL_ARB_pixel_format                                      : not detected." );
+		logEndl( "WGL_ARB_pixel_format                              : not detected." );
 	}
 
 
@@ -25513,13 +25513,13 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	if ( isWGL_ARB_pixel_format_float )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_ARB_pixel_format_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_ARB_pixel_format_float                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_ARB_pixel_format_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_ARB_pixel_format_float                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25532,7 +25532,7 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	}
 	else
 	{
-		logEndl( "WGL_ARB_pixel_format_float                                      : not detected." );
+		logEndl( "WGL_ARB_pixel_format_float                        : not detected." );
 	}
 
 
@@ -25563,13 +25563,13 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	if ( isWGL_ARB_render_texture )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_ARB_render_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_ARB_render_texture                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_ARB_render_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_ARB_render_texture                            : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25582,7 +25582,7 @@ void OpenGLExtensionsGen::initializeWGL_ARB()
 	}
 	else
 	{
-		logEndl( "WGL_ARB_render_texture                                      : not detected." );
+		logEndl( "WGL_ARB_render_texture                            : not detected." );
 	}
 
 
@@ -25608,13 +25608,13 @@ void OpenGLExtensionsGen::initializeWGL_ATI()
 	if ( isWGL_ATI_pixel_format_float )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_ATI_pixel_format_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_ATI_pixel_format_float                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_ATI_pixel_format_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_ATI_pixel_format_float                        : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25627,7 +25627,7 @@ void OpenGLExtensionsGen::initializeWGL_ATI()
 	}
 	else
 	{
-		logEndl( "WGL_ATI_pixel_format_float                                      : not detected." );
+		logEndl( "WGL_ATI_pixel_format_float                        : not detected." );
 	}
 
 
@@ -25653,13 +25653,13 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	if ( isWGL_EXT_depth_float )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_EXT_depth_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_EXT_depth_float                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_EXT_depth_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_EXT_depth_float                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25672,7 +25672,7 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	}
 	else
 	{
-		logEndl( "WGL_EXT_depth_float                                      : not detected." );
+		logEndl( "WGL_EXT_depth_float                               : not detected." );
 	}
 
 
@@ -25706,13 +25706,13 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	if ( isWGL_EXT_display_color_table )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_EXT_display_color_table                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_EXT_display_color_table                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_EXT_display_color_table                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_EXT_display_color_table                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25725,7 +25725,7 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	}
 	else
 	{
-		logEndl( "WGL_EXT_display_color_table                                      : not detected." );
+		logEndl( "WGL_EXT_display_color_table                       : not detected." );
 	}
 
 
@@ -25750,13 +25750,13 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	if ( isWGL_EXT_extensions_string )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_EXT_extensions_string                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_EXT_extensions_string                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_EXT_extensions_string                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_EXT_extensions_string                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25769,7 +25769,7 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	}
 	else
 	{
-		logEndl( "WGL_EXT_extensions_string                                      : not detected." );
+		logEndl( "WGL_EXT_extensions_string                         : not detected." );
 	}
 
 
@@ -25787,13 +25787,13 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	if ( isWGL_EXT_framebuffer_sRGB )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_EXT_framebuffer_sRGB                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_EXT_framebuffer_sRGB                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_EXT_framebuffer_sRGB                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_EXT_framebuffer_sRGB                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25806,7 +25806,7 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	}
 	else
 	{
-		logEndl( "WGL_EXT_framebuffer_sRGB                                      : not detected." );
+		logEndl( "WGL_EXT_framebuffer_sRGB                          : not detected." );
 	}
 
 
@@ -25834,13 +25834,13 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	if ( isWGL_EXT_make_current_read )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_EXT_make_current_read                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_EXT_make_current_read                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_EXT_make_current_read                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_EXT_make_current_read                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25853,7 +25853,7 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	}
 	else
 	{
-		logEndl( "WGL_EXT_make_current_read                                      : not detected." );
+		logEndl( "WGL_EXT_make_current_read                         : not detected." );
 	}
 
 
@@ -25871,13 +25871,13 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	if ( isWGL_EXT_multisample )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_EXT_multisample                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_EXT_multisample                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_EXT_multisample                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_EXT_multisample                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25890,7 +25890,7 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	}
 	else
 	{
-		logEndl( "WGL_EXT_multisample                                      : not detected." );
+		logEndl( "WGL_EXT_multisample                               : not detected." );
 	}
 
 
@@ -25927,13 +25927,13 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	if ( isWGL_EXT_pbuffer )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_EXT_pbuffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_EXT_pbuffer                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_EXT_pbuffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_EXT_pbuffer                                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25946,7 +25946,7 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	}
 	else
 	{
-		logEndl( "WGL_EXT_pbuffer                                      : not detected." );
+		logEndl( "WGL_EXT_pbuffer                                   : not detected." );
 	}
 
 
@@ -25977,13 +25977,13 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	if ( isWGL_EXT_pixel_format )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_EXT_pixel_format                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_EXT_pixel_format                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_EXT_pixel_format                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_EXT_pixel_format                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -25996,7 +25996,7 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	}
 	else
 	{
-		logEndl( "WGL_EXT_pixel_format                                      : not detected." );
+		logEndl( "WGL_EXT_pixel_format                              : not detected." );
 	}
 
 
@@ -26014,13 +26014,13 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	if ( isWGL_EXT_pixel_format_packed_float )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_EXT_pixel_format_packed_float                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_EXT_pixel_format_packed_float                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_EXT_pixel_format_packed_float                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_EXT_pixel_format_packed_float                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26033,7 +26033,7 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	}
 	else
 	{
-		logEndl( "WGL_EXT_pixel_format_packed_float                                      : not detected." );
+		logEndl( "WGL_EXT_pixel_format_packed_float                 : not detected." );
 	}
 
 
@@ -26061,13 +26061,13 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	if ( isWGL_EXT_swap_control )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_EXT_swap_control                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_EXT_swap_control                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_EXT_swap_control                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_EXT_swap_control                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26080,7 +26080,7 @@ void OpenGLExtensionsGen::initializeWGL_EXT()
 	}
 	else
 	{
-		logEndl( "WGL_EXT_swap_control                                      : not detected." );
+		logEndl( "WGL_EXT_swap_control                              : not detected." );
 	}
 
 
@@ -26116,13 +26116,13 @@ void OpenGLExtensionsGen::initializeWGL_I3D()
 	if ( isWGL_I3D_digital_video_control )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_I3D_digital_video_control                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_I3D_digital_video_control                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_I3D_digital_video_control                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_I3D_digital_video_control                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26135,7 +26135,7 @@ void OpenGLExtensionsGen::initializeWGL_I3D()
 	}
 	else
 	{
-		logEndl( "WGL_I3D_digital_video_control                                      : not detected." );
+		logEndl( "WGL_I3D_digital_video_control                     : not detected." );
 	}
 
 
@@ -26169,13 +26169,13 @@ void OpenGLExtensionsGen::initializeWGL_I3D()
 	if ( isWGL_I3D_gamma )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_I3D_gamma                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_I3D_gamma                                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_I3D_gamma                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_I3D_gamma                                     : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26188,7 +26188,7 @@ void OpenGLExtensionsGen::initializeWGL_I3D()
 	}
 	else
 	{
-		logEndl( "WGL_I3D_gamma                                      : not detected." );
+		logEndl( "WGL_I3D_gamma                                     : not detected." );
 	}
 
 
@@ -26246,13 +26246,13 @@ void OpenGLExtensionsGen::initializeWGL_I3D()
 	if ( isWGL_I3D_genlock )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_I3D_genlock                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_I3D_genlock                                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_I3D_genlock                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_I3D_genlock                                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26265,7 +26265,7 @@ void OpenGLExtensionsGen::initializeWGL_I3D()
 	}
 	else
 	{
-		logEndl( "WGL_I3D_genlock                                      : not detected." );
+		logEndl( "WGL_I3D_genlock                                   : not detected." );
 	}
 
 
@@ -26299,13 +26299,13 @@ void OpenGLExtensionsGen::initializeWGL_I3D()
 	if ( isWGL_I3D_image_buffer )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_I3D_image_buffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_I3D_image_buffer                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_I3D_image_buffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_I3D_image_buffer                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26318,7 +26318,7 @@ void OpenGLExtensionsGen::initializeWGL_I3D()
 	}
 	else
 	{
-		logEndl( "WGL_I3D_image_buffer                                      : not detected." );
+		logEndl( "WGL_I3D_image_buffer                              : not detected." );
 	}
 
 
@@ -26352,13 +26352,13 @@ void OpenGLExtensionsGen::initializeWGL_I3D()
 	if ( isWGL_I3D_swap_frame_lock )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_I3D_swap_frame_lock                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_I3D_swap_frame_lock                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_I3D_swap_frame_lock                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_I3D_swap_frame_lock                           : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26371,7 +26371,7 @@ void OpenGLExtensionsGen::initializeWGL_I3D()
 	}
 	else
 	{
-		logEndl( "WGL_I3D_swap_frame_lock                                      : not detected." );
+		logEndl( "WGL_I3D_swap_frame_lock                           : not detected." );
 	}
 
 
@@ -26405,13 +26405,13 @@ void OpenGLExtensionsGen::initializeWGL_I3D()
 	if ( isWGL_I3D_swap_frame_usage )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_I3D_swap_frame_usage                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_I3D_swap_frame_usage                          : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_I3D_swap_frame_usage                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_I3D_swap_frame_usage                          : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26424,7 +26424,7 @@ void OpenGLExtensionsGen::initializeWGL_I3D()
 	}
 	else
 	{
-		logEndl( "WGL_I3D_swap_frame_usage                                      : not detected." );
+		logEndl( "WGL_I3D_swap_frame_usage                          : not detected." );
 	}
 
 
@@ -26457,13 +26457,13 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	if ( isWGL_NV_copy_image )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_NV_copy_image                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_NV_copy_image                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_NV_copy_image                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_NV_copy_image                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26476,7 +26476,7 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	}
 	else
 	{
-		logEndl( "WGL_NV_copy_image                                      : not detected." );
+		logEndl( "WGL_NV_copy_image                                 : not detected." );
 	}
 
 
@@ -26494,13 +26494,13 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	if ( isWGL_NV_float_buffer )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_NV_float_buffer                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_NV_float_buffer                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_NV_float_buffer                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_NV_float_buffer                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26513,7 +26513,7 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	}
 	else
 	{
-		logEndl( "WGL_NV_float_buffer                                      : not detected." );
+		logEndl( "WGL_NV_float_buffer                               : not detected." );
 	}
 
 
@@ -26550,13 +26550,13 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	if ( isWGL_NV_gpu_affinity )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_NV_gpu_affinity                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_NV_gpu_affinity                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_NV_gpu_affinity                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_NV_gpu_affinity                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26569,7 +26569,7 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	}
 	else
 	{
-		logEndl( "WGL_NV_gpu_affinity                                      : not detected." );
+		logEndl( "WGL_NV_gpu_affinity                               : not detected." );
 	}
 
 
@@ -26587,13 +26587,13 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	if ( isWGL_NV_multisample_coverage )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_NV_multisample_coverage                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_NV_multisample_coverage                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_NV_multisample_coverage                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_NV_multisample_coverage                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26606,7 +26606,7 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	}
 	else
 	{
-		logEndl( "WGL_NV_multisample_coverage                                      : not detected." );
+		logEndl( "WGL_NV_multisample_coverage                       : not detected." );
 	}
 
 
@@ -26637,13 +26637,13 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	if ( isWGL_NV_present_video )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_NV_present_video                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_NV_present_video                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_NV_present_video                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_NV_present_video                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26656,7 +26656,7 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	}
 	else
 	{
-		logEndl( "WGL_NV_present_video                                      : not detected." );
+		logEndl( "WGL_NV_present_video                              : not detected." );
 	}
 
 
@@ -26674,13 +26674,13 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	if ( isWGL_NV_render_depth_texture )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_NV_render_depth_texture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_NV_render_depth_texture                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_NV_render_depth_texture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_NV_render_depth_texture                       : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26693,7 +26693,7 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	}
 	else
 	{
-		logEndl( "WGL_NV_render_depth_texture                                      : not detected." );
+		logEndl( "WGL_NV_render_depth_texture                       : not detected." );
 	}
 
 
@@ -26711,13 +26711,13 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	if ( isWGL_NV_render_texture_rectangle )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_NV_render_texture_rectangle                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_NV_render_texture_rectangle                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_NV_render_texture_rectangle                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_NV_render_texture_rectangle                   : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26730,7 +26730,7 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	}
 	else
 	{
-		logEndl( "WGL_NV_render_texture_rectangle                                      : not detected." );
+		logEndl( "WGL_NV_render_texture_rectangle                   : not detected." );
 	}
 
 
@@ -26770,13 +26770,13 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	if ( isWGL_NV_swap_group )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_NV_swap_group                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_NV_swap_group                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_NV_swap_group                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_NV_swap_group                                 : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26789,7 +26789,7 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	}
 	else
 	{
-		logEndl( "WGL_NV_swap_group                                      : not detected." );
+		logEndl( "WGL_NV_swap_group                                 : not detected." );
 	}
 
 
@@ -26817,13 +26817,13 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	if ( isWGL_NV_vertex_array_range )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_NV_vertex_array_range                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_NV_vertex_array_range                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_NV_vertex_array_range                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_NV_vertex_array_range                         : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26836,7 +26836,7 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	}
 	else
 	{
-		logEndl( "WGL_NV_vertex_array_range                                      : not detected." );
+		logEndl( "WGL_NV_vertex_array_range                         : not detected." );
 	}
 
 
@@ -26873,13 +26873,13 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	if ( isWGL_NV_video_capture )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_NV_video_capture                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_NV_video_capture                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_NV_video_capture                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_NV_video_capture                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26892,7 +26892,7 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	}
 	else
 	{
-		logEndl( "WGL_NV_video_capture                                      : not detected." );
+		logEndl( "WGL_NV_video_capture                              : not detected." );
 	}
 
 
@@ -26910,13 +26910,13 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	if ( isWGL_NV_video_out )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_NV_video_out                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_NV_video_out                                  : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_NV_video_out                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_NV_video_out                                  : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26929,7 +26929,7 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	}
 	else
 	{
-		logEndl( "WGL_NV_video_out                                      : not detected." );
+		logEndl( "WGL_NV_video_out                                  : not detected." );
 	}
 
 
@@ -26969,13 +26969,13 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	if ( isWGL_NV_video_output )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_NV_video_output                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_NV_video_output                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_NV_video_output                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_NV_video_output                               : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -26988,7 +26988,7 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 	}
 	else
 	{
-		logEndl( "WGL_NV_video_output                                      : not detected." );
+		logEndl( "WGL_NV_video_output                               : not detected." );
 	}
 
 
@@ -27036,13 +27036,13 @@ void OpenGLExtensionsGen::initializeWGL_OML()
 	if ( isWGL_OML_sync_control )
 	{
 		std::stringstream strStream;
-		strStream << "WGL_OML_sync_control                                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "WGL_OML_sync_control                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "WGL_OML_sync_control                                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "WGL_OML_sync_control                              : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
@@ -27055,7 +27055,7 @@ void OpenGLExtensionsGen::initializeWGL_OML()
 	}
 	else
 	{
-		logEndl( "WGL_OML_sync_control                                      : not detected." );
+		logEndl( "WGL_OML_sync_control                              : not detected." );
 	}
 
 
