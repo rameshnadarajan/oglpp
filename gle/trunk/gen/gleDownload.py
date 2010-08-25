@@ -22,10 +22,10 @@ def rsearchFilename( path ):
 			return rsearchFilename( splitted[0] )
 
 def reporthook_urlretrieve( blockCount, blockSize, totalSize ):
-	size = blockCount * blockSize
-	# Prints report on download advancement (each 64 kb)
-	if ( (size/1024) % 64 == 0):
-		print ( '%i kB ' % (size / 1024) )
+	size = blockCount * blockSize / 1024
+	# Prints report on download advancement (each 4 kb)
+	if ( size % 4 == 0):
+		print ( '{0} kB \r'.format(size) ),
 
 
 
@@ -36,7 +36,7 @@ def downloadOpenGLHeaderFiles():
 		filename = rsearchFilename( urlparse.urlparse(url).path )
 		print ( '* Retrieves %s from %s' % (filename, urlparse.urlparse(url).hostname ) )
 		urllib.urlretrieve( url, filename, reporthook=reporthook_urlretrieve)
-		print ( 'Done.' )
+		print ( 'Done.' + ' '*16 )
 		print
 
 def downloadOpenGLRegistry():
@@ -44,5 +44,5 @@ def downloadOpenGLRegistry():
 	filename = 'registry.html'
 	print ( '* Retrieves {0} from {1}'.format( filename, urlparse.urlparse(url).hostname ) )
 	urllib.urlretrieve( url, filename, reporthook=reporthook_urlretrieve)
-	print ( 'Done.' )
+	print ( 'Done.' + ' '*16 )
 	print

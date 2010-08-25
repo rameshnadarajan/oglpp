@@ -1,4 +1,4 @@
-// This file was generated at Wed, 28 Jul 2010 12:51:41 +0000 with gle, please do not modify.
+// This file was generated at Mon, 23 Aug 2010 09:25:21 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,12 +6,12 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2010-06-15 23:46:28 -0700 (Tue, 15 Jun 2010) $ */
-// #define GL_GLEXT_VERSION 63
-// /* glxext.h last updated 2010/06/15 */
-// #define GLX_GLXEXT_VERSION 29
-// /* wglext.h last updated 2010/05/17 */
-// #define WGL_WGLEXT_VERSION 19
+// /* glext.h last updated $Date: 2010-08-03 01:30:25 -0700 (Tue, 03 Aug 2010) $ */
+// #define GL_GLEXT_VERSION 64
+// /* glxext.h last updated 2010/08/06 */
+// #define GLX_GLXEXT_VERSION 32
+// /* wglext.h last updated 2010/08/06 */
+// #define WGL_WGLEXT_VERSION 22
 
 #ifndef _GLE_WRAPPERGEN_HPP
 #define _GLE_WRAPPERGEN_HPP
@@ -43,17 +43,17 @@
  */
 
 /** 
- * @defgroup g_GLX_ARB			GLX_ARB (6 extensions found)
+ * @defgroup g_GLX_AMD			GLX_AMD (1 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GLX_EXT			GLX_EXT (7 extensions found)
+ * @defgroup g_GLX_ARB			GLX_ARB (8 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GLX_GLX			GLX_GLX (1 extensions found)
+ * @defgroup g_GLX_EXT			GLX_EXT (8 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -118,7 +118,7 @@
  */
 
 /** 
- * @defgroup g_GL_ARB			GL_ARB (86 extensions found)
+ * @defgroup g_GL_ARB			GL_ARB (96 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -228,7 +228,7 @@
  */
 
 /** 
- * @defgroup g_GL_VERSION			GL_VERSION (18 extensions found)
+ * @defgroup g_GL_VERSION			GL_VERSION (19 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -253,7 +253,7 @@
  */
 
 /** 
- * @defgroup g_WGL_ARB			WGL_ARB (10 extensions found)
+ * @defgroup g_WGL_ARB			WGL_ARB (12 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -263,7 +263,7 @@
  */
 
 /** 
- * @defgroup g_WGL_EXT			WGL_EXT (10 extensions found)
+ * @defgroup g_WGL_EXT			WGL_EXT (11 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -298,6 +298,27 @@
  * @return Returns \c true if \b GLX_3DFX_multisample is supported, \c false otherwise.
  */
 GLE_API bool isGLX_3DFX_multisample();
+
+
+//@}
+#endif //POSIX
+
+
+
+#ifdef POSIX
+/**
+ * @defgroup GLX_AMD_gpu_association GLX_AMD_gpu_association
+ * Extension number in OpenGL registry : 398
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/glx_gpu_association.txt
+ * @ingroup g_GLX_AMD g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GLX_AMD_gpu_association is supported.
+ * @return Returns \c true if \b GLX_AMD_gpu_association is supported, \c false otherwise.
+ */
+GLE_API bool isGLX_AMD_gpu_association();
 
 
 //@}
@@ -355,6 +376,27 @@ GLE_API bool isGLX_ARB_create_context_profile();
 
 #ifdef POSIX
 /**
+ * @defgroup GLX_ARB_create_context_robustness GLX_ARB_create_context_robustness
+ * Extension number in OpenGL registry : 101
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/glx_create_context_robustness.txt
+ * @ingroup g_GLX_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GLX_ARB_create_context_robustness is supported.
+ * @return Returns \c true if \b GLX_ARB_create_context_robustness is supported, \c false otherwise.
+ */
+GLE_API bool isGLX_ARB_create_context_robustness();
+
+
+//@}
+#endif //POSIX
+
+
+
+#ifdef POSIX
+/**
  * @defgroup GLX_ARB_fbconfig_float GLX_ARB_fbconfig_float
  * Extension number in OpenGL registry : 39
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/color_buffer_float.txt
@@ -367,6 +409,27 @@ GLE_API bool isGLX_ARB_create_context_profile();
  * @return Returns \c true if \b GLX_ARB_fbconfig_float is supported, \c false otherwise.
  */
 GLE_API bool isGLX_ARB_fbconfig_float();
+
+
+//@}
+#endif //POSIX
+
+
+
+#ifdef POSIX
+/**
+ * @defgroup GLX_ARB_framebuffer_sRGB GLX_ARB_framebuffer_sRGB
+ * Extension number in OpenGL registry : 46
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/framebuffer_sRGB.txt
+ * @ingroup g_GLX_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GLX_ARB_framebuffer_sRGB is supported.
+ * @return Returns \c true if \b GLX_ARB_framebuffer_sRGB is supported, \c false otherwise.
+ */
+GLE_API bool isGLX_ARB_framebuffer_sRGB();
 
 
 //@}
@@ -436,6 +499,27 @@ GLE_API bool isGLX_ARB_multisample();
  * @return Returns \c true if \b GLX_ARB_vertex_buffer_object is supported, \c false otherwise.
  */
 GLE_API bool isGLX_ARB_vertex_buffer_object();
+
+
+//@}
+#endif //POSIX
+
+
+
+#ifdef POSIX
+/**
+ * @defgroup GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es2_profile
+ * Extension number in OpenGL registry : 399
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/glx_create_context_es2_profile.txt
+ * @ingroup g_GLX_EXT g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GLX_EXT_create_context_es2_profile is supported.
+ * @return Returns \c true if \b GLX_EXT_create_context_es2_profile is supported, \c false otherwise.
+ */
+GLE_API bool isGLX_EXT_create_context_es2_profile();
 
 
 //@}
@@ -626,27 +710,6 @@ GLE_API bool isGLX_EXT_visual_info();
  * @return Returns \c true if \b GLX_EXT_visual_rating is supported, \c false otherwise.
  */
 GLE_API bool isGLX_EXT_visual_rating();
-
-
-//@}
-#endif //POSIX
-
-
-
-#ifdef POSIX
-/**
- * @defgroup GLX_GLX_AMD_gpu_association GLX_GLX_AMD_gpu_association
- * Extension number in OpenGL registry : NA
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
- * @ingroup g_GLX_GLX g_extensions
- */
-//@{
-
-/**
- * @brief  Tests if \b GLX_GLX_AMD_gpu_association is supported.
- * @return Returns \c true if \b GLX_GLX_AMD_gpu_association is supported, \c false otherwise.
- */
-GLE_API bool isGLX_GLX_AMD_gpu_association();
 
 
 //@}
@@ -1947,6 +2010,27 @@ GLE_API bool isGL_AMD_conservative_depth();
 GLE_API bool isGL_AMD_debug_output();
 
 
+
+/**
+ * @brief void glDebugMessageCallbackAMD(GLDEBUGPROCAMD callback, GLvoid *userParam)
+ */
+GLE_API void glDebugMessageCallbackAMD(GLDEBUGPROCAMD callback, GLvoid *userParam);
+
+/**
+ * @brief void glDebugMessageEnableAMD(GLenum category, GLenum severity, GLsizei count, const GLuint *ids, GLboolean enabled)
+ */
+GLE_API void glDebugMessageEnableAMD(GLenum category, GLenum severity, GLsizei count, const GLuint *ids, GLboolean enabled);
+
+/**
+ * @brief void glDebugMessageInsertAMD(GLenum category, GLenum severity, GLuint id, GLsizei length, const GLchar *buf)
+ */
+GLE_API void glDebugMessageInsertAMD(GLenum category, GLenum severity, GLuint id, GLsizei length, const GLchar *buf);
+
+/**
+ * @brief GLuint glGetDebugMessageLogAMD(GLuint count, GLsizei bufsize, GLenum *categories, GLuint *severities, GLuint *ids, GLsizei *lengths, GLchar *message)
+ */
+GLE_API GLuint glGetDebugMessageLogAMD(GLuint count, GLsizei bufsize, GLenum *categories, GLuint *severities, GLuint *ids, GLsizei *lengths, GLchar *message);
+
 //@}
 
 
@@ -2008,6 +2092,22 @@ GLE_API void glBlendFuncSeparateIndexedAMD(GLuint buf, GLenum srcRGB, GLenum dst
 GLE_API bool isGL_AMD_name_gen_delete();
 
 
+
+/**
+ * @brief void glDeleteNamesAMD(GLenum identifier, GLuint num, const GLuint *names)
+ */
+GLE_API void glDeleteNamesAMD(GLenum identifier, GLuint num, const GLuint *names);
+
+/**
+ * @brief void glGenNamesAMD(GLenum identifier, GLuint num, GLuint *names)
+ */
+GLE_API void glGenNamesAMD(GLenum identifier, GLuint num, GLuint *names);
+
+/**
+ * @brief GLboolean glIsNameAMD(GLenum identifier, GLuint name)
+ */
+GLE_API GLboolean glIsNameAMD(GLenum identifier, GLuint name);
+
 //@}
 
 
@@ -2055,9 +2155,9 @@ GLE_API void glGenPerfMonitorsAMD(GLsizei n, GLuint *monitors);
 GLE_API void glGetPerfMonitorCounterDataAMD(GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten);
 
 /**
- * @brief void glGetPerfMonitorCounterInfoAMD(GLuint group, GLuint counter, GLenum pname, void *data)
+ * @brief void glGetPerfMonitorCounterInfoAMD(GLuint group, GLuint counter, GLenum pname, GLvoid *data)
  */
-GLE_API void glGetPerfMonitorCounterInfoAMD(GLuint group, GLuint counter, GLenum pname, void *data);
+GLE_API void glGetPerfMonitorCounterInfoAMD(GLuint group, GLuint counter, GLenum pname, GLvoid *data);
 
 /**
  * @brief void glGetPerfMonitorCounterStringAMD(GLuint group, GLuint counter, GLsizei bufSize, GLsizei *length, GLchar *counterString)
@@ -2699,6 +2799,52 @@ GLE_API bool isGL_APPLE_ycbcr_422();
 
 
 /**
+ * @defgroup GL_ARB_ES2_compatibility GL_ARB_ES2_compatibility
+ * Extension number in OpenGL registry : 95
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/ES2_compatibility.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_ES2_compatibility is supported.
+ * @return Returns \c true if \b GL_ARB_ES2_compatibility is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_ES2_compatibility();
+
+
+
+/**
+ * @brief void glClearDepthf(GLclampf d)
+ */
+GLE_API void glClearDepthf(GLclampf d);
+
+/**
+ * @brief void glDepthRangef(GLclampf n, GLclampf f)
+ */
+GLE_API void glDepthRangef(GLclampf n, GLclampf f);
+
+/**
+ * @brief void glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint *range, GLint *precision)
+ */
+GLE_API void glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint *range, GLint *precision);
+
+/**
+ * @brief void glReleaseShaderCompiler(void)
+ */
+GLE_API void glReleaseShaderCompiler(void);
+
+/**
+ * @brief void glShaderBinary(GLsizei count, const GLuint *shaders, GLenum binaryformat, const GLvoid *binary, GLsizei length)
+ */
+GLE_API void glShaderBinary(GLsizei count, const GLuint *shaders, GLenum binaryformat, const GLvoid *binary, GLsizei length);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_blend_func_extended GL_ARB_blend_func_extended
  * Extension number in OpenGL registry : 78
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/blend_func_extended.txt
@@ -2723,6 +2869,32 @@ GLE_API void glBindFragDataLocationIndexed(GLuint program, GLuint colorNumber, G
  * @brief GLint glGetFragDataIndex(GLuint program, const GLchar *name)
  */
 GLE_API GLint glGetFragDataIndex(GLuint program, const GLchar *name);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_cl_event GL_ARB_cl_event
+ * Extension number in OpenGL registry : 103
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/cl_event.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_cl_event is supported.
+ * @return Returns \c true if \b GL_ARB_cl_event is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_cl_event();
+
+
+
+/**
+ * @brief GLsync glCreateSyncFromCLeventARB(struct _cl_context * context, struct _cl_event * event, GLbitfield flags)
+ */
+GLE_API GLsync glCreateSyncFromCLeventARB(struct _cl_context * context, struct _cl_event * event, GLbitfield flags);
 
 //@}
 
@@ -2795,6 +2967,47 @@ GLE_API bool isGL_ARB_copy_buffer();
  * @brief void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size)
  */
 GLE_API void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_debug_output GL_ARB_debug_output
+ * Extension number in OpenGL registry : 104
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/debug_output.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_debug_output is supported.
+ * @return Returns \c true if \b GL_ARB_debug_output is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_debug_output();
+
+
+
+/**
+ * @brief void glDebugMessageCallbackARB(GLDEBUGPROCARB callback, const GLvoid *userParam)
+ */
+GLE_API void glDebugMessageCallbackARB(GLDEBUGPROCARB callback, const GLvoid *userParam);
+
+/**
+ * @brief void glDebugMessageControlARB(GLenum source, GLenum type, GLenum severity, GLsizei count, const GLuint *ids, GLboolean enabled)
+ */
+GLE_API void glDebugMessageControlARB(GLenum source, GLenum type, GLenum severity, GLsizei count, const GLuint *ids, GLboolean enabled);
+
+/**
+ * @brief void glDebugMessageInsertARB(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar *buf)
+ */
+GLE_API void glDebugMessageInsertARB(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar *buf);
+
+/**
+ * @brief GLuint glGetDebugMessageLogARB(GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog)
+ */
+GLE_API GLuint glGetDebugMessageLogARB(GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog);
 
 //@}
 
@@ -2904,24 +3117,24 @@ GLE_API bool isGL_ARB_draw_buffers_blend();
 
 
 /**
- * @brief void glBlendEquationSeparatei(GLuint buf, GLenum modeRGB, GLenum modeAlpha)
+ * @brief void glBlendEquationSeparateiARB(GLuint buf, GLenum modeRGB, GLenum modeAlpha)
  */
-GLE_API void glBlendEquationSeparatei(GLuint buf, GLenum modeRGB, GLenum modeAlpha);
+GLE_API void glBlendEquationSeparateiARB(GLuint buf, GLenum modeRGB, GLenum modeAlpha);
 
 /**
- * @brief void glBlendEquationi(GLuint buf, GLenum mode)
+ * @brief void glBlendEquationiARB(GLuint buf, GLenum mode)
  */
-GLE_API void glBlendEquationi(GLuint buf, GLenum mode);
+GLE_API void glBlendEquationiARB(GLuint buf, GLenum mode);
 
 /**
- * @brief void glBlendFuncSeparatei(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
+ * @brief void glBlendFuncSeparateiARB(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
  */
-GLE_API void glBlendFuncSeparatei(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
+GLE_API void glBlendFuncSeparateiARB(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
 
 /**
- * @brief void glBlendFunci(GLuint buf, GLenum src, GLenum dst)
+ * @brief void glBlendFunciARB(GLuint buf, GLenum src, GLenum dst)
  */
-GLE_API void glBlendFunci(GLuint buf, GLenum src, GLenum dst);
+GLE_API void glBlendFunciARB(GLuint buf, GLenum src, GLenum dst);
 
 //@}
 
@@ -3334,6 +3547,42 @@ GLE_API void glProgramParameteriARB(GLuint program, GLenum pname, GLint value);
 
 
 /**
+ * @defgroup GL_ARB_get_program_binary GL_ARB_get_program_binary
+ * Extension number in OpenGL registry : 96
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/get_program_binary.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_get_program_binary is supported.
+ * @return Returns \c true if \b GL_ARB_get_program_binary is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_get_program_binary();
+
+
+
+/**
+ * @brief void glGetProgramBinary(GLuint program, GLsizei bufSize, GLsizei *length, GLenum *binaryFormat, GLvoid *binary)
+ */
+GLE_API void glGetProgramBinary(GLuint program, GLsizei bufSize, GLsizei *length, GLenum *binaryFormat, GLvoid *binary);
+
+/**
+ * @brief void glProgramBinary(GLuint program, GLenum binaryFormat, const GLvoid *binary, GLsizei length)
+ */
+GLE_API void glProgramBinary(GLuint program, GLenum binaryFormat, const GLvoid *binary, GLsizei length);
+
+/**
+ * @brief void glProgramParameteri(GLuint program, GLenum pname, GLint value)
+ */
+GLE_API void glProgramParameteri(GLuint program, GLenum pname, GLint value);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_gpu_shader5 GL_ARB_gpu_shader5
  * Extension number in OpenGL registry : 88
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/gpu_shader5.txt
@@ -3373,91 +3622,6 @@ GLE_API bool isGL_ARB_gpu_shader_fp64();
  * @brief void glGetUniformdv(GLuint program, GLint location, GLdouble *params)
  */
 GLE_API void glGetUniformdv(GLuint program, GLint location, GLdouble *params);
-
-/**
- * @brief void glProgramUniform1dEXT(GLuint program, GLint location, GLdouble x)
- */
-GLE_API void glProgramUniform1dEXT(GLuint program, GLint location, GLdouble x);
-
-/**
- * @brief void glProgramUniform1dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
- */
-GLE_API void glProgramUniform1dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value);
-
-/**
- * @brief void glProgramUniform2dEXT(GLuint program, GLint location, GLdouble x, GLdouble y)
- */
-GLE_API void glProgramUniform2dEXT(GLuint program, GLint location, GLdouble x, GLdouble y);
-
-/**
- * @brief void glProgramUniform2dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
- */
-GLE_API void glProgramUniform2dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value);
-
-/**
- * @brief void glProgramUniform3dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z)
- */
-GLE_API void glProgramUniform3dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z);
-
-/**
- * @brief void glProgramUniform3dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
- */
-GLE_API void glProgramUniform3dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value);
-
-/**
- * @brief void glProgramUniform4dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
- */
-GLE_API void glProgramUniform4dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
-
-/**
- * @brief void glProgramUniform4dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
- */
-GLE_API void glProgramUniform4dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value);
-
-/**
- * @brief void glProgramUniformMatrix2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
- */
-GLE_API void glProgramUniformMatrix2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
-
-/**
- * @brief void glProgramUniformMatrix2x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
- */
-GLE_API void glProgramUniformMatrix2x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
-
-/**
- * @brief void glProgramUniformMatrix2x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
- */
-GLE_API void glProgramUniformMatrix2x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
-
-/**
- * @brief void glProgramUniformMatrix3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
- */
-GLE_API void glProgramUniformMatrix3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
-
-/**
- * @brief void glProgramUniformMatrix3x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
- */
-GLE_API void glProgramUniformMatrix3x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
-
-/**
- * @brief void glProgramUniformMatrix3x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
- */
-GLE_API void glProgramUniformMatrix3x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
-
-/**
- * @brief void glProgramUniformMatrix4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
- */
-GLE_API void glProgramUniformMatrix4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
-
-/**
- * @brief void glProgramUniformMatrix4x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
- */
-GLE_API void glProgramUniformMatrix4x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
-
-/**
- * @brief void glProgramUniformMatrix4x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
- */
-GLE_API void glProgramUniformMatrix4x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
  * @brief void glUniform1d(GLint location, GLdouble x)
@@ -4128,6 +4292,127 @@ GLE_API void glProvokingVertex(GLenum mode);
 
 
 /**
+ * @defgroup GL_ARB_robustness GL_ARB_robustness
+ * Extension number in OpenGL registry : 105
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/robustness.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_robustness is supported.
+ * @return Returns \c true if \b GL_ARB_robustness is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_robustness();
+
+
+
+/**
+ * @brief GLenum glGetGraphicsResetStatusARB(void)
+ */
+GLE_API GLenum glGetGraphicsResetStatusARB(void);
+
+/**
+ * @brief void glGetnColorTableARB(GLenum target, GLenum format, GLenum type, GLsizei bufSize, GLvoid *table)
+ */
+GLE_API void glGetnColorTableARB(GLenum target, GLenum format, GLenum type, GLsizei bufSize, GLvoid *table);
+
+/**
+ * @brief void glGetnCompressedTexImageARB(GLenum target, GLint lod, GLsizei bufSize, GLvoid *img)
+ */
+GLE_API void glGetnCompressedTexImageARB(GLenum target, GLint lod, GLsizei bufSize, GLvoid *img);
+
+/**
+ * @brief void glGetnConvolutionFilterARB(GLenum target, GLenum format, GLenum type, GLsizei bufSize, GLvoid *image)
+ */
+GLE_API void glGetnConvolutionFilterARB(GLenum target, GLenum format, GLenum type, GLsizei bufSize, GLvoid *image);
+
+/**
+ * @brief void glGetnHistogramARB(GLenum target, GLboolean reset, GLenum format, GLenum type, GLsizei bufSize, GLvoid *values)
+ */
+GLE_API void glGetnHistogramARB(GLenum target, GLboolean reset, GLenum format, GLenum type, GLsizei bufSize, GLvoid *values);
+
+/**
+ * @brief void glGetnMapdvARB(GLenum target, GLenum query, GLsizei bufSize, GLdouble *v)
+ */
+GLE_API void glGetnMapdvARB(GLenum target, GLenum query, GLsizei bufSize, GLdouble *v);
+
+/**
+ * @brief void glGetnMapfvARB(GLenum target, GLenum query, GLsizei bufSize, GLfloat *v)
+ */
+GLE_API void glGetnMapfvARB(GLenum target, GLenum query, GLsizei bufSize, GLfloat *v);
+
+/**
+ * @brief void glGetnMapivARB(GLenum target, GLenum query, GLsizei bufSize, GLint *v)
+ */
+GLE_API void glGetnMapivARB(GLenum target, GLenum query, GLsizei bufSize, GLint *v);
+
+/**
+ * @brief void glGetnMinmaxARB(GLenum target, GLboolean reset, GLenum format, GLenum type, GLsizei bufSize, GLvoid *values)
+ */
+GLE_API void glGetnMinmaxARB(GLenum target, GLboolean reset, GLenum format, GLenum type, GLsizei bufSize, GLvoid *values);
+
+/**
+ * @brief void glGetnPixelMapfvARB(GLenum map, GLsizei bufSize, GLfloat *values)
+ */
+GLE_API void glGetnPixelMapfvARB(GLenum map, GLsizei bufSize, GLfloat *values);
+
+/**
+ * @brief void glGetnPixelMapuivARB(GLenum map, GLsizei bufSize, GLuint *values)
+ */
+GLE_API void glGetnPixelMapuivARB(GLenum map, GLsizei bufSize, GLuint *values);
+
+/**
+ * @brief void glGetnPixelMapusvARB(GLenum map, GLsizei bufSize, GLushort *values)
+ */
+GLE_API void glGetnPixelMapusvARB(GLenum map, GLsizei bufSize, GLushort *values);
+
+/**
+ * @brief void glGetnPolygonStippleARB(GLsizei bufSize, GLubyte *pattern)
+ */
+GLE_API void glGetnPolygonStippleARB(GLsizei bufSize, GLubyte *pattern);
+
+/**
+ * @brief void glGetnSeparableFilterARB(GLenum target, GLenum format, GLenum type, GLsizei rowBufSize, GLvoid *row, GLsizei columnBufSize, GLvoid *column, GLvoid *span)
+ */
+GLE_API void glGetnSeparableFilterARB(GLenum target, GLenum format, GLenum type, GLsizei rowBufSize, GLvoid *row, GLsizei columnBufSize, GLvoid *column, GLvoid *span);
+
+/**
+ * @brief void glGetnTexImageARB(GLenum target, GLint level, GLenum format, GLenum type, GLsizei bufSize, GLvoid *img)
+ */
+GLE_API void glGetnTexImageARB(GLenum target, GLint level, GLenum format, GLenum type, GLsizei bufSize, GLvoid *img);
+
+/**
+ * @brief void glGetnUniformdvARB(GLuint program, GLint location, GLsizei bufSize, GLdouble *params)
+ */
+GLE_API void glGetnUniformdvARB(GLuint program, GLint location, GLsizei bufSize, GLdouble *params);
+
+/**
+ * @brief void glGetnUniformfvARB(GLuint program, GLint location, GLsizei bufSize, GLfloat *params)
+ */
+GLE_API void glGetnUniformfvARB(GLuint program, GLint location, GLsizei bufSize, GLfloat *params);
+
+/**
+ * @brief void glGetnUniformivARB(GLuint program, GLint location, GLsizei bufSize, GLint *params)
+ */
+GLE_API void glGetnUniformivARB(GLuint program, GLint location, GLsizei bufSize, GLint *params);
+
+/**
+ * @brief void glGetnUniformuivARB(GLuint program, GLint location, GLsizei bufSize, GLuint *params)
+ */
+GLE_API void glGetnUniformuivARB(GLuint program, GLint location, GLsizei bufSize, GLuint *params);
+
+/**
+ * @brief void glReadnPixelsARB(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLsizei bufSize, GLvoid *data)
+ */
+GLE_API void glReadnPixelsARB(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLsizei bufSize, GLvoid *data);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_sample_shading GL_ARB_sample_shading
  * Extension number in OpenGL registry : 70
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/sample_shading.txt
@@ -4144,9 +4429,9 @@ GLE_API bool isGL_ARB_sample_shading();
 
 
 /**
- * @brief void glMinSampleShading(GLclampf value)
+ * @brief void glMinSampleShadingARB(GLclampf value)
  */
-GLE_API void glMinSampleShading(GLclampf value);
+GLE_API void glMinSampleShadingARB(GLclampf value);
 
 //@}
 
@@ -4185,14 +4470,14 @@ GLE_API void glDeleteSamplers(GLsizei count, const GLuint *samplers);
 GLE_API void glGenSamplers(GLsizei count, GLuint *samplers);
 
 /**
- * @brief void glGetSamplerParameterIfv(GLuint sampler, GLenum pname, GLfloat *params)
- */
-GLE_API void glGetSamplerParameterIfv(GLuint sampler, GLenum pname, GLfloat *params);
-
-/**
  * @brief void glGetSamplerParameterIiv(GLuint sampler, GLenum pname, GLint *params)
  */
 GLE_API void glGetSamplerParameterIiv(GLuint sampler, GLenum pname, GLint *params);
+
+/**
+ * @brief void glGetSamplerParameterIuiv(GLuint sampler, GLenum pname, GLuint *params)
+ */
+GLE_API void glGetSamplerParameterIuiv(GLuint sampler, GLenum pname, GLuint *params);
 
 /**
  * @brief void glGetSamplerParameterfv(GLuint sampler, GLenum pname, GLfloat *params)
@@ -4258,6 +4543,327 @@ GLE_API void glSamplerParameteriv(GLuint sampler, GLenum pname, const GLint *par
  */
 GLE_API bool isGL_ARB_seamless_cube_map();
 
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_separate_shader_objects GL_ARB_separate_shader_objects
+ * Extension number in OpenGL registry : 97
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/separate_shader_objects.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_separate_shader_objects is supported.
+ * @return Returns \c true if \b GL_ARB_separate_shader_objects is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_separate_shader_objects();
+
+
+
+/**
+ * @brief void glActiveShaderProgram(GLuint pipeline, GLuint program)
+ */
+GLE_API void glActiveShaderProgram(GLuint pipeline, GLuint program);
+
+/**
+ * @brief void glBindProgramPipeline(GLuint pipeline)
+ */
+GLE_API void glBindProgramPipeline(GLuint pipeline);
+
+/**
+ * @brief GLuint glCreateShaderProgramv(GLenum type, GLsizei count, const GLchar* *strings)
+ */
+GLE_API GLuint glCreateShaderProgramv(GLenum type, GLsizei count, const GLchar* *strings);
+
+/**
+ * @brief void glDeleteProgramPipelines(GLsizei n, const GLuint *pipelines)
+ */
+GLE_API void glDeleteProgramPipelines(GLsizei n, const GLuint *pipelines);
+
+/**
+ * @brief void glGenProgramPipelines(GLsizei n, GLuint *pipelines)
+ */
+GLE_API void glGenProgramPipelines(GLsizei n, GLuint *pipelines);
+
+/**
+ * @brief void glGetProgramPipelineInfoLog(GLuint pipeline, GLsizei bufSize, GLsizei *length, GLchar *infoLog)
+ */
+GLE_API void glGetProgramPipelineInfoLog(GLuint pipeline, GLsizei bufSize, GLsizei *length, GLchar *infoLog);
+
+/**
+ * @brief void glGetProgramPipelineiv(GLuint pipeline, GLenum pname, GLint *params)
+ */
+GLE_API void glGetProgramPipelineiv(GLuint pipeline, GLenum pname, GLint *params);
+
+/**
+ * @brief GLboolean glIsProgramPipeline(GLuint pipeline)
+ */
+GLE_API GLboolean glIsProgramPipeline(GLuint pipeline);
+
+/**
+ * @brief void glProgramUniform1d(GLuint program, GLint location, GLdouble v0)
+ */
+GLE_API void glProgramUniform1d(GLuint program, GLint location, GLdouble v0);
+
+/**
+ * @brief void glProgramUniform1dv(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+ */
+GLE_API void glProgramUniform1dv(GLuint program, GLint location, GLsizei count, const GLdouble *value);
+
+/**
+ * @brief void glProgramUniform1f(GLuint program, GLint location, GLfloat v0)
+ */
+GLE_API void glProgramUniform1f(GLuint program, GLint location, GLfloat v0);
+
+/**
+ * @brief void glProgramUniform1fv(GLuint program, GLint location, GLsizei count, const GLfloat *value)
+ */
+GLE_API void glProgramUniform1fv(GLuint program, GLint location, GLsizei count, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniform1i(GLuint program, GLint location, GLint v0)
+ */
+GLE_API void glProgramUniform1i(GLuint program, GLint location, GLint v0);
+
+/**
+ * @brief void glProgramUniform1iv(GLuint program, GLint location, GLsizei count, const GLint *value)
+ */
+GLE_API void glProgramUniform1iv(GLuint program, GLint location, GLsizei count, const GLint *value);
+
+/**
+ * @brief void glProgramUniform1ui(GLuint program, GLint location, GLuint v0)
+ */
+GLE_API void glProgramUniform1ui(GLuint program, GLint location, GLuint v0);
+
+/**
+ * @brief void glProgramUniform1uiv(GLuint program, GLint location, GLsizei count, const GLuint *value)
+ */
+GLE_API void glProgramUniform1uiv(GLuint program, GLint location, GLsizei count, const GLuint *value);
+
+/**
+ * @brief void glProgramUniform2d(GLuint program, GLint location, GLdouble v0, GLdouble v1)
+ */
+GLE_API void glProgramUniform2d(GLuint program, GLint location, GLdouble v0, GLdouble v1);
+
+/**
+ * @brief void glProgramUniform2dv(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+ */
+GLE_API void glProgramUniform2dv(GLuint program, GLint location, GLsizei count, const GLdouble *value);
+
+/**
+ * @brief void glProgramUniform2f(GLuint program, GLint location, GLfloat v0, GLfloat v1)
+ */
+GLE_API void glProgramUniform2f(GLuint program, GLint location, GLfloat v0, GLfloat v1);
+
+/**
+ * @brief void glProgramUniform2fv(GLuint program, GLint location, GLsizei count, const GLfloat *value)
+ */
+GLE_API void glProgramUniform2fv(GLuint program, GLint location, GLsizei count, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniform2i(GLuint program, GLint location, GLint v0, GLint v1)
+ */
+GLE_API void glProgramUniform2i(GLuint program, GLint location, GLint v0, GLint v1);
+
+/**
+ * @brief void glProgramUniform2iv(GLuint program, GLint location, GLsizei count, const GLint *value)
+ */
+GLE_API void glProgramUniform2iv(GLuint program, GLint location, GLsizei count, const GLint *value);
+
+/**
+ * @brief void glProgramUniform2ui(GLuint program, GLint location, GLuint v0, GLuint v1)
+ */
+GLE_API void glProgramUniform2ui(GLuint program, GLint location, GLuint v0, GLuint v1);
+
+/**
+ * @brief void glProgramUniform2uiv(GLuint program, GLint location, GLsizei count, const GLuint *value)
+ */
+GLE_API void glProgramUniform2uiv(GLuint program, GLint location, GLsizei count, const GLuint *value);
+
+/**
+ * @brief void glProgramUniform3d(GLuint program, GLint location, GLdouble v0, GLdouble v1, GLdouble v2)
+ */
+GLE_API void glProgramUniform3d(GLuint program, GLint location, GLdouble v0, GLdouble v1, GLdouble v2);
+
+/**
+ * @brief void glProgramUniform3dv(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+ */
+GLE_API void glProgramUniform3dv(GLuint program, GLint location, GLsizei count, const GLdouble *value);
+
+/**
+ * @brief void glProgramUniform3f(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2)
+ */
+GLE_API void glProgramUniform3f(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2);
+
+/**
+ * @brief void glProgramUniform3fv(GLuint program, GLint location, GLsizei count, const GLfloat *value)
+ */
+GLE_API void glProgramUniform3fv(GLuint program, GLint location, GLsizei count, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniform3i(GLuint program, GLint location, GLint v0, GLint v1, GLint v2)
+ */
+GLE_API void glProgramUniform3i(GLuint program, GLint location, GLint v0, GLint v1, GLint v2);
+
+/**
+ * @brief void glProgramUniform3iv(GLuint program, GLint location, GLsizei count, const GLint *value)
+ */
+GLE_API void glProgramUniform3iv(GLuint program, GLint location, GLsizei count, const GLint *value);
+
+/**
+ * @brief void glProgramUniform3ui(GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2)
+ */
+GLE_API void glProgramUniform3ui(GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2);
+
+/**
+ * @brief void glProgramUniform3uiv(GLuint program, GLint location, GLsizei count, const GLuint *value)
+ */
+GLE_API void glProgramUniform3uiv(GLuint program, GLint location, GLsizei count, const GLuint *value);
+
+/**
+ * @brief void glProgramUniform4d(GLuint program, GLint location, GLdouble v0, GLdouble v1, GLdouble v2, GLdouble v3)
+ */
+GLE_API void glProgramUniform4d(GLuint program, GLint location, GLdouble v0, GLdouble v1, GLdouble v2, GLdouble v3);
+
+/**
+ * @brief void glProgramUniform4dv(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+ */
+GLE_API void glProgramUniform4dv(GLuint program, GLint location, GLsizei count, const GLdouble *value);
+
+/**
+ * @brief void glProgramUniform4f(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3)
+ */
+GLE_API void glProgramUniform4f(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3);
+
+/**
+ * @brief void glProgramUniform4fv(GLuint program, GLint location, GLsizei count, const GLfloat *value)
+ */
+GLE_API void glProgramUniform4fv(GLuint program, GLint location, GLsizei count, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniform4i(GLuint program, GLint location, GLint v0, GLint v1, GLint v2, GLint v3)
+ */
+GLE_API void glProgramUniform4i(GLuint program, GLint location, GLint v0, GLint v1, GLint v2, GLint v3);
+
+/**
+ * @brief void glProgramUniform4iv(GLuint program, GLint location, GLsizei count, const GLint *value)
+ */
+GLE_API void glProgramUniform4iv(GLuint program, GLint location, GLsizei count, const GLint *value);
+
+/**
+ * @brief void glProgramUniform4ui(GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3)
+ */
+GLE_API void glProgramUniform4ui(GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3);
+
+/**
+ * @brief void glProgramUniform4uiv(GLuint program, GLint location, GLsizei count, const GLuint *value)
+ */
+GLE_API void glProgramUniform4uiv(GLuint program, GLint location, GLsizei count, const GLuint *value);
+
+/**
+ * @brief void glProgramUniformMatrix2dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix2dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
+ * @brief void glProgramUniformMatrix2fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+ */
+GLE_API void glProgramUniformMatrix2fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniformMatrix2x3dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix2x3dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
+ * @brief void glProgramUniformMatrix2x3fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+ */
+GLE_API void glProgramUniformMatrix2x3fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniformMatrix2x4dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix2x4dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
+ * @brief void glProgramUniformMatrix2x4fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+ */
+GLE_API void glProgramUniformMatrix2x4fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniformMatrix3dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix3dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
+ * @brief void glProgramUniformMatrix3fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+ */
+GLE_API void glProgramUniformMatrix3fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniformMatrix3x2dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix3x2dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
+ * @brief void glProgramUniformMatrix3x2fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+ */
+GLE_API void glProgramUniformMatrix3x2fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniformMatrix3x4dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix3x4dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
+ * @brief void glProgramUniformMatrix3x4fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+ */
+GLE_API void glProgramUniformMatrix3x4fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniformMatrix4dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix4dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
+ * @brief void glProgramUniformMatrix4fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+ */
+GLE_API void glProgramUniformMatrix4fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniformMatrix4x2dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix4x2dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
+ * @brief void glProgramUniformMatrix4x2fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+ */
+GLE_API void glProgramUniformMatrix4x2fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniformMatrix4x3dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix4x3dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
+ * @brief void glProgramUniformMatrix4x3fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+ */
+GLE_API void glProgramUniformMatrix4x3fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glUseProgramStages(GLuint pipeline, GLbitfield stages, GLuint program)
+ */
+GLE_API void glUseProgramStages(GLuint pipeline, GLbitfield stages, GLuint program);
+
+/**
+ * @brief void glValidateProgramPipeline(GLuint pipeline)
+ */
+GLE_API void glValidateProgramPipeline(GLuint pipeline);
 
 //@}
 
@@ -4494,6 +5100,46 @@ GLE_API void glUseProgramObjectARB(GLhandleARB programObj);
  * @brief void glValidateProgramARB(GLhandleARB programObj)
  */
 GLE_API void glValidateProgramARB(GLhandleARB programObj);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_shader_precision GL_ARB_shader_precision
+ * Extension number in OpenGL registry : 98
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/shader_precision.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_shader_precision is supported.
+ * @return Returns \c true if \b GL_ARB_shader_precision is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_shader_precision();
+
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_shader_stencil_export GL_ARB_shader_stencil_export
+ * Extension number in OpenGL registry : 106
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/shader_stencil_export.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_shader_stencil_export is supported.
+ * @return Returns \c true if \b GL_ARB_shader_stencil_export is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_shader_stencil_export();
+
 
 //@}
 
@@ -5574,6 +6220,77 @@ GLE_API GLboolean glIsVertexArray(GLuint array);
 
 
 /**
+ * @defgroup GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_64bit
+ * Extension number in OpenGL registry : 99
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/vertex_attrib_64bit.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_vertex_attrib_64bit is supported.
+ * @return Returns \c true if \b GL_ARB_vertex_attrib_64bit is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_vertex_attrib_64bit();
+
+
+
+/**
+ * @brief void glGetVertexAttribLdv(GLuint index, GLenum pname, GLdouble *params)
+ */
+GLE_API void glGetVertexAttribLdv(GLuint index, GLenum pname, GLdouble *params);
+
+/**
+ * @brief void glVertexAttribL1d(GLuint index, GLdouble x)
+ */
+GLE_API void glVertexAttribL1d(GLuint index, GLdouble x);
+
+/**
+ * @brief void glVertexAttribL1dv(GLuint index, const GLdouble *v)
+ */
+GLE_API void glVertexAttribL1dv(GLuint index, const GLdouble *v);
+
+/**
+ * @brief void glVertexAttribL2d(GLuint index, GLdouble x, GLdouble y)
+ */
+GLE_API void glVertexAttribL2d(GLuint index, GLdouble x, GLdouble y);
+
+/**
+ * @brief void glVertexAttribL2dv(GLuint index, const GLdouble *v)
+ */
+GLE_API void glVertexAttribL2dv(GLuint index, const GLdouble *v);
+
+/**
+ * @brief void glVertexAttribL3d(GLuint index, GLdouble x, GLdouble y, GLdouble z)
+ */
+GLE_API void glVertexAttribL3d(GLuint index, GLdouble x, GLdouble y, GLdouble z);
+
+/**
+ * @brief void glVertexAttribL3dv(GLuint index, const GLdouble *v)
+ */
+GLE_API void glVertexAttribL3dv(GLuint index, const GLdouble *v);
+
+/**
+ * @brief void glVertexAttribL4d(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
+ */
+GLE_API void glVertexAttribL4d(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
+
+/**
+ * @brief void glVertexAttribL4dv(GLuint index, const GLdouble *v)
+ */
+GLE_API void glVertexAttribL4dv(GLuint index, const GLdouble *v);
+
+/**
+ * @brief void glVertexAttribLPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
+ */
+GLE_API void glVertexAttribLPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_vertex_blend GL_ARB_vertex_blend
  * Extension number in OpenGL registry : 15
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/vertex_blend.txt
@@ -6292,6 +7009,77 @@ GLE_API void glVertexP4ui(GLenum type, GLuint value);
  * @brief void glVertexP4uiv(GLenum type, const GLuint *value)
  */
 GLE_API void glVertexP4uiv(GLenum type, const GLuint *value);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_viewport_array GL_ARB_viewport_array
+ * Extension number in OpenGL registry : 100
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/viewport_array.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_viewport_array is supported.
+ * @return Returns \c true if \b GL_ARB_viewport_array is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_viewport_array();
+
+
+
+/**
+ * @brief void glDepthRangeArrayv(GLuint first, GLsizei count, const GLclampd *v)
+ */
+GLE_API void glDepthRangeArrayv(GLuint first, GLsizei count, const GLclampd *v);
+
+/**
+ * @brief void glDepthRangeIndexed(GLuint index, GLclampd n, GLclampd f)
+ */
+GLE_API void glDepthRangeIndexed(GLuint index, GLclampd n, GLclampd f);
+
+/**
+ * @brief void glGetDoublei_v(GLenum target, GLuint index, GLdouble *data)
+ */
+GLE_API void glGetDoublei_v(GLenum target, GLuint index, GLdouble *data);
+
+/**
+ * @brief void glGetFloati_v(GLenum target, GLuint index, GLfloat *data)
+ */
+GLE_API void glGetFloati_v(GLenum target, GLuint index, GLfloat *data);
+
+/**
+ * @brief void glScissorArrayv(GLuint first, GLsizei count, const GLint *v)
+ */
+GLE_API void glScissorArrayv(GLuint first, GLsizei count, const GLint *v);
+
+/**
+ * @brief void glScissorIndexed(GLuint index, GLint left, GLint bottom, GLsizei width, GLsizei height)
+ */
+GLE_API void glScissorIndexed(GLuint index, GLint left, GLint bottom, GLsizei width, GLsizei height);
+
+/**
+ * @brief void glScissorIndexedv(GLuint index, const GLint *v)
+ */
+GLE_API void glScissorIndexedv(GLuint index, const GLint *v);
+
+/**
+ * @brief void glViewportArrayv(GLuint first, GLsizei count, const GLfloat *v)
+ */
+GLE_API void glViewportArrayv(GLuint first, GLsizei count, const GLfloat *v);
+
+/**
+ * @brief void glViewportIndexedf(GLuint index, GLfloat x, GLfloat y, GLfloat w, GLfloat h)
+ */
+GLE_API void glViewportIndexedf(GLuint index, GLfloat x, GLfloat y, GLfloat w, GLfloat h);
+
+/**
+ * @brief void glViewportIndexedfv(GLuint index, const GLfloat *v)
+ */
+GLE_API void glViewportIndexedfv(GLuint index, const GLfloat *v);
 
 //@}
 
@@ -8548,6 +9336,16 @@ GLE_API void glNamedRenderbufferStorageMultisampleCoverageEXT(GLuint renderbuffe
 GLE_API void glNamedRenderbufferStorageMultisampleEXT(GLuint renderbuffer, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
 
 /**
+ * @brief void glProgramUniform1dEXT(GLuint program, GLint location, GLdouble x)
+ */
+GLE_API void glProgramUniform1dEXT(GLuint program, GLint location, GLdouble x);
+
+/**
+ * @brief void glProgramUniform1dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+ */
+GLE_API void glProgramUniform1dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value);
+
+/**
  * @brief void glProgramUniform1fEXT(GLuint program, GLint location, GLfloat v0)
  */
 GLE_API void glProgramUniform1fEXT(GLuint program, GLint location, GLfloat v0);
@@ -8576,6 +9374,16 @@ GLE_API void glProgramUniform1uiEXT(GLuint program, GLint location, GLuint v0);
  * @brief void glProgramUniform1uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value)
  */
 GLE_API void glProgramUniform1uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value);
+
+/**
+ * @brief void glProgramUniform2dEXT(GLuint program, GLint location, GLdouble x, GLdouble y)
+ */
+GLE_API void glProgramUniform2dEXT(GLuint program, GLint location, GLdouble x, GLdouble y);
+
+/**
+ * @brief void glProgramUniform2dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+ */
+GLE_API void glProgramUniform2dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value);
 
 /**
  * @brief void glProgramUniform2fEXT(GLuint program, GLint location, GLfloat v0, GLfloat v1)
@@ -8608,6 +9416,16 @@ GLE_API void glProgramUniform2uiEXT(GLuint program, GLint location, GLuint v0, G
 GLE_API void glProgramUniform2uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value);
 
 /**
+ * @brief void glProgramUniform3dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z)
+ */
+GLE_API void glProgramUniform3dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z);
+
+/**
+ * @brief void glProgramUniform3dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+ */
+GLE_API void glProgramUniform3dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value);
+
+/**
  * @brief void glProgramUniform3fEXT(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2)
  */
 GLE_API void glProgramUniform3fEXT(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2);
@@ -8636,6 +9454,16 @@ GLE_API void glProgramUniform3uiEXT(GLuint program, GLint location, GLuint v0, G
  * @brief void glProgramUniform3uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value)
  */
 GLE_API void glProgramUniform3uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value);
+
+/**
+ * @brief void glProgramUniform4dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
+ */
+GLE_API void glProgramUniform4dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
+
+/**
+ * @brief void glProgramUniform4dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+ */
+GLE_API void glProgramUniform4dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value);
 
 /**
  * @brief void glProgramUniform4fEXT(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3)
@@ -8668,9 +9496,19 @@ GLE_API void glProgramUniform4uiEXT(GLuint program, GLint location, GLuint v0, G
 GLE_API void glProgramUniform4uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value);
 
 /**
+ * @brief void glProgramUniformMatrix2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
  * @brief void glProgramUniformMatrix2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
 GLE_API void glProgramUniformMatrix2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniformMatrix2x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix2x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
  * @brief void glProgramUniformMatrix2x3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
@@ -8678,9 +9516,19 @@ GLE_API void glProgramUniformMatrix2fvEXT(GLuint program, GLint location, GLsize
 GLE_API void glProgramUniformMatrix2x3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
+ * @brief void glProgramUniformMatrix2x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix2x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
  * @brief void glProgramUniformMatrix2x4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
 GLE_API void glProgramUniformMatrix2x4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniformMatrix3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
  * @brief void glProgramUniformMatrix3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
@@ -8688,9 +9536,19 @@ GLE_API void glProgramUniformMatrix2x4fvEXT(GLuint program, GLint location, GLsi
 GLE_API void glProgramUniformMatrix3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
+ * @brief void glProgramUniformMatrix3x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix3x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
  * @brief void glProgramUniformMatrix3x2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
 GLE_API void glProgramUniformMatrix3x2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniformMatrix3x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix3x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
  * @brief void glProgramUniformMatrix3x4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
@@ -8698,14 +9556,29 @@ GLE_API void glProgramUniformMatrix3x2fvEXT(GLuint program, GLint location, GLsi
 GLE_API void glProgramUniformMatrix3x4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
+ * @brief void glProgramUniformMatrix4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
  * @brief void glProgramUniformMatrix4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
 GLE_API void glProgramUniformMatrix4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 
 /**
+ * @brief void glProgramUniformMatrix4x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix4x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
+
+/**
  * @brief void glProgramUniformMatrix4x2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
 GLE_API void glProgramUniformMatrix4x2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+/**
+ * @brief void glProgramUniformMatrix4x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+ */
+GLE_API void glProgramUniformMatrix4x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value);
 
 /**
  * @brief void glProgramUniformMatrix4x3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
@@ -9498,9 +10371,9 @@ GLE_API bool isGL_EXT_multi_draw_arrays();
 
 
 /**
- * @brief void glMultiDrawArraysEXT(GLenum mode, GLint *first, GLsizei *count, GLsizei primcount)
+ * @brief void glMultiDrawArraysEXT(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount)
  */
-GLE_API void glMultiDrawArraysEXT(GLenum mode, GLint *first, GLsizei *count, GLsizei primcount);
+GLE_API void glMultiDrawArraysEXT(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount);
 
 /**
  * @brief void glMultiDrawElementsEXT(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount)
@@ -10004,6 +10877,17 @@ GLE_API bool isGL_EXT_separate_specular_color();
  */
 GLE_API bool isGL_EXT_shader_image_load_store();
 
+
+
+/**
+ * @brief void glBindImageTextureEXT(GLuint index, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLint format)
+ */
+GLE_API void glBindImageTextureEXT(GLuint index, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLint format);
+
+/**
+ * @brief void glMemoryBarrierEXT(GLbitfield barriers)
+ */
+GLE_API void glMemoryBarrierEXT(GLbitfield barriers);
 
 //@}
 
@@ -10845,6 +11729,62 @@ GLE_API bool isGL_EXT_vertex_array_bgra();
  */
 GLE_API bool isGL_EXT_vertex_attrib_64bit();
 
+
+
+/**
+ * @brief void glGetVertexAttribLdvEXT(GLuint index, GLenum pname, GLdouble *params)
+ */
+GLE_API void glGetVertexAttribLdvEXT(GLuint index, GLenum pname, GLdouble *params);
+
+/**
+ * @brief void glVertexArrayVertexAttribLOffsetEXT(GLuint vaobj, GLuint buffer, GLuint index, GLint size, GLenum type, GLsizei stride, GLintptr offset)
+ */
+GLE_API void glVertexArrayVertexAttribLOffsetEXT(GLuint vaobj, GLuint buffer, GLuint index, GLint size, GLenum type, GLsizei stride, GLintptr offset);
+
+/**
+ * @brief void glVertexAttribL1dEXT(GLuint index, GLdouble x)
+ */
+GLE_API void glVertexAttribL1dEXT(GLuint index, GLdouble x);
+
+/**
+ * @brief void glVertexAttribL1dvEXT(GLuint index, const GLdouble *v)
+ */
+GLE_API void glVertexAttribL1dvEXT(GLuint index, const GLdouble *v);
+
+/**
+ * @brief void glVertexAttribL2dEXT(GLuint index, GLdouble x, GLdouble y)
+ */
+GLE_API void glVertexAttribL2dEXT(GLuint index, GLdouble x, GLdouble y);
+
+/**
+ * @brief void glVertexAttribL2dvEXT(GLuint index, const GLdouble *v)
+ */
+GLE_API void glVertexAttribL2dvEXT(GLuint index, const GLdouble *v);
+
+/**
+ * @brief void glVertexAttribL3dEXT(GLuint index, GLdouble x, GLdouble y, GLdouble z)
+ */
+GLE_API void glVertexAttribL3dEXT(GLuint index, GLdouble x, GLdouble y, GLdouble z);
+
+/**
+ * @brief void glVertexAttribL3dvEXT(GLuint index, const GLdouble *v)
+ */
+GLE_API void glVertexAttribL3dvEXT(GLuint index, const GLdouble *v);
+
+/**
+ * @brief void glVertexAttribL4dEXT(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
+ */
+GLE_API void glVertexAttribL4dEXT(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
+
+/**
+ * @brief void glVertexAttribL4dvEXT(GLuint index, const GLdouble *v)
+ */
+GLE_API void glVertexAttribL4dvEXT(GLuint index, const GLdouble *v);
+
+/**
+ * @brief void glVertexAttribLPointerEXT(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
+ */
+GLE_API void glVertexAttribLPointerEXT(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
 
 //@}
 
@@ -12492,6 +13432,17 @@ GLE_API void glProgramLocalParametersI4uivNV(GLenum target, GLuint index, GLsize
 GLE_API bool isGL_NV_gpu_program5();
 
 
+
+/**
+ * @brief void glGetProgramSubroutineParameteruivNV(GLenum target, GLuint index, GLuint *param)
+ */
+GLE_API void glGetProgramSubroutineParameteruivNV(GLenum target, GLuint index, GLuint *param);
+
+/**
+ * @brief void glProgramSubroutineParametersuivNV(GLenum target, GLsizei count, const GLuint *params)
+ */
+GLE_API void glProgramSubroutineParametersuivNV(GLenum target, GLsizei count, const GLuint *params);
+
 //@}
 
 
@@ -12511,6 +13462,172 @@ GLE_API bool isGL_NV_gpu_program5();
  */
 GLE_API bool isGL_NV_gpu_shader5();
 
+
+
+/**
+ * @brief void glGetUniformi64vNV(GLuint program, GLint location, GLint64EXT *params)
+ */
+GLE_API void glGetUniformi64vNV(GLuint program, GLint location, GLint64EXT *params);
+
+/**
+ * @brief void glProgramUniform1i64NV(GLuint program, GLint location, GLint64EXT x)
+ */
+GLE_API void glProgramUniform1i64NV(GLuint program, GLint location, GLint64EXT x);
+
+/**
+ * @brief void glProgramUniform1i64vNV(GLuint program, GLint location, GLsizei count, const GLint64EXT *value)
+ */
+GLE_API void glProgramUniform1i64vNV(GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
+
+/**
+ * @brief void glProgramUniform1ui64NV(GLuint program, GLint location, GLuint64EXT x)
+ */
+GLE_API void glProgramUniform1ui64NV(GLuint program, GLint location, GLuint64EXT x);
+
+/**
+ * @brief void glProgramUniform1ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value)
+ */
+GLE_API void glProgramUniform1ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
+
+/**
+ * @brief void glProgramUniform2i64NV(GLuint program, GLint location, GLint64EXT x, GLint64EXT y)
+ */
+GLE_API void glProgramUniform2i64NV(GLuint program, GLint location, GLint64EXT x, GLint64EXT y);
+
+/**
+ * @brief void glProgramUniform2i64vNV(GLuint program, GLint location, GLsizei count, const GLint64EXT *value)
+ */
+GLE_API void glProgramUniform2i64vNV(GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
+
+/**
+ * @brief void glProgramUniform2ui64NV(GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y)
+ */
+GLE_API void glProgramUniform2ui64NV(GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y);
+
+/**
+ * @brief void glProgramUniform2ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value)
+ */
+GLE_API void glProgramUniform2ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
+
+/**
+ * @brief void glProgramUniform3i64NV(GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z)
+ */
+GLE_API void glProgramUniform3i64NV(GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z);
+
+/**
+ * @brief void glProgramUniform3i64vNV(GLuint program, GLint location, GLsizei count, const GLint64EXT *value)
+ */
+GLE_API void glProgramUniform3i64vNV(GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
+
+/**
+ * @brief void glProgramUniform3ui64NV(GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z)
+ */
+GLE_API void glProgramUniform3ui64NV(GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z);
+
+/**
+ * @brief void glProgramUniform3ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value)
+ */
+GLE_API void glProgramUniform3ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
+
+/**
+ * @brief void glProgramUniform4i64NV(GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w)
+ */
+GLE_API void glProgramUniform4i64NV(GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w);
+
+/**
+ * @brief void glProgramUniform4i64vNV(GLuint program, GLint location, GLsizei count, const GLint64EXT *value)
+ */
+GLE_API void glProgramUniform4i64vNV(GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
+
+/**
+ * @brief void glProgramUniform4ui64NV(GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w)
+ */
+GLE_API void glProgramUniform4ui64NV(GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w);
+
+/**
+ * @brief void glProgramUniform4ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value)
+ */
+GLE_API void glProgramUniform4ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
+
+/**
+ * @brief void glUniform1i64NV(GLint location, GLint64EXT x)
+ */
+GLE_API void glUniform1i64NV(GLint location, GLint64EXT x);
+
+/**
+ * @brief void glUniform1i64vNV(GLint location, GLsizei count, const GLint64EXT *value)
+ */
+GLE_API void glUniform1i64vNV(GLint location, GLsizei count, const GLint64EXT *value);
+
+/**
+ * @brief void glUniform1ui64NV(GLint location, GLuint64EXT x)
+ */
+GLE_API void glUniform1ui64NV(GLint location, GLuint64EXT x);
+
+/**
+ * @brief void glUniform1ui64vNV(GLint location, GLsizei count, const GLuint64EXT *value)
+ */
+GLE_API void glUniform1ui64vNV(GLint location, GLsizei count, const GLuint64EXT *value);
+
+/**
+ * @brief void glUniform2i64NV(GLint location, GLint64EXT x, GLint64EXT y)
+ */
+GLE_API void glUniform2i64NV(GLint location, GLint64EXT x, GLint64EXT y);
+
+/**
+ * @brief void glUniform2i64vNV(GLint location, GLsizei count, const GLint64EXT *value)
+ */
+GLE_API void glUniform2i64vNV(GLint location, GLsizei count, const GLint64EXT *value);
+
+/**
+ * @brief void glUniform2ui64NV(GLint location, GLuint64EXT x, GLuint64EXT y)
+ */
+GLE_API void glUniform2ui64NV(GLint location, GLuint64EXT x, GLuint64EXT y);
+
+/**
+ * @brief void glUniform2ui64vNV(GLint location, GLsizei count, const GLuint64EXT *value)
+ */
+GLE_API void glUniform2ui64vNV(GLint location, GLsizei count, const GLuint64EXT *value);
+
+/**
+ * @brief void glUniform3i64NV(GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z)
+ */
+GLE_API void glUniform3i64NV(GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z);
+
+/**
+ * @brief void glUniform3i64vNV(GLint location, GLsizei count, const GLint64EXT *value)
+ */
+GLE_API void glUniform3i64vNV(GLint location, GLsizei count, const GLint64EXT *value);
+
+/**
+ * @brief void glUniform3ui64NV(GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z)
+ */
+GLE_API void glUniform3ui64NV(GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z);
+
+/**
+ * @brief void glUniform3ui64vNV(GLint location, GLsizei count, const GLuint64EXT *value)
+ */
+GLE_API void glUniform3ui64vNV(GLint location, GLsizei count, const GLuint64EXT *value);
+
+/**
+ * @brief void glUniform4i64NV(GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w)
+ */
+GLE_API void glUniform4i64NV(GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w);
+
+/**
+ * @brief void glUniform4i64vNV(GLint location, GLsizei count, const GLint64EXT *value)
+ */
+GLE_API void glUniform4i64vNV(GLint location, GLsizei count, const GLint64EXT *value);
+
+/**
+ * @brief void glUniform4ui64NV(GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w)
+ */
+GLE_API void glUniform4ui64NV(GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w);
+
+/**
+ * @brief void glUniform4ui64vNV(GLint location, GLsizei count, const GLuint64EXT *value)
+ */
+GLE_API void glUniform4ui64vNV(GLint location, GLsizei count, const GLuint64EXT *value);
 
 //@}
 
@@ -13625,9 +14742,14 @@ GLE_API GLint glGetVaryingLocationNV(GLuint program, const GLchar *name);
 GLE_API void glTransformFeedbackAttribsNV(GLuint count, const GLint *attribs, GLenum bufferMode);
 
 /**
- * @brief void glTransformFeedbackVaryingsNV(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode)
+ * @brief void glTransformFeedbackStreamAttribsNV(GLsizei count, const GLint *attribs, GLsizei nbuffers, const GLint *bufstreams, GLenum bufferMode)
  */
-GLE_API void glTransformFeedbackVaryingsNV(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode);
+GLE_API void glTransformFeedbackStreamAttribsNV(GLsizei count, const GLint *attribs, GLsizei nbuffers, const GLint *bufstreams, GLenum bufferMode);
+
+/**
+ * @brief void glTransformFeedbackVaryingsNV(GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode)
+ */
+GLE_API void glTransformFeedbackVaryingsNV(GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode);
 
 //@}
 
@@ -13705,6 +14827,57 @@ GLE_API void glResumeTransformFeedbackNV(void);
 GLE_API bool isGL_NV_vdpau_interop();
 
 
+
+/**
+ * @brief void glVDPAUFiniNV(void)
+ */
+GLE_API void glVDPAUFiniNV(void);
+
+/**
+ * @brief void glVDPAUGetSurfaceivNV(GLvdpauSurfaceNV surface, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values)
+ */
+GLE_API void glVDPAUGetSurfaceivNV(GLvdpauSurfaceNV surface, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values);
+
+/**
+ * @brief void glVDPAUInitNV(const GLvoid *vdpDevice, const GLvoid *getProcAddress)
+ */
+GLE_API void glVDPAUInitNV(const GLvoid *vdpDevice, const GLvoid *getProcAddress);
+
+/**
+ * @brief void glVDPAUIsSurfaceNV(GLvdpauSurfaceNV surface)
+ */
+GLE_API void glVDPAUIsSurfaceNV(GLvdpauSurfaceNV surface);
+
+/**
+ * @brief void glVDPAUMapSurfacesNV(GLsizei numSurfaces, const GLvdpauSurfaceNV *surfaces)
+ */
+GLE_API void glVDPAUMapSurfacesNV(GLsizei numSurfaces, const GLvdpauSurfaceNV *surfaces);
+
+/**
+ * @brief GLvdpauSurfaceNV glVDPAURegisterOutputSurfaceNV(GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames)
+ */
+GLE_API GLvdpauSurfaceNV glVDPAURegisterOutputSurfaceNV(GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames);
+
+/**
+ * @brief GLvdpauSurfaceNV glVDPAURegisterVideoSurfaceNV(GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames)
+ */
+GLE_API GLvdpauSurfaceNV glVDPAURegisterVideoSurfaceNV(GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames);
+
+/**
+ * @brief void glVDPAUSurfaceAccessNV(GLvdpauSurfaceNV surface, GLenum access)
+ */
+GLE_API void glVDPAUSurfaceAccessNV(GLvdpauSurfaceNV surface, GLenum access);
+
+/**
+ * @brief void glVDPAUUnmapSurfacesNV(GLsizei numSurface, const GLvdpauSurfaceNV *surfaces)
+ */
+GLE_API void glVDPAUUnmapSurfacesNV(GLsizei numSurface, const GLvdpauSurfaceNV *surfaces);
+
+/**
+ * @brief void glVDPAUUnregisterSurfaceNV(GLvdpauSurfaceNV surface)
+ */
+GLE_API void glVDPAUUnregisterSurfaceNV(GLvdpauSurfaceNV surface);
+
 //@}
 
 
@@ -13775,6 +14948,102 @@ GLE_API bool isGL_NV_vertex_array_range2();
  */
 GLE_API bool isGL_NV_vertex_attrib_integer_64bit();
 
+
+
+/**
+ * @brief void glGetVertexAttribLi64vNV(GLuint index, GLenum pname, GLint64EXT *params)
+ */
+GLE_API void glGetVertexAttribLi64vNV(GLuint index, GLenum pname, GLint64EXT *params);
+
+/**
+ * @brief void glGetVertexAttribLui64vNV(GLuint index, GLenum pname, GLuint64EXT *params)
+ */
+GLE_API void glGetVertexAttribLui64vNV(GLuint index, GLenum pname, GLuint64EXT *params);
+
+/**
+ * @brief void glVertexAttribL1i64NV(GLuint index, GLint64EXT x)
+ */
+GLE_API void glVertexAttribL1i64NV(GLuint index, GLint64EXT x);
+
+/**
+ * @brief void glVertexAttribL1i64vNV(GLuint index, const GLint64EXT *v)
+ */
+GLE_API void glVertexAttribL1i64vNV(GLuint index, const GLint64EXT *v);
+
+/**
+ * @brief void glVertexAttribL1ui64NV(GLuint index, GLuint64EXT x)
+ */
+GLE_API void glVertexAttribL1ui64NV(GLuint index, GLuint64EXT x);
+
+/**
+ * @brief void glVertexAttribL1ui64vNV(GLuint index, const GLuint64EXT *v)
+ */
+GLE_API void glVertexAttribL1ui64vNV(GLuint index, const GLuint64EXT *v);
+
+/**
+ * @brief void glVertexAttribL2i64NV(GLuint index, GLint64EXT x, GLint64EXT y)
+ */
+GLE_API void glVertexAttribL2i64NV(GLuint index, GLint64EXT x, GLint64EXT y);
+
+/**
+ * @brief void glVertexAttribL2i64vNV(GLuint index, const GLint64EXT *v)
+ */
+GLE_API void glVertexAttribL2i64vNV(GLuint index, const GLint64EXT *v);
+
+/**
+ * @brief void glVertexAttribL2ui64NV(GLuint index, GLuint64EXT x, GLuint64EXT y)
+ */
+GLE_API void glVertexAttribL2ui64NV(GLuint index, GLuint64EXT x, GLuint64EXT y);
+
+/**
+ * @brief void glVertexAttribL2ui64vNV(GLuint index, const GLuint64EXT *v)
+ */
+GLE_API void glVertexAttribL2ui64vNV(GLuint index, const GLuint64EXT *v);
+
+/**
+ * @brief void glVertexAttribL3i64NV(GLuint index, GLint64EXT x, GLint64EXT y, GLint64EXT z)
+ */
+GLE_API void glVertexAttribL3i64NV(GLuint index, GLint64EXT x, GLint64EXT y, GLint64EXT z);
+
+/**
+ * @brief void glVertexAttribL3i64vNV(GLuint index, const GLint64EXT *v)
+ */
+GLE_API void glVertexAttribL3i64vNV(GLuint index, const GLint64EXT *v);
+
+/**
+ * @brief void glVertexAttribL3ui64NV(GLuint index, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z)
+ */
+GLE_API void glVertexAttribL3ui64NV(GLuint index, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z);
+
+/**
+ * @brief void glVertexAttribL3ui64vNV(GLuint index, const GLuint64EXT *v)
+ */
+GLE_API void glVertexAttribL3ui64vNV(GLuint index, const GLuint64EXT *v);
+
+/**
+ * @brief void glVertexAttribL4i64NV(GLuint index, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w)
+ */
+GLE_API void glVertexAttribL4i64NV(GLuint index, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w);
+
+/**
+ * @brief void glVertexAttribL4i64vNV(GLuint index, const GLint64EXT *v)
+ */
+GLE_API void glVertexAttribL4i64vNV(GLuint index, const GLint64EXT *v);
+
+/**
+ * @brief void glVertexAttribL4ui64NV(GLuint index, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w)
+ */
+GLE_API void glVertexAttribL4ui64NV(GLuint index, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w);
+
+/**
+ * @brief void glVertexAttribL4ui64vNV(GLuint index, const GLuint64EXT *v)
+ */
+GLE_API void glVertexAttribL4ui64vNV(GLuint index, const GLuint64EXT *v);
+
+/**
+ * @brief void glVertexAttribLFormatNV(GLuint index, GLint size, GLenum type, GLsizei stride)
+ */
+GLE_API void glVertexAttribLFormatNV(GLuint index, GLint size, GLenum type, GLsizei stride);
 
 //@}
 
@@ -17234,9 +18503,9 @@ GLE_API bool isGL_VERSION_1_4();
 GLE_API void glBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
 
 /**
- * @brief void glMultiDrawArrays(GLenum mode, GLint *first, GLsizei *count, GLsizei primcount)
+ * @brief void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount)
  */
-GLE_API void glMultiDrawArrays(GLenum mode, GLint *first, GLsizei *count, GLsizei primcount);
+GLE_API void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount);
 
 /**
  * @brief void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount)
@@ -17792,9 +19061,9 @@ GLE_API void glLinkProgram(GLuint program);
 GLE_API void glShaderSource(GLuint shader, GLsizei count, const GLchar* *string, const GLint *length);
 
 /**
- * @brief void glStencilFuncSeparate(GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask)
+ * @brief void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask)
  */
-GLE_API void glStencilFuncSeparate(GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask);
+GLE_API void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask);
 
 /**
  * @brief void glStencilMaskSeparate(GLenum face, GLuint mask)
@@ -18595,11 +19864,6 @@ GLE_API void glGetBufferParameteri64v(GLenum target, GLenum pname, GLint64 *para
  */
 GLE_API void glGetInteger64i_v(GLenum target, GLuint index, GLint64 *data);
 
-/**
- * @brief void glProgramParameteri(GLuint program, GLenum pname, GLint value)
- */
-GLE_API void glProgramParameteri(GLuint program, GLenum pname, GLint value);
-
 //@}
 
 
@@ -18620,6 +19884,12 @@ GLE_API void glProgramParameteri(GLuint program, GLenum pname, GLint value);
 GLE_API bool isGL_VERSION_3_3();
 
 
+
+/**
+ * @brief void glVertexAttribDivisor(GLuint index, GLuint divisor)
+ */
+GLE_API void glVertexAttribDivisor(GLuint index, GLuint divisor);
+
 //@}
 
 
@@ -18638,6 +19908,52 @@ GLE_API bool isGL_VERSION_3_3();
  * @return Returns \c true if \b GL_VERSION_4_0 is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_4_0();
+
+
+
+/**
+ * @brief void glBlendEquationSeparatei(GLuint buf, GLenum modeRGB, GLenum modeAlpha)
+ */
+GLE_API void glBlendEquationSeparatei(GLuint buf, GLenum modeRGB, GLenum modeAlpha);
+
+/**
+ * @brief void glBlendEquationi(GLuint buf, GLenum mode)
+ */
+GLE_API void glBlendEquationi(GLuint buf, GLenum mode);
+
+/**
+ * @brief void glBlendFuncSeparatei(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
+ */
+GLE_API void glBlendFuncSeparatei(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
+
+/**
+ * @brief void glBlendFunci(GLuint buf, GLenum src, GLenum dst)
+ */
+GLE_API void glBlendFunci(GLuint buf, GLenum src, GLenum dst);
+
+/**
+ * @brief void glMinSampleShading(GLclampf value)
+ */
+GLE_API void glMinSampleShading(GLclampf value);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_VERSION_4_1 GL_VERSION_4_1
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_VERSION_4_1 is supported.
+ * @return Returns \c true if \b GL_VERSION_4_1 is supported, \c false otherwise.
+ */
+GLE_API bool isGL_VERSION_4_1();
 
 
 //@}
@@ -18891,6 +20207,27 @@ GLE_API bool isWGL_ARB_create_context_profile();
 
 #ifdef WIN32
 /**
+ * @defgroup WGL_ARB_create_context_robustness WGL_ARB_create_context_robustness
+ * Extension number in OpenGL registry : 102
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/wgl_create_context_robustness.txt
+ * @ingroup g_WGL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b WGL_ARB_create_context_robustness is supported.
+ * @return Returns \c true if \b WGL_ARB_create_context_robustness is supported, \c false otherwise.
+ */
+GLE_API bool isWGL_ARB_create_context_robustness();
+
+
+//@}
+#endif //WIN32
+
+
+
+#ifdef WIN32
+/**
  * @defgroup WGL_ARB_extensions_string WGL_ARB_extensions_string
  * Extension number in OpenGL registry : 8
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/wgl_extensions_string.txt
@@ -18910,6 +20247,27 @@ GLE_API bool isWGL_ARB_extensions_string();
  * @brief const char * wglGetExtensionsStringARB(HDC hdc)
  */
 GLE_API const char * wglGetExtensionsStringARB(HDC hdc);
+
+//@}
+#endif //WIN32
+
+
+
+#ifdef WIN32
+/**
+ * @defgroup WGL_ARB_framebuffer_sRGB WGL_ARB_framebuffer_sRGB
+ * Extension number in OpenGL registry : 46
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/framebuffer_sRGB.txt
+ * @ingroup g_WGL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b WGL_ARB_framebuffer_sRGB is supported.
+ * @return Returns \c true if \b WGL_ARB_framebuffer_sRGB is supported, \c false otherwise.
+ */
+GLE_API bool isWGL_ARB_framebuffer_sRGB();
+
 
 //@}
 #endif //WIN32
@@ -19125,6 +20483,27 @@ GLE_API BOOL wglSetPbufferAttribARB(HPBUFFERARB hPbuffer, const int *piAttribLis
  * @return Returns \c true if \b WGL_ATI_pixel_format_float is supported, \c false otherwise.
  */
 GLE_API bool isWGL_ATI_pixel_format_float();
+
+
+//@}
+#endif //WIN32
+
+
+
+#ifdef WIN32
+/**
+ * @defgroup WGL_EXT_create_context_es2_profile WGL_EXT_create_context_es2_profile
+ * Extension number in OpenGL registry : 400
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/wgl_create_context_es2_profile.txt
+ * @ingroup g_WGL_EXT g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b WGL_EXT_create_context_es2_profile is supported.
+ * @return Returns \c true if \b WGL_EXT_create_context_es2_profile is supported, \c false otherwise.
+ */
+GLE_API bool isWGL_EXT_create_context_es2_profile();
 
 
 //@}

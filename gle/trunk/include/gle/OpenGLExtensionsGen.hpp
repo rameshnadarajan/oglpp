@@ -1,4 +1,4 @@
-// This file was generated at Wed, 28 Jul 2010 12:51:41 +0000 with gle, please do not modify.
+// This file was generated at Mon, 23 Aug 2010 09:25:21 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,12 +6,12 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2010-06-15 23:46:28 -0700 (Tue, 15 Jun 2010) $ */
-// #define GL_GLEXT_VERSION 63
-// /* glxext.h last updated 2010/06/15 */
-// #define GLX_GLXEXT_VERSION 29
-// /* wglext.h last updated 2010/05/17 */
-// #define WGL_WGLEXT_VERSION 19
+// /* glext.h last updated $Date: 2010-08-03 01:30:25 -0700 (Tue, 03 Aug 2010) $ */
+// #define GL_GLEXT_VERSION 64
+// /* glxext.h last updated 2010/08/06 */
+// #define GLX_GLXEXT_VERSION 32
+// /* wglext.h last updated 2010/08/06 */
+// #define WGL_WGLEXT_VERSION 22
 
 #ifndef _GLE_OPENGLEXTENSIONSGEN_HPP
 #define _GLE_OPENGLEXTENSIONSGEN_HPP
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Wed, 28 Jul 2010 12:51:41 +0000
+ * - Stamp = Mon, 23 Aug 2010 09:25:21 +0000
  * - Number of tokens							= 0
- * - Number of functions						= 1936
- * - Number of extensions found(in headers)		= 493
- * - Number of extensions in OpenGL registry	= 461
+ * - Number of functions						= 2139
+ * - Number of extensions found(in headers)		= 510
+ * - Number of extensions in OpenGL registry	= 475
  */
 
 
@@ -80,6 +80,11 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	void initializeGLX_3DFX();
 
 	/** 
+	 * @brief Initialize the GLX_AMD extension group.
+	 */
+	void initializeGLX_AMD();
+
+	/** 
 	 * @brief Initialize the GLX_ARB extension group.
 	 */
 	void initializeGLX_ARB();
@@ -88,11 +93,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Initialize the GLX_EXT extension group.
 	 */
 	void initializeGLX_EXT();
-
-	/** 
-	 * @brief Initialize the GLX_GLX extension group.
-	 */
-	void initializeGLX_GLX();
 
 	/** 
 	 * @brief Initialize the GLX_INTEL extension group.
@@ -336,6 +336,17 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 #ifdef POSIX
+	// ****** GLX_AMD_gpu_association ******
+
+	/**
+	 * @brief Returns \c true if \b GLX_AMD_gpu_association is supported, false otherwise.
+	 */
+	bool isGLX_AMD_gpu_association;
+#endif //POSIX
+
+
+
+#ifdef POSIX
 	// ****** GLX_ARB_create_context ******
 
 	/**
@@ -364,12 +375,34 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 #ifdef POSIX
+	// ****** GLX_ARB_create_context_robustness ******
+
+	/**
+	 * @brief Returns \c true if \b GLX_ARB_create_context_robustness is supported, false otherwise.
+	 */
+	bool isGLX_ARB_create_context_robustness;
+#endif //POSIX
+
+
+
+#ifdef POSIX
 	// ****** GLX_ARB_fbconfig_float ******
 
 	/**
 	 * @brief Returns \c true if \b GLX_ARB_fbconfig_float is supported, false otherwise.
 	 */
 	bool isGLX_ARB_fbconfig_float;
+#endif //POSIX
+
+
+
+#ifdef POSIX
+	// ****** GLX_ARB_framebuffer_sRGB ******
+
+	/**
+	 * @brief Returns \c true if \b GLX_ARB_framebuffer_sRGB is supported, false otherwise.
+	 */
+	bool isGLX_ARB_framebuffer_sRGB;
 #endif //POSIX
 
 
@@ -409,6 +442,17 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GLX_ARB_vertex_buffer_object is supported, false otherwise.
 	 */
 	bool isGLX_ARB_vertex_buffer_object;
+#endif //POSIX
+
+
+
+#ifdef POSIX
+	// ****** GLX_EXT_create_context_es2_profile ******
+
+	/**
+	 * @brief Returns \c true if \b GLX_EXT_create_context_es2_profile is supported, false otherwise.
+	 */
+	bool isGLX_EXT_create_context_es2_profile;
 #endif //POSIX
 
 
@@ -529,17 +573,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GLX_EXT_visual_rating is supported, false otherwise.
 	 */
 	bool isGLX_EXT_visual_rating;
-#endif //POSIX
-
-
-
-#ifdef POSIX
-	// ****** GLX_GLX_AMD_gpu_association ******
-
-	/**
-	 * @brief Returns \c true if \b GLX_GLX_AMD_gpu_association is supported, false otherwise.
-	 */
-	bool isGLX_GLX_AMD_gpu_association;
 #endif //POSIX
 
 
@@ -1440,6 +1473,27 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	bool isGL_AMD_debug_output;
 
 
+	/**
+	 * @brief void glDebugMessageCallbackAMD(GLDEBUGPROCAMD callback, GLvoid *userParam)
+	 */
+	PFNGLDEBUGMESSAGECALLBACKAMDPROC glDebugMessageCallbackAMD;
+
+	/**
+	 * @brief void glDebugMessageEnableAMD(GLenum category, GLenum severity, GLsizei count, const GLuint *ids, GLboolean enabled)
+	 */
+	PFNGLDEBUGMESSAGEENABLEAMDPROC glDebugMessageEnableAMD;
+
+	/**
+	 * @brief void glDebugMessageInsertAMD(GLenum category, GLenum severity, GLuint id, GLsizei length, const GLchar *buf)
+	 */
+	PFNGLDEBUGMESSAGEINSERTAMDPROC glDebugMessageInsertAMD;
+
+	/**
+	 * @brief GLuint glGetDebugMessageLogAMD(GLuint count, GLsizei bufsize, GLenum *categories, GLuint *severities, GLuint *ids, GLsizei *lengths, GLchar *message)
+	 */
+	PFNGLGETDEBUGMESSAGELOGAMDPROC glGetDebugMessageLogAMD;
+
+
 
 
 	// ****** GL_AMD_draw_buffers_blend ******
@@ -1481,6 +1535,22 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	bool isGL_AMD_name_gen_delete;
 
 
+	/**
+	 * @brief void glDeleteNamesAMD(GLenum identifier, GLuint num, const GLuint *names)
+	 */
+	PFNGLDELETENAMESAMDPROC glDeleteNamesAMD;
+
+	/**
+	 * @brief void glGenNamesAMD(GLenum identifier, GLuint num, GLuint *names)
+	 */
+	PFNGLGENNAMESAMDPROC glGenNamesAMD;
+
+	/**
+	 * @brief GLboolean glIsNameAMD(GLenum identifier, GLuint name)
+	 */
+	PFNGLISNAMEAMDPROC glIsNameAMD;
+
+
 
 
 	// ****** GL_AMD_performance_monitor ******
@@ -1517,7 +1587,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLGETPERFMONITORCOUNTERDATAAMDPROC glGetPerfMonitorCounterDataAMD;
 
 	/**
-	 * @brief void glGetPerfMonitorCounterInfoAMD(GLuint group, GLuint counter, GLenum pname, void *data)
+	 * @brief void glGetPerfMonitorCounterInfoAMD(GLuint group, GLuint counter, GLenum pname, GLvoid *data)
 	 */
 	PFNGLGETPERFMONITORCOUNTERINFOAMDPROC glGetPerfMonitorCounterInfoAMD;
 
@@ -1948,6 +2018,42 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_ES2_compatibility ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_ES2_compatibility is supported, false otherwise.
+	 */
+	bool isGL_ARB_ES2_compatibility;
+
+
+	/**
+	 * @brief void glClearDepthf(GLclampf d)
+	 */
+	PFNGLCLEARDEPTHFPROC glClearDepthf;
+
+	/**
+	 * @brief void glDepthRangef(GLclampf n, GLclampf f)
+	 */
+	PFNGLDEPTHRANGEFPROC glDepthRangef;
+
+	/**
+	 * @brief void glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint *range, GLint *precision)
+	 */
+	PFNGLGETSHADERPRECISIONFORMATPROC glGetShaderPrecisionFormat;
+
+	/**
+	 * @brief void glReleaseShaderCompiler(void)
+	 */
+	PFNGLRELEASESHADERCOMPILERPROC glReleaseShaderCompiler;
+
+	/**
+	 * @brief void glShaderBinary(GLsizei count, const GLuint *shaders, GLenum binaryformat, const GLvoid *binary, GLsizei length)
+	 */
+	PFNGLSHADERBINARYPROC glShaderBinary;
+
+
+
+
 	// ****** GL_ARB_blend_func_extended ******
 
 	/**
@@ -1965,6 +2071,22 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief GLint glGetFragDataIndex(GLuint program, const GLchar *name)
 	 */
 	PFNGLGETFRAGDATAINDEXPROC glGetFragDataIndex;
+
+
+
+
+	// ****** GL_ARB_cl_event ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_cl_event is supported, false otherwise.
+	 */
+	bool isGL_ARB_cl_event;
+
+
+	/**
+	 * @brief GLsync glCreateSyncFromCLeventARB(struct _cl_context * context, struct _cl_event * event, GLbitfield flags)
+	 */
+	PFNGLCREATESYNCFROMCLEVENTARBPROC glCreateSyncFromCLeventARB;
 
 
 
@@ -2007,6 +2129,37 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size)
 	 */
 	PFNGLCOPYBUFFERSUBDATAPROC glCopyBufferSubData;
+
+
+
+
+	// ****** GL_ARB_debug_output ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_debug_output is supported, false otherwise.
+	 */
+	bool isGL_ARB_debug_output;
+
+
+	/**
+	 * @brief void glDebugMessageCallbackARB(GLDEBUGPROCARB callback, const GLvoid *userParam)
+	 */
+	PFNGLDEBUGMESSAGECALLBACKARBPROC glDebugMessageCallbackARB;
+
+	/**
+	 * @brief void glDebugMessageControlARB(GLenum source, GLenum type, GLenum severity, GLsizei count, const GLuint *ids, GLboolean enabled)
+	 */
+	PFNGLDEBUGMESSAGECONTROLARBPROC glDebugMessageControlARB;
+
+	/**
+	 * @brief void glDebugMessageInsertARB(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar *buf)
+	 */
+	PFNGLDEBUGMESSAGEINSERTARBPROC glDebugMessageInsertARB;
+
+	/**
+	 * @brief GLuint glGetDebugMessageLogARB(GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog)
+	 */
+	PFNGLGETDEBUGMESSAGELOGARBPROC glGetDebugMessageLogARB;
 
 
 
@@ -2066,24 +2219,24 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glBlendEquationSeparatei(GLuint buf, GLenum modeRGB, GLenum modeAlpha)
+	 * @brief void glBlendEquationSeparateiARB(GLuint buf, GLenum modeRGB, GLenum modeAlpha)
 	 */
-	PFNGLBLENDEQUATIONSEPARATEIPROC glBlendEquationSeparatei;
+	PFNGLBLENDEQUATIONSEPARATEIARBPROC glBlendEquationSeparateiARB;
 
 	/**
-	 * @brief void glBlendEquationi(GLuint buf, GLenum mode)
+	 * @brief void glBlendEquationiARB(GLuint buf, GLenum mode)
 	 */
-	PFNGLBLENDEQUATIONIPROC glBlendEquationi;
+	PFNGLBLENDEQUATIONIARBPROC glBlendEquationiARB;
 
 	/**
-	 * @brief void glBlendFuncSeparatei(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
+	 * @brief void glBlendFuncSeparateiARB(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
 	 */
-	PFNGLBLENDFUNCSEPARATEIPROC glBlendFuncSeparatei;
+	PFNGLBLENDFUNCSEPARATEIARBPROC glBlendFuncSeparateiARB;
 
 	/**
-	 * @brief void glBlendFunci(GLuint buf, GLenum src, GLenum dst)
+	 * @brief void glBlendFunciARB(GLuint buf, GLenum src, GLenum dst)
 	 */
-	PFNGLBLENDFUNCIPROC glBlendFunci;
+	PFNGLBLENDFUNCIARBPROC glBlendFunciARB;
 
 
 
@@ -2373,6 +2526,32 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_get_program_binary ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_get_program_binary is supported, false otherwise.
+	 */
+	bool isGL_ARB_get_program_binary;
+
+
+	/**
+	 * @brief void glGetProgramBinary(GLuint program, GLsizei bufSize, GLsizei *length, GLenum *binaryFormat, GLvoid *binary)
+	 */
+	PFNGLGETPROGRAMBINARYPROC glGetProgramBinary;
+
+	/**
+	 * @brief void glProgramBinary(GLuint program, GLenum binaryFormat, const GLvoid *binary, GLsizei length)
+	 */
+	PFNGLPROGRAMBINARYPROC glProgramBinary;
+
+	/**
+	 * @brief void glProgramParameteri(GLuint program, GLenum pname, GLint value)
+	 */
+	PFNGLPROGRAMPARAMETERIPROC glProgramParameteri;
+
+
+
+
 	// ****** GL_ARB_gpu_shader5 ******
 
 	/**
@@ -2395,91 +2574,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glGetUniformdv(GLuint program, GLint location, GLdouble *params)
 	 */
 	PFNGLGETUNIFORMDVPROC glGetUniformdv;
-
-	/**
-	 * @brief void glProgramUniform1dEXT(GLuint program, GLint location, GLdouble x)
-	 */
-	PFNGLPROGRAMUNIFORM1DEXTPROC glProgramUniform1dEXT;
-
-	/**
-	 * @brief void glProgramUniform1dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
-	 */
-	PFNGLPROGRAMUNIFORM1DVEXTPROC glProgramUniform1dvEXT;
-
-	/**
-	 * @brief void glProgramUniform2dEXT(GLuint program, GLint location, GLdouble x, GLdouble y)
-	 */
-	PFNGLPROGRAMUNIFORM2DEXTPROC glProgramUniform2dEXT;
-
-	/**
-	 * @brief void glProgramUniform2dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
-	 */
-	PFNGLPROGRAMUNIFORM2DVEXTPROC glProgramUniform2dvEXT;
-
-	/**
-	 * @brief void glProgramUniform3dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z)
-	 */
-	PFNGLPROGRAMUNIFORM3DEXTPROC glProgramUniform3dEXT;
-
-	/**
-	 * @brief void glProgramUniform3dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
-	 */
-	PFNGLPROGRAMUNIFORM3DVEXTPROC glProgramUniform3dvEXT;
-
-	/**
-	 * @brief void glProgramUniform4dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
-	 */
-	PFNGLPROGRAMUNIFORM4DEXTPROC glProgramUniform4dEXT;
-
-	/**
-	 * @brief void glProgramUniform4dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
-	 */
-	PFNGLPROGRAMUNIFORM4DVEXTPROC glProgramUniform4dvEXT;
-
-	/**
-	 * @brief void glProgramUniformMatrix2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
-	 */
-	PFNGLPROGRAMUNIFORMMATRIX2DVEXTPROC glProgramUniformMatrix2dvEXT;
-
-	/**
-	 * @brief void glProgramUniformMatrix2x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
-	 */
-	PFNGLPROGRAMUNIFORMMATRIX2X3DVEXTPROC glProgramUniformMatrix2x3dvEXT;
-
-	/**
-	 * @brief void glProgramUniformMatrix2x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
-	 */
-	PFNGLPROGRAMUNIFORMMATRIX2X4DVEXTPROC glProgramUniformMatrix2x4dvEXT;
-
-	/**
-	 * @brief void glProgramUniformMatrix3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
-	 */
-	PFNGLPROGRAMUNIFORMMATRIX3DVEXTPROC glProgramUniformMatrix3dvEXT;
-
-	/**
-	 * @brief void glProgramUniformMatrix3x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
-	 */
-	PFNGLPROGRAMUNIFORMMATRIX3X2DVEXTPROC glProgramUniformMatrix3x2dvEXT;
-
-	/**
-	 * @brief void glProgramUniformMatrix3x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
-	 */
-	PFNGLPROGRAMUNIFORMMATRIX3X4DVEXTPROC glProgramUniformMatrix3x4dvEXT;
-
-	/**
-	 * @brief void glProgramUniformMatrix4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
-	 */
-	PFNGLPROGRAMUNIFORMMATRIX4DVEXTPROC glProgramUniformMatrix4dvEXT;
-
-	/**
-	 * @brief void glProgramUniformMatrix4x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
-	 */
-	PFNGLPROGRAMUNIFORMMATRIX4X2DVEXTPROC glProgramUniformMatrix4x2dvEXT;
-
-	/**
-	 * @brief void glProgramUniformMatrix4x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
-	 */
-	PFNGLPROGRAMUNIFORMMATRIX4X3DVEXTPROC glProgramUniformMatrix4x3dvEXT;
 
 	/**
 	 * @brief void glUniform1d(GLint location, GLdouble x)
@@ -2997,6 +3091,117 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_robustness ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_robustness is supported, false otherwise.
+	 */
+	bool isGL_ARB_robustness;
+
+
+	/**
+	 * @brief GLenum glGetGraphicsResetStatusARB(void)
+	 */
+	PFNGLGETGRAPHICSRESETSTATUSARBPROC glGetGraphicsResetStatusARB;
+
+	/**
+	 * @brief void glGetnColorTableARB(GLenum target, GLenum format, GLenum type, GLsizei bufSize, GLvoid *table)
+	 */
+	PFNGLGETNCOLORTABLEARBPROC glGetnColorTableARB;
+
+	/**
+	 * @brief void glGetnCompressedTexImageARB(GLenum target, GLint lod, GLsizei bufSize, GLvoid *img)
+	 */
+	PFNGLGETNCOMPRESSEDTEXIMAGEARBPROC glGetnCompressedTexImageARB;
+
+	/**
+	 * @brief void glGetnConvolutionFilterARB(GLenum target, GLenum format, GLenum type, GLsizei bufSize, GLvoid *image)
+	 */
+	PFNGLGETNCONVOLUTIONFILTERARBPROC glGetnConvolutionFilterARB;
+
+	/**
+	 * @brief void glGetnHistogramARB(GLenum target, GLboolean reset, GLenum format, GLenum type, GLsizei bufSize, GLvoid *values)
+	 */
+	PFNGLGETNHISTOGRAMARBPROC glGetnHistogramARB;
+
+	/**
+	 * @brief void glGetnMapdvARB(GLenum target, GLenum query, GLsizei bufSize, GLdouble *v)
+	 */
+	PFNGLGETNMAPDVARBPROC glGetnMapdvARB;
+
+	/**
+	 * @brief void glGetnMapfvARB(GLenum target, GLenum query, GLsizei bufSize, GLfloat *v)
+	 */
+	PFNGLGETNMAPFVARBPROC glGetnMapfvARB;
+
+	/**
+	 * @brief void glGetnMapivARB(GLenum target, GLenum query, GLsizei bufSize, GLint *v)
+	 */
+	PFNGLGETNMAPIVARBPROC glGetnMapivARB;
+
+	/**
+	 * @brief void glGetnMinmaxARB(GLenum target, GLboolean reset, GLenum format, GLenum type, GLsizei bufSize, GLvoid *values)
+	 */
+	PFNGLGETNMINMAXARBPROC glGetnMinmaxARB;
+
+	/**
+	 * @brief void glGetnPixelMapfvARB(GLenum map, GLsizei bufSize, GLfloat *values)
+	 */
+	PFNGLGETNPIXELMAPFVARBPROC glGetnPixelMapfvARB;
+
+	/**
+	 * @brief void glGetnPixelMapuivARB(GLenum map, GLsizei bufSize, GLuint *values)
+	 */
+	PFNGLGETNPIXELMAPUIVARBPROC glGetnPixelMapuivARB;
+
+	/**
+	 * @brief void glGetnPixelMapusvARB(GLenum map, GLsizei bufSize, GLushort *values)
+	 */
+	PFNGLGETNPIXELMAPUSVARBPROC glGetnPixelMapusvARB;
+
+	/**
+	 * @brief void glGetnPolygonStippleARB(GLsizei bufSize, GLubyte *pattern)
+	 */
+	PFNGLGETNPOLYGONSTIPPLEARBPROC glGetnPolygonStippleARB;
+
+	/**
+	 * @brief void glGetnSeparableFilterARB(GLenum target, GLenum format, GLenum type, GLsizei rowBufSize, GLvoid *row, GLsizei columnBufSize, GLvoid *column, GLvoid *span)
+	 */
+	PFNGLGETNSEPARABLEFILTERARBPROC glGetnSeparableFilterARB;
+
+	/**
+	 * @brief void glGetnTexImageARB(GLenum target, GLint level, GLenum format, GLenum type, GLsizei bufSize, GLvoid *img)
+	 */
+	PFNGLGETNTEXIMAGEARBPROC glGetnTexImageARB;
+
+	/**
+	 * @brief void glGetnUniformdvARB(GLuint program, GLint location, GLsizei bufSize, GLdouble *params)
+	 */
+	PFNGLGETNUNIFORMDVARBPROC glGetnUniformdvARB;
+
+	/**
+	 * @brief void glGetnUniformfvARB(GLuint program, GLint location, GLsizei bufSize, GLfloat *params)
+	 */
+	PFNGLGETNUNIFORMFVARBPROC glGetnUniformfvARB;
+
+	/**
+	 * @brief void glGetnUniformivARB(GLuint program, GLint location, GLsizei bufSize, GLint *params)
+	 */
+	PFNGLGETNUNIFORMIVARBPROC glGetnUniformivARB;
+
+	/**
+	 * @brief void glGetnUniformuivARB(GLuint program, GLint location, GLsizei bufSize, GLuint *params)
+	 */
+	PFNGLGETNUNIFORMUIVARBPROC glGetnUniformuivARB;
+
+	/**
+	 * @brief void glReadnPixelsARB(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLsizei bufSize, GLvoid *data)
+	 */
+	PFNGLREADNPIXELSARBPROC glReadnPixelsARB;
+
+
+
+
 	// ****** GL_ARB_sample_shading ******
 
 	/**
@@ -3006,9 +3211,9 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glMinSampleShading(GLclampf value)
+	 * @brief void glMinSampleShadingARB(GLclampf value)
 	 */
-	PFNGLMINSAMPLESHADINGPROC glMinSampleShading;
+	PFNGLMINSAMPLESHADINGARBPROC glMinSampleShadingARB;
 
 
 
@@ -3037,14 +3242,14 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLGENSAMPLERSPROC glGenSamplers;
 
 	/**
-	 * @brief void glGetSamplerParameterIfv(GLuint sampler, GLenum pname, GLfloat *params)
-	 */
-	PFNGLGETSAMPLERPARAMETERIFVPROC glGetSamplerParameterIfv;
-
-	/**
 	 * @brief void glGetSamplerParameterIiv(GLuint sampler, GLenum pname, GLint *params)
 	 */
 	PFNGLGETSAMPLERPARAMETERIIVPROC glGetSamplerParameterIiv;
+
+	/**
+	 * @brief void glGetSamplerParameterIuiv(GLuint sampler, GLenum pname, GLuint *params)
+	 */
+	PFNGLGETSAMPLERPARAMETERIUIVPROC glGetSamplerParameterIuiv;
 
 	/**
 	 * @brief void glGetSamplerParameterfv(GLuint sampler, GLenum pname, GLfloat *params)
@@ -3100,6 +3305,317 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_ARB_seamless_cube_map is supported, false otherwise.
 	 */
 	bool isGL_ARB_seamless_cube_map;
+
+
+
+
+	// ****** GL_ARB_separate_shader_objects ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_separate_shader_objects is supported, false otherwise.
+	 */
+	bool isGL_ARB_separate_shader_objects;
+
+
+	/**
+	 * @brief void glActiveShaderProgram(GLuint pipeline, GLuint program)
+	 */
+	PFNGLACTIVESHADERPROGRAMPROC glActiveShaderProgram;
+
+	/**
+	 * @brief void glBindProgramPipeline(GLuint pipeline)
+	 */
+	PFNGLBINDPROGRAMPIPELINEPROC glBindProgramPipeline;
+
+	/**
+	 * @brief GLuint glCreateShaderProgramv(GLenum type, GLsizei count, const GLchar* *strings)
+	 */
+	PFNGLCREATESHADERPROGRAMVPROC glCreateShaderProgramv;
+
+	/**
+	 * @brief void glDeleteProgramPipelines(GLsizei n, const GLuint *pipelines)
+	 */
+	PFNGLDELETEPROGRAMPIPELINESPROC glDeleteProgramPipelines;
+
+	/**
+	 * @brief void glGenProgramPipelines(GLsizei n, GLuint *pipelines)
+	 */
+	PFNGLGENPROGRAMPIPELINESPROC glGenProgramPipelines;
+
+	/**
+	 * @brief void glGetProgramPipelineInfoLog(GLuint pipeline, GLsizei bufSize, GLsizei *length, GLchar *infoLog)
+	 */
+	PFNGLGETPROGRAMPIPELINEINFOLOGPROC glGetProgramPipelineInfoLog;
+
+	/**
+	 * @brief void glGetProgramPipelineiv(GLuint pipeline, GLenum pname, GLint *params)
+	 */
+	PFNGLGETPROGRAMPIPELINEIVPROC glGetProgramPipelineiv;
+
+	/**
+	 * @brief GLboolean glIsProgramPipeline(GLuint pipeline)
+	 */
+	PFNGLISPROGRAMPIPELINEPROC glIsProgramPipeline;
+
+	/**
+	 * @brief void glProgramUniform1d(GLuint program, GLint location, GLdouble v0)
+	 */
+	PFNGLPROGRAMUNIFORM1DPROC glProgramUniform1d;
+
+	/**
+	 * @brief void glProgramUniform1dv(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORM1DVPROC glProgramUniform1dv;
+
+	/**
+	 * @brief void glProgramUniform1f(GLuint program, GLint location, GLfloat v0)
+	 */
+	PFNGLPROGRAMUNIFORM1FPROC glProgramUniform1f;
+
+	/**
+	 * @brief void glProgramUniform1fv(GLuint program, GLint location, GLsizei count, const GLfloat *value)
+	 */
+	PFNGLPROGRAMUNIFORM1FVPROC glProgramUniform1fv;
+
+	/**
+	 * @brief void glProgramUniform1i(GLuint program, GLint location, GLint v0)
+	 */
+	PFNGLPROGRAMUNIFORM1IPROC glProgramUniform1i;
+
+	/**
+	 * @brief void glProgramUniform1iv(GLuint program, GLint location, GLsizei count, const GLint *value)
+	 */
+	PFNGLPROGRAMUNIFORM1IVPROC glProgramUniform1iv;
+
+	/**
+	 * @brief void glProgramUniform1ui(GLuint program, GLint location, GLuint v0)
+	 */
+	PFNGLPROGRAMUNIFORM1UIPROC glProgramUniform1ui;
+
+	/**
+	 * @brief void glProgramUniform1uiv(GLuint program, GLint location, GLsizei count, const GLuint *value)
+	 */
+	PFNGLPROGRAMUNIFORM1UIVPROC glProgramUniform1uiv;
+
+	/**
+	 * @brief void glProgramUniform2d(GLuint program, GLint location, GLdouble v0, GLdouble v1)
+	 */
+	PFNGLPROGRAMUNIFORM2DPROC glProgramUniform2d;
+
+	/**
+	 * @brief void glProgramUniform2dv(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORM2DVPROC glProgramUniform2dv;
+
+	/**
+	 * @brief void glProgramUniform2f(GLuint program, GLint location, GLfloat v0, GLfloat v1)
+	 */
+	PFNGLPROGRAMUNIFORM2FPROC glProgramUniform2f;
+
+	/**
+	 * @brief void glProgramUniform2fv(GLuint program, GLint location, GLsizei count, const GLfloat *value)
+	 */
+	PFNGLPROGRAMUNIFORM2FVPROC glProgramUniform2fv;
+
+	/**
+	 * @brief void glProgramUniform2i(GLuint program, GLint location, GLint v0, GLint v1)
+	 */
+	PFNGLPROGRAMUNIFORM2IPROC glProgramUniform2i;
+
+	/**
+	 * @brief void glProgramUniform2iv(GLuint program, GLint location, GLsizei count, const GLint *value)
+	 */
+	PFNGLPROGRAMUNIFORM2IVPROC glProgramUniform2iv;
+
+	/**
+	 * @brief void glProgramUniform2ui(GLuint program, GLint location, GLuint v0, GLuint v1)
+	 */
+	PFNGLPROGRAMUNIFORM2UIPROC glProgramUniform2ui;
+
+	/**
+	 * @brief void glProgramUniform2uiv(GLuint program, GLint location, GLsizei count, const GLuint *value)
+	 */
+	PFNGLPROGRAMUNIFORM2UIVPROC glProgramUniform2uiv;
+
+	/**
+	 * @brief void glProgramUniform3d(GLuint program, GLint location, GLdouble v0, GLdouble v1, GLdouble v2)
+	 */
+	PFNGLPROGRAMUNIFORM3DPROC glProgramUniform3d;
+
+	/**
+	 * @brief void glProgramUniform3dv(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORM3DVPROC glProgramUniform3dv;
+
+	/**
+	 * @brief void glProgramUniform3f(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2)
+	 */
+	PFNGLPROGRAMUNIFORM3FPROC glProgramUniform3f;
+
+	/**
+	 * @brief void glProgramUniform3fv(GLuint program, GLint location, GLsizei count, const GLfloat *value)
+	 */
+	PFNGLPROGRAMUNIFORM3FVPROC glProgramUniform3fv;
+
+	/**
+	 * @brief void glProgramUniform3i(GLuint program, GLint location, GLint v0, GLint v1, GLint v2)
+	 */
+	PFNGLPROGRAMUNIFORM3IPROC glProgramUniform3i;
+
+	/**
+	 * @brief void glProgramUniform3iv(GLuint program, GLint location, GLsizei count, const GLint *value)
+	 */
+	PFNGLPROGRAMUNIFORM3IVPROC glProgramUniform3iv;
+
+	/**
+	 * @brief void glProgramUniform3ui(GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2)
+	 */
+	PFNGLPROGRAMUNIFORM3UIPROC glProgramUniform3ui;
+
+	/**
+	 * @brief void glProgramUniform3uiv(GLuint program, GLint location, GLsizei count, const GLuint *value)
+	 */
+	PFNGLPROGRAMUNIFORM3UIVPROC glProgramUniform3uiv;
+
+	/**
+	 * @brief void glProgramUniform4d(GLuint program, GLint location, GLdouble v0, GLdouble v1, GLdouble v2, GLdouble v3)
+	 */
+	PFNGLPROGRAMUNIFORM4DPROC glProgramUniform4d;
+
+	/**
+	 * @brief void glProgramUniform4dv(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORM4DVPROC glProgramUniform4dv;
+
+	/**
+	 * @brief void glProgramUniform4f(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3)
+	 */
+	PFNGLPROGRAMUNIFORM4FPROC glProgramUniform4f;
+
+	/**
+	 * @brief void glProgramUniform4fv(GLuint program, GLint location, GLsizei count, const GLfloat *value)
+	 */
+	PFNGLPROGRAMUNIFORM4FVPROC glProgramUniform4fv;
+
+	/**
+	 * @brief void glProgramUniform4i(GLuint program, GLint location, GLint v0, GLint v1, GLint v2, GLint v3)
+	 */
+	PFNGLPROGRAMUNIFORM4IPROC glProgramUniform4i;
+
+	/**
+	 * @brief void glProgramUniform4iv(GLuint program, GLint location, GLsizei count, const GLint *value)
+	 */
+	PFNGLPROGRAMUNIFORM4IVPROC glProgramUniform4iv;
+
+	/**
+	 * @brief void glProgramUniform4ui(GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3)
+	 */
+	PFNGLPROGRAMUNIFORM4UIPROC glProgramUniform4ui;
+
+	/**
+	 * @brief void glProgramUniform4uiv(GLuint program, GLint location, GLsizei count, const GLuint *value)
+	 */
+	PFNGLPROGRAMUNIFORM4UIVPROC glProgramUniform4uiv;
+
+	/**
+	 * @brief void glProgramUniformMatrix2dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX2DVPROC glProgramUniformMatrix2dv;
+
+	/**
+	 * @brief void glProgramUniformMatrix2fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX2FVPROC glProgramUniformMatrix2fv;
+
+	/**
+	 * @brief void glProgramUniformMatrix2x3dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX2X3DVPROC glProgramUniformMatrix2x3dv;
+
+	/**
+	 * @brief void glProgramUniformMatrix2x3fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX2X3FVPROC glProgramUniformMatrix2x3fv;
+
+	/**
+	 * @brief void glProgramUniformMatrix2x4dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX2X4DVPROC glProgramUniformMatrix2x4dv;
+
+	/**
+	 * @brief void glProgramUniformMatrix2x4fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX2X4FVPROC glProgramUniformMatrix2x4fv;
+
+	/**
+	 * @brief void glProgramUniformMatrix3dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX3DVPROC glProgramUniformMatrix3dv;
+
+	/**
+	 * @brief void glProgramUniformMatrix3fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX3FVPROC glProgramUniformMatrix3fv;
+
+	/**
+	 * @brief void glProgramUniformMatrix3x2dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX3X2DVPROC glProgramUniformMatrix3x2dv;
+
+	/**
+	 * @brief void glProgramUniformMatrix3x2fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX3X2FVPROC glProgramUniformMatrix3x2fv;
+
+	/**
+	 * @brief void glProgramUniformMatrix3x4dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX3X4DVPROC glProgramUniformMatrix3x4dv;
+
+	/**
+	 * @brief void glProgramUniformMatrix3x4fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX3X4FVPROC glProgramUniformMatrix3x4fv;
+
+	/**
+	 * @brief void glProgramUniformMatrix4dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX4DVPROC glProgramUniformMatrix4dv;
+
+	/**
+	 * @brief void glProgramUniformMatrix4fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX4FVPROC glProgramUniformMatrix4fv;
+
+	/**
+	 * @brief void glProgramUniformMatrix4x2dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX4X2DVPROC glProgramUniformMatrix4x2dv;
+
+	/**
+	 * @brief void glProgramUniformMatrix4x2fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX4X2FVPROC glProgramUniformMatrix4x2fv;
+
+	/**
+	 * @brief void glProgramUniformMatrix4x3dv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX4X3DVPROC glProgramUniformMatrix4x3dv;
+
+	/**
+	 * @brief void glProgramUniformMatrix4x3fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX4X3FVPROC glProgramUniformMatrix4x3fv;
+
+	/**
+	 * @brief void glUseProgramStages(GLuint pipeline, GLbitfield stages, GLuint program)
+	 */
+	PFNGLUSEPROGRAMSTAGESPROC glUseProgramStages;
+
+	/**
+	 * @brief void glValidateProgramPipeline(GLuint pipeline)
+	 */
+	PFNGLVALIDATEPROGRAMPIPELINEPROC glValidateProgramPipeline;
 
 
 
@@ -3316,6 +3832,26 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glValidateProgramARB(GLhandleARB programObj)
 	 */
 	PFNGLVALIDATEPROGRAMARBPROC glValidateProgramARB;
+
+
+
+
+	// ****** GL_ARB_shader_precision ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_shader_precision is supported, false otherwise.
+	 */
+	bool isGL_ARB_shader_precision;
+
+
+
+
+	// ****** GL_ARB_shader_stencil_export ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_shader_stencil_export is supported, false otherwise.
+	 */
+	bool isGL_ARB_shader_stencil_export;
 
 
 
@@ -4023,6 +4559,67 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_vertex_attrib_64bit ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_vertex_attrib_64bit is supported, false otherwise.
+	 */
+	bool isGL_ARB_vertex_attrib_64bit;
+
+
+	/**
+	 * @brief void glGetVertexAttribLdv(GLuint index, GLenum pname, GLdouble *params)
+	 */
+	PFNGLGETVERTEXATTRIBLDVPROC glGetVertexAttribLdv;
+
+	/**
+	 * @brief void glVertexAttribL1d(GLuint index, GLdouble x)
+	 */
+	PFNGLVERTEXATTRIBL1DPROC glVertexAttribL1d;
+
+	/**
+	 * @brief void glVertexAttribL1dv(GLuint index, const GLdouble *v)
+	 */
+	PFNGLVERTEXATTRIBL1DVPROC glVertexAttribL1dv;
+
+	/**
+	 * @brief void glVertexAttribL2d(GLuint index, GLdouble x, GLdouble y)
+	 */
+	PFNGLVERTEXATTRIBL2DPROC glVertexAttribL2d;
+
+	/**
+	 * @brief void glVertexAttribL2dv(GLuint index, const GLdouble *v)
+	 */
+	PFNGLVERTEXATTRIBL2DVPROC glVertexAttribL2dv;
+
+	/**
+	 * @brief void glVertexAttribL3d(GLuint index, GLdouble x, GLdouble y, GLdouble z)
+	 */
+	PFNGLVERTEXATTRIBL3DPROC glVertexAttribL3d;
+
+	/**
+	 * @brief void glVertexAttribL3dv(GLuint index, const GLdouble *v)
+	 */
+	PFNGLVERTEXATTRIBL3DVPROC glVertexAttribL3dv;
+
+	/**
+	 * @brief void glVertexAttribL4d(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
+	 */
+	PFNGLVERTEXATTRIBL4DPROC glVertexAttribL4d;
+
+	/**
+	 * @brief void glVertexAttribL4dv(GLuint index, const GLdouble *v)
+	 */
+	PFNGLVERTEXATTRIBL4DVPROC glVertexAttribL4dv;
+
+	/**
+	 * @brief void glVertexAttribLPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
+	 */
+	PFNGLVERTEXATTRIBLPOINTERPROC glVertexAttribLPointer;
+
+
+
+
 	// ****** GL_ARB_vertex_blend ******
 
 	/**
@@ -4694,6 +5291,67 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glVertexP4uiv(GLenum type, const GLuint *value)
 	 */
 	PFNGLVERTEXP4UIVPROC glVertexP4uiv;
+
+
+
+
+	// ****** GL_ARB_viewport_array ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_viewport_array is supported, false otherwise.
+	 */
+	bool isGL_ARB_viewport_array;
+
+
+	/**
+	 * @brief void glDepthRangeArrayv(GLuint first, GLsizei count, const GLclampd *v)
+	 */
+	PFNGLDEPTHRANGEARRAYVPROC glDepthRangeArrayv;
+
+	/**
+	 * @brief void glDepthRangeIndexed(GLuint index, GLclampd n, GLclampd f)
+	 */
+	PFNGLDEPTHRANGEINDEXEDPROC glDepthRangeIndexed;
+
+	/**
+	 * @brief void glGetDoublei_v(GLenum target, GLuint index, GLdouble *data)
+	 */
+	PFNGLGETDOUBLEI_VPROC glGetDoublei_v;
+
+	/**
+	 * @brief void glGetFloati_v(GLenum target, GLuint index, GLfloat *data)
+	 */
+	PFNGLGETFLOATI_VPROC glGetFloati_v;
+
+	/**
+	 * @brief void glScissorArrayv(GLuint first, GLsizei count, const GLint *v)
+	 */
+	PFNGLSCISSORARRAYVPROC glScissorArrayv;
+
+	/**
+	 * @brief void glScissorIndexed(GLuint index, GLint left, GLint bottom, GLsizei width, GLsizei height)
+	 */
+	PFNGLSCISSORINDEXEDPROC glScissorIndexed;
+
+	/**
+	 * @brief void glScissorIndexedv(GLuint index, const GLint *v)
+	 */
+	PFNGLSCISSORINDEXEDVPROC glScissorIndexedv;
+
+	/**
+	 * @brief void glViewportArrayv(GLuint first, GLsizei count, const GLfloat *v)
+	 */
+	PFNGLVIEWPORTARRAYVPROC glViewportArrayv;
+
+	/**
+	 * @brief void glViewportIndexedf(GLuint index, GLfloat x, GLfloat y, GLfloat w, GLfloat h)
+	 */
+	PFNGLVIEWPORTINDEXEDFPROC glViewportIndexedf;
+
+	/**
+	 * @brief void glViewportIndexedfv(GLuint index, const GLfloat *v)
+	 */
+	PFNGLVIEWPORTINDEXEDFVPROC glViewportIndexedfv;
 
 
 
@@ -6580,6 +7238,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEEXTPROC glNamedRenderbufferStorageMultisampleEXT;
 
 	/**
+	 * @brief void glProgramUniform1dEXT(GLuint program, GLint location, GLdouble x)
+	 */
+	PFNGLPROGRAMUNIFORM1DEXTPROC glProgramUniform1dEXT;
+
+	/**
+	 * @brief void glProgramUniform1dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORM1DVEXTPROC glProgramUniform1dvEXT;
+
+	/**
 	 * @brief void glProgramUniform1fEXT(GLuint program, GLint location, GLfloat v0)
 	 */
 	PFNGLPROGRAMUNIFORM1FEXTPROC glProgramUniform1fEXT;
@@ -6608,6 +7276,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glProgramUniform1uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value)
 	 */
 	PFNGLPROGRAMUNIFORM1UIVEXTPROC glProgramUniform1uivEXT;
+
+	/**
+	 * @brief void glProgramUniform2dEXT(GLuint program, GLint location, GLdouble x, GLdouble y)
+	 */
+	PFNGLPROGRAMUNIFORM2DEXTPROC glProgramUniform2dEXT;
+
+	/**
+	 * @brief void glProgramUniform2dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORM2DVEXTPROC glProgramUniform2dvEXT;
 
 	/**
 	 * @brief void glProgramUniform2fEXT(GLuint program, GLint location, GLfloat v0, GLfloat v1)
@@ -6640,6 +7318,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLPROGRAMUNIFORM2UIVEXTPROC glProgramUniform2uivEXT;
 
 	/**
+	 * @brief void glProgramUniform3dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z)
+	 */
+	PFNGLPROGRAMUNIFORM3DEXTPROC glProgramUniform3dEXT;
+
+	/**
+	 * @brief void glProgramUniform3dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORM3DVEXTPROC glProgramUniform3dvEXT;
+
+	/**
 	 * @brief void glProgramUniform3fEXT(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2)
 	 */
 	PFNGLPROGRAMUNIFORM3FEXTPROC glProgramUniform3fEXT;
@@ -6668,6 +7356,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glProgramUniform3uivEXT(GLuint program, GLint location, GLsizei count, const GLuint *value)
 	 */
 	PFNGLPROGRAMUNIFORM3UIVEXTPROC glProgramUniform3uivEXT;
+
+	/**
+	 * @brief void glProgramUniform4dEXT(GLuint program, GLint location, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
+	 */
+	PFNGLPROGRAMUNIFORM4DEXTPROC glProgramUniform4dEXT;
+
+	/**
+	 * @brief void glProgramUniform4dvEXT(GLuint program, GLint location, GLsizei count, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORM4DVEXTPROC glProgramUniform4dvEXT;
 
 	/**
 	 * @brief void glProgramUniform4fEXT(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3)
@@ -6700,9 +7398,19 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLPROGRAMUNIFORM4UIVEXTPROC glProgramUniform4uivEXT;
 
 	/**
+	 * @brief void glProgramUniformMatrix2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX2DVEXTPROC glProgramUniformMatrix2dvEXT;
+
+	/**
 	 * @brief void glProgramUniformMatrix2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
 	 */
 	PFNGLPROGRAMUNIFORMMATRIX2FVEXTPROC glProgramUniformMatrix2fvEXT;
+
+	/**
+	 * @brief void glProgramUniformMatrix2x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX2X3DVEXTPROC glProgramUniformMatrix2x3dvEXT;
 
 	/**
 	 * @brief void glProgramUniformMatrix2x3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
@@ -6710,9 +7418,19 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLPROGRAMUNIFORMMATRIX2X3FVEXTPROC glProgramUniformMatrix2x3fvEXT;
 
 	/**
+	 * @brief void glProgramUniformMatrix2x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX2X4DVEXTPROC glProgramUniformMatrix2x4dvEXT;
+
+	/**
 	 * @brief void glProgramUniformMatrix2x4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
 	 */
 	PFNGLPROGRAMUNIFORMMATRIX2X4FVEXTPROC glProgramUniformMatrix2x4fvEXT;
+
+	/**
+	 * @brief void glProgramUniformMatrix3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX3DVEXTPROC glProgramUniformMatrix3dvEXT;
 
 	/**
 	 * @brief void glProgramUniformMatrix3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
@@ -6720,9 +7438,19 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLPROGRAMUNIFORMMATRIX3FVEXTPROC glProgramUniformMatrix3fvEXT;
 
 	/**
+	 * @brief void glProgramUniformMatrix3x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX3X2DVEXTPROC glProgramUniformMatrix3x2dvEXT;
+
+	/**
 	 * @brief void glProgramUniformMatrix3x2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
 	 */
 	PFNGLPROGRAMUNIFORMMATRIX3X2FVEXTPROC glProgramUniformMatrix3x2fvEXT;
+
+	/**
+	 * @brief void glProgramUniformMatrix3x4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX3X4DVEXTPROC glProgramUniformMatrix3x4dvEXT;
 
 	/**
 	 * @brief void glProgramUniformMatrix3x4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
@@ -6730,14 +7458,29 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLPROGRAMUNIFORMMATRIX3X4FVEXTPROC glProgramUniformMatrix3x4fvEXT;
 
 	/**
+	 * @brief void glProgramUniformMatrix4dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX4DVEXTPROC glProgramUniformMatrix4dvEXT;
+
+	/**
 	 * @brief void glProgramUniformMatrix4fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
 	 */
 	PFNGLPROGRAMUNIFORMMATRIX4FVEXTPROC glProgramUniformMatrix4fvEXT;
 
 	/**
+	 * @brief void glProgramUniformMatrix4x2dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX4X2DVEXTPROC glProgramUniformMatrix4x2dvEXT;
+
+	/**
 	 * @brief void glProgramUniformMatrix4x2fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
 	 */
 	PFNGLPROGRAMUNIFORMMATRIX4X2FVEXTPROC glProgramUniformMatrix4x2fvEXT;
+
+	/**
+	 * @brief void glProgramUniformMatrix4x3dvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLdouble *value)
+	 */
+	PFNGLPROGRAMUNIFORMMATRIX4X3DVEXTPROC glProgramUniformMatrix4x3dvEXT;
 
 	/**
 	 * @brief void glProgramUniformMatrix4x3fvEXT(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
@@ -7340,7 +8083,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glMultiDrawArraysEXT(GLenum mode, GLint *first, GLsizei *count, GLsizei primcount)
+	 * @brief void glMultiDrawArraysEXT(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount)
 	 */
 	PFNGLMULTIDRAWARRAYSEXTPROC glMultiDrawArraysEXT;
 
@@ -7686,6 +8429,17 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_EXT_shader_image_load_store is supported, false otherwise.
 	 */
 	bool isGL_EXT_shader_image_load_store;
+
+
+	/**
+	 * @brief void glBindImageTextureEXT(GLuint index, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLint format)
+	 */
+	PFNGLBINDIMAGETEXTUREEXTPROC glBindImageTextureEXT;
+
+	/**
+	 * @brief void glMemoryBarrierEXT(GLbitfield barriers)
+	 */
+	PFNGLMEMORYBARRIEREXTPROC glMemoryBarrierEXT;
 
 
 
@@ -8207,6 +8961,62 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_EXT_vertex_attrib_64bit is supported, false otherwise.
 	 */
 	bool isGL_EXT_vertex_attrib_64bit;
+
+
+	/**
+	 * @brief void glGetVertexAttribLdvEXT(GLuint index, GLenum pname, GLdouble *params)
+	 */
+	PFNGLGETVERTEXATTRIBLDVEXTPROC glGetVertexAttribLdvEXT;
+
+	/**
+	 * @brief void glVertexArrayVertexAttribLOffsetEXT(GLuint vaobj, GLuint buffer, GLuint index, GLint size, GLenum type, GLsizei stride, GLintptr offset)
+	 */
+	PFNGLVERTEXARRAYVERTEXATTRIBLOFFSETEXTPROC glVertexArrayVertexAttribLOffsetEXT;
+
+	/**
+	 * @brief void glVertexAttribL1dEXT(GLuint index, GLdouble x)
+	 */
+	PFNGLVERTEXATTRIBL1DEXTPROC glVertexAttribL1dEXT;
+
+	/**
+	 * @brief void glVertexAttribL1dvEXT(GLuint index, const GLdouble *v)
+	 */
+	PFNGLVERTEXATTRIBL1DVEXTPROC glVertexAttribL1dvEXT;
+
+	/**
+	 * @brief void glVertexAttribL2dEXT(GLuint index, GLdouble x, GLdouble y)
+	 */
+	PFNGLVERTEXATTRIBL2DEXTPROC glVertexAttribL2dEXT;
+
+	/**
+	 * @brief void glVertexAttribL2dvEXT(GLuint index, const GLdouble *v)
+	 */
+	PFNGLVERTEXATTRIBL2DVEXTPROC glVertexAttribL2dvEXT;
+
+	/**
+	 * @brief void glVertexAttribL3dEXT(GLuint index, GLdouble x, GLdouble y, GLdouble z)
+	 */
+	PFNGLVERTEXATTRIBL3DEXTPROC glVertexAttribL3dEXT;
+
+	/**
+	 * @brief void glVertexAttribL3dvEXT(GLuint index, const GLdouble *v)
+	 */
+	PFNGLVERTEXATTRIBL3DVEXTPROC glVertexAttribL3dvEXT;
+
+	/**
+	 * @brief void glVertexAttribL4dEXT(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w)
+	 */
+	PFNGLVERTEXATTRIBL4DEXTPROC glVertexAttribL4dEXT;
+
+	/**
+	 * @brief void glVertexAttribL4dvEXT(GLuint index, const GLdouble *v)
+	 */
+	PFNGLVERTEXATTRIBL4DVEXTPROC glVertexAttribL4dvEXT;
+
+	/**
+	 * @brief void glVertexAttribLPointerEXT(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
+	 */
+	PFNGLVERTEXATTRIBLPOINTEREXTPROC glVertexAttribLPointerEXT;
 
 
 
@@ -9405,6 +10215,17 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	bool isGL_NV_gpu_program5;
 
 
+	/**
+	 * @brief void glGetProgramSubroutineParameteruivNV(GLenum target, GLuint index, GLuint *param)
+	 */
+	PFNGLGETPROGRAMSUBROUTINEPARAMETERUIVNVPROC glGetProgramSubroutineParameteruivNV;
+
+	/**
+	 * @brief void glProgramSubroutineParametersuivNV(GLenum target, GLsizei count, const GLuint *params)
+	 */
+	PFNGLPROGRAMSUBROUTINEPARAMETERSUIVNVPROC glProgramSubroutineParametersuivNV;
+
+
 
 
 	// ****** GL_NV_gpu_shader5 ******
@@ -9413,6 +10234,172 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_NV_gpu_shader5 is supported, false otherwise.
 	 */
 	bool isGL_NV_gpu_shader5;
+
+
+	/**
+	 * @brief void glGetUniformi64vNV(GLuint program, GLint location, GLint64EXT *params)
+	 */
+	PFNGLGETUNIFORMI64VNVPROC glGetUniformi64vNV;
+
+	/**
+	 * @brief void glProgramUniform1i64NV(GLuint program, GLint location, GLint64EXT x)
+	 */
+	PFNGLPROGRAMUNIFORM1I64NVPROC glProgramUniform1i64NV;
+
+	/**
+	 * @brief void glProgramUniform1i64vNV(GLuint program, GLint location, GLsizei count, const GLint64EXT *value)
+	 */
+	PFNGLPROGRAMUNIFORM1I64VNVPROC glProgramUniform1i64vNV;
+
+	/**
+	 * @brief void glProgramUniform1ui64NV(GLuint program, GLint location, GLuint64EXT x)
+	 */
+	PFNGLPROGRAMUNIFORM1UI64NVPROC glProgramUniform1ui64NV;
+
+	/**
+	 * @brief void glProgramUniform1ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value)
+	 */
+	PFNGLPROGRAMUNIFORM1UI64VNVPROC glProgramUniform1ui64vNV;
+
+	/**
+	 * @brief void glProgramUniform2i64NV(GLuint program, GLint location, GLint64EXT x, GLint64EXT y)
+	 */
+	PFNGLPROGRAMUNIFORM2I64NVPROC glProgramUniform2i64NV;
+
+	/**
+	 * @brief void glProgramUniform2i64vNV(GLuint program, GLint location, GLsizei count, const GLint64EXT *value)
+	 */
+	PFNGLPROGRAMUNIFORM2I64VNVPROC glProgramUniform2i64vNV;
+
+	/**
+	 * @brief void glProgramUniform2ui64NV(GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y)
+	 */
+	PFNGLPROGRAMUNIFORM2UI64NVPROC glProgramUniform2ui64NV;
+
+	/**
+	 * @brief void glProgramUniform2ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value)
+	 */
+	PFNGLPROGRAMUNIFORM2UI64VNVPROC glProgramUniform2ui64vNV;
+
+	/**
+	 * @brief void glProgramUniform3i64NV(GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z)
+	 */
+	PFNGLPROGRAMUNIFORM3I64NVPROC glProgramUniform3i64NV;
+
+	/**
+	 * @brief void glProgramUniform3i64vNV(GLuint program, GLint location, GLsizei count, const GLint64EXT *value)
+	 */
+	PFNGLPROGRAMUNIFORM3I64VNVPROC glProgramUniform3i64vNV;
+
+	/**
+	 * @brief void glProgramUniform3ui64NV(GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z)
+	 */
+	PFNGLPROGRAMUNIFORM3UI64NVPROC glProgramUniform3ui64NV;
+
+	/**
+	 * @brief void glProgramUniform3ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value)
+	 */
+	PFNGLPROGRAMUNIFORM3UI64VNVPROC glProgramUniform3ui64vNV;
+
+	/**
+	 * @brief void glProgramUniform4i64NV(GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w)
+	 */
+	PFNGLPROGRAMUNIFORM4I64NVPROC glProgramUniform4i64NV;
+
+	/**
+	 * @brief void glProgramUniform4i64vNV(GLuint program, GLint location, GLsizei count, const GLint64EXT *value)
+	 */
+	PFNGLPROGRAMUNIFORM4I64VNVPROC glProgramUniform4i64vNV;
+
+	/**
+	 * @brief void glProgramUniform4ui64NV(GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w)
+	 */
+	PFNGLPROGRAMUNIFORM4UI64NVPROC glProgramUniform4ui64NV;
+
+	/**
+	 * @brief void glProgramUniform4ui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64EXT *value)
+	 */
+	PFNGLPROGRAMUNIFORM4UI64VNVPROC glProgramUniform4ui64vNV;
+
+	/**
+	 * @brief void glUniform1i64NV(GLint location, GLint64EXT x)
+	 */
+	PFNGLUNIFORM1I64NVPROC glUniform1i64NV;
+
+	/**
+	 * @brief void glUniform1i64vNV(GLint location, GLsizei count, const GLint64EXT *value)
+	 */
+	PFNGLUNIFORM1I64VNVPROC glUniform1i64vNV;
+
+	/**
+	 * @brief void glUniform1ui64NV(GLint location, GLuint64EXT x)
+	 */
+	PFNGLUNIFORM1UI64NVPROC glUniform1ui64NV;
+
+	/**
+	 * @brief void glUniform1ui64vNV(GLint location, GLsizei count, const GLuint64EXT *value)
+	 */
+	PFNGLUNIFORM1UI64VNVPROC glUniform1ui64vNV;
+
+	/**
+	 * @brief void glUniform2i64NV(GLint location, GLint64EXT x, GLint64EXT y)
+	 */
+	PFNGLUNIFORM2I64NVPROC glUniform2i64NV;
+
+	/**
+	 * @brief void glUniform2i64vNV(GLint location, GLsizei count, const GLint64EXT *value)
+	 */
+	PFNGLUNIFORM2I64VNVPROC glUniform2i64vNV;
+
+	/**
+	 * @brief void glUniform2ui64NV(GLint location, GLuint64EXT x, GLuint64EXT y)
+	 */
+	PFNGLUNIFORM2UI64NVPROC glUniform2ui64NV;
+
+	/**
+	 * @brief void glUniform2ui64vNV(GLint location, GLsizei count, const GLuint64EXT *value)
+	 */
+	PFNGLUNIFORM2UI64VNVPROC glUniform2ui64vNV;
+
+	/**
+	 * @brief void glUniform3i64NV(GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z)
+	 */
+	PFNGLUNIFORM3I64NVPROC glUniform3i64NV;
+
+	/**
+	 * @brief void glUniform3i64vNV(GLint location, GLsizei count, const GLint64EXT *value)
+	 */
+	PFNGLUNIFORM3I64VNVPROC glUniform3i64vNV;
+
+	/**
+	 * @brief void glUniform3ui64NV(GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z)
+	 */
+	PFNGLUNIFORM3UI64NVPROC glUniform3ui64NV;
+
+	/**
+	 * @brief void glUniform3ui64vNV(GLint location, GLsizei count, const GLuint64EXT *value)
+	 */
+	PFNGLUNIFORM3UI64VNVPROC glUniform3ui64vNV;
+
+	/**
+	 * @brief void glUniform4i64NV(GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w)
+	 */
+	PFNGLUNIFORM4I64NVPROC glUniform4i64NV;
+
+	/**
+	 * @brief void glUniform4i64vNV(GLint location, GLsizei count, const GLint64EXT *value)
+	 */
+	PFNGLUNIFORM4I64VNVPROC glUniform4i64vNV;
+
+	/**
+	 * @brief void glUniform4ui64NV(GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w)
+	 */
+	PFNGLUNIFORM4UI64NVPROC glUniform4ui64NV;
+
+	/**
+	 * @brief void glUniform4ui64vNV(GLint location, GLsizei count, const GLuint64EXT *value)
+	 */
+	PFNGLUNIFORM4UI64VNVPROC glUniform4ui64vNV;
 
 
 
@@ -10247,7 +11234,12 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLTRANSFORMFEEDBACKATTRIBSNVPROC glTransformFeedbackAttribsNV;
 
 	/**
-	 * @brief void glTransformFeedbackVaryingsNV(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode)
+	 * @brief void glTransformFeedbackStreamAttribsNV(GLsizei count, const GLint *attribs, GLsizei nbuffers, const GLint *bufstreams, GLenum bufferMode)
+	 */
+	PFNGLTRANSFORMFEEDBACKSTREAMATTRIBSNVPROC glTransformFeedbackStreamAttribsNV;
+
+	/**
+	 * @brief void glTransformFeedbackVaryingsNV(GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode)
 	 */
 	PFNGLTRANSFORMFEEDBACKVARYINGSNVPROC glTransformFeedbackVaryingsNV;
 
@@ -10308,6 +11300,57 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	bool isGL_NV_vdpau_interop;
 
 
+	/**
+	 * @brief void glVDPAUFiniNV(void)
+	 */
+	PFNGLVDPAUFININVPROC glVDPAUFiniNV;
+
+	/**
+	 * @brief void glVDPAUGetSurfaceivNV(GLvdpauSurfaceNV surface, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values)
+	 */
+	PFNGLVDPAUGETSURFACEIVNVPROC glVDPAUGetSurfaceivNV;
+
+	/**
+	 * @brief void glVDPAUInitNV(const GLvoid *vdpDevice, const GLvoid *getProcAddress)
+	 */
+	PFNGLVDPAUINITNVPROC glVDPAUInitNV;
+
+	/**
+	 * @brief void glVDPAUIsSurfaceNV(GLvdpauSurfaceNV surface)
+	 */
+	PFNGLVDPAUISSURFACENVPROC glVDPAUIsSurfaceNV;
+
+	/**
+	 * @brief void glVDPAUMapSurfacesNV(GLsizei numSurfaces, const GLvdpauSurfaceNV *surfaces)
+	 */
+	PFNGLVDPAUMAPSURFACESNVPROC glVDPAUMapSurfacesNV;
+
+	/**
+	 * @brief GLvdpauSurfaceNV glVDPAURegisterOutputSurfaceNV(GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames)
+	 */
+	PFNGLVDPAUREGISTEROUTPUTSURFACENVPROC glVDPAURegisterOutputSurfaceNV;
+
+	/**
+	 * @brief GLvdpauSurfaceNV glVDPAURegisterVideoSurfaceNV(GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames)
+	 */
+	PFNGLVDPAUREGISTERVIDEOSURFACENVPROC glVDPAURegisterVideoSurfaceNV;
+
+	/**
+	 * @brief void glVDPAUSurfaceAccessNV(GLvdpauSurfaceNV surface, GLenum access)
+	 */
+	PFNGLVDPAUSURFACEACCESSNVPROC glVDPAUSurfaceAccessNV;
+
+	/**
+	 * @brief void glVDPAUUnmapSurfacesNV(GLsizei numSurface, const GLvdpauSurfaceNV *surfaces)
+	 */
+	PFNGLVDPAUUNMAPSURFACESNVPROC glVDPAUUnmapSurfacesNV;
+
+	/**
+	 * @brief void glVDPAUUnregisterSurfaceNV(GLvdpauSurfaceNV surface)
+	 */
+	PFNGLVDPAUUNREGISTERSURFACENVPROC glVDPAUUnregisterSurfaceNV;
+
+
 
 
 	// ****** GL_NV_vertex_array_range ******
@@ -10347,6 +11390,102 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_NV_vertex_attrib_integer_64bit is supported, false otherwise.
 	 */
 	bool isGL_NV_vertex_attrib_integer_64bit;
+
+
+	/**
+	 * @brief void glGetVertexAttribLi64vNV(GLuint index, GLenum pname, GLint64EXT *params)
+	 */
+	PFNGLGETVERTEXATTRIBLI64VNVPROC glGetVertexAttribLi64vNV;
+
+	/**
+	 * @brief void glGetVertexAttribLui64vNV(GLuint index, GLenum pname, GLuint64EXT *params)
+	 */
+	PFNGLGETVERTEXATTRIBLUI64VNVPROC glGetVertexAttribLui64vNV;
+
+	/**
+	 * @brief void glVertexAttribL1i64NV(GLuint index, GLint64EXT x)
+	 */
+	PFNGLVERTEXATTRIBL1I64NVPROC glVertexAttribL1i64NV;
+
+	/**
+	 * @brief void glVertexAttribL1i64vNV(GLuint index, const GLint64EXT *v)
+	 */
+	PFNGLVERTEXATTRIBL1I64VNVPROC glVertexAttribL1i64vNV;
+
+	/**
+	 * @brief void glVertexAttribL1ui64NV(GLuint index, GLuint64EXT x)
+	 */
+	PFNGLVERTEXATTRIBL1UI64NVPROC glVertexAttribL1ui64NV;
+
+	/**
+	 * @brief void glVertexAttribL1ui64vNV(GLuint index, const GLuint64EXT *v)
+	 */
+	PFNGLVERTEXATTRIBL1UI64VNVPROC glVertexAttribL1ui64vNV;
+
+	/**
+	 * @brief void glVertexAttribL2i64NV(GLuint index, GLint64EXT x, GLint64EXT y)
+	 */
+	PFNGLVERTEXATTRIBL2I64NVPROC glVertexAttribL2i64NV;
+
+	/**
+	 * @brief void glVertexAttribL2i64vNV(GLuint index, const GLint64EXT *v)
+	 */
+	PFNGLVERTEXATTRIBL2I64VNVPROC glVertexAttribL2i64vNV;
+
+	/**
+	 * @brief void glVertexAttribL2ui64NV(GLuint index, GLuint64EXT x, GLuint64EXT y)
+	 */
+	PFNGLVERTEXATTRIBL2UI64NVPROC glVertexAttribL2ui64NV;
+
+	/**
+	 * @brief void glVertexAttribL2ui64vNV(GLuint index, const GLuint64EXT *v)
+	 */
+	PFNGLVERTEXATTRIBL2UI64VNVPROC glVertexAttribL2ui64vNV;
+
+	/**
+	 * @brief void glVertexAttribL3i64NV(GLuint index, GLint64EXT x, GLint64EXT y, GLint64EXT z)
+	 */
+	PFNGLVERTEXATTRIBL3I64NVPROC glVertexAttribL3i64NV;
+
+	/**
+	 * @brief void glVertexAttribL3i64vNV(GLuint index, const GLint64EXT *v)
+	 */
+	PFNGLVERTEXATTRIBL3I64VNVPROC glVertexAttribL3i64vNV;
+
+	/**
+	 * @brief void glVertexAttribL3ui64NV(GLuint index, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z)
+	 */
+	PFNGLVERTEXATTRIBL3UI64NVPROC glVertexAttribL3ui64NV;
+
+	/**
+	 * @brief void glVertexAttribL3ui64vNV(GLuint index, const GLuint64EXT *v)
+	 */
+	PFNGLVERTEXATTRIBL3UI64VNVPROC glVertexAttribL3ui64vNV;
+
+	/**
+	 * @brief void glVertexAttribL4i64NV(GLuint index, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w)
+	 */
+	PFNGLVERTEXATTRIBL4I64NVPROC glVertexAttribL4i64NV;
+
+	/**
+	 * @brief void glVertexAttribL4i64vNV(GLuint index, const GLint64EXT *v)
+	 */
+	PFNGLVERTEXATTRIBL4I64VNVPROC glVertexAttribL4i64vNV;
+
+	/**
+	 * @brief void glVertexAttribL4ui64NV(GLuint index, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w)
+	 */
+	PFNGLVERTEXATTRIBL4UI64NVPROC glVertexAttribL4ui64NV;
+
+	/**
+	 * @brief void glVertexAttribL4ui64vNV(GLuint index, const GLuint64EXT *v)
+	 */
+	PFNGLVERTEXATTRIBL4UI64VNVPROC glVertexAttribL4ui64vNV;
+
+	/**
+	 * @brief void glVertexAttribLFormatNV(GLuint index, GLint size, GLenum type, GLsizei stride)
+	 */
+	PFNGLVERTEXATTRIBLFORMATNVPROC glVertexAttribLFormatNV;
 
 
 
@@ -12926,7 +14065,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLBLENDFUNCSEPARATEPROC glBlendFuncSeparate;
 
 	/**
-	 * @brief void glMultiDrawArrays(GLenum mode, GLint *first, GLsizei *count, GLsizei primcount)
+	 * @brief void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount)
 	 */
 	PFNGLMULTIDRAWARRAYSPROC glMultiDrawArrays;
 
@@ -13444,7 +14583,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLSHADERSOURCEPROC glShaderSource;
 
 	/**
-	 * @brief void glStencilFuncSeparate(GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask)
+	 * @brief void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask)
 	 */
 	PFNGLSTENCILFUNCSEPARATEPROC glStencilFuncSeparate;
 
@@ -14177,11 +15316,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 */
 	PFNGLGETINTEGER64I_VPROC glGetInteger64i_v;
 
-	/**
-	 * @brief void glProgramParameteri(GLuint program, GLenum pname, GLint value)
-	 */
-	PFNGLPROGRAMPARAMETERIPROC glProgramParameteri;
-
 
 
 
@@ -14193,6 +15327,12 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	bool isGL_VERSION_3_3;
 
 
+	/**
+	 * @brief void glVertexAttribDivisor(GLuint index, GLuint divisor)
+	 */
+	PFNGLVERTEXATTRIBDIVISORPROC glVertexAttribDivisor;
+
+
 
 
 	// ****** GL_VERSION_4_0 ******
@@ -14201,6 +15341,42 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_VERSION_4_0 is supported, false otherwise.
 	 */
 	bool isGL_VERSION_4_0;
+
+
+	/**
+	 * @brief void glBlendEquationSeparatei(GLuint buf, GLenum modeRGB, GLenum modeAlpha)
+	 */
+	PFNGLBLENDEQUATIONSEPARATEIPROC glBlendEquationSeparatei;
+
+	/**
+	 * @brief void glBlendEquationi(GLuint buf, GLenum mode)
+	 */
+	PFNGLBLENDEQUATIONIPROC glBlendEquationi;
+
+	/**
+	 * @brief void glBlendFuncSeparatei(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
+	 */
+	PFNGLBLENDFUNCSEPARATEIPROC glBlendFuncSeparatei;
+
+	/**
+	 * @brief void glBlendFunci(GLuint buf, GLenum src, GLenum dst)
+	 */
+	PFNGLBLENDFUNCIPROC glBlendFunci;
+
+	/**
+	 * @brief void glMinSampleShading(GLclampf value)
+	 */
+	PFNGLMINSAMPLESHADINGPROC glMinSampleShading;
+
+
+
+
+	// ****** GL_VERSION_4_1 ******
+
+	/**
+	 * @brief Returns \c true if \b GL_VERSION_4_1 is supported, false otherwise.
+	 */
+	bool isGL_VERSION_4_1;
 
 
 
@@ -14370,6 +15546,17 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 #ifdef WIN32
+	// ****** WGL_ARB_create_context_robustness ******
+
+	/**
+	 * @brief Returns \c true if \b WGL_ARB_create_context_robustness is supported, false otherwise.
+	 */
+	bool isWGL_ARB_create_context_robustness;
+#endif //WIN32
+
+
+
+#ifdef WIN32
 	// ****** WGL_ARB_extensions_string ******
 
 	/**
@@ -14382,6 +15569,17 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief const char * wglGetExtensionsStringARB(HDC hdc)
 	 */
 	PFNWGLGETEXTENSIONSSTRINGARBPROC wglGetExtensionsStringARB;
+#endif //WIN32
+
+
+
+#ifdef WIN32
+	// ****** WGL_ARB_framebuffer_sRGB ******
+
+	/**
+	 * @brief Returns \c true if \b WGL_ARB_framebuffer_sRGB is supported, false otherwise.
+	 */
+	bool isWGL_ARB_framebuffer_sRGB;
 #endif //WIN32
 
 
@@ -14528,6 +15726,17 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b WGL_ATI_pixel_format_float is supported, false otherwise.
 	 */
 	bool isWGL_ATI_pixel_format_float;
+#endif //WIN32
+
+
+
+#ifdef WIN32
+	// ****** WGL_EXT_create_context_es2_profile ******
+
+	/**
+	 * @brief Returns \c true if \b WGL_EXT_create_context_es2_profile is supported, false otherwise.
+	 */
+	bool isWGL_EXT_create_context_es2_profile;
 #endif //WIN32
 
 

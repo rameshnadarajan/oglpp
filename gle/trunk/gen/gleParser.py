@@ -138,10 +138,11 @@ def parseFile( filename ):
 			m = reuseRE.match(line)
 			if m and re.search( r'^GL_VERSION_.+$', currentExtensionName ):
 				nameOfReusedExtension =  'GL_' + m.group('extensionName')
-				if currentExtensionName in reuses:
-					reuses[currentExtensionName].append(nameOfReusedExtension)
-				else:
-					reuses[currentExtensionName] = [nameOfReusedExtension]
+# @todo FIXME
+#				if currentExtensionName in reuses:
+#					reuses[currentExtensionName].append(nameOfReusedExtension)
+#				else:
+#					reuses[currentExtensionName] = [nameOfReusedExtension]
 				continue
 
 	# Process reuse to fill opengl.extensions

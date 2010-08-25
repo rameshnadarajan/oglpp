@@ -20,8 +20,8 @@ from gleParser import parseFile, parseRegistry
 ###########################################
 
 # Downloads OpenGL header files and registry
-#downloadOpenGLHeaderFiles()
-#downloadOpenGLRegistry()
+downloadOpenGLHeaderFiles()
+downloadOpenGLRegistry()
 
 # Parses files and registry
 for file in ['glext.h', 'glxext.h', 'wglext.h']:
