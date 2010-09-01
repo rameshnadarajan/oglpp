@@ -228,7 +228,7 @@ struct FrameBufferObject : public Object
 	 *
 	 * @param index				a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
 	 *
-	 * @pre 0 <= index <= getNumOfColors()
+	 * @pre 0 <= index < getNumOfColors()
 	 *
 	 * @return the desired color buffer of the framebuffer
 	 */
@@ -239,7 +239,7 @@ struct FrameBufferObject : public Object
 	 *
 	 * @param index				a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
 	 *
-	 * @pre 0 <= index <= getNumOfColors()
+	 * @pre 0 <= index < getNumOfColors()
 	 *
 	 * @return the desired color buffer of the framebuffer
 	 */
@@ -293,12 +293,12 @@ struct FrameBufferObject : public Object
 	/**
 	 * @brief Sets all readback operations to the default framebuffer.
 	 */
-	GLO_API static void setReadBufferToDefaultFrameBuffer();
+	GLO_API static void setReadToDefaultFrameBuffer();
 
 	/**
 	 * @brief Sets all readback operations to this framebuffer.
 	 *
-	 * @param index				a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
+	 * @param index		a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
 	 */
 	GLO_API void setReadBuffer( const int index = 0 ) const;
 
@@ -314,12 +314,14 @@ struct FrameBufferObject : public Object
 	/**
 	 * @brief Sets all drawing operations to the default framebuffer.
 	 */
-	GLO_API static void setDrawBufferToDefaultFrameBuffer();
+	GLO_API static void setDrawToDefaultFrameBuffer();
 
 	/**
 	 * @brief Sets all drawing operations to this framebuffer.
+	 *
+	 * @param index		a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
 	 */
-	GLO_API void setDrawBuffer() const;
+	GLO_API void setDrawBuffer( const int index = 0 ) const;
 
 	/**
 	 * @brief Sets the draw buffers to which all fragment colors are written.
@@ -353,6 +355,19 @@ struct FrameBufferObject : public Object
 	 * @brief Returns the draw buffers to which all fragment colors are written.
 	 *
 	 * @return a container of zero-based index specifying buffers to which each fragment color is written.
+	 *
+	 * @remark the returned container could contained the special value -1 meaning that this buffer is not used for drawing (see GL_NONE).
+	 *
+	 * @todo takes care of glPush/PopAttrib() ?
+	 */
+	GLO_API const std::vector< int >& getFullDrawBuffers() const;
+
+	/**
+	 * @brief Returns the draw buffers to which all fragment colors are written.
+	 *
+	 * @return a container of zero-based index specifying buffers to which each fragment color is written.
+	 *
+	 * @todo takes care of glPush/PopAttrib() ?
 	 */
 	GLO_API const std::vector< int >& getDrawBuffers() const;
 
@@ -415,10 +430,12 @@ private:
 	typedef std::vector< boost::shared_ptr< glo::IFrameBufferAttachableImage > > ColorContainer;
 
 	ColorContainer															m_color;		///< array of color buffer attachments
+	int																		m_numOfColors;	///< number of attached color buffers
 	boost::shared_ptr< glo::IFrameBufferAttachableImage > 					m_depth;		///< depth buffer attachment
 	boost::shared_ptr< glo::IFrameBufferAttachableImage >					m_stencil;		///< stencil buffer attachment
 
-	mutable std::vector< int >												m_drawBuffers;	///< the current draw buffers to which all fragment colors are written
+	mutable std::vector< int >												m_fullDrawBuffers;	///< the current draw buffers to which all fragment colors are written
+	mutable std::vector< int >												m_drawBuffers;		///< the current draw buffers to which all fragment colors are written
 };
 
 
