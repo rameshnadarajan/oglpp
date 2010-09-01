@@ -191,13 +191,6 @@ void Texture::disable()
 
 const GLint Texture::getBorderWidth() const
 {
-#ifdef _DEBUG
-	GLint glborder;
-	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_BORDER, &glborder);
-
-	assert( glborder == m_border && "Texture border width has an unexpected value." );
-#endif
-
 	return m_border;
 }
 
@@ -205,13 +198,6 @@ const GLint Texture::getBorderWidth() const
 
 const GLint Texture::getWidth() const
 {
-#ifdef _DEBUG
-	GLint glwidth;
-	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_WIDTH, &glwidth );
-	
-	assert( glwidth == m_width && "Texture width has an unexpected value." );
-#endif
-	
 	return m_width;
 }
 

@@ -37,14 +37,6 @@ const bool Texture2D::isBound() const
 
 const GLint Texture2D::getHeight() const
 {
-#ifdef _DEBUG
-	GLint glheight;
-
-	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_HEIGHT,	&glheight);
-	
-	assert( glheight == m_height && "Texture height has an unexpected value." );
-#endif
-	
 	return m_height;
 }
 

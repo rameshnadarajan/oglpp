@@ -34,14 +34,6 @@ const bool Texture3D::isBound() const
 
 const GLint Texture3D::getDepth() const
 {
-#ifdef _DEBUG
-	GLint gldepth;
-
-	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_DEPTH, &gldepth);
-
-	assert( gldepth == m_depth && "Texture depth has an unexpected value." );
-#endif
-
 	return m_depth;
 }
 
@@ -70,6 +62,7 @@ void Texture3D::texImage(	const GLint level, const GLint internalFormat,
 							const GLvoid *pixels ) const
 {
 	glTexImage3D( m_target, level, internalFormat, width, height, depth, border, format, type, pixels );
+	//glTexImage3DEXT( m_target, level, internalFormat, width, height, depth, border, format, type, pixels );
 	
 	// Updates cache
 	m_border	= border;
@@ -89,8 +82,10 @@ void Texture3D::texSubImage(	const GLint level,
 								const GLvoid *pixels ) const
 {
 	glTexSubImage3D( m_target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels );
+	//glTexSubImage3DEXT( m_target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels );
 }
 
 
 
 } // namespace glo
+
