@@ -1,5 +1,4 @@
 description		= 'Access display driver informations and functionalities'
-vcsUse			= 'no'
 type			= 'shared'
 version			= '0-1'
 uses			= ['adl']
