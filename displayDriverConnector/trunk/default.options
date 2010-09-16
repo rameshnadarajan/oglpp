@@ -1,7 +1,7 @@
 description		= 'Access display driver informations and functionalities'
 type			= 'shared'
 version			= '0-1'
-uses			= ['adl']
+#uses			= ['adl']
 #libs			= []
 #stdlibs		= []
 
