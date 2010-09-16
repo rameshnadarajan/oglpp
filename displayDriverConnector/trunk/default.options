@@ -1,0 +1,13 @@
+description		= 'Access display driver informations and functionalities'
+vcsUse			= 'no'
+type			= 'shared'
+version			= '0-1'
+uses			= ['adl']
+#libs			= []
+#stdlibs		= []
+
+from SCons.Script.SConscript import SConsEnvironment
+platform = SConsEnvironment.sbf.myPlatform
+if platform == 'win32':
+	stdlibs = ['user32', 'Advapi32']	# user32 for EnumDisplayDevices(), Advapi32 for RegOpenKeyEx...
+
