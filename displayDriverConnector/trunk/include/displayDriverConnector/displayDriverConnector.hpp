@@ -106,7 +106,7 @@ DDC_API ddc_bool_t ddc_get_primary_display_device_informations( ddc_display_devi
 /**
  * @brief Prints to standard output the data stored in informations structure
  */
-DDC_API void ddc_print_display_device_info( ddc_display_device_info_t informations );
+DDC_API void ddc_print_display_device_info( ddc_display_device_info_t * informations );
 
 
 /**

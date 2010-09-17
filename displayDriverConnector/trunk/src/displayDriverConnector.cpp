@@ -117,28 +117,28 @@ ddc_bool_t ddc_get_primary_display_device_informations( ddc_display_device_info_
 
 
 
-void ddc_print_display_device_info( ddc_display_device_info_t informations )
+void ddc_print_display_device_info( ddc_display_device_info_t * informations )
 {
-	if ( informations.found )
+	if ( informations->found )
 	{
 		std::cout << "Found primary display device" << std::endl;
 
 		//
-		std::cout << " Device vendor: " << ddc_get_vendor_string(informations.vendor) << std::endl;
+		std::cout << " Device vendor: " << ddc_get_vendor_string(informations->vendor) << std::endl;
 
-		std::cout << " Device ID: " << informations.deviceID << std::endl;
-		std::cout << " Full device ID: " << informations.fullDeviceID << std::endl;
+		std::cout << " Device ID: " << informations->deviceID << std::endl;
+		std::cout << " Full device ID: " << informations->fullDeviceID << std::endl;
 
-		std::cout << " Monitor name: " << informations.monitorName << std::endl;
-		std::cout << " Device name: " << informations.displayAdapterName << std::endl;
+		std::cout << " Monitor name: " << informations->monitorName << std::endl;
+		std::cout << " Device name: " << informations->displayAdapterName << std::endl;
 
 		// Versioning
-		std::cout << " Driver version: " << informations.driverVersion << std::endl;
-		std::cout << " Driver date: " << informations.driverDate << std::endl;
+		std::cout << " Driver version: " << informations->driverVersion << std::endl;
+		std::cout << " Driver date: " << informations->driverDate << std::endl;
 
-		if ( informations.vendor == DDC_VENDOR_AMD )
+		if ( informations->vendor == DDC_VENDOR_AMD )
 		{
-			std::cout << " Catalyst version: " << informations.catalystVersion << std::endl;
+			std::cout << " Catalyst version: " << informations->catalystVersion << std::endl;
 		}
 	}
 	else
