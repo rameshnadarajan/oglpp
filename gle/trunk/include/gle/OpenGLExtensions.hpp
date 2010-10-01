@@ -247,7 +247,7 @@ struct GLE_API OpenGLExtensions
 	 * @return the provider of the current driver
 	 */
 	const std::string getDriverProviderString() const;
-	//}
+	//@}
 
 
 
