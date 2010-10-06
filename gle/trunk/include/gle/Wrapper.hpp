@@ -8,14 +8,14 @@
 
 #include "gle/gle.hpp"
 
-
-
 namespace gle { struct OpenGLExtensionsGen; }
 
 
 
 /**
  * @name gle context accessors
+ *
+ * @ingroup g_gle
  */
 //@{
 
@@ -34,16 +34,6 @@ GLE_API void						gleSetCurrent( gle::OpenGLExtensionsGen *current );
 GLE_API gle::OpenGLExtensionsGen*	gleGetCurrent();
 
 //@}
-
-
-
-/**
- * @brief Tests if an OpenGL rendering context is current for the calling thread
- *
- * @return true if an OpenGL rendering context is current for the calling thread, false otherwise.
- */
-GLE_API const bool gleIsOpenGLCurrent();
-
 
 
 #endif //#ifndef _GLE_WRAPPER_HPP
