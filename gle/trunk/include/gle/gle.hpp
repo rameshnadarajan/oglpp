@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2009, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -72,13 +72,15 @@
 		// Visual C++. This makes compiling quicker, but must not be used when your file content may
 		// change depending on some macro definitions. In the general case, leave these lines as they are.
 		#pragma once
-	
+
 	#endif
 
-	#ifdef GLE_EXPORTS
-	#define GLE_API __declspec(dllexport)
+	#if defined(GLE_STATIC)
+		#define GLE_API
+	#elif defined(GLE_SHARED) || defined(GLE_EXPORTS)
+		#define GLE_API __declspec(dllexport)
 	#else
-	#define GLE_API __declspec(dllimport)
+		#define GLE_API __declspec(dllimport)
 	#endif
 
 	#define GLE_CLASS_API
