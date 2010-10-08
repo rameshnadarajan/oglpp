@@ -17,3 +17,26 @@ const bool gleIsOpenGLCurrent()
 	return glXGetCurrentContext() != NULL;
 #endif
 }
+
+
+const int gleGetOpenGLMajorVersion()
+{
+	assert( gleIsOpenGLCurrent() );
+
+	// version = "4.0.10151 Compatibility Profile Context"
+	char * version = (char*)glGetString( GL_VERSION );
+
+	const int major = version[0] - '0';
+	return major;
+}
+
+
+const int gleGetOpenGLMinorVersion()
+{
+	assert( gleIsOpenGLCurrent() );
+
+	char * version = (char*)glGetString( GL_VERSION );
+
+	const int minor = version[2] - '0';
+	return minor;
+}

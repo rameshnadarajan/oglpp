@@ -26,4 +26,27 @@ GLE_API const bool gleIsOpenGLCurrent();
 
 
 
+/**
+ * @name Version of OpenGL
+ */
+//@{
+
+/**
+ * @brief Returns the major number of the version of OpenGL supported by the current context.
+ *
+ * @pre gleIsOpenGLCurrent()
+ */
+GLE_API const int gleGetOpenGLMajorVersion();
+
+/**
+ * @brief Returns the minor number of the version of OpenGL supported by the current context.
+ *
+ * @pre gleIsOpenGLCurrent()
+ */
+GLE_API const int gleGetOpenGLMinorVersion();
+
+//@}
+
+
+
 #endif //#ifndef _GLE_GLHELPERS_HPP
