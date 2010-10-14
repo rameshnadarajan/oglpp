@@ -45,6 +45,39 @@ GLE_API const int gleGetOpenGLMajorVersion();
  */
 GLE_API const int gleGetOpenGLMinorVersion();
 
+/**
+ * @brief Returns the version number of OpenGL supported by the current context.
+ *
+ * @pre gleIsOpenGLCurrent()
+ *
+ * @return the version number of OpenGL using the following form major.minor
+ */
+GLE_API const float gleGetOpenGLVersion();
+
+
+
+/**
+ * @brief Returns the major number of the version of GLSL supported by the current context.
+ *
+ * @pre gleIsOpenGLCurrent()
+ */
+GLE_API const int gleGetGLSLMajorVersion();
+
+/**
+ * @brief Returns the minor number of the version of GLSL supported by the current context.
+ *
+ * @pre gleIsOpenGLCurrent()
+ */
+GLE_API const int gleGetGLSLMinorVersion();
+
+/**
+ * @brief Returns the version number of GLSL supported by the current context.
+ *
+ * @pre gleIsOpenGLCurrent()
+ *
+ * @return the version number of GLSL using the following form major.minor
+ */
+GLE_API const float gleGetGLSLVersion();
 //@}
 
 
