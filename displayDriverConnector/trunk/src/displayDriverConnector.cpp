@@ -53,6 +53,7 @@ ddc_bool_t ddc_get_primary_display_device_informations( ddc_display_device_info_
 {
 	ddc_bool_t retVal = 0;
 
+#ifdef _WIN32
 	// Locate primary display device
 	DISPLAY_DEVICE dd;
 	dd.cb = sizeof(DISPLAY_DEVICE);
@@ -108,7 +109,32 @@ ddc_bool_t ddc_get_primary_display_device_informations( ddc_display_device_info_
 		const std::string deviceKey = dd.DeviceKey;
 		const std::string subKeyPath = deviceKey.substr(18); // @todo improves robustness ?
 		_ddc_get_informations_from_registry( informations, subKeyPath);
+
+		// DISPLAY DEVICE INFORMATIONS
+		// Find the current device mode
+		DEVMODE dmode;
+		memset(&dmode, 0, sizeof(DEVMODE));
+		dmode.dmSize = sizeof(DEVMODE);
+
+		const BOOL retValEDS = EnumDisplaySettings( dd.DeviceName, ENUM_CURRENT_SETTINGS, &dmode);
+		if ( retValEDS )
+		{
+			informations->width		= dmode.dmPelsWidth;
+			informations->height	= dmode.dmPelsHeight;
+			informations->bpp		= dmode.dmBitsPerPel;
+			informations->frequency	= dmode.dmDisplayFrequency;
+		}
+		else
+		{
+			informations->width		= 0;
+			informations->height	= 0;
+			informations->bpp		= 0;
+			informations->frequency	= 0;
+		}
 	}
+#elif __MACOSX__
+#else // POSIX
+#endif
 
 	//
 	informations->found = retVal;
@@ -140,6 +166,10 @@ void ddc_print_display_device_info( ddc_display_device_info_t * informations )
 		{
 			std::cout << " Catalyst version: " << informations->catalystVersion << std::endl;
 		}
+
+		// Display device
+		std::cout << "Graphics mode : " << informations->width << "x" << informations->height;
+		std::cout << "x" << informations->bpp << " " << informations->frequency << " Hz" << std::endl;
 	}
 	else
 	{

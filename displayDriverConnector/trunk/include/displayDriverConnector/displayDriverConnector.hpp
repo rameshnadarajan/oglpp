@@ -77,10 +77,16 @@ typedef struct _ddc_display_device_info_t
 	char				driverDate[16];					///< ex: 4-3-2010 for NVidia and 8-3-2010 for AMD
 	int					driverDateNumber[3];			///< see driverDate
 
-	char				catalystVersion[16];				///< ex: empty for NVidia and 10.8 for AMD
+	char				catalystVersion[16];			///< ex: empty for NVidia and 10.8 for AMD
 	int					catalystVersionNumber[2];		///< see catalystVersion
 
 	// @todo OpenGL support ? see registry OpenGLDriverName
+
+	// DISPLAY DEVICE INFORMATIONS
+	int		width;
+	int		height;
+	int		bpp;
+	int		frequency;
 } ddc_display_device_info_t;
 //@}
 
