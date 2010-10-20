@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2008, Nicolas Papier.
+// GLE - Copyright (C) 2008, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -26,7 +26,19 @@ glc_drawable_t * glc_gtk_drawable_create( GtkDrawingArea * drawingArea )
 	{
 		return 0;
 	}
-	
+// gdk_window_ensure_native() available from 2.18.0
+#if GTKMM_VERSION >= 2180
+	else
+	{
+		// Ensure the gdk window is a window-system native window
+		const gboolean isNative = gdk_window_ensure_native( gdkWindow );
+		if ( isNative == FALSE )
+		{
+			assert( false && "Unable to ensure a window-sytem native window" );
+			return 0;
+		}
+	}
+#endif
 
 	glc_drawable_t *drawable = (glc_drawable_t*) malloc( sizeof(glc_drawable_t) );
 	assert( drawable != 0 && "Unable to allocate glc_drawable_t." );
