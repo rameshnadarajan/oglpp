@@ -37,6 +37,10 @@ glc_drawable_t * glc_gtk_drawable_create( GtkDrawingArea * drawingArea )
 			assert( false && "Unable to ensure a window-sytem native window" );
 			return 0;
 		}
+		else
+		{
+			EnableWindow( (GLC_WINDOW_HANDLE) GDK_WINDOW_HWND( gdkWindow ), FALSE );
+		}
 	}
 #endif
 
