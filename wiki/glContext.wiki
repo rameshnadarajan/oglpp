@@ -24,6 +24,7 @@ The software is released under the [http://www.gnu.org/licenses/lgpl.html GNU Le
 
 ----
 Links to other libraries :
+ * [http://projects.gnome.org/gtkglext/ GtkGLExt]
  * [http://www.student.oulu.fi/~jlof/gtkglarea/ GtkGLArea]
  * wxGLCanvas in wxWidgets
  * QtOpenGL for Qt
