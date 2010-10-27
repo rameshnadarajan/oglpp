@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2008, Nicolas Papier.
+// OGLPP - Copyright (C) 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -10,6 +10,9 @@
 
 #include <glc_gtk/glc_gtk.hpp>
 #include <gtkmm/drawingarea.h>
+
+extern "C"
+{
 
 /**
  * @brief Creates a drawable from a gtkmm drawing area.
@@ -32,5 +35,7 @@ GLC_GTKMM_API glc_drawable_t *	glc_gtkmm_drawable_create( Gtk::DrawingArea * dra
 GLC_GTKMM_API void				glc_gtkmm_drawable_destroy( glc_drawable_t * drawable );
 
 // @todo glc_gtkmm_drawable_status()
+
+} // extern "C"
 
 #endif //#ifndef _GLC_GTKMM_GLC_GTKMM_HPP
