@@ -1,4 +1,4 @@
-// GLC - Copyright (C) 2008, 2009, 2010, Nicolas Papier.
+// OGLPP - Copyright (C) 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -7,7 +7,6 @@
 #define _GLC_GLC_HPP
 
 #include "glc/config.hpp"
-// #include "glc/type.hpp" ???
 
 /** 
  * @defgroup g_glc glc - Open(GL) (C)context management
@@ -57,15 +56,13 @@ HDC hDC = GetDC( hwnd );
 #else // POSIX
 ///
 	#define GLC_USE_GLX
-//	typedef HWND		GLC_WINDOW_HANDLE;
-//	typedef HDC			GLC_DC_HANDLE;
-
+//	@todo typedef HWND		GLC_WINDOW_HANDLE;
+//	@todo typedef HDC			GLC_DC_HANDLE;
 //glXSwapBuffers(	Display * dpy,  GLXDrawable drawable);
 	typedef GLXContext	GLC_GLRC_HANDLE;
-
 #endif
 
-
+extern "C" {
 
 /**
  * @defgroup g_glc_type Basic type definitions
@@ -160,25 +157,6 @@ GLC_API void glc_drawable_destroy( glc_drawable_t * drawable );
  */
 //@{
 
-//extern "C" {
-
-
-
-/**
- * @brief Enables/disables fullscreen mode.
- *
- * @param wantFullscreen	true to enable fullscreen mode, false to disable fullscreen mode.
- */
-GLC_API glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscreen );
-
-/**
- * @brief Returns the fullscreen state.
- *
- * @return true if in fullscreen mode, false otherwise.
- */
-GLC_API glc_bool_t glc_drawable_is_fullscreen( glc_t * context );
-
-
 
 
 /**
@@ -211,7 +189,7 @@ GLC_API void		glc_destroy	( glc_t * context );
  */
 GLC_API glc_status_t glc_status( glc_t * context );
 
-// @todo GLC_API glc_t *		glc_copy	( glc_t * context	);
+// @todo GLC_API glc_t * 	glc_copy	( glc_t * context	);
 // @todo GLC_API glc_bool_t	glc_share	( glc_t *context1, glc_t *context2 );
 // @todo FontBitmaps, FontOutlines
 
@@ -261,7 +239,25 @@ GLC_API glc_bool_t	glc_is_current( glc_t * context );
  */
 GLC_API glc_bool_t	glc_swap( glc_t * context );
 
-//} // extern "C" {
+
+
+/**
+ * @brief Enables/disables fullscreen mode.
+ *
+ * @param wantFullscreen	true to enable fullscreen mode, false to disable fullscreen mode.
+ */
+GLC_API glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscreen );
+
+/**
+ * @brief Returns the fullscreen state.
+ *
+ * @return true if in fullscreen mode, false otherwise.
+ */
+GLC_API glc_bool_t glc_drawable_is_fullscreen( glc_t * context );
+
+
+
+} // extern "C" {
 
 //@}
 
