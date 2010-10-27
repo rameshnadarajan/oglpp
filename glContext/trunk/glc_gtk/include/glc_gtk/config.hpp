@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2008, Nicolas Papier.
+// OGLPP - Copyright (C) 2008, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -9,6 +9,7 @@
 /** 
  * @defgroup g_glc_gtk Open(GL) (C)context management for (gtk)
  * @ingroup g_glc
+ *
  * This library provides the needed cross-platform API to add OpenGL capabilities to gtk.
  *
  * @sa http://www.gtk.org/

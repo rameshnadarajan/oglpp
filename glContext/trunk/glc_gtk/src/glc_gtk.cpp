@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2008, 2010, Nicolas Papier.
+// OGLPP - Copyright (C) 2008, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -15,6 +15,9 @@
 
 
 
+/**
+ * @todo Only from a gtk drawing area ?
+ */
 glc_drawable_t * glc_gtk_drawable_create( GtkDrawingArea * drawingArea )
 {
 	assert( drawingArea != 0 && "Calls glc_gtk_drawable_create() with an null drawing area." );
@@ -39,7 +42,9 @@ glc_drawable_t * glc_gtk_drawable_create( GtkDrawingArea * drawingArea )
 		}
 		else
 		{
+	#ifdef WIN32
 			EnableWindow( (GLC_WINDOW_HANDLE) GDK_WINDOW_HWND( gdkWindow ), FALSE );
+	#endif
 		}
 	}
 #endif
@@ -53,16 +58,16 @@ glc_drawable_t * glc_gtk_drawable_create( GtkDrawingArea * drawingArea )
 
 	// Initializes the drawable
 #ifdef WIN32
-// @todo FIXME
-#endif
 	drawable->window	= (GLC_WINDOW_HANDLE) GDK_WINDOW_HWND( gdkWindow );
 	drawable->dc		= GetDC( drawable->window );
-
+#else
+	#error "Non win32 platform not yet supported."
+#endif
 	drawable->backend			= (drawable_backend_t*) malloc( sizeof(drawable_backend_t) );
 	drawable->backend->destroy	= &glc_gtk_drawable_destroy;
 
-	drawable->colorSize		= 24;
-	drawable->depthSize		= 32;
+	drawable->colorSize		= 32;
+	drawable->depthSize		= 24;
 	drawable->stencilSize	= 8;
 
 	drawable->isFullscreen = 0;
@@ -87,9 +92,10 @@ void glc_gtk_drawable_destroy( glc_drawable_t * drawable )
 				(drawable->dc != 0)	)
 		{
 #ifdef WIN32
-// @todo FIXME
-#endif
 			int retVal = ReleaseDC( drawable->window, drawable->dc );
+#else
+			#error "Non win32 platform not yet supported."
+#endif
 			// assert( retVal == 1 && "The device context was not released." );
 			drawable->window	= 0;
 			drawable->dc		= 0;
