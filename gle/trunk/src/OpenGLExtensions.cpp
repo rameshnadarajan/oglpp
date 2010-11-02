@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2006, 2007, 2008, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -9,6 +9,7 @@
 #include <dlfcn.h>
 #endif
 
+#include <algorithm>
 #include <cstring>
 #include <sstream>
 
@@ -483,26 +484,27 @@ void OpenGLExtensions::reportGLErrors()
 
 
 
-// @todo Must be more robust (case insensitive, match complete word only...)
 const OpenGLExtensions::DriverProviderType OpenGLExtensions::getDriverProvider() const
 {
 	std::string vendor = getVendor();
+	std::transform( vendor.begin(), vendor.end(), vendor.begin(), tolower );
 
 	// Full match
-	if ( strstr(vendor.c_str(), "ATI Technologies Inc.")  != 0 )
+	// "ATI Technologies Inc."
+	if ( strstr(vendor.c_str(), "ati technologies inc.")  != 0 )
 	{
 		return ATI_DRIVERS;
 	}
-	else if ( strstr(vendor.c_str(), "NVIDIA Corporation")  != 0 )
+	else if ( strstr(vendor.c_str(), "nvidia corporation")  != 0 )
 	{
 		return NVIDIA_DRIVERS;
 	}
-	// Patrial match
-	else if ( strstr(vendor.c_str(), "NVIDIA")  != 0 )
+	// Partial match
+	else if ( strstr(vendor.c_str(), "nvidia")  != 0 )
 	{
 		return NVIDIA_DRIVERS;
 	}
-	if ( strstr(vendor.c_str(), "ATI")  != 0 )
+	if ( strstr(vendor.c_str(), "ati")  != 0 )
 	{
 		return ATI_DRIVERS;
 	}
