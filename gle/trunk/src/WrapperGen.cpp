@@ -1,4 +1,4 @@
-// This file was generated at Fri, 01 Oct 2010 11:53:14 +0000 with gle, please do not modify.
+// This file was generated at Fri, 05 Nov 2010 15:12:49 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2010-09-30 01:33:03 -0700 (Thu, 30 Sep 2010) $ */
-// #define GL_GLEXT_VERSION 65
+// /* glext.h last updated $Date: 2010-11-03 18:59:30 -0700 (Wed, 03 Nov 2010) $ */
+// #define GL_GLEXT_VERSION 66
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2010/08/06 */
@@ -1245,6 +1245,17 @@ void glDebugMessageInsertAMD(GLenum category, GLenum severity, GLuint id, GLsize
 GLuint glGetDebugMessageLogAMD(GLuint count, GLsizei bufsize, GLenum *categories, GLuint *severities, GLuint *ids, GLsizei *lengths, GLchar *message)
 {
 	return gleGetCurrent()->glGetDebugMessageLogAMD( count, bufsize, categories, severities, ids, lengths, message );
+}
+
+
+
+
+// ********* GL_AMD_depth_clamp_separate *********
+bool isGL_AMD_depth_clamp_separate()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_depth_clamp_separate;
+
+	return isSupported;
 }
 
 

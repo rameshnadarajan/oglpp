@@ -1,4 +1,4 @@
-// This file was generated at Fri, 01 Oct 2010 11:53:14 +0000 with gle, please do not modify.
+// This file was generated at Fri, 05 Nov 2010 15:12:49 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2010-09-30 01:33:03 -0700 (Thu, 30 Sep 2010) $ */
-// #define GL_GLEXT_VERSION 65
+// /* glext.h last updated $Date: 2010-11-03 18:59:30 -0700 (Wed, 03 Nov 2010) $ */
+// #define GL_GLEXT_VERSION 66
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2010/08/06 */
@@ -108,7 +108,7 @@
  */
 
 /** 
- * @defgroup g_GL_AMD			GL_AMD (10 extensions found)
+ * @defgroup g_GL_AMD			GL_AMD (11 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -2030,6 +2030,26 @@ GLE_API void glDebugMessageInsertAMD(GLenum category, GLenum severity, GLuint id
  * @brief GLuint glGetDebugMessageLogAMD(GLuint count, GLsizei bufsize, GLenum *categories, GLuint *severities, GLuint *ids, GLsizei *lengths, GLchar *message)
  */
 GLE_API GLuint glGetDebugMessageLogAMD(GLuint count, GLsizei bufsize, GLenum *categories, GLuint *severities, GLuint *ids, GLsizei *lengths, GLchar *message);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_AMD_depth_clamp_separate GL_AMD_depth_clamp_separate
+ * Extension number in OpenGL registry : 401
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/depth_clamp_separate.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_AMD_depth_clamp_separate is supported.
+ * @return Returns \c true if \b GL_AMD_depth_clamp_separate is supported, \c false otherwise.
+ */
+GLE_API bool isGL_AMD_depth_clamp_separate();
+
 
 //@}
 

@@ -1,4 +1,4 @@
-// This file was generated at Fri, 01 Oct 2010 11:53:14 +0000 with gle, please do not modify.
+// This file was generated at Fri, 05 Nov 2010 15:12:49 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2010-09-30 01:33:03 -0700 (Thu, 30 Sep 2010) $ */
-// #define GL_GLEXT_VERSION 65
+// /* glext.h last updated $Date: 2010-11-03 18:59:30 -0700 (Wed, 03 Nov 2010) $ */
+// #define GL_GLEXT_VERSION 66
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2010/08/06 */
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Fri, 01 Oct 2010 11:53:14 +0000
+ * - Stamp = Fri, 05 Nov 2010 15:12:49 +0000
  * - Number of tokens							= 0
  * - Number of functions						= 2139
- * - Number of extensions found(in headers)		= 510
- * - Number of extensions in OpenGL registry	= 475
+ * - Number of extensions found(in headers)		= 511
+ * - Number of extensions in OpenGL registry	= 476
  */
 
 
@@ -1492,6 +1492,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief GLuint glGetDebugMessageLogAMD(GLuint count, GLsizei bufsize, GLenum *categories, GLuint *severities, GLuint *ids, GLsizei *lengths, GLchar *message)
 	 */
 	PFNGLGETDEBUGMESSAGELOGAMDPROC glGetDebugMessageLogAMD;
+
+
+
+
+	// ****** GL_AMD_depth_clamp_separate ******
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_depth_clamp_separate is supported, false otherwise.
+	 */
+	bool isGL_AMD_depth_clamp_separate;
 
 
 
