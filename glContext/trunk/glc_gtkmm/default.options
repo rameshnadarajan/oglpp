@@ -2,6 +2,6 @@ description	= 'Open(GL) (C)context management for (gtkmm)'
 vcsUse		= 'no'
 type		= 'shared'
 version		= '0-0'
-uses		= [ 'gtkmm', 'gtkmmext' ]
+uses		= [ 'opengl', 'gtkmm', 'gtkmmext' ]
 libs		= [ 'glc 0-0', 'glc_gtk 0-0' ]
 deps		= [ '../glc', '../glc_gtk' ]

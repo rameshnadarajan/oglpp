@@ -1,0 +1,7 @@
+description	= 'example of GLDrawingArea (gtkmm version)'
+vcsUse		= 'no'
+type		= 'exec'
+version		= '1-0'
+uses 		= [ 'gtkmm', 'gtkmmext' ]
+libs		= [ 'glc 0-0', 'glc_gtk 0-0', 'glc_gtkmm 0-0' ]
+deps		= [ '../../glc', '../../glc_gtk', '../../glc_gtkmm' ]
