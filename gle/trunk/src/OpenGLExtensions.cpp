@@ -291,7 +291,7 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 
 	GLint red, green, blue, alpha;
 	glGetIntegerv( GL_RED_BITS,		&red );
-	glGetIntegerv( GL_GREEN_BITS,	&green );	
+	glGetIntegerv( GL_GREEN_BITS,	&green );
 	glGetIntegerv( GL_BLUE_BITS,	&blue );
 	glGetIntegerv( GL_ALPHA_BITS,	&alpha );
 
@@ -350,13 +350,52 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 	strInfos << "GL_ALPHA_BITS (the number of alpha bitplanes in each color buffer)	: " << alpha << std::endl;
 
 	glGetIntegerv( GL_ACCUM_RED_BITS,	&red );
-	glGetIntegerv( GL_ACCUM_GREEN_BITS,	&green );	
+	glGetIntegerv( GL_ACCUM_GREEN_BITS,	&green );
 	glGetIntegerv( GL_ACCUM_BLUE_BITS,	&blue );
 	glGetIntegerv( GL_ACCUM_ALPHA_BITS,	&alpha );
 	strInfos << "GL_ACCUM_RED_BITS (the number of red bitplanes in the accumulation buffer)	: " << red << std::endl;
 	strInfos << "GL_ACCUM_GREEN_BITS (the number of green bitplanes in the accumulation buffer)	: " << green << std::endl;
 	strInfos << "GL_ACCUM_BLUE_BITS (the number of blue bitplanes in the accumulation buffer)	: " << blue << std::endl;
 	strInfos << "GL_ACCUM_ALPHA_BITS (the number of alpha bitplanes in the accumulation buffer)	: " << alpha << std::endl;
+
+	strInfos << std::endl;
+
+	// OpenGL capabilities
+	strInfos << "OpenGL capabilities : " << std::endl;
+
+	//
+	GLint viewportSize[2];
+	glGetIntegerv( GL_MAX_VIEWPORT_DIMS, &viewportSize[0] );
+	strInfos << "GL_MAX VIEWPORT SIZE			= " << viewportSize[0] << " x " << viewportSize[1] << std::endl;
+
+	//
+	glGetIntegerv(GL_MAX_LIGHTS, &glint );
+	strInfos << "GL_MAX_LIGHTS				= " << glint << std::endl;
+
+	//
+	glGetIntegerv( GL_MAX_TEXTURE_UNITS, &glint );
+	strInfos << "GL_MAX_TEXTURE_UNITS			= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS, &glint );
+	strInfos << "GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS	= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS, &glint );
+	strInfos << "GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS	= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_TEXTURE_IMAGE_UNITS, &glint );
+	strInfos << "GL_MAX_TEXTURE_IMAGE_UNITS		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS_ARB, &glint );
+	strInfos << "GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS_ARB	= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_TEXTURE_SIZE, &glint );
+	strInfos << "GL_MAX_TEXTURE_SIZE			= " << glint << " x " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_3D_TEXTURE_SIZE, &glint );
+	strInfos << "GL_MAX_3D_TEXTURE_SIZE			= " << glint << " x " << glint << " x " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_CUBE_MAP_TEXTURE_SIZE, &glint );
+	strInfos << "GL_MAX_CUBE_MAP_TEXTURE_SIZE		= " << glint << " x " << glint << std::endl;
 
 	strInfos << std::endl;
 
