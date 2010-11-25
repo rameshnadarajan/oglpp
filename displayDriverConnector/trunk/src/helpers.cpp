@@ -20,7 +20,7 @@ std::vector< std::string > split_string( const std::string inputString, const ch
 	std::vector< std::string > retVal;
 
 	std::string str(inputString);
-	int position;
+	unsigned int position;
 	while (	(position=str.find(separator)) != std::string::npos )
 	{
 		retVal.push_back( str.substr(0, position) );
@@ -49,6 +49,7 @@ void copy( int *destination, const std::vector< std::string >& source, int num )
 
 const std::string get_string_from_registry( std::string subKey, std::string name )
 {
+#ifdef _WIN32
 	std::string retVal;
 
 	HKEY hKey;
@@ -66,5 +67,10 @@ const std::string get_string_from_registry( std::string subKey, std::string name
 
 		RegCloseKey(hKey);
 	}
-	return retVal;
+	return retVal;	
+#else
+	#warning "get_string_from_registry() not implemented on non win32 platform"
+	return "";
+#endif
+
 }

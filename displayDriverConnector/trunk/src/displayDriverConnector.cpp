@@ -7,7 +7,7 @@
 
 #include <cassert>
 #include <iostream>
-#include <string>
+#include <cstring>
 #include <vector>
 
 #if defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__)
@@ -179,7 +179,7 @@ void ddc_print_display_device_info( ddc_display_device_info_t * informations )
 
 
 
-char * ddc_get_vendor_string( ddc_vendor_id_t vendorId )
+const char * ddc_get_vendor_string( ddc_vendor_id_t vendorId )
 {
 	switch ( vendorId )
 	{

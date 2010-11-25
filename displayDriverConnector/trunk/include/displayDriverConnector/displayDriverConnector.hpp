@@ -118,7 +118,7 @@ DDC_API void ddc_print_display_device_info( ddc_display_device_info_t * informat
 /**
  * @brief Returns the string version of the given vendor id.
  */
-DDC_API char * ddc_get_vendor_string( ddc_vendor_id_t vendorId );
+DDC_API const char * ddc_get_vendor_string( ddc_vendor_id_t vendorId );
 
 //} // extern "C" {
 
