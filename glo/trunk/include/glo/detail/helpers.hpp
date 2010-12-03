@@ -6,6 +6,8 @@
 #ifndef _GLO_HELPERS_HPP
 #define _GLO_HELPERS_HPP
 
+#include <gle/glHelpers.hpp>
+
 #define gloGetIntegerv( cacheName, pname )		static GLint cacheName = -1;		\
 	if ( gleIsOpenGLCurrent() )														\
 	{																				\

@@ -85,7 +85,7 @@ void Texture::unbind() const
 void Texture::active( const GLenum unit )
 {
 	assert( unit >= GL_TEXTURE0_ARB && "Unexpected value" );
-	assert( unit <= GL_TEXTURE31_ARB && "Unexpected value" );	
+	assert( unit <= GL_TEXTURE31_ARB && "Unexpected value" );
 	glActiveTextureARB( unit );
 }
 

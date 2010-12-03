@@ -53,6 +53,7 @@ GLSLProgram::GLSLProgram( bool initialized )
 	if ( initialized )
 	{
 		m_programObject = glCreateProgram();
+//		m_programObject = glCreateProgramObjectARB();
 	}
 	else
 	{
@@ -81,6 +82,7 @@ void GLSLProgram::release()
 	if ( m_programObject != 0 && gleGetCurrent() )
 	{
 		glDeleteProgram( m_programObject );
+//		glDeleteObjectARB( m_programObject );
 	}
 }
 
@@ -96,13 +98,16 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 	// @todo Creates a GLSLShader.[shaderSource, compile, compileStatus, infoLog, attachTo(GLSLProgram, deleteShader)]
 	// @todo exceptions
 	GLhandleARB object = glCreateShader( convertShaderType2GLEnum(shaderType) );
+//	GLhandleARB object = glCreateShaderObjectARB( convertShaderType2GLEnum(shaderType) );
 	assert(object != 0);
 
 	const GLint length = static_cast<GLint>( std::strlen( shaderSource ) );
 	glShaderSource( object, 1, &shaderSource, &length );
+//	glShaderSourceARB( object, 1, &shaderSource, &length );
 
 	// COMPILE shader object
 	glCompileShader( object );
+//	glCompileShaderARB( object );
 
 	//CHECK if shader compiled
 	GLint compiled = 0;
@@ -131,9 +136,11 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 
 	// ATTACH shader to program object
 	glAttachShader( m_programObject, object );
+//	glAttachObjectARB( m_programObject, object );
 
 	// DELETE object, no longer needed
 	glDeleteShader( object );
+//	glDeleteObjectARB( object );
 
 	// LINK stage
 	if ( linkProgram )
@@ -159,6 +166,7 @@ const bool GLSLProgram::link()
 
 	// Link program
 	glLinkProgram( getProgramObject() );
+//	glLinkProgramARB( getProgramObject() );
 
 	// Checks status
 	GLint linked;
@@ -168,18 +176,15 @@ const bool GLSLProgram::link()
 	{
 		std::cout << "PROGRAM failed to link..." << std::endl;
 		std::cerr << "PROGRAM failed to link..." << std::endl;
-		//printInfoLog( getProgramObject() );
+		printInfoLog( getProgramObject() );
 	}
+#ifdef _DEBUG
 	else
 	{
 		std::cout << "PROGRAM have been successfully linked." << std::endl;
-		//printInfoLog( getProgramObject() );
+		printInfoLog( getProgramObject() );
 	}
-
-//#ifdef _DEBUG
-	std::cout << "PROGRAM link log :" << std::endl;
-	printInfoLog( getProgramObject() );
-//#endif
+#endif
 
 	return linked;
 }
@@ -216,6 +221,7 @@ void GLSLProgram::setUniform1i( const std::string & name, const GLint v1 )
 	const GLint loc = getUniformLocation( name );
 
 	glUniform1i( loc, v1 );
+//	glUniform1iARB( loc, v1 );
 }
 
 void GLSLProgram::setUniform2i( const std::string & name, const GLint v1, const GLint v2 )
@@ -429,7 +435,6 @@ void GLSLProgram::setUniformMatrix4x3fv( const std::string & name, const GLfloat
 }
 
 
-
 const std::string GLSLProgram::loadFile( const std::string pathfilename )
 {
 	std::string		retVal;
@@ -472,6 +477,7 @@ GLhandleARB GLSLProgram::getProgramObject() const
 const GLint GLSLProgram::getUniformLocation( const std::string& name )
 {
 	const GLint location = glGetUniformLocation( getProgramObject(), name.c_str() );
+//	const GLint location = glGetUniformLocationARB( getProgramObject(), name.c_str() );
 
 #ifdef OPENGL_DEBUG
 	if ( location == -1 )
