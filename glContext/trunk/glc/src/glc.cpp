@@ -12,6 +12,7 @@
 
 #ifdef _WIN32
 	#include <dwmapi.h>
+	#include <windows.h>
 #endif
 
 
