@@ -1,4 +1,4 @@
-// This file was generated at Fri, 05 Nov 2010 15:12:49 +0000 with gle, please do not modify.
+// This file was generated at Fri, 10 Dec 2010 08:28:56 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2010-11-03 18:59:30 -0700 (Wed, 03 Nov 2010) $ */
-// #define GL_GLEXT_VERSION 66
+// /* glext.h last updated $Date: 2010-12-09 02:15:08 -0800 (Thu, 09 Dec 2010) $ */
+// #define GL_GLEXT_VERSION 67
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2010/08/06 */
@@ -26,7 +26,7 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 511;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 512;
 const int	OpenGLExtensionsGen::m_supportedProcCount		= 2139;
 
 
@@ -2229,6 +2229,9 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_EXT_texture_sRGB ******
 	isGL_EXT_texture_sRGB = false;
+
+	// ****** GL_EXT_texture_sRGB_decode ******
+	isGL_EXT_texture_sRGB_decode = false;
 
 	// ****** GL_EXT_texture_shared_exponent ******
 	isGL_EXT_texture_shared_exponent = false;
@@ -17177,6 +17180,37 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	else
 	{
 		logEndl( "GL_EXT_texture_sRGB                               : not detected." );
+	}
+
+
+	isGL_EXT_texture_sRGB_decode = isExtensionSupported("GL_EXT_texture_sRGB_decode");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_EXT_texture_sRGB_decode )
+	{
+		std::stringstream strStream;
+		strStream << "GL_EXT_texture_sRGB_decode                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_EXT_texture_sRGB_decode                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_EXT_texture_sRGB_decode") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_EXT_texture_sRGB_decode                        : not detected." );
 	}
 
 

@@ -1,4 +1,4 @@
-// This file was generated at Fri, 05 Nov 2010 15:12:49 +0000 with gle, please do not modify.
+// This file was generated at Fri, 10 Dec 2010 08:28:56 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2010-11-03 18:59:30 -0700 (Wed, 03 Nov 2010) $ */
-// #define GL_GLEXT_VERSION 66
+// /* glext.h last updated $Date: 2010-12-09 02:15:08 -0800 (Thu, 09 Dec 2010) $ */
+// #define GL_GLEXT_VERSION 67
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2010/08/06 */
@@ -128,7 +128,7 @@
  */
 
 /** 
- * @defgroup g_GL_EXT			GL_EXT (89 extensions found)
+ * @defgroup g_GL_EXT			GL_EXT (90 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -11495,6 +11495,26 @@ GLE_API void glTextureNormalEXT(GLenum mode);
  * @return Returns \c true if \b GL_EXT_texture_sRGB is supported, \c false otherwise.
  */
 GLE_API bool isGL_EXT_texture_sRGB();
+
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_EXT_texture_sRGB_decode GL_EXT_texture_sRGB_decode
+ * Extension number in OpenGL registry : 402
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/texture_sRGB_decode.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_EXT_texture_sRGB_decode is supported.
+ * @return Returns \c true if \b GL_EXT_texture_sRGB_decode is supported, \c false otherwise.
+ */
+GLE_API bool isGL_EXT_texture_sRGB_decode();
 
 
 //@}
