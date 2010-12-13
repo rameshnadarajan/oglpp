@@ -82,6 +82,7 @@ ddc_bool_t ddc_get_primary_display_device_informations( ddc_display_device_info_
 //char *deviceID = strstr(dev.DeviceID, "DEV_");
 		const std::string vendorIDStr = fullDeviceID.substr(8, 4);
 
+// @see http://www.pcidatabase.com/vendors.php?sort=id
 		if ( vendorIDStr == "1002" )
 		{
 			informations->vendor = DDC_VENDOR_AMD;
@@ -89,6 +90,10 @@ ddc_bool_t ddc_get_primary_display_device_informations( ddc_display_device_info_
 		else if ( vendorIDStr == "10DE" )
 		{
 			informations->vendor = DDC_VENDOR_NVIDIA;
+		}
+		else if ( vendorIDStr == "8086" )
+		{
+			informations->vendor = DDC_VENDOR_INTEL;
 		}
 		else
 		{
@@ -188,6 +193,9 @@ const char * ddc_get_vendor_string( ddc_vendor_id_t vendorId )
 
 		case DDC_VENDOR_NVIDIA:
 			return "NVIDIA";
+
+		case DDC_VENDOR_INTEL:
+			return "INTEL";
 
 		default:
 		case DDC_VENDOR_UNKNOWN:

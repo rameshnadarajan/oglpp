@@ -46,12 +46,13 @@ typedef enum _ddc_status_t
 /**
  * @brief Vendor identifier enumeration
  *
- * @todo Intel
+ * @todo Microsoft
  */
 typedef enum _ddc_vendor_id_t
 {
 	DDC_VENDOR_AMD		= 0x1002,
 	DDC_VENDOR_NVIDIA	= 0x10DE,
+	DDC_VENDOR_INTEL	= 0x8086,
 	DDC_VENDOR_UNKNOWN	= 0,
 } ddc_vendor_id_t;
 
