@@ -38,6 +38,11 @@ glc_t *glc_create( glc_drawable_t *drawable )
 	retVal->drawable	= drawable;
 
 #ifdef WIN32
+
+#ifndef PFD_SUPPORT_COMPOSITION
+	#define PFD_SUPPORT_COMPOSITION 0x00008000
+#endif
+
 	// Initializes the pixel format descriptor with the desired format.
 	PIXELFORMATDESCRIPTOR pfd;
 
