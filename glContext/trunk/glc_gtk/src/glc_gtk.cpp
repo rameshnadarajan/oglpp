@@ -66,11 +66,7 @@ glc_drawable_t * glc_gtk_drawable_create( GtkDrawingArea * drawingArea )
 	drawable->backend			= (drawable_backend_t*) malloc( sizeof(drawable_backend_t) );
 	drawable->backend->destroy	= &glc_gtk_drawable_destroy;
 
-	drawable->colorSize		= 32;
-	drawable->depthSize		= 24;
-	drawable->stencilSize	= 8;
-
-	drawable->isFullscreen = 0;
+	_glc_drawable_initialize( drawable );
 
 	// @todo glc_gtk_drawable_status()
 	assert( drawable->window != 0 );

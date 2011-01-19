@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2008, 2009, 2010, Nicolas Papier.
+// OGLPP - Copyright (C) 2008, 2009, 2010, 2011, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -100,12 +100,14 @@ typedef struct _glc_drawable_t
 	drawable_backend_t *backend;
 
 	// @todo api for capabilities customization
-	int colorSize;
-	int depthSize;
-	int stencilSize;
+	int			colorSize;		///< default value 32
+	int			depthSize;		///< default value 24
+	int			stencilSize;	///< default value 0
+
+	glc_bool_t	stereo;			///< default value false, true to request a stereoscopic buffer
 
 	//
-	int isFullscreen;
+	int isFullscreen;			///< non zero if in fullscreen, zero otherwise
 } glc_drawable_t;
 
 
@@ -137,6 +139,15 @@ typedef enum _glc_status_t
 } glc_status_t;
 
 /**
+ * @brief Initializes drawing surface capabilities.
+ *
+ * @param drawable	the drawable that must be initialized
+ *
+ * @remark This is a private helper function.
+ */
+GLC_API void _glc_drawable_initialize( glc_drawable_t * drawable );
+ 
+/**
  * @brief Deletes the given drawable.
  *
  * @param drawable	the drawable that must be deleted.
@@ -145,7 +156,7 @@ typedef enum _glc_status_t
  *
  * @remark This is a private helper function.
  */
-GLC_API void glc_drawable_destroy( glc_drawable_t * drawable );
+GLC_API void _glc_drawable_destroy( glc_drawable_t * drawable );
 //@}
 
 
@@ -245,6 +256,8 @@ GLC_API glc_bool_t	glc_swap( glc_t * context );
  * @brief Enables/disables fullscreen mode.
  *
  * @param wantFullscreen	true to enable fullscreen mode, false to disable fullscreen mode.
+ *
+ * @todo renames glc_drawable_set_fullscreen => glc_set_fullscreen
  */
 GLC_API glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscreen );
 
@@ -252,6 +265,8 @@ GLC_API glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t want
  * @brief Returns the fullscreen state.
  *
  * @return true if in fullscreen mode, false otherwise.
+ *
+ * @todo renames glc_drawable_is_fullscreen => glc_is_fullscreen
  */
 GLC_API glc_bool_t glc_drawable_is_fullscreen( glc_t * context );
 

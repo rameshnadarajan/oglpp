@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2008, 2010, Nicolas Papier.
+// OGLPP - Copyright (C) 2008, 2010, 2011, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -13,10 +13,13 @@
 #ifdef _WIN32
 	#include <dwmapi.h>
 	#include <windows.h>
+	#ifndef PFD_SUPPORT_COMPOSITION
+		#define PFD_SUPPORT_COMPOSITION 0x00008000
+	#endif
 #endif
 
 
-void glc_drawable_destroy( glc_drawable_t * drawable )
+void _glc_drawable_destroy( glc_drawable_t * drawable )
 {
 	assert( drawable != 0 && "Calls glc_drawable_destroy() with an null drawable." );
 	assert( drawable->backend != 0 && "Calls glc_drawable_destroy() with an null backend." );
@@ -24,6 +27,22 @@ void glc_drawable_destroy( glc_drawable_t * drawable )
 
 	drawable->backend->destroy( drawable );
 }
+
+
+
+void _glc_drawable_initialize( glc_drawable_t * drawable )
+{
+	assert( drawable != 0 && "Calls glc_drawable_destroy() with an null drawable." );
+
+	drawable->colorSize		= 32;
+	drawable->depthSize		= 24;
+	drawable->stencilSize	= 0;
+
+	drawable->stereo		= 0;
+
+	drawable->isFullscreen	= 0;
+}
+
 
 
 
@@ -38,11 +57,6 @@ glc_t *glc_create( glc_drawable_t *drawable )
 	retVal->drawable	= drawable;
 
 #ifdef WIN32
-
-#ifndef PFD_SUPPORT_COMPOSITION
-	#define PFD_SUPPORT_COMPOSITION 0x00008000
-#endif
-
 	// Initializes the pixel format descriptor with the desired format.
 	PIXELFORMATDESCRIPTOR pfd;
 
@@ -58,6 +72,11 @@ glc_t *glc_create( glc_drawable_t *drawable )
 	pfd.cDepthBits		= drawable->depthSize;
 	pfd.cStencilBits	= drawable->stencilSize;
 	pfd.iLayerType		= PFD_MAIN_PLANE;
+
+	if ( drawable->stereo )
+	{
+		pfd.dwFlags |= PFD_STEREO;
+	}
 
 	// @todo Initializes WGL_ARB_pixel_format attributes with the desired format.
 
