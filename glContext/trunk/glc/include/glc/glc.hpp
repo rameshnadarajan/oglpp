@@ -100,11 +100,11 @@ typedef struct _glc_drawable_t
 	drawable_backend_t *backend;
 
 	// @todo api for capabilities customization
-	int			colorSize;		///< default value 32
-	int			depthSize;		///< default value 24
-	int			stencilSize;	///< default value 0
+	int			colorSize;		///< default value is 32
+	int			depthSize;		///< default value is 24
+	int			stencilSize;	///< default value is 0
 
-	glc_bool_t	stereo;			///< default value false, true to request a stereoscopic buffer
+	glc_bool_t	stereo;			///< default value is false. true to request a stereoscopic buffer
 
 	//
 	int isFullscreen;			///< non zero if in fullscreen, zero otherwise
@@ -180,7 +180,20 @@ GLC_API void _glc_drawable_destroy( glc_drawable_t * drawable );
  * @remarks If the new glc context status is GLC_STATUS_SUCCESS (i.e. glc_status(retVal) == GLC_STATUS_SUCCESS), 
  * then the ownership of the given drawable is transfered to the glc context.
  */
-GLC_API glc_t *		glc_create	( glc_drawable_t * drawable );
+GLC_API glc_t *		glc_create( glc_drawable_t * drawable );
+
+/**
+ * @brief Creates a new glc context for the given drawable and sharing object with the given glc context.
+ *
+ * @param drawable			the drawing surface used by glc context
+ * @param contextSharing	specifies the context with which to share objects
+ *
+ * @return a new glc context associated with the given drawable and sharing objects with the given context
+ *
+ * @remarks If the new glc context status is GLC_STATUS_SUCCESS (i.e. glc_status(retVal) == GLC_STATUS_SUCCESS), 
+ * then the ownership of the given drawable is transfered to the glc context.
+ */
+GLC_API glc_t *		glc_create_shared( glc_drawable_t * drawable, glc_t * contextSharing );
 
 /**
  * @brief Deletes the given context.

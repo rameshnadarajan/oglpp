@@ -45,8 +45,15 @@ void _glc_drawable_initialize( glc_drawable_t * drawable )
 
 
 
-
 glc_t *glc_create( glc_drawable_t *drawable )
+{
+	glc_t * retVal = glc_create_shared( drawable, 0 );
+	return retVal;
+}
+
+
+
+glc_t * glc_create_shared( glc_drawable_t * drawable, glc_t * contextSharing )
 {
 	assert( drawable != 0 && "Calls glc_create() with an null drawable." );
 	// @todo drawable_status()
@@ -136,6 +143,18 @@ glc_t *glc_create( glc_drawable_t *drawable )
 	{
 		retVal->context = context;
 	}
+
+	// Shares OpenGL objects
+	if ( contextSharing )
+	{
+		BOOL success = wglShareLists( context, contextSharing->context );
+		if ( success != TRUE )
+		{
+			fprintf( stderr, "In glc_create(), wglShareLists() fails." );
+		}
+		// else nothing to do
+	} // else nothing to do
+
 #else
 	// Checks for supports the GLX extension
 	if ( !glXQueryExtension( drawable->display, 0, 0 ) )
@@ -158,8 +177,18 @@ glc_t *glc_create( glc_drawable_t *drawable )
 		retVal->visual = visual;
 	}
 
-	// Creates the OpenGL rendering context.
-	GLC_GLRC_HANDLE context = glxCreateContext( drawable->display, visual, None, GL_TRUE );
+	// Creates the OpenGL rendering context and
+	// shares OpenGL objects (if requested).
+	GLC_GLRC_HANDLE context;
+	if ( contextSharing )
+	{
+		context = glxCreateContext( drawable->display, visual, contextSharing->context, GL_TRUE );
+	}
+	else
+	{
+		context = glxCreateContext( drawable->display, visual, None, GL_TRUE );
+	}
+
 	if ( context == NULL )
 	{
 		fprintf( stderr, "In glc_create(), wglCreateContext() fails." );
@@ -228,6 +257,7 @@ glc_status_t glc_status( glc_t * context )
 		}
 	}
 }
+
 
 
 glc_bool_t glc_set_current( glc_t * context )
