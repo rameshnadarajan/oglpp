@@ -1,4 +1,4 @@
-// DisplayDriverConnector - Copyright (C) 2010, Nicolas Papier.
+// DisplayDriverConnector - Copyright (C) 2010, 2011, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -80,6 +80,9 @@ typedef struct _ddc_display_device_info_t
 
 	char				catalystVersion[16];			///< ex: empty for NVidia and 10.8 for AMD
 	int					catalystVersionNumber[2];		///< see catalystVersion
+
+	// OPENGL
+	char				openglDriverName[32];			///< ex: nvoglv64 for NVidia and atig6pxx.dll for AMD
 
 	// @todo OpenGL support ? see registry OpenGLDriverName
 

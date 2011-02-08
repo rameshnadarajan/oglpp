@@ -1,4 +1,4 @@
-// DisplayDriverConnector - Copyright (C) 2010, Nicolas Papier.
+// DisplayDriverConnector - Copyright (C) 2010, 2011, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -44,6 +44,12 @@ void _ddc_get_informations_from_registry( ddc_display_device_info_t * informatio
 
 	strncpy( informations->catalystVersion, catalystVersionStr.c_str(), sizeof(informations->catalystVersion) );
 	copy( informations->catalystVersionNumber, catalystVersion, 2 );
+
+	// OpenGLDriverName
+	// nvoglv64 for NVidia and atig6pxx.dll for AMD
+	const std::string openglDriverNameStr		= get_string_from_registry( subKey, "OpenGLDriverName" );
+
+	strncpy( informations->openglDriverName, openglDriverNameStr.c_str(), sizeof(informations->openglDriverName) );
 }
 
 
@@ -110,7 +116,6 @@ ddc_bool_t ddc_get_primary_display_device_informations( ddc_display_device_info_
 
 		// DRIVER VERSIONING INFORMATIONS
 //HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Video\{DC6A9377-13AD-4946-BBE7-135D2C095758}\0000
-//"\Registry\Machine\System\CurrentControlSet\Control\Video\{DC6A9377-13AD-4946-BBE7-135D2C095758}\0000"
 		const std::string deviceKey = dd.DeviceKey;
 		const std::string subKeyPath = deviceKey.substr(18); // @todo improves robustness ?
 		_ddc_get_informations_from_registry( informations, subKeyPath);
@@ -171,6 +176,9 @@ void ddc_print_display_device_info( ddc_display_device_info_t * informations )
 		{
 			std::cout << " Catalyst version: " << informations->catalystVersion << std::endl;
 		}
+
+		// OpenGL
+		std::cout << " OpenGL: " << informations->openglDriverName << std::endl;
 
 		// Display device
 		std::cout << "Graphics mode : " << informations->width << "x" << informations->height;
