@@ -191,7 +191,7 @@ glc_t * glc_create_shared( glc_drawable_t * drawable, glc_t * contextSharing )
 
 	if ( context == NULL )
 	{
-		fprintf( stderr, "In glc_create(), wglCreateContext() fails." );
+		fprintf( stderr, "In glc_create(), glxCreateContext() fails." );
 	}
 	else
 	{
