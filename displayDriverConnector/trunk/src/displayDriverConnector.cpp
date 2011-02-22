@@ -172,7 +172,8 @@ void ddc_print_display_device_info( ddc_display_device_info_t * informations )
 		std::cout << " Driver version: " << informations->driverVersion << std::endl;
 		std::cout << " Driver date: " << informations->driverDate << std::endl;
 
-		if ( informations->vendor == DDC_VENDOR_AMD )
+		if (	(informations->vendor == DDC_VENDOR_AMD) &&
+				(strlen(informations->catalystVersion) > 0) )
 		{
 			std::cout << " Catalyst version: " << informations->catalystVersion << std::endl;
 		}
