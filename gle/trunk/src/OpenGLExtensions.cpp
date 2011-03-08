@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2010, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2010, 2011, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -364,13 +364,20 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 	strInfos << "OpenGL capabilities : " << std::endl;
 
 	//
+	glGetIntegerv( GL_MAX_ELEMENTS_VERTICES, &glint );
+	strInfos << "GL_MAX_ELEMENTS_VERTICES		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_ELEMENTS_INDICES, &glint );
+	strInfos << "GL_MAX_ELEMENTS_INDICES			= " << glint << std::endl << std::endl;
+
+	//
 	GLint viewportSize[2];
 	glGetIntegerv( GL_MAX_VIEWPORT_DIMS, &viewportSize[0] );
-	strInfos << "GL_MAX VIEWPORT SIZE			= " << viewportSize[0] << " x " << viewportSize[1] << std::endl;
+	strInfos << "GL_MAX VIEWPORT SIZE			= " << viewportSize[0] << " x " << viewportSize[1] << std::endl << std::endl;
 
 	//
 	glGetIntegerv(GL_MAX_LIGHTS, &glint );
-	strInfos << "GL_MAX_LIGHTS				= " << glint << std::endl;
+	strInfos << "GL_MAX_LIGHTS				= " << glint << std::endl << std::endl;
 
 	//
 	glGetIntegerv( GL_MAX_TEXTURE_UNITS, &glint );
