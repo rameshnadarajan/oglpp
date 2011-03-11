@@ -12,14 +12,14 @@ namespace glo
 
 
 
-template< GLenum TargetValue >
-BufferObject< TargetValue >::BufferObject()
+template< GLenum TargetValue, GLenum BindingValue >
+BufferObject< TargetValue, BindingValue >::BufferObject()
 {}
 
 
 
-template< GLenum TargetValue >
-BufferObject< TargetValue >::~BufferObject()
+template< GLenum TargetValue, GLenum BindingValue >
+BufferObject< TargetValue, BindingValue >::~BufferObject()
 {
 	if ( gleGetCurrent() )
 	{
@@ -33,8 +33,8 @@ BufferObject< TargetValue >::~BufferObject()
 
 
 
-template< GLenum TargetValue >
-void BufferObject< TargetValue >::generate()
+template< GLenum TargetValue, GLenum BindingValue >
+void BufferObject< TargetValue, BindingValue >::generate()
 {
 	assert( isEmpty() );
 
@@ -45,8 +45,8 @@ void BufferObject< TargetValue >::generate()
 
 
 
-template< GLenum TargetValue > 
-void BufferObject< TargetValue >::release()
+template< GLenum TargetValue, GLenum BindingValue > 
+void BufferObject< TargetValue, BindingValue >::release()
 {
 	if ( !isEmpty() )
 	{
@@ -58,8 +58,8 @@ void BufferObject< TargetValue >::release()
 
 
 
-template< GLenum TargetValue >
-void BufferObject< TargetValue >::bind() const
+template< GLenum TargetValue, GLenum BindingValue >
+void BufferObject< TargetValue, BindingValue >::bind() const
 {
 	assert( !isEmpty() );
 
@@ -68,8 +68,8 @@ void BufferObject< TargetValue >::bind() const
 
 
 
-template< GLenum TargetValue >
-void BufferObject< TargetValue >::unbind() const
+template< GLenum TargetValue, GLenum BindingValue >
+void BufferObject< TargetValue, BindingValue >::unbind() const
 {
 	assert( !isEmpty() );
 	assert( isBound() );
@@ -79,29 +79,29 @@ void BufferObject< TargetValue >::unbind() const
 
 
 
-template< GLenum TargetValue >
-const bool BufferObject< TargetValue >::isBound() const
+template< GLenum TargetValue, GLenum BindingValue >
+const bool BufferObject< TargetValue, BindingValue >::isBound() const
 {
 	assert( !isEmpty() );
 
 	GLint currentBinding;
-	glGetIntegerv( TargetValue, &currentBinding );
+	glGetIntegerv( BindingValue, &currentBinding );
 
 	return ( static_cast<GLuint>(currentBinding) == m_object );
 }
 
 
 
-template< GLenum TargetValue >
-void BufferObject< TargetValue >::bufferData( GLsizeiptr size, const GLvoid * data, GLenum usage )
+template< GLenum TargetValue, GLenum BindingValue >
+void BufferObject< TargetValue, BindingValue >::bufferData( GLsizeiptr size, const GLvoid * data, GLenum usage )
 {
 	glBufferData( TargetValue, size, data, usage );
 }
 
 
 
-template< GLenum TargetValue >
-void BufferObject< TargetValue >::bufferSubData( GLintptr offset, GLsizeiptr size, const GLvoid * data )
+template< GLenum TargetValue, GLenum BindingValue >
+void BufferObject< TargetValue, BindingValue >::bufferSubData( GLintptr offset, GLsizeiptr size, const GLvoid * data )
 {
 	glBufferSubData( TargetValue, offset, size, data );
 }

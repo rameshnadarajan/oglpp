@@ -18,7 +18,7 @@ namespace glo
  *
  * BufferObject provides api to allocate, desallocate, initialize and render from high-performance server memory.
  */
-template< GLenum TargetValue >
+template< GLenum TargetValue, GLenum BindingValue >
 struct BufferObject : public Object
 {
 	/**

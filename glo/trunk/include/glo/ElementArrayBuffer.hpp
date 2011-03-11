@@ -16,12 +16,12 @@ namespace glo
 
 
 // Explicit instantiation
-template struct glo::BufferObject< GL_ELEMENT_ARRAY_BUFFER >;
+template struct glo::BufferObject< GL_ELEMENT_ARRAY_BUFFER, GL_ELEMENT_ARRAY_BUFFER_BINDING >;
 
 /**
  * @brief Buffer object for storing vertex array indices
  */
-typedef struct glo::BufferObject< GL_ELEMENT_ARRAY_BUFFER > ElementArrayBuffer;
+typedef struct glo::BufferObject< GL_ELEMENT_ARRAY_BUFFER, GL_ELEMENT_ARRAY_BUFFER_BINDING > ElementArrayBuffer;
 
 
 
