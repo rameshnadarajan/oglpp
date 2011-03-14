@@ -368,7 +368,13 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 	strInfos << "GL_MAX_ELEMENTS_VERTICES		= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_ELEMENTS_INDICES, &glint );
-	strInfos << "GL_MAX_ELEMENTS_INDICES			= " << glint << std::endl << std::endl;
+	strInfos << "GL_MAX_ELEMENTS_INDICES			= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_VERTEX_ATTRIBS, &glint );
+	strInfos << "GL_MAX_VERTEX_ATTRIBS			= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_UNIFORM_BUFFER_BINDINGS, &glint );
+	strInfos << "GL_MAX_UNIFORM_BUFFER_BINDINGS		= " << glint << std::endl << std::endl;
 
 	//
 	GLint viewportSize[2];
