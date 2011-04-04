@@ -14,6 +14,8 @@ namespace glo
 
 template< GLenum TargetValue, GLenum BindingValue >
 BufferObject< TargetValue, BindingValue >::BufferObject()
+/*:	m_size(0),
+	m_usage(0)*/
 {}
 
 
@@ -39,6 +41,8 @@ void BufferObject< TargetValue, BindingValue >::generate()
 	assert( isEmpty() );
 
 	glGenBuffers( 1, &m_object );
+	m_size	= 0;
+	m_usage	= 0;
 
 	assert( !isEmpty() );
 }
@@ -52,7 +56,10 @@ void BufferObject< TargetValue, BindingValue >::release()
 	{
 		glDeleteBuffers( 1, &m_object );
 
-		m_object = 0;
+		m_object	= 0;
+
+		/*m_size	= 0;
+		m_usage		= 0;*/
 	}
 }
 
@@ -95,7 +102,12 @@ const bool BufferObject< TargetValue, BindingValue >::isBound() const
 template< GLenum TargetValue, GLenum BindingValue >
 void BufferObject< TargetValue, BindingValue >::bufferData( GLsizeiptr size, const GLvoid * data, GLenum usage )
 {
+	assert( !isEmpty() );
+
 	glBufferData( TargetValue, size, data, usage );
+
+	m_size	= size;
+	m_usage	= usage;
 }
 
 
@@ -103,8 +115,31 @@ void BufferObject< TargetValue, BindingValue >::bufferData( GLsizeiptr size, con
 template< GLenum TargetValue, GLenum BindingValue >
 void BufferObject< TargetValue, BindingValue >::bufferSubData( GLintptr offset, GLsizeiptr size, const GLvoid * data )
 {
+	assert( !isEmpty() );
+	assert( size <= getSize() && "Given size beyond the buffer object allocated data store.");
+
 	glBufferSubData( TargetValue, offset, size, data );
 }
+
+
+template< GLenum TargetValue, GLenum BindingValue >
+const GLsizeiptr BufferObject< TargetValue, BindingValue >::getSize() const
+{
+	assert( !isEmpty() );
+
+	return m_size;
+}
+
+
+
+template< GLenum TargetValue, GLenum BindingValue >
+const GLenum BufferObject< TargetValue, BindingValue >::getUsage() const
+{
+	assert( !isEmpty() );
+
+	return m_usage;
+}
+
 
 
 } // namespace glo

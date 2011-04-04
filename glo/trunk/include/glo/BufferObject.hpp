@@ -78,6 +78,8 @@ struct BufferObject : public Object
 	/**
 	 * @brief Creates and initializes a buffer object's data store
 	 *
+	 * @pre isEmpty() == false
+	 *
 	 * @param size	Specifies the size in bytes of the buffer object's new data store.
 	 * @param data	Specifies a pointer to data that will be copied into the data store for initialization,
 					or NULL if no data is to be copied.
@@ -90,6 +92,9 @@ struct BufferObject : public Object
 	/**
 	 * @brief Updates a subset of a buffer object's data store
 	 *
+	 * @pre isEmpty() == false
+	 * @pre size <= getSize()
+	 *
 	 * @param offset	Specifies the offset into the buffer object's data store where data replacement will begin, measured in bytes.
 	 * @param size		Specifies the size in bytes of the data store region being replaced.
 	 * @param data		Specifies a pointer to the new data that will be copied into the data store.
@@ -101,7 +106,38 @@ struct BufferObject : public Object
 	// @todo Mapping and Unmapping Buffer Data
 	// @todo Copying Between Buffers
 
-	// @todo Buffer Object State
+
+	/**
+	 * @name Buffer Object State
+	 */
+	//@{
+
+	/**
+	 * @brief Retrieves the size of the buffer object
+	 *
+	 * @pre isEmpty() == false
+	 *
+	 * @return the size in bytes of the data store used by the buffer object
+	 */
+	const GLsizeiptr getSize() const;
+
+	/**
+	 * @brief Retrieves the usage of the buffer object
+	 *
+	 * @pre isEmpty() == false
+	 *
+	 * @return the usage pattern of the data store used by the buffer object
+	 *
+	 * @remark The usage pattern is specified by the last call to bufferData() method.
+	 */
+	const GLenum getUsage() const;
+
+	//@}
+
+
+protected:
+	GLsizeiptr		m_size;
+	GLenum			m_usage;
 };
 
 
