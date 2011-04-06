@@ -1,4 +1,4 @@
-// This file was generated at Fri, 10 Dec 2010 08:28:56 +0000 with gle, please do not modify.
+// This file was generated at Wed, 06 Apr 2011 07:57:20 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2010-12-09 02:15:08 -0800 (Thu, 09 Dec 2010) $ */
-// #define GL_GLEXT_VERSION 67
+// /* glext.h last updated $Date: 2011-04-05 23:08:32 -0700 (Tue, 05 Apr 2011) $ */
+// #define GL_GLEXT_VERSION 68
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2010/08/06 */
@@ -26,8 +26,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 512;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 2139;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 514;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 2145;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS )
@@ -448,6 +448,9 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_3DFX_texture_compression_FXT1 ******
 	isGL_3DFX_texture_compression_FXT1 = false;
+
+	// ****** GL_AMD_blend_minmax_factor ******
+	isGL_AMD_blend_minmax_factor = false;
 
 	// ****** GL_AMD_conservative_depth ******
 	isGL_AMD_conservative_depth = false;
@@ -2808,6 +2811,16 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_NV_texture_expand_normal ******
 	isGL_NV_texture_expand_normal = false;
+
+	// ****** GL_NV_texture_multisample ******
+	isGL_NV_texture_multisample = false;
+
+	glTexImage2DMultisampleCoverageNV = 0;
+	glTexImage3DMultisampleCoverageNV = 0;
+	glTextureImage2DMultisampleCoverageNV = 0;
+	glTextureImage2DMultisampleNV = 0;
+	glTextureImage3DMultisampleCoverageNV = 0;
+	glTextureImage3DMultisampleNV = 0;
 
 	// ****** GL_NV_texture_rectangle ******
 	isGL_NV_texture_rectangle = false;
@@ -6894,6 +6907,37 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 {
 	int	localSupportedProcCount 	= 0;
 	int	localInitializedProcCount	= 0;
+
+	isGL_AMD_blend_minmax_factor = isExtensionSupported("GL_AMD_blend_minmax_factor");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_AMD_blend_minmax_factor )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_blend_minmax_factor                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_blend_minmax_factor                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_blend_minmax_factor") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_blend_minmax_factor                        : not detected." );
+	}
+
 
 	isGL_AMD_conservative_depth = isExtensionSupported("GL_AMD_conservative_depth");
 
@@ -20743,6 +20787,59 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	else
 	{
 		logEndl( "GL_NV_texture_expand_normal                       : not detected." );
+	}
+
+
+	isGL_NV_texture_multisample = isExtensionSupported("GL_NV_texture_multisample");
+
+	localSupportedProcCount		= 6;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_NV_texture_multisample ) // || isSEDEnable()
+	{
+		glTexImage2DMultisampleCoverageNV = (PFNGLTEXIMAGE2DMULTISAMPLECOVERAGENVPROC) getExtensionPtr( "glTexImage2DMultisampleCoverageNV" );
+		if ( glTexImage2DMultisampleCoverageNV != 0 )	++localInitializedProcCount;
+
+		glTexImage3DMultisampleCoverageNV = (PFNGLTEXIMAGE3DMULTISAMPLECOVERAGENVPROC) getExtensionPtr( "glTexImage3DMultisampleCoverageNV" );
+		if ( glTexImage3DMultisampleCoverageNV != 0 )	++localInitializedProcCount;
+
+		glTextureImage2DMultisampleCoverageNV = (PFNGLTEXTUREIMAGE2DMULTISAMPLECOVERAGENVPROC) getExtensionPtr( "glTextureImage2DMultisampleCoverageNV" );
+		if ( glTextureImage2DMultisampleCoverageNV != 0 )	++localInitializedProcCount;
+
+		glTextureImage2DMultisampleNV = (PFNGLTEXTUREIMAGE2DMULTISAMPLENVPROC) getExtensionPtr( "glTextureImage2DMultisampleNV" );
+		if ( glTextureImage2DMultisampleNV != 0 )	++localInitializedProcCount;
+
+		glTextureImage3DMultisampleCoverageNV = (PFNGLTEXTUREIMAGE3DMULTISAMPLECOVERAGENVPROC) getExtensionPtr( "glTextureImage3DMultisampleCoverageNV" );
+		if ( glTextureImage3DMultisampleCoverageNV != 0 )	++localInitializedProcCount;
+
+		glTextureImage3DMultisampleNV = (PFNGLTEXTUREIMAGE3DMULTISAMPLENVPROC) getExtensionPtr( "glTextureImage3DMultisampleNV" );
+		if ( glTextureImage3DMultisampleNV != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_NV_texture_multisample )
+
+	if ( isGL_NV_texture_multisample )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_texture_multisample                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_texture_multisample                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_texture_multisample") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_texture_multisample                         : not detected." );
 	}
 
 

@@ -1,4 +1,4 @@
-// This file was generated at Fri, 10 Dec 2010 08:28:56 +0000 with gle, please do not modify.
+// This file was generated at Wed, 06 Apr 2011 07:57:20 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2010-12-09 02:15:08 -0800 (Thu, 09 Dec 2010) $ */
-// #define GL_GLEXT_VERSION 67
+// /* glext.h last updated $Date: 2011-04-05 23:08:32 -0700 (Tue, 05 Apr 2011) $ */
+// #define GL_GLEXT_VERSION 68
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2010/08/06 */
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Fri, 10 Dec 2010 08:28:56 +0000
+ * - Stamp = Wed, 06 Apr 2011 07:57:20 +0000
  * - Number of tokens							= 0
- * - Number of functions						= 2139
- * - Number of extensions found(in headers)		= 512
- * - Number of extensions in OpenGL registry	= 477
+ * - Number of functions						= 2145
+ * - Number of extensions found(in headers)		= 514
+ * - Number of extensions in OpenGL registry	= 479
  */
 
 
@@ -1451,6 +1451,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_3DFX_texture_compression_FXT1 is supported, false otherwise.
 	 */
 	bool isGL_3DFX_texture_compression_FXT1;
+
+
+
+
+	// ****** GL_AMD_blend_minmax_factor ******
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_blend_minmax_factor is supported, false otherwise.
+	 */
+	bool isGL_AMD_blend_minmax_factor;
 
 
 
@@ -11151,6 +11161,47 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_NV_texture_expand_normal is supported, false otherwise.
 	 */
 	bool isGL_NV_texture_expand_normal;
+
+
+
+
+	// ****** GL_NV_texture_multisample ******
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_texture_multisample is supported, false otherwise.
+	 */
+	bool isGL_NV_texture_multisample;
+
+
+	/**
+	 * @brief void glTexImage2DMultisampleCoverageNV(GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations)
+	 */
+	PFNGLTEXIMAGE2DMULTISAMPLECOVERAGENVPROC glTexImage2DMultisampleCoverageNV;
+
+	/**
+	 * @brief void glTexImage3DMultisampleCoverageNV(GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations)
+	 */
+	PFNGLTEXIMAGE3DMULTISAMPLECOVERAGENVPROC glTexImage3DMultisampleCoverageNV;
+
+	/**
+	 * @brief void glTextureImage2DMultisampleCoverageNV(GLuint texture, GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations)
+	 */
+	PFNGLTEXTUREIMAGE2DMULTISAMPLECOVERAGENVPROC glTextureImage2DMultisampleCoverageNV;
+
+	/**
+	 * @brief void glTextureImage2DMultisampleNV(GLuint texture, GLenum target, GLsizei samples, GLint internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations)
+	 */
+	PFNGLTEXTUREIMAGE2DMULTISAMPLENVPROC glTextureImage2DMultisampleNV;
+
+	/**
+	 * @brief void glTextureImage3DMultisampleCoverageNV(GLuint texture, GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations)
+	 */
+	PFNGLTEXTUREIMAGE3DMULTISAMPLECOVERAGENVPROC glTextureImage3DMultisampleCoverageNV;
+
+	/**
+	 * @brief void glTextureImage3DMultisampleNV(GLuint texture, GLenum target, GLsizei samples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations)
+	 */
+	PFNGLTEXTUREIMAGE3DMULTISAMPLENVPROC glTextureImage3DMultisampleNV;
 
 
 

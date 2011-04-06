@@ -1,4 +1,4 @@
-// This file was generated at Fri, 10 Dec 2010 08:28:56 +0000 with gle, please do not modify.
+// This file was generated at Wed, 06 Apr 2011 07:57:20 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2010-12-09 02:15:08 -0800 (Thu, 09 Dec 2010) $ */
-// #define GL_GLEXT_VERSION 67
+// /* glext.h last updated $Date: 2011-04-05 23:08:32 -0700 (Tue, 05 Apr 2011) $ */
+// #define GL_GLEXT_VERSION 68
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2010/08/06 */
@@ -1200,6 +1200,17 @@ void glTbufferMask3DFX(GLuint mask)
 bool isGL_3DFX_texture_compression_FXT1()
 {
 	const bool isSupported = gleGetCurrent()->isGL_3DFX_texture_compression_FXT1;
+
+	return isSupported;
+}
+
+
+
+
+// ********* GL_AMD_blend_minmax_factor *********
+bool isGL_AMD_blend_minmax_factor()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_blend_minmax_factor;
 
 	return isSupported;
 }
@@ -11198,6 +11209,48 @@ bool isGL_NV_texture_expand_normal()
 	const bool isSupported = gleGetCurrent()->isGL_NV_texture_expand_normal;
 
 	return isSupported;
+}
+
+
+
+
+// ********* GL_NV_texture_multisample *********
+bool isGL_NV_texture_multisample()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_texture_multisample;
+
+	return isSupported;
+}
+
+
+void glTexImage2DMultisampleCoverageNV(GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations)
+{
+	gleGetCurrent()->glTexImage2DMultisampleCoverageNV( target, coverageSamples, colorSamples, internalFormat, width, height, fixedSampleLocations );
+}
+
+void glTexImage3DMultisampleCoverageNV(GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations)
+{
+	gleGetCurrent()->glTexImage3DMultisampleCoverageNV( target, coverageSamples, colorSamples, internalFormat, width, height, depth, fixedSampleLocations );
+}
+
+void glTextureImage2DMultisampleCoverageNV(GLuint texture, GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations)
+{
+	gleGetCurrent()->glTextureImage2DMultisampleCoverageNV( texture, target, coverageSamples, colorSamples, internalFormat, width, height, fixedSampleLocations );
+}
+
+void glTextureImage2DMultisampleNV(GLuint texture, GLenum target, GLsizei samples, GLint internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations)
+{
+	gleGetCurrent()->glTextureImage2DMultisampleNV( texture, target, samples, internalFormat, width, height, fixedSampleLocations );
+}
+
+void glTextureImage3DMultisampleCoverageNV(GLuint texture, GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations)
+{
+	gleGetCurrent()->glTextureImage3DMultisampleCoverageNV( texture, target, coverageSamples, colorSamples, internalFormat, width, height, depth, fixedSampleLocations );
+}
+
+void glTextureImage3DMultisampleNV(GLuint texture, GLenum target, GLsizei samples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations)
+{
+	gleGetCurrent()->glTextureImage3DMultisampleNV( texture, target, samples, internalFormat, width, height, depth, fixedSampleLocations );
 }
 
 
