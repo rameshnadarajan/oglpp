@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2010, Nicolas Papier.
+// OGLPP - Copyright (C) 2010, 2011, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -9,17 +9,21 @@
 #include <gle/glHelpers.hpp>
 
 #define gloGetIntegerv( cacheName, pname )		static GLint cacheName = -1;		\
-	if ( gleIsOpenGLCurrent() )														\
+	if ( cacheName == -1 )															\
 	{																				\
-		if ( cacheName == -1 )														\
+		if ( gleIsOpenGLCurrent() )													\
 		{																			\
 			glGetIntegerv( pname, &cacheName );										\
+			return cacheName;														\
 		}																			\
-		return cacheName;															\
+		else																		\
+		{																			\
+			return 0;																\
+		}																			\
 	}																				\
 	else																			\
 	{																				\
-		return 0;																	\
+		return cacheName;															\
 	}
 
 #endif //#ifndef _GLO_HELPERS_HPP
