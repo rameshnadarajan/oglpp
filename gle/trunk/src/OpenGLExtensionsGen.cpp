@@ -1,4 +1,4 @@
-// This file was generated at Wed, 06 Apr 2011 07:57:20 +0000 with gle, please do not modify.
+// This file was generated at Mon, 18 Apr 2011 08:41:12 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -10,8 +10,8 @@
 // #define GL_GLEXT_VERSION 68
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
-// /* wglext.h last updated 2010/08/06 */
-// #define WGL_WGLEXT_VERSION 22
+// /* wglext.h last updated 2011/04/13 */
+// #define WGL_WGLEXT_VERSION 23
 
 #include "gle/OpenGLExtensionsGen.hpp"
 
@@ -26,8 +26,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 514;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 2145;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 515;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 2153;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS )
@@ -4089,6 +4089,20 @@ void OpenGLExtensionsGen::clear()
 	wglEndFrameTrackingI3D = 0;
 	wglGetFrameUsageI3D = 0;
 	wglQueryFrameTrackingI3D = 0;
+#endif //WIN32
+
+#ifdef WIN32
+	// ****** WGL_NV_DX_interop ******
+	isWGL_NV_DX_interop = false;
+
+	wglDXCloseDeviceNV = 0;
+	wglDXLockObjectsNV = 0;
+	wglDXObjectAccessNV = 0;
+	wglDXOpenDeviceNV = 0;
+	wglDXRegisterObjectNV = 0;
+	wglDXSetResourceShareHandleNV = 0;
+	wglDXUnlockObjectsNV = 0;
+	wglDXUnregisterObjectNV = 0;
 #endif //WIN32
 
 #ifdef WIN32
@@ -28132,6 +28146,71 @@ void OpenGLExtensionsGen::initializeWGL_NV()
 {
 	int	localSupportedProcCount 	= 0;
 	int	localInitializedProcCount	= 0;
+
+#ifdef WIN32
+
+	// ****** WGL_NV_DX_interop ******
+
+	isWGL_NV_DX_interop = isWExtensionSupported("WGL_NV_DX_interop");
+
+	localSupportedProcCount		= 8;
+	localInitializedProcCount	= 0;
+
+	if ( isWGL_NV_DX_interop ) // || isSEDEnable()
+	{
+		wglDXCloseDeviceNV = (PFNWGLDXCLOSEDEVICENVPROC) getExtensionPtr( "wglDXCloseDeviceNV" );
+		if ( wglDXCloseDeviceNV != 0 )	++localInitializedProcCount;
+
+		wglDXLockObjectsNV = (PFNWGLDXLOCKOBJECTSNVPROC) getExtensionPtr( "wglDXLockObjectsNV" );
+		if ( wglDXLockObjectsNV != 0 )	++localInitializedProcCount;
+
+		wglDXObjectAccessNV = (PFNWGLDXOBJECTACCESSNVPROC) getExtensionPtr( "wglDXObjectAccessNV" );
+		if ( wglDXObjectAccessNV != 0 )	++localInitializedProcCount;
+
+		wglDXOpenDeviceNV = (PFNWGLDXOPENDEVICENVPROC) getExtensionPtr( "wglDXOpenDeviceNV" );
+		if ( wglDXOpenDeviceNV != 0 )	++localInitializedProcCount;
+
+		wglDXRegisterObjectNV = (PFNWGLDXREGISTEROBJECTNVPROC) getExtensionPtr( "wglDXRegisterObjectNV" );
+		if ( wglDXRegisterObjectNV != 0 )	++localInitializedProcCount;
+
+		wglDXSetResourceShareHandleNV = (PFNWGLDXSETRESOURCESHAREHANDLENVPROC) getExtensionPtr( "wglDXSetResourceShareHandleNV" );
+		if ( wglDXSetResourceShareHandleNV != 0 )	++localInitializedProcCount;
+
+		wglDXUnlockObjectsNV = (PFNWGLDXUNLOCKOBJECTSNVPROC) getExtensionPtr( "wglDXUnlockObjectsNV" );
+		if ( wglDXUnlockObjectsNV != 0 )	++localInitializedProcCount;
+
+		wglDXUnregisterObjectNV = (PFNWGLDXUNREGISTEROBJECTNVPROC) getExtensionPtr( "wglDXUnregisterObjectNV" );
+		if ( wglDXUnregisterObjectNV != 0 )	++localInitializedProcCount;
+
+	} // if ( isWGL_NV_DX_interop )
+
+	if ( isWGL_NV_DX_interop )
+	{
+		std::stringstream strStream;
+		strStream << "WGL_NV_DX_interop                                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "WGL_NV_DX_interop                                 : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("WGL_NV_DX_interop") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "WGL_NV_DX_interop                                 : not detected." );
+	}
+
+
+#endif // ifdef WIN32
 
 #ifdef WIN32
 

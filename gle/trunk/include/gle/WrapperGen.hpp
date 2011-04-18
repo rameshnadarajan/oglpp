@@ -1,4 +1,4 @@
-// This file was generated at Wed, 06 Apr 2011 07:57:20 +0000 with gle, please do not modify.
+// This file was generated at Mon, 18 Apr 2011 08:41:12 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -10,8 +10,8 @@
 // #define GL_GLEXT_VERSION 68
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
-// /* wglext.h last updated 2010/08/06 */
-// #define WGL_WGLEXT_VERSION 22
+// /* wglext.h last updated 2011/04/13 */
+// #define WGL_WGLEXT_VERSION 23
 
 #ifndef _GLE_WRAPPERGEN_HPP
 #define _GLE_WRAPPERGEN_HPP
@@ -273,7 +273,7 @@
  */
 
 /** 
- * @defgroup g_WGL_NV			WGL_NV (12 extensions found)
+ * @defgroup g_WGL_NV			WGL_NV (13 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -21199,6 +21199,68 @@ GLE_API BOOL wglGetFrameUsageI3D(float *pUsage);
  * @brief BOOL wglQueryFrameTrackingI3D(DWORD *pFrameCount, DWORD *pMissedFrames, float *pLastMissedUsage)
  */
 GLE_API BOOL wglQueryFrameTrackingI3D(DWORD *pFrameCount, DWORD *pMissedFrames, float *pLastMissedUsage);
+
+//@}
+#endif //WIN32
+
+
+
+#ifdef WIN32
+/**
+ * @defgroup WGL_NV_DX_interop WGL_NV_DX_interop
+ * Extension number in OpenGL registry : 407
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/DX_interop.txt
+ * @ingroup g_WGL_NV g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b WGL_NV_DX_interop is supported.
+ * @return Returns \c true if \b WGL_NV_DX_interop is supported, \c false otherwise.
+ */
+GLE_API bool isWGL_NV_DX_interop();
+
+
+
+/**
+ * @brief BOOL wglDXCloseDeviceNV(HANDLE hDevice)
+ */
+GLE_API BOOL wglDXCloseDeviceNV(HANDLE hDevice);
+
+/**
+ * @brief BOOL wglDXLockObjectsNV(HANDLE hDevice, GLint count, HANDLE *hObjects)
+ */
+GLE_API BOOL wglDXLockObjectsNV(HANDLE hDevice, GLint count, HANDLE *hObjects);
+
+/**
+ * @brief BOOL wglDXObjectAccessNV(HANDLE hObject, GLenum access)
+ */
+GLE_API BOOL wglDXObjectAccessNV(HANDLE hObject, GLenum access);
+
+/**
+ * @brief HANDLE wglDXOpenDeviceNV(void *dxDevice)
+ */
+GLE_API HANDLE wglDXOpenDeviceNV(void *dxDevice);
+
+/**
+ * @brief HANDLE wglDXRegisterObjectNV(HANDLE hDevice, void *dxObject, GLuint name, GLenum type, GLenum access)
+ */
+GLE_API HANDLE wglDXRegisterObjectNV(HANDLE hDevice, void *dxObject, GLuint name, GLenum type, GLenum access);
+
+/**
+ * @brief BOOL wglDXSetResourceShareHandleNV(void *dxObject, HANDLE shareHandle)
+ */
+GLE_API BOOL wglDXSetResourceShareHandleNV(void *dxObject, HANDLE shareHandle);
+
+/**
+ * @brief BOOL wglDXUnlockObjectsNV(HANDLE hDevice, GLint count, HANDLE *hObjects)
+ */
+GLE_API BOOL wglDXUnlockObjectsNV(HANDLE hDevice, GLint count, HANDLE *hObjects);
+
+/**
+ * @brief BOOL wglDXUnregisterObjectNV(HANDLE hDevice, HANDLE hObject)
+ */
+GLE_API BOOL wglDXUnregisterObjectNV(HANDLE hDevice, HANDLE hObject);
 
 //@}
 #endif //WIN32

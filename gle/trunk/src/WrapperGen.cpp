@@ -1,4 +1,4 @@
-// This file was generated at Wed, 06 Apr 2011 07:57:20 +0000 with gle, please do not modify.
+// This file was generated at Mon, 18 Apr 2011 08:41:12 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -10,8 +10,8 @@
 // #define GL_GLEXT_VERSION 68
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
-// /* wglext.h last updated 2010/08/06 */
-// #define WGL_WGLEXT_VERSION 22
+// /* wglext.h last updated 2011/04/13 */
+// #define WGL_WGLEXT_VERSION 23
 
 #include "gle/WrapperGen.hpp"
 
@@ -16427,6 +16427,59 @@ BOOL wglGetFrameUsageI3D(float *pUsage)
 BOOL wglQueryFrameTrackingI3D(DWORD *pFrameCount, DWORD *pMissedFrames, float *pLastMissedUsage)
 {
 	return gleGetCurrent()->wglQueryFrameTrackingI3D( pFrameCount, pMissedFrames, pLastMissedUsage );
+}
+#endif //WIN32
+
+
+
+#ifdef WIN32
+// ********* WGL_NV_DX_interop *********
+bool isWGL_NV_DX_interop()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_DX_interop;
+
+	return isSupported;
+}
+
+
+BOOL wglDXCloseDeviceNV(HANDLE hDevice)
+{
+	return gleGetCurrent()->wglDXCloseDeviceNV( hDevice );
+}
+
+BOOL wglDXLockObjectsNV(HANDLE hDevice, GLint count, HANDLE *hObjects)
+{
+	return gleGetCurrent()->wglDXLockObjectsNV( hDevice, count, hObjects );
+}
+
+BOOL wglDXObjectAccessNV(HANDLE hObject, GLenum access)
+{
+	return gleGetCurrent()->wglDXObjectAccessNV( hObject, access );
+}
+
+HANDLE wglDXOpenDeviceNV(void *dxDevice)
+{
+	return gleGetCurrent()->wglDXOpenDeviceNV( dxDevice );
+}
+
+HANDLE wglDXRegisterObjectNV(HANDLE hDevice, void *dxObject, GLuint name, GLenum type, GLenum access)
+{
+	return gleGetCurrent()->wglDXRegisterObjectNV( hDevice, dxObject, name, type, access );
+}
+
+BOOL wglDXSetResourceShareHandleNV(void *dxObject, HANDLE shareHandle)
+{
+	return gleGetCurrent()->wglDXSetResourceShareHandleNV( dxObject, shareHandle );
+}
+
+BOOL wglDXUnlockObjectsNV(HANDLE hDevice, GLint count, HANDLE *hObjects)
+{
+	return gleGetCurrent()->wglDXUnlockObjectsNV( hDevice, count, hObjects );
+}
+
+BOOL wglDXUnregisterObjectNV(HANDLE hDevice, HANDLE hObject)
+{
+	return gleGetCurrent()->wglDXUnregisterObjectNV( hDevice, hObject );
 }
 #endif //WIN32
 
