@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2005, 2010, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2010, 2011, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -83,8 +83,8 @@ void FrameBufferObject::bind() const
 void FrameBufferObject::unbind() const
 {
 	assert( !isEmpty() );
-	assert( isBound() );	
-	
+	assert( isBound() );
+
 	glBindFramebuffer( GL_FRAMEBUFFER, 0 );
 }
 
@@ -96,7 +96,7 @@ const bool FrameBufferObject::isBound() const
 
 	GLint currentBinding;
 	glGetIntegerv( GL_FRAMEBUFFER_BINDING, &currentBinding ); // @todo removes this access
-	
+
 	return ( static_cast<GLuint>(currentBinding) == m_object );
 }
 
@@ -355,8 +355,6 @@ void FrameBufferObject::setDrawToDefaultFrameBuffer()
 
 void FrameBufferObject::setDrawBuffer( const int index ) const
 {
-	glBindFramebuffer( GL_DRAW_FRAMEBUFFER, getName() );// @todo remove me
-
 	assert( isBound() && "FBO must be bound before calling FrameBufferObject::setDrawBuffer()" );
 
 	m_fullDrawBuffers.resize(1);
@@ -455,12 +453,10 @@ void FrameBufferObject::renderDepthOnly( const bool depthOnly )
 	if ( depthOnly )
 	{
 		disableDrawBuffers();
-		glReadBuffer( GL_NONE );
 	}
 	else
 	{
 		setDrawBuffers( 0 );
-		glReadBuffer( GL_COLOR_ATTACHMENT0 );
 	}
 }
 

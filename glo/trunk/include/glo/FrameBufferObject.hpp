@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2005, 2010, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2010, 2011, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -385,8 +385,8 @@ struct FrameBufferObject : public Object
 	 *
 	 * @pre isBound()
 	 *
-	 * @param depthOnly		Sets DrawBuffer and ReadBuffer to none when depthOnly is true.
-	 *						Sets DrawBuffer and ReadBuffer to first color attachement when depthOnly is false.
+	 * @param depthOnly		Sets DrawBuffer to none when depthOnly is true.
+	 *						Sets DrawBuffer to first color attachement when depthOnly is false.
 	 */
 	GLO_API void renderDepthOnly( const bool depthOnly = true );
 	
