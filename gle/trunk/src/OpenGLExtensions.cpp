@@ -275,7 +275,7 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 
 	std::vector< std::string > extensions	= getExtensionsVector();
 	std::vector< std::string > wextensions	= getWExtensionsVector();
-	
+
 	strInfos << "Extension count exposed by driver        : " << static_cast<int>(extensions.size()) << std::endl;
 	strInfos << "Window extension count exposed by driver : " << static_cast<int>(wextensions.size()) << std::endl;
 	strInfos << "Total extension count for this hardware  : " << 
@@ -361,7 +361,7 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 	strInfos << std::endl;
 
 	// OpenGL capabilities
-	strInfos << "OpenGL capabilities : " << std::endl;
+	strInfos << "OpenGL capabilities :\n" << std::endl;
 
 	//
 	glGetIntegerv( GL_MAX_ELEMENTS_VERTICES, &glint );
@@ -379,7 +379,22 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 	//
 	GLint viewportSize[2];
 	glGetIntegerv( GL_MAX_VIEWPORT_DIMS, &viewportSize[0] );
-	strInfos << "GL_MAX VIEWPORT SIZE			= " << viewportSize[0] << " x " << viewportSize[1] << std::endl << std::endl;
+	strInfos << "GL_MAX_VIEWPORT_DIMS			= " << viewportSize[0] << " x " << viewportSize[1] << std::endl << std::endl;
+
+	glGetIntegerv( GL_MAX_DRAW_BUFFERS, &glint );
+	strInfos << "GL_MAX_DRAW_BUFFERS			= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_DUAL_SOURCE_DRAW_BUFFERS, &glint );
+	strInfos << "GL_MAX_DUAL_SOURCE_DRAW_BUFFERS		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_COLOR_ATTACHMENTS, &glint );
+	strInfos << "GL_MAX_COLOR_ATTACHMENTS		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_RENDERBUFFER_SIZE, &glint );
+	strInfos << "GL_MAX_RENDERBUFFER_SIZE		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_SAMPLES, &glint );
+	strInfos << "GL_MAX_SAMPLES				= " << glint << std::endl << std::endl;
 
 	//
 	glGetIntegerv(GL_MAX_LIGHTS, &glint );
