@@ -1,4 +1,4 @@
-// This file was generated at Mon, 18 Apr 2011 08:41:12 +0000 with gle, please do not modify.
+// This file was generated at Thu, 09 Jun 2011 07:05:03 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-04-05 23:08:32 -0700 (Tue, 05 Apr 2011) $ */
-// #define GL_GLEXT_VERSION 68
+// /* glext.h last updated $Date: 2011-06-06 12:06:38 -0700 (Mon, 06 Jun 2011) $ */
+// #define GL_GLEXT_VERSION 70
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2011/04/13 */
@@ -26,8 +26,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 515;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 2153;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 518;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 2157;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS )
@@ -474,6 +474,12 @@ void OpenGLExtensionsGen::clear()
 	glBlendFuncIndexedAMD = 0;
 	glBlendFuncSeparateIndexedAMD = 0;
 
+	// ****** GL_AMD_multi_draw_indirect ******
+	isGL_AMD_multi_draw_indirect = false;
+
+	glMultiDrawArraysIndirectAMD = 0;
+	glMultiDrawElementsIndirectAMD = 0;
+
 	// ****** GL_AMD_name_gen_delete ******
 	isGL_AMD_name_gen_delete = false;
 
@@ -495,6 +501,11 @@ void OpenGLExtensionsGen::clear()
 	glGetPerfMonitorGroupStringAMD = 0;
 	glGetPerfMonitorGroupsAMD = 0;
 	glSelectPerfMonitorCountersAMD = 0;
+
+	// ****** GL_AMD_sample_positions ******
+	isGL_AMD_sample_positions = false;
+
+	glSetMultisamplefvAMD = 0;
 
 	// ****** GL_AMD_seamless_cubemap_per_texture ******
 	isGL_AMD_seamless_cubemap_per_texture = false;
@@ -2345,6 +2356,11 @@ void OpenGLExtensionsGen::clear()
 	glVertexWeightPointerEXT = 0;
 	glVertexWeightfEXT = 0;
 	glVertexWeightfvEXT = 0;
+
+	// ****** GL_EXT_x11_sync_object ******
+	isGL_EXT_x11_sync_object = false;
+
+	glImportSyncEXT = 0;
 
 	// ****** GL_FfdMaskSGIX ******
 	isGL_FfdMaskSGIX = false;
@@ -7109,6 +7125,47 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 
 
+	isGL_AMD_multi_draw_indirect = isExtensionSupported("GL_AMD_multi_draw_indirect");
+
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_AMD_multi_draw_indirect ) // || isSEDEnable()
+	{
+		glMultiDrawArraysIndirectAMD = (PFNGLMULTIDRAWARRAYSINDIRECTAMDPROC) getExtensionPtr( "glMultiDrawArraysIndirectAMD" );
+		if ( glMultiDrawArraysIndirectAMD != 0 )	++localInitializedProcCount;
+
+		glMultiDrawElementsIndirectAMD = (PFNGLMULTIDRAWELEMENTSINDIRECTAMDPROC) getExtensionPtr( "glMultiDrawElementsIndirectAMD" );
+		if ( glMultiDrawElementsIndirectAMD != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_AMD_multi_draw_indirect )
+
+	if ( isGL_AMD_multi_draw_indirect )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_multi_draw_indirect                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_multi_draw_indirect                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_multi_draw_indirect") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_multi_draw_indirect                        : not detected." );
+	}
+
+
 	isGL_AMD_name_gen_delete = isExtensionSupported("GL_AMD_name_gen_delete");
 
 	localSupportedProcCount		= 3;
@@ -7218,6 +7275,44 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	else
 	{
 		logEndl( "GL_AMD_performance_monitor                        : not detected." );
+	}
+
+
+	isGL_AMD_sample_positions = isExtensionSupported("GL_AMD_sample_positions");
+
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_AMD_sample_positions ) // || isSEDEnable()
+	{
+		glSetMultisamplefvAMD = (PFNGLSETMULTISAMPLEFVAMDPROC) getExtensionPtr( "glSetMultisamplefvAMD" );
+		if ( glSetMultisamplefvAMD != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_AMD_sample_positions )
+
+	if ( isGL_AMD_sample_positions )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_sample_positions                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_sample_positions                           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_sample_positions") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_sample_positions                           : not detected." );
 	}
 
 
@@ -17828,7 +17923,45 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	}
 
 
-} // initializeGL_EXT_vertex_weighting()
+	isGL_EXT_x11_sync_object = isExtensionSupported("GL_EXT_x11_sync_object");
+
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_EXT_x11_sync_object ) // || isSEDEnable()
+	{
+		glImportSyncEXT = (PFNGLIMPORTSYNCEXTPROC) getExtensionPtr( "glImportSyncEXT" );
+		if ( glImportSyncEXT != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_EXT_x11_sync_object )
+
+	if ( isGL_EXT_x11_sync_object )
+	{
+		std::stringstream strStream;
+		strStream << "GL_EXT_x11_sync_object                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_EXT_x11_sync_object                            : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_EXT_x11_sync_object") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_EXT_x11_sync_object                            : not detected." );
+	}
+
+
+} // initializeGL_EXT_x11_sync_object()
 
 
 void OpenGLExtensionsGen::initializeGL_FfdMaskSGIX()

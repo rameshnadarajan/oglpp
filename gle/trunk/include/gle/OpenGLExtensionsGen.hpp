@@ -1,4 +1,4 @@
-// This file was generated at Mon, 18 Apr 2011 08:41:12 +0000 with gle, please do not modify.
+// This file was generated at Thu, 09 Jun 2011 07:05:03 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-04-05 23:08:32 -0700 (Tue, 05 Apr 2011) $ */
-// #define GL_GLEXT_VERSION 68
+// /* glext.h last updated $Date: 2011-06-06 12:06:38 -0700 (Mon, 06 Jun 2011) $ */
+// #define GL_GLEXT_VERSION 70
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2011/04/13 */
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Mon, 18 Apr 2011 08:41:12 +0000
+ * - Stamp = Thu, 09 Jun 2011 07:05:03 +0000
  * - Number of tokens							= 0
- * - Number of functions						= 2153
- * - Number of extensions found(in headers)		= 515
- * - Number of extensions in OpenGL registry	= 482
+ * - Number of functions						= 2157
+ * - Number of extensions found(in headers)		= 518
+ * - Number of extensions in OpenGL registry	= 483
  */
 
 
@@ -1547,6 +1547,27 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_AMD_multi_draw_indirect ******
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_multi_draw_indirect is supported, false otherwise.
+	 */
+	bool isGL_AMD_multi_draw_indirect;
+
+
+	/**
+	 * @brief void glMultiDrawArraysIndirectAMD(GLenum mode, const GLvoid *indirect, GLsizei primcount, GLsizei stride)
+	 */
+	PFNGLMULTIDRAWARRAYSINDIRECTAMDPROC glMultiDrawArraysIndirectAMD;
+
+	/**
+	 * @brief void glMultiDrawElementsIndirectAMD(GLenum mode, GLenum type, const GLvoid *indirect, GLsizei primcount, GLsizei stride)
+	 */
+	PFNGLMULTIDRAWELEMENTSINDIRECTAMDPROC glMultiDrawElementsIndirectAMD;
+
+
+
+
 	// ****** GL_AMD_name_gen_delete ******
 
 	/**
@@ -1635,6 +1656,22 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glSelectPerfMonitorCountersAMD(GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList)
 	 */
 	PFNGLSELECTPERFMONITORCOUNTERSAMDPROC glSelectPerfMonitorCountersAMD;
+
+
+
+
+	// ****** GL_AMD_sample_positions ******
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_sample_positions is supported, false otherwise.
+	 */
+	bool isGL_AMD_sample_positions;
+
+
+	/**
+	 * @brief void glSetMultisamplefvAMD(GLenum pname, GLuint index, const GLfloat *val)
+	 */
+	PFNGLSETMULTISAMPLEFVAMDPROC glSetMultisamplefvAMD;
 
 
 
@@ -9294,6 +9331,22 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glVertexWeightfvEXT(const GLfloat *weight)
 	 */
 	PFNGLVERTEXWEIGHTFVEXTPROC glVertexWeightfvEXT;
+
+
+
+
+	// ****** GL_EXT_x11_sync_object ******
+
+	/**
+	 * @brief Returns \c true if \b GL_EXT_x11_sync_object is supported, false otherwise.
+	 */
+	bool isGL_EXT_x11_sync_object;
+
+
+	/**
+	 * @brief GLsync glImportSyncEXT(GLenum external_sync_type, GLintptr external_sync, GLbitfield flags)
+	 */
+	PFNGLIMPORTSYNCEXTPROC glImportSyncEXT;
 
 
 

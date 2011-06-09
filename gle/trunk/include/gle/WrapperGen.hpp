@@ -1,4 +1,4 @@
-// This file was generated at Mon, 18 Apr 2011 08:41:12 +0000 with gle, please do not modify.
+// This file was generated at Thu, 09 Jun 2011 07:05:03 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-04-05 23:08:32 -0700 (Tue, 05 Apr 2011) $ */
-// #define GL_GLEXT_VERSION 68
+// /* glext.h last updated $Date: 2011-06-06 12:06:38 -0700 (Mon, 06 Jun 2011) $ */
+// #define GL_GLEXT_VERSION 70
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2011/04/13 */
@@ -108,7 +108,7 @@
  */
 
 /** 
- * @defgroup g_GL_AMD			GL_AMD (12 extensions found)
+ * @defgroup g_GL_AMD			GL_AMD (14 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -128,7 +128,7 @@
  */
 
 /** 
- * @defgroup g_GL_EXT			GL_EXT (90 extensions found)
+ * @defgroup g_GL_EXT			GL_EXT (91 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -2118,6 +2118,37 @@ GLE_API void glBlendFuncSeparateIndexedAMD(GLuint buf, GLenum srcRGB, GLenum dst
 
 
 /**
+ * @defgroup GL_AMD_multi_draw_indirect GL_AMD_multi_draw_indirect
+ * Extension number in OpenGL registry : 408
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/multi_draw_indirect.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_AMD_multi_draw_indirect is supported.
+ * @return Returns \c true if \b GL_AMD_multi_draw_indirect is supported, \c false otherwise.
+ */
+GLE_API bool isGL_AMD_multi_draw_indirect();
+
+
+
+/**
+ * @brief void glMultiDrawArraysIndirectAMD(GLenum mode, const GLvoid *indirect, GLsizei primcount, GLsizei stride)
+ */
+GLE_API void glMultiDrawArraysIndirectAMD(GLenum mode, const GLvoid *indirect, GLsizei primcount, GLsizei stride);
+
+/**
+ * @brief void glMultiDrawElementsIndirectAMD(GLenum mode, GLenum type, const GLvoid *indirect, GLsizei primcount, GLsizei stride)
+ */
+GLE_API void glMultiDrawElementsIndirectAMD(GLenum mode, GLenum type, const GLvoid *indirect, GLsizei primcount, GLsizei stride);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_AMD_name_gen_delete GL_AMD_name_gen_delete
  * Extension number in OpenGL registry : 394
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/name_gen_delete.txt
@@ -2223,6 +2254,32 @@ GLE_API void glGetPerfMonitorGroupsAMD(GLint *numGroups, GLsizei groupsSize, GLu
  * @brief void glSelectPerfMonitorCountersAMD(GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList)
  */
 GLE_API void glSelectPerfMonitorCountersAMD(GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_AMD_sample_positions GL_AMD_sample_positions
+ * Extension number in OpenGL registry : 405
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/sample_positions.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_AMD_sample_positions is supported.
+ * @return Returns \c true if \b GL_AMD_sample_positions is supported, \c false otherwise.
+ */
+GLE_API bool isGL_AMD_sample_positions();
+
+
+
+/**
+ * @brief void glSetMultisamplefvAMD(GLenum pname, GLuint index, const GLfloat *val)
+ */
+GLE_API void glSetMultisamplefvAMD(GLenum pname, GLuint index, const GLfloat *val);
 
 //@}
 
@@ -12112,6 +12169,32 @@ GLE_API void glVertexWeightfEXT(GLfloat weight);
  * @brief void glVertexWeightfvEXT(const GLfloat *weight)
  */
 GLE_API void glVertexWeightfvEXT(const GLfloat *weight);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_EXT_x11_sync_object GL_EXT_x11_sync_object
+ * Extension number in OpenGL registry : 406
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/x11_sync_object.txt
+ * @ingroup g_GL_EXT g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_EXT_x11_sync_object is supported.
+ * @return Returns \c true if \b GL_EXT_x11_sync_object is supported, \c false otherwise.
+ */
+GLE_API bool isGL_EXT_x11_sync_object();
+
+
+
+/**
+ * @brief GLsync glImportSyncEXT(GLenum external_sync_type, GLintptr external_sync, GLbitfield flags)
+ */
+GLE_API GLsync glImportSyncEXT(GLenum external_sync_type, GLintptr external_sync, GLbitfield flags);
 
 //@}
 

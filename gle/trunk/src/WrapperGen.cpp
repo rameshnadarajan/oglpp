@@ -1,4 +1,4 @@
-// This file was generated at Mon, 18 Apr 2011 08:41:12 +0000 with gle, please do not modify.
+// This file was generated at Thu, 09 Jun 2011 07:05:03 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-04-05 23:08:32 -0700 (Tue, 05 Apr 2011) $ */
-// #define GL_GLEXT_VERSION 68
+// /* glext.h last updated $Date: 2011-06-06 12:06:38 -0700 (Mon, 06 Jun 2011) $ */
+// #define GL_GLEXT_VERSION 70
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2011/04/13 */
@@ -1304,6 +1304,28 @@ void glBlendFuncSeparateIndexedAMD(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLe
 
 
 
+// ********* GL_AMD_multi_draw_indirect *********
+bool isGL_AMD_multi_draw_indirect()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_multi_draw_indirect;
+
+	return isSupported;
+}
+
+
+void glMultiDrawArraysIndirectAMD(GLenum mode, const GLvoid *indirect, GLsizei primcount, GLsizei stride)
+{
+	gleGetCurrent()->glMultiDrawArraysIndirectAMD( mode, indirect, primcount, stride );
+}
+
+void glMultiDrawElementsIndirectAMD(GLenum mode, GLenum type, const GLvoid *indirect, GLsizei primcount, GLsizei stride)
+{
+	gleGetCurrent()->glMultiDrawElementsIndirectAMD( mode, type, indirect, primcount, stride );
+}
+
+
+
+
 // ********* GL_AMD_name_gen_delete *********
 bool isGL_AMD_name_gen_delete()
 {
@@ -1393,6 +1415,23 @@ void glGetPerfMonitorGroupsAMD(GLint *numGroups, GLsizei groupsSize, GLuint *gro
 void glSelectPerfMonitorCountersAMD(GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList)
 {
 	gleGetCurrent()->glSelectPerfMonitorCountersAMD( monitor, enable, group, numCounters, counterList );
+}
+
+
+
+
+// ********* GL_AMD_sample_positions *********
+bool isGL_AMD_sample_positions()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_sample_positions;
+
+	return isSupported;
+}
+
+
+void glSetMultisamplefvAMD(GLenum pname, GLuint index, const GLfloat *val)
+{
+	gleGetCurrent()->glSetMultisamplefvAMD( pname, index, val );
 }
 
 
@@ -9275,6 +9314,23 @@ void glVertexWeightfEXT(GLfloat weight)
 void glVertexWeightfvEXT(const GLfloat *weight)
 {
 	gleGetCurrent()->glVertexWeightfvEXT( weight );
+}
+
+
+
+
+// ********* GL_EXT_x11_sync_object *********
+bool isGL_EXT_x11_sync_object()
+{
+	const bool isSupported = gleGetCurrent()->isGL_EXT_x11_sync_object;
+
+	return isSupported;
+}
+
+
+GLsync glImportSyncEXT(GLenum external_sync_type, GLintptr external_sync, GLbitfield flags)
+{
+	return gleGetCurrent()->glImportSyncEXT( external_sync_type, external_sync, flags );
 }
 
 
