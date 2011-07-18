@@ -1,4 +1,4 @@
-// This file was generated at Thu, 09 Jun 2011 07:05:03 +0000 with gle, please do not modify.
+// This file was generated at Mon, 18 Jul 2011 07:33:03 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-06-06 12:06:38 -0700 (Mon, 06 Jun 2011) $ */
-// #define GL_GLEXT_VERSION 70
+// /* glext.h last updated $Date: 2011-07-06 02:49:14 -0700 (Wed, 06 Jul 2011) $ */
+// #define GL_GLEXT_VERSION 71
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2011/04/13 */
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Thu, 09 Jun 2011 07:05:03 +0000
+ * - Stamp = Mon, 18 Jul 2011 07:33:03 +0000
  * - Number of tokens							= 0
  * - Number of functions						= 2157
- * - Number of extensions found(in headers)		= 518
- * - Number of extensions in OpenGL registry	= 483
+ * - Number of extensions found(in headers)		= 519
+ * - Number of extensions in OpenGL registry	= 484
  */
 
 
@@ -7769,6 +7769,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glRenderbufferStorageMultisampleEXT(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height)
 	 */
 	PFNGLRENDERBUFFERSTORAGEMULTISAMPLEEXTPROC glRenderbufferStorageMultisampleEXT;
+
+
+
+
+	// ****** GL_EXT_framebuffer_multisample_blit_scaled ******
+
+	/**
+	 * @brief Returns \c true if \b GL_EXT_framebuffer_multisample_blit_scaled is supported, false otherwise.
+	 */
+	bool isGL_EXT_framebuffer_multisample_blit_scaled;
 
 
 

@@ -1,4 +1,4 @@
-// This file was generated at Thu, 09 Jun 2011 07:05:03 +0000 with gle, please do not modify.
+// This file was generated at Mon, 18 Jul 2011 07:33:03 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-06-06 12:06:38 -0700 (Mon, 06 Jun 2011) $ */
-// #define GL_GLEXT_VERSION 70
+// /* glext.h last updated $Date: 2011-07-06 02:49:14 -0700 (Wed, 06 Jul 2011) $ */
+// #define GL_GLEXT_VERSION 71
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2011/04/13 */
@@ -26,7 +26,7 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 518;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 519;
 const int	OpenGLExtensionsGen::m_supportedProcCount		= 2157;
 
 
@@ -1954,6 +1954,9 @@ void OpenGLExtensionsGen::clear()
 	isGL_EXT_framebuffer_multisample = false;
 
 	glRenderbufferStorageMultisampleEXT = 0;
+
+	// ****** GL_EXT_framebuffer_multisample_blit_scaled ******
+	isGL_EXT_framebuffer_multisample_blit_scaled = false;
 
 	// ****** GL_EXT_framebuffer_object ******
 	isGL_EXT_framebuffer_object = false;
@@ -15274,6 +15277,37 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 	else
 	{
 		logEndl( "GL_EXT_framebuffer_multisample                    : not detected." );
+	}
+
+
+	isGL_EXT_framebuffer_multisample_blit_scaled = isExtensionSupported("GL_EXT_framebuffer_multisample_blit_scaled");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_EXT_framebuffer_multisample_blit_scaled )
+	{
+		std::stringstream strStream;
+		strStream << "GL_EXT_framebuffer_multisample_blit_scaled        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_EXT_framebuffer_multisample_blit_scaled        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_EXT_framebuffer_multisample_blit_scaled") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_EXT_framebuffer_multisample_blit_scaled        : not detected." );
 	}
 
 

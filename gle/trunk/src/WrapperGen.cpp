@@ -1,4 +1,4 @@
-// This file was generated at Thu, 09 Jun 2011 07:05:03 +0000 with gle, please do not modify.
+// This file was generated at Mon, 18 Jul 2011 07:33:03 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-06-06 12:06:38 -0700 (Mon, 06 Jun 2011) $ */
-// #define GL_GLEXT_VERSION 70
+// /* glext.h last updated $Date: 2011-07-06 02:49:14 -0700 (Wed, 06 Jul 2011) $ */
+// #define GL_GLEXT_VERSION 71
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2011/04/13 */
@@ -7688,6 +7688,17 @@ bool isGL_EXT_framebuffer_multisample()
 void glRenderbufferStorageMultisampleEXT(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height)
 {
 	gleGetCurrent()->glRenderbufferStorageMultisampleEXT( target, samples, internalformat, width, height );
+}
+
+
+
+
+// ********* GL_EXT_framebuffer_multisample_blit_scaled *********
+bool isGL_EXT_framebuffer_multisample_blit_scaled()
+{
+	const bool isSupported = gleGetCurrent()->isGL_EXT_framebuffer_multisample_blit_scaled;
+
+	return isSupported;
 }
 
 
