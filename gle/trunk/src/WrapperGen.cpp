@@ -1,4 +1,4 @@
-// This file was generated at Mon, 18 Jul 2011 07:33:03 +0000 with gle, please do not modify.
+// This file was generated at Tue, 16 Aug 2011 13:44:14 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-07-06 02:49:14 -0700 (Wed, 06 Jul 2011) $ */
-// #define GL_GLEXT_VERSION 71
+// /* glext.h last updated $Date: 2011-08-08 00:34:29 -0700 (Mon, 08 Aug 2011) $ */
+// #define GL_GLEXT_VERSION 72
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2011/04/13 */
@@ -1894,6 +1894,33 @@ void glShaderBinary(GLsizei count, const GLuint *shaders, GLenum binaryformat, c
 
 
 
+// ********* GL_ARB_base_instance *********
+bool isGL_ARB_base_instance()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_base_instance;
+
+	return isSupported;
+}
+
+
+void glDrawArraysInstancedBaseInstance(GLenum mode, GLint first, GLsizei count, GLsizei primcount, GLuint baseinstance)
+{
+	gleGetCurrent()->glDrawArraysInstancedBaseInstance( mode, first, count, primcount, baseinstance );
+}
+
+void glDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLuint baseinstance)
+{
+	gleGetCurrent()->glDrawElementsInstancedBaseInstance( mode, count, type, indices, primcount, baseinstance );
+}
+
+void glDrawElementsInstancedBaseVertexBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLint basevertex, GLuint baseinstance)
+{
+	gleGetCurrent()->glDrawElementsInstancedBaseVertexBaseInstance( mode, count, type, indices, primcount, basevertex, baseinstance );
+}
+
+
+
+
 // ********* GL_ARB_blend_func_extended *********
 bool isGL_ARB_blend_func_extended()
 {
@@ -1954,6 +1981,28 @@ void glClampColorARB(GLenum target, GLenum clamp)
 bool isGL_ARB_compatibility()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_compatibility;
+
+	return isSupported;
+}
+
+
+
+
+// ********* GL_ARB_compressed_texture_pixel_storage *********
+bool isGL_ARB_compressed_texture_pixel_storage()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_compressed_texture_pixel_storage;
+
+	return isSupported;
+}
+
+
+
+
+// ********* GL_ARB_conservative_depth *********
+bool isGL_ARB_conservative_depth()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_conservative_depth;
 
 	return isSupported;
 }
@@ -2585,6 +2634,34 @@ bool isGL_ARB_instanced_arrays()
 void glVertexAttribDivisorARB(GLuint index, GLuint divisor)
 {
 	gleGetCurrent()->glVertexAttribDivisorARB( index, divisor );
+}
+
+
+
+
+// ********* GL_ARB_internalformat_query *********
+bool isGL_ARB_internalformat_query()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_internalformat_query;
+
+	return isSupported;
+}
+
+
+void glGetInternalformativ(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint *params)
+{
+	gleGetCurrent()->glGetInternalformativ( target, internalformat, pname, bufSize, params );
+}
+
+
+
+
+// ********* GL_ARB_map_buffer_alignment *********
+bool isGL_ARB_map_buffer_alignment()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_map_buffer_alignment;
+
+	return isSupported;
 }
 
 
@@ -3506,12 +3583,51 @@ void glValidateProgramPipeline(GLuint pipeline)
 
 
 
+// ********* GL_ARB_shader_atomic_counters *********
+bool isGL_ARB_shader_atomic_counters()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_shader_atomic_counters;
+
+	return isSupported;
+}
+
+
+void glGetActiveAtomicCounterBufferiv(GLuint program, GLuint bufferIndex, GLenum pname, GLint *params)
+{
+	gleGetCurrent()->glGetActiveAtomicCounterBufferiv( program, bufferIndex, pname, params );
+}
+
+
+
+
 // ********* GL_ARB_shader_bit_encoding *********
 bool isGL_ARB_shader_bit_encoding()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_shader_bit_encoding;
 
 	return isSupported;
+}
+
+
+
+
+// ********* GL_ARB_shader_image_load_store *********
+bool isGL_ARB_shader_image_load_store()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_shader_image_load_store;
+
+	return isSupported;
+}
+
+
+void glBindImageTexture(GLuint unit, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLenum format)
+{
+	gleGetCurrent()->glBindImageTexture( unit, texture, level, layered, layer, access, format );
+}
+
+void glMemoryBarrier(GLbitfield barriers)
+{
+	gleGetCurrent()->glMemoryBarrier( barriers );
 }
 
 
@@ -3820,6 +3936,17 @@ bool isGL_ARB_shading_language_100()
 
 
 
+// ********* GL_ARB_shading_language_420pack *********
+bool isGL_ARB_shading_language_420pack()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_shading_language_420pack;
+
+	return isSupported;
+}
+
+
+
+
 // ********* GL_ARB_shading_language_include *********
 bool isGL_ARB_shading_language_include()
 {
@@ -3857,6 +3984,17 @@ GLboolean glIsNamedStringARB(GLint namelen, const GLchar *name)
 void glNamedStringARB(GLenum type, GLint namelen, const GLchar *name, GLint stringlen, const GLchar *string)
 {
 	gleGetCurrent()->glNamedStringARB( type, namelen, name, stringlen, string );
+}
+
+
+
+
+// ********* GL_ARB_shading_language_packing *********
+bool isGL_ARB_shading_language_packing()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_shading_language_packing;
+
+	return isSupported;
 }
 
 
@@ -4247,6 +4385,48 @@ bool isGL_ARB_texture_rgb10_a2ui()
 
 
 
+// ********* GL_ARB_texture_storage *********
+bool isGL_ARB_texture_storage()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_storage;
+
+	return isSupported;
+}
+
+
+void glTexStorage1D(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width)
+{
+	gleGetCurrent()->glTexStorage1D( target, levels, internalformat, width );
+}
+
+void glTexStorage2D(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height)
+{
+	gleGetCurrent()->glTexStorage2D( target, levels, internalformat, width, height );
+}
+
+void glTexStorage3D(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth)
+{
+	gleGetCurrent()->glTexStorage3D( target, levels, internalformat, width, height, depth );
+}
+
+void glTextureStorage1DEXT(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width)
+{
+	gleGetCurrent()->glTextureStorage1DEXT( texture, target, levels, internalformat, width );
+}
+
+void glTextureStorage2DEXT(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height)
+{
+	gleGetCurrent()->glTextureStorage2DEXT( texture, target, levels, internalformat, width, height );
+}
+
+void glTextureStorage3DEXT(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth)
+{
+	gleGetCurrent()->glTextureStorage3DEXT( texture, target, levels, internalformat, width, height, depth );
+}
+
+
+
+
 // ********* GL_ARB_texture_swizzle *********
 bool isGL_ARB_texture_swizzle()
 {
@@ -4359,6 +4539,28 @@ void glEndQueryIndexed(GLenum target, GLuint index)
 void glGetQueryIndexediv(GLenum target, GLuint index, GLenum pname, GLint *params)
 {
 	gleGetCurrent()->glGetQueryIndexediv( target, index, pname, params );
+}
+
+
+
+
+// ********* GL_ARB_transform_feedback_instanced *********
+bool isGL_ARB_transform_feedback_instanced()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_transform_feedback_instanced;
+
+	return isSupported;
+}
+
+
+void glDrawTransformFeedbackInstanced(GLenum mode, GLuint id, GLsizei primcount)
+{
+	gleGetCurrent()->glDrawTransformFeedbackInstanced( mode, id, primcount );
+}
+
+void glDrawTransformFeedbackStreamInstanced(GLenum mode, GLuint id, GLuint stream, GLsizei primcount)
+{
+	gleGetCurrent()->glDrawTransformFeedbackStreamInstanced( mode, id, stream, primcount );
 }
 
 
@@ -15674,6 +15876,17 @@ void glMinSampleShading(GLclampf value)
 bool isGL_VERSION_4_1()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_4_1;
+
+	return isSupported;
+}
+
+
+
+
+// ********* GL_VERSION_4_2 *********
+bool isGL_VERSION_4_2()
+{
+	const bool isSupported = gleGetCurrent()->isGL_VERSION_4_2;
 
 	return isSupported;
 }

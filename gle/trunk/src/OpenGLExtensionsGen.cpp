@@ -1,4 +1,4 @@
-// This file was generated at Mon, 18 Jul 2011 07:33:03 +0000 with gle, please do not modify.
+// This file was generated at Tue, 16 Aug 2011 13:44:14 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-07-06 02:49:14 -0700 (Wed, 06 Jul 2011) $ */
-// #define GL_GLEXT_VERSION 71
+// /* glext.h last updated $Date: 2011-08-08 00:34:29 -0700 (Mon, 08 Aug 2011) $ */
+// #define GL_GLEXT_VERSION 72
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2011/04/13 */
@@ -26,8 +26,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 519;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 2157;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 531;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 2172;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS )
@@ -624,6 +624,13 @@ void OpenGLExtensionsGen::clear()
 	glReleaseShaderCompiler = 0;
 	glShaderBinary = 0;
 
+	// ****** GL_ARB_base_instance ******
+	isGL_ARB_base_instance = false;
+
+	glDrawArraysInstancedBaseInstance = 0;
+	glDrawElementsInstancedBaseInstance = 0;
+	glDrawElementsInstancedBaseVertexBaseInstance = 0;
+
 	// ****** GL_ARB_blend_func_extended ******
 	isGL_ARB_blend_func_extended = false;
 
@@ -642,6 +649,12 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_ARB_compatibility ******
 	isGL_ARB_compatibility = false;
+
+	// ****** GL_ARB_compressed_texture_pixel_storage ******
+	isGL_ARB_compressed_texture_pixel_storage = false;
+
+	// ****** GL_ARB_conservative_depth ******
+	isGL_ARB_conservative_depth = false;
 
 	// ****** GL_ARB_copy_buffer ******
 	isGL_ARB_copy_buffer = false;
@@ -799,6 +812,14 @@ void OpenGLExtensionsGen::clear()
 	isGL_ARB_instanced_arrays = false;
 
 	glVertexAttribDivisorARB = 0;
+
+	// ****** GL_ARB_internalformat_query ******
+	isGL_ARB_internalformat_query = false;
+
+	glGetInternalformativ = 0;
+
+	// ****** GL_ARB_map_buffer_alignment ******
+	isGL_ARB_map_buffer_alignment = false;
 
 	// ****** GL_ARB_map_buffer_range ******
 	isGL_ARB_map_buffer_range = false;
@@ -1004,8 +1025,19 @@ void OpenGLExtensionsGen::clear()
 	glUseProgramStages = 0;
 	glValidateProgramPipeline = 0;
 
+	// ****** GL_ARB_shader_atomic_counters ******
+	isGL_ARB_shader_atomic_counters = false;
+
+	glGetActiveAtomicCounterBufferiv = 0;
+
 	// ****** GL_ARB_shader_bit_encoding ******
 	isGL_ARB_shader_bit_encoding = false;
+
+	// ****** GL_ARB_shader_image_load_store ******
+	isGL_ARB_shader_image_load_store = false;
+
+	glBindImageTexture = 0;
+	glMemoryBarrier = 0;
 
 	// ****** GL_ARB_shader_objects ******
 	isGL_ARB_shader_objects = false;
@@ -1074,6 +1106,9 @@ void OpenGLExtensionsGen::clear()
 	// ****** GL_ARB_shading_language_100 ******
 	isGL_ARB_shading_language_100 = false;
 
+	// ****** GL_ARB_shading_language_420pack ******
+	isGL_ARB_shading_language_420pack = false;
+
 	// ****** GL_ARB_shading_language_include ******
 	isGL_ARB_shading_language_include = false;
 
@@ -1083,6 +1118,9 @@ void OpenGLExtensionsGen::clear()
 	glGetNamedStringivARB = 0;
 	glIsNamedStringARB = 0;
 	glNamedStringARB = 0;
+
+	// ****** GL_ARB_shading_language_packing ******
+	isGL_ARB_shading_language_packing = false;
 
 	// ****** GL_ARB_shadow ******
 	isGL_ARB_shadow = false;
@@ -1185,6 +1223,16 @@ void OpenGLExtensionsGen::clear()
 	// ****** GL_ARB_texture_rgb10_a2ui ******
 	isGL_ARB_texture_rgb10_a2ui = false;
 
+	// ****** GL_ARB_texture_storage ******
+	isGL_ARB_texture_storage = false;
+
+	glTexStorage1D = 0;
+	glTexStorage2D = 0;
+	glTexStorage3D = 0;
+	glTextureStorage1DEXT = 0;
+	glTextureStorage2DEXT = 0;
+	glTextureStorage3DEXT = 0;
+
 	// ****** GL_ARB_texture_swizzle ******
 	isGL_ARB_texture_swizzle = false;
 
@@ -1213,6 +1261,12 @@ void OpenGLExtensionsGen::clear()
 	glDrawTransformFeedbackStream = 0;
 	glEndQueryIndexed = 0;
 	glGetQueryIndexediv = 0;
+
+	// ****** GL_ARB_transform_feedback_instanced ******
+	isGL_ARB_transform_feedback_instanced = false;
+
+	glDrawTransformFeedbackInstanced = 0;
+	glDrawTransformFeedbackStreamInstanced = 0;
 
 	// ****** GL_ARB_transpose_matrix ******
 	isGL_ARB_transpose_matrix = false;
@@ -3842,6 +3896,9 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_VERSION_4_1 ******
 	isGL_VERSION_4_1 = false;
+
+	// ****** GL_VERSION_4_2 ******
+	isGL_VERSION_4_2 = false;
 
 	// ****** GL_WIN_phong_shading ******
 	isGL_WIN_phong_shading = false;
@@ -8180,6 +8237,50 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 
 
+	isGL_ARB_base_instance = isExtensionSupported("GL_ARB_base_instance");
+
+	localSupportedProcCount		= 3;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_ARB_base_instance ) // || isSEDEnable()
+	{
+		glDrawArraysInstancedBaseInstance = (PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC) getExtensionPtr( "glDrawArraysInstancedBaseInstance" );
+		if ( glDrawArraysInstancedBaseInstance != 0 )	++localInitializedProcCount;
+
+		glDrawElementsInstancedBaseInstance = (PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC) getExtensionPtr( "glDrawElementsInstancedBaseInstance" );
+		if ( glDrawElementsInstancedBaseInstance != 0 )	++localInitializedProcCount;
+
+		glDrawElementsInstancedBaseVertexBaseInstance = (PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC) getExtensionPtr( "glDrawElementsInstancedBaseVertexBaseInstance" );
+		if ( glDrawElementsInstancedBaseVertexBaseInstance != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_ARB_base_instance )
+
+	if ( isGL_ARB_base_instance )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_base_instance                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_base_instance                              : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_base_instance") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_base_instance                              : not detected." );
+	}
+
+
 	isGL_ARB_blend_func_extended = isExtensionSupported("GL_ARB_blend_func_extended");
 
 	localSupportedProcCount		= 2;
@@ -8325,6 +8426,68 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	else
 	{
 		logEndl( "GL_ARB_compatibility                              : not detected." );
+	}
+
+
+	isGL_ARB_compressed_texture_pixel_storage = isExtensionSupported("GL_ARB_compressed_texture_pixel_storage");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_ARB_compressed_texture_pixel_storage )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_compressed_texture_pixel_storage           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_compressed_texture_pixel_storage           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_compressed_texture_pixel_storage") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_compressed_texture_pixel_storage           : not detected." );
+	}
+
+
+	isGL_ARB_conservative_depth = isExtensionSupported("GL_ARB_conservative_depth");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_ARB_conservative_depth )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_conservative_depth                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_conservative_depth                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_conservative_depth") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_conservative_depth                         : not detected." );
 	}
 
 
@@ -9405,6 +9568,75 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 
 
+	isGL_ARB_internalformat_query = isExtensionSupported("GL_ARB_internalformat_query");
+
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_ARB_internalformat_query ) // || isSEDEnable()
+	{
+		glGetInternalformativ = (PFNGLGETINTERNALFORMATIVPROC) getExtensionPtr( "glGetInternalformativ" );
+		if ( glGetInternalformativ != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_ARB_internalformat_query )
+
+	if ( isGL_ARB_internalformat_query )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_internalformat_query                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_internalformat_query                       : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_internalformat_query") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_internalformat_query                       : not detected." );
+	}
+
+
+	isGL_ARB_map_buffer_alignment = isExtensionSupported("GL_ARB_map_buffer_alignment");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_ARB_map_buffer_alignment )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_map_buffer_alignment                       : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_map_buffer_alignment                       : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_map_buffer_alignment") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_map_buffer_alignment                       : not detected." );
+	}
+
+
 	isGL_ARB_map_buffer_range = isExtensionSupported("GL_ARB_map_buffer_range");
 
 	localSupportedProcCount		= 2;
@@ -10358,6 +10590,44 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 
 
+	isGL_ARB_shader_atomic_counters = isExtensionSupported("GL_ARB_shader_atomic_counters");
+
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_ARB_shader_atomic_counters ) // || isSEDEnable()
+	{
+		glGetActiveAtomicCounterBufferiv = (PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC) getExtensionPtr( "glGetActiveAtomicCounterBufferiv" );
+		if ( glGetActiveAtomicCounterBufferiv != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_ARB_shader_atomic_counters )
+
+	if ( isGL_ARB_shader_atomic_counters )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_shader_atomic_counters                     : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_shader_atomic_counters                     : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_shader_atomic_counters") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_shader_atomic_counters                     : not detected." );
+	}
+
+
 	isGL_ARB_shader_bit_encoding = isExtensionSupported("GL_ARB_shader_bit_encoding");
 
 	localSupportedProcCount		= 0;
@@ -10386,6 +10656,47 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	else
 	{
 		logEndl( "GL_ARB_shader_bit_encoding                        : not detected." );
+	}
+
+
+	isGL_ARB_shader_image_load_store = isExtensionSupported("GL_ARB_shader_image_load_store");
+
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_ARB_shader_image_load_store ) // || isSEDEnable()
+	{
+		glBindImageTexture = (PFNGLBINDIMAGETEXTUREPROC) getExtensionPtr( "glBindImageTexture" );
+		if ( glBindImageTexture != 0 )	++localInitializedProcCount;
+
+		glMemoryBarrier = (PFNGLMEMORYBARRIERPROC) getExtensionPtr( "glMemoryBarrier" );
+		if ( glMemoryBarrier != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_ARB_shader_image_load_store )
+
+	if ( isGL_ARB_shader_image_load_store )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_shader_image_load_store                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_shader_image_load_store                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_shader_image_load_store") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_shader_image_load_store                    : not detected." );
 	}
 
 
@@ -10724,6 +11035,37 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 
 
+	isGL_ARB_shading_language_420pack = isExtensionSupported("GL_ARB_shading_language_420pack");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_ARB_shading_language_420pack )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_shading_language_420pack                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_shading_language_420pack                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_shading_language_420pack") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_shading_language_420pack                   : not detected." );
+	}
+
+
 	isGL_ARB_shading_language_include = isExtensionSupported("GL_ARB_shading_language_include");
 
 	localSupportedProcCount		= 6;
@@ -10774,6 +11116,37 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	else
 	{
 		logEndl( "GL_ARB_shading_language_include                   : not detected." );
+	}
+
+
+	isGL_ARB_shading_language_packing = isExtensionSupported("GL_ARB_shading_language_packing");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_ARB_shading_language_packing )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_shading_language_packing                   : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_shading_language_packing                   : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_shading_language_packing") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_shading_language_packing                   : not detected." );
 	}
 
 
@@ -11635,6 +12008,59 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 
 
+	isGL_ARB_texture_storage = isExtensionSupported("GL_ARB_texture_storage");
+
+	localSupportedProcCount		= 6;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_ARB_texture_storage ) // || isSEDEnable()
+	{
+		glTexStorage1D = (PFNGLTEXSTORAGE1DPROC) getExtensionPtr( "glTexStorage1D" );
+		if ( glTexStorage1D != 0 )	++localInitializedProcCount;
+
+		glTexStorage2D = (PFNGLTEXSTORAGE2DPROC) getExtensionPtr( "glTexStorage2D" );
+		if ( glTexStorage2D != 0 )	++localInitializedProcCount;
+
+		glTexStorage3D = (PFNGLTEXSTORAGE3DPROC) getExtensionPtr( "glTexStorage3D" );
+		if ( glTexStorage3D != 0 )	++localInitializedProcCount;
+
+		glTextureStorage1DEXT = (PFNGLTEXTURESTORAGE1DEXTPROC) getExtensionPtr( "glTextureStorage1DEXT" );
+		if ( glTextureStorage1DEXT != 0 )	++localInitializedProcCount;
+
+		glTextureStorage2DEXT = (PFNGLTEXTURESTORAGE2DEXTPROC) getExtensionPtr( "glTextureStorage2DEXT" );
+		if ( glTextureStorage2DEXT != 0 )	++localInitializedProcCount;
+
+		glTextureStorage3DEXT = (PFNGLTEXTURESTORAGE3DEXTPROC) getExtensionPtr( "glTextureStorage3DEXT" );
+		if ( glTextureStorage3DEXT != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_ARB_texture_storage )
+
+	if ( isGL_ARB_texture_storage )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_texture_storage                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_texture_storage                            : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_texture_storage") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_texture_storage                            : not detected." );
+	}
+
+
 	isGL_ARB_texture_swizzle = isExtensionSupported("GL_ARB_texture_swizzle");
 
 	localSupportedProcCount		= 0;
@@ -11810,6 +12236,47 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	else
 	{
 		logEndl( "GL_ARB_transform_feedback3                        : not detected." );
+	}
+
+
+	isGL_ARB_transform_feedback_instanced = isExtensionSupported("GL_ARB_transform_feedback_instanced");
+
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_ARB_transform_feedback_instanced ) // || isSEDEnable()
+	{
+		glDrawTransformFeedbackInstanced = (PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC) getExtensionPtr( "glDrawTransformFeedbackInstanced" );
+		if ( glDrawTransformFeedbackInstanced != 0 )	++localInitializedProcCount;
+
+		glDrawTransformFeedbackStreamInstanced = (PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC) getExtensionPtr( "glDrawTransformFeedbackStreamInstanced" );
+		if ( glDrawTransformFeedbackStreamInstanced != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_ARB_transform_feedback_instanced )
+
+	if ( isGL_ARB_transform_feedback_instanced )
+	{
+		std::stringstream strStream;
+		strStream << "GL_ARB_transform_feedback_instanced               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_ARB_transform_feedback_instanced               : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_ARB_transform_feedback_instanced") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_ARB_transform_feedback_instanced               : not detected." );
 	}
 
 
@@ -26647,7 +27114,38 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 
 
-} // initializeGL_VERSION_4_1()
+	isGL_VERSION_4_2 = true;
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_VERSION_4_2 )
+	{
+		std::stringstream strStream;
+		strStream << "GL_VERSION_4_2                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_VERSION_4_2                                    : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_VERSION_4_2") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_VERSION_4_2                                    : not detected." );
+	}
+
+
+} // initializeGL_VERSION_4_2()
 
 
 void OpenGLExtensionsGen::initializeGL_WIN()

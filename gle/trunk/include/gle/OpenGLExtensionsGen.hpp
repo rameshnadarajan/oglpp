@@ -1,4 +1,4 @@
-// This file was generated at Mon, 18 Jul 2011 07:33:03 +0000 with gle, please do not modify.
+// This file was generated at Tue, 16 Aug 2011 13:44:14 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-07-06 02:49:14 -0700 (Wed, 06 Jul 2011) $ */
-// #define GL_GLEXT_VERSION 71
+// /* glext.h last updated $Date: 2011-08-08 00:34:29 -0700 (Mon, 08 Aug 2011) $ */
+// #define GL_GLEXT_VERSION 72
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2011/04/13 */
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Mon, 18 Jul 2011 07:33:03 +0000
+ * - Stamp = Tue, 16 Aug 2011 13:44:14 +0000
  * - Number of tokens							= 0
- * - Number of functions						= 2157
- * - Number of extensions found(in headers)		= 519
- * - Number of extensions in OpenGL registry	= 484
+ * - Number of functions						= 2172
+ * - Number of extensions found(in headers)		= 531
+ * - Number of extensions in OpenGL registry	= 495
  */
 
 
@@ -2111,6 +2111,32 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_base_instance ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_base_instance is supported, false otherwise.
+	 */
+	bool isGL_ARB_base_instance;
+
+
+	/**
+	 * @brief void glDrawArraysInstancedBaseInstance(GLenum mode, GLint first, GLsizei count, GLsizei primcount, GLuint baseinstance)
+	 */
+	PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC glDrawArraysInstancedBaseInstance;
+
+	/**
+	 * @brief void glDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLuint baseinstance)
+	 */
+	PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC glDrawElementsInstancedBaseInstance;
+
+	/**
+	 * @brief void glDrawElementsInstancedBaseVertexBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLint basevertex, GLuint baseinstance)
+	 */
+	PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC glDrawElementsInstancedBaseVertexBaseInstance;
+
+
+
+
 	// ****** GL_ARB_blend_func_extended ******
 
 	/**
@@ -2170,6 +2196,26 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_ARB_compatibility is supported, false otherwise.
 	 */
 	bool isGL_ARB_compatibility;
+
+
+
+
+	// ****** GL_ARB_compressed_texture_pixel_storage ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_compressed_texture_pixel_storage is supported, false otherwise.
+	 */
+	bool isGL_ARB_compressed_texture_pixel_storage;
+
+
+
+
+	// ****** GL_ARB_conservative_depth ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_conservative_depth is supported, false otherwise.
+	 */
+	bool isGL_ARB_conservative_depth;
 
 
 
@@ -2772,6 +2818,32 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glVertexAttribDivisorARB(GLuint index, GLuint divisor)
 	 */
 	PFNGLVERTEXATTRIBDIVISORARBPROC glVertexAttribDivisorARB;
+
+
+
+
+	// ****** GL_ARB_internalformat_query ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_internalformat_query is supported, false otherwise.
+	 */
+	bool isGL_ARB_internalformat_query;
+
+
+	/**
+	 * @brief void glGetInternalformativ(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint *params)
+	 */
+	PFNGLGETINTERNALFORMATIVPROC glGetInternalformativ;
+
+
+
+
+	// ****** GL_ARB_map_buffer_alignment ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_map_buffer_alignment is supported, false otherwise.
+	 */
+	bool isGL_ARB_map_buffer_alignment;
 
 
 
@@ -3677,12 +3749,49 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_shader_atomic_counters ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_shader_atomic_counters is supported, false otherwise.
+	 */
+	bool isGL_ARB_shader_atomic_counters;
+
+
+	/**
+	 * @brief void glGetActiveAtomicCounterBufferiv(GLuint program, GLuint bufferIndex, GLenum pname, GLint *params)
+	 */
+	PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC glGetActiveAtomicCounterBufferiv;
+
+
+
+
 	// ****** GL_ARB_shader_bit_encoding ******
 
 	/**
 	 * @brief Returns \c true if \b GL_ARB_shader_bit_encoding is supported, false otherwise.
 	 */
 	bool isGL_ARB_shader_bit_encoding;
+
+
+
+
+	// ****** GL_ARB_shader_image_load_store ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_shader_image_load_store is supported, false otherwise.
+	 */
+	bool isGL_ARB_shader_image_load_store;
+
+
+	/**
+	 * @brief void glBindImageTexture(GLuint unit, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLenum format)
+	 */
+	PFNGLBINDIMAGETEXTUREPROC glBindImageTexture;
+
+	/**
+	 * @brief void glMemoryBarrier(GLbitfield barriers)
+	 */
+	PFNGLMEMORYBARRIERPROC glMemoryBarrier;
 
 
 
@@ -3984,6 +4093,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_shading_language_420pack ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_shading_language_420pack is supported, false otherwise.
+	 */
+	bool isGL_ARB_shading_language_420pack;
+
+
+
+
 	// ****** GL_ARB_shading_language_include ******
 
 	/**
@@ -4021,6 +4140,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glNamedStringARB(GLenum type, GLint namelen, const GLchar *name, GLint stringlen, const GLchar *string)
 	 */
 	PFNGLNAMEDSTRINGARBPROC glNamedStringARB;
+
+
+
+
+	// ****** GL_ARB_shading_language_packing ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_shading_language_packing is supported, false otherwise.
+	 */
+	bool isGL_ARB_shading_language_packing;
 
 
 
@@ -4385,6 +4514,47 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_texture_storage ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_texture_storage is supported, false otherwise.
+	 */
+	bool isGL_ARB_texture_storage;
+
+
+	/**
+	 * @brief void glTexStorage1D(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width)
+	 */
+	PFNGLTEXSTORAGE1DPROC glTexStorage1D;
+
+	/**
+	 * @brief void glTexStorage2D(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height)
+	 */
+	PFNGLTEXSTORAGE2DPROC glTexStorage2D;
+
+	/**
+	 * @brief void glTexStorage3D(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth)
+	 */
+	PFNGLTEXSTORAGE3DPROC glTexStorage3D;
+
+	/**
+	 * @brief void glTextureStorage1DEXT(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width)
+	 */
+	PFNGLTEXTURESTORAGE1DEXTPROC glTextureStorage1DEXT;
+
+	/**
+	 * @brief void glTextureStorage2DEXT(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height)
+	 */
+	PFNGLTEXTURESTORAGE2DEXTPROC glTextureStorage2DEXT;
+
+	/**
+	 * @brief void glTextureStorage3DEXT(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth)
+	 */
+	PFNGLTEXTURESTORAGE3DEXTPROC glTextureStorage3DEXT;
+
+
+
+
 	// ****** GL_ARB_texture_swizzle ******
 
 	/**
@@ -4494,6 +4664,27 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glGetQueryIndexediv(GLenum target, GLuint index, GLenum pname, GLint *params)
 	 */
 	PFNGLGETQUERYINDEXEDIVPROC glGetQueryIndexediv;
+
+
+
+
+	// ****** GL_ARB_transform_feedback_instanced ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_transform_feedback_instanced is supported, false otherwise.
+	 */
+	bool isGL_ARB_transform_feedback_instanced;
+
+
+	/**
+	 * @brief void glDrawTransformFeedbackInstanced(GLenum mode, GLuint id, GLsizei primcount)
+	 */
+	PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC glDrawTransformFeedbackInstanced;
+
+	/**
+	 * @brief void glDrawTransformFeedbackStreamInstanced(GLenum mode, GLuint id, GLuint stream, GLsizei primcount)
+	 */
+	PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC glDrawTransformFeedbackStreamInstanced;
 
 
 
@@ -15511,6 +15702,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_VERSION_4_1 is supported, false otherwise.
 	 */
 	bool isGL_VERSION_4_1;
+
+
+
+
+	// ****** GL_VERSION_4_2 ******
+
+	/**
+	 * @brief Returns \c true if \b GL_VERSION_4_2 is supported, false otherwise.
+	 */
+	bool isGL_VERSION_4_2;
 
 
 
