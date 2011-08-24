@@ -137,6 +137,8 @@ struct GLO_API GLSLProgram : public IResource
 	 */
 	static const std::string loadFile( const std::string pathfilename );
 
+	const std::string getInfoLog();
+
 	// @todo Fixme : must moved to protected section.
 	GLhandleARB		getProgramObject() const;
 
@@ -155,11 +157,13 @@ protected:
 
 
 public:
-	const std::string getInfoLog( GLhandleARB object );
 protected:
 	void			printInfoLog( GLhandleARB object );
 
 private:
+
+	const std::string getInfoLog( GLhandleARB object );
+
 	GLhandleARB		m_programObject;
 
 	static GLenum		m_GLEnumShaderType[];

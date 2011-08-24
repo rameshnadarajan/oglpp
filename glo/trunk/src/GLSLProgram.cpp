@@ -113,7 +113,7 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 	GLint compiled = 0;
 	glGetObjectParameterivARB( object, GL_OBJECT_COMPILE_STATUS_ARB, &compiled );
 
-//#ifdef _DEBUG
+/*#ifdef _DEBUG
 	if ( compiled )
 	{
 		std::cout << convertShaderType2String(shaderType) << " shader have been successfully compiled." << std::endl;
@@ -125,7 +125,7 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 
 	std::cout << convertShaderType2String(shaderType) << " shader compilation log :" << std::endl;
 	printInfoLog( object ); // FIXME
-//#endif
+#endif*/
 
 	if ( !compiled )
 	{
@@ -174,15 +174,15 @@ const bool GLSLProgram::link()
 
 	if ( !linked )
 	{
-		std::cout << "PROGRAM failed to link..." << std::endl;
-		std::cerr << "PROGRAM failed to link..." << std::endl;
-		printInfoLog( getProgramObject() );
+		//std::cout << "PROGRAM failed to link..." << std::endl;
+		//std::cerr << "PROGRAM failed to link..." << std::endl;
+		//printInfoLog( getProgramObject() );
 	}
 #ifdef _DEBUG
 	else
 	{
-		std::cout << "PROGRAM have been successfully linked." << std::endl;
-		printInfoLog( getProgramObject() );
+		//std::cout << "PROGRAM have been successfully linked." << std::endl;
+		//printInfoLog( getProgramObject() );
 	}
 #endif
 
@@ -467,6 +467,13 @@ const std::string GLSLProgram::loadFile( const std::string pathfilename )
 
 
 
+const std::string GLSLProgram::getInfoLog()
+{
+	return getInfoLog( getProgramObject() );
+}
+
+
+
 GLhandleARB GLSLProgram::getProgramObject() const
 {
 	return m_programObject;
@@ -508,7 +515,7 @@ const std::string GLSLProgram::getInfoLog( GLhandleARB object )
 
  		delete[] infoLog;
 	}
-	
+
 	return strInfoLog;
 }
 
@@ -528,6 +535,7 @@ void GLSLProgram::printInfoLog( GLhandleARB object )
 		if ( maxLength > 0 )
 		{
 			std::cout << "glo.GLSLProgram: info log :\n" << std::string(infoLog) << std::endl; 
+			std::cerr << "glo.GLSLProgram: info log :\n" << std::string(infoLog) << std::endl; 
 			// @todo FIXME logError( "%s\n", infoLog );
 		}
 
