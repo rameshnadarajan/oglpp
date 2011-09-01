@@ -205,14 +205,14 @@ const GLint Texture::getWidth() const
 
 const GLint Texture::getInternalFormat() const
 {
-#ifdef _DEBUG
+/*#ifdef _DEBUG
 	assert( isBound() );
 	GLint internalFormat;
 	glGetTexLevelParameteriv( m_target, 0, GL_TEXTURE_INTERNAL_FORMAT, &internalFormat );
 	// Before specifying the image (using gl*TexImage*), the value 1 is returned by the query above.
 
 	assert( internalFormat == m_internalFormat && "Texture internal format has an unexpected value." );
-#endif
+#endif*/
 
 	return m_internalFormat;
 }
