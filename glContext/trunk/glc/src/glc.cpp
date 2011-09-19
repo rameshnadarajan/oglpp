@@ -354,7 +354,7 @@ glc_bool_t glc_swap( glc_t * context )
 
 
 
-glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscreen )
+glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscreen, glc_bool_t influenceCompositingManager )
 {
 #ifdef _WIN32
 	// Find drawable window and top level window
@@ -368,26 +368,30 @@ glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscre
 	monInfo.cbSize = sizeof(MONITORINFOEX);
 	GetMonitorInfo(hMonitor, &monInfo);
 
-	// Desktop Window Manager
-	HMODULE dwmLibrary = ::LoadLibrary("dwmapi.dll");
-	if ( dwmLibrary )
+	if ( influenceCompositingManager )
 	{
-		typedef HRESULT (WINAPI*DwmEnableCompositionProcType)(UINT);
-		DwmEnableCompositionProcType DwmIsCompositionEnabledPtr = 
-			(DwmEnableCompositionProcType)::GetProcAddress( dwmLibrary, "DwmEnableComposition");
+		// Desktop Window Manager
+		HMODULE dwmLibrary = ::LoadLibrary("dwmapi.dll");
+		if ( dwmLibrary )
+		{
+			typedef HRESULT (WINAPI*DwmEnableCompositionProcType)(UINT);
+			DwmEnableCompositionProcType DwmIsCompositionEnabledPtr = 
+				(DwmEnableCompositionProcType)::GetProcAddress( dwmLibrary, "DwmEnableComposition");
 
-		if ( DwmIsCompositionEnabledPtr )
-		{
-			HRESULT retVal = DwmIsCompositionEnabledPtr( wantFullscreen != 0 ? DWM_EC_DISABLECOMPOSITION : DWM_EC_ENABLECOMPOSITION );
-			// if ( retVal == S_OK )
+			if ( DwmIsCompositionEnabledPtr )
+			{
+				HRESULT retVal = DwmIsCompositionEnabledPtr( wantFullscreen != 0 ? DWM_EC_DISABLECOMPOSITION : DWM_EC_ENABLECOMPOSITION );
+				assert( retVal == S_OK && "DwmIsCompositionEnabledPtr fails" );
+				// if ( retVal == S_OK )
+			}
+			else
+			{
+				assert( false && "Found dwmapi.dll, but not DwmEnableComposition() !" );
+			}
+			::FreeLibrary(dwmLibrary);
 		}
-		else
-		{
-			assert( false && "Found dwmapi.dll, but not DwmEnableComposition() !" );
-		}
-		::FreeLibrary(dwmLibrary);
+		// else no dwm (XP and earlier version of windows).
 	}
-	// else no dwm (XP and earlier version of windows).
 
 	if ( wantFullscreen )
 	{
@@ -431,7 +435,7 @@ glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscre
 #elif __MACOSX__
 	#error "Platform not yet supported."
 #else // POSIX
-		#error "Platform not yet supported."
+	#error "Platform not yet supported."
 #endif
 }
 

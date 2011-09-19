@@ -268,11 +268,14 @@ GLC_API glc_bool_t	glc_swap( glc_t * context );
 /**
  * @brief Enables/disables fullscreen mode.
  *
- * @param wantFullscreen	true to enable fullscreen mode, false to disable fullscreen mode.
+ * @param wantFullscreen				true to enable fullscreen mode, false to disable fullscreen mode.
+ * @param influenceCompositingManager	true to influence the compositing window manager, false to ignore it.
+ *
+ * When influenceCompositingManager is true, the compositing window manager is disabled in fullscreen and enable in non fullscreen.
  *
  * @todo renames glc_drawable_set_fullscreen => glc_set_fullscreen
  */
-GLC_API glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscreen );
+GLC_API glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscreen, glc_bool_t influenceCompositingManager = true );
 
 /**
  * @brief Returns the fullscreen state.
