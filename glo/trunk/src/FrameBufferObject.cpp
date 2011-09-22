@@ -495,6 +495,7 @@ void FrameBufferObject::setDrawBuffers() const
 	// Fills the drawBuffers mapping from m_fullDrawBuffers and initializes m_drawBuffers
 	m_drawBuffers.clear();
 
+	int drawBufferCount = 0;
 	std::vector<int>::const_iterator	i		= m_fullDrawBuffers.begin(),
 										iEnd	= m_fullDrawBuffers.end();
 	for(	int index = 0;
@@ -503,15 +504,20 @@ void FrameBufferObject::setDrawBuffers() const
 	{
 		const int drawBuffer = *i;
 
-		if ( drawBuffer < 0 )		continue;
-
-		assert( drawBuffer <= static_cast< unsigned int >(getNumOfColors()) && "Not enough color buffers attached compared to the desired draw buffer." );
-
-		drawBuffers[index] = GL_COLOR_ATTACHMENT0 + drawBuffer;
-		m_drawBuffers.push_back( index );
+		if ( drawBuffer < 0 )
+		{
+			continue;
+		}
+		else
+		{
+			++drawBufferCount;
+			drawBuffers[index] = GL_COLOR_ATTACHMENT0 + drawBuffer;
+			m_drawBuffers.push_back( index );
+		}
 	}
 
 	// Applies
+	assert( drawBufferCount <= static_cast< unsigned int >(getNumOfColors()) && "Not enough color buffers attached compared to the specified list of color buffers to be drawn into." );
 	assert( drawBuffers.size() >= 1 && "setDrawBuffers() must be called to enable at least one draw buffer." );
 	assert( drawBuffers.size() == static_cast< unsigned int >(getMaxColorAttachements()) && "The entire mapping table is not defined" );
 	glDrawBuffersARB( drawBuffers.size(), &drawBuffers[0] );

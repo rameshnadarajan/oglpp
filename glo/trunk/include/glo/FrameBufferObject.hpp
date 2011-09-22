@@ -204,7 +204,7 @@ struct FrameBufferObject : public Object
 	 *
 	 * @pre isBound()
 	 */
-	GLO_API void detachStencil();	
+	GLO_API void detachStencil();
 
 
 	/**
