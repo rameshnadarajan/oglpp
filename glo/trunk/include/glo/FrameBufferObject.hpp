@@ -149,6 +149,7 @@ struct FrameBufferObject : public Object
 	 * @param attachableObject	the object to attach
 	 * @param index				a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
 	 *
+	 * @pre 0 <= index < getMaxColorAttachements()
 	 * @pre isBound()
 	 * @pre !attachableObject->isEmpty()
 	 */
@@ -159,6 +160,7 @@ struct FrameBufferObject : public Object
 	 *
 	 * @param index				a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
 	 *
+	 * @pre 0 <= index < getMaxColorAttachements()
 	 * @pre isBound()
 	 */
 	GLO_API void detachColor( const int index = 0 );
@@ -228,22 +230,22 @@ struct FrameBufferObject : public Object
 	 *
 	 * @param index				a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
 	 *
-	 * @pre 0 <= index < getNumOfColors()
+	 * @pre 0 <= index < getMaxColorAttachements()
 	 *
 	 * @return the desired color buffer of the framebuffer
 	 */
-	GLO_API boost::shared_ptr< glo::IFrameBufferAttachableImage > getColor( const int index = 0 );
+	GLO_API boost::shared_ptr< glo::IFrameBufferAttachableImage > getColor( const int index = 0 ) const;
 
 	/**
 	 * @brief Returns the desired color buffer of the framebuffer.
 	 *
 	 * @param index				a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
 	 *
-	 * @pre 0 <= index < getNumOfColors()
+	 * @pre 0 <= index < getMaxColorAttachements()
 	 *
 	 * @return the desired color buffer of the framebuffer
 	 */
-	GLO_API boost::shared_ptr< glo::Texture2D > getColorAsTexture2D( const int index = 0 );
+	GLO_API boost::shared_ptr< glo::Texture2D > getColorAsTexture2D( const int index = 0 ) const;
 
 	/**
 	 * @brief Returns the number of attached color buffers.
@@ -257,28 +259,28 @@ struct FrameBufferObject : public Object
 	 *
 	 * @return the depth buffer of the framebuffer
 	 */
-	GLO_API boost::shared_ptr< glo::IFrameBufferAttachableImage > getDepth();
+	GLO_API boost::shared_ptr< glo::IFrameBufferAttachableImage > getDepth() const;
 
 	/**
 	 * @brief Returns the depth buffer of the framebuffer.
 	 *
 	 * @return the depth buffer of the framebuffer
 	 */
-	GLO_API boost::shared_ptr< glo::Texture2D > getDepthAsTexture2D();
+	GLO_API boost::shared_ptr< glo::Texture2D > getDepthAsTexture2D() const;
 
 	/**
 	 * @brief Returns the stencil buffer of the framebuffer.
 	 *
 	 * @return the stencil buffer of the framebuffer
 	 */
-	GLO_API boost::shared_ptr< glo::IFrameBufferAttachableImage > getStencil();
+	GLO_API boost::shared_ptr< glo::IFrameBufferAttachableImage > getStencil() const;
 
 	/**
 	 * @brief Returns the stencil buffer of the framebuffer.
 	 *
 	 * @return the stencil buffer of the framebuffer
 	 */
-	GLO_API boost::shared_ptr< glo::Texture2D > getStencilAsTexture2D();
+	GLO_API boost::shared_ptr< glo::Texture2D > getStencilAsTexture2D() const;
 	//@}
 
 
@@ -299,6 +301,10 @@ struct FrameBufferObject : public Object
 	 * @brief Sets all readback operations to this framebuffer.
 	 *
 	 * @param index		a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
+	 *
+	 * @pre 0 <= index < getMaxColorAttachements()
+	 * @pre getColor(index) != 0
+	 * @pre isBound()
 	 */
 	GLO_API void setReadBuffer( const int index = 0 ) const;
 
@@ -320,6 +326,10 @@ struct FrameBufferObject : public Object
 	 * @brief Sets all drawing operations to this framebuffer.
 	 *
 	 * @param index		a zero-based index used to select to color buffer (0 to select GL_COLOR_ATTACHMENT0, 1 to select GL_COLOR_ATTACHMENT1 and so on).
+	 *
+	 * @pre 0 <= index < getMaxColorAttachements()
+	 * @pre getColor(index) != 0
+	 * @pre isBound()
 	 */
 	GLO_API void setDrawBuffer( const int index = 0 ) const;
 
@@ -332,6 +342,7 @@ struct FrameBufferObject : public Object
 	 * @param buf3		zero-based index specifying the buffer to which each fragment color is written
 	 *
 	 * @pre isBound()
+	 * @pre index == -1 or 0 <= index < getMaxColorAttachements() for index in [buf0,buf1,buf2, buf3]
 	 */
 	GLO_API void setDrawBuffers( const int buf0, const int buf1 = -1, const int buf2 = -1, const int buf3 = -1 ) const;
 
@@ -340,7 +351,7 @@ struct FrameBufferObject : public Object
 	 *
 	 * @param buffers	a container of zero-based index specifying buffers to which each fragment color is written
 	 *
-	 * @pre isBound()
+	 * @pre isBound() and index in buffers[] are valid
 	 */
 	GLO_API void setDrawBuffers( const std::vector< int >& buffers ) const;
 
@@ -426,6 +437,7 @@ struct FrameBufferObject : public Object
 
 private:
 	void setDrawBuffers() const;
+	
 
 	typedef std::vector< boost::shared_ptr< glo::IFrameBufferAttachableImage > > ColorContainer;
 

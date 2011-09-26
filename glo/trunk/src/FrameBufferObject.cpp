@@ -163,6 +163,9 @@ const GLenum FrameBufferObject::getStatus() const
 
 void FrameBufferObject::attachColor( boost::shared_ptr< glo::IFrameBufferAttachableImage > attachableObject, const int index  )
 {
+	assert( index >= 0 && "Invalid index" );
+	assert( index < getMaxColorAttachements() && "Invalid index" );
+
 	attachableObject->attach( this, GL_COLOR_ATTACHMENT0 + index );
 
 	assert( m_color[index] == 0 && "Color attachment point not empty." );
@@ -174,6 +177,9 @@ void FrameBufferObject::attachColor( boost::shared_ptr< glo::IFrameBufferAttacha
 
 void FrameBufferObject::detachColor( const int index )
 {
+	assert( index >= 0 && "Invalid index" );
+	assert( index < getMaxColorAttachements() && "Invalid index" );
+
 	if ( m_color[index] )
 	{
 		boost::shared_ptr< glo::IFrameBufferAttachableImage > attachableObject = m_color[index];
@@ -252,18 +258,21 @@ void FrameBufferObject::detach()
 
 
 
-boost::shared_ptr< glo::IFrameBufferAttachableImage > FrameBufferObject::getColor( const int index )
+boost::shared_ptr< glo::IFrameBufferAttachableImage > FrameBufferObject::getColor( const int index ) const
 {
-	assert( index >= 0 );
-	assert( index < getNumOfColors() );
+	assert( index >= 0 && "Invalid index" );
+	assert( index < getMaxColorAttachements() && "Invalid index" );
 
 	return m_color[index];
 }
 
 
 
-boost::shared_ptr< glo::Texture2D > FrameBufferObject::getColorAsTexture2D( const int index )
+boost::shared_ptr< glo::Texture2D > FrameBufferObject::getColorAsTexture2D( const int index ) const
 {
+	assert( index >= 0 && "Invalid index" );
+	assert( index < getMaxColorAttachements() && "Invalid index" );
+
 	return boost::dynamic_pointer_cast< glo::Texture2D >( getColor(index) );
 }
 
@@ -290,28 +299,28 @@ const int FrameBufferObject::getNumOfColors() const
 
 
 
-boost::shared_ptr< glo::IFrameBufferAttachableImage > FrameBufferObject::getDepth()
+boost::shared_ptr< glo::IFrameBufferAttachableImage > FrameBufferObject::getDepth() const
 {
 	return m_depth;
 }
 
 
 
-boost::shared_ptr< glo::Texture2D > FrameBufferObject::getDepthAsTexture2D()
+boost::shared_ptr< glo::Texture2D > FrameBufferObject::getDepthAsTexture2D() const
 {
 	return boost::dynamic_pointer_cast< glo::Texture2D >( getDepth() );
 }
 
 
 
-boost::shared_ptr< glo::IFrameBufferAttachableImage > FrameBufferObject::getStencil()
+boost::shared_ptr< glo::IFrameBufferAttachableImage > FrameBufferObject::getStencil() const
 {
 	return m_stencil;
 }
 
 
 
-boost::shared_ptr< glo::Texture2D > FrameBufferObject::getStencilAsTexture2D()
+boost::shared_ptr< glo::Texture2D > FrameBufferObject::getStencilAsTexture2D() const
 {
 	return boost::dynamic_pointer_cast< glo::Texture2D >( getStencil() );
 }
@@ -327,7 +336,10 @@ void FrameBufferObject::setReadToDefaultFrameBuffer()
 
 void FrameBufferObject::setReadBuffer( const int index ) const
 {
-	glBindFramebuffer( GL_READ_FRAMEBUFFER, getName() ); // @todo remove me
+	assert( index >= 0 && "Invalid index" );
+	assert( index < getMaxColorAttachements() && "Invalid index" );
+	assert( getColor(index) != 0 && "Select an empty buffer for reading" );
+	assert( isBound() && "FBO must be bound before calling FrameBufferObject::setReadBuffer()" );
 
 	if ( index >= 0 )
 	{
@@ -337,7 +349,7 @@ void FrameBufferObject::setReadBuffer( const int index ) const
 
 
 
-void FrameBufferObject::disableReadBuffer() const // @todo static
+void FrameBufferObject::disableReadBuffer() const
 {
 	assert( isBound() && "FBO must be bound before calling FrameBufferObject::disableReadBuffer()");
 
@@ -355,6 +367,9 @@ void FrameBufferObject::setDrawToDefaultFrameBuffer()
 
 void FrameBufferObject::setDrawBuffer( const int index ) const
 {
+	assert( index >= 0 && "Invalid index" );
+	assert( index < getMaxColorAttachements() && "Invalid index" );
+	assert( getColor(index) != 0 && "Select an empty buffer for reading" );
 	assert( isBound() && "FBO must be bound before calling FrameBufferObject::setDrawBuffer()" );
 
 	m_fullDrawBuffers.resize(1);
@@ -369,6 +384,22 @@ void FrameBufferObject::setDrawBuffer( const int index ) const
 void FrameBufferObject::setDrawBuffers( const int buf0, const int buf1, const int buf2, const int buf3 ) const
 {
 	assert( isBound() && "FBO must be bound before calling FrameBufferObject::setDrawBuffers()" );
+
+	assert(	(buf0 == -1) ||
+			( (buf0 >= 0) && (buf0 < getMaxColorAttachements()) ) && "Invalid index" );
+	assert( getColor(buf0) != 0 && "Select an empty buffer for drawing" );
+
+	assert(	(buf1 == -1) ||
+			( (buf1 >= 0) && (buf1 < getMaxColorAttachements()) ) && "Invalid index" );
+	assert( getColor(buf1) != 0 && "Select an empty buffer for drawing" );
+
+	assert(	(buf2 == -1) ||
+			( (buf2 >= 0) && (buf2 < getMaxColorAttachements()) ) && "Invalid index" );
+	assert( getColor(buf2) != 0 && "Select an empty buffer for drawing" );
+
+	assert(	(buf3 == -1) ||
+			( (buf3 >= 0) && (buf3 < getMaxColorAttachements()) ) && "Invalid index" );
+	assert( getColor(buf3) != 0 && "Select an empty buffer for drawing" );
 
 	m_fullDrawBuffers.resize(4);
 	m_fullDrawBuffers[0] = buf0;
@@ -485,7 +516,6 @@ const int FrameBufferObject::getMaxSamples() const
 
 /**
  * @todo tests duplicate
- * @todo tests if buffers[i] are all valid
  */
 void FrameBufferObject::setDrawBuffers() const
 {
@@ -504,15 +534,21 @@ void FrameBufferObject::setDrawBuffers() const
 	{
 		const int drawBuffer = *i;
 
-		if ( drawBuffer < 0 )
+		if ( drawBuffer == -1 )
 		{
 			continue;
 		}
-		else
+		else if ( drawBuffer >= 0 )
 		{
 			++drawBufferCount;
+			assert( drawBuffer < getMaxColorAttachements() && "Invalid index" );
+			assert( getColor(drawBuffer) != 0 && "Select an empty buffer for drawing" );
 			drawBuffers[index] = GL_COLOR_ATTACHMENT0 + drawBuffer;
 			m_drawBuffers.push_back( index );
+		}
+		else
+		{
+			assert( false && "Invalid index" );
 		}
 	}
 
