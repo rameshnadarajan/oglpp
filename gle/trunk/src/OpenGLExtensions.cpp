@@ -371,7 +371,16 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 	strInfos << "GL_MAX_ELEMENTS_INDICES			= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_VERTEX_ATTRIBS, &glint );
-	strInfos << "GL_MAX_VERTEX_ATTRIBS			= " << glint << std::endl;
+	strInfos << "GL_MAX_VERTEX_ATTRIBS			= " << glint << std::endl << std::endl;
+
+	glGetIntegerv( GL_MAX_VERTEX_UNIFORM_COMPONENTS, &glint );
+	strInfos << "GL_MAX_VERTEX_UNIFORM_COMPONENTS	= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_GEOMETRY_UNIFORM_COMPONENTS, &glint );
+	strInfos << "GL_MAX_GEOMETRY_UNIFORM_COMPONENTS	= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_FRAGMENT_UNIFORM_COMPONENTS, &glint );
+	strInfos << "GL_MAX_FRAGMENT_UNIFORM_COMPONENTS	= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_UNIFORM_BUFFER_BINDINGS, &glint );
 	strInfos << "GL_MAX_UNIFORM_BUFFER_BINDINGS		= " << glint << std::endl << std::endl;
