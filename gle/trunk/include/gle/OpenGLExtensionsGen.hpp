@@ -1,4 +1,4 @@
-// This file was generated at Tue, 16 Aug 2011 13:44:14 +0000 with gle, please do not modify.
+// This file was generated at Thu, 06 Oct 2011 08:25:06 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-08-08 00:34:29 -0700 (Mon, 08 Aug 2011) $ */
-// #define GL_GLEXT_VERSION 72
+// /* glext.h last updated $Date: 2011-10-02 22:22:16 -0700 (Sun, 02 Oct 2011) $ */
+// #define GL_GLEXT_VERSION 73
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2011/04/13 */
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Tue, 16 Aug 2011 13:44:14 +0000
+ * - Stamp = Thu, 06 Oct 2011 08:25:06 +0000
  * - Number of tokens							= 0
  * - Number of functions						= 2172
  * - Number of extensions found(in headers)		= 531
- * - Number of extensions in OpenGL registry	= 495
+ * - Number of extensions in OpenGL registry	= 496
  */
 
 
