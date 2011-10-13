@@ -415,21 +415,21 @@ struct FrameBufferObject : public Object
 	 *
 	 * @return the maximum number of FBO attachment points for color buffers.
 	 */
-	const int getMaxColorAttachements() const;
+	GLO_API const int getMaxColorAttachements() const;
 
 	/**
 	 * @brief Returns the maximum width and height of renderbuffers supported by the implementation
 	 *
 	 * @return the maximum width and height of renderbuffers supported by the implementation
 	 */
-	const int getMaxRenderBufferSize() const;
+	GLO_API const int getMaxRenderBufferSize() const;
 
 	/**
 	 * @brief Returns the maximum number of samples supported for multisampling.
 	 *
 	 * @return the maximum number of samples supported for multisampling
 	 */
-	const int getMaxSamples() const;
+	GLO_API const int getMaxSamples() const;
 
 	//@}
 
