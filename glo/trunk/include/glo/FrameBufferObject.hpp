@@ -80,6 +80,20 @@ struct FrameBufferObject : public Object
 	GLO_API void bind() const;
 
 	/**
+	 * @brief Binds the frame buffer object for rendering operations.
+	 * 
+	 * @pre isEmpty() must return false
+	 */
+	GLO_API void bindToDraw() const;
+
+	/**
+	 * @brief Binds the frame buffer object for readback operations
+	 * 
+	 * @pre isEmpty() must return false
+	 */
+	GLO_API void bindToRead() const;
+
+	/**
 	 * @brief Unbinds the frame buffer object
 	 * 
 	 * @pre isEmpty() must return false
@@ -97,14 +111,32 @@ struct FrameBufferObject : public Object
 	//@{
 
 	/**
-	 * @brief Returns if the frame buffer object is bounded
+	 * @brief Returns if the frame buffer object is bounded (for rendering and readback operations)
 	 * 
 	 * @pre isEmpty() must return false
 	 * 
 	 * @return true if the frame buffer object is bounded, false otherwise.
 	 */
 	GLO_API const bool isBound() const;
-	
+
+	/**
+	 * @brief Returns if the frame buffer object is bounded (for rendering operations only)
+	 * 
+	 * @pre isEmpty() must return false
+	 * 
+	 * @return true if the frame buffer object is bounded, false otherwise.
+	 */
+	GLO_API const bool isBoundToDraw() const;
+
+	/**
+	 * @brief Returns if the frame buffer object is bounded (for readback operations only)
+	 * 
+	 * @pre isEmpty() must return false
+	 * 
+	 * @return true if the frame buffer object is bounded, false otherwise.
+	 */
+	GLO_API const bool isBoundToRead() const;
+
 	//@}
 
 
@@ -288,6 +320,8 @@ struct FrameBufferObject : public Object
 	/**
 	 * @name Selecting buffer(s) for reading and writing operations
 	 *
+	 * @see bindToDraw() and bindToRead() methods.
+	 *
 	 * @todo GLO_API void drawBuffers( std::vector< uint > buffers );
 	 */
 	//@{
@@ -304,14 +338,14 @@ struct FrameBufferObject : public Object
 	 *
 	 * @pre 0 <= index < getMaxColorAttachements()
 	 * @pre getColor(index) != 0
-	 * @pre isBound()
+	 * @pre isBoundToRead()
 	 */
 	GLO_API void setReadBuffer( const int index = 0 ) const;
 
 	/**
 	 * @brief Inhibits the writing of fragment color to any buffer.
 	 *
-	 * @pre isBound()
+	 * @pre isBoundToRead()
 	 */
 	GLO_API void disableReadBuffer() const;
 
@@ -329,7 +363,7 @@ struct FrameBufferObject : public Object
 	 *
 	 * @pre 0 <= index < getMaxColorAttachements()
 	 * @pre getColor(index) != 0
-	 * @pre isBound()
+	 * @pre isBoundToDraw()
 	 */
 	GLO_API void setDrawBuffer( const int index = 0 ) const;
 
@@ -341,7 +375,7 @@ struct FrameBufferObject : public Object
 	 * @param buf2		zero-based index specifying the buffer to which each fragment color is written
 	 * @param buf3		zero-based index specifying the buffer to which each fragment color is written
 	 *
-	 * @pre isBound()
+	 * @pre isBoundToDraw()
 	 * @pre index == -1 or 0 <= index < getMaxColorAttachements() for index in [buf0,buf1,buf2, buf3]
 	 */
 	GLO_API void setDrawBuffers( const int buf0, const int buf1 = -1, const int buf2 = -1, const int buf3 = -1 ) const;
@@ -351,14 +385,14 @@ struct FrameBufferObject : public Object
 	 *
 	 * @param buffers	a container of zero-based index specifying buffers to which each fragment color is written
 	 *
-	 * @pre isBound() and index in buffers[] are valid
+	 * @pre isBoundToDraw() and index in buffers[] are valid
 	 */
 	GLO_API void setDrawBuffers( const std::vector< int >& buffers ) const;
 
 	/**
 	 * @brief Sets the draw buffers to which all fragment colors are written to all attachments.
 	 *
-	 * @pre isBound()
+	 * @pre isBoundToDraw()
 	 */
 	GLO_API void setDrawBuffersToAll() const;
 
@@ -385,7 +419,7 @@ struct FrameBufferObject : public Object
 	/**
 	 * @brief Inhibits the writing of fragment color to any buffer.
 	 *
-	 * @pre isBound()
+	 * @pre isBoundToDraw()
 	 */
 	GLO_API void disableDrawBuffers() const;
 
@@ -394,7 +428,7 @@ struct FrameBufferObject : public Object
 	/**
 	 * @brief Sets rendering to depth only.
 	 *
-	 * @pre isBound()
+	 * @pre isBoundToDraw()
 	 *
 	 * @param depthOnly		Sets DrawBuffer to none when depthOnly is true.
 	 *						Sets DrawBuffer to first color attachement when depthOnly is false.
@@ -437,7 +471,6 @@ struct FrameBufferObject : public Object
 
 private:
 	void setDrawBuffers() const;
-	
 
 	typedef std::vector< boost::shared_ptr< glo::IFrameBufferAttachableImage > > ColorContainer;
 
@@ -448,6 +481,9 @@ private:
 
 	mutable std::vector< int >												m_fullDrawBuffers;	///< the current draw buffers to which all fragment colors are written
 	mutable std::vector< int >												m_drawBuffers;		///< the current draw buffers to which all fragment colors are written
+
+	static GLint															m_currentDrawFramebuffer;	///< the current fbo for rendering operations
+	static GLint															m_currentReadFramebuffer;	///< the current fbo for readback operations
 };
 
 

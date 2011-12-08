@@ -43,7 +43,7 @@ FrameBufferObject::~FrameBufferObject()
 void FrameBufferObject::generate()
 {
 	assert( isEmpty() );
-	
+
 	glGenFramebuffers(1, &m_object);
 
 	m_color.resize( getMaxColorAttachements() );
@@ -62,7 +62,7 @@ void FrameBufferObject::release()
 
 		unbind();
 		glDeleteFramebuffers(1, &m_object);
-		
+
 		m_object = 0;
 	}
 
@@ -74,8 +74,31 @@ void FrameBufferObject::release()
 void FrameBufferObject::bind() const
 {
 	assert( !isEmpty() );
-	
+
 	glBindFramebuffer( GL_FRAMEBUFFER, m_object );
+
+	m_currentDrawFramebuffer = m_object;
+	m_currentReadFramebuffer = m_object;
+}
+
+
+void FrameBufferObject::bindToDraw() const
+{
+	assert( !isEmpty() );
+
+	glBindFramebuffer( GL_DRAW_FRAMEBUFFER, m_object );
+
+	m_currentDrawFramebuffer = m_object;
+}
+
+
+void FrameBufferObject::bindToRead() const
+{
+	assert( !isEmpty() );
+
+	glBindFramebuffer( GL_READ_FRAMEBUFFER, m_object );
+
+	m_currentReadFramebuffer = m_object;
 }
 
 
@@ -86,6 +109,9 @@ void FrameBufferObject::unbind() const
 	assert( isBound() );
 
 	glBindFramebuffer( GL_FRAMEBUFFER, 0 );
+
+	m_currentDrawFramebuffer = 0;
+	m_currentReadFramebuffer = 0;
 }
 
 
@@ -94,12 +120,55 @@ const bool FrameBufferObject::isBound() const
 {
 	assert( !isEmpty() );
 
-	GLint currentBinding;
-	glGetIntegerv( GL_FRAMEBUFFER_BINDING, &currentBinding ); // @todo removes this access
+#ifdef _DEBUG
+	GLint currentDrawBinding;
+	glGetIntegerv( GL_DRAW_FRAMEBUFFER_BINDING, &currentDrawBinding );
 
-	return ( static_cast<GLuint>(currentBinding) == m_object );
+	GLint currentReadBinding;
+	glGetIntegerv( GL_READ_FRAMEBUFFER_BINDING, &currentReadBinding );
+
+	assert( currentDrawBinding == currentReadBinding );
+	assert( m_currentDrawFramebuffer == m_currentReadFramebuffer );
+
+	assert( currentDrawBinding == m_currentDrawFramebuffer );
+#else
+	assert( m_currentDrawFramebuffer == m_currentReadFramebuffer );
+#endif
+
+	return ( static_cast<GLuint>(m_currentDrawFramebuffer) == m_object );
 }
 
+
+const bool FrameBufferObject::isBoundToDraw() const
+{
+	assert( !isEmpty() );
+
+#ifdef _DEBUG
+	GLint currentDrawBinding;
+	glGetIntegerv( GL_DRAW_FRAMEBUFFER_BINDING, &currentDrawBinding );
+
+	assert( currentDrawBinding == m_currentDrawFramebuffer );
+#else
+#endif
+
+	return ( static_cast<GLuint>(m_currentDrawFramebuffer) == m_object );
+}
+
+
+const bool FrameBufferObject::isBoundToRead() const
+{
+	assert( !isEmpty() );
+
+#ifdef _DEBUG
+	GLint currentReadBinding;
+	glGetIntegerv( GL_READ_FRAMEBUFFER_BINDING, &currentReadBinding );
+
+	assert( currentReadBinding == m_currentReadFramebuffer );
+#else
+#endif
+
+	return ( static_cast<GLuint>(m_currentReadFramebuffer) == m_object );
+}
 
 
 const std::string FrameBufferObject::getStatusString() const
@@ -339,7 +408,7 @@ void FrameBufferObject::setReadBuffer( const int index ) const
 	assert( index >= 0 && "Invalid index" );
 	assert( index < getMaxColorAttachements() && "Invalid index" );
 	assert( getColor(index) != 0 && "Select an empty buffer for reading" );
-	assert( isBound() && "FBO must be bound before calling FrameBufferObject::setReadBuffer()" );
+	assert( isBoundToRead() && "FBO must be bound before calling FrameBufferObject::setReadBuffer()" );
 
 	if ( index >= 0 )
 	{
@@ -351,7 +420,7 @@ void FrameBufferObject::setReadBuffer( const int index ) const
 
 void FrameBufferObject::disableReadBuffer() const
 {
-	assert( isBound() && "FBO must be bound before calling FrameBufferObject::disableReadBuffer()");
+	assert( isBoundToRead() && "FBO must be bound before calling FrameBufferObject::disableReadBuffer()");
 
 	glReadBuffer( GL_NONE );
 }
@@ -370,7 +439,7 @@ void FrameBufferObject::setDrawBuffer( const int index ) const
 	assert( index >= 0 && "Invalid index" );
 	assert( index < getMaxColorAttachements() && "Invalid index" );
 	assert( getColor(index) != 0 && "Select an empty buffer for reading" );
-	assert( isBound() && "FBO must be bound before calling FrameBufferObject::setDrawBuffer()" );
+	assert( isBoundToDraw() && "FBO must be bound before calling FrameBufferObject::setDrawBuffer()" );
 
 	m_fullDrawBuffers.resize(1);
 	m_fullDrawBuffers[0] = index;
@@ -383,7 +452,7 @@ void FrameBufferObject::setDrawBuffer( const int index ) const
 
 void FrameBufferObject::setDrawBuffers( const int buf0, const int buf1, const int buf2, const int buf3 ) const
 {
-	assert( isBound() && "FBO must be bound before calling FrameBufferObject::setDrawBuffers()" );
+	assert( isBoundToDraw() && "FBO must be bound before calling FrameBufferObject::setDrawBuffers()" );
 
 	assert(	(buf0 == -1) ||
 			( (buf0 >= 0) && (buf0 < getMaxColorAttachements()) ) && "Invalid index" );
@@ -415,7 +484,7 @@ void FrameBufferObject::setDrawBuffers( const int buf0, const int buf1, const in
 
 void FrameBufferObject::setDrawBuffers( const std::vector< int >& buffers ) const
 {
-	assert( isBound() && "FBO must be bound before calling FrameBufferObject::setDrawBuffers()" );
+	assert( isBoundToDraw() && "FBO must be bound before calling FrameBufferObject::setDrawBuffers()" );
 
 	m_fullDrawBuffers = buffers;
 
@@ -427,7 +496,7 @@ void FrameBufferObject::setDrawBuffers( const std::vector< int >& buffers ) cons
 
 void FrameBufferObject::setDrawBuffersToAll() const
 {
-	assert( isBound() && "FBO must be bound before calling FrameBufferObject::setDrawBuffersToAll()" );
+	assert( isBoundToDraw() && "FBO must be bound before calling FrameBufferObject::setDrawBuffersToAll()" );
 
 	m_fullDrawBuffers.clear();
 	int index = 0;
@@ -467,7 +536,7 @@ const std::vector< int >& FrameBufferObject::getDrawBuffers() const
 
 void FrameBufferObject::disableDrawBuffers() const
 {
-	assert( isBound() && "FBO must be bound before calling FrameBufferObject::disableDrawBuffers()");
+	assert( isBoundToDraw() && "FBO must be bound before calling FrameBufferObject::disableDrawBuffers()");
 
 	m_fullDrawBuffers.clear();
 	m_drawBuffers.clear();
@@ -479,7 +548,7 @@ void FrameBufferObject::disableDrawBuffers() const
 
 void FrameBufferObject::renderDepthOnly( const bool depthOnly )
 {
-	assert( isBound() && "FBO must be bound before calling FrameBufferObject::renderDepthOnly()");
+	assert( isBoundToDraw() && "FBO must be bound before calling FrameBufferObject::renderDepthOnly()");
 
 	if ( depthOnly )
 	{
@@ -559,6 +628,9 @@ void FrameBufferObject::setDrawBuffers() const
 	glDrawBuffersARB( drawBuffers.size(), &drawBuffers[0] );
 }
 
+
+GLint FrameBufferObject::m_currentDrawFramebuffer = 0;
+GLint FrameBufferObject::m_currentReadFramebuffer = 0;
 
 
 } // namespace glo
