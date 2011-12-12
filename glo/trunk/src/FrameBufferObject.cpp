@@ -265,10 +265,7 @@ void FrameBufferObject::detachColors()
 {
 	for( int i=0; i < static_cast< int >(m_color.size()); ++i )
 	{
-		if ( m_color[i] )
-		{
-			detachColor(i);
-		}
+		detachColor(i);
 	}
 }
 
@@ -342,7 +339,9 @@ boost::shared_ptr< glo::Texture2D > FrameBufferObject::getColorAsTexture2D( cons
 	assert( index >= 0 && "Invalid index" );
 	assert( index < getMaxColorAttachements() && "Invalid index" );
 
-	return boost::dynamic_pointer_cast< glo::Texture2D >( getColor(index) );
+	boost::shared_ptr< glo::Texture2D > retVal = boost::dynamic_pointer_cast< glo::Texture2D >( getColor(index) );
+	assert( retVal );
+	return retVal;
 }
 
 
@@ -377,7 +376,9 @@ boost::shared_ptr< glo::IFrameBufferAttachableImage > FrameBufferObject::getDept
 
 boost::shared_ptr< glo::Texture2D > FrameBufferObject::getDepthAsTexture2D() const
 {
-	return boost::dynamic_pointer_cast< glo::Texture2D >( getDepth() );
+	boost::shared_ptr< glo::Texture2D > retVal = boost::dynamic_pointer_cast< glo::Texture2D >( getDepth() );
+	assert( retVal );
+	return retVal;
 }
 
 
@@ -391,7 +392,9 @@ boost::shared_ptr< glo::IFrameBufferAttachableImage > FrameBufferObject::getSten
 
 boost::shared_ptr< glo::Texture2D > FrameBufferObject::getStencilAsTexture2D() const
 {
-	return boost::dynamic_pointer_cast< glo::Texture2D >( getStencil() );
+	boost::shared_ptr< glo::Texture2D > retVal = boost::dynamic_pointer_cast< glo::Texture2D >( getStencil() );
+	assert( retVal );
+	return retVal;
 }
 
 
