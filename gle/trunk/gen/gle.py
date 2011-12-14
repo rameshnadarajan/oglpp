@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# GLE - Copyright (C) 2010, Nicolas Papier.
+# GLE - Copyright (C) 2010, 2011, Nicolas Papier.
 # Distributed under the terms of the GNU Library General Public License (LGPL)
 # as published by the Free Software Foundation.
 # Author Nicolas Papier
@@ -24,7 +24,7 @@ downloadOpenGLHeaderFiles()
 downloadOpenGLRegistry()
 
 # Parses files and registry
-for file in ['glext.h', 'glxext.h', 'wglext.h']:
+for file in ['glext.h', 'glxext.h', 'wglext.h', '../include/GL/gleext.h']:
 	parseFile( file )
 parseRegistry()
 opengl.initializeFunctions()

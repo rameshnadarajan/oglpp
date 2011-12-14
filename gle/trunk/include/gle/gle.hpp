@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2009, 2010, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2009, 2010, 2011, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -20,6 +20,7 @@
 
 	#include <GL/gl.h>
 	#include <GL/glext.h>
+	#include <GL/gleext.h>
 	#include <GL/wglext.h>
 	//#include <GL/glu.h>
 
@@ -29,6 +30,7 @@
 	#define APIENTRY
 	#include <GL/gl.h>
 	#include <GL/glext.h>
+	#include <GL/gleext.h>
 	//#include <GL/glu.h>
 
 	//#include <OpenGL/gl.h>
@@ -40,6 +42,7 @@
 	#define __STDC_VERSION__	199901L
 	#include <GL/gl.h>
 	#include <GL/glext.h>
+	#include <GL/gleext.h>
 	//#include <GL/glx.h>
 	//#include <GL/glxext.h>
 	//#include <GL/glu.h>

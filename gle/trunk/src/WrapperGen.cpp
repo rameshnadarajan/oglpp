@@ -1,4 +1,4 @@
-// This file was generated at Thu, 06 Oct 2011 08:25:06 +0000 with gle, please do not modify.
+// This file was generated at Tue, 13 Dec 2011 13:52:46 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -11095,6 +11095,263 @@ bool isGL_NV_parameter_buffer_object2()
 	const bool isSupported = gleGetCurrent()->isGL_NV_parameter_buffer_object2;
 
 	return isSupported;
+}
+
+
+
+
+// ********* GL_NV_path_rendering *********
+bool isGL_NV_path_rendering()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_path_rendering;
+
+	return isSupported;
+}
+
+
+void glCopyPathNV(GLuint resultPath, GLuint srcPath)
+{
+	gleGetCurrent()->glCopyPathNV( resultPath, srcPath );
+}
+
+void glCoverFillPathInstancedNV(GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLenum coverMode, GLenum transformType, const GLfloat *transformValues)
+{
+	gleGetCurrent()->glCoverFillPathInstancedNV( numPaths, pathNameType, paths, pathBase, coverMode, transformType, transformValues );
+}
+
+void glCoverFillPathNV(GLuint path, GLenum coverMode)
+{
+	gleGetCurrent()->glCoverFillPathNV( path, coverMode );
+}
+
+void glCoverStrokePathInstancedNV(GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLenum coverMode, GLenum transformType, const GLfloat *transformValues)
+{
+	gleGetCurrent()->glCoverStrokePathInstancedNV( numPaths, pathNameType, paths, pathBase, coverMode, transformType, transformValues );
+}
+
+void glCoverStrokePathNV(GLuint path, GLenum coverMode)
+{
+	gleGetCurrent()->glCoverStrokePathNV( path, coverMode );
+}
+
+void glDeletePathsNV(GLuint path, GLsizei range)
+{
+	gleGetCurrent()->glDeletePathsNV( path, range );
+}
+
+GLuint glGenPathsNV(GLsizei range)
+{
+	return gleGetCurrent()->glGenPathsNV( range );
+}
+
+void glGetPathColorGenfvNV(GLenum color, GLenum pname, GLfloat *value)
+{
+	gleGetCurrent()->glGetPathColorGenfvNV( color, pname, value );
+}
+
+void glGetPathColorGenivNV(GLenum color, GLenum pname, GLint *value)
+{
+	gleGetCurrent()->glGetPathColorGenivNV( color, pname, value );
+}
+
+void glGetPathCommandsNV(GLuint path, GLubyte *commands)
+{
+	gleGetCurrent()->glGetPathCommandsNV( path, commands );
+}
+
+void glGetPathCoordsNV(GLuint path, GLfloat *coords)
+{
+	gleGetCurrent()->glGetPathCoordsNV( path, coords );
+}
+
+void glGetPathDashArrayNV(GLuint path, GLfloat *dashArray)
+{
+	gleGetCurrent()->glGetPathDashArrayNV( path, dashArray );
+}
+
+GLfloat glGetPathLengthNV(GLuint path, GLsizei startSegment, GLsizei numSegments)
+{
+	return gleGetCurrent()->glGetPathLengthNV( path, startSegment, numSegments );
+}
+
+void glGetPathMetricRangeNV(GLbitfield metricQueryMask, GLuint firstPathName, GLsizei numPaths, GLsizei stride, GLfloat *metrics)
+{
+	gleGetCurrent()->glGetPathMetricRangeNV( metricQueryMask, firstPathName, numPaths, stride, metrics );
+}
+
+void glGetPathMetricsNV(GLbitfield metricQueryMask, GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLsizei stride, GLfloat *metrics)
+{
+	gleGetCurrent()->glGetPathMetricsNV( metricQueryMask, numPaths, pathNameType, paths, pathBase, stride, metrics );
+}
+
+void glGetPathParameterfvNV(GLuint path, GLenum pname, GLfloat *value)
+{
+	gleGetCurrent()->glGetPathParameterfvNV( path, pname, value );
+}
+
+void glGetPathParameterivNV(GLuint path, GLenum pname, GLint *value)
+{
+	gleGetCurrent()->glGetPathParameterivNV( path, pname, value );
+}
+
+void glGetPathSpacingNV(GLenum pathListMode, GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLfloat advanceScale, GLfloat kerningScale, GLenum transformType, GLfloat *returnedSpacing)
+{
+	gleGetCurrent()->glGetPathSpacingNV( pathListMode, numPaths, pathNameType, paths, pathBase, advanceScale, kerningScale, transformType, returnedSpacing );
+}
+
+void glGetPathTexGenfvNV(GLenum texCoordSet, GLenum pname, GLfloat *value)
+{
+	gleGetCurrent()->glGetPathTexGenfvNV( texCoordSet, pname, value );
+}
+
+void glGetPathTexGenivNV(GLenum texCoordSet, GLenum pname, GLint *value)
+{
+	gleGetCurrent()->glGetPathTexGenivNV( texCoordSet, pname, value );
+}
+
+void glInterpolatePathsNV(GLuint resultPath, GLuint pathA, GLuint pathB, GLfloat weight)
+{
+	gleGetCurrent()->glInterpolatePathsNV( resultPath, pathA, pathB, weight );
+}
+
+GLboolean glIsPathNV(GLuint path)
+{
+	return gleGetCurrent()->glIsPathNV( path );
+}
+
+GLboolean glIsPointInFillPathNV(GLuint path, GLuint mask, GLfloat x, GLfloat y)
+{
+	return gleGetCurrent()->glIsPointInFillPathNV( path, mask, x, y );
+}
+
+GLboolean glIsPointInStrokePathNV(GLuint path, GLfloat x, GLfloat y)
+{
+	return gleGetCurrent()->glIsPointInStrokePathNV( path, x, y );
+}
+
+void glPathColorGenNV(GLenum color, GLenum genMode, GLenum colorFormat, const GLfloat *coeffs)
+{
+	gleGetCurrent()->glPathColorGenNV( color, genMode, colorFormat, coeffs );
+}
+
+void glPathCommandsNV(GLuint path, GLsizei numCommands, const GLubyte *commands, GLsizei numCoords, GLenum coordType, const GLvoid *coords)
+{
+	gleGetCurrent()->glPathCommandsNV( path, numCommands, commands, numCoords, coordType, coords );
+}
+
+void glPathCoordsNV(GLuint path, GLsizei numCoords, GLenum coordType, const GLvoid *coords)
+{
+	gleGetCurrent()->glPathCoordsNV( path, numCoords, coordType, coords );
+}
+
+void glPathCoverDepthFuncNV(GLenum func)
+{
+	gleGetCurrent()->glPathCoverDepthFuncNV( func );
+}
+
+void glPathDashArrayNV(GLuint path, GLsizei dashCount, const GLfloat *dashArray)
+{
+	gleGetCurrent()->glPathDashArrayNV( path, dashCount, dashArray );
+}
+
+void glPathFogGenNV(GLenum genMode)
+{
+	gleGetCurrent()->glPathFogGenNV( genMode );
+}
+
+void glPathGlyphRangeNV(GLuint firstPathName, GLenum fontTarget, const GLvoid *fontName, GLbitfield fontStyle, GLuint firstGlyph, GLsizei numGlyphs, GLenum handleMissingGlyphs, GLuint pathParameterTemplate, GLfloat emScale)
+{
+	gleGetCurrent()->glPathGlyphRangeNV( firstPathName, fontTarget, fontName, fontStyle, firstGlyph, numGlyphs, handleMissingGlyphs, pathParameterTemplate, emScale );
+}
+
+void glPathGlyphsNV(GLuint firstPathName, GLenum fontTarget, const GLvoid *fontName, GLbitfield fontStyle, GLsizei numGlyphs, GLenum type, const GLvoid *charcodes, GLenum handleMissingGlyphs, GLuint pathParameterTemplate, GLfloat emScale)
+{
+	gleGetCurrent()->glPathGlyphsNV( firstPathName, fontTarget, fontName, fontStyle, numGlyphs, type, charcodes, handleMissingGlyphs, pathParameterTemplate, emScale );
+}
+
+void glPathParameterfNV(GLuint path, GLenum pname, GLfloat value)
+{
+	gleGetCurrent()->glPathParameterfNV( path, pname, value );
+}
+
+void glPathParameterfvNV(GLuint path, GLenum pname, const GLfloat *value)
+{
+	gleGetCurrent()->glPathParameterfvNV( path, pname, value );
+}
+
+void glPathParameteriNV(GLuint path, GLenum pname, GLint value)
+{
+	gleGetCurrent()->glPathParameteriNV( path, pname, value );
+}
+
+void glPathParameterivNV(GLuint path, GLenum pname, const GLint *value)
+{
+	gleGetCurrent()->glPathParameterivNV( path, pname, value );
+}
+
+void glPathStencilDepthOffsetNV(GLfloat factor, GLfloat units)
+{
+	gleGetCurrent()->glPathStencilDepthOffsetNV( factor, units );
+}
+
+void glPathStencilFuncNV(GLenum func, GLint ref, GLuint mask)
+{
+	gleGetCurrent()->glPathStencilFuncNV( func, ref, mask );
+}
+
+void glPathStringNV(GLuint path, GLenum format, GLsizei length, const GLvoid *pathString)
+{
+	gleGetCurrent()->glPathStringNV( path, format, length, pathString );
+}
+
+void glPathSubCommandsNV(GLuint path, GLsizei commandStart, GLsizei commandsToDelete, GLsizei numCommands, const GLubyte *commands, GLsizei numCoords, GLenum coordType, const GLvoid *coords)
+{
+	gleGetCurrent()->glPathSubCommandsNV( path, commandStart, commandsToDelete, numCommands, commands, numCoords, coordType, coords );
+}
+
+void glPathSubCoordsNV(GLuint path, GLsizei coordStart, GLsizei numCoords, GLenum coordType, const GLvoid *coords)
+{
+	gleGetCurrent()->glPathSubCoordsNV( path, coordStart, numCoords, coordType, coords );
+}
+
+void glPathTexGenNV(GLenum texCoordSet, GLenum genMode, GLint components, const GLfloat *coeffs)
+{
+	gleGetCurrent()->glPathTexGenNV( texCoordSet, genMode, components, coeffs );
+}
+
+GLboolean glPointAlongPathNV(GLuint path, GLsizei startSegment, GLsizei numSegments, GLfloat distance, GLfloat *x, GLfloat *y, GLfloat *tangentX, GLfloat *tangentY)
+{
+	return gleGetCurrent()->glPointAlongPathNV( path, startSegment, numSegments, distance, x, y, tangentX, tangentY );
+}
+
+void glStencilFillPathInstancedNV(GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLenum fillMode, GLuint mask, GLenum transformType, const GLfloat *transformValues)
+{
+	gleGetCurrent()->glStencilFillPathInstancedNV( numPaths, pathNameType, paths, pathBase, fillMode, mask, transformType, transformValues );
+}
+
+void glStencilFillPathNV(GLuint path, GLenum fillMode, GLuint mask)
+{
+	gleGetCurrent()->glStencilFillPathNV( path, fillMode, mask );
+}
+
+void glStencilStrokePathInstancedNV(GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLint reference, GLuint mask, GLenum transformType, const GLfloat *transformValues)
+{
+	gleGetCurrent()->glStencilStrokePathInstancedNV( numPaths, pathNameType, paths, pathBase, reference, mask, transformType, transformValues );
+}
+
+void glStencilStrokePathNV(GLuint path, GLint reference, GLuint mask)
+{
+	gleGetCurrent()->glStencilStrokePathNV( path, reference, mask );
+}
+
+void glTransformPathNV(GLuint resultPath, GLuint srcPath, GLenum transformType, const GLfloat *transformValues)
+{
+	gleGetCurrent()->glTransformPathNV( resultPath, srcPath, transformType, transformValues );
+}
+
+void glWeightPathsNV(GLuint resultPath, GLsizei numPaths, const GLuint *paths, const GLfloat *weights)
+{
+	gleGetCurrent()->glWeightPathsNV( resultPath, numPaths, paths, weights );
 }
 
 

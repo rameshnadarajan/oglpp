@@ -1,4 +1,4 @@
-// This file was generated at Thu, 06 Oct 2011 08:25:06 +0000 with gle, please do not modify.
+// This file was generated at Tue, 13 Dec 2011 13:52:46 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -26,8 +26,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 531;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 2172;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 532;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 2221;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS )
@@ -2789,6 +2789,59 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_NV_parameter_buffer_object2 ******
 	isGL_NV_parameter_buffer_object2 = false;
+
+	// ****** GL_NV_path_rendering ******
+	isGL_NV_path_rendering = false;
+
+	glCopyPathNV = 0;
+	glCoverFillPathInstancedNV = 0;
+	glCoverFillPathNV = 0;
+	glCoverStrokePathInstancedNV = 0;
+	glCoverStrokePathNV = 0;
+	glDeletePathsNV = 0;
+	glGenPathsNV = 0;
+	glGetPathColorGenfvNV = 0;
+	glGetPathColorGenivNV = 0;
+	glGetPathCommandsNV = 0;
+	glGetPathCoordsNV = 0;
+	glGetPathDashArrayNV = 0;
+	glGetPathLengthNV = 0;
+	glGetPathMetricRangeNV = 0;
+	glGetPathMetricsNV = 0;
+	glGetPathParameterfvNV = 0;
+	glGetPathParameterivNV = 0;
+	glGetPathSpacingNV = 0;
+	glGetPathTexGenfvNV = 0;
+	glGetPathTexGenivNV = 0;
+	glInterpolatePathsNV = 0;
+	glIsPathNV = 0;
+	glIsPointInFillPathNV = 0;
+	glIsPointInStrokePathNV = 0;
+	glPathColorGenNV = 0;
+	glPathCommandsNV = 0;
+	glPathCoordsNV = 0;
+	glPathCoverDepthFuncNV = 0;
+	glPathDashArrayNV = 0;
+	glPathFogGenNV = 0;
+	glPathGlyphRangeNV = 0;
+	glPathGlyphsNV = 0;
+	glPathParameterfNV = 0;
+	glPathParameterfvNV = 0;
+	glPathParameteriNV = 0;
+	glPathParameterivNV = 0;
+	glPathStencilDepthOffsetNV = 0;
+	glPathStencilFuncNV = 0;
+	glPathStringNV = 0;
+	glPathSubCommandsNV = 0;
+	glPathSubCoordsNV = 0;
+	glPathTexGenNV = 0;
+	glPointAlongPathNV = 0;
+	glStencilFillPathInstancedNV = 0;
+	glStencilFillPathNV = 0;
+	glStencilStrokePathInstancedNV = 0;
+	glStencilStrokePathNV = 0;
+	glTransformPathNV = 0;
+	glWeightPathsNV = 0;
 
 	// ****** GL_NV_pixel_data_range ******
 	isGL_NV_pixel_data_range = false;
@@ -20812,6 +20865,188 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	else
 	{
 		logEndl( "GL_NV_parameter_buffer_object2                    : not detected." );
+	}
+
+
+	isGL_NV_path_rendering = isExtensionSupported("GL_NV_path_rendering");
+
+	localSupportedProcCount		= 49;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_NV_path_rendering ) // || isSEDEnable()
+	{
+		glCopyPathNV = (PFNGLCOPYPATHNVPROC) getExtensionPtr( "glCopyPathNV" );
+		if ( glCopyPathNV != 0 )	++localInitializedProcCount;
+
+		glCoverFillPathInstancedNV = (PFNGLCOVERFILLPATHINSTANCEDNVPROC) getExtensionPtr( "glCoverFillPathInstancedNV" );
+		if ( glCoverFillPathInstancedNV != 0 )	++localInitializedProcCount;
+
+		glCoverFillPathNV = (PFNGLCOVERFILLPATHNVPROC) getExtensionPtr( "glCoverFillPathNV" );
+		if ( glCoverFillPathNV != 0 )	++localInitializedProcCount;
+
+		glCoverStrokePathInstancedNV = (PFNGLCOVERSTROKEPATHINSTANCEDNVPROC) getExtensionPtr( "glCoverStrokePathInstancedNV" );
+		if ( glCoverStrokePathInstancedNV != 0 )	++localInitializedProcCount;
+
+		glCoverStrokePathNV = (PFNGLCOVERSTROKEPATHNVPROC) getExtensionPtr( "glCoverStrokePathNV" );
+		if ( glCoverStrokePathNV != 0 )	++localInitializedProcCount;
+
+		glDeletePathsNV = (PFNGLDELETEPATHSNVPROC) getExtensionPtr( "glDeletePathsNV" );
+		if ( glDeletePathsNV != 0 )	++localInitializedProcCount;
+
+		glGenPathsNV = (PFNGLGENPATHSNVPROC) getExtensionPtr( "glGenPathsNV" );
+		if ( glGenPathsNV != 0 )	++localInitializedProcCount;
+
+		glGetPathColorGenfvNV = (PFNGLGETPATHCOLORGENFVNVPROC) getExtensionPtr( "glGetPathColorGenfvNV" );
+		if ( glGetPathColorGenfvNV != 0 )	++localInitializedProcCount;
+
+		glGetPathColorGenivNV = (PFNGLGETPATHCOLORGENIVNVPROC) getExtensionPtr( "glGetPathColorGenivNV" );
+		if ( glGetPathColorGenivNV != 0 )	++localInitializedProcCount;
+
+		glGetPathCommandsNV = (PFNGLGETPATHCOMMANDSNVPROC) getExtensionPtr( "glGetPathCommandsNV" );
+		if ( glGetPathCommandsNV != 0 )	++localInitializedProcCount;
+
+		glGetPathCoordsNV = (PFNGLGETPATHCOORDSNVPROC) getExtensionPtr( "glGetPathCoordsNV" );
+		if ( glGetPathCoordsNV != 0 )	++localInitializedProcCount;
+
+		glGetPathDashArrayNV = (PFNGLGETPATHDASHARRAYNVPROC) getExtensionPtr( "glGetPathDashArrayNV" );
+		if ( glGetPathDashArrayNV != 0 )	++localInitializedProcCount;
+
+		glGetPathLengthNV = (PFNGLGETPATHLENGTHNVPROC) getExtensionPtr( "glGetPathLengthNV" );
+		if ( glGetPathLengthNV != 0 )	++localInitializedProcCount;
+
+		glGetPathMetricRangeNV = (PFNGLGETPATHMETRICRANGENVPROC) getExtensionPtr( "glGetPathMetricRangeNV" );
+		if ( glGetPathMetricRangeNV != 0 )	++localInitializedProcCount;
+
+		glGetPathMetricsNV = (PFNGLGETPATHMETRICSNVPROC) getExtensionPtr( "glGetPathMetricsNV" );
+		if ( glGetPathMetricsNV != 0 )	++localInitializedProcCount;
+
+		glGetPathParameterfvNV = (PFNGLGETPATHPARAMETERFVNVPROC) getExtensionPtr( "glGetPathParameterfvNV" );
+		if ( glGetPathParameterfvNV != 0 )	++localInitializedProcCount;
+
+		glGetPathParameterivNV = (PFNGLGETPATHPARAMETERIVNVPROC) getExtensionPtr( "glGetPathParameterivNV" );
+		if ( glGetPathParameterivNV != 0 )	++localInitializedProcCount;
+
+		glGetPathSpacingNV = (PFNGLGETPATHSPACINGNVPROC) getExtensionPtr( "glGetPathSpacingNV" );
+		if ( glGetPathSpacingNV != 0 )	++localInitializedProcCount;
+
+		glGetPathTexGenfvNV = (PFNGLGETPATHTEXGENFVNVPROC) getExtensionPtr( "glGetPathTexGenfvNV" );
+		if ( glGetPathTexGenfvNV != 0 )	++localInitializedProcCount;
+
+		glGetPathTexGenivNV = (PFNGLGETPATHTEXGENIVNVPROC) getExtensionPtr( "glGetPathTexGenivNV" );
+		if ( glGetPathTexGenivNV != 0 )	++localInitializedProcCount;
+
+		glInterpolatePathsNV = (PFNGLINTERPOLATEPATHSNVPROC) getExtensionPtr( "glInterpolatePathsNV" );
+		if ( glInterpolatePathsNV != 0 )	++localInitializedProcCount;
+
+		glIsPathNV = (PFNGLISPATHNVPROC) getExtensionPtr( "glIsPathNV" );
+		if ( glIsPathNV != 0 )	++localInitializedProcCount;
+
+		glIsPointInFillPathNV = (PFNGLISPOINTINFILLPATHNVPROC) getExtensionPtr( "glIsPointInFillPathNV" );
+		if ( glIsPointInFillPathNV != 0 )	++localInitializedProcCount;
+
+		glIsPointInStrokePathNV = (PFNGLISPOINTINSTROKEPATHNVPROC) getExtensionPtr( "glIsPointInStrokePathNV" );
+		if ( glIsPointInStrokePathNV != 0 )	++localInitializedProcCount;
+
+		glPathColorGenNV = (PFNGLPATHCOLORGENNVPROC) getExtensionPtr( "glPathColorGenNV" );
+		if ( glPathColorGenNV != 0 )	++localInitializedProcCount;
+
+		glPathCommandsNV = (PFNGLPATHCOMMANDSNVPROC) getExtensionPtr( "glPathCommandsNV" );
+		if ( glPathCommandsNV != 0 )	++localInitializedProcCount;
+
+		glPathCoordsNV = (PFNGLPATHCOORDSNVPROC) getExtensionPtr( "glPathCoordsNV" );
+		if ( glPathCoordsNV != 0 )	++localInitializedProcCount;
+
+		glPathCoverDepthFuncNV = (PFNGLPATHCOVERDEPTHFUNCNVPROC) getExtensionPtr( "glPathCoverDepthFuncNV" );
+		if ( glPathCoverDepthFuncNV != 0 )	++localInitializedProcCount;
+
+		glPathDashArrayNV = (PFNGLPATHDASHARRAYNVPROC) getExtensionPtr( "glPathDashArrayNV" );
+		if ( glPathDashArrayNV != 0 )	++localInitializedProcCount;
+
+		glPathFogGenNV = (PFNGLPATHFOGGENNVPROC) getExtensionPtr( "glPathFogGenNV" );
+		if ( glPathFogGenNV != 0 )	++localInitializedProcCount;
+
+		glPathGlyphRangeNV = (PFNGLPATHGLYPHRANGENVPROC) getExtensionPtr( "glPathGlyphRangeNV" );
+		if ( glPathGlyphRangeNV != 0 )	++localInitializedProcCount;
+
+		glPathGlyphsNV = (PFNGLPATHGLYPHSNVPROC) getExtensionPtr( "glPathGlyphsNV" );
+		if ( glPathGlyphsNV != 0 )	++localInitializedProcCount;
+
+		glPathParameterfNV = (PFNGLPATHPARAMETERFNVPROC) getExtensionPtr( "glPathParameterfNV" );
+		if ( glPathParameterfNV != 0 )	++localInitializedProcCount;
+
+		glPathParameterfvNV = (PFNGLPATHPARAMETERFVNVPROC) getExtensionPtr( "glPathParameterfvNV" );
+		if ( glPathParameterfvNV != 0 )	++localInitializedProcCount;
+
+		glPathParameteriNV = (PFNGLPATHPARAMETERINVPROC) getExtensionPtr( "glPathParameteriNV" );
+		if ( glPathParameteriNV != 0 )	++localInitializedProcCount;
+
+		glPathParameterivNV = (PFNGLPATHPARAMETERIVNVPROC) getExtensionPtr( "glPathParameterivNV" );
+		if ( glPathParameterivNV != 0 )	++localInitializedProcCount;
+
+		glPathStencilDepthOffsetNV = (PFNGLPATHSTENCILDEPTHOFFSETNVPROC) getExtensionPtr( "glPathStencilDepthOffsetNV" );
+		if ( glPathStencilDepthOffsetNV != 0 )	++localInitializedProcCount;
+
+		glPathStencilFuncNV = (PFNGLPATHSTENCILFUNCNVPROC) getExtensionPtr( "glPathStencilFuncNV" );
+		if ( glPathStencilFuncNV != 0 )	++localInitializedProcCount;
+
+		glPathStringNV = (PFNGLPATHSTRINGNVPROC) getExtensionPtr( "glPathStringNV" );
+		if ( glPathStringNV != 0 )	++localInitializedProcCount;
+
+		glPathSubCommandsNV = (PFNGLPATHSUBCOMMANDSNVPROC) getExtensionPtr( "glPathSubCommandsNV" );
+		if ( glPathSubCommandsNV != 0 )	++localInitializedProcCount;
+
+		glPathSubCoordsNV = (PFNGLPATHSUBCOORDSNVPROC) getExtensionPtr( "glPathSubCoordsNV" );
+		if ( glPathSubCoordsNV != 0 )	++localInitializedProcCount;
+
+		glPathTexGenNV = (PFNGLPATHTEXGENNVPROC) getExtensionPtr( "glPathTexGenNV" );
+		if ( glPathTexGenNV != 0 )	++localInitializedProcCount;
+
+		glPointAlongPathNV = (PFNGLPOINTALONGPATHNVPROC) getExtensionPtr( "glPointAlongPathNV" );
+		if ( glPointAlongPathNV != 0 )	++localInitializedProcCount;
+
+		glStencilFillPathInstancedNV = (PFNGLSTENCILFILLPATHINSTANCEDNVPROC) getExtensionPtr( "glStencilFillPathInstancedNV" );
+		if ( glStencilFillPathInstancedNV != 0 )	++localInitializedProcCount;
+
+		glStencilFillPathNV = (PFNGLSTENCILFILLPATHNVPROC) getExtensionPtr( "glStencilFillPathNV" );
+		if ( glStencilFillPathNV != 0 )	++localInitializedProcCount;
+
+		glStencilStrokePathInstancedNV = (PFNGLSTENCILSTROKEPATHINSTANCEDNVPROC) getExtensionPtr( "glStencilStrokePathInstancedNV" );
+		if ( glStencilStrokePathInstancedNV != 0 )	++localInitializedProcCount;
+
+		glStencilStrokePathNV = (PFNGLSTENCILSTROKEPATHNVPROC) getExtensionPtr( "glStencilStrokePathNV" );
+		if ( glStencilStrokePathNV != 0 )	++localInitializedProcCount;
+
+		glTransformPathNV = (PFNGLTRANSFORMPATHNVPROC) getExtensionPtr( "glTransformPathNV" );
+		if ( glTransformPathNV != 0 )	++localInitializedProcCount;
+
+		glWeightPathsNV = (PFNGLWEIGHTPATHSNVPROC) getExtensionPtr( "glWeightPathsNV" );
+		if ( glWeightPathsNV != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_NV_path_rendering )
+
+	if ( isGL_NV_path_rendering )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_path_rendering                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_path_rendering                              : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_path_rendering") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_path_rendering                              : not detected." );
 	}
 
 

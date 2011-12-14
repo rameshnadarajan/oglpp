@@ -1,4 +1,4 @@
-// This file was generated at Thu, 06 Oct 2011 08:25:06 +0000 with gle, please do not modify.
+// This file was generated at Tue, 13 Dec 2011 13:52:46 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -173,7 +173,7 @@
  */
 
 /** 
- * @defgroup g_GL_NV			GL_NV (63 extensions found)
+ * @defgroup g_GL_NV			GL_NV (64 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -14535,6 +14535,272 @@ GLE_API void glProgramBufferParametersfvNV(GLenum target, GLuint buffer, GLuint 
  */
 GLE_API bool isGL_NV_parameter_buffer_object2();
 
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_NV_path_rendering GL_NV_path_rendering
+ * Extension number in OpenGL registry : 410
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/path_rendering.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_NV_path_rendering is supported.
+ * @return Returns \c true if \b GL_NV_path_rendering is supported, \c false otherwise.
+ */
+GLE_API bool isGL_NV_path_rendering();
+
+
+
+/**
+ * @brief void glCopyPathNV(GLuint resultPath, GLuint srcPath)
+ */
+GLE_API void glCopyPathNV(GLuint resultPath, GLuint srcPath);
+
+/**
+ * @brief void glCoverFillPathInstancedNV(GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLenum coverMode, GLenum transformType, const GLfloat *transformValues)
+ */
+GLE_API void glCoverFillPathInstancedNV(GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLenum coverMode, GLenum transformType, const GLfloat *transformValues);
+
+/**
+ * @brief void glCoverFillPathNV(GLuint path, GLenum coverMode)
+ */
+GLE_API void glCoverFillPathNV(GLuint path, GLenum coverMode);
+
+/**
+ * @brief void glCoverStrokePathInstancedNV(GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLenum coverMode, GLenum transformType, const GLfloat *transformValues)
+ */
+GLE_API void glCoverStrokePathInstancedNV(GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLenum coverMode, GLenum transformType, const GLfloat *transformValues);
+
+/**
+ * @brief void glCoverStrokePathNV(GLuint path, GLenum coverMode)
+ */
+GLE_API void glCoverStrokePathNV(GLuint path, GLenum coverMode);
+
+/**
+ * @brief void glDeletePathsNV(GLuint path, GLsizei range)
+ */
+GLE_API void glDeletePathsNV(GLuint path, GLsizei range);
+
+/**
+ * @brief GLuint glGenPathsNV(GLsizei range)
+ */
+GLE_API GLuint glGenPathsNV(GLsizei range);
+
+/**
+ * @brief void glGetPathColorGenfvNV(GLenum color, GLenum pname, GLfloat *value)
+ */
+GLE_API void glGetPathColorGenfvNV(GLenum color, GLenum pname, GLfloat *value);
+
+/**
+ * @brief void glGetPathColorGenivNV(GLenum color, GLenum pname, GLint *value)
+ */
+GLE_API void glGetPathColorGenivNV(GLenum color, GLenum pname, GLint *value);
+
+/**
+ * @brief void glGetPathCommandsNV(GLuint path, GLubyte *commands)
+ */
+GLE_API void glGetPathCommandsNV(GLuint path, GLubyte *commands);
+
+/**
+ * @brief void glGetPathCoordsNV(GLuint path, GLfloat *coords)
+ */
+GLE_API void glGetPathCoordsNV(GLuint path, GLfloat *coords);
+
+/**
+ * @brief void glGetPathDashArrayNV(GLuint path, GLfloat *dashArray)
+ */
+GLE_API void glGetPathDashArrayNV(GLuint path, GLfloat *dashArray);
+
+/**
+ * @brief GLfloat glGetPathLengthNV(GLuint path, GLsizei startSegment, GLsizei numSegments)
+ */
+GLE_API GLfloat glGetPathLengthNV(GLuint path, GLsizei startSegment, GLsizei numSegments);
+
+/**
+ * @brief void glGetPathMetricRangeNV(GLbitfield metricQueryMask, GLuint firstPathName, GLsizei numPaths, GLsizei stride, GLfloat *metrics)
+ */
+GLE_API void glGetPathMetricRangeNV(GLbitfield metricQueryMask, GLuint firstPathName, GLsizei numPaths, GLsizei stride, GLfloat *metrics);
+
+/**
+ * @brief void glGetPathMetricsNV(GLbitfield metricQueryMask, GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLsizei stride, GLfloat *metrics)
+ */
+GLE_API void glGetPathMetricsNV(GLbitfield metricQueryMask, GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLsizei stride, GLfloat *metrics);
+
+/**
+ * @brief void glGetPathParameterfvNV(GLuint path, GLenum pname, GLfloat *value)
+ */
+GLE_API void glGetPathParameterfvNV(GLuint path, GLenum pname, GLfloat *value);
+
+/**
+ * @brief void glGetPathParameterivNV(GLuint path, GLenum pname, GLint *value)
+ */
+GLE_API void glGetPathParameterivNV(GLuint path, GLenum pname, GLint *value);
+
+/**
+ * @brief void glGetPathSpacingNV(GLenum pathListMode, GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLfloat advanceScale, GLfloat kerningScale, GLenum transformType, GLfloat *returnedSpacing)
+ */
+GLE_API void glGetPathSpacingNV(GLenum pathListMode, GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLfloat advanceScale, GLfloat kerningScale, GLenum transformType, GLfloat *returnedSpacing);
+
+/**
+ * @brief void glGetPathTexGenfvNV(GLenum texCoordSet, GLenum pname, GLfloat *value)
+ */
+GLE_API void glGetPathTexGenfvNV(GLenum texCoordSet, GLenum pname, GLfloat *value);
+
+/**
+ * @brief void glGetPathTexGenivNV(GLenum texCoordSet, GLenum pname, GLint *value)
+ */
+GLE_API void glGetPathTexGenivNV(GLenum texCoordSet, GLenum pname, GLint *value);
+
+/**
+ * @brief void glInterpolatePathsNV(GLuint resultPath, GLuint pathA, GLuint pathB, GLfloat weight)
+ */
+GLE_API void glInterpolatePathsNV(GLuint resultPath, GLuint pathA, GLuint pathB, GLfloat weight);
+
+/**
+ * @brief GLboolean glIsPathNV(GLuint path)
+ */
+GLE_API GLboolean glIsPathNV(GLuint path);
+
+/**
+ * @brief GLboolean glIsPointInFillPathNV(GLuint path, GLuint mask, GLfloat x, GLfloat y)
+ */
+GLE_API GLboolean glIsPointInFillPathNV(GLuint path, GLuint mask, GLfloat x, GLfloat y);
+
+/**
+ * @brief GLboolean glIsPointInStrokePathNV(GLuint path, GLfloat x, GLfloat y)
+ */
+GLE_API GLboolean glIsPointInStrokePathNV(GLuint path, GLfloat x, GLfloat y);
+
+/**
+ * @brief void glPathColorGenNV(GLenum color, GLenum genMode, GLenum colorFormat, const GLfloat *coeffs)
+ */
+GLE_API void glPathColorGenNV(GLenum color, GLenum genMode, GLenum colorFormat, const GLfloat *coeffs);
+
+/**
+ * @brief void glPathCommandsNV(GLuint path, GLsizei numCommands, const GLubyte *commands, GLsizei numCoords, GLenum coordType, const GLvoid *coords)
+ */
+GLE_API void glPathCommandsNV(GLuint path, GLsizei numCommands, const GLubyte *commands, GLsizei numCoords, GLenum coordType, const GLvoid *coords);
+
+/**
+ * @brief void glPathCoordsNV(GLuint path, GLsizei numCoords, GLenum coordType, const GLvoid *coords)
+ */
+GLE_API void glPathCoordsNV(GLuint path, GLsizei numCoords, GLenum coordType, const GLvoid *coords);
+
+/**
+ * @brief void glPathCoverDepthFuncNV(GLenum func)
+ */
+GLE_API void glPathCoverDepthFuncNV(GLenum func);
+
+/**
+ * @brief void glPathDashArrayNV(GLuint path, GLsizei dashCount, const GLfloat *dashArray)
+ */
+GLE_API void glPathDashArrayNV(GLuint path, GLsizei dashCount, const GLfloat *dashArray);
+
+/**
+ * @brief void glPathFogGenNV(GLenum genMode)
+ */
+GLE_API void glPathFogGenNV(GLenum genMode);
+
+/**
+ * @brief void glPathGlyphRangeNV(GLuint firstPathName, GLenum fontTarget, const GLvoid *fontName, GLbitfield fontStyle, GLuint firstGlyph, GLsizei numGlyphs, GLenum handleMissingGlyphs, GLuint pathParameterTemplate, GLfloat emScale)
+ */
+GLE_API void glPathGlyphRangeNV(GLuint firstPathName, GLenum fontTarget, const GLvoid *fontName, GLbitfield fontStyle, GLuint firstGlyph, GLsizei numGlyphs, GLenum handleMissingGlyphs, GLuint pathParameterTemplate, GLfloat emScale);
+
+/**
+ * @brief void glPathGlyphsNV(GLuint firstPathName, GLenum fontTarget, const GLvoid *fontName, GLbitfield fontStyle, GLsizei numGlyphs, GLenum type, const GLvoid *charcodes, GLenum handleMissingGlyphs, GLuint pathParameterTemplate, GLfloat emScale)
+ */
+GLE_API void glPathGlyphsNV(GLuint firstPathName, GLenum fontTarget, const GLvoid *fontName, GLbitfield fontStyle, GLsizei numGlyphs, GLenum type, const GLvoid *charcodes, GLenum handleMissingGlyphs, GLuint pathParameterTemplate, GLfloat emScale);
+
+/**
+ * @brief void glPathParameterfNV(GLuint path, GLenum pname, GLfloat value)
+ */
+GLE_API void glPathParameterfNV(GLuint path, GLenum pname, GLfloat value);
+
+/**
+ * @brief void glPathParameterfvNV(GLuint path, GLenum pname, const GLfloat *value)
+ */
+GLE_API void glPathParameterfvNV(GLuint path, GLenum pname, const GLfloat *value);
+
+/**
+ * @brief void glPathParameteriNV(GLuint path, GLenum pname, GLint value)
+ */
+GLE_API void glPathParameteriNV(GLuint path, GLenum pname, GLint value);
+
+/**
+ * @brief void glPathParameterivNV(GLuint path, GLenum pname, const GLint *value)
+ */
+GLE_API void glPathParameterivNV(GLuint path, GLenum pname, const GLint *value);
+
+/**
+ * @brief void glPathStencilDepthOffsetNV(GLfloat factor, GLfloat units)
+ */
+GLE_API void glPathStencilDepthOffsetNV(GLfloat factor, GLfloat units);
+
+/**
+ * @brief void glPathStencilFuncNV(GLenum func, GLint ref, GLuint mask)
+ */
+GLE_API void glPathStencilFuncNV(GLenum func, GLint ref, GLuint mask);
+
+/**
+ * @brief void glPathStringNV(GLuint path, GLenum format, GLsizei length, const GLvoid *pathString)
+ */
+GLE_API void glPathStringNV(GLuint path, GLenum format, GLsizei length, const GLvoid *pathString);
+
+/**
+ * @brief void glPathSubCommandsNV(GLuint path, GLsizei commandStart, GLsizei commandsToDelete, GLsizei numCommands, const GLubyte *commands, GLsizei numCoords, GLenum coordType, const GLvoid *coords)
+ */
+GLE_API void glPathSubCommandsNV(GLuint path, GLsizei commandStart, GLsizei commandsToDelete, GLsizei numCommands, const GLubyte *commands, GLsizei numCoords, GLenum coordType, const GLvoid *coords);
+
+/**
+ * @brief void glPathSubCoordsNV(GLuint path, GLsizei coordStart, GLsizei numCoords, GLenum coordType, const GLvoid *coords)
+ */
+GLE_API void glPathSubCoordsNV(GLuint path, GLsizei coordStart, GLsizei numCoords, GLenum coordType, const GLvoid *coords);
+
+/**
+ * @brief void glPathTexGenNV(GLenum texCoordSet, GLenum genMode, GLint components, const GLfloat *coeffs)
+ */
+GLE_API void glPathTexGenNV(GLenum texCoordSet, GLenum genMode, GLint components, const GLfloat *coeffs);
+
+/**
+ * @brief GLboolean glPointAlongPathNV(GLuint path, GLsizei startSegment, GLsizei numSegments, GLfloat distance, GLfloat *x, GLfloat *y, GLfloat *tangentX, GLfloat *tangentY)
+ */
+GLE_API GLboolean glPointAlongPathNV(GLuint path, GLsizei startSegment, GLsizei numSegments, GLfloat distance, GLfloat *x, GLfloat *y, GLfloat *tangentX, GLfloat *tangentY);
+
+/**
+ * @brief void glStencilFillPathInstancedNV(GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLenum fillMode, GLuint mask, GLenum transformType, const GLfloat *transformValues)
+ */
+GLE_API void glStencilFillPathInstancedNV(GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLenum fillMode, GLuint mask, GLenum transformType, const GLfloat *transformValues);
+
+/**
+ * @brief void glStencilFillPathNV(GLuint path, GLenum fillMode, GLuint mask)
+ */
+GLE_API void glStencilFillPathNV(GLuint path, GLenum fillMode, GLuint mask);
+
+/**
+ * @brief void glStencilStrokePathInstancedNV(GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLint reference, GLuint mask, GLenum transformType, const GLfloat *transformValues)
+ */
+GLE_API void glStencilStrokePathInstancedNV(GLsizei numPaths, GLenum pathNameType, const GLvoid *paths, GLuint pathBase, GLint reference, GLuint mask, GLenum transformType, const GLfloat *transformValues);
+
+/**
+ * @brief void glStencilStrokePathNV(GLuint path, GLint reference, GLuint mask)
+ */
+GLE_API void glStencilStrokePathNV(GLuint path, GLint reference, GLuint mask);
+
+/**
+ * @brief void glTransformPathNV(GLuint resultPath, GLuint srcPath, GLenum transformType, const GLfloat *transformValues)
+ */
+GLE_API void glTransformPathNV(GLuint resultPath, GLuint srcPath, GLenum transformType, const GLfloat *transformValues);
+
+/**
+ * @brief void glWeightPathsNV(GLuint resultPath, GLsizei numPaths, const GLuint *paths, const GLfloat *weights)
+ */
+GLE_API void glWeightPathsNV(GLuint resultPath, GLsizei numPaths, const GLuint *paths, const GLfloat *weights);
 
 //@}
 
