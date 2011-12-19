@@ -1,4 +1,4 @@
-// This file was generated at Tue, 13 Dec 2011 13:52:46 +0000 with gle, please do not modify.
+// This file was generated at Mon, 19 Dec 2011 15:15:53 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-10-02 22:22:16 -0700 (Sun, 02 Oct 2011) $ */
-// #define GL_GLEXT_VERSION 73
+// /* glext.h last updated $Date: 2011-12-19 02:48:12 -0800 (Mon, 19 Dec 2011) $ */
+// #define GL_GLEXT_VERSION 74
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2011/04/13 */
@@ -108,7 +108,7 @@
  */
 
 /** 
- * @defgroup g_GL_AMD			GL_AMD (14 extensions found)
+ * @defgroup g_GL_AMD			GL_AMD (15 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -2254,6 +2254,26 @@ GLE_API void glGetPerfMonitorGroupsAMD(GLint *numGroups, GLsizei groupsSize, GLu
  * @brief void glSelectPerfMonitorCountersAMD(GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList)
  */
 GLE_API void glSelectPerfMonitorCountersAMD(GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *counterList);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_AMD_pinned_memory GL_AMD_pinned_memory
+ * Extension number in OpenGL registry : 411
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/pinned_memory.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_AMD_pinned_memory is supported.
+ * @return Returns \c true if \b GL_AMD_pinned_memory is supported, \c false otherwise.
+ */
+GLE_API bool isGL_AMD_pinned_memory();
+
 
 //@}
 

@@ -1,4 +1,4 @@
-// This file was generated at Tue, 13 Dec 2011 13:52:46 +0000 with gle, please do not modify.
+// This file was generated at Mon, 19 Dec 2011 15:15:53 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-10-02 22:22:16 -0700 (Sun, 02 Oct 2011) $ */
-// #define GL_GLEXT_VERSION 73
+// /* glext.h last updated $Date: 2011-12-19 02:48:12 -0800 (Mon, 19 Dec 2011) $ */
+// #define GL_GLEXT_VERSION 74
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2011/04/13 */
@@ -26,7 +26,7 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 532;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 533;
 const int	OpenGLExtensionsGen::m_supportedProcCount		= 2221;
 
 
@@ -501,6 +501,9 @@ void OpenGLExtensionsGen::clear()
 	glGetPerfMonitorGroupStringAMD = 0;
 	glGetPerfMonitorGroupsAMD = 0;
 	glSelectPerfMonitorCountersAMD = 0;
+
+	// ****** GL_AMD_pinned_memory ******
+	isGL_AMD_pinned_memory = false;
 
 	// ****** GL_AMD_sample_positions ******
 	isGL_AMD_sample_positions = false;
@@ -7388,6 +7391,37 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	else
 	{
 		logEndl( "GL_AMD_performance_monitor                        : not detected." );
+	}
+
+
+	isGL_AMD_pinned_memory = isExtensionSupported("GL_AMD_pinned_memory");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_AMD_pinned_memory )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_pinned_memory                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_pinned_memory                              : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_pinned_memory") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_pinned_memory                              : not detected." );
 	}
 
 
