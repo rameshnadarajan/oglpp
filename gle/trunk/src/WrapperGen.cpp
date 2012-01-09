@@ -1,4 +1,4 @@
-// This file was generated at Mon, 19 Dec 2011 15:15:53 +0000 with gle, please do not modify.
+// This file was generated at Mon, 09 Jan 2012 06:41:30 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,12 +6,12 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-12-19 02:48:12 -0800 (Mon, 19 Dec 2011) $ */
+// /* glext.h last updated $Date: 2011-12-19 02:48:53 -0800 (Mon, 19 Dec 2011) $ */
 // #define GL_GLEXT_VERSION 74
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
-// /* wglext.h last updated 2011/04/13 */
-// #define WGL_WGLEXT_VERSION 23
+// /* wglext.h last updated 2012/01/04 */
+// #define WGL_WGLEXT_VERSION 24
 
 #include "gle/WrapperGen.hpp"
 
@@ -17028,6 +17028,18 @@ BOOL wglDXUnlockObjectsNV(HANDLE hDevice, GLint count, HANDLE *hObjects)
 BOOL wglDXUnregisterObjectNV(HANDLE hDevice, HANDLE hObject)
 {
 	return gleGetCurrent()->wglDXUnregisterObjectNV( hDevice, hObject );
+}
+#endif //WIN32
+
+
+
+#ifdef WIN32
+// ********* WGL_NV_DX_interop2 *********
+bool isWGL_NV_DX_interop2()
+{
+	const bool isSupported = gleGetCurrent()->isWGL_NV_DX_interop2;
+
+	return isSupported;
 }
 #endif //WIN32
 

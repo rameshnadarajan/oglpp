@@ -1,4 +1,4 @@
-// This file was generated at Mon, 19 Dec 2011 15:15:53 +0000 with gle, please do not modify.
+// This file was generated at Mon, 09 Jan 2012 06:41:30 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,12 +6,12 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-12-19 02:48:12 -0800 (Mon, 19 Dec 2011) $ */
+// /* glext.h last updated $Date: 2011-12-19 02:48:53 -0800 (Mon, 19 Dec 2011) $ */
 // #define GL_GLEXT_VERSION 74
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
-// /* wglext.h last updated 2011/04/13 */
-// #define WGL_WGLEXT_VERSION 23
+// /* wglext.h last updated 2012/01/04 */
+// #define WGL_WGLEXT_VERSION 24
 
 #ifndef _GLE_WRAPPERGEN_HPP
 #define _GLE_WRAPPERGEN_HPP
@@ -273,7 +273,7 @@
  */
 
 /** 
- * @defgroup g_WGL_NV			WGL_NV (13 extensions found)
+ * @defgroup g_WGL_NV			WGL_NV (14 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -21971,6 +21971,27 @@ GLE_API BOOL wglDXUnlockObjectsNV(HANDLE hDevice, GLint count, HANDLE *hObjects)
  * @brief BOOL wglDXUnregisterObjectNV(HANDLE hDevice, HANDLE hObject)
  */
 GLE_API BOOL wglDXUnregisterObjectNV(HANDLE hDevice, HANDLE hObject);
+
+//@}
+#endif //WIN32
+
+
+
+#ifdef WIN32
+/**
+ * @defgroup WGL_NV_DX_interop2 WGL_NV_DX_interop2
+ * Extension number in OpenGL registry : 412
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/DX_interop2.txt
+ * @ingroup g_WGL_NV g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b WGL_NV_DX_interop2 is supported.
+ * @return Returns \c true if \b WGL_NV_DX_interop2 is supported, \c false otherwise.
+ */
+GLE_API bool isWGL_NV_DX_interop2();
+
 
 //@}
 #endif //WIN32
