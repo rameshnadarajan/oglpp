@@ -1,4 +1,4 @@
-// This file was generated at Mon, 09 Jan 2012 06:41:30 +0000 with gle, please do not modify.
+// This file was generated at Mon, 30 Jan 2012 07:46:07 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-12-19 02:48:53 -0800 (Mon, 19 Dec 2011) $ */
-// #define GL_GLEXT_VERSION 74
+// /* glext.h last updated $Date: 2012-01-26 02:44:56 -0800 (Thu, 26 Jan 2012) $ */
+// #define GL_GLEXT_VERSION 75
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2012/01/04 */
@@ -1465,6 +1465,23 @@ bool isGL_AMD_shader_stencil_export()
 	const bool isSupported = gleGetCurrent()->isGL_AMD_shader_stencil_export;
 
 	return isSupported;
+}
+
+
+
+
+// ********* GL_AMD_stencil_operation_extended *********
+bool isGL_AMD_stencil_operation_extended()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_stencil_operation_extended;
+
+	return isSupported;
+}
+
+
+void glStencilOpValueAMD(GLenum face, GLuint value)
+{
+	gleGetCurrent()->glStencilOpValueAMD( face, value );
 }
 
 

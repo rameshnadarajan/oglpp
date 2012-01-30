@@ -1,4 +1,4 @@
-// This file was generated at Mon, 09 Jan 2012 06:41:30 +0000 with gle, please do not modify.
+// This file was generated at Mon, 30 Jan 2012 07:46:07 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-12-19 02:48:53 -0800 (Mon, 19 Dec 2011) $ */
-// #define GL_GLEXT_VERSION 74
+// /* glext.h last updated $Date: 2012-01-26 02:44:56 -0800 (Thu, 26 Jan 2012) $ */
+// #define GL_GLEXT_VERSION 75
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2012/01/04 */
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Mon, 09 Jan 2012 06:41:30 +0000
+ * - Stamp = Mon, 30 Jan 2012 07:46:07 +0000
  * - Number of tokens							= 0
- * - Number of functions						= 2221
- * - Number of extensions found(in headers)		= 534
- * - Number of extensions in OpenGL registry	= 498
+ * - Number of functions						= 2222
+ * - Number of extensions found(in headers)		= 535
+ * - Number of extensions in OpenGL registry	= 499
  */
 
 
@@ -1702,6 +1702,22 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_AMD_shader_stencil_export is supported, false otherwise.
 	 */
 	bool isGL_AMD_shader_stencil_export;
+
+
+
+
+	// ****** GL_AMD_stencil_operation_extended ******
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_stencil_operation_extended is supported, false otherwise.
+	 */
+	bool isGL_AMD_stencil_operation_extended;
+
+
+	/**
+	 * @brief void glStencilOpValueAMD(GLenum face, GLuint value)
+	 */
+	PFNGLSTENCILOPVALUEAMDPROC glStencilOpValueAMD;
 
 
 

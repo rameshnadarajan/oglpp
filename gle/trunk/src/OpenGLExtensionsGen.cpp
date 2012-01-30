@@ -1,4 +1,4 @@
-// This file was generated at Mon, 09 Jan 2012 06:41:30 +0000 with gle, please do not modify.
+// This file was generated at Mon, 30 Jan 2012 07:46:07 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2011-12-19 02:48:53 -0800 (Mon, 19 Dec 2011) $ */
-// #define GL_GLEXT_VERSION 74
+// /* glext.h last updated $Date: 2012-01-26 02:44:56 -0800 (Thu, 26 Jan 2012) $ */
+// #define GL_GLEXT_VERSION 75
 // /* glxext.h last updated 2010/08/06 */
 // #define GLX_GLXEXT_VERSION 32
 // /* wglext.h last updated 2012/01/04 */
@@ -26,8 +26,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 534;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 2221;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 535;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 2222;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS )
@@ -515,6 +515,11 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_AMD_shader_stencil_export ******
 	isGL_AMD_shader_stencil_export = false;
+
+	// ****** GL_AMD_stencil_operation_extended ******
+	isGL_AMD_stencil_operation_extended = false;
+
+	glStencilOpValueAMD = 0;
 
 	// ****** GL_AMD_texture_texture4 ******
 	isGL_AMD_texture_texture4 = false;
@@ -7527,6 +7532,44 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	else
 	{
 		logEndl( "GL_AMD_shader_stencil_export                      : not detected." );
+	}
+
+
+	isGL_AMD_stencil_operation_extended = isExtensionSupported("GL_AMD_stencil_operation_extended");
+
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_AMD_stencil_operation_extended ) // || isSEDEnable()
+	{
+		glStencilOpValueAMD = (PFNGLSTENCILOPVALUEAMDPROC) getExtensionPtr( "glStencilOpValueAMD" );
+		if ( glStencilOpValueAMD != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_AMD_stencil_operation_extended )
+
+	if ( isGL_AMD_stencil_operation_extended )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_stencil_operation_extended                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_stencil_operation_extended                 : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_stencil_operation_extended") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_stencil_operation_extended                 : not detected." );
 	}
 
 
