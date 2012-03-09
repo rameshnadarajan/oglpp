@@ -1,4 +1,4 @@
-// This file was generated at Mon, 30 Jan 2012 07:46:07 +0000 with gle, please do not modify.
+// This file was generated at Fri, 09 Mar 2012 08:29:19 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,10 +6,10 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-01-26 02:44:56 -0800 (Thu, 26 Jan 2012) $ */
-// #define GL_GLEXT_VERSION 75
-// /* glxext.h last updated 2010/08/06 */
-// #define GLX_GLXEXT_VERSION 32
+// /* glext.h last updated $Date: 2012-03-05 02:52:51 -0800 (Mon, 05 Mar 2012) $ */
+// #define GL_GLEXT_VERSION 76
+// /* glxext.h last updated 2012/02/29 */
+// #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
 // #define WGL_WGLEXT_VERSION 24
 
@@ -53,7 +53,7 @@
  */
 
 /** 
- * @defgroup g_GLX_EXT			GLX_EXT (8 extensions found)
+ * @defgroup g_GLX_EXT			GLX_EXT (9 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -263,7 +263,7 @@
  */
 
 /** 
- * @defgroup g_WGL_EXT			WGL_EXT (11 extensions found)
+ * @defgroup g_WGL_EXT			WGL_EXT (12 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -634,9 +634,30 @@ GLE_API bool isGLX_EXT_swap_control();
 
 
 /**
- * @brief int glXSwapIntervalEXT(Display *dpy, GLXDrawable drawable, int interval)
+ * @brief void glXSwapIntervalEXT(Display *dpy, GLXDrawable drawable, int interval)
  */
-GLE_API int glXSwapIntervalEXT(Display *dpy, GLXDrawable drawable, int interval);
+GLE_API void glXSwapIntervalEXT(Display *dpy, GLXDrawable drawable, int interval);
+
+//@}
+#endif //POSIX
+
+
+
+#ifdef POSIX
+/**
+ * @defgroup GLX_EXT_swap_control_tear GLX_EXT_swap_control_tear
+ * Extension number in OpenGL registry : 414
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/glx_swap_control_tear.txt
+ * @ingroup g_GLX_EXT g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GLX_EXT_swap_control_tear is supported.
+ * @return Returns \c true if \b GLX_EXT_swap_control_tear is supported, \c false otherwise.
+ */
+GLE_API bool isGLX_EXT_swap_control_tear();
+
 
 //@}
 #endif //POSIX
@@ -21653,6 +21674,27 @@ GLE_API int wglGetSwapIntervalEXT(void);
  * @brief BOOL wglSwapIntervalEXT(int interval)
  */
 GLE_API BOOL wglSwapIntervalEXT(int interval);
+
+//@}
+#endif //WIN32
+
+
+
+#ifdef WIN32
+/**
+ * @defgroup WGL_EXT_swap_control_tear WGL_EXT_swap_control_tear
+ * Extension number in OpenGL registry : 415
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/wgl_swap_control_tear.txt
+ * @ingroup g_WGL_EXT g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b WGL_EXT_swap_control_tear is supported.
+ * @return Returns \c true if \b WGL_EXT_swap_control_tear is supported, \c false otherwise.
+ */
+GLE_API bool isWGL_EXT_swap_control_tear();
+
 
 //@}
 #endif //WIN32

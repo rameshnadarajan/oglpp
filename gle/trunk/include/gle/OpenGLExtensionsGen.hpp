@@ -1,4 +1,4 @@
-// This file was generated at Mon, 30 Jan 2012 07:46:07 +0000 with gle, please do not modify.
+// This file was generated at Fri, 09 Mar 2012 08:29:19 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,10 +6,10 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-01-26 02:44:56 -0800 (Thu, 26 Jan 2012) $ */
-// #define GL_GLEXT_VERSION 75
-// /* glxext.h last updated 2010/08/06 */
-// #define GLX_GLXEXT_VERSION 32
+// /* glext.h last updated $Date: 2012-03-05 02:52:51 -0800 (Mon, 05 Mar 2012) $ */
+// #define GL_GLEXT_VERSION 76
+// /* glxext.h last updated 2012/02/29 */
+// #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
 // #define WGL_WGLEXT_VERSION 24
 
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Mon, 30 Jan 2012 07:46:07 +0000
+ * - Stamp = Fri, 09 Mar 2012 08:29:19 +0000
  * - Number of tokens							= 0
  * - Number of functions						= 2222
- * - Number of extensions found(in headers)		= 535
- * - Number of extensions in OpenGL registry	= 499
+ * - Number of extensions found(in headers)		= 537
+ * - Number of extensions in OpenGL registry	= 501
  */
 
 
@@ -526,9 +526,20 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief int glXSwapIntervalEXT(Display *dpy, GLXDrawable drawable, int interval)
+	 * @brief void glXSwapIntervalEXT(Display *dpy, GLXDrawable drawable, int interval)
 	 */
 	PFNGLXSWAPINTERVALEXTPROC glXSwapIntervalEXT;
+#endif //POSIX
+
+
+
+#ifdef POSIX
+	// ****** GLX_EXT_swap_control_tear ******
+
+	/**
+	 * @brief Returns \c true if \b GLX_EXT_swap_control_tear is supported, false otherwise.
+	 */
+	bool isGLX_EXT_swap_control_tear;
 #endif //POSIX
 
 
@@ -16555,6 +16566,17 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief BOOL wglSwapIntervalEXT(int interval)
 	 */
 	PFNWGLSWAPINTERVALEXTPROC wglSwapIntervalEXT;
+#endif //WIN32
+
+
+
+#ifdef WIN32
+	// ****** WGL_EXT_swap_control_tear ******
+
+	/**
+	 * @brief Returns \c true if \b WGL_EXT_swap_control_tear is supported, false otherwise.
+	 */
+	bool isWGL_EXT_swap_control_tear;
 #endif //WIN32
 
 
