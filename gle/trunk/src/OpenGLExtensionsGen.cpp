@@ -1,4 +1,4 @@
-// This file was generated at Fri, 09 Mar 2012 08:29:19 +0000 with gle, please do not modify.
+// This file was generated at Tue, 27 Mar 2012 08:25:18 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-03-05 02:52:51 -0800 (Mon, 05 Mar 2012) $ */
-// #define GL_GLEXT_VERSION 76
+// /* glext.h last updated $Date: 2012-03-26 17:45:29 -0700 (Mon, 26 Mar 2012) $ */
+// #define GL_GLEXT_VERSION 77
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -26,8 +26,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 537;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 2222;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 541;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 2235;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS )
@@ -532,11 +532,17 @@ void OpenGLExtensionsGen::clear()
 	// ****** GL_AMD_transform_feedback3_lines_triangles ******
 	isGL_AMD_transform_feedback3_lines_triangles = false;
 
+	// ****** GL_AMD_vertex_shader_layer ******
+	isGL_AMD_vertex_shader_layer = false;
+
 	// ****** GL_AMD_vertex_shader_tesselator ******
 	isGL_AMD_vertex_shader_tesselator = false;
 
 	glTessellationFactorAMD = 0;
 	glTessellationModeAMD = 0;
+
+	// ****** GL_AMD_vertex_shader_viewport_index ******
+	isGL_AMD_vertex_shader_viewport_index = false;
 
 	// ****** GL_APPLE_aux_depth_stencil ******
 	isGL_APPLE_aux_depth_stencil = false;
@@ -2558,6 +2564,23 @@ void OpenGLExtensionsGen::clear()
 	// ****** GL_MESA_ycbcr_texture ******
 	isGL_MESA_ycbcr_texture = false;
 
+	// ****** GL_NV_bindless_texture ******
+	isGL_NV_bindless_texture = false;
+
+	glGetImageHandleNV = 0;
+	glGetTextureHandleNV = 0;
+	glGetTextureSamplerHandleNV = 0;
+	glIsImageHandleResidentNV = 0;
+	glIsTextureHandleResidentNV = 0;
+	glMakeImageHandleNonResidentNV = 0;
+	glMakeImageHandleResidentNV = 0;
+	glMakeTextureHandleNonResidentNV = 0;
+	glMakeTextureHandleResidentNV = 0;
+	glProgramUniformHandleui64NV = 0;
+	glProgramUniformHandleui64vNV = 0;
+	glUniformHandleui64NV = 0;
+	glUniformHandleui64vNV = 0;
+
 	// ****** GL_NV_blend_square ******
 	isGL_NV_blend_square = false;
 
@@ -2906,6 +2929,9 @@ void OpenGLExtensionsGen::clear()
 
 	glCombinerStageParameterfvNV = 0;
 	glGetCombinerStageParameterfvNV = 0;
+
+	// ****** GL_NV_shader_atomic_float ******
+	isGL_NV_shader_atomic_float = false;
 
 	// ****** GL_NV_shader_buffer_load ******
 	isGL_NV_shader_buffer_load = false;
@@ -7682,6 +7708,37 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 
 
+	isGL_AMD_vertex_shader_layer = isExtensionSupported("GL_AMD_vertex_shader_layer");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_AMD_vertex_shader_layer )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_vertex_shader_layer                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_vertex_shader_layer                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_vertex_shader_layer") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_vertex_shader_layer                        : not detected." );
+	}
+
+
 	isGL_AMD_vertex_shader_tesselator = isExtensionSupported("GL_AMD_vertex_shader_tesselator");
 
 	localSupportedProcCount		= 2;
@@ -7723,7 +7780,38 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 
 
-} // initializeGL_AMD_vertex_shader_tesselator()
+	isGL_AMD_vertex_shader_viewport_index = isExtensionSupported("GL_AMD_vertex_shader_viewport_index");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_AMD_vertex_shader_viewport_index )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_vertex_shader_viewport_index               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_vertex_shader_viewport_index               : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_vertex_shader_viewport_index") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_vertex_shader_viewport_index               : not detected." );
+	}
+
+
+} // initializeGL_AMD_vertex_shader_viewport_index()
 
 
 void OpenGLExtensionsGen::initializeGL_APPLE()
@@ -19609,6 +19697,80 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	int	localSupportedProcCount 	= 0;
 	int	localInitializedProcCount	= 0;
 
+	isGL_NV_bindless_texture = isExtensionSupported("GL_NV_bindless_texture");
+
+	localSupportedProcCount		= 13;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_NV_bindless_texture ) // || isSEDEnable()
+	{
+		glGetImageHandleNV = (PFNGLGETIMAGEHANDLENVPROC) getExtensionPtr( "glGetImageHandleNV" );
+		if ( glGetImageHandleNV != 0 )	++localInitializedProcCount;
+
+		glGetTextureHandleNV = (PFNGLGETTEXTUREHANDLENVPROC) getExtensionPtr( "glGetTextureHandleNV" );
+		if ( glGetTextureHandleNV != 0 )	++localInitializedProcCount;
+
+		glGetTextureSamplerHandleNV = (PFNGLGETTEXTURESAMPLERHANDLENVPROC) getExtensionPtr( "glGetTextureSamplerHandleNV" );
+		if ( glGetTextureSamplerHandleNV != 0 )	++localInitializedProcCount;
+
+		glIsImageHandleResidentNV = (PFNGLISIMAGEHANDLERESIDENTNVPROC) getExtensionPtr( "glIsImageHandleResidentNV" );
+		if ( glIsImageHandleResidentNV != 0 )	++localInitializedProcCount;
+
+		glIsTextureHandleResidentNV = (PFNGLISTEXTUREHANDLERESIDENTNVPROC) getExtensionPtr( "glIsTextureHandleResidentNV" );
+		if ( glIsTextureHandleResidentNV != 0 )	++localInitializedProcCount;
+
+		glMakeImageHandleNonResidentNV = (PFNGLMAKEIMAGEHANDLENONRESIDENTNVPROC) getExtensionPtr( "glMakeImageHandleNonResidentNV" );
+		if ( glMakeImageHandleNonResidentNV != 0 )	++localInitializedProcCount;
+
+		glMakeImageHandleResidentNV = (PFNGLMAKEIMAGEHANDLERESIDENTNVPROC) getExtensionPtr( "glMakeImageHandleResidentNV" );
+		if ( glMakeImageHandleResidentNV != 0 )	++localInitializedProcCount;
+
+		glMakeTextureHandleNonResidentNV = (PFNGLMAKETEXTUREHANDLENONRESIDENTNVPROC) getExtensionPtr( "glMakeTextureHandleNonResidentNV" );
+		if ( glMakeTextureHandleNonResidentNV != 0 )	++localInitializedProcCount;
+
+		glMakeTextureHandleResidentNV = (PFNGLMAKETEXTUREHANDLERESIDENTNVPROC) getExtensionPtr( "glMakeTextureHandleResidentNV" );
+		if ( glMakeTextureHandleResidentNV != 0 )	++localInitializedProcCount;
+
+		glProgramUniformHandleui64NV = (PFNGLPROGRAMUNIFORMHANDLEUI64NVPROC) getExtensionPtr( "glProgramUniformHandleui64NV" );
+		if ( glProgramUniformHandleui64NV != 0 )	++localInitializedProcCount;
+
+		glProgramUniformHandleui64vNV = (PFNGLPROGRAMUNIFORMHANDLEUI64VNVPROC) getExtensionPtr( "glProgramUniformHandleui64vNV" );
+		if ( glProgramUniformHandleui64vNV != 0 )	++localInitializedProcCount;
+
+		glUniformHandleui64NV = (PFNGLUNIFORMHANDLEUI64NVPROC) getExtensionPtr( "glUniformHandleui64NV" );
+		if ( glUniformHandleui64NV != 0 )	++localInitializedProcCount;
+
+		glUniformHandleui64vNV = (PFNGLUNIFORMHANDLEUI64VNVPROC) getExtensionPtr( "glUniformHandleui64vNV" );
+		if ( glUniformHandleui64vNV != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_NV_bindless_texture )
+
+	if ( isGL_NV_bindless_texture )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_bindless_texture                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_bindless_texture                            : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_bindless_texture") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_bindless_texture                            : not detected." );
+	}
+
+
 	isGL_NV_blend_square = isExtensionSupported("GL_NV_blend_square");
 
 	localSupportedProcCount		= 0;
@@ -21467,6 +21629,37 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	else
 	{
 		logEndl( "GL_NV_register_combiners2                         : not detected." );
+	}
+
+
+	isGL_NV_shader_atomic_float = isExtensionSupported("GL_NV_shader_atomic_float");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_NV_shader_atomic_float )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_shader_atomic_float                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_shader_atomic_float                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_shader_atomic_float") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_shader_atomic_float                         : not detected." );
 	}
 
 

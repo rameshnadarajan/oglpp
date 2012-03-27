@@ -1,4 +1,4 @@
-// This file was generated at Fri, 09 Mar 2012 08:29:19 +0000 with gle, please do not modify.
+// This file was generated at Tue, 27 Mar 2012 08:25:18 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-03-05 02:52:51 -0800 (Mon, 05 Mar 2012) $ */
-// #define GL_GLEXT_VERSION 76
+// /* glext.h last updated $Date: 2012-03-26 17:45:29 -0700 (Mon, 26 Mar 2012) $ */
+// #define GL_GLEXT_VERSION 77
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -1521,6 +1521,17 @@ bool isGL_AMD_transform_feedback3_lines_triangles()
 
 
 
+// ********* GL_AMD_vertex_shader_layer *********
+bool isGL_AMD_vertex_shader_layer()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_vertex_shader_layer;
+
+	return isSupported;
+}
+
+
+
+
 // ********* GL_AMD_vertex_shader_tesselator *********
 bool isGL_AMD_vertex_shader_tesselator()
 {
@@ -1538,6 +1549,17 @@ void glTessellationFactorAMD(GLfloat factor)
 void glTessellationModeAMD(GLenum mode)
 {
 	gleGetCurrent()->glTessellationModeAMD( mode );
+}
+
+
+
+
+// ********* GL_AMD_vertex_shader_viewport_index *********
+bool isGL_AMD_vertex_shader_viewport_index()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_vertex_shader_viewport_index;
+
+	return isSupported;
 }
 
 
@@ -10091,6 +10113,83 @@ bool isGL_MESA_ycbcr_texture()
 
 
 
+// ********* GL_NV_bindless_texture *********
+bool isGL_NV_bindless_texture()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_bindless_texture;
+
+	return isSupported;
+}
+
+
+GLuint64 glGetImageHandleNV(GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum format)
+{
+	return gleGetCurrent()->glGetImageHandleNV( texture, level, layered, layer, format );
+}
+
+GLuint64 glGetTextureHandleNV(GLuint texture)
+{
+	return gleGetCurrent()->glGetTextureHandleNV( texture );
+}
+
+GLuint64 glGetTextureSamplerHandleNV(GLuint texture, GLuint sampler)
+{
+	return gleGetCurrent()->glGetTextureSamplerHandleNV( texture, sampler );
+}
+
+GLboolean glIsImageHandleResidentNV(GLuint64 handle)
+{
+	return gleGetCurrent()->glIsImageHandleResidentNV( handle );
+}
+
+GLboolean glIsTextureHandleResidentNV(GLuint64 handle)
+{
+	return gleGetCurrent()->glIsTextureHandleResidentNV( handle );
+}
+
+void glMakeImageHandleNonResidentNV(GLuint64 handle)
+{
+	gleGetCurrent()->glMakeImageHandleNonResidentNV( handle );
+}
+
+void glMakeImageHandleResidentNV(GLuint64 handle, GLenum access)
+{
+	gleGetCurrent()->glMakeImageHandleResidentNV( handle, access );
+}
+
+void glMakeTextureHandleNonResidentNV(GLuint64 handle)
+{
+	gleGetCurrent()->glMakeTextureHandleNonResidentNV( handle );
+}
+
+void glMakeTextureHandleResidentNV(GLuint64 handle)
+{
+	gleGetCurrent()->glMakeTextureHandleResidentNV( handle );
+}
+
+void glProgramUniformHandleui64NV(GLuint program, GLint location, GLuint64 value)
+{
+	gleGetCurrent()->glProgramUniformHandleui64NV( program, location, value );
+}
+
+void glProgramUniformHandleui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64 *values)
+{
+	gleGetCurrent()->glProgramUniformHandleui64vNV( program, location, count, values );
+}
+
+void glUniformHandleui64NV(GLint location, GLuint64 value)
+{
+	gleGetCurrent()->glUniformHandleui64NV( location, value );
+}
+
+void glUniformHandleui64vNV(GLint location, GLsizei count, const GLuint64 *value)
+{
+	gleGetCurrent()->glUniformHandleui64vNV( location, count, value );
+}
+
+
+
+
 // ********* GL_NV_blend_square *********
 bool isGL_NV_blend_square()
 {
@@ -11599,6 +11698,17 @@ void glCombinerStageParameterfvNV(GLenum stage, GLenum pname, const GLfloat *par
 void glGetCombinerStageParameterfvNV(GLenum stage, GLenum pname, GLfloat *params)
 {
 	gleGetCurrent()->glGetCombinerStageParameterfvNV( stage, pname, params );
+}
+
+
+
+
+// ********* GL_NV_shader_atomic_float *********
+bool isGL_NV_shader_atomic_float()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_shader_atomic_float;
+
+	return isSupported;
 }
 
 

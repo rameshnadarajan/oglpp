@@ -1,4 +1,4 @@
-// This file was generated at Fri, 09 Mar 2012 08:29:19 +0000 with gle, please do not modify.
+// This file was generated at Tue, 27 Mar 2012 08:25:18 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-03-05 02:52:51 -0800 (Mon, 05 Mar 2012) $ */
-// #define GL_GLEXT_VERSION 76
+// /* glext.h last updated $Date: 2012-03-26 17:45:29 -0700 (Mon, 26 Mar 2012) $ */
+// #define GL_GLEXT_VERSION 77
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Fri, 09 Mar 2012 08:29:19 +0000
+ * - Stamp = Tue, 27 Mar 2012 08:25:18 +0000
  * - Number of tokens							= 0
- * - Number of functions						= 2222
- * - Number of extensions found(in headers)		= 537
- * - Number of extensions in OpenGL registry	= 501
+ * - Number of functions						= 2235
+ * - Number of extensions found(in headers)		= 541
+ * - Number of extensions in OpenGL registry	= 505
  */
 
 
@@ -1753,6 +1753,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_AMD_vertex_shader_layer ******
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_vertex_shader_layer is supported, false otherwise.
+	 */
+	bool isGL_AMD_vertex_shader_layer;
+
+
+
+
 	// ****** GL_AMD_vertex_shader_tesselator ******
 
 	/**
@@ -1770,6 +1780,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glTessellationModeAMD(GLenum mode)
 	 */
 	PFNGLTESSELLATIONMODEAMDPROC glTessellationModeAMD;
+
+
+
+
+	// ****** GL_AMD_vertex_shader_viewport_index ******
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_vertex_shader_viewport_index is supported, false otherwise.
+	 */
+	bool isGL_AMD_vertex_shader_viewport_index;
 
 
 
@@ -10068,6 +10088,82 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_NV_bindless_texture ******
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_bindless_texture is supported, false otherwise.
+	 */
+	bool isGL_NV_bindless_texture;
+
+
+	/**
+	 * @brief GLuint64 glGetImageHandleNV(GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum format)
+	 */
+	PFNGLGETIMAGEHANDLENVPROC glGetImageHandleNV;
+
+	/**
+	 * @brief GLuint64 glGetTextureHandleNV(GLuint texture)
+	 */
+	PFNGLGETTEXTUREHANDLENVPROC glGetTextureHandleNV;
+
+	/**
+	 * @brief GLuint64 glGetTextureSamplerHandleNV(GLuint texture, GLuint sampler)
+	 */
+	PFNGLGETTEXTURESAMPLERHANDLENVPROC glGetTextureSamplerHandleNV;
+
+	/**
+	 * @brief GLboolean glIsImageHandleResidentNV(GLuint64 handle)
+	 */
+	PFNGLISIMAGEHANDLERESIDENTNVPROC glIsImageHandleResidentNV;
+
+	/**
+	 * @brief GLboolean glIsTextureHandleResidentNV(GLuint64 handle)
+	 */
+	PFNGLISTEXTUREHANDLERESIDENTNVPROC glIsTextureHandleResidentNV;
+
+	/**
+	 * @brief void glMakeImageHandleNonResidentNV(GLuint64 handle)
+	 */
+	PFNGLMAKEIMAGEHANDLENONRESIDENTNVPROC glMakeImageHandleNonResidentNV;
+
+	/**
+	 * @brief void glMakeImageHandleResidentNV(GLuint64 handle, GLenum access)
+	 */
+	PFNGLMAKEIMAGEHANDLERESIDENTNVPROC glMakeImageHandleResidentNV;
+
+	/**
+	 * @brief void glMakeTextureHandleNonResidentNV(GLuint64 handle)
+	 */
+	PFNGLMAKETEXTUREHANDLENONRESIDENTNVPROC glMakeTextureHandleNonResidentNV;
+
+	/**
+	 * @brief void glMakeTextureHandleResidentNV(GLuint64 handle)
+	 */
+	PFNGLMAKETEXTUREHANDLERESIDENTNVPROC glMakeTextureHandleResidentNV;
+
+	/**
+	 * @brief void glProgramUniformHandleui64NV(GLuint program, GLint location, GLuint64 value)
+	 */
+	PFNGLPROGRAMUNIFORMHANDLEUI64NVPROC glProgramUniformHandleui64NV;
+
+	/**
+	 * @brief void glProgramUniformHandleui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64 *values)
+	 */
+	PFNGLPROGRAMUNIFORMHANDLEUI64VNVPROC glProgramUniformHandleui64vNV;
+
+	/**
+	 * @brief void glUniformHandleui64NV(GLint location, GLuint64 value)
+	 */
+	PFNGLUNIFORMHANDLEUI64NVPROC glUniformHandleui64NV;
+
+	/**
+	 * @brief void glUniformHandleui64vNV(GLint location, GLsizei count, const GLuint64 *value)
+	 */
+	PFNGLUNIFORMHANDLEUI64VNVPROC glUniformHandleui64vNV;
+
+
+
+
 	// ****** GL_NV_blend_square ******
 
 	/**
@@ -11541,6 +11637,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glGetCombinerStageParameterfvNV(GLenum stage, GLenum pname, GLfloat *params)
 	 */
 	PFNGLGETCOMBINERSTAGEPARAMETERFVNVPROC glGetCombinerStageParameterfvNV;
+
+
+
+
+	// ****** GL_NV_shader_atomic_float ******
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_shader_atomic_float is supported, false otherwise.
+	 */
+	bool isGL_NV_shader_atomic_float;
 
 
 

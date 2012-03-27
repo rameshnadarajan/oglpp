@@ -1,4 +1,4 @@
-// This file was generated at Fri, 09 Mar 2012 08:29:19 +0000 with gle, please do not modify.
+// This file was generated at Tue, 27 Mar 2012 08:25:18 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-03-05 02:52:51 -0800 (Mon, 05 Mar 2012) $ */
-// #define GL_GLEXT_VERSION 76
+// /* glext.h last updated $Date: 2012-03-26 17:45:29 -0700 (Mon, 26 Mar 2012) $ */
+// #define GL_GLEXT_VERSION 77
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -108,7 +108,7 @@
  */
 
 /** 
- * @defgroup g_GL_AMD			GL_AMD (16 extensions found)
+ * @defgroup g_GL_AMD			GL_AMD (18 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -173,7 +173,7 @@
  */
 
 /** 
- * @defgroup g_GL_NV			GL_NV (64 extensions found)
+ * @defgroup g_GL_NV			GL_NV (66 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -2434,6 +2434,26 @@ GLE_API bool isGL_AMD_transform_feedback3_lines_triangles();
 
 
 /**
+ * @defgroup GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_layer
+ * Extension number in OpenGL registry : 417
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/vertex_shader_layer.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_AMD_vertex_shader_layer is supported.
+ * @return Returns \c true if \b GL_AMD_vertex_shader_layer is supported, \c false otherwise.
+ */
+GLE_API bool isGL_AMD_vertex_shader_layer();
+
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_AMD_vertex_shader_tesselator GL_AMD_vertex_shader_tesselator
  * Extension number in OpenGL registry : NA
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
@@ -2458,6 +2478,26 @@ GLE_API void glTessellationFactorAMD(GLfloat factor);
  * @brief void glTessellationModeAMD(GLenum mode)
  */
 GLE_API void glTessellationModeAMD(GLenum mode);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_AMD_vertex_shader_viewport_index GL_AMD_vertex_shader_viewport_index
+ * Extension number in OpenGL registry : 416
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/vertex_shader_viewport_index.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_AMD_vertex_shader_viewport_index is supported.
+ * @return Returns \c true if \b GL_AMD_vertex_shader_viewport_index is supported, \c false otherwise.
+ */
+GLE_API bool isGL_AMD_vertex_shader_viewport_index();
+
 
 //@}
 
@@ -13299,6 +13339,92 @@ GLE_API bool isGL_MESA_ycbcr_texture();
 
 
 /**
+ * @defgroup GL_NV_bindless_texture GL_NV_bindless_texture
+ * Extension number in OpenGL registry : 418
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/bindless_texture.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_NV_bindless_texture is supported.
+ * @return Returns \c true if \b GL_NV_bindless_texture is supported, \c false otherwise.
+ */
+GLE_API bool isGL_NV_bindless_texture();
+
+
+
+/**
+ * @brief GLuint64 glGetImageHandleNV(GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum format)
+ */
+GLE_API GLuint64 glGetImageHandleNV(GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum format);
+
+/**
+ * @brief GLuint64 glGetTextureHandleNV(GLuint texture)
+ */
+GLE_API GLuint64 glGetTextureHandleNV(GLuint texture);
+
+/**
+ * @brief GLuint64 glGetTextureSamplerHandleNV(GLuint texture, GLuint sampler)
+ */
+GLE_API GLuint64 glGetTextureSamplerHandleNV(GLuint texture, GLuint sampler);
+
+/**
+ * @brief GLboolean glIsImageHandleResidentNV(GLuint64 handle)
+ */
+GLE_API GLboolean glIsImageHandleResidentNV(GLuint64 handle);
+
+/**
+ * @brief GLboolean glIsTextureHandleResidentNV(GLuint64 handle)
+ */
+GLE_API GLboolean glIsTextureHandleResidentNV(GLuint64 handle);
+
+/**
+ * @brief void glMakeImageHandleNonResidentNV(GLuint64 handle)
+ */
+GLE_API void glMakeImageHandleNonResidentNV(GLuint64 handle);
+
+/**
+ * @brief void glMakeImageHandleResidentNV(GLuint64 handle, GLenum access)
+ */
+GLE_API void glMakeImageHandleResidentNV(GLuint64 handle, GLenum access);
+
+/**
+ * @brief void glMakeTextureHandleNonResidentNV(GLuint64 handle)
+ */
+GLE_API void glMakeTextureHandleNonResidentNV(GLuint64 handle);
+
+/**
+ * @brief void glMakeTextureHandleResidentNV(GLuint64 handle)
+ */
+GLE_API void glMakeTextureHandleResidentNV(GLuint64 handle);
+
+/**
+ * @brief void glProgramUniformHandleui64NV(GLuint program, GLint location, GLuint64 value)
+ */
+GLE_API void glProgramUniformHandleui64NV(GLuint program, GLint location, GLuint64 value);
+
+/**
+ * @brief void glProgramUniformHandleui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64 *values)
+ */
+GLE_API void glProgramUniformHandleui64vNV(GLuint program, GLint location, GLsizei count, const GLuint64 *values);
+
+/**
+ * @brief void glUniformHandleui64NV(GLint location, GLuint64 value)
+ */
+GLE_API void glUniformHandleui64NV(GLint location, GLuint64 value);
+
+/**
+ * @brief void glUniformHandleui64vNV(GLint location, GLsizei count, const GLuint64 *value)
+ */
+GLE_API void glUniformHandleui64vNV(GLint location, GLsizei count, const GLuint64 *value);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_NV_blend_square GL_NV_blend_square
  * Extension number in OpenGL registry : 194
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/blend_square.txt
@@ -15129,6 +15255,26 @@ GLE_API void glCombinerStageParameterfvNV(GLenum stage, GLenum pname, const GLfl
  * @brief void glGetCombinerStageParameterfvNV(GLenum stage, GLenum pname, GLfloat *params)
  */
 GLE_API void glGetCombinerStageParameterfvNV(GLenum stage, GLenum pname, GLfloat *params);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_NV_shader_atomic_float GL_NV_shader_atomic_float
+ * Extension number in OpenGL registry : 419
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/shader_atomic_float.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_NV_shader_atomic_float is supported.
+ * @return Returns \c true if \b GL_NV_shader_atomic_float is supported, \c false otherwise.
+ */
+GLE_API bool isGL_NV_shader_atomic_float();
+
 
 //@}
 
