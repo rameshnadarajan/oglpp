@@ -1,4 +1,4 @@
-// This file was generated at Tue, 27 Mar 2012 08:25:18 +0000 with gle, please do not modify.
+// This file was generated at Mon, 21 May 2012 06:16:16 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-03-26 17:45:29 -0700 (Mon, 26 Mar 2012) $ */
-// #define GL_GLEXT_VERSION 77
+// /* glext.h last updated $Date: 2012-04-26 00:59:42 -0700 (Thu, 26 Apr 2012) $ */
+// #define GL_GLEXT_VERSION 81
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -1928,12 +1928,12 @@ bool isGL_ARB_ES2_compatibility()
 }
 
 
-void glClearDepthf(GLclampf d)
+void glClearDepthf(GLfloat d)
 {
 	gleGetCurrent()->glClearDepthf( d );
 }
 
-void glDepthRangef(GLclampf n, GLclampf f)
+void glDepthRangef(GLfloat n, GLfloat f)
 {
 	gleGetCurrent()->glDepthRangef( n, f );
 }
@@ -2227,7 +2227,7 @@ void glDrawRangeElementsBaseVertex(GLenum mode, GLuint start, GLuint end, GLsize
 	gleGetCurrent()->glDrawRangeElementsBaseVertex( mode, start, end, count, type, indices, basevertex );
 }
 
-void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount, const GLint *basevertex)
+void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, const GLint *basevertex)
 {
 	gleGetCurrent()->glMultiDrawElementsBaseVertex( mode, count, type, indices, primcount, basevertex );
 }
@@ -2797,7 +2797,7 @@ bool isGL_ARB_multisample()
 }
 
 
-void glSampleCoverageARB(GLclampf value, GLboolean invert)
+void glSampleCoverageARB(GLfloat value, GLboolean invert)
 {
 	gleGetCurrent()->glSampleCoverageARB( value, invert );
 }
@@ -3232,7 +3232,7 @@ bool isGL_ARB_sample_shading()
 }
 
 
-void glMinSampleShadingARB(GLclampf value)
+void glMinSampleShadingARB(GLfloat value)
 {
 	gleGetCurrent()->glMinSampleShadingARB( value );
 }
@@ -3352,7 +3352,7 @@ void glBindProgramPipeline(GLuint pipeline)
 	gleGetCurrent()->glBindProgramPipeline( pipeline );
 }
 
-GLuint glCreateShaderProgramv(GLenum type, GLsizei count, const GLchar* *strings)
+GLuint glCreateShaderProgramv(GLenum type, GLsizei count, const GLchar* const *strings)
 {
 	return gleGetCurrent()->glCreateShaderProgramv( type, count, strings );
 }
@@ -4694,7 +4694,7 @@ GLuint glGetUniformBlockIndex(GLuint program, const GLchar *uniformBlockName)
 	return gleGetCurrent()->glGetUniformBlockIndex( program, uniformBlockName );
 }
 
-void glGetUniformIndices(GLuint program, GLsizei uniformCount, const GLchar* *uniformNames, GLuint *uniformIndices)
+void glGetUniformIndices(GLuint program, GLsizei uniformCount, const GLchar* const *uniformNames, GLuint *uniformIndices)
 {
 	gleGetCurrent()->glGetUniformIndices( program, uniformCount, uniformNames, uniformIndices );
 }
@@ -5501,12 +5501,12 @@ bool isGL_ARB_viewport_array()
 }
 
 
-void glDepthRangeArrayv(GLuint first, GLsizei count, const GLclampd *v)
+void glDepthRangeArrayv(GLuint first, GLsizei count, const GLdouble *v)
 {
 	gleGetCurrent()->glDepthRangeArrayv( first, count, v );
 }
 
-void glDepthRangeIndexed(GLuint index, GLclampd n, GLclampd f)
+void glDepthRangeIndexed(GLuint index, GLdouble n, GLdouble f)
 {
 	gleGetCurrent()->glDepthRangeIndexed( index, n, f );
 }
@@ -6341,7 +6341,7 @@ bool isGL_EXT_blend_color()
 }
 
 
-void glBlendColorEXT(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
+void glBlendColorEXT(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha)
 {
 	gleGetCurrent()->glBlendColorEXT( red, green, blue, alpha );
 }
@@ -14486,7 +14486,7 @@ bool isGL_VERSION_1_2()
 }
 
 
-void glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
+void glBlendColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha)
 {
 	gleGetCurrent()->glBlendColor( red, green, blue, alpha );
 }
@@ -14740,7 +14740,7 @@ void glGetCompressedTexImage(GLenum target, GLint level, GLvoid *img)
 	gleGetCurrent()->glGetCompressedTexImage( target, level, img );
 }
 
-void glSampleCoverage(GLclampf value, GLboolean invert)
+void glSampleCoverage(GLfloat value, GLboolean invert)
 {
 	gleGetCurrent()->glSampleCoverage( value, invert );
 }
@@ -14964,7 +14964,7 @@ void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GL
 	gleGetCurrent()->glMultiDrawArrays( mode, first, count, primcount );
 }
 
-void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount)
+void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount)
 {
 	gleGetCurrent()->glMultiDrawElements( mode, count, type, indices, primcount );
 }
@@ -15476,7 +15476,7 @@ void glLinkProgram(GLuint program)
 	gleGetCurrent()->glLinkProgram( program );
 }
 
-void glShaderSource(GLuint shader, GLsizei count, const GLchar* *string, const GLint *length)
+void glShaderSource(GLuint shader, GLsizei count, const GLchar* const *string, const GLint *length)
 {
 	gleGetCurrent()->glShaderSource( shader, count, string, length );
 }
@@ -16002,7 +16002,7 @@ void glTexParameterIuiv(GLenum target, GLenum pname, const GLuint *params)
 	gleGetCurrent()->glTexParameterIuiv( target, pname, params );
 }
 
-void glTransformFeedbackVaryings(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode)
+void glTransformFeedbackVaryings(GLuint program, GLsizei count, const GLchar* const *varyings, GLenum bufferMode)
 {
 	gleGetCurrent()->glTransformFeedbackVaryings( program, count, varyings, bufferMode );
 }
@@ -16271,7 +16271,7 @@ void glBlendFunci(GLuint buf, GLenum src, GLenum dst)
 	gleGetCurrent()->glBlendFunci( buf, src, dst );
 }
 
-void glMinSampleShading(GLclampf value)
+void glMinSampleShading(GLfloat value)
 {
 	gleGetCurrent()->glMinSampleShading( value );
 }

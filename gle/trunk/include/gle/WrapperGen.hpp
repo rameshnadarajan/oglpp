@@ -1,4 +1,4 @@
-// This file was generated at Tue, 27 Mar 2012 08:25:18 +0000 with gle, please do not modify.
+// This file was generated at Mon, 21 May 2012 06:16:16 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-03-26 17:45:29 -0700 (Mon, 26 Mar 2012) $ */
-// #define GL_GLEXT_VERSION 77
+// /* glext.h last updated $Date: 2012-04-26 00:59:42 -0700 (Thu, 26 Apr 2012) $ */
+// #define GL_GLEXT_VERSION 81
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -3019,14 +3019,14 @@ GLE_API bool isGL_ARB_ES2_compatibility();
 
 
 /**
- * @brief void glClearDepthf(GLclampf d)
+ * @brief void glClearDepthf(GLfloat d)
  */
-GLE_API void glClearDepthf(GLclampf d);
+GLE_API void glClearDepthf(GLfloat d);
 
 /**
- * @brief void glDepthRangef(GLclampf n, GLclampf f)
+ * @brief void glDepthRangef(GLfloat n, GLfloat f)
  */
-GLE_API void glDepthRangef(GLclampf n, GLclampf f);
+GLE_API void glDepthRangef(GLfloat n, GLfloat f);
 
 /**
  * @brief void glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint *range, GLint *precision)
@@ -3453,9 +3453,9 @@ GLE_API void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenu
 GLE_API void glDrawRangeElementsBaseVertex(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex);
 
 /**
- * @brief void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount, const GLint *basevertex)
+ * @brief void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, const GLint *basevertex)
  */
-GLE_API void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount, const GLint *basevertex);
+GLE_API void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, const GLint *basevertex);
 
 //@}
 
@@ -4239,9 +4239,9 @@ GLE_API bool isGL_ARB_multisample();
 
 
 /**
- * @brief void glSampleCoverageARB(GLclampf value, GLboolean invert)
+ * @brief void glSampleCoverageARB(GLfloat value, GLboolean invert)
  */
-GLE_API void glSampleCoverageARB(GLclampf value, GLboolean invert);
+GLE_API void glSampleCoverageARB(GLfloat value, GLboolean invert);
 
 //@}
 
@@ -4755,9 +4755,9 @@ GLE_API bool isGL_ARB_sample_shading();
 
 
 /**
- * @brief void glMinSampleShadingARB(GLclampf value)
+ * @brief void glMinSampleShadingARB(GLfloat value)
  */
-GLE_API void glMinSampleShadingARB(GLclampf value);
+GLE_API void glMinSampleShadingARB(GLfloat value);
 
 //@}
 
@@ -4902,9 +4902,9 @@ GLE_API void glActiveShaderProgram(GLuint pipeline, GLuint program);
 GLE_API void glBindProgramPipeline(GLuint pipeline);
 
 /**
- * @brief GLuint glCreateShaderProgramv(GLenum type, GLsizei count, const GLchar* *strings)
+ * @brief GLuint glCreateShaderProgramv(GLenum type, GLsizei count, const GLchar* const *strings)
  */
-GLE_API GLuint glCreateShaderProgramv(GLenum type, GLsizei count, const GLchar* *strings);
+GLE_API GLuint glCreateShaderProgramv(GLenum type, GLsizei count, const GLchar* const *strings);
 
 /**
  * @brief void glDeleteProgramPipelines(GLsizei n, const GLuint *pipelines)
@@ -6649,9 +6649,9 @@ GLE_API void glGetActiveUniformsiv(GLuint program, GLsizei uniformCount, const G
 GLE_API GLuint glGetUniformBlockIndex(GLuint program, const GLchar *uniformBlockName);
 
 /**
- * @brief void glGetUniformIndices(GLuint program, GLsizei uniformCount, const GLchar* *uniformNames, GLuint *uniformIndices)
+ * @brief void glGetUniformIndices(GLuint program, GLsizei uniformCount, const GLchar* const *uniformNames, GLuint *uniformIndices)
  */
-GLE_API void glGetUniformIndices(GLuint program, GLsizei uniformCount, const GLchar* *uniformNames, GLuint *uniformIndices);
+GLE_API void glGetUniformIndices(GLuint program, GLsizei uniformCount, const GLchar* const *uniformNames, GLuint *uniformIndices);
 
 /**
  * @brief void glUniformBlockBinding(GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding)
@@ -7537,14 +7537,14 @@ GLE_API bool isGL_ARB_viewport_array();
 
 
 /**
- * @brief void glDepthRangeArrayv(GLuint first, GLsizei count, const GLclampd *v)
+ * @brief void glDepthRangeArrayv(GLuint first, GLsizei count, const GLdouble *v)
  */
-GLE_API void glDepthRangeArrayv(GLuint first, GLsizei count, const GLclampd *v);
+GLE_API void glDepthRangeArrayv(GLuint first, GLsizei count, const GLdouble *v);
 
 /**
- * @brief void glDepthRangeIndexed(GLuint index, GLclampd n, GLclampd f)
+ * @brief void glDepthRangeIndexed(GLuint index, GLdouble n, GLdouble f)
  */
-GLE_API void glDepthRangeIndexed(GLuint index, GLclampd n, GLclampd f);
+GLE_API void glDepthRangeIndexed(GLuint index, GLdouble n, GLdouble f);
 
 /**
  * @brief void glGetDoublei_v(GLenum target, GLuint index, GLdouble *data)
@@ -8575,9 +8575,9 @@ GLE_API bool isGL_EXT_blend_color();
 
 
 /**
- * @brief void glBlendColorEXT(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
+ * @brief void glBlendColorEXT(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha)
  */
-GLE_API void glBlendColorEXT(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
+GLE_API void glBlendColorEXT(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
 
 //@}
 
@@ -18988,9 +18988,9 @@ GLE_API bool isGL_VERSION_1_2();
 
 
 /**
- * @brief void glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
+ * @brief void glBlendColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha)
  */
-GLE_API void glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
+GLE_API void glBlendColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
 
 /**
  * @brief void glBlendEquation(GLenum mode)
@@ -19260,9 +19260,9 @@ GLE_API void glCompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset
 GLE_API void glGetCompressedTexImage(GLenum target, GLint level, GLvoid *img);
 
 /**
- * @brief void glSampleCoverage(GLclampf value, GLboolean invert)
+ * @brief void glSampleCoverage(GLfloat value, GLboolean invert)
  */
-GLE_API void glSampleCoverage(GLclampf value, GLboolean invert);
+GLE_API void glSampleCoverage(GLfloat value, GLboolean invert);
 
 //@}
 
@@ -19502,9 +19502,9 @@ GLE_API void glBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sf
 GLE_API void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount);
 
 /**
- * @brief void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount)
+ * @brief void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount)
  */
-GLE_API void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount);
+GLE_API void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount);
 
 /**
  * @brief void glPointParameterf(GLenum pname, GLfloat param)
@@ -20050,9 +20050,9 @@ GLE_API GLboolean glIsShader(GLuint shader);
 GLE_API void glLinkProgram(GLuint program);
 
 /**
- * @brief void glShaderSource(GLuint shader, GLsizei count, const GLchar* *string, const GLint *length)
+ * @brief void glShaderSource(GLuint shader, GLsizei count, const GLchar* const *string, const GLint *length)
  */
-GLE_API void glShaderSource(GLuint shader, GLsizei count, const GLchar* *string, const GLint *length);
+GLE_API void glShaderSource(GLuint shader, GLsizei count, const GLchar* const *string, const GLint *length);
 
 /**
  * @brief void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask)
@@ -20612,9 +20612,9 @@ GLE_API void glTexParameterIiv(GLenum target, GLenum pname, const GLint *params)
 GLE_API void glTexParameterIuiv(GLenum target, GLenum pname, const GLuint *params);
 
 /**
- * @brief void glTransformFeedbackVaryings(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode)
+ * @brief void glTransformFeedbackVaryings(GLuint program, GLsizei count, const GLchar* const *varyings, GLenum bufferMode)
  */
-GLE_API void glTransformFeedbackVaryings(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode);
+GLE_API void glTransformFeedbackVaryings(GLuint program, GLsizei count, const GLchar* const *varyings, GLenum bufferMode);
 
 /**
  * @brief void glUniform1ui(GLint location, GLuint v0)
@@ -20926,9 +20926,9 @@ GLE_API void glBlendFuncSeparatei(GLuint buf, GLenum srcRGB, GLenum dstRGB, GLen
 GLE_API void glBlendFunci(GLuint buf, GLenum src, GLenum dst);
 
 /**
- * @brief void glMinSampleShading(GLclampf value)
+ * @brief void glMinSampleShading(GLfloat value)
  */
-GLE_API void glMinSampleShading(GLclampf value);
+GLE_API void glMinSampleShading(GLfloat value);
 
 //@}
 

@@ -1,4 +1,4 @@
-// This file was generated at Tue, 27 Mar 2012 08:25:18 +0000 with gle, please do not modify.
+// This file was generated at Mon, 21 May 2012 06:16:16 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-03-26 17:45:29 -0700 (Mon, 26 Mar 2012) $ */
-// #define GL_GLEXT_VERSION 77
+// /* glext.h last updated $Date: 2012-04-26 00:59:42 -0700 (Thu, 26 Apr 2012) $ */
+// #define GL_GLEXT_VERSION 81
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -25,7 +25,7 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Tue, 27 Mar 2012 08:25:18 +0000
+ * - Stamp = Mon, 21 May 2012 06:16:16 +0000
  * - Number of tokens							= 0
  * - Number of functions						= 2235
  * - Number of extensions found(in headers)		= 541
@@ -2141,12 +2141,12 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glClearDepthf(GLclampf d)
+	 * @brief void glClearDepthf(GLfloat d)
 	 */
 	PFNGLCLEARDEPTHFPROC glClearDepthf;
 
 	/**
-	 * @brief void glDepthRangef(GLclampf n, GLclampf f)
+	 * @brief void glDepthRangef(GLfloat n, GLfloat f)
 	 */
 	PFNGLDEPTHRANGEFPROC glDepthRangef;
 
@@ -2425,7 +2425,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC glDrawRangeElementsBaseVertex;
 
 	/**
-	 * @brief void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount, const GLint *basevertex)
+	 * @brief void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, const GLint *basevertex)
 	 */
 	PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC glMultiDrawElementsBaseVertex;
 
@@ -2971,7 +2971,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glSampleCoverageARB(GLclampf value, GLboolean invert)
+	 * @brief void glSampleCoverageARB(GLfloat value, GLboolean invert)
 	 */
 	PFNGLSAMPLECOVERAGEARBPROC glSampleCoverageARB;
 
@@ -3397,7 +3397,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glMinSampleShadingARB(GLclampf value)
+	 * @brief void glMinSampleShadingARB(GLfloat value)
 	 */
 	PFNGLMINSAMPLESHADINGARBPROC glMinSampleShadingARB;
 
@@ -3514,7 +3514,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLBINDPROGRAMPIPELINEPROC glBindProgramPipeline;
 
 	/**
-	 * @brief GLuint glCreateShaderProgramv(GLenum type, GLsizei count, const GLchar* *strings)
+	 * @brief GLuint glCreateShaderProgramv(GLenum type, GLsizei count, const GLchar* const *strings)
 	 */
 	PFNGLCREATESHADERPROGRAMVPROC glCreateShaderProgramv;
 
@@ -4811,7 +4811,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLGETUNIFORMBLOCKINDEXPROC glGetUniformBlockIndex;
 
 	/**
-	 * @brief void glGetUniformIndices(GLuint program, GLsizei uniformCount, const GLchar* *uniformNames, GLuint *uniformIndices)
+	 * @brief void glGetUniformIndices(GLuint program, GLsizei uniformCount, const GLchar* const *uniformNames, GLuint *uniformIndices)
 	 */
 	PFNGLGETUNIFORMINDICESPROC glGetUniformIndices;
 
@@ -5609,12 +5609,12 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glDepthRangeArrayv(GLuint first, GLsizei count, const GLclampd *v)
+	 * @brief void glDepthRangeArrayv(GLuint first, GLsizei count, const GLdouble *v)
 	 */
 	PFNGLDEPTHRANGEARRAYVPROC glDepthRangeArrayv;
 
 	/**
-	 * @brief void glDepthRangeIndexed(GLuint index, GLclampd n, GLclampd f)
+	 * @brief void glDepthRangeIndexed(GLuint index, GLdouble n, GLdouble f)
 	 */
 	PFNGLDEPTHRANGEINDEXEDPROC glDepthRangeIndexed;
 
@@ -6427,7 +6427,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glBlendColorEXT(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
+	 * @brief void glBlendColorEXT(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha)
 	 */
 	PFNGLBLENDCOLOREXTPROC glBlendColorEXT;
 
@@ -14320,7 +14320,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
+	 * @brief void glBlendColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha)
 	 */
 	PFNGLBLENDCOLORPROC glBlendColor;
 
@@ -14572,7 +14572,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLGETCOMPRESSEDTEXIMAGEPROC glGetCompressedTexImage;
 
 	/**
-	 * @brief void glSampleCoverage(GLclampf value, GLboolean invert)
+	 * @brief void glSampleCoverage(GLfloat value, GLboolean invert)
 	 */
 	PFNGLSAMPLECOVERAGEPROC glSampleCoverage;
 
@@ -14794,7 +14794,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLMULTIDRAWARRAYSPROC glMultiDrawArrays;
 
 	/**
-	 * @brief void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount)
+	 * @brief void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount)
 	 */
 	PFNGLMULTIDRAWELEMENTSPROC glMultiDrawElements;
 
@@ -15302,7 +15302,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLLINKPROGRAMPROC glLinkProgram;
 
 	/**
-	 * @brief void glShaderSource(GLuint shader, GLsizei count, const GLchar* *string, const GLint *length)
+	 * @brief void glShaderSource(GLuint shader, GLsizei count, const GLchar* const *string, const GLint *length)
 	 */
 	PFNGLSHADERSOURCEPROC glShaderSource;
 
@@ -15824,7 +15824,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLTEXPARAMETERIUIVPROC glTexParameterIuiv;
 
 	/**
-	 * @brief void glTransformFeedbackVaryings(GLuint program, GLsizei count, const GLchar* *varyings, GLenum bufferMode)
+	 * @brief void glTransformFeedbackVaryings(GLuint program, GLsizei count, const GLchar* const *varyings, GLenum bufferMode)
 	 */
 	PFNGLTRANSFORMFEEDBACKVARYINGSPROC glTransformFeedbackVaryings;
 
@@ -16088,7 +16088,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLBLENDFUNCIPROC glBlendFunci;
 
 	/**
-	 * @brief void glMinSampleShading(GLclampf value)
+	 * @brief void glMinSampleShading(GLfloat value)
 	 */
 	PFNGLMINSAMPLESHADINGPROC glMinSampleShading;
 
