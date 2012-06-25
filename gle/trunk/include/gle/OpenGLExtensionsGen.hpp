@@ -1,4 +1,4 @@
-// This file was generated at Mon, 21 May 2012 06:16:16 +0000 with gle, please do not modify.
+// This file was generated at Mon, 25 Jun 2012 06:01:23 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-04-26 00:59:42 -0700 (Thu, 26 Apr 2012) $ */
-// #define GL_GLEXT_VERSION 81
+// /* glext.h last updated $Date: 2012-06-18 11:26:35 -0700 (Mon, 18 Jun 2012) $ */
+// #define GL_GLEXT_VERSION 82
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Mon, 21 May 2012 06:16:16 +0000
+ * - Stamp = Mon, 25 Jun 2012 06:01:23 +0000
  * - Number of tokens							= 0
  * - Number of functions						= 2235
- * - Number of extensions found(in headers)		= 541
- * - Number of extensions in OpenGL registry	= 505
+ * - Number of extensions found(in headers)		= 542
+ * - Number of extensions in OpenGL registry	= 506
  */
 
 
@@ -1677,6 +1677,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_AMD_pinned_memory is supported, false otherwise.
 	 */
 	bool isGL_AMD_pinned_memory;
+
+
+
+
+	// ****** GL_AMD_query_buffer_object ******
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_query_buffer_object is supported, false otherwise.
+	 */
+	bool isGL_AMD_query_buffer_object;
 
 
 

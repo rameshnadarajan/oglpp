@@ -1,4 +1,4 @@
-// This file was generated at Mon, 21 May 2012 06:16:16 +0000 with gle, please do not modify.
+// This file was generated at Mon, 25 Jun 2012 06:01:23 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-04-26 00:59:42 -0700 (Thu, 26 Apr 2012) $ */
-// #define GL_GLEXT_VERSION 81
+// /* glext.h last updated $Date: 2012-06-18 11:26:35 -0700 (Mon, 18 Jun 2012) $ */
+// #define GL_GLEXT_VERSION 82
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -1436,6 +1436,17 @@ void glSelectPerfMonitorCountersAMD(GLuint monitor, GLboolean enable, GLuint gro
 bool isGL_AMD_pinned_memory()
 {
 	const bool isSupported = gleGetCurrent()->isGL_AMD_pinned_memory;
+
+	return isSupported;
+}
+
+
+
+
+// ********* GL_AMD_query_buffer_object *********
+bool isGL_AMD_query_buffer_object()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_query_buffer_object;
 
 	return isSupported;
 }

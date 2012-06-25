@@ -1,4 +1,4 @@
-// This file was generated at Mon, 21 May 2012 06:16:16 +0000 with gle, please do not modify.
+// This file was generated at Mon, 25 Jun 2012 06:01:23 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-04-26 00:59:42 -0700 (Thu, 26 Apr 2012) $ */
-// #define GL_GLEXT_VERSION 81
+// /* glext.h last updated $Date: 2012-06-18 11:26:35 -0700 (Mon, 18 Jun 2012) $ */
+// #define GL_GLEXT_VERSION 82
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -26,7 +26,7 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 541;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 542;
 const int	OpenGLExtensionsGen::m_supportedProcCount		= 2235;
 
 
@@ -509,6 +509,9 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_AMD_pinned_memory ******
 	isGL_AMD_pinned_memory = false;
+
+	// ****** GL_AMD_query_buffer_object ******
+	isGL_AMD_query_buffer_object = false;
 
 	// ****** GL_AMD_sample_positions ******
 	isGL_AMD_sample_positions = false;
@@ -7505,6 +7508,37 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	else
 	{
 		logEndl( "GL_AMD_pinned_memory                              : not detected." );
+	}
+
+
+	isGL_AMD_query_buffer_object = isExtensionSupported("GL_AMD_query_buffer_object");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_AMD_query_buffer_object )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_query_buffer_object                        : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_query_buffer_object                        : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_query_buffer_object") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_query_buffer_object                        : not detected." );
 	}
 
 
