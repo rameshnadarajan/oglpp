@@ -1,2 +1,2 @@
 type		= 'none'
-deps		= [ 'glc', 'glc_gtk', 'glc_gtkmm' ]
+deps		= [ 'glc' ]
