@@ -1,14 +1,14 @@
-// GLE - Copyright (C) 2005, 2007, 2008, 2010, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2007, 2008, 2012, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
+// Author Alexandre Di Pino
 
 #include "glo/GLSLProgram.hpp"
 
 #include <cstring>
 #include <fstream>	// for file I/O
 #include <iostream>	// for I/O
-
 
 
 namespace glo
@@ -59,6 +59,18 @@ GLSLProgram::GLSLProgram( bool initialized )
 	{
 		m_programObject = 0;
 	}
+	
+	for (int i = 0; i < 5 ; ++i)
+	{
+		m_shaderLog[i] = "";
+	}
+
+	m_shaderSaved.resize(5);
+	m_shaderSaved[VERTEX] = 0;
+	m_shaderSaved[TESSELATION_CONTROL] = 0;
+	m_shaderSaved[TESSELATION_EVALUATION] = 0;
+	m_shaderSaved[GEOMETRY] = 0;
+	m_shaderSaved[FRAGMENT] = 0;
 }
 
 
@@ -94,6 +106,12 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 
 	assert( shaderSource	!= 0	);
 
+	if ( !isGL_ARB_tessellation_shader() && ( shaderType == TESSELATION_CONTROL || shaderType == TESSELATION_EVALUATION ) )
+	{
+		std::cerr << "glo.GLSLProgram: Tessellation is not supported" << std::endl;
+		// FIXME logError("");
+	}
+
 	// SET SOURCES
 	// @todo Creates a GLSLShader.[shaderSource, compile, compileStatus, infoLog, attachTo(GLSLProgram, deleteShader)]
 	// @todo exceptions
@@ -112,7 +130,7 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 	//CHECK if shader compiled
 	GLint compiled = 0;
 	glGetObjectParameterivARB( object, GL_OBJECT_COMPILE_STATUS_ARB, &compiled );
-
+	//glGetShaderiv( object, GL_COMPILE_STATUS, &compiled );
 /*#ifdef _DEBUG
 	if ( compiled )
 	{
@@ -131,8 +149,15 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 	{
 		//FIXME vgDebug::get().logError( "Shaders failed to compile...\n" );
 		//printInfoLog( object );
+		m_shaderLog[shaderType] = getInfoLog( object );
 		return false;
 	}
+
+	if ( m_shaderSaved[shaderType] )
+	{
+		glDetachShader( m_programObject,  m_shaderSaved[shaderType] );
+	}
+	m_shaderSaved[shaderType] = object;
 
 	// ATTACH shader to program object
 	glAttachShader( m_programObject, object );
@@ -171,7 +196,7 @@ const bool GLSLProgram::link()
 	// Checks status
 	GLint linked;
 	glGetObjectParameterivARB( getProgramObject(), GL_OBJECT_LINK_STATUS_ARB, &linked );
-
+	//glGetShaderiv( getProgramObject(), GL_LINK_STATUS, &linked );
 	if ( !linked )
 	{
 		//std::cout << "PROGRAM failed to link..." << std::endl;
@@ -195,6 +220,7 @@ void GLSLProgram::use()
 {
 	assert( getProgramObject() != 0 && "Empty glsl program" );
 	glUseProgramObjectARB( getProgramObject() );
+	//glUseProgram( getProgramObject() );
 }
 
 
@@ -212,6 +238,7 @@ const bool GLSLProgram::isInUse() const
 void GLSLProgram::useFixedPaths()
 {
 	glUseProgramObjectARB( 0 );
+
 }
 
 
@@ -474,6 +501,18 @@ const std::string GLSLProgram::getInfoLog()
 
 
 
+const std::string GLSLProgram::getLogError(const ShaderType shaderType)
+{
+	return m_shaderLog[shaderType];
+}
+
+
+GLhandleARB	GLSLProgram::getName(const ShaderType shaderType)
+{
+	return m_shaderSaved[shaderType];
+}
+
+
 GLhandleARB GLSLProgram::getProgramObject() const
 {
 	return m_programObject;
@@ -504,12 +543,14 @@ const std::string GLSLProgram::getInfoLog( GLhandleARB object )
 
 	int maxLength = 0;
 	glGetObjectParameterivARB( object, GL_OBJECT_INFO_LOG_LENGTH_ARB, &maxLength );
+	//glGetShaderiv(object, GL_INFO_LOG_LENGTH, &maxLength);
 
 	if ( maxLength > 0 )
 	{
 		char *infoLog = new char[maxLength];
 
 		glGetInfoLogARB(object, maxLength, &maxLength, infoLog);
+		//glGetShaderInfoLog(object, maxLength, &maxLength, infoLog);
 
 		strInfoLog.assign( infoLog );
 
@@ -525,6 +566,7 @@ void GLSLProgram::printInfoLog( GLhandleARB object )
 {
 	GLint maxLength = 0;
 	glGetObjectParameterivARB( object, GL_OBJECT_INFO_LOG_LENGTH_ARB, &maxLength );
+	//glGetShaderiv( object, GL_INFO_LOG_LENGTH, &maxLength );
 
 	if ( maxLength > 0 )
 	{
@@ -547,17 +589,21 @@ void GLSLProgram::printInfoLog( GLhandleARB object )
 
 GLenum GLSLProgram::m_GLEnumShaderType[] = 
 {
-	GL_VERTEX_SHADER_ARB,
-	GL_FRAGMENT_SHADER_ARB,
-	GL_GEOMETRY_SHADER_ARB
+	GL_VERTEX_SHADER,
+	GL_TESS_CONTROL_SHADER, 
+	GL_TESS_EVALUATION_SHADER,
+	GL_GEOMETRY_SHADER,
+	GL_FRAGMENT_SHADER
 };
 
 
 std::string GLSLProgram::m_stringShaderType[] =
 {
 	"VERTEX",
-	"FRAGMENT",
-	"GEOMETRY"
+	"TESSELATION_CONTROL", 
+	"TESSELATION_EVALUATION",
+	"GEOMETRY",
+	"FRAGMENT"
 };
 
 
