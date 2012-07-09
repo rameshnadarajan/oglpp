@@ -1,11 +1,13 @@
-// GLE - Copyright (C) 2005, 2007, 2008, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2007, 2008, 2012, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
+// Author Alexandre Di Pino
 
 #ifndef _GLO_GLSLPROGRAM_HPP
 #define _GLO_GLSLPROGRAM_HPP
 
+#include <vector>
 #include <string>
 #include "glo/IResource.hpp"
 
@@ -25,8 +27,11 @@ struct GLO_API GLSLProgram : public IResource
 	enum ShaderType
 	{
 		VERTEX = 0,
+		TESSELATION_CONTROL,
+		TESSELATION_EVALUATION,
+		GEOMETRY,
 		FRAGMENT,
-		GEOMETRY
+		MAX_SHADER_INDEX
 	};
 
 	static const GLenum convertShaderType2GLEnum( const ShaderType shaderType );
@@ -91,6 +96,25 @@ struct GLO_API GLSLProgram : public IResource
 	//@}
 
 
+	/**
+	 * @name Shader accessors
+	 */
+	//@{
+
+	/**
+	 * @brief Gets the shader name
+	 *
+	 * @param shaderType	the type of the needed shader
+	 */
+	GLhandleARB	 getName(const ShaderType shaderType);
+
+	/**
+	 * @brief Gets the log error
+	 *
+	 * @param shaderType	the type of the needed shader
+	 */
+	const std::string getLogError(const ShaderType shaderType);
+	//@}
 
 	/**
 	 * @name Uniform Variables accessors
@@ -139,7 +163,6 @@ struct GLO_API GLSLProgram : public IResource
 
 	const std::string getInfoLog();
 
-	// @todo Fixme : must moved to protected section.
 	GLhandleARB		getProgramObject() const;
 
 
@@ -166,8 +189,12 @@ private:
 
 	GLhandleARB		m_programObject;
 
+	std::vector<GLhandleARB>	m_shaderSaved;
+	std::string					m_shaderLog[MAX_SHADER_INDEX];
+
 	static GLenum		m_GLEnumShaderType[];
 	static std::string	m_stringShaderType[];
+
 
 	static bool		m_firstInstance;
 };
@@ -177,3 +204,4 @@ private:
 } // namespace glo
 
 #endif //#ifndef _GLO_GLSLPROGRAM_HPP
+
