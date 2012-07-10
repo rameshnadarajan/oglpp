@@ -189,8 +189,18 @@ private:
 
 	GLhandleARB		m_programObject;
 
-	std::vector<GLhandleARB>	m_shaderSaved;
-	std::string					m_shaderLog[MAX_SHADER_INDEX];
+	struct ShaderInformations
+	{
+		ShaderInformations()
+		:	shaderSaved(0)
+			//shaderLog
+		{}
+
+		GLhandleARB	shaderSaved;
+		std::string	shaderLog;
+	};
+
+	std::vector<ShaderInformations>	m_shaderInfo;
 
 	static GLenum		m_GLEnumShaderType[];
 	static std::string	m_stringShaderType[];

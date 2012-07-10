@@ -42,10 +42,6 @@ GLSLProgram::GLSLProgram( bool initialized )
 			// FIXME logError("GLSL not supported.\n");
 			return;
 		}
-		//else
-		//{
-			// FIXME logDebug("GLSL is supported.\n");
-		//}
 
 		m_firstInstance = false;
 	}
@@ -59,18 +55,8 @@ GLSLProgram::GLSLProgram( bool initialized )
 	{
 		m_programObject = 0;
 	}
-	
-	for (int i = 0; i < 5 ; ++i)
-	{
-		m_shaderLog[i] = "";
-	}
 
-	m_shaderSaved.resize(5);
-	m_shaderSaved[VERTEX] = 0;
-	m_shaderSaved[TESSELATION_CONTROL] = 0;
-	m_shaderSaved[TESSELATION_EVALUATION] = 0;
-	m_shaderSaved[GEOMETRY] = 0;
-	m_shaderSaved[FRAGMENT] = 0;
+	m_shaderInfo.resize(MAX_SHADER_INDEX);
 }
 
 
@@ -149,15 +135,15 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 	{
 		//FIXME vgDebug::get().logError( "Shaders failed to compile...\n" );
 		//printInfoLog( object );
-		m_shaderLog[shaderType] = getInfoLog( object );
+		m_shaderInfo[shaderType].shaderLog = getInfoLog( object );
 		return false;
 	}
 
-	if ( m_shaderSaved[shaderType] )
+	if ( m_shaderInfo[shaderType].shaderSaved )
 	{
-		glDetachShader( m_programObject,  m_shaderSaved[shaderType] );
+		glDetachShader( m_programObject,  m_shaderInfo[shaderType].shaderSaved );
 	}
-	m_shaderSaved[shaderType] = object;
+	 m_shaderInfo[shaderType].shaderSaved = object;
 
 	// ATTACH shader to program object
 	glAttachShader( m_programObject, object );
@@ -503,13 +489,13 @@ const std::string GLSLProgram::getInfoLog()
 
 const std::string GLSLProgram::getLogError(const ShaderType shaderType)
 {
-	return m_shaderLog[shaderType];
+	return m_shaderInfo[shaderType].shaderLog;
 }
 
 
 GLhandleARB	GLSLProgram::getName(const ShaderType shaderType)
 {
-	return m_shaderSaved[shaderType];
+	return m_shaderInfo[shaderType].shaderSaved;
 }
 
 
