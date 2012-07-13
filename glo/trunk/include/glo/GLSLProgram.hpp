@@ -106,15 +106,73 @@ struct GLO_API GLSLProgram : public IResource
 	 *
 	 * @param shaderType	the type of the needed shader
 	 */
-	GLhandleARB	 getName(const ShaderType shaderType);
+	const GLhandleARB	 getName(const ShaderType shaderType) const;
+
+	/**
+	 * @brief Sets the shader name
+	 *
+	 * @param shaderType	the type of the needed shader
+	 * @param name			the shader name
+	 */
+	void setName(const ShaderType shaderType, GLhandleARB name);
+
+	/**
+	 * @brief Gets the shader code
+	 *
+	 * @param shaderType	the type of the needed shader code
+	 */
+	const std::string getShaderCode(const ShaderType shaderType) const;
+
+	/**
+	 * @brief Sets the shader code
+	 *
+	 * @param shaderType	the type of the needed shader
+	 * @param code			the shader code
+	 */
+	void setShaderCode(const ShaderType shaderType, const std::string code);
 
 	/**
 	 * @brief Gets the log error
 	 *
 	 * @param shaderType	the type of the needed shader
 	 */
-	const std::string getLogError(const ShaderType shaderType);
+	const std::string getLogError(const ShaderType shaderType) const ;
+
+	/**
+	 * @brief Sets the shader log error
+	 *
+	 * @param shaderType	the type of the needed shader
+	 * @param error			the shader code
+	 */
+	void setLogError(const ShaderType shaderType, const std::string error);
+
 	//@}
+
+
+	/**
+	 * @name Program accessors
+	 */
+	//@{
+	
+	/**
+	 * @brief Gets the link log 
+	 */
+	const std::string getLinkLog() const;
+
+	/**
+	 * @brief Gets the program name
+	 */
+	const GLhandleARB getProgramName() const;
+
+	/**
+	 * @brief Sets the program name
+	 *
+	 * @param name the name of the program
+	 */
+	void setProgramName( GLhandleARB name );
+
+	//@}
+
 
 	/**
 	 * @name Uniform Variables accessors
@@ -192,15 +250,21 @@ private:
 	struct ShaderInformations
 	{
 		ShaderInformations()
-		:	shaderSaved(0)
-			//shaderLog
+		:	// shaderCode
+			shaderSaved(0)
+			// shaderLog
 		{}
 
+		std::string shaderCode;
 		GLhandleARB	shaderSaved;
 		std::string	shaderLog;
+
 	};
 
-	std::vector<ShaderInformations>	m_shaderInfo;
+	std::vector<ShaderInformations> m_shaderInfo;
+
+	GLhandleARB m_programName;
+	std::string m_linkLog;
 
 	static GLenum		m_GLEnumShaderType[];
 	static std::string	m_stringShaderType[];

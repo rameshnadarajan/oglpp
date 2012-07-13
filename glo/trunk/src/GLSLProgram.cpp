@@ -98,6 +98,9 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 		// FIXME logError("");
 	}
 
+	// BACKUP SHADER SOURCE
+	m_shaderInfo[shaderType].shaderCode = std::string(shaderSource);
+
 	// SET SOURCES
 	// @todo Creates a GLSLShader.[shaderSource, compile, compileStatus, infoLog, attachTo(GLSLProgram, deleteShader)]
 	// @todo exceptions
@@ -138,12 +141,18 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 		m_shaderInfo[shaderType].shaderLog = getInfoLog( object );
 		return false;
 	}
+	else
+	{
+		m_shaderInfo[shaderType].shaderLog = "";
+	}
 
 	if ( m_shaderInfo[shaderType].shaderSaved )
 	{
 		glDetachShader( m_programObject,  m_shaderInfo[shaderType].shaderSaved );
 	}
-	 m_shaderInfo[shaderType].shaderSaved = object;
+
+	// BACKUP shader object
+	m_shaderInfo[shaderType].shaderSaved = object;
 
 	// ATTACH shader to program object
 	glAttachShader( m_programObject, object );
@@ -188,6 +197,11 @@ const bool GLSLProgram::link()
 		//std::cout << "PROGRAM failed to link..." << std::endl;
 		//std::cerr << "PROGRAM failed to link..." << std::endl;
 		//printInfoLog( getProgramObject() );
+		m_linkLog = getInfoLog( getProgramObject() );
+	}
+	else
+	{
+		m_linkLog = "";
 	}
 #ifdef _DEBUG
 	else
@@ -487,24 +501,50 @@ const std::string GLSLProgram::getInfoLog()
 
 
 
-const std::string GLSLProgram::getLogError(const ShaderType shaderType)
+const std::string GLSLProgram::getLogError(const ShaderType shaderType) const
 {
 	return m_shaderInfo[shaderType].shaderLog;
 }
 
+void GLSLProgram::setLogError(const ShaderType shaderType, const std::string error)
+{
+	m_shaderInfo[shaderType].shaderLog = error;
+}
 
-GLhandleARB	GLSLProgram::getName(const ShaderType shaderType)
+const GLhandleARB	GLSLProgram::getName(const ShaderType shaderType) const
 {
 	return m_shaderInfo[shaderType].shaderSaved;
 }
 
+void GLSLProgram::setName(const ShaderType shaderType, GLhandleARB name)
+{
+	m_shaderInfo[shaderType].shaderSaved = name;
+}
 
 GLhandleARB GLSLProgram::getProgramObject() const
 {
 	return m_programObject;
 }
 
+void GLSLProgram::setProgramName( GLhandleARB name )
+{
+	m_programName = name;
+}
 
+const std::string GLSLProgram::getShaderCode(const ShaderType shaderType) const
+{
+	return m_shaderInfo[shaderType].shaderCode;
+}
+
+void GLSLProgram::setShaderCode(const ShaderType shaderType, const std::string code)
+{
+	m_shaderInfo[shaderType].shaderCode = code;
+}
+
+const std::string GLSLProgram::getLinkLog() const
+{
+	return m_linkLog;
+}
 
 const GLint GLSLProgram::getUniformLocation( const std::string& name )
 {
@@ -599,3 +639,4 @@ bool GLSLProgram::m_firstInstance = true;
 
 
 } // namespace glo
+
