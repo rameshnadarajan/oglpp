@@ -202,14 +202,9 @@ const bool GLSLProgram::link()
 	else
 	{
 		m_linkLog = "";
-	}
-#ifdef _DEBUG
-	else
-	{
 		//std::cout << "PROGRAM have been successfully linked." << std::endl;
 		//printInfoLog( getProgramObject() );
 	}
-#endif
 
 	return linked;
 }
