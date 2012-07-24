@@ -1,4 +1,5 @@
 description	= 'Open(GL) (E)xtensions'
 type		= 'shared'
 version		= '0-3'
-uses		= ['opengl']
+libs		= ['sbf 0-0']
+uses		= ['boost', 'opengl']
