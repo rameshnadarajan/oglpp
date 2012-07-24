@@ -124,12 +124,12 @@ const std::list<std::string> getDictionnary(gle::GLSL_VERSION_LANGUAGE version, 
 					element.push_back(word);
 				}
 				fileopen.close();
-				element.sort(gle::compareNoCase);
+				element.sort(compareNoCase);
 				return element;
 			}
 			if (line == field)	i = true;
 		}
-		element.sort(gle::compareNoCase);
+		element.sort(compareNoCase);
 	}
 	else
 	{
@@ -165,7 +165,7 @@ const std::list<std::string> getAllKeywords(gle::GLSL_VERSION_LANGUAGE version)
 
 	retValue.merge(tmp);
 	retValue.merge(tmp2);
-	retValue.sort(gle::compareNoCase);
+	retValue.sort(compareNoCase);
 	return retValue;
 }
 
