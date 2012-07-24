@@ -163,9 +163,8 @@ const std::list<std::string> getAllKeywords(gle::GLSL_VERSION_LANGUAGE version)
 	std::list<std::string> tmp = getGLSLFunctions(version);
 	std::list<std::string> tmp2 = getGLSLVariables(version);
 
-	retValue.merge(tmp);
-	retValue.merge(tmp2);
-	retValue.sort(compareNoCase);
+	retValue.merge(tmp, compareNoCase);
+	retValue.merge(tmp2, compareNoCase);
 	return retValue;
 }
 
