@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2007, 2008, 2012, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2007, 2008, 2012, Nicolas Papier, Alexandre Di Pino.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -31,6 +31,7 @@ struct GLO_API GLSLProgram : public IResource
 		TESSELATION_EVALUATION,
 		GEOMETRY,
 		FRAGMENT,
+		PROGRAM,
 		MAX_SHADER_INDEX
 	};
 
@@ -109,14 +110,6 @@ struct GLO_API GLSLProgram : public IResource
 	const GLhandleARB	 getName(const ShaderType shaderType) const;
 
 	/**
-	 * @brief Sets the shader name
-	 *
-	 * @param shaderType	the type of the needed shader
-	 * @param name			the shader name
-	 */
-	void setName(const ShaderType shaderType, GLhandleARB name);
-
-	/**
 	 * @brief Gets the shader code
 	 *
 	 * @param shaderType	the type of the needed shader code
@@ -138,14 +131,6 @@ struct GLO_API GLSLProgram : public IResource
 	 */
 	const std::string getLogError(const ShaderType shaderType) const ;
 
-	/**
-	 * @brief Sets the shader log error
-	 *
-	 * @param shaderType	the type of the needed shader
-	 * @param error			the shader code
-	 */
-	void setLogError(const ShaderType shaderType, const std::string error);
-
 	//@}
 
 
@@ -165,11 +150,12 @@ struct GLO_API GLSLProgram : public IResource
 	const GLhandleARB getProgramName() const;
 
 	/**
-	 * @brief Sets the program name
+	 * @brief Sets the shader log error
 	 *
-	 * @param name the name of the program
+	 * @param shaderType	the type of the needed shader
+	 * @param error			the shader code
 	 */
-	void setProgramName( GLhandleARB name );
+	void setLogError(const ShaderType shaderType, const std::string error);
 
 	//@}
 
@@ -245,7 +231,20 @@ private:
 
 	const std::string getInfoLog( GLhandleARB object );
 
-	GLhandleARB		m_programObject;
+	/**
+	 * @brief Sets the program name
+	 *
+	 * @param name the name of the program
+	 */
+	void setProgramName( GLhandleARB name );
+
+	/**
+	 * @brief Sets the shader name
+	 *
+	 * @param shaderType	the type of the needed shader
+	 * @param name			the shader name
+	 */
+	void setName(const ShaderType shaderType, GLhandleARB name);
 
 	struct ShaderInformations
 	{
@@ -263,7 +262,7 @@ private:
 
 	std::vector<ShaderInformations> m_shaderInfo;
 
-	GLhandleARB m_programName;
+	GLhandleARB m_programObject;
 	std::string m_linkLog;
 
 	static GLenum		m_GLEnumShaderType[];
