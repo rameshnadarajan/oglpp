@@ -12,36 +12,10 @@
 #include <sstream>
 #include <string>
 
-#include <boost/locale.hpp>
-
-#include <sbf/pkg/Module.hpp>
-
+#include "gle/GLSLDictionnary.hpp"
 #include "gle/GLSLLanguage.hpp"
 #include "gle/glHelpers.hpp"
-
-
-
-namespace
-{
-/**
- * @brief	Case insensitive comparison of two string
- *
- * @param	first the first string to compare
- *
- * @param	second the second string to compare
- *
- * @return	true if first < second
- */
-const bool compareNoCase(std::string first, std::string second)
-{
-	std::transform(first.begin(), first.end(), first.begin(), tolower);
-	std::transform(second.begin(), second.end(), second.begin(), tolower);
-
-	int i = first.compare(0, second.length(), second);
-
-	return ( (i < 0 ) ? true : false );
-}
-}
+#include "GLSLdictionnary.cpp"
 
 
 namespace gle
@@ -102,70 +76,29 @@ const std::string getCurrentGLSLVersion()
 }
 
 
-const std::list<std::string> getDictionnary(gle::GLSL_VERSION_LANGUAGE version, const std::string& field)
+const std::string getGLSLKeywords(gle::GLSL_VERSION_LANGUAGE version)
 {
-	boost::filesystem::path filepath = sbf::pkg::Module::get()->getPath(sbf::pkg::SharePath);
-	std::string file = filepath.string() + "\\dictionnary_" + glslVersionToString(version) + ".txt";
-	std::list<std::string>	element;
-	
-	std::ifstream fileopen(file);
-	if ( fileopen )
-	{
-		std::string line;
-		bool i = false;
-		while (std::getline( fileopen, line) )
-		{
-			if (i)
-			{
-				std::istringstream iss(line);
-				std::string word;
-				while (std::getline( iss, word, ' '))
-				{
-					element.push_back(word);
-				}
-				fileopen.close();
-				element.sort(compareNoCase);
-				return element;
-			}
-			if (line == field)	i = true;
-		}
-		element.sort(compareNoCase);
-	}
-	else
-	{
-		std::cout << "no openfile" << std::endl;
-	}
-	return element;
+	return gle::glsldictionnaryKeywords[version];
 }
 
 
-const std::list<std::string> getGLSLKeywords(gle::GLSL_VERSION_LANGUAGE version)
+const std::string getGLSLFunctions(gle::GLSL_VERSION_LANGUAGE version)
 {
-	return getDictionnary(version, "[KEYWORDS]");
+	return gle::glsldictionnaryFunctions[version];
 }
 
 
-const std::list<std::string> getGLSLFunctions(gle::GLSL_VERSION_LANGUAGE version)
+const std::string getGLSLVariables(gle::GLSL_VERSION_LANGUAGE version)
 {
-	return getDictionnary(version, "[FUNCTIONS]");
+	return gle::glsldictionnaryVariable[version];
 }
 
 
-const std::list<std::string> getGLSLVariables(gle::GLSL_VERSION_LANGUAGE version)
+const std::string getAllKeywords(gle::GLSL_VERSION_LANGUAGE version)
 {
-	return getDictionnary(version, "[VARIABLES]");
-}
-
-
-const std::list<std::string> getAllKeywords(gle::GLSL_VERSION_LANGUAGE version)
-{
-	std::list<std::string> retValue = getGLSLKeywords(version);
-	std::list<std::string> tmp = getGLSLFunctions(version);
-	std::list<std::string> tmp2 = getGLSLVariables(version);
-
-	retValue.merge(tmp, compareNoCase);
-	retValue.merge(tmp2, compareNoCase);
-	return retValue;
+	return (const std::string(gle::getGLSLKeywords(version) + " " 
+			+ gle::getGLSLFunctions(version) + " " 
+			+ gle::getGLSLVariables(version)));
 }
 
 

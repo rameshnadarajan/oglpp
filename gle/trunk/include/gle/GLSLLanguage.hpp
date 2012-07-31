@@ -11,9 +11,10 @@
 #include <list>
 
 
-
 namespace gle
 {
+
+
 
 enum GLSL_VERSION_LANGUAGE
 {
@@ -54,24 +55,13 @@ GLE_API const GLSL_VERSION_LANGUAGE glslVersionToEnum(const std::string& version
 GLE_API const std::string getCurrentGLSLVersion();
 
 /**
- * @brief Get a dictionnary
- *
- * @param version	the dictionnary version
- *
- * @param field		the dictionnary field. Choose among "[KEYWORDS]", "[FUNCTIONS]" or "[VARIABLES]"
- *
- * @return	all field element
- */
-GLE_API const std::list<std::string> getDictionnary(gle::GLSL_VERSION_LANGUAGE version, const std::string& field);
-
-/**
  * @brief	Get GLSL Keyword
  *
  * @param	version the dictionnary version
  *
  * @return	all field element
  */
-GLE_API const std::list<std::string> getGLSLKeywords(gle::GLSL_VERSION_LANGUAGE version);
+GLE_API const std::string getGLSLKeywords(gle::GLSL_VERSION_LANGUAGE version);
 
 /**
  * @brief	Get GLSL Functions
@@ -80,7 +70,7 @@ GLE_API const std::list<std::string> getGLSLKeywords(gle::GLSL_VERSION_LANGUAGE 
  *
  * @return	all field element
  */
-GLE_API const std::list<std::string> getGLSLFunctions(gle::GLSL_VERSION_LANGUAGE version);
+GLE_API const std::string getGLSLFunctions(gle::GLSL_VERSION_LANGUAGE version);
 
 /**
  * @brief	Get GLSL Variables
@@ -89,7 +79,7 @@ GLE_API const std::list<std::string> getGLSLFunctions(gle::GLSL_VERSION_LANGUAGE
  *
  * @return	all field element
  */
-GLE_API const std::list<std::string> getGLSLVariables(gle::GLSL_VERSION_LANGUAGE version);
+GLE_API const std::string getGLSLVariables(gle::GLSL_VERSION_LANGUAGE version);
 
 /**
  * @brief	Get All Keyword in dictionnary
@@ -98,7 +88,9 @@ GLE_API const std::list<std::string> getGLSLVariables(gle::GLSL_VERSION_LANGUAGE
  *
  * @return	all field element
  */
-GLE_API const std::list<std::string> getAllKeywords(gle::GLSL_VERSION_LANGUAGE version);
+GLE_API const std::string getAllKeywords(gle::GLSL_VERSION_LANGUAGE version);
+
+
 
 }
 
