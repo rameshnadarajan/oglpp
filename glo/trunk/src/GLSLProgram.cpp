@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2007, 2008, 2012, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2007, 2008, 2012, Nicolas Papier, Alexandre Di Pino.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -92,6 +92,7 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 
 	assert( shaderSource	!= 0	);
 
+	//@TODO uncomment
 	if ( !isGL_ARB_tessellation_shader() && ( shaderType == TESSELATION_CONTROL || shaderType == TESSELATION_EVALUATION ) )
 	{
 		std::cerr << "glo.GLSLProgram: Tessellation is not supported" << std::endl;
@@ -143,7 +144,7 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 	}
 	else
 	{
-		m_shaderInfo[shaderType].shaderLog = "";
+		m_shaderInfo[shaderType].shaderLog.clear();
 	}
 
 	if ( m_shaderInfo[shaderType].shaderSaved )
@@ -233,7 +234,6 @@ const bool GLSLProgram::isInUse() const
 void GLSLProgram::useFixedPaths()
 {
 	glUseProgramObjectARB( 0 );
-
 }
 
 
@@ -523,7 +523,7 @@ GLhandleARB GLSLProgram::getProgramObject() const
 
 void GLSLProgram::setProgramName( GLhandleARB name )
 {
-	m_programName = name;
+	m_programObject = name;
 }
 
 const std::string GLSLProgram::getShaderCode(const ShaderType shaderType) const
