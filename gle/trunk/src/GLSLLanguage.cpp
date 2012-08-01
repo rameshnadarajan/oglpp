@@ -12,7 +12,6 @@
 #include <sstream>
 #include <string>
 
-#include "gle/GLSLDictionnary.hpp"
 #include "gle/GLSLLanguage.hpp"
 #include "gle/glHelpers.hpp"
 #include "GLSLdictionnary.cpp"
