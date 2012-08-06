@@ -150,6 +150,11 @@ struct GLO_API GLSLProgram : public IResource
 	const GLhandleARB getProgramName() const;
 
 	/**
+	 * @brief Gets if the current link has success
+	 */
+	const bool getLinkSuccess() const;
+
+	/**
 	 * @brief Sets the shader log error
 	 *
 	 * @param shaderType	the type of the needed shader
@@ -264,6 +269,7 @@ private:
 
 	GLhandleARB m_programObject;
 	std::string m_linkLog;
+	bool		m_linkSuccess;
 
 	static GLenum		m_GLEnumShaderType[];
 	static std::string	m_stringShaderType[];
