@@ -193,20 +193,20 @@ const bool GLSLProgram::link()
 	GLint linked;
 	glGetObjectParameterivARB( getProgramObject(), GL_OBJECT_LINK_STATUS_ARB, &linked );
 	//glGetShaderiv( getProgramObject(), GL_LINK_STATUS, &linked );
-	if ( !linked )
-	{
+	//if ( !linked )
+	//{
 		//std::cout << "PROGRAM failed to link..." << std::endl;
 		//std::cerr << "PROGRAM failed to link..." << std::endl;
 		//printInfoLog( getProgramObject() );
-		m_linkLog = getInfoLog( getProgramObject() );
-	}
-	else
-	{
-		m_linkLog = "";
+	m_linkLog = getInfoLog( getProgramObject() );
+	//}
+	//else
+	//{
+	//	m_linkLog = "";
 		//std::cout << "PROGRAM have been successfully linked." << std::endl;
 		//printInfoLog( getProgramObject() );
-	}
-
+	//}
+	m_linkSuccess = linked;
 	return linked;
 }
 
@@ -524,6 +524,11 @@ GLhandleARB GLSLProgram::getProgramObject() const
 void GLSLProgram::setProgramName( GLhandleARB name )
 {
 	m_programObject = name;
+}
+
+const bool GLSLProgram::getLinkSuccess() const
+{
+	return m_linkSuccess;
 }
 
 const std::string GLSLProgram::getShaderCode(const ShaderType shaderType) const
