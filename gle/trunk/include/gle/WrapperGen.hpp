@@ -1,4 +1,4 @@
-// This file was generated at Mon, 25 Jun 2012 06:01:23 +0000 with gle, please do not modify.
+// This file was generated at Tue, 07 Aug 2012 12:01:33 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-06-18 11:26:35 -0700 (Mon, 18 Jun 2012) $ */
-// #define GL_GLEXT_VERSION 82
+// /* glext.h last updated $Date: 2012-08-06 02:01:01 -0700 (Mon, 06 Aug 2012) $ */
+// #define GL_GLEXT_VERSION 83
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -118,7 +118,7 @@
  */
 
 /** 
- * @defgroup g_GL_ARB			GL_ARB (107 extensions found)
+ * @defgroup g_GL_ARB			GL_ARB (132 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -159,6 +159,11 @@
 
 /** 
  * @defgroup g_GL_INTEL			GL_INTEL (2 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_KHR			GL_KHR (2 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -228,7 +233,7 @@
  */
 
 /** 
- * @defgroup g_GL_VERSION			GL_VERSION (20 extensions found)
+ * @defgroup g_GL_VERSION			GL_VERSION (21 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -3069,6 +3074,46 @@ GLE_API void glShaderBinary(GLsizei count, const GLuint *shaders, GLenum binaryf
 
 
 /**
+ * @defgroup GL_ARB_ES3_compatibility GL_ARB_ES3_compatibility
+ * Extension number in OpenGL registry : 127
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/ES3_compatibility.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_ES3_compatibility is supported.
+ * @return Returns \c true if \b GL_ARB_ES3_compatibility is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_ES3_compatibility();
+
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_arrays_of_arrays GL_ARB_arrays_of_arrays
+ * Extension number in OpenGL registry : 120
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/arrays_of_arrays.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_arrays_of_arrays is supported.
+ * @return Returns \c true if \b GL_ARB_arrays_of_arrays is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_arrays_of_arrays();
+
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_base_instance GL_ARB_base_instance
  * Extension number in OpenGL registry : 107
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/base_instance.txt
@@ -3085,19 +3130,19 @@ GLE_API bool isGL_ARB_base_instance();
 
 
 /**
- * @brief void glDrawArraysInstancedBaseInstance(GLenum mode, GLint first, GLsizei count, GLsizei primcount, GLuint baseinstance)
+ * @brief void glDrawArraysInstancedBaseInstance(GLenum mode, GLint first, GLsizei count, GLsizei instancecount, GLuint baseinstance)
  */
-GLE_API void glDrawArraysInstancedBaseInstance(GLenum mode, GLint first, GLsizei count, GLsizei primcount, GLuint baseinstance);
+GLE_API void glDrawArraysInstancedBaseInstance(GLenum mode, GLint first, GLsizei count, GLsizei instancecount, GLuint baseinstance);
 
 /**
- * @brief void glDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLuint baseinstance)
+ * @brief void glDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLuint baseinstance)
  */
-GLE_API void glDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLuint baseinstance);
+GLE_API void glDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLuint baseinstance);
 
 /**
- * @brief void glDrawElementsInstancedBaseVertexBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLint basevertex, GLuint baseinstance)
+ * @brief void glDrawElementsInstancedBaseVertexBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLint basevertex, GLuint baseinstance)
  */
-GLE_API void glDrawElementsInstancedBaseVertexBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLint basevertex, GLuint baseinstance);
+GLE_API void glDrawElementsInstancedBaseVertexBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLint basevertex, GLuint baseinstance);
 
 //@}
 
@@ -3155,6 +3200,47 @@ GLE_API bool isGL_ARB_cl_event();
  * @brief GLsync glCreateSyncFromCLeventARB(struct _cl_context * context, struct _cl_event * event, GLbitfield flags)
  */
 GLE_API GLsync glCreateSyncFromCLeventARB(struct _cl_context * context, struct _cl_event * event, GLbitfield flags);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_clear_buffer_object GL_ARB_clear_buffer_object
+ * Extension number in OpenGL registry : 121
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/clear_buffer_object.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_clear_buffer_object is supported.
+ * @return Returns \c true if \b GL_ARB_clear_buffer_object is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_clear_buffer_object();
+
+
+
+/**
+ * @brief void glClearBufferData(GLenum target, GLenum internalformat, GLenum format, GLenum type, const void *data)
+ */
+GLE_API void glClearBufferData(GLenum target, GLenum internalformat, GLenum format, GLenum type, const void *data);
+
+/**
+ * @brief void glClearBufferSubData(GLenum target, GLenum internalformat, GLintptr offset, GLsizeiptr size, GLenum format, GLenum type, const void *data)
+ */
+GLE_API void glClearBufferSubData(GLenum target, GLenum internalformat, GLintptr offset, GLsizeiptr size, GLenum format, GLenum type, const void *data);
+
+/**
+ * @brief void glClearNamedBufferDataEXT(GLuint buffer, GLenum internalformat, GLenum format, GLenum type, const void *data)
+ */
+GLE_API void glClearNamedBufferDataEXT(GLuint buffer, GLenum internalformat, GLenum format, GLenum type, const void *data);
+
+/**
+ * @brief void glClearNamedBufferSubDataEXT(GLuint buffer, GLenum internalformat, GLenum format, GLenum type, GLsizeiptr offset, GLsizeiptr size, const void *data)
+ */
+GLE_API void glClearNamedBufferSubDataEXT(GLuint buffer, GLenum internalformat, GLenum format, GLenum type, GLsizeiptr offset, GLsizeiptr size, const void *data);
 
 //@}
 
@@ -3228,6 +3314,37 @@ GLE_API bool isGL_ARB_compressed_texture_pixel_storage();
 
 
 /**
+ * @defgroup GL_ARB_compute_shader GL_ARB_compute_shader
+ * Extension number in OpenGL registry : 122
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/compute_shader.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_compute_shader is supported.
+ * @return Returns \c true if \b GL_ARB_compute_shader is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_compute_shader();
+
+
+
+/**
+ * @brief void glDispatchCompute(GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z)
+ */
+GLE_API void glDispatchCompute(GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z);
+
+/**
+ * @brief void glDispatchComputeIndirect(GLintptr indirect)
+ */
+GLE_API void glDispatchComputeIndirect(GLintptr indirect);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_conservative_depth GL_ARB_conservative_depth
  * Extension number in OpenGL registry : 111
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/conservative_depth.txt
@@ -3274,6 +3391,72 @@ GLE_API void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr
 
 
 /**
+ * @defgroup GL_ARB_copy_image GL_ARB_copy_image
+ * Extension number in OpenGL registry : 123
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/copy_image.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_copy_image is supported.
+ * @return Returns \c true if \b GL_ARB_copy_image is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_copy_image();
+
+
+
+/**
+ * @brief void glCopyImageSubData(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth)
+ */
+GLE_API void glCopyImageSubData(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_debug_group GL_ARB_debug_group
+ * Extension number in OpenGL registry : 124
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/debug_group.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_debug_group is supported.
+ * @return Returns \c true if \b GL_ARB_debug_group is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_debug_group();
+
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_debug_label GL_ARB_debug_label
+ * Extension number in OpenGL registry : 125
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/debug_label.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_debug_label is supported.
+ * @return Returns \c true if \b GL_ARB_debug_label is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_debug_label();
+
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_debug_output GL_ARB_debug_output
  * Extension number in OpenGL registry : 104
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/debug_output.txt
@@ -3308,6 +3491,26 @@ GLE_API void glDebugMessageInsertARB(GLenum source, GLenum type, GLuint id, GLen
  * @brief GLuint glGetDebugMessageLogARB(GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog)
  */
 GLE_API GLuint glGetDebugMessageLogARB(GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_debug_output2 GL_ARB_debug_output2
+ * Extension number in OpenGL registry : 126
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/debug_output2.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_debug_output2 is supported.
+ * @return Returns \c true if \b GL_ARB_debug_output2 is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_debug_output2();
+
 
 //@}
 
@@ -3463,9 +3666,9 @@ GLE_API bool isGL_ARB_draw_elements_base_vertex();
 GLE_API void glDrawElementsBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex);
 
 /**
- * @brief void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount, GLint basevertex)
+ * @brief void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei instancecount, GLint basevertex)
  */
-GLE_API void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount, GLint basevertex);
+GLE_API void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei instancecount, GLint basevertex);
 
 /**
  * @brief void glDrawRangeElementsBaseVertex(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex)
@@ -3473,9 +3676,9 @@ GLE_API void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenu
 GLE_API void glDrawRangeElementsBaseVertex(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex);
 
 /**
- * @brief void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, const GLint *basevertex)
+ * @brief void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei drawcount, const GLint *basevertex)
  */
-GLE_API void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, const GLint *basevertex);
+GLE_API void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei drawcount, const GLint *basevertex);
 
 //@}
 
@@ -3565,6 +3768,26 @@ GLE_API bool isGL_ARB_explicit_attrib_location();
 
 
 /**
+ * @defgroup GL_ARB_explicit_uniform_location GL_ARB_explicit_uniform_location
+ * Extension number in OpenGL registry : 128
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/explicit_uniform_location.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_explicit_uniform_location is supported.
+ * @return Returns \c true if \b GL_ARB_explicit_uniform_location is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_explicit_uniform_location();
+
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_fragment_coord_conventions GL_ARB_fragment_coord_conventions
  * Extension number in OpenGL registry : 63
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/fragment_coord_conventions.txt
@@ -3577,6 +3800,26 @@ GLE_API bool isGL_ARB_explicit_attrib_location();
  * @return Returns \c true if \b GL_ARB_fragment_coord_conventions is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_fragment_coord_conventions();
+
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_fragment_layer_viewport GL_ARB_fragment_layer_viewport
+ * Extension number in OpenGL registry : 129
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/fragment_layer_viewport.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_fragment_layer_viewport is supported.
+ * @return Returns \c true if \b GL_ARB_fragment_layer_viewport is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_fragment_layer_viewport();
 
 
 //@}
@@ -3638,6 +3881,47 @@ GLE_API bool isGL_ARB_fragment_program_shadow();
  */
 GLE_API bool isGL_ARB_fragment_shader();
 
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_no_attachments
+ * Extension number in OpenGL registry : 130
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/framebuffer_no_attachments.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_framebuffer_no_attachments is supported.
+ * @return Returns \c true if \b GL_ARB_framebuffer_no_attachments is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_framebuffer_no_attachments();
+
+
+
+/**
+ * @brief void glFramebufferParameteri(GLenum target, GLenum pname, GLint param)
+ */
+GLE_API void glFramebufferParameteri(GLenum target, GLenum pname, GLint param);
+
+/**
+ * @brief void glGetFramebufferParameteriv(GLenum target, GLenum pname, GLint *params)
+ */
+GLE_API void glGetFramebufferParameteriv(GLenum target, GLenum pname, GLint *params);
+
+/**
+ * @brief void glGetNamedFramebufferParameterivEXT(GLuint framebuffer, GLenum pname, GLint *params)
+ */
+GLE_API void glGetNamedFramebufferParameterivEXT(GLuint framebuffer, GLenum pname, GLint *params);
+
+/**
+ * @brief void glNamedFramebufferParameteriEXT(GLuint framebuffer, GLenum pname, GLint param)
+ */
+GLE_API void glNamedFramebufferParameteriEXT(GLuint framebuffer, GLenum pname, GLint param);
 
 //@}
 
@@ -4146,6 +4430,83 @@ GLE_API void glGetInternalformativ(GLenum target, GLenum internalformat, GLenum 
 
 
 /**
+ * @defgroup GL_ARB_internalformat_query2 GL_ARB_internalformat_query2
+ * Extension number in OpenGL registry : 131
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/internalformat_query2.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_internalformat_query2 is supported.
+ * @return Returns \c true if \b GL_ARB_internalformat_query2 is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_internalformat_query2();
+
+
+
+/**
+ * @brief void glGetInternalformati64v(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint64 *params)
+ */
+GLE_API void glGetInternalformati64v(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint64 *params);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_invalidate_subdata GL_ARB_invalidate_subdata
+ * Extension number in OpenGL registry : 132
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/invalidate_subdata.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_invalidate_subdata is supported.
+ * @return Returns \c true if \b GL_ARB_invalidate_subdata is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_invalidate_subdata();
+
+
+
+/**
+ * @brief void glInvalidateBufferData(GLuint buffer)
+ */
+GLE_API void glInvalidateBufferData(GLuint buffer);
+
+/**
+ * @brief void glInvalidateBufferSubData(GLuint buffer, GLintptr offset, GLsizeiptr length)
+ */
+GLE_API void glInvalidateBufferSubData(GLuint buffer, GLintptr offset, GLsizeiptr length);
+
+/**
+ * @brief void glInvalidateFramebuffer(GLenum target, GLsizei numAttachments, const GLenum *attachments)
+ */
+GLE_API void glInvalidateFramebuffer(GLenum target, GLsizei numAttachments, const GLenum *attachments);
+
+/**
+ * @brief void glInvalidateSubFramebuffer(GLenum target, GLsizei numAttachments, const GLenum *attachments, GLint x, GLint y, GLsizei width, GLsizei height)
+ */
+GLE_API void glInvalidateSubFramebuffer(GLenum target, GLsizei numAttachments, const GLenum *attachments, GLint x, GLint y, GLsizei width, GLsizei height);
+
+/**
+ * @brief void glInvalidateTexImage(GLuint texture, GLint level)
+ */
+GLE_API void glInvalidateTexImage(GLuint texture, GLint level);
+
+/**
+ * @brief void glInvalidateTexSubImage(GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth)
+ */
+GLE_API void glInvalidateTexSubImage(GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_map_buffer_alignment GL_ARB_map_buffer_alignment
  * Extension number in OpenGL registry : 113
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/map_buffer_alignment.txt
@@ -4236,6 +4597,37 @@ GLE_API void glMatrixIndexuivARB(GLint size, const GLuint *indices);
  * @brief void glMatrixIndexusvARB(GLint size, const GLushort *indices)
  */
 GLE_API void glMatrixIndexusvARB(GLint size, const GLushort *indices);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_multi_draw_indirect GL_ARB_multi_draw_indirect
+ * Extension number in OpenGL registry : 133
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/multi_draw_indirect.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_multi_draw_indirect is supported.
+ * @return Returns \c true if \b GL_ARB_multi_draw_indirect is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_multi_draw_indirect();
+
+
+
+/**
+ * @brief void glMultiDrawArraysIndirect(GLenum mode, const void *indirect, GLsizei drawcount, GLsizei stride)
+ */
+GLE_API void glMultiDrawArraysIndirect(GLenum mode, const void *indirect, GLsizei drawcount, GLsizei stride);
+
+/**
+ * @brief void glMultiDrawElementsIndirect(GLenum mode, GLenum type, const void *indirect, GLsizei drawcount, GLsizei stride)
+ */
+GLE_API void glMultiDrawElementsIndirect(GLenum mode, GLenum type, const void *indirect, GLsizei drawcount, GLsizei stride);
 
 //@}
 
@@ -4612,6 +5004,57 @@ GLE_API bool isGL_ARB_point_sprite();
 
 
 /**
+ * @defgroup GL_ARB_program_interface_query GL_ARB_program_interface_query
+ * Extension number in OpenGL registry : 134
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/program_interface_query.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_program_interface_query is supported.
+ * @return Returns \c true if \b GL_ARB_program_interface_query is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_program_interface_query();
+
+
+
+/**
+ * @brief void glGetProgramInterfaceiv(GLuint program, GLenum programInterface, GLenum pname, GLint *params)
+ */
+GLE_API void glGetProgramInterfaceiv(GLuint program, GLenum programInterface, GLenum pname, GLint *params);
+
+/**
+ * @brief GLuint glGetProgramResourceIndex(GLuint program, GLenum programInterface, const GLchar *name)
+ */
+GLE_API GLuint glGetProgramResourceIndex(GLuint program, GLenum programInterface, const GLchar *name);
+
+/**
+ * @brief GLint glGetProgramResourceLocation(GLuint program, GLenum programInterface, const GLchar *name)
+ */
+GLE_API GLint glGetProgramResourceLocation(GLuint program, GLenum programInterface, const GLchar *name);
+
+/**
+ * @brief GLint glGetProgramResourceLocationIndex(GLuint program, GLenum programInterface, const GLchar *name)
+ */
+GLE_API GLint glGetProgramResourceLocationIndex(GLuint program, GLenum programInterface, const GLchar *name);
+
+/**
+ * @brief void glGetProgramResourceName(GLuint program, GLenum programInterface, GLuint index, GLsizei bufSize, GLsizei *length, GLchar *name)
+ */
+GLE_API void glGetProgramResourceName(GLuint program, GLenum programInterface, GLuint index, GLsizei bufSize, GLsizei *length, GLchar *name);
+
+/**
+ * @brief void glGetProgramResourceiv(GLuint program, GLenum programInterface, GLuint index, GLsizei propCount, const GLenum *props, GLsizei bufSize, GLsizei *length, GLint *params)
+ */
+GLE_API void glGetProgramResourceiv(GLuint program, GLenum programInterface, GLuint index, GLsizei propCount, const GLenum *props, GLsizei bufSize, GLsizei *length, GLint *params);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_provoking_vertex GL_ARB_provoking_vertex
  * Extension number in OpenGL registry : 64
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/provoking_vertex.txt
@@ -4631,6 +5074,26 @@ GLE_API bool isGL_ARB_provoking_vertex();
  * @brief void glProvokingVertex(GLenum mode)
  */
 GLE_API void glProvokingVertex(GLenum mode);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_robust_buffer_access_behavior GL_ARB_robust_buffer_access_behavior
+ * Extension number in OpenGL registry : 135
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/robust_buffer_access_behavior.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_robust_buffer_access_behavior is supported.
+ * @return Returns \c true if \b GL_ARB_robust_buffer_access_behavior is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_robust_buffer_access_behavior();
+
 
 //@}
 
@@ -4752,6 +5215,26 @@ GLE_API void glGetnUniformuivARB(GLuint program, GLint location, GLsizei bufSize
  * @brief void glReadnPixelsARB(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLsizei bufSize, GLvoid *data)
  */
 GLE_API void glReadnPixelsARB(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLsizei bufSize, GLvoid *data);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_robustness_isolation GL_ARB_robustness_isolation
+ * Extension number in OpenGL registry : 144
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/robustness_isolation.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_robustness_isolation is supported.
+ * @return Returns \c true if \b GL_ARB_robustness_isolation is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_robustness_isolation();
+
 
 //@}
 
@@ -5294,6 +5777,26 @@ GLE_API void glMemoryBarrier(GLbitfield barriers);
 
 
 /**
+ * @defgroup GL_ARB_shader_image_size GL_ARB_shader_image_size
+ * Extension number in OpenGL registry : 136
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/shader_image_size.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_shader_image_size is supported.
+ * @return Returns \c true if \b GL_ARB_shader_image_size is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_shader_image_size();
+
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_shader_objects GL_ARB_shader_objects
  * Extension number in OpenGL registry : 30
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/shader_objects.txt
@@ -5550,6 +6053,32 @@ GLE_API bool isGL_ARB_shader_stencil_export();
 
 
 /**
+ * @defgroup GL_ARB_shader_storage_buffer_object GL_ARB_shader_storage_buffer_object
+ * Extension number in OpenGL registry : 137
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/shader_storage_buffer_object.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_shader_storage_buffer_object is supported.
+ * @return Returns \c true if \b GL_ARB_shader_storage_buffer_object is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_shader_storage_buffer_object();
+
+
+
+/**
+ * @brief void glShaderStorageBlockBinding(GLuint program, GLuint storageBlockIndex, GLuint storageBlockBinding)
+ */
+GLE_API void glShaderStorageBlockBinding(GLuint program, GLuint storageBlockIndex, GLuint storageBlockBinding);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_shader_subroutine GL_ARB_shader_subroutine
  * Extension number in OpenGL registry : 90
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/shader_subroutine.txt
@@ -5782,6 +6311,26 @@ GLE_API bool isGL_ARB_shadow_ambient();
 
 
 /**
+ * @defgroup GL_ARB_stencil_texturing GL_ARB_stencil_texturing
+ * Extension number in OpenGL registry : 138
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/stencil_texturing.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_stencil_texturing is supported.
+ * @return Returns \c true if \b GL_ARB_stencil_texturing is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_stencil_texturing();
+
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_sync GL_ARB_sync
  * Extension number in OpenGL registry : 66
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/sync.txt
@@ -5928,6 +6477,37 @@ GLE_API void glTexBufferARB(GLenum target, GLenum internalformat, GLuint buffer)
  */
 GLE_API bool isGL_ARB_texture_buffer_object_rgb32();
 
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_texture_buffer_range GL_ARB_texture_buffer_range
+ * Extension number in OpenGL registry : 139
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_buffer_range.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_texture_buffer_range is supported.
+ * @return Returns \c true if \b GL_ARB_texture_buffer_range is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_texture_buffer_range();
+
+
+
+/**
+ * @brief void glTexBufferRange(GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size)
+ */
+GLE_API void glTexBufferRange(GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size);
+
+/**
+ * @brief void glTextureBufferRangeEXT(GLuint texture, GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size)
+ */
+GLE_API void glTextureBufferRangeEXT(GLuint texture, GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size);
 
 //@}
 
@@ -6272,6 +6852,26 @@ GLE_API bool isGL_ARB_texture_non_power_of_two();
 
 
 /**
+ * @defgroup GL_ARB_texture_query_levels GL_ARB_texture_query_levels
+ * Extension number in OpenGL registry : 140
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_query_levels.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_texture_query_levels is supported.
+ * @return Returns \c true if \b GL_ARB_texture_query_levels is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_texture_query_levels();
+
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_texture_query_lod GL_ARB_texture_query_lod
  * Extension number in OpenGL registry : 73
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_query_lod.txt
@@ -6403,6 +7003,47 @@ GLE_API void glTextureStorage3DEXT(GLuint texture, GLenum target, GLsizei levels
 
 
 /**
+ * @defgroup GL_ARB_texture_storage_multisample GL_ARB_texture_storage_multisample
+ * Extension number in OpenGL registry : 141
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_storage_multisample.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_texture_storage_multisample is supported.
+ * @return Returns \c true if \b GL_ARB_texture_storage_multisample is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_texture_storage_multisample();
+
+
+
+/**
+ * @brief void glTexStorage2DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations)
+ */
+GLE_API void glTexStorage2DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations);
+
+/**
+ * @brief void glTexStorage3DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations)
+ */
+GLE_API void glTexStorage3DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
+
+/**
+ * @brief void glTextureStorage2DMultisampleEXT(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations)
+ */
+GLE_API void glTextureStorage2DMultisampleEXT(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations);
+
+/**
+ * @brief void glTextureStorage3DMultisampleEXT(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations)
+ */
+GLE_API void glTextureStorage3DMultisampleEXT(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_ARB_texture_swizzle GL_ARB_texture_swizzle
  * Extension number in OpenGL registry : 84
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_swizzle.txt
@@ -6416,6 +7057,32 @@ GLE_API void glTextureStorage3DEXT(GLuint texture, GLenum target, GLsizei levels
  */
 GLE_API bool isGL_ARB_texture_swizzle();
 
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_texture_view GL_ARB_texture_view
+ * Extension number in OpenGL registry : 142
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/texture_view.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_texture_view is supported.
+ * @return Returns \c true if \b GL_ARB_texture_view is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_texture_view();
+
+
+
+/**
+ * @brief void glTextureView(GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers)
+ */
+GLE_API void glTextureView(GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers);
 
 //@}
 
@@ -6572,14 +7239,14 @@ GLE_API bool isGL_ARB_transform_feedback_instanced();
 
 
 /**
- * @brief void glDrawTransformFeedbackInstanced(GLenum mode, GLuint id, GLsizei primcount)
+ * @brief void glDrawTransformFeedbackInstanced(GLenum mode, GLuint id, GLsizei instancecount)
  */
-GLE_API void glDrawTransformFeedbackInstanced(GLenum mode, GLuint id, GLsizei primcount);
+GLE_API void glDrawTransformFeedbackInstanced(GLenum mode, GLuint id, GLsizei instancecount);
 
 /**
- * @brief void glDrawTransformFeedbackStreamInstanced(GLenum mode, GLuint id, GLuint stream, GLsizei primcount)
+ * @brief void glDrawTransformFeedbackStreamInstanced(GLenum mode, GLuint id, GLuint stream, GLsizei instancecount)
  */
-GLE_API void glDrawTransformFeedbackStreamInstanced(GLenum mode, GLuint id, GLuint stream, GLsizei primcount);
+GLE_API void glDrawTransformFeedbackStreamInstanced(GLenum mode, GLuint id, GLuint stream, GLsizei instancecount);
 
 //@}
 
@@ -6809,6 +7476,87 @@ GLE_API void glVertexAttribL4dv(GLuint index, const GLdouble *v);
  * @brief void glVertexAttribLPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
  */
 GLE_API void glVertexAttribLPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_ARB_vertex_attrib_binding GL_ARB_vertex_attrib_binding
+ * Extension number in OpenGL registry : 143
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/vertex_attrib_binding.txt
+ * @ingroup g_GL_ARB g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_ARB_vertex_attrib_binding is supported.
+ * @return Returns \c true if \b GL_ARB_vertex_attrib_binding is supported, \c false otherwise.
+ */
+GLE_API bool isGL_ARB_vertex_attrib_binding();
+
+
+
+/**
+ * @brief void glBindVertexBuffer(GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride)
+ */
+GLE_API void glBindVertexBuffer(GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride);
+
+/**
+ * @brief void glVertexArrayBindVertexBufferEXT(GLuint vaobj, GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride)
+ */
+GLE_API void glVertexArrayBindVertexBufferEXT(GLuint vaobj, GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride);
+
+/**
+ * @brief void glVertexArrayVertexAttribBindingEXT(GLuint vaobj, GLuint attribindex, GLuint bindingindex)
+ */
+GLE_API void glVertexArrayVertexAttribBindingEXT(GLuint vaobj, GLuint attribindex, GLuint bindingindex);
+
+/**
+ * @brief void glVertexArrayVertexAttribFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLboolean normalized, GLuint relativeoffset)
+ */
+GLE_API void glVertexArrayVertexAttribFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLboolean normalized, GLuint relativeoffset);
+
+/**
+ * @brief void glVertexArrayVertexAttribIFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset)
+ */
+GLE_API void glVertexArrayVertexAttribIFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
+
+/**
+ * @brief void glVertexArrayVertexAttribLFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset)
+ */
+GLE_API void glVertexArrayVertexAttribLFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
+
+/**
+ * @brief void glVertexArrayVertexBindingDivisorEXT(GLuint vaobj, GLuint bindingindex, GLuint divisor)
+ */
+GLE_API void glVertexArrayVertexBindingDivisorEXT(GLuint vaobj, GLuint bindingindex, GLuint divisor);
+
+/**
+ * @brief void glVertexAttribBinding(GLuint attribindex, GLuint bindingindex)
+ */
+GLE_API void glVertexAttribBinding(GLuint attribindex, GLuint bindingindex);
+
+/**
+ * @brief void glVertexAttribFormat(GLuint attribindex, GLint size, GLenum type, GLboolean normalized, GLuint relativeoffset)
+ */
+GLE_API void glVertexAttribFormat(GLuint attribindex, GLint size, GLenum type, GLboolean normalized, GLuint relativeoffset);
+
+/**
+ * @brief void glVertexAttribIFormat(GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset)
+ */
+GLE_API void glVertexAttribIFormat(GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
+
+/**
+ * @brief void glVertexAttribLFormat(GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset)
+ */
+GLE_API void glVertexAttribLFormat(GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
+
+/**
+ * @brief void glVertexBindingDivisor(GLuint bindingindex, GLuint divisor)
+ */
+GLE_API void glVertexBindingDivisor(GLuint bindingindex, GLuint divisor);
 
 //@}
 
@@ -13132,6 +13880,97 @@ GLE_API bool isGL_INTEL_texture_scissor();
 
 
 /**
+ * @defgroup GL_KHR_debug GL_KHR_debug
+ * Extension number in OpenGL registry : 119
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/KHR/debug.txt
+ * @ingroup g_GL_KHR g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_KHR_debug is supported.
+ * @return Returns \c true if \b GL_KHR_debug is supported, \c false otherwise.
+ */
+GLE_API bool isGL_KHR_debug();
+
+
+
+/**
+ * @brief void glDebugMessageCallback(GLDEBUGPROC callback, const void *userParam)
+ */
+GLE_API void glDebugMessageCallback(GLDEBUGPROC callback, const void *userParam);
+
+/**
+ * @brief void glDebugMessageControl(GLenum source, GLenum type, GLenum severity, GLsizei count, const GLuint *ids, GLboolean enabled)
+ */
+GLE_API void glDebugMessageControl(GLenum source, GLenum type, GLenum severity, GLsizei count, const GLuint *ids, GLboolean enabled);
+
+/**
+ * @brief void glDebugMessageInsert(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar *buf)
+ */
+GLE_API void glDebugMessageInsert(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar *buf);
+
+/**
+ * @brief GLuint glGetDebugMessageLog(GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog)
+ */
+GLE_API GLuint glGetDebugMessageLog(GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog);
+
+/**
+ * @brief void glGetObjectLabel(GLenum identifier, GLuint name, GLsizei bufSize, GLsizei *length, GLchar *label)
+ */
+GLE_API void glGetObjectLabel(GLenum identifier, GLuint name, GLsizei bufSize, GLsizei *length, GLchar *label);
+
+/**
+ * @brief void glGetObjectPtrLabel(const void *ptr, GLsizei bufSize, GLsizei *length, GLchar *label)
+ */
+GLE_API void glGetObjectPtrLabel(const void *ptr, GLsizei bufSize, GLsizei *length, GLchar *label);
+
+/**
+ * @brief void glObjectLabel(GLenum identifier, GLuint name, GLsizei length, const GLchar *label)
+ */
+GLE_API void glObjectLabel(GLenum identifier, GLuint name, GLsizei length, const GLchar *label);
+
+/**
+ * @brief void glObjectPtrLabel(const void *ptr, GLsizei length, const GLchar *label)
+ */
+GLE_API void glObjectPtrLabel(const void *ptr, GLsizei length, const GLchar *label);
+
+/**
+ * @brief void glPopDebugGroup(void)
+ */
+GLE_API void glPopDebugGroup(void);
+
+/**
+ * @brief void glPushDebugGroup(GLenum source, GLuint id, GLsizei length, const GLchar *message)
+ */
+GLE_API void glPushDebugGroup(GLenum source, GLuint id, GLsizei length, const GLchar *message);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_ldr
+ * Extension number in OpenGL registry : 118
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/KHR/texture_compression_astc_ldr.txt
+ * @ingroup g_GL_KHR g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_KHR_texture_compression_astc_ldr is supported.
+ * @return Returns \c true if \b GL_KHR_texture_compression_astc_ldr is supported, \c false otherwise.
+ */
+GLE_API bool isGL_KHR_texture_compression_astc_ldr();
+
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_MESAX_texture_stack GL_MESAX_texture_stack
  * Extension number in OpenGL registry : 318
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/MESAX/texture_stack.txt
@@ -15042,9 +15881,9 @@ GLE_API bool isGL_NV_pixel_data_range();
 GLE_API void glFlushPixelDataRangeNV(GLenum target);
 
 /**
- * @brief void glPixelDataRangeNV(GLenum target, GLsizei length, GLvoid *pointer)
+ * @brief void glPixelDataRangeNV(GLenum target, GLsizei length, const GLvoid *pointer)
  */
-GLE_API void glPixelDataRangeNV(GLenum target, GLsizei length, GLvoid *pointer);
+GLE_API void glPixelDataRangeNV(GLenum target, GLsizei length, const GLvoid *pointer);
 
 //@}
 
@@ -19517,14 +20356,14 @@ GLE_API bool isGL_VERSION_1_4();
 GLE_API void glBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
 
 /**
- * @brief void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount)
+ * @brief void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei drawcount)
  */
-GLE_API void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount);
+GLE_API void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei drawcount);
 
 /**
- * @brief void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount)
+ * @brief void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei drawcount)
  */
-GLE_API void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount);
+GLE_API void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei drawcount);
 
 /**
  * @brief void glPointParameterf(GLenum pname, GLfloat param)
@@ -20823,14 +21662,14 @@ GLE_API bool isGL_VERSION_3_1();
 
 
 /**
- * @brief void glDrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei primcount)
+ * @brief void glDrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei instancecount)
  */
-GLE_API void glDrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei primcount);
+GLE_API void glDrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei instancecount);
 
 /**
- * @brief void glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount)
+ * @brief void glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei instancecount)
  */
-GLE_API void glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount);
+GLE_API void glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei instancecount);
 
 /**
  * @brief void glPrimitiveRestartIndex(GLuint index)
@@ -20988,6 +21827,26 @@ GLE_API bool isGL_VERSION_4_1();
  * @return Returns \c true if \b GL_VERSION_4_2 is supported, \c false otherwise.
  */
 GLE_API bool isGL_VERSION_4_2();
+
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_VERSION_4_3 GL_VERSION_4_3
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_VERSION g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_VERSION_4_3 is supported.
+ * @return Returns \c true if \b GL_VERSION_4_3 is supported, \c false otherwise.
+ */
+GLE_API bool isGL_VERSION_4_3();
 
 
 //@}
