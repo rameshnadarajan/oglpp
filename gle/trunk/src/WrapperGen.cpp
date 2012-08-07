@@ -1,4 +1,4 @@
-// This file was generated at Mon, 25 Jun 2012 06:01:23 +0000 with gle, please do not modify.
+// This file was generated at Tue, 07 Aug 2012 12:01:33 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-06-18 11:26:35 -0700 (Mon, 18 Jun 2012) $ */
-// #define GL_GLEXT_VERSION 82
+// /* glext.h last updated $Date: 2012-08-06 02:01:01 -0700 (Mon, 06 Aug 2012) $ */
+// #define GL_GLEXT_VERSION 83
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -1967,6 +1967,28 @@ void glShaderBinary(GLsizei count, const GLuint *shaders, GLenum binaryformat, c
 
 
 
+// ********* GL_ARB_ES3_compatibility *********
+bool isGL_ARB_ES3_compatibility()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_ES3_compatibility;
+
+	return isSupported;
+}
+
+
+
+
+// ********* GL_ARB_arrays_of_arrays *********
+bool isGL_ARB_arrays_of_arrays()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_arrays_of_arrays;
+
+	return isSupported;
+}
+
+
+
+
 // ********* GL_ARB_base_instance *********
 bool isGL_ARB_base_instance()
 {
@@ -1976,19 +1998,19 @@ bool isGL_ARB_base_instance()
 }
 
 
-void glDrawArraysInstancedBaseInstance(GLenum mode, GLint first, GLsizei count, GLsizei primcount, GLuint baseinstance)
+void glDrawArraysInstancedBaseInstance(GLenum mode, GLint first, GLsizei count, GLsizei instancecount, GLuint baseinstance)
 {
-	gleGetCurrent()->glDrawArraysInstancedBaseInstance( mode, first, count, primcount, baseinstance );
+	gleGetCurrent()->glDrawArraysInstancedBaseInstance( mode, first, count, instancecount, baseinstance );
 }
 
-void glDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLuint baseinstance)
+void glDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLuint baseinstance)
 {
-	gleGetCurrent()->glDrawElementsInstancedBaseInstance( mode, count, type, indices, primcount, baseinstance );
+	gleGetCurrent()->glDrawElementsInstancedBaseInstance( mode, count, type, indices, instancecount, baseinstance );
 }
 
-void glDrawElementsInstancedBaseVertexBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLint basevertex, GLuint baseinstance)
+void glDrawElementsInstancedBaseVertexBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLint basevertex, GLuint baseinstance)
 {
-	gleGetCurrent()->glDrawElementsInstancedBaseVertexBaseInstance( mode, count, type, indices, primcount, basevertex, baseinstance );
+	gleGetCurrent()->glDrawElementsInstancedBaseVertexBaseInstance( mode, count, type, indices, instancecount, basevertex, baseinstance );
 }
 
 
@@ -2033,6 +2055,38 @@ GLsync glCreateSyncFromCLeventARB(struct _cl_context * context, struct _cl_event
 
 
 
+// ********* GL_ARB_clear_buffer_object *********
+bool isGL_ARB_clear_buffer_object()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_clear_buffer_object;
+
+	return isSupported;
+}
+
+
+void glClearBufferData(GLenum target, GLenum internalformat, GLenum format, GLenum type, const void *data)
+{
+	gleGetCurrent()->glClearBufferData( target, internalformat, format, type, data );
+}
+
+void glClearBufferSubData(GLenum target, GLenum internalformat, GLintptr offset, GLsizeiptr size, GLenum format, GLenum type, const void *data)
+{
+	gleGetCurrent()->glClearBufferSubData( target, internalformat, offset, size, format, type, data );
+}
+
+void glClearNamedBufferDataEXT(GLuint buffer, GLenum internalformat, GLenum format, GLenum type, const void *data)
+{
+	gleGetCurrent()->glClearNamedBufferDataEXT( buffer, internalformat, format, type, data );
+}
+
+void glClearNamedBufferSubDataEXT(GLuint buffer, GLenum internalformat, GLenum format, GLenum type, GLsizeiptr offset, GLsizeiptr size, const void *data)
+{
+	gleGetCurrent()->glClearNamedBufferSubDataEXT( buffer, internalformat, format, type, offset, size, data );
+}
+
+
+
+
 // ********* GL_ARB_color_buffer_float *********
 bool isGL_ARB_color_buffer_float()
 {
@@ -2072,6 +2126,28 @@ bool isGL_ARB_compressed_texture_pixel_storage()
 
 
 
+// ********* GL_ARB_compute_shader *********
+bool isGL_ARB_compute_shader()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_compute_shader;
+
+	return isSupported;
+}
+
+
+void glDispatchCompute(GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z)
+{
+	gleGetCurrent()->glDispatchCompute( num_groups_x, num_groups_y, num_groups_z );
+}
+
+void glDispatchComputeIndirect(GLintptr indirect)
+{
+	gleGetCurrent()->glDispatchComputeIndirect( indirect );
+}
+
+
+
+
 // ********* GL_ARB_conservative_depth *********
 bool isGL_ARB_conservative_depth()
 {
@@ -2095,6 +2171,45 @@ bool isGL_ARB_copy_buffer()
 void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size)
 {
 	gleGetCurrent()->glCopyBufferSubData( readTarget, writeTarget, readOffset, writeOffset, size );
+}
+
+
+
+
+// ********* GL_ARB_copy_image *********
+bool isGL_ARB_copy_image()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_copy_image;
+
+	return isSupported;
+}
+
+
+void glCopyImageSubData(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth)
+{
+	gleGetCurrent()->glCopyImageSubData( srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth );
+}
+
+
+
+
+// ********* GL_ARB_debug_group *********
+bool isGL_ARB_debug_group()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_debug_group;
+
+	return isSupported;
+}
+
+
+
+
+// ********* GL_ARB_debug_label *********
+bool isGL_ARB_debug_label()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_debug_label;
+
+	return isSupported;
 }
 
 
@@ -2127,6 +2242,17 @@ void glDebugMessageInsertARB(GLenum source, GLenum type, GLuint id, GLenum sever
 GLuint glGetDebugMessageLogARB(GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog)
 {
 	return gleGetCurrent()->glGetDebugMessageLogARB( count, bufsize, sources, types, ids, severities, lengths, messageLog );
+}
+
+
+
+
+// ********* GL_ARB_debug_output2 *********
+bool isGL_ARB_debug_output2()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_debug_output2;
+
+	return isSupported;
 }
 
 
@@ -2228,9 +2354,9 @@ void glDrawElementsBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLv
 	gleGetCurrent()->glDrawElementsBaseVertex( mode, count, type, indices, basevertex );
 }
 
-void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount, GLint basevertex)
+void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei instancecount, GLint basevertex)
 {
-	gleGetCurrent()->glDrawElementsInstancedBaseVertex( mode, count, type, indices, primcount, basevertex );
+	gleGetCurrent()->glDrawElementsInstancedBaseVertex( mode, count, type, indices, instancecount, basevertex );
 }
 
 void glDrawRangeElementsBaseVertex(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices, GLint basevertex)
@@ -2238,9 +2364,9 @@ void glDrawRangeElementsBaseVertex(GLenum mode, GLuint start, GLuint end, GLsize
 	gleGetCurrent()->glDrawRangeElementsBaseVertex( mode, start, end, count, type, indices, basevertex );
 }
 
-void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, const GLint *basevertex)
+void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei drawcount, const GLint *basevertex)
 {
-	gleGetCurrent()->glMultiDrawElementsBaseVertex( mode, count, type, indices, primcount, basevertex );
+	gleGetCurrent()->glMultiDrawElementsBaseVertex( mode, count, type, indices, drawcount, basevertex );
 }
 
 
@@ -2301,10 +2427,32 @@ bool isGL_ARB_explicit_attrib_location()
 
 
 
+// ********* GL_ARB_explicit_uniform_location *********
+bool isGL_ARB_explicit_uniform_location()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_explicit_uniform_location;
+
+	return isSupported;
+}
+
+
+
+
 // ********* GL_ARB_fragment_coord_conventions *********
 bool isGL_ARB_fragment_coord_conventions()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_fragment_coord_conventions;
+
+	return isSupported;
+}
+
+
+
+
+// ********* GL_ARB_fragment_layer_viewport *********
+bool isGL_ARB_fragment_layer_viewport()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_fragment_layer_viewport;
 
 	return isSupported;
 }
@@ -2340,6 +2488,38 @@ bool isGL_ARB_fragment_shader()
 	const bool isSupported = gleGetCurrent()->isGL_ARB_fragment_shader;
 
 	return isSupported;
+}
+
+
+
+
+// ********* GL_ARB_framebuffer_no_attachments *********
+bool isGL_ARB_framebuffer_no_attachments()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_framebuffer_no_attachments;
+
+	return isSupported;
+}
+
+
+void glFramebufferParameteri(GLenum target, GLenum pname, GLint param)
+{
+	gleGetCurrent()->glFramebufferParameteri( target, pname, param );
+}
+
+void glGetFramebufferParameteriv(GLenum target, GLenum pname, GLint *params)
+{
+	gleGetCurrent()->glGetFramebufferParameteriv( target, pname, params );
+}
+
+void glGetNamedFramebufferParameterivEXT(GLuint framebuffer, GLenum pname, GLint *params)
+{
+	gleGetCurrent()->glGetNamedFramebufferParameterivEXT( framebuffer, pname, params );
+}
+
+void glNamedFramebufferParameteriEXT(GLuint framebuffer, GLenum pname, GLint param)
+{
+	gleGetCurrent()->glNamedFramebufferParameteriEXT( framebuffer, pname, param );
 }
 
 
@@ -2729,6 +2909,65 @@ void glGetInternalformativ(GLenum target, GLenum internalformat, GLenum pname, G
 
 
 
+// ********* GL_ARB_internalformat_query2 *********
+bool isGL_ARB_internalformat_query2()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_internalformat_query2;
+
+	return isSupported;
+}
+
+
+void glGetInternalformati64v(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint64 *params)
+{
+	gleGetCurrent()->glGetInternalformati64v( target, internalformat, pname, bufSize, params );
+}
+
+
+
+
+// ********* GL_ARB_invalidate_subdata *********
+bool isGL_ARB_invalidate_subdata()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_invalidate_subdata;
+
+	return isSupported;
+}
+
+
+void glInvalidateBufferData(GLuint buffer)
+{
+	gleGetCurrent()->glInvalidateBufferData( buffer );
+}
+
+void glInvalidateBufferSubData(GLuint buffer, GLintptr offset, GLsizeiptr length)
+{
+	gleGetCurrent()->glInvalidateBufferSubData( buffer, offset, length );
+}
+
+void glInvalidateFramebuffer(GLenum target, GLsizei numAttachments, const GLenum *attachments)
+{
+	gleGetCurrent()->glInvalidateFramebuffer( target, numAttachments, attachments );
+}
+
+void glInvalidateSubFramebuffer(GLenum target, GLsizei numAttachments, const GLenum *attachments, GLint x, GLint y, GLsizei width, GLsizei height)
+{
+	gleGetCurrent()->glInvalidateSubFramebuffer( target, numAttachments, attachments, x, y, width, height );
+}
+
+void glInvalidateTexImage(GLuint texture, GLint level)
+{
+	gleGetCurrent()->glInvalidateTexImage( texture, level );
+}
+
+void glInvalidateTexSubImage(GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth)
+{
+	gleGetCurrent()->glInvalidateTexSubImage( texture, level, xoffset, yoffset, zoffset, width, height, depth );
+}
+
+
+
+
 // ********* GL_ARB_map_buffer_alignment *********
 bool isGL_ARB_map_buffer_alignment()
 {
@@ -2794,6 +3033,28 @@ void glMatrixIndexuivARB(GLint size, const GLuint *indices)
 void glMatrixIndexusvARB(GLint size, const GLushort *indices)
 {
 	gleGetCurrent()->glMatrixIndexusvARB( size, indices );
+}
+
+
+
+
+// ********* GL_ARB_multi_draw_indirect *********
+bool isGL_ARB_multi_draw_indirect()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_multi_draw_indirect;
+
+	return isSupported;
+}
+
+
+void glMultiDrawArraysIndirect(GLenum mode, const void *indirect, GLsizei drawcount, GLsizei stride)
+{
+	gleGetCurrent()->glMultiDrawArraysIndirect( mode, indirect, drawcount, stride );
+}
+
+void glMultiDrawElementsIndirect(GLenum mode, GLenum type, const void *indirect, GLsizei drawcount, GLsizei stride)
+{
+	gleGetCurrent()->glMultiDrawElementsIndirect( mode, type, indirect, drawcount, stride );
 }
 
 
@@ -3105,6 +3366,48 @@ bool isGL_ARB_point_sprite()
 
 
 
+// ********* GL_ARB_program_interface_query *********
+bool isGL_ARB_program_interface_query()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_program_interface_query;
+
+	return isSupported;
+}
+
+
+void glGetProgramInterfaceiv(GLuint program, GLenum programInterface, GLenum pname, GLint *params)
+{
+	gleGetCurrent()->glGetProgramInterfaceiv( program, programInterface, pname, params );
+}
+
+GLuint glGetProgramResourceIndex(GLuint program, GLenum programInterface, const GLchar *name)
+{
+	return gleGetCurrent()->glGetProgramResourceIndex( program, programInterface, name );
+}
+
+GLint glGetProgramResourceLocation(GLuint program, GLenum programInterface, const GLchar *name)
+{
+	return gleGetCurrent()->glGetProgramResourceLocation( program, programInterface, name );
+}
+
+GLint glGetProgramResourceLocationIndex(GLuint program, GLenum programInterface, const GLchar *name)
+{
+	return gleGetCurrent()->glGetProgramResourceLocationIndex( program, programInterface, name );
+}
+
+void glGetProgramResourceName(GLuint program, GLenum programInterface, GLuint index, GLsizei bufSize, GLsizei *length, GLchar *name)
+{
+	gleGetCurrent()->glGetProgramResourceName( program, programInterface, index, bufSize, length, name );
+}
+
+void glGetProgramResourceiv(GLuint program, GLenum programInterface, GLuint index, GLsizei propCount, const GLenum *props, GLsizei bufSize, GLsizei *length, GLint *params)
+{
+	gleGetCurrent()->glGetProgramResourceiv( program, programInterface, index, propCount, props, bufSize, length, params );
+}
+
+
+
+
 // ********* GL_ARB_provoking_vertex *********
 bool isGL_ARB_provoking_vertex()
 {
@@ -3117,6 +3420,17 @@ bool isGL_ARB_provoking_vertex()
 void glProvokingVertex(GLenum mode)
 {
 	gleGetCurrent()->glProvokingVertex( mode );
+}
+
+
+
+
+// ********* GL_ARB_robust_buffer_access_behavior *********
+bool isGL_ARB_robust_buffer_access_behavior()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_robust_buffer_access_behavior;
+
+	return isSupported;
 }
 
 
@@ -3229,6 +3543,17 @@ void glGetnUniformuivARB(GLuint program, GLint location, GLsizei bufSize, GLuint
 void glReadnPixelsARB(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLsizei bufSize, GLvoid *data)
 {
 	gleGetCurrent()->glReadnPixelsARB( x, y, width, height, format, type, bufSize, data );
+}
+
+
+
+
+// ********* GL_ARB_robustness_isolation *********
+bool isGL_ARB_robustness_isolation()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_robustness_isolation;
+
+	return isSupported;
 }
 
 
@@ -3706,6 +4031,17 @@ void glMemoryBarrier(GLbitfield barriers)
 
 
 
+// ********* GL_ARB_shader_image_size *********
+bool isGL_ARB_shader_image_size()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_shader_image_size;
+
+	return isSupported;
+}
+
+
+
+
 // ********* GL_ARB_shader_objects *********
 bool isGL_ARB_shader_objects()
 {
@@ -3935,6 +4271,23 @@ bool isGL_ARB_shader_stencil_export()
 
 
 
+// ********* GL_ARB_shader_storage_buffer_object *********
+bool isGL_ARB_shader_storage_buffer_object()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_shader_storage_buffer_object;
+
+	return isSupported;
+}
+
+
+void glShaderStorageBlockBinding(GLuint program, GLuint storageBlockIndex, GLuint storageBlockBinding)
+{
+	gleGetCurrent()->glShaderStorageBlockBinding( program, storageBlockIndex, storageBlockBinding );
+}
+
+
+
+
 // ********* GL_ARB_shader_subroutine *********
 bool isGL_ARB_shader_subroutine()
 {
@@ -4095,6 +4448,17 @@ bool isGL_ARB_shadow_ambient()
 
 
 
+// ********* GL_ARB_stencil_texturing *********
+bool isGL_ARB_stencil_texturing()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_stencil_texturing;
+
+	return isSupported;
+}
+
+
+
+
 // ********* GL_ARB_sync *********
 bool isGL_ARB_sync()
 {
@@ -4198,6 +4562,28 @@ bool isGL_ARB_texture_buffer_object_rgb32()
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_buffer_object_rgb32;
 
 	return isSupported;
+}
+
+
+
+
+// ********* GL_ARB_texture_buffer_range *********
+bool isGL_ARB_texture_buffer_range()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_buffer_range;
+
+	return isSupported;
+}
+
+
+void glTexBufferRange(GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size)
+{
+	gleGetCurrent()->glTexBufferRange( target, internalformat, buffer, offset, size );
+}
+
+void glTextureBufferRangeEXT(GLuint texture, GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size)
+{
+	gleGetCurrent()->glTextureBufferRangeEXT( texture, target, internalformat, buffer, offset, size );
 }
 
 
@@ -4414,6 +4800,17 @@ bool isGL_ARB_texture_non_power_of_two()
 
 
 
+// ********* GL_ARB_texture_query_levels *********
+bool isGL_ARB_texture_query_levels()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_query_levels;
+
+	return isSupported;
+}
+
+
+
+
 // ********* GL_ARB_texture_query_lod *********
 bool isGL_ARB_texture_query_lod()
 {
@@ -4500,12 +4897,61 @@ void glTextureStorage3DEXT(GLuint texture, GLenum target, GLsizei levels, GLenum
 
 
 
+// ********* GL_ARB_texture_storage_multisample *********
+bool isGL_ARB_texture_storage_multisample()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_storage_multisample;
+
+	return isSupported;
+}
+
+
+void glTexStorage2DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations)
+{
+	gleGetCurrent()->glTexStorage2DMultisample( target, samples, internalformat, width, height, fixedsamplelocations );
+}
+
+void glTexStorage3DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations)
+{
+	gleGetCurrent()->glTexStorage3DMultisample( target, samples, internalformat, width, height, depth, fixedsamplelocations );
+}
+
+void glTextureStorage2DMultisampleEXT(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations)
+{
+	gleGetCurrent()->glTextureStorage2DMultisampleEXT( texture, target, samples, internalformat, width, height, fixedsamplelocations );
+}
+
+void glTextureStorage3DMultisampleEXT(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations)
+{
+	gleGetCurrent()->glTextureStorage3DMultisampleEXT( texture, target, samples, internalformat, width, height, depth, fixedsamplelocations );
+}
+
+
+
+
 // ********* GL_ARB_texture_swizzle *********
 bool isGL_ARB_texture_swizzle()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_swizzle;
 
 	return isSupported;
+}
+
+
+
+
+// ********* GL_ARB_texture_view *********
+bool isGL_ARB_texture_view()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_texture_view;
+
+	return isSupported;
+}
+
+
+void glTextureView(GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers)
+{
+	gleGetCurrent()->glTextureView( texture, target, origtexture, internalformat, minlevel, numlevels, minlayer, numlayers );
 }
 
 
@@ -4626,14 +5072,14 @@ bool isGL_ARB_transform_feedback_instanced()
 }
 
 
-void glDrawTransformFeedbackInstanced(GLenum mode, GLuint id, GLsizei primcount)
+void glDrawTransformFeedbackInstanced(GLenum mode, GLuint id, GLsizei instancecount)
 {
-	gleGetCurrent()->glDrawTransformFeedbackInstanced( mode, id, primcount );
+	gleGetCurrent()->glDrawTransformFeedbackInstanced( mode, id, instancecount );
 }
 
-void glDrawTransformFeedbackStreamInstanced(GLenum mode, GLuint id, GLuint stream, GLsizei primcount)
+void glDrawTransformFeedbackStreamInstanced(GLenum mode, GLuint id, GLuint stream, GLsizei instancecount)
 {
-	gleGetCurrent()->glDrawTransformFeedbackStreamInstanced( mode, id, stream, primcount );
+	gleGetCurrent()->glDrawTransformFeedbackStreamInstanced( mode, id, stream, instancecount );
 }
 
 
@@ -4818,6 +5264,78 @@ void glVertexAttribL4dv(GLuint index, const GLdouble *v)
 void glVertexAttribLPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
 {
 	gleGetCurrent()->glVertexAttribLPointer( index, size, type, stride, pointer );
+}
+
+
+
+
+// ********* GL_ARB_vertex_attrib_binding *********
+bool isGL_ARB_vertex_attrib_binding()
+{
+	const bool isSupported = gleGetCurrent()->isGL_ARB_vertex_attrib_binding;
+
+	return isSupported;
+}
+
+
+void glBindVertexBuffer(GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride)
+{
+	gleGetCurrent()->glBindVertexBuffer( bindingindex, buffer, offset, stride );
+}
+
+void glVertexArrayBindVertexBufferEXT(GLuint vaobj, GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride)
+{
+	gleGetCurrent()->glVertexArrayBindVertexBufferEXT( vaobj, bindingindex, buffer, offset, stride );
+}
+
+void glVertexArrayVertexAttribBindingEXT(GLuint vaobj, GLuint attribindex, GLuint bindingindex)
+{
+	gleGetCurrent()->glVertexArrayVertexAttribBindingEXT( vaobj, attribindex, bindingindex );
+}
+
+void glVertexArrayVertexAttribFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLboolean normalized, GLuint relativeoffset)
+{
+	gleGetCurrent()->glVertexArrayVertexAttribFormatEXT( vaobj, attribindex, size, type, normalized, relativeoffset );
+}
+
+void glVertexArrayVertexAttribIFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset)
+{
+	gleGetCurrent()->glVertexArrayVertexAttribIFormatEXT( vaobj, attribindex, size, type, relativeoffset );
+}
+
+void glVertexArrayVertexAttribLFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset)
+{
+	gleGetCurrent()->glVertexArrayVertexAttribLFormatEXT( vaobj, attribindex, size, type, relativeoffset );
+}
+
+void glVertexArrayVertexBindingDivisorEXT(GLuint vaobj, GLuint bindingindex, GLuint divisor)
+{
+	gleGetCurrent()->glVertexArrayVertexBindingDivisorEXT( vaobj, bindingindex, divisor );
+}
+
+void glVertexAttribBinding(GLuint attribindex, GLuint bindingindex)
+{
+	gleGetCurrent()->glVertexAttribBinding( attribindex, bindingindex );
+}
+
+void glVertexAttribFormat(GLuint attribindex, GLint size, GLenum type, GLboolean normalized, GLuint relativeoffset)
+{
+	gleGetCurrent()->glVertexAttribFormat( attribindex, size, type, normalized, relativeoffset );
+}
+
+void glVertexAttribIFormat(GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset)
+{
+	gleGetCurrent()->glVertexAttribIFormat( attribindex, size, type, relativeoffset );
+}
+
+void glVertexAttribLFormat(GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset)
+{
+	gleGetCurrent()->glVertexAttribLFormat( attribindex, size, type, relativeoffset );
+}
+
+void glVertexBindingDivisor(GLuint bindingindex, GLuint divisor)
+{
+	gleGetCurrent()->glVertexBindingDivisor( bindingindex, divisor );
 }
 
 
@@ -9942,6 +10460,79 @@ bool isGL_INTEL_texture_scissor()
 
 
 
+// ********* GL_KHR_debug *********
+bool isGL_KHR_debug()
+{
+	const bool isSupported = gleGetCurrent()->isGL_KHR_debug;
+
+	return isSupported;
+}
+
+
+void glDebugMessageCallback(GLDEBUGPROC callback, const void *userParam)
+{
+	gleGetCurrent()->glDebugMessageCallback( callback, userParam );
+}
+
+void glDebugMessageControl(GLenum source, GLenum type, GLenum severity, GLsizei count, const GLuint *ids, GLboolean enabled)
+{
+	gleGetCurrent()->glDebugMessageControl( source, type, severity, count, ids, enabled );
+}
+
+void glDebugMessageInsert(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar *buf)
+{
+	gleGetCurrent()->glDebugMessageInsert( source, type, id, severity, length, buf );
+}
+
+GLuint glGetDebugMessageLog(GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog)
+{
+	return gleGetCurrent()->glGetDebugMessageLog( count, bufsize, sources, types, ids, severities, lengths, messageLog );
+}
+
+void glGetObjectLabel(GLenum identifier, GLuint name, GLsizei bufSize, GLsizei *length, GLchar *label)
+{
+	gleGetCurrent()->glGetObjectLabel( identifier, name, bufSize, length, label );
+}
+
+void glGetObjectPtrLabel(const void *ptr, GLsizei bufSize, GLsizei *length, GLchar *label)
+{
+	gleGetCurrent()->glGetObjectPtrLabel( ptr, bufSize, length, label );
+}
+
+void glObjectLabel(GLenum identifier, GLuint name, GLsizei length, const GLchar *label)
+{
+	gleGetCurrent()->glObjectLabel( identifier, name, length, label );
+}
+
+void glObjectPtrLabel(const void *ptr, GLsizei length, const GLchar *label)
+{
+	gleGetCurrent()->glObjectPtrLabel( ptr, length, label );
+}
+
+void glPopDebugGroup(void)
+{
+	gleGetCurrent()->glPopDebugGroup(  );
+}
+
+void glPushDebugGroup(GLenum source, GLuint id, GLsizei length, const GLchar *message)
+{
+	gleGetCurrent()->glPushDebugGroup( source, id, length, message );
+}
+
+
+
+
+// ********* GL_KHR_texture_compression_astc_ldr *********
+bool isGL_KHR_texture_compression_astc_ldr()
+{
+	const bool isSupported = gleGetCurrent()->isGL_KHR_texture_compression_astc_ldr;
+
+	return isSupported;
+}
+
+
+
+
 // ********* GL_MESAX_texture_stack *********
 bool isGL_MESAX_texture_stack()
 {
@@ -11521,7 +12112,7 @@ void glFlushPixelDataRangeNV(GLenum target)
 	gleGetCurrent()->glFlushPixelDataRangeNV( target );
 }
 
-void glPixelDataRangeNV(GLenum target, GLsizei length, GLvoid *pointer)
+void glPixelDataRangeNV(GLenum target, GLsizei length, const GLvoid *pointer)
 {
 	gleGetCurrent()->glPixelDataRangeNV( target, length, pointer );
 }
@@ -14970,14 +15561,14 @@ void glBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlp
 	gleGetCurrent()->glBlendFuncSeparate( sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha );
 }
 
-void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount)
+void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei drawcount)
 {
-	gleGetCurrent()->glMultiDrawArrays( mode, first, count, primcount );
+	gleGetCurrent()->glMultiDrawArrays( mode, first, count, drawcount );
 }
 
-void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount)
+void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei drawcount)
 {
-	gleGetCurrent()->glMultiDrawElements( mode, count, type, indices, primcount );
+	gleGetCurrent()->glMultiDrawElements( mode, count, type, indices, drawcount );
 }
 
 void glPointParameterf(GLenum pname, GLfloat param)
@@ -16186,14 +16777,14 @@ bool isGL_VERSION_3_1()
 }
 
 
-void glDrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei primcount)
+void glDrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei instancecount)
 {
-	gleGetCurrent()->glDrawArraysInstanced( mode, first, count, primcount );
+	gleGetCurrent()->glDrawArraysInstanced( mode, first, count, instancecount );
 }
 
-void glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount)
+void glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei instancecount)
 {
-	gleGetCurrent()->glDrawElementsInstanced( mode, count, type, indices, primcount );
+	gleGetCurrent()->glDrawElementsInstanced( mode, count, type, indices, instancecount );
 }
 
 void glPrimitiveRestartIndex(GLuint index)
@@ -16305,6 +16896,17 @@ bool isGL_VERSION_4_1()
 bool isGL_VERSION_4_2()
 {
 	const bool isSupported = gleGetCurrent()->isGL_VERSION_4_2;
+
+	return isSupported;
+}
+
+
+
+
+// ********* GL_VERSION_4_3 *********
+bool isGL_VERSION_4_3()
+{
+	const bool isSupported = gleGetCurrent()->isGL_VERSION_4_3;
 
 	return isSupported;
 }

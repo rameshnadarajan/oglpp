@@ -1,4 +1,4 @@
-// This file was generated at Mon, 25 Jun 2012 06:01:23 +0000 with gle, please do not modify.
+// This file was generated at Tue, 07 Aug 2012 12:01:33 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-06-18 11:26:35 -0700 (Mon, 18 Jun 2012) $ */
-// #define GL_GLEXT_VERSION 82
+// /* glext.h last updated $Date: 2012-08-06 02:01:01 -0700 (Mon, 06 Aug 2012) $ */
+// #define GL_GLEXT_VERSION 83
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Mon, 25 Jun 2012 06:01:23 +0000
+ * - Stamp = Tue, 07 Aug 2012 12:01:33 +0000
  * - Number of tokens							= 0
- * - Number of functions						= 2235
- * - Number of extensions found(in headers)		= 542
- * - Number of extensions in OpenGL registry	= 506
+ * - Number of functions						= 2291
+ * - Number of extensions found(in headers)		= 570
+ * - Number of extensions in OpenGL registry	= 539
  */
 
 
@@ -198,6 +198,11 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Initialize the GL_INTEL extension group.
 	 */
 	void initializeGL_INTEL();
+
+	/** 
+	 * @brief Initialize the GL_KHR extension group.
+	 */
+	void initializeGL_KHR();
 
 	/** 
 	 * @brief Initialize the GL_MESA extension group.
@@ -2178,6 +2183,26 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_ES3_compatibility ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_ES3_compatibility is supported, false otherwise.
+	 */
+	bool isGL_ARB_ES3_compatibility;
+
+
+
+
+	// ****** GL_ARB_arrays_of_arrays ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_arrays_of_arrays is supported, false otherwise.
+	 */
+	bool isGL_ARB_arrays_of_arrays;
+
+
+
+
 	// ****** GL_ARB_base_instance ******
 
 	/**
@@ -2187,17 +2212,17 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glDrawArraysInstancedBaseInstance(GLenum mode, GLint first, GLsizei count, GLsizei primcount, GLuint baseinstance)
+	 * @brief void glDrawArraysInstancedBaseInstance(GLenum mode, GLint first, GLsizei count, GLsizei instancecount, GLuint baseinstance)
 	 */
 	PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC glDrawArraysInstancedBaseInstance;
 
 	/**
-	 * @brief void glDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLuint baseinstance)
+	 * @brief void glDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLuint baseinstance)
 	 */
 	PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC glDrawElementsInstancedBaseInstance;
 
 	/**
-	 * @brief void glDrawElementsInstancedBaseVertexBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLint basevertex, GLuint baseinstance)
+	 * @brief void glDrawElementsInstancedBaseVertexBaseInstance(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLint basevertex, GLuint baseinstance)
 	 */
 	PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC glDrawElementsInstancedBaseVertexBaseInstance;
 
@@ -2241,6 +2266,37 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_clear_buffer_object ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_clear_buffer_object is supported, false otherwise.
+	 */
+	bool isGL_ARB_clear_buffer_object;
+
+
+	/**
+	 * @brief void glClearBufferData(GLenum target, GLenum internalformat, GLenum format, GLenum type, const void *data)
+	 */
+	PFNGLCLEARBUFFERDATAPROC glClearBufferData;
+
+	/**
+	 * @brief void glClearBufferSubData(GLenum target, GLenum internalformat, GLintptr offset, GLsizeiptr size, GLenum format, GLenum type, const void *data)
+	 */
+	PFNGLCLEARBUFFERSUBDATAPROC glClearBufferSubData;
+
+	/**
+	 * @brief void glClearNamedBufferDataEXT(GLuint buffer, GLenum internalformat, GLenum format, GLenum type, const void *data)
+	 */
+	PFNGLCLEARNAMEDBUFFERDATAEXTPROC glClearNamedBufferDataEXT;
+
+	/**
+	 * @brief void glClearNamedBufferSubDataEXT(GLuint buffer, GLenum internalformat, GLenum format, GLenum type, GLsizeiptr offset, GLsizeiptr size, const void *data)
+	 */
+	PFNGLCLEARNAMEDBUFFERSUBDATAEXTPROC glClearNamedBufferSubDataEXT;
+
+
+
+
 	// ****** GL_ARB_color_buffer_float ******
 
 	/**
@@ -2277,6 +2333,27 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_compute_shader ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_compute_shader is supported, false otherwise.
+	 */
+	bool isGL_ARB_compute_shader;
+
+
+	/**
+	 * @brief void glDispatchCompute(GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z)
+	 */
+	PFNGLDISPATCHCOMPUTEPROC glDispatchCompute;
+
+	/**
+	 * @brief void glDispatchComputeIndirect(GLintptr indirect)
+	 */
+	PFNGLDISPATCHCOMPUTEINDIRECTPROC glDispatchComputeIndirect;
+
+
+
+
 	// ****** GL_ARB_conservative_depth ******
 
 	/**
@@ -2299,6 +2376,42 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size)
 	 */
 	PFNGLCOPYBUFFERSUBDATAPROC glCopyBufferSubData;
+
+
+
+
+	// ****** GL_ARB_copy_image ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_copy_image is supported, false otherwise.
+	 */
+	bool isGL_ARB_copy_image;
+
+
+	/**
+	 * @brief void glCopyImageSubData(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth)
+	 */
+	PFNGLCOPYIMAGESUBDATAPROC glCopyImageSubData;
+
+
+
+
+	// ****** GL_ARB_debug_group ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_debug_group is supported, false otherwise.
+	 */
+	bool isGL_ARB_debug_group;
+
+
+
+
+	// ****** GL_ARB_debug_label ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_debug_label is supported, false otherwise.
+	 */
+	bool isGL_ARB_debug_label;
 
 
 
@@ -2330,6 +2443,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief GLuint glGetDebugMessageLogARB(GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog)
 	 */
 	PFNGLGETDEBUGMESSAGELOGARBPROC glGetDebugMessageLogARB;
+
+
+
+
+	// ****** GL_ARB_debug_output2 ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_debug_output2 is supported, false otherwise.
+	 */
+	bool isGL_ARB_debug_output2;
 
 
 
@@ -2425,7 +2548,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLDRAWELEMENTSBASEVERTEXPROC glDrawElementsBaseVertex;
 
 	/**
-	 * @brief void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount, GLint basevertex)
+	 * @brief void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei instancecount, GLint basevertex)
 	 */
 	PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC glDrawElementsInstancedBaseVertex;
 
@@ -2435,7 +2558,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC glDrawRangeElementsBaseVertex;
 
 	/**
-	 * @brief void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount, const GLint *basevertex)
+	 * @brief void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei drawcount, const GLint *basevertex)
 	 */
 	PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC glMultiDrawElementsBaseVertex;
 
@@ -2494,12 +2617,32 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_explicit_uniform_location ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_explicit_uniform_location is supported, false otherwise.
+	 */
+	bool isGL_ARB_explicit_uniform_location;
+
+
+
+
 	// ****** GL_ARB_fragment_coord_conventions ******
 
 	/**
 	 * @brief Returns \c true if \b GL_ARB_fragment_coord_conventions is supported, false otherwise.
 	 */
 	bool isGL_ARB_fragment_coord_conventions;
+
+
+
+
+	// ****** GL_ARB_fragment_layer_viewport ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_fragment_layer_viewport is supported, false otherwise.
+	 */
+	bool isGL_ARB_fragment_layer_viewport;
 
 
 
@@ -2530,6 +2673,37 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_ARB_fragment_shader is supported, false otherwise.
 	 */
 	bool isGL_ARB_fragment_shader;
+
+
+
+
+	// ****** GL_ARB_framebuffer_no_attachments ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_framebuffer_no_attachments is supported, false otherwise.
+	 */
+	bool isGL_ARB_framebuffer_no_attachments;
+
+
+	/**
+	 * @brief void glFramebufferParameteri(GLenum target, GLenum pname, GLint param)
+	 */
+	PFNGLFRAMEBUFFERPARAMETERIPROC glFramebufferParameteri;
+
+	/**
+	 * @brief void glGetFramebufferParameteriv(GLenum target, GLenum pname, GLint *params)
+	 */
+	PFNGLGETFRAMEBUFFERPARAMETERIVPROC glGetFramebufferParameteriv;
+
+	/**
+	 * @brief void glGetNamedFramebufferParameterivEXT(GLuint framebuffer, GLenum pname, GLint *params)
+	 */
+	PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVEXTPROC glGetNamedFramebufferParameterivEXT;
+
+	/**
+	 * @brief void glNamedFramebufferParameteriEXT(GLuint framebuffer, GLenum pname, GLint param)
+	 */
+	PFNGLNAMEDFRAMEBUFFERPARAMETERIEXTPROC glNamedFramebufferParameteriEXT;
 
 
 
@@ -2905,6 +3079,63 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_internalformat_query2 ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_internalformat_query2 is supported, false otherwise.
+	 */
+	bool isGL_ARB_internalformat_query2;
+
+
+	/**
+	 * @brief void glGetInternalformati64v(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint64 *params)
+	 */
+	PFNGLGETINTERNALFORMATI64VPROC glGetInternalformati64v;
+
+
+
+
+	// ****** GL_ARB_invalidate_subdata ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_invalidate_subdata is supported, false otherwise.
+	 */
+	bool isGL_ARB_invalidate_subdata;
+
+
+	/**
+	 * @brief void glInvalidateBufferData(GLuint buffer)
+	 */
+	PFNGLINVALIDATEBUFFERDATAPROC glInvalidateBufferData;
+
+	/**
+	 * @brief void glInvalidateBufferSubData(GLuint buffer, GLintptr offset, GLsizeiptr length)
+	 */
+	PFNGLINVALIDATEBUFFERSUBDATAPROC glInvalidateBufferSubData;
+
+	/**
+	 * @brief void glInvalidateFramebuffer(GLenum target, GLsizei numAttachments, const GLenum *attachments)
+	 */
+	PFNGLINVALIDATEFRAMEBUFFERPROC glInvalidateFramebuffer;
+
+	/**
+	 * @brief void glInvalidateSubFramebuffer(GLenum target, GLsizei numAttachments, const GLenum *attachments, GLint x, GLint y, GLsizei width, GLsizei height)
+	 */
+	PFNGLINVALIDATESUBFRAMEBUFFERPROC glInvalidateSubFramebuffer;
+
+	/**
+	 * @brief void glInvalidateTexImage(GLuint texture, GLint level)
+	 */
+	PFNGLINVALIDATETEXIMAGEPROC glInvalidateTexImage;
+
+	/**
+	 * @brief void glInvalidateTexSubImage(GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth)
+	 */
+	PFNGLINVALIDATETEXSUBIMAGEPROC glInvalidateTexSubImage;
+
+
+
+
 	// ****** GL_ARB_map_buffer_alignment ******
 
 	/**
@@ -2968,6 +3199,27 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glMatrixIndexusvARB(GLint size, const GLushort *indices)
 	 */
 	PFNGLMATRIXINDEXUSVARBPROC glMatrixIndexusvARB;
+
+
+
+
+	// ****** GL_ARB_multi_draw_indirect ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_multi_draw_indirect is supported, false otherwise.
+	 */
+	bool isGL_ARB_multi_draw_indirect;
+
+
+	/**
+	 * @brief void glMultiDrawArraysIndirect(GLenum mode, const void *indirect, GLsizei drawcount, GLsizei stride)
+	 */
+	PFNGLMULTIDRAWARRAYSINDIRECTPROC glMultiDrawArraysIndirect;
+
+	/**
+	 * @brief void glMultiDrawElementsIndirect(GLenum mode, GLenum type, const void *indirect, GLsizei drawcount, GLsizei stride)
+	 */
+	PFNGLMULTIDRAWELEMENTSINDIRECTPROC glMultiDrawElementsIndirect;
 
 
 
@@ -3271,6 +3523,47 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_program_interface_query ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_program_interface_query is supported, false otherwise.
+	 */
+	bool isGL_ARB_program_interface_query;
+
+
+	/**
+	 * @brief void glGetProgramInterfaceiv(GLuint program, GLenum programInterface, GLenum pname, GLint *params)
+	 */
+	PFNGLGETPROGRAMINTERFACEIVPROC glGetProgramInterfaceiv;
+
+	/**
+	 * @brief GLuint glGetProgramResourceIndex(GLuint program, GLenum programInterface, const GLchar *name)
+	 */
+	PFNGLGETPROGRAMRESOURCEINDEXPROC glGetProgramResourceIndex;
+
+	/**
+	 * @brief GLint glGetProgramResourceLocation(GLuint program, GLenum programInterface, const GLchar *name)
+	 */
+	PFNGLGETPROGRAMRESOURCELOCATIONPROC glGetProgramResourceLocation;
+
+	/**
+	 * @brief GLint glGetProgramResourceLocationIndex(GLuint program, GLenum programInterface, const GLchar *name)
+	 */
+	PFNGLGETPROGRAMRESOURCELOCATIONINDEXPROC glGetProgramResourceLocationIndex;
+
+	/**
+	 * @brief void glGetProgramResourceName(GLuint program, GLenum programInterface, GLuint index, GLsizei bufSize, GLsizei *length, GLchar *name)
+	 */
+	PFNGLGETPROGRAMRESOURCENAMEPROC glGetProgramResourceName;
+
+	/**
+	 * @brief void glGetProgramResourceiv(GLuint program, GLenum programInterface, GLuint index, GLsizei propCount, const GLenum *props, GLsizei bufSize, GLsizei *length, GLint *params)
+	 */
+	PFNGLGETPROGRAMRESOURCEIVPROC glGetProgramResourceiv;
+
+
+
+
 	// ****** GL_ARB_provoking_vertex ******
 
 	/**
@@ -3283,6 +3576,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glProvokingVertex(GLenum mode)
 	 */
 	PFNGLPROVOKINGVERTEXPROC glProvokingVertex;
+
+
+
+
+	// ****** GL_ARB_robust_buffer_access_behavior ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_robust_buffer_access_behavior is supported, false otherwise.
+	 */
+	bool isGL_ARB_robust_buffer_access_behavior;
 
 
 
@@ -3394,6 +3697,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glReadnPixelsARB(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLsizei bufSize, GLvoid *data)
 	 */
 	PFNGLREADNPIXELSARBPROC glReadnPixelsARB;
+
+
+
+
+	// ****** GL_ARB_robustness_isolation ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_robustness_isolation is supported, false otherwise.
+	 */
+	bool isGL_ARB_robustness_isolation;
 
 
 
@@ -3863,6 +4176,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_shader_image_size ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_shader_image_size is supported, false otherwise.
+	 */
+	bool isGL_ARB_shader_image_size;
+
+
+
+
 	// ****** GL_ARB_shader_objects ******
 
 	/**
@@ -4089,6 +4412,22 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_shader_storage_buffer_object ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_shader_storage_buffer_object is supported, false otherwise.
+	 */
+	bool isGL_ARB_shader_storage_buffer_object;
+
+
+	/**
+	 * @brief void glShaderStorageBlockBinding(GLuint program, GLuint storageBlockIndex, GLuint storageBlockBinding)
+	 */
+	PFNGLSHADERSTORAGEBLOCKBINDINGPROC glShaderStorageBlockBinding;
+
+
+
+
 	// ****** GL_ARB_shader_subroutine ******
 
 	/**
@@ -4241,6 +4580,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_stencil_texturing ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_stencil_texturing is supported, false otherwise.
+	 */
+	bool isGL_ARB_stencil_texturing;
+
+
+
+
 	// ****** GL_ARB_sync ******
 
 	/**
@@ -4340,6 +4689,27 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_ARB_texture_buffer_object_rgb32 is supported, false otherwise.
 	 */
 	bool isGL_ARB_texture_buffer_object_rgb32;
+
+
+
+
+	// ****** GL_ARB_texture_buffer_range ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_texture_buffer_range is supported, false otherwise.
+	 */
+	bool isGL_ARB_texture_buffer_range;
+
+
+	/**
+	 * @brief void glTexBufferRange(GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size)
+	 */
+	PFNGLTEXBUFFERRANGEPROC glTexBufferRange;
+
+	/**
+	 * @brief void glTextureBufferRangeEXT(GLuint texture, GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size)
+	 */
+	PFNGLTEXTUREBUFFERRANGEEXTPROC glTextureBufferRangeEXT;
 
 
 
@@ -4541,6 +4911,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_texture_query_levels ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_texture_query_levels is supported, false otherwise.
+	 */
+	bool isGL_ARB_texture_query_levels;
+
+
+
+
 	// ****** GL_ARB_texture_query_lod ******
 
 	/**
@@ -4622,12 +5002,59 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_ARB_texture_storage_multisample ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_texture_storage_multisample is supported, false otherwise.
+	 */
+	bool isGL_ARB_texture_storage_multisample;
+
+
+	/**
+	 * @brief void glTexStorage2DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations)
+	 */
+	PFNGLTEXSTORAGE2DMULTISAMPLEPROC glTexStorage2DMultisample;
+
+	/**
+	 * @brief void glTexStorage3DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations)
+	 */
+	PFNGLTEXSTORAGE3DMULTISAMPLEPROC glTexStorage3DMultisample;
+
+	/**
+	 * @brief void glTextureStorage2DMultisampleEXT(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations)
+	 */
+	PFNGLTEXTURESTORAGE2DMULTISAMPLEEXTPROC glTextureStorage2DMultisampleEXT;
+
+	/**
+	 * @brief void glTextureStorage3DMultisampleEXT(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations)
+	 */
+	PFNGLTEXTURESTORAGE3DMULTISAMPLEEXTPROC glTextureStorage3DMultisampleEXT;
+
+
+
+
 	// ****** GL_ARB_texture_swizzle ******
 
 	/**
 	 * @brief Returns \c true if \b GL_ARB_texture_swizzle is supported, false otherwise.
 	 */
 	bool isGL_ARB_texture_swizzle;
+
+
+
+
+	// ****** GL_ARB_texture_view ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_texture_view is supported, false otherwise.
+	 */
+	bool isGL_ARB_texture_view;
+
+
+	/**
+	 * @brief void glTextureView(GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers)
+	 */
+	PFNGLTEXTUREVIEWPROC glTextureView;
 
 
 
@@ -4744,12 +5171,12 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glDrawTransformFeedbackInstanced(GLenum mode, GLuint id, GLsizei primcount)
+	 * @brief void glDrawTransformFeedbackInstanced(GLenum mode, GLuint id, GLsizei instancecount)
 	 */
 	PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC glDrawTransformFeedbackInstanced;
 
 	/**
-	 * @brief void glDrawTransformFeedbackStreamInstanced(GLenum mode, GLuint id, GLuint stream, GLsizei primcount)
+	 * @brief void glDrawTransformFeedbackStreamInstanced(GLenum mode, GLuint id, GLuint stream, GLsizei instancecount)
 	 */
 	PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC glDrawTransformFeedbackStreamInstanced;
 
@@ -4931,6 +5358,77 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glVertexAttribLPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
 	 */
 	PFNGLVERTEXATTRIBLPOINTERPROC glVertexAttribLPointer;
+
+
+
+
+	// ****** GL_ARB_vertex_attrib_binding ******
+
+	/**
+	 * @brief Returns \c true if \b GL_ARB_vertex_attrib_binding is supported, false otherwise.
+	 */
+	bool isGL_ARB_vertex_attrib_binding;
+
+
+	/**
+	 * @brief void glBindVertexBuffer(GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride)
+	 */
+	PFNGLBINDVERTEXBUFFERPROC glBindVertexBuffer;
+
+	/**
+	 * @brief void glVertexArrayBindVertexBufferEXT(GLuint vaobj, GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride)
+	 */
+	PFNGLVERTEXARRAYBINDVERTEXBUFFEREXTPROC glVertexArrayBindVertexBufferEXT;
+
+	/**
+	 * @brief void glVertexArrayVertexAttribBindingEXT(GLuint vaobj, GLuint attribindex, GLuint bindingindex)
+	 */
+	PFNGLVERTEXARRAYVERTEXATTRIBBINDINGEXTPROC glVertexArrayVertexAttribBindingEXT;
+
+	/**
+	 * @brief void glVertexArrayVertexAttribFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLboolean normalized, GLuint relativeoffset)
+	 */
+	PFNGLVERTEXARRAYVERTEXATTRIBFORMATEXTPROC glVertexArrayVertexAttribFormatEXT;
+
+	/**
+	 * @brief void glVertexArrayVertexAttribIFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset)
+	 */
+	PFNGLVERTEXARRAYVERTEXATTRIBIFORMATEXTPROC glVertexArrayVertexAttribIFormatEXT;
+
+	/**
+	 * @brief void glVertexArrayVertexAttribLFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset)
+	 */
+	PFNGLVERTEXARRAYVERTEXATTRIBLFORMATEXTPROC glVertexArrayVertexAttribLFormatEXT;
+
+	/**
+	 * @brief void glVertexArrayVertexBindingDivisorEXT(GLuint vaobj, GLuint bindingindex, GLuint divisor)
+	 */
+	PFNGLVERTEXARRAYVERTEXBINDINGDIVISOREXTPROC glVertexArrayVertexBindingDivisorEXT;
+
+	/**
+	 * @brief void glVertexAttribBinding(GLuint attribindex, GLuint bindingindex)
+	 */
+	PFNGLVERTEXATTRIBBINDINGPROC glVertexAttribBinding;
+
+	/**
+	 * @brief void glVertexAttribFormat(GLuint attribindex, GLint size, GLenum type, GLboolean normalized, GLuint relativeoffset)
+	 */
+	PFNGLVERTEXATTRIBFORMATPROC glVertexAttribFormat;
+
+	/**
+	 * @brief void glVertexAttribIFormat(GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset)
+	 */
+	PFNGLVERTEXATTRIBIFORMATPROC glVertexAttribIFormat;
+
+	/**
+	 * @brief void glVertexAttribLFormat(GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset)
+	 */
+	PFNGLVERTEXATTRIBLFORMATPROC glVertexAttribLFormat;
+
+	/**
+	 * @brief void glVertexBindingDivisor(GLuint bindingindex, GLuint divisor)
+	 */
+	PFNGLVERTEXBINDINGDIVISORPROC glVertexBindingDivisor;
 
 
 
@@ -9921,6 +10419,77 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_KHR_debug ******
+
+	/**
+	 * @brief Returns \c true if \b GL_KHR_debug is supported, false otherwise.
+	 */
+	bool isGL_KHR_debug;
+
+
+	/**
+	 * @brief void glDebugMessageCallback(GLDEBUGPROC callback, const void *userParam)
+	 */
+	PFNGLDEBUGMESSAGECALLBACKPROC glDebugMessageCallback;
+
+	/**
+	 * @brief void glDebugMessageControl(GLenum source, GLenum type, GLenum severity, GLsizei count, const GLuint *ids, GLboolean enabled)
+	 */
+	PFNGLDEBUGMESSAGECONTROLPROC glDebugMessageControl;
+
+	/**
+	 * @brief void glDebugMessageInsert(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar *buf)
+	 */
+	PFNGLDEBUGMESSAGEINSERTPROC glDebugMessageInsert;
+
+	/**
+	 * @brief GLuint glGetDebugMessageLog(GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog)
+	 */
+	PFNGLGETDEBUGMESSAGELOGPROC glGetDebugMessageLog;
+
+	/**
+	 * @brief void glGetObjectLabel(GLenum identifier, GLuint name, GLsizei bufSize, GLsizei *length, GLchar *label)
+	 */
+	PFNGLGETOBJECTLABELPROC glGetObjectLabel;
+
+	/**
+	 * @brief void glGetObjectPtrLabel(const void *ptr, GLsizei bufSize, GLsizei *length, GLchar *label)
+	 */
+	PFNGLGETOBJECTPTRLABELPROC glGetObjectPtrLabel;
+
+	/**
+	 * @brief void glObjectLabel(GLenum identifier, GLuint name, GLsizei length, const GLchar *label)
+	 */
+	PFNGLOBJECTLABELPROC glObjectLabel;
+
+	/**
+	 * @brief void glObjectPtrLabel(const void *ptr, GLsizei length, const GLchar *label)
+	 */
+	PFNGLOBJECTPTRLABELPROC glObjectPtrLabel;
+
+	/**
+	 * @brief void glPopDebugGroup(void)
+	 */
+	PFNGLPOPDEBUGGROUPPROC glPopDebugGroup;
+
+	/**
+	 * @brief void glPushDebugGroup(GLenum source, GLuint id, GLsizei length, const GLchar *message)
+	 */
+	PFNGLPUSHDEBUGGROUPPROC glPushDebugGroup;
+
+
+
+
+	// ****** GL_KHR_texture_compression_astc_ldr ******
+
+	/**
+	 * @brief Returns \c true if \b GL_KHR_texture_compression_astc_ldr is supported, false otherwise.
+	 */
+	bool isGL_KHR_texture_compression_astc_ldr;
+
+
+
+
 	// ****** GL_MESAX_texture_stack ******
 
 	/**
@@ -11464,7 +12033,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLFLUSHPIXELDATARANGENVPROC glFlushPixelDataRangeNV;
 
 	/**
-	 * @brief void glPixelDataRangeNV(GLenum target, GLsizei length, GLvoid *pointer)
+	 * @brief void glPixelDataRangeNV(GLenum target, GLsizei length, const GLvoid *pointer)
 	 */
 	PFNGLPIXELDATARANGENVPROC glPixelDataRangeNV;
 
@@ -14799,12 +15368,12 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLBLENDFUNCSEPARATEPROC glBlendFuncSeparate;
 
 	/**
-	 * @brief void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount)
+	 * @brief void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei drawcount)
 	 */
 	PFNGLMULTIDRAWARRAYSPROC glMultiDrawArrays;
 
 	/**
-	 * @brief void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei primcount)
+	 * @brief void glMultiDrawElements(GLenum mode, const GLsizei *count, GLenum type, const GLvoid* const *indices, GLsizei drawcount)
 	 */
 	PFNGLMULTIDRAWELEMENTSPROC glMultiDrawElements;
 
@@ -16005,12 +16574,12 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glDrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei primcount)
+	 * @brief void glDrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei instancecount)
 	 */
 	PFNGLDRAWARRAYSINSTANCEDPROC glDrawArraysInstanced;
 
 	/**
-	 * @brief void glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei primcount)
+	 * @brief void glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const GLvoid *indices, GLsizei instancecount)
 	 */
 	PFNGLDRAWELEMENTSINSTANCEDPROC glDrawElementsInstanced;
 
@@ -16121,6 +16690,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_VERSION_4_2 is supported, false otherwise.
 	 */
 	bool isGL_VERSION_4_2;
+
+
+
+
+	// ****** GL_VERSION_4_3 ******
+
+	/**
+	 * @brief Returns \c true if \b GL_VERSION_4_3 is supported, false otherwise.
+	 */
+	bool isGL_VERSION_4_3;
 
 
 
