@@ -31,7 +31,8 @@ static std::string GLSLversion[] =
 	"3.3",
 	"4.0",
 	"4.1",
-	"4.2"
+	"4.2",
+	"4.3"
 };
 
 

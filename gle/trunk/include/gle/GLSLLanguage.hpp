@@ -26,6 +26,7 @@ enum GLSL_VERSION_LANGUAGE
 	v4_0,
 	v4_1,
 	v4_2,
+	v4_3,
 	MAX_VERSION_LANGUAGE
 };
 
