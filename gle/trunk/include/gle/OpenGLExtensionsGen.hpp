@@ -1,4 +1,4 @@
-// This file was generated at Tue, 07 Aug 2012 12:01:33 +0000 with gle, please do not modify.
+// This file was generated at Tue, 28 Aug 2012 11:31:44 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-08-06 02:01:01 -0700 (Mon, 06 Aug 2012) $ */
-// #define GL_GLEXT_VERSION 83
+// /* glext.h last updated $Date: 2012-08-13 16:18:01 -0700 (Mon, 13 Aug 2012) $ */
+// #define GL_GLEXT_VERSION 84
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Tue, 07 Aug 2012 12:01:33 +0000
+ * - Stamp = Tue, 28 Aug 2012 11:31:44 +0000
  * - Number of tokens							= 0
  * - Number of functions						= 2291
- * - Number of extensions found(in headers)		= 570
- * - Number of extensions in OpenGL registry	= 539
+ * - Number of extensions found(in headers)		= 567
+ * - Number of extensions in OpenGL registry	= 541
  */
 
 
@@ -2396,26 +2396,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
-	// ****** GL_ARB_debug_group ******
-
-	/**
-	 * @brief Returns \c true if \b GL_ARB_debug_group is supported, false otherwise.
-	 */
-	bool isGL_ARB_debug_group;
-
-
-
-
-	// ****** GL_ARB_debug_label ******
-
-	/**
-	 * @brief Returns \c true if \b GL_ARB_debug_label is supported, false otherwise.
-	 */
-	bool isGL_ARB_debug_label;
-
-
-
-
 	// ****** GL_ARB_debug_output ******
 
 	/**
@@ -2443,16 +2423,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief GLuint glGetDebugMessageLogARB(GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog)
 	 */
 	PFNGLGETDEBUGMESSAGELOGARBPROC glGetDebugMessageLogARB;
-
-
-
-
-	// ****** GL_ARB_debug_output2 ******
-
-	/**
-	 * @brief Returns \c true if \b GL_ARB_debug_output2 is supported, false otherwise.
-	 */
-	bool isGL_ARB_debug_output2;
 
 
 
