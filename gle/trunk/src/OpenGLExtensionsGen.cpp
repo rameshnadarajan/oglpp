@@ -1,4 +1,4 @@
-// This file was generated at Tue, 07 Aug 2012 12:01:33 +0000 with gle, please do not modify.
+// This file was generated at Tue, 28 Aug 2012 11:31:44 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-08-06 02:01:01 -0700 (Mon, 06 Aug 2012) $ */
-// #define GL_GLEXT_VERSION 83
+// /* glext.h last updated $Date: 2012-08-13 16:18:01 -0700 (Mon, 13 Aug 2012) $ */
+// #define GL_GLEXT_VERSION 84
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -26,7 +26,7 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 570;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 567;
 const int	OpenGLExtensionsGen::m_supportedProcCount		= 2291;
 
 
@@ -708,12 +708,6 @@ void OpenGLExtensionsGen::clear()
 
 	glCopyImageSubData = 0;
 
-	// ****** GL_ARB_debug_group ******
-	isGL_ARB_debug_group = false;
-
-	// ****** GL_ARB_debug_label ******
-	isGL_ARB_debug_label = false;
-
 	// ****** GL_ARB_debug_output ******
 	isGL_ARB_debug_output = false;
 
@@ -721,9 +715,6 @@ void OpenGLExtensionsGen::clear()
 	glDebugMessageControlARB = 0;
 	glDebugMessageInsertARB = 0;
 	glGetDebugMessageLogARB = 0;
-
-	// ****** GL_ARB_debug_output2 ******
-	isGL_ARB_debug_output2 = false;
 
 	// ****** GL_ARB_depth_buffer_float ******
 	isGL_ARB_depth_buffer_float = false;
@@ -9176,68 +9167,6 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 
 
-	isGL_ARB_debug_group = isExtensionSupported("GL_ARB_debug_group");
-
-	localSupportedProcCount		= 0;
-	localInitializedProcCount	= 0;
-
-	if ( isGL_ARB_debug_group )
-	{
-		std::stringstream strStream;
-		strStream << "GL_ARB_debug_group                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
-		log( strStream.str() );
-
-		if ( localInitializedProcCount < localSupportedProcCount  )
-		{
-			std::stringstream strStream;
-			strStream << "GL_ARB_debug_group                                : " << localSupportedProcCount-localInitializedProcCount;
-			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
-			log( strStream.str() );
-		}
-		else
-		{
-			m_initializedExtensions.push_back( std::string("GL_ARB_debug_group") );
-			++m_initializedExtensionCount;
-			m_initializedProcCount += localInitializedProcCount;
-		}
-	}
-	else
-	{
-		logEndl( "GL_ARB_debug_group                                : not detected." );
-	}
-
-
-	isGL_ARB_debug_label = isExtensionSupported("GL_ARB_debug_label");
-
-	localSupportedProcCount		= 0;
-	localInitializedProcCount	= 0;
-
-	if ( isGL_ARB_debug_label )
-	{
-		std::stringstream strStream;
-		strStream << "GL_ARB_debug_label                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
-		log( strStream.str() );
-
-		if ( localInitializedProcCount < localSupportedProcCount  )
-		{
-			std::stringstream strStream;
-			strStream << "GL_ARB_debug_label                                : " << localSupportedProcCount-localInitializedProcCount;
-			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
-			log( strStream.str() );
-		}
-		else
-		{
-			m_initializedExtensions.push_back( std::string("GL_ARB_debug_label") );
-			++m_initializedExtensionCount;
-			m_initializedProcCount += localInitializedProcCount;
-		}
-	}
-	else
-	{
-		logEndl( "GL_ARB_debug_label                                : not detected." );
-	}
-
-
 	isGL_ARB_debug_output = isExtensionSupported("GL_ARB_debug_output");
 
 	localSupportedProcCount		= 4;
@@ -9282,37 +9211,6 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	else
 	{
 		logEndl( "GL_ARB_debug_output                               : not detected." );
-	}
-
-
-	isGL_ARB_debug_output2 = isExtensionSupported("GL_ARB_debug_output2");
-
-	localSupportedProcCount		= 0;
-	localInitializedProcCount	= 0;
-
-	if ( isGL_ARB_debug_output2 )
-	{
-		std::stringstream strStream;
-		strStream << "GL_ARB_debug_output2                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
-		log( strStream.str() );
-
-		if ( localInitializedProcCount < localSupportedProcCount  )
-		{
-			std::stringstream strStream;
-			strStream << "GL_ARB_debug_output2                              : " << localSupportedProcCount-localInitializedProcCount;
-			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
-			log( strStream.str() );
-		}
-		else
-		{
-			m_initializedExtensions.push_back( std::string("GL_ARB_debug_output2") );
-			++m_initializedExtensionCount;
-			m_initializedProcCount += localInitializedProcCount;
-		}
-	}
-	else
-	{
-		logEndl( "GL_ARB_debug_output2                              : not detected." );
 	}
 
 
