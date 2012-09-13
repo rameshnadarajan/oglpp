@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2008, 2010, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2008, 2010, 2012, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -129,6 +129,34 @@ void Texture::setAutomaticMipmapGenerationEnabled( const bool isEnabled )
 void Texture::generateMipmap()
 {
 	glGenerateMipmap( m_target );
+}
+
+
+
+void Texture::setMaxAnisotropy( const float value )
+{
+	assert( value >= 1.f );
+	assert( value <= getMaxAllowedMaxAnisotropy() );
+
+	parameter( GL_TEXTURE_MAX_ANISOTROPY_EXT, value );
+}
+
+
+
+const float Texture::getMaxAnisotropy() const
+{
+	GLfloat glfloat;
+	glGetFloatv( GL_TEXTURE_MAX_ANISOTROPY_EXT, &glfloat );
+	return glfloat;
+}
+
+
+
+const float Texture::getMaxAllowedMaxAnisotropy() const
+{
+	GLfloat glfloat;
+	glGetFloatv( GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, &glfloat );
+	return glfloat;
 }
 
 

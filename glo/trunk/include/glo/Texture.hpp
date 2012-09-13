@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2010, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2010, 2012, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -16,7 +16,7 @@ namespace glo
 /**
  * @brief Encapsulation of a texture object
  * 
- * @todo uses isBound() (assert at the beginning of mehtod).
+ * @todo uses isBound() (assert at the beginning of method).
  * @todo adds cache of opengl accessors used in getSize()
  * 
  * @todo Improve documentation, error handling.
@@ -80,8 +80,8 @@ public:
 
 
 	/**
-	 * @todo Equivalent to glCopyTexImage (1D or 2D)
-	 * @remarks not in 3D
+	 * todo Equivalent to glCopyTexImage (1D or 2D)
+	 * remarks not in 3D
 	 */
 	/*virtual void copyTexImage(	const GLint level, const GLenum internalFormat,
 							const GLint x, const GLint y, const GLint z,
@@ -89,7 +89,7 @@ public:
 							const GLint border ) const = 0;*/
 
 	/**
-	 * @todo Equivalent to glCopyTexSubImage (1D or 2D or 3D)
+	 * todo Equivalent to glCopyTexSubImage (1D or 2D or 3D)
 	 */
 	/*virtual void copyTexSubImage(	const GLint level,
 							const GLint xoffset, const GLint yoffset, const GLint zoffset,
@@ -163,6 +163,33 @@ public:
 	GLO_API void generateMipmap();
 	//@}
 
+
+
+	/**
+	 * @name Anisotropic filtering
+	 */
+	//@{
+
+	/**
+	 * @brief Sets the maximum degree of anisotropy.
+	 *
+	 * This value is the maximum number of samples that can be taken of the texture by the anisotropic filtering technique.
+	 *
+	 * @pre 1 <= value and value <= getMaxAllowedMaxAnisotropy()
+	 * @param value		a floating-point that can be set between 1.0f and getMaxAllowedMaxAnisotropy()
+	 */
+	GLO_API void setMaxAnisotropy( const float value );
+
+	/**
+	 * @brief Returns the maximum degree of anisotropy.
+	 */
+	GLO_API const float getMaxAnisotropy() const;
+
+	/**
+	 * @brief Returns the limit of the maximum degree of anisotropy.
+	 */
+	GLO_API const float getMaxAllowedMaxAnisotropy() const;
+	//@}
 
 
 	/**
