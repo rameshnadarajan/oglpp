@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2010, 2011, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2010, 2011, 2012, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -288,6 +288,7 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 
 	GLint		glint;
 	GLboolean	glbool;
+	GLfloat		glfloat;
 
 	GLint red, green, blue, alpha;
 	glGetIntegerv( GL_RED_BITS,		&red );
@@ -373,6 +374,7 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 	glGetIntegerv( GL_MAX_VERTEX_ATTRIBS, &glint );
 	strInfos << "GL_MAX_VERTEX_ATTRIBS			= " << glint << std::endl << std::endl;
 
+
 	glGetIntegerv( GL_MAX_VERTEX_UNIFORM_COMPONENTS, &glint );
 	strInfos << "GL_MAX_VERTEX_UNIFORM_COMPONENTS	= " << glint << std::endl;
 
@@ -433,6 +435,9 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 
 	glGetIntegerv( GL_MAX_CUBE_MAP_TEXTURE_SIZE, &glint );
 	strInfos << "GL_MAX_CUBE_MAP_TEXTURE_SIZE		= " << glint << " x " << glint << std::endl;
+
+	glGetFloatv( GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, &glfloat );
+	strInfos << "GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT 		= " << glfloat << std::endl;
 
 	strInfos << std::endl;
 
