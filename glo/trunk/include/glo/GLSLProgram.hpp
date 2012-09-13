@@ -31,7 +31,7 @@ struct GLO_API GLSLProgram : public IResource
 		TESSELATION_EVALUATION,
 		GEOMETRY,
 		FRAGMENT,
-		PROGRAM,
+		PROGRAM,		///< not a real shader type (used by ShadersEditor)
 		MAX_SHADER_INDEX
 	};
 
