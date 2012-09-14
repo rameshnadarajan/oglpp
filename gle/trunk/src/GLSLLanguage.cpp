@@ -54,6 +54,7 @@ const GLSL_VERSION_LANGUAGE glslVersionToEnum(const std::string& version)
 		++i;
 	}
 	assert(false && "Internal error");
+	return static_cast<GLSL_VERSION_LANGUAGE>(0);
 }
 
 
