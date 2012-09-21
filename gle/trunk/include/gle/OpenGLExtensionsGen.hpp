@@ -1,4 +1,4 @@
-// This file was generated at Tue, 28 Aug 2012 11:31:44 +0000 with gle, please do not modify.
+// This file was generated at Fri, 21 Sep 2012 09:51:51 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-08-13 16:18:01 -0700 (Mon, 13 Aug 2012) $ */
-// #define GL_GLEXT_VERSION 84
+// /* glext.h last updated $Date: 2012-09-19 19:02:24 -0700 (Wed, 19 Sep 2012) $ */
+// #define GL_GLEXT_VERSION 85
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -25,10 +25,10 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Tue, 28 Aug 2012 11:31:44 +0000
+ * - Stamp = Fri, 21 Sep 2012 09:51:51 +0000
  * - Number of tokens							= 0
- * - Number of functions						= 2291
- * - Number of extensions found(in headers)		= 567
+ * - Number of functions						= 2295
+ * - Number of extensions found(in headers)		= 559
  * - Number of extensions in OpenGL registry	= 541
  */
 
@@ -1732,6 +1732,27 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_AMD_sparse_texture ******
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_sparse_texture is supported, false otherwise.
+	 */
+	bool isGL_AMD_sparse_texture;
+
+
+	/**
+	 * @brief void glTexStorageSparseAMD(GLenum target, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLsizei layers, GLbitfield flags)
+	 */
+	PFNGLTEXSTORAGESPARSEAMDPROC glTexStorageSparseAMD;
+
+	/**
+	 * @brief void glTextureStorageSparseAMD(GLuint texture, GLenum target, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLsizei layers, GLbitfield flags)
+	 */
+	PFNGLTEXTURESTORAGESPARSEAMDPROC glTextureStorageSparseAMD;
+
+
+
+
 	// ****** GL_AMD_stencil_operation_extended ******
 
 	/**
@@ -2789,16 +2810,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
-	// ****** GL_ARB_framebuffer_object_DEPRECATED ******
-
-	/**
-	 * @brief Returns \c true if \b GL_ARB_framebuffer_object_DEPRECATED is supported, false otherwise.
-	 */
-	bool isGL_ARB_framebuffer_object_DEPRECATED;
-
-
-
-
 	// ****** GL_ARB_framebuffer_sRGB ******
 
 	/**
@@ -3003,16 +3014,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_ARB_imaging is supported, false otherwise.
 	 */
 	bool isGL_ARB_imaging;
-
-
-
-
-	// ****** GL_ARB_imaging_DEPRECATED ******
-
-	/**
-	 * @brief Returns \c true if \b GL_ARB_imaging_DEPRECATED is supported, false otherwise.
-	 */
-	bool isGL_ARB_imaging_DEPRECATED;
 
 
 
@@ -8989,6 +8990,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
+	 * @brief void glGetPixelTransformParameterfvEXT(GLenum target, GLenum pname, GLfloat *params)
+	 */
+	PFNGLGETPIXELTRANSFORMPARAMETERFVEXTPROC glGetPixelTransformParameterfvEXT;
+
+	/**
+	 * @brief void glGetPixelTransformParameterivEXT(GLenum target, GLenum pname, GLint *params)
+	 */
+	PFNGLGETPIXELTRANSFORMPARAMETERIVEXTPROC glGetPixelTransformParameterivEXT;
+
+	/**
 	 * @brief void glPixelTransformParameterfEXT(GLenum target, GLenum pname, GLfloat param)
 	 */
 	PFNGLPIXELTRANSFORMPARAMETERFEXTPROC glPixelTransformParameterfEXT;
@@ -10054,7 +10065,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glVertexWeightPointerEXT(GLsizei size, GLenum type, GLsizei stride, const GLvoid *pointer)
+	 * @brief void glVertexWeightPointerEXT(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
 	 */
 	PFNGLVERTEXWEIGHTPOINTEREXTPROC glVertexWeightPointerEXT;
 
@@ -12604,7 +12615,7 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLVDPAUREGISTEROUTPUTSURFACENVPROC glVDPAURegisterOutputSurfaceNV;
 
 	/**
-	 * @brief GLvdpauSurfaceNV glVDPAURegisterVideoSurfaceNV(GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames)
+	 * @brief GLvdpauSurfaceNV glVDPAURegisterVideoSurfaceNV(const GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames)
 	 */
 	PFNGLVDPAUREGISTERVIDEOSURFACENVPROC glVDPAURegisterVideoSurfaceNV;
 
@@ -14879,37 +14890,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	PFNGLBLENDEQUATIONPROC glBlendEquation;
 
 	/**
-	 * @brief void glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height)
-	 */
-	PFNGLCOPYTEXSUBIMAGE3DPROC glCopyTexSubImage3D;
-
-	/**
-	 * @brief void glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices)
-	 */
-	PFNGLDRAWRANGEELEMENTSPROC glDrawRangeElements;
-
-	/**
-	 * @brief void glTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
-	 */
-	PFNGLTEXIMAGE3DPROC glTexImage3D;
-
-	/**
-	 * @brief void glTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels)
-	 */
-	PFNGLTEXSUBIMAGE3DPROC glTexSubImage3D;
-
-
-
-
-	// ****** GL_VERSION_1_2_DEPRECATED ******
-
-	/**
-	 * @brief Returns \c true if \b GL_VERSION_1_2_DEPRECATED is supported, false otherwise.
-	 */
-	bool isGL_VERSION_1_2_DEPRECATED;
-
-
-	/**
 	 * @brief void glColorSubTable(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const GLvoid *data)
 	 */
 	PFNGLCOLORSUBTABLEPROC glColorSubTable;
@@ -14978,6 +14958,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glCopyConvolutionFilter2D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height)
 	 */
 	PFNGLCOPYCONVOLUTIONFILTER2DPROC glCopyConvolutionFilter2D;
+
+	/**
+	 * @brief void glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height)
+	 */
+	PFNGLCOPYTEXSUBIMAGE3DPROC glCopyTexSubImage3D;
+
+	/**
+	 * @brief void glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices)
+	 */
+	PFNGLDRAWRANGEELEMENTSPROC glDrawRangeElements;
 
 	/**
 	 * @brief void glGetColorTable(GLenum target, GLenum format, GLenum type, GLvoid *table)
@@ -15069,6 +15059,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 */
 	PFNGLSEPARABLEFILTER2DPROC glSeparableFilter2D;
 
+	/**
+	 * @brief void glTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
+	 */
+	PFNGLTEXIMAGE3DPROC glTexImage3D;
+
+	/**
+	 * @brief void glTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels)
+	 */
+	PFNGLTEXSUBIMAGE3DPROC glTexSubImage3D;
+
 
 
 
@@ -15084,6 +15084,11 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glActiveTexture(GLenum texture)
 	 */
 	PFNGLACTIVETEXTUREPROC glActiveTexture;
+
+	/**
+	 * @brief void glClientActiveTexture(GLenum texture)
+	 */
+	PFNGLCLIENTACTIVETEXTUREPROC glClientActiveTexture;
 
 	/**
 	 * @brief void glCompressedTexImage1D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *data)
@@ -15119,27 +15124,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glGetCompressedTexImage(GLenum target, GLint level, GLvoid *img)
 	 */
 	PFNGLGETCOMPRESSEDTEXIMAGEPROC glGetCompressedTexImage;
-
-	/**
-	 * @brief void glSampleCoverage(GLfloat value, GLboolean invert)
-	 */
-	PFNGLSAMPLECOVERAGEPROC glSampleCoverage;
-
-
-
-
-	// ****** GL_VERSION_1_3_DEPRECATED ******
-
-	/**
-	 * @brief Returns \c true if \b GL_VERSION_1_3_DEPRECATED is supported, false otherwise.
-	 */
-	bool isGL_VERSION_1_3_DEPRECATED;
-
-
-	/**
-	 * @brief void glClientActiveTexture(GLenum texture)
-	 */
-	PFNGLCLIENTACTIVETEXTUREPROC glClientActiveTexture;
 
 	/**
 	 * @brief void glLoadTransposeMatrixd(const GLdouble *m)
@@ -15321,6 +15305,11 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 */
 	PFNGLMULTITEXCOORD4SVPROC glMultiTexCoord4sv;
 
+	/**
+	 * @brief void glSampleCoverage(GLfloat value, GLboolean invert)
+	 */
+	PFNGLSAMPLECOVERAGEPROC glSampleCoverage;
+
 
 
 
@@ -15336,6 +15325,31 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha)
 	 */
 	PFNGLBLENDFUNCSEPARATEPROC glBlendFuncSeparate;
+
+	/**
+	 * @brief void glFogCoordPointer(GLenum type, GLsizei stride, const GLvoid *pointer)
+	 */
+	PFNGLFOGCOORDPOINTERPROC glFogCoordPointer;
+
+	/**
+	 * @brief void glFogCoordd(GLdouble coord)
+	 */
+	PFNGLFOGCOORDDPROC glFogCoordd;
+
+	/**
+	 * @brief void glFogCoorddv(const GLdouble *coord)
+	 */
+	PFNGLFOGCOORDDVPROC glFogCoorddv;
+
+	/**
+	 * @brief void glFogCoordf(GLfloat coord)
+	 */
+	PFNGLFOGCOORDFPROC glFogCoordf;
+
+	/**
+	 * @brief void glFogCoordfv(const GLfloat *coord)
+	 */
+	PFNGLFOGCOORDFVPROC glFogCoordfv;
 
 	/**
 	 * @brief void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei drawcount)
@@ -15366,42 +15380,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glPointParameteriv(GLenum pname, const GLint *params)
 	 */
 	PFNGLPOINTPARAMETERIVPROC glPointParameteriv;
-
-
-
-
-	// ****** GL_VERSION_1_4_DEPRECATED ******
-
-	/**
-	 * @brief Returns \c true if \b GL_VERSION_1_4_DEPRECATED is supported, false otherwise.
-	 */
-	bool isGL_VERSION_1_4_DEPRECATED;
-
-
-	/**
-	 * @brief void glFogCoordPointer(GLenum type, GLsizei stride, const GLvoid *pointer)
-	 */
-	PFNGLFOGCOORDPOINTERPROC glFogCoordPointer;
-
-	/**
-	 * @brief void glFogCoordd(GLdouble coord)
-	 */
-	PFNGLFOGCOORDDPROC glFogCoordd;
-
-	/**
-	 * @brief void glFogCoorddv(const GLdouble *coord)
-	 */
-	PFNGLFOGCOORDDVPROC glFogCoorddv;
-
-	/**
-	 * @brief void glFogCoordf(GLfloat coord)
-	 */
-	PFNGLFOGCOORDFPROC glFogCoordf;
-
-	/**
-	 * @brief void glFogCoordfv(const GLfloat *coord)
-	 */
-	PFNGLFOGCOORDFVPROC glFogCoordfv;
 
 	/**
 	 * @brief void glSecondaryColor3b(GLbyte red, GLbyte green, GLbyte blue)
@@ -15673,16 +15651,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief GLboolean glUnmapBuffer(GLenum target)
 	 */
 	PFNGLUNMAPBUFFERPROC glUnmapBuffer;
-
-
-
-
-	// ****** GL_VERSION_1_5_DEPRECATED ******
-
-	/**
-	 * @brief Returns \c true if \b GL_VERSION_1_5_DEPRECATED is supported, false otherwise.
-	 */
-	bool isGL_VERSION_1_5_DEPRECATED;
 
 
 
@@ -16163,16 +16131,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
-	// ****** GL_VERSION_2_0_DEPRECATED ******
-
-	/**
-	 * @brief Returns \c true if \b GL_VERSION_2_0_DEPRECATED is supported, false otherwise.
-	 */
-	bool isGL_VERSION_2_0_DEPRECATED;
-
-
-
-
 	// ****** GL_VERSION_2_1 ******
 
 	/**
@@ -16210,16 +16168,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glUniformMatrix4x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
 	 */
 	PFNGLUNIFORMMATRIX4X3FVPROC glUniformMatrix4x3fv;
-
-
-
-
-	// ****** GL_VERSION_2_1_DEPRECATED ******
-
-	/**
-	 * @brief Returns \c true if \b GL_VERSION_2_1_DEPRECATED is supported, false otherwise.
-	 */
-	bool isGL_VERSION_2_1_DEPRECATED;
 
 
 
@@ -16521,16 +16469,6 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief void glVertexAttribIPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
 	 */
 	PFNGLVERTEXATTRIBIPOINTERPROC glVertexAttribIPointer;
-
-
-
-
-	// ****** GL_VERSION_3_0_DEPRECATED ******
-
-	/**
-	 * @brief Returns \c true if \b GL_VERSION_3_0_DEPRECATED is supported, false otherwise.
-	 */
-	bool isGL_VERSION_3_0_DEPRECATED;
 
 
 

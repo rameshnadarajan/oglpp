@@ -1,4 +1,4 @@
-// This file was generated at Tue, 28 Aug 2012 11:31:44 +0000 with gle, please do not modify.
+// This file was generated at Fri, 21 Sep 2012 09:51:51 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-08-13 16:18:01 -0700 (Mon, 13 Aug 2012) $ */
-// #define GL_GLEXT_VERSION 84
+// /* glext.h last updated $Date: 2012-09-19 19:02:24 -0700 (Wed, 19 Sep 2012) $ */
+// #define GL_GLEXT_VERSION 85
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -1493,6 +1493,28 @@ bool isGL_AMD_shader_stencil_export()
 
 
 
+// ********* GL_AMD_sparse_texture *********
+bool isGL_AMD_sparse_texture()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_sparse_texture;
+
+	return isSupported;
+}
+
+
+void glTexStorageSparseAMD(GLenum target, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLsizei layers, GLbitfield flags)
+{
+	gleGetCurrent()->glTexStorageSparseAMD( target, internalFormat, width, height, depth, layers, flags );
+}
+
+void glTextureStorageSparseAMD(GLuint texture, GLenum target, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLsizei layers, GLbitfield flags)
+{
+	gleGetCurrent()->glTextureStorageSparseAMD( texture, target, internalFormat, width, height, depth, layers, flags );
+}
+
+
+
+
 // ********* GL_AMD_stencil_operation_extended *********
 bool isGL_AMD_stencil_operation_extended()
 {
@@ -2604,17 +2626,6 @@ void glRenderbufferStorageMultisample(GLenum target, GLsizei samples, GLenum int
 
 
 
-// ********* GL_ARB_framebuffer_object_DEPRECATED *********
-bool isGL_ARB_framebuffer_object_DEPRECATED()
-{
-	const bool isSupported = gleGetCurrent()->isGL_ARB_framebuffer_object_DEPRECATED;
-
-	return isSupported;
-}
-
-
-
-
 // ********* GL_ARB_framebuffer_sRGB *********
 bool isGL_ARB_framebuffer_sRGB()
 {
@@ -2824,17 +2835,6 @@ bool isGL_ARB_half_float_vertex()
 bool isGL_ARB_imaging()
 {
 	const bool isSupported = gleGetCurrent()->isGL_ARB_imaging;
-
-	return isSupported;
-}
-
-
-
-
-// ********* GL_ARB_imaging_DEPRECATED *********
-bool isGL_ARB_imaging_DEPRECATED()
-{
-	const bool isSupported = gleGetCurrent()->isGL_ARB_imaging_DEPRECATED;
 
 	return isSupported;
 }
@@ -8963,6 +8963,16 @@ bool isGL_EXT_pixel_transform()
 }
 
 
+void glGetPixelTransformParameterfvEXT(GLenum target, GLenum pname, GLfloat *params)
+{
+	gleGetCurrent()->glGetPixelTransformParameterfvEXT( target, pname, params );
+}
+
+void glGetPixelTransformParameterivEXT(GLenum target, GLenum pname, GLint *params)
+{
+	gleGetCurrent()->glGetPixelTransformParameterivEXT( target, pname, params );
+}
+
 void glPixelTransformParameterfEXT(GLenum target, GLenum pname, GLfloat param)
 {
 	gleGetCurrent()->glPixelTransformParameterfEXT( target, pname, param );
@@ -10072,7 +10082,7 @@ bool isGL_EXT_vertex_weighting()
 }
 
 
-void glVertexWeightPointerEXT(GLsizei size, GLenum type, GLsizei stride, const GLvoid *pointer)
+void glVertexWeightPointerEXT(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
 {
 	gleGetCurrent()->glVertexWeightPointerEXT( size, type, stride, pointer );
 }
@@ -12703,7 +12713,7 @@ GLvdpauSurfaceNV glVDPAURegisterOutputSurfaceNV(GLvoid *vdpSurface, GLenum targe
 	return gleGetCurrent()->glVDPAURegisterOutputSurfaceNV( vdpSurface, target, numTextureNames, textureNames );
 }
 
-GLvdpauSurfaceNV glVDPAURegisterVideoSurfaceNV(GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames)
+GLvdpauSurfaceNV glVDPAURegisterVideoSurfaceNV(const GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames)
 {
 	return gleGetCurrent()->glVDPAURegisterVideoSurfaceNV( vdpSurface, target, numTextureNames, textureNames );
 }
@@ -15065,38 +15075,6 @@ void glBlendEquation(GLenum mode)
 	gleGetCurrent()->glBlendEquation( mode );
 }
 
-void glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height)
-{
-	gleGetCurrent()->glCopyTexSubImage3D( target, level, xoffset, yoffset, zoffset, x, y, width, height );
-}
-
-void glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices)
-{
-	gleGetCurrent()->glDrawRangeElements( mode, start, end, count, type, indices );
-}
-
-void glTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
-{
-	gleGetCurrent()->glTexImage3D( target, level, internalformat, width, height, depth, border, format, type, pixels );
-}
-
-void glTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels)
-{
-	gleGetCurrent()->glTexSubImage3D( target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels );
-}
-
-
-
-
-// ********* GL_VERSION_1_2_DEPRECATED *********
-bool isGL_VERSION_1_2_DEPRECATED()
-{
-	const bool isSupported = gleGetCurrent()->isGL_VERSION_1_2_DEPRECATED;
-
-	return isSupported;
-}
-
-
 void glColorSubTable(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const GLvoid *data)
 {
 	gleGetCurrent()->glColorSubTable( target, start, count, format, type, data );
@@ -15165,6 +15143,16 @@ void glCopyConvolutionFilter1D(GLenum target, GLenum internalformat, GLint x, GL
 void glCopyConvolutionFilter2D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height)
 {
 	gleGetCurrent()->glCopyConvolutionFilter2D( target, internalformat, x, y, width, height );
+}
+
+void glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height)
+{
+	gleGetCurrent()->glCopyTexSubImage3D( target, level, xoffset, yoffset, zoffset, x, y, width, height );
+}
+
+void glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices)
+{
+	gleGetCurrent()->glDrawRangeElements( mode, start, end, count, type, indices );
 }
 
 void glGetColorTable(GLenum target, GLenum format, GLenum type, GLvoid *table)
@@ -15257,6 +15245,16 @@ void glSeparableFilter2D(GLenum target, GLenum internalformat, GLsizei width, GL
 	gleGetCurrent()->glSeparableFilter2D( target, internalformat, width, height, format, type, row, column );
 }
 
+void glTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
+{
+	gleGetCurrent()->glTexImage3D( target, level, internalformat, width, height, depth, border, format, type, pixels );
+}
+
+void glTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels)
+{
+	gleGetCurrent()->glTexSubImage3D( target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels );
+}
+
 
 
 
@@ -15272,6 +15270,11 @@ bool isGL_VERSION_1_3()
 void glActiveTexture(GLenum texture)
 {
 	gleGetCurrent()->glActiveTexture( texture );
+}
+
+void glClientActiveTexture(GLenum texture)
+{
+	gleGetCurrent()->glClientActiveTexture( texture );
 }
 
 void glCompressedTexImage1D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *data)
@@ -15307,28 +15310,6 @@ void glCompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint 
 void glGetCompressedTexImage(GLenum target, GLint level, GLvoid *img)
 {
 	gleGetCurrent()->glGetCompressedTexImage( target, level, img );
-}
-
-void glSampleCoverage(GLfloat value, GLboolean invert)
-{
-	gleGetCurrent()->glSampleCoverage( value, invert );
-}
-
-
-
-
-// ********* GL_VERSION_1_3_DEPRECATED *********
-bool isGL_VERSION_1_3_DEPRECATED()
-{
-	const bool isSupported = gleGetCurrent()->isGL_VERSION_1_3_DEPRECATED;
-
-	return isSupported;
-}
-
-
-void glClientActiveTexture(GLenum texture)
-{
-	gleGetCurrent()->glClientActiveTexture( texture );
 }
 
 void glLoadTransposeMatrixd(const GLdouble *m)
@@ -15511,6 +15492,11 @@ void glMultiTexCoord4sv(GLenum target, const GLshort *v)
 	gleGetCurrent()->glMultiTexCoord4sv( target, v );
 }
 
+void glSampleCoverage(GLfloat value, GLboolean invert)
+{
+	gleGetCurrent()->glSampleCoverage( value, invert );
+}
+
 
 
 
@@ -15526,6 +15512,31 @@ bool isGL_VERSION_1_4()
 void glBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha)
 {
 	gleGetCurrent()->glBlendFuncSeparate( sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha );
+}
+
+void glFogCoordPointer(GLenum type, GLsizei stride, const GLvoid *pointer)
+{
+	gleGetCurrent()->glFogCoordPointer( type, stride, pointer );
+}
+
+void glFogCoordd(GLdouble coord)
+{
+	gleGetCurrent()->glFogCoordd( coord );
+}
+
+void glFogCoorddv(const GLdouble *coord)
+{
+	gleGetCurrent()->glFogCoorddv( coord );
+}
+
+void glFogCoordf(GLfloat coord)
+{
+	gleGetCurrent()->glFogCoordf( coord );
+}
+
+void glFogCoordfv(const GLfloat *coord)
+{
+	gleGetCurrent()->glFogCoordfv( coord );
 }
 
 void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei drawcount)
@@ -15556,43 +15567,6 @@ void glPointParameteri(GLenum pname, GLint param)
 void glPointParameteriv(GLenum pname, const GLint *params)
 {
 	gleGetCurrent()->glPointParameteriv( pname, params );
-}
-
-
-
-
-// ********* GL_VERSION_1_4_DEPRECATED *********
-bool isGL_VERSION_1_4_DEPRECATED()
-{
-	const bool isSupported = gleGetCurrent()->isGL_VERSION_1_4_DEPRECATED;
-
-	return isSupported;
-}
-
-
-void glFogCoordPointer(GLenum type, GLsizei stride, const GLvoid *pointer)
-{
-	gleGetCurrent()->glFogCoordPointer( type, stride, pointer );
-}
-
-void glFogCoordd(GLdouble coord)
-{
-	gleGetCurrent()->glFogCoordd( coord );
-}
-
-void glFogCoorddv(const GLdouble *coord)
-{
-	gleGetCurrent()->glFogCoorddv( coord );
-}
-
-void glFogCoordf(GLfloat coord)
-{
-	gleGetCurrent()->glFogCoordf( coord );
-}
-
-void glFogCoordfv(const GLfloat *coord)
-{
-	gleGetCurrent()->glFogCoordfv( coord );
 }
 
 void glSecondaryColor3b(GLbyte red, GLbyte green, GLbyte blue)
@@ -15865,17 +15839,6 @@ GLvoid* glMapBuffer(GLenum target, GLenum access)
 GLboolean glUnmapBuffer(GLenum target)
 {
 	return gleGetCurrent()->glUnmapBuffer( target );
-}
-
-
-
-
-// ********* GL_VERSION_1_5_DEPRECATED *********
-bool isGL_VERSION_1_5_DEPRECATED()
-{
-	const bool isSupported = gleGetCurrent()->isGL_VERSION_1_5_DEPRECATED;
-
-	return isSupported;
 }
 
 
@@ -16358,17 +16321,6 @@ void glVertexAttribPointer(GLuint index, GLint size, GLenum type, GLboolean norm
 
 
 
-// ********* GL_VERSION_2_0_DEPRECATED *********
-bool isGL_VERSION_2_0_DEPRECATED()
-{
-	const bool isSupported = gleGetCurrent()->isGL_VERSION_2_0_DEPRECATED;
-
-	return isSupported;
-}
-
-
-
-
 // ********* GL_VERSION_2_1 *********
 bool isGL_VERSION_2_1()
 {
@@ -16406,17 +16358,6 @@ void glUniformMatrix4x2fv(GLint location, GLsizei count, GLboolean transpose, co
 void glUniformMatrix4x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
 {
 	gleGetCurrent()->glUniformMatrix4x3fv( location, count, transpose, value );
-}
-
-
-
-
-// ********* GL_VERSION_2_1_DEPRECATED *********
-bool isGL_VERSION_2_1_DEPRECATED()
-{
-	const bool isSupported = gleGetCurrent()->isGL_VERSION_2_1_DEPRECATED;
-
-	return isSupported;
 }
 
 
@@ -16719,17 +16660,6 @@ void glVertexAttribI4usv(GLuint index, const GLushort *v)
 void glVertexAttribIPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
 {
 	gleGetCurrent()->glVertexAttribIPointer( index, size, type, stride, pointer );
-}
-
-
-
-
-// ********* GL_VERSION_3_0_DEPRECATED *********
-bool isGL_VERSION_3_0_DEPRECATED()
-{
-	const bool isSupported = gleGetCurrent()->isGL_VERSION_3_0_DEPRECATED;
-
-	return isSupported;
 }
 
 

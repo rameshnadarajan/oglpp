@@ -1,4 +1,4 @@
-// This file was generated at Tue, 28 Aug 2012 11:31:44 +0000 with gle, please do not modify.
+// This file was generated at Fri, 21 Sep 2012 09:51:51 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-08-13 16:18:01 -0700 (Mon, 13 Aug 2012) $ */
-// #define GL_GLEXT_VERSION 84
+// /* glext.h last updated $Date: 2012-09-19 19:02:24 -0700 (Wed, 19 Sep 2012) $ */
+// #define GL_GLEXT_VERSION 85
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -108,7 +108,7 @@
  */
 
 /** 
- * @defgroup g_GL_AMD			GL_AMD (19 extensions found)
+ * @defgroup g_GL_AMD			GL_AMD (20 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -118,7 +118,7 @@
  */
 
 /** 
- * @defgroup g_GL_ARB			GL_ARB (129 extensions found)
+ * @defgroup g_GL_ARB			GL_ARB (127 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -233,7 +233,7 @@
  */
 
 /** 
- * @defgroup g_GL_VERSION			GL_VERSION (21 extensions found)
+ * @defgroup g_GL_VERSION			GL_VERSION (14 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -2393,6 +2393,37 @@ GLE_API bool isGL_AMD_shader_stencil_export();
 
 
 /**
+ * @defgroup GL_AMD_sparse_texture GL_AMD_sparse_texture
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_AMD_sparse_texture is supported.
+ * @return Returns \c true if \b GL_AMD_sparse_texture is supported, \c false otherwise.
+ */
+GLE_API bool isGL_AMD_sparse_texture();
+
+
+
+/**
+ * @brief void glTexStorageSparseAMD(GLenum target, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLsizei layers, GLbitfield flags)
+ */
+GLE_API void glTexStorageSparseAMD(GLenum target, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLsizei layers, GLbitfield flags);
+
+/**
+ * @brief void glTextureStorageSparseAMD(GLuint texture, GLenum target, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLsizei layers, GLbitfield flags)
+ */
+GLE_API void glTextureStorageSparseAMD(GLuint texture, GLenum target, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLsizei layers, GLbitfield flags);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_AMD_stencil_operation_extended GL_AMD_stencil_operation_extended
  * Extension number in OpenGL registry : 413
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/stencil_operation_extended.txt
@@ -3990,26 +4021,6 @@ GLE_API void glRenderbufferStorageMultisample(GLenum target, GLsizei samples, GL
 
 
 /**
- * @defgroup GL_ARB_framebuffer_object_DEPRECATED GL_ARB_framebuffer_object_DEPRECATED
- * Extension number in OpenGL registry : NA
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
- * @ingroup g_GL_ARB g_extensions
- */
-//@{
-
-/**
- * @brief  Tests if \b GL_ARB_framebuffer_object_DEPRECATED is supported.
- * @return Returns \c true if \b GL_ARB_framebuffer_object_DEPRECATED is supported, \c false otherwise.
- */
-GLE_API bool isGL_ARB_framebuffer_object_DEPRECATED();
-
-
-//@}
-
-
-
-
-/**
  * @defgroup GL_ARB_framebuffer_sRGB GL_ARB_framebuffer_sRGB
  * Extension number in OpenGL registry : 46
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/ARB/framebuffer_sRGB.txt
@@ -4290,26 +4301,6 @@ GLE_API bool isGL_ARB_half_float_vertex();
  * @return Returns \c true if \b GL_ARB_imaging is supported, \c false otherwise.
  */
 GLE_API bool isGL_ARB_imaging();
-
-
-//@}
-
-
-
-
-/**
- * @defgroup GL_ARB_imaging_DEPRECATED GL_ARB_imaging_DEPRECATED
- * Extension number in OpenGL registry : NA
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
- * @ingroup g_GL_ARB g_extensions
- */
-//@{
-
-/**
- * @brief  Tests if \b GL_ARB_imaging_DEPRECATED is supported.
- * @return Returns \c true if \b GL_ARB_imaging_DEPRECATED is supported, \c false otherwise.
- */
-GLE_API bool isGL_ARB_imaging_DEPRECATED();
 
 
 //@}
@@ -11787,6 +11778,16 @@ GLE_API bool isGL_EXT_pixel_transform();
 
 
 /**
+ * @brief void glGetPixelTransformParameterfvEXT(GLenum target, GLenum pname, GLfloat *params)
+ */
+GLE_API void glGetPixelTransformParameterfvEXT(GLenum target, GLenum pname, GLfloat *params);
+
+/**
+ * @brief void glGetPixelTransformParameterivEXT(GLenum target, GLenum pname, GLint *params)
+ */
+GLE_API void glGetPixelTransformParameterivEXT(GLenum target, GLenum pname, GLint *params);
+
+/**
  * @brief void glPixelTransformParameterfEXT(GLenum target, GLenum pname, GLfloat param)
  */
 GLE_API void glPixelTransformParameterfEXT(GLenum target, GLenum pname, GLfloat param);
@@ -13292,9 +13293,9 @@ GLE_API bool isGL_EXT_vertex_weighting();
 
 
 /**
- * @brief void glVertexWeightPointerEXT(GLsizei size, GLenum type, GLsizei stride, const GLvoid *pointer)
+ * @brief void glVertexWeightPointerEXT(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
  */
-GLE_API void glVertexWeightPointerEXT(GLsizei size, GLenum type, GLsizei stride, const GLvoid *pointer);
+GLE_API void glVertexWeightPointerEXT(GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
 
 /**
  * @brief void glVertexWeightfEXT(GLfloat weight)
@@ -16652,9 +16653,9 @@ GLE_API void glVDPAUMapSurfacesNV(GLsizei numSurfaces, const GLvdpauSurfaceNV *s
 GLE_API GLvdpauSurfaceNV glVDPAURegisterOutputSurfaceNV(GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames);
 
 /**
- * @brief GLvdpauSurfaceNV glVDPAURegisterVideoSurfaceNV(GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames)
+ * @brief GLvdpauSurfaceNV glVDPAURegisterVideoSurfaceNV(const GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames)
  */
-GLE_API GLvdpauSurfaceNV glVDPAURegisterVideoSurfaceNV(GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames);
+GLE_API GLvdpauSurfaceNV glVDPAURegisterVideoSurfaceNV(const GLvoid *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames);
 
 /**
  * @brief void glVDPAUSurfaceAccessNV(GLvdpauSurfaceNV surface, GLenum access)
@@ -19797,47 +19798,6 @@ GLE_API void glBlendColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alph
 GLE_API void glBlendEquation(GLenum mode);
 
 /**
- * @brief void glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height)
- */
-GLE_API void glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
-
-/**
- * @brief void glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices)
- */
-GLE_API void glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices);
-
-/**
- * @brief void glTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
- */
-GLE_API void glTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels);
-
-/**
- * @brief void glTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels)
- */
-GLE_API void glTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels);
-
-//@}
-
-
-
-
-/**
- * @defgroup GL_VERSION_1_2_DEPRECATED GL_VERSION_1_2_DEPRECATED
- * Extension number in OpenGL registry : NA
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
- * @ingroup g_GL_VERSION g_extensions
- */
-//@{
-
-/**
- * @brief  Tests if \b GL_VERSION_1_2_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_1_2_DEPRECATED is supported, \c false otherwise.
- */
-GLE_API bool isGL_VERSION_1_2_DEPRECATED();
-
-
-
-/**
  * @brief void glColorSubTable(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const GLvoid *data)
  */
 GLE_API void glColorSubTable(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const GLvoid *data);
@@ -19906,6 +19866,16 @@ GLE_API void glCopyConvolutionFilter1D(GLenum target, GLenum internalformat, GLi
  * @brief void glCopyConvolutionFilter2D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height)
  */
 GLE_API void glCopyConvolutionFilter2D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height);
+
+/**
+ * @brief void glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height)
+ */
+GLE_API void glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
+
+/**
+ * @brief void glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices)
+ */
+GLE_API void glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid *indices);
 
 /**
  * @brief void glGetColorTable(GLenum target, GLenum format, GLenum type, GLvoid *table)
@@ -19997,6 +19967,16 @@ GLE_API void glResetMinmax(GLenum target);
  */
 GLE_API void glSeparableFilter2D(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *row, const GLvoid *column);
 
+/**
+ * @brief void glTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels)
+ */
+GLE_API void glTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid *pixels);
+
+/**
+ * @brief void glTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels)
+ */
+GLE_API void glTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid *pixels);
+
 //@}
 
 
@@ -20022,6 +20002,11 @@ GLE_API bool isGL_VERSION_1_3();
  * @brief void glActiveTexture(GLenum texture)
  */
 GLE_API void glActiveTexture(GLenum texture);
+
+/**
+ * @brief void glClientActiveTexture(GLenum texture)
+ */
+GLE_API void glClientActiveTexture(GLenum texture);
 
 /**
  * @brief void glCompressedTexImage1D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid *data)
@@ -20057,37 +20042,6 @@ GLE_API void glCompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset
  * @brief void glGetCompressedTexImage(GLenum target, GLint level, GLvoid *img)
  */
 GLE_API void glGetCompressedTexImage(GLenum target, GLint level, GLvoid *img);
-
-/**
- * @brief void glSampleCoverage(GLfloat value, GLboolean invert)
- */
-GLE_API void glSampleCoverage(GLfloat value, GLboolean invert);
-
-//@}
-
-
-
-
-/**
- * @defgroup GL_VERSION_1_3_DEPRECATED GL_VERSION_1_3_DEPRECATED
- * Extension number in OpenGL registry : NA
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
- * @ingroup g_GL_VERSION g_extensions
- */
-//@{
-
-/**
- * @brief  Tests if \b GL_VERSION_1_3_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_1_3_DEPRECATED is supported, \c false otherwise.
- */
-GLE_API bool isGL_VERSION_1_3_DEPRECATED();
-
-
-
-/**
- * @brief void glClientActiveTexture(GLenum texture)
- */
-GLE_API void glClientActiveTexture(GLenum texture);
 
 /**
  * @brief void glLoadTransposeMatrixd(const GLdouble *m)
@@ -20269,6 +20223,11 @@ GLE_API void glMultiTexCoord4s(GLenum target, GLshort s, GLshort t, GLshort r, G
  */
 GLE_API void glMultiTexCoord4sv(GLenum target, const GLshort *v);
 
+/**
+ * @brief void glSampleCoverage(GLfloat value, GLboolean invert)
+ */
+GLE_API void glSampleCoverage(GLfloat value, GLboolean invert);
+
 //@}
 
 
@@ -20294,6 +20253,31 @@ GLE_API bool isGL_VERSION_1_4();
  * @brief void glBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha)
  */
 GLE_API void glBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
+
+/**
+ * @brief void glFogCoordPointer(GLenum type, GLsizei stride, const GLvoid *pointer)
+ */
+GLE_API void glFogCoordPointer(GLenum type, GLsizei stride, const GLvoid *pointer);
+
+/**
+ * @brief void glFogCoordd(GLdouble coord)
+ */
+GLE_API void glFogCoordd(GLdouble coord);
+
+/**
+ * @brief void glFogCoorddv(const GLdouble *coord)
+ */
+GLE_API void glFogCoorddv(const GLdouble *coord);
+
+/**
+ * @brief void glFogCoordf(GLfloat coord)
+ */
+GLE_API void glFogCoordf(GLfloat coord);
+
+/**
+ * @brief void glFogCoordfv(const GLfloat *coord)
+ */
+GLE_API void glFogCoordfv(const GLfloat *coord);
 
 /**
  * @brief void glMultiDrawArrays(GLenum mode, const GLint *first, const GLsizei *count, GLsizei drawcount)
@@ -20324,52 +20308,6 @@ GLE_API void glPointParameteri(GLenum pname, GLint param);
  * @brief void glPointParameteriv(GLenum pname, const GLint *params)
  */
 GLE_API void glPointParameteriv(GLenum pname, const GLint *params);
-
-//@}
-
-
-
-
-/**
- * @defgroup GL_VERSION_1_4_DEPRECATED GL_VERSION_1_4_DEPRECATED
- * Extension number in OpenGL registry : NA
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
- * @ingroup g_GL_VERSION g_extensions
- */
-//@{
-
-/**
- * @brief  Tests if \b GL_VERSION_1_4_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_1_4_DEPRECATED is supported, \c false otherwise.
- */
-GLE_API bool isGL_VERSION_1_4_DEPRECATED();
-
-
-
-/**
- * @brief void glFogCoordPointer(GLenum type, GLsizei stride, const GLvoid *pointer)
- */
-GLE_API void glFogCoordPointer(GLenum type, GLsizei stride, const GLvoid *pointer);
-
-/**
- * @brief void glFogCoordd(GLdouble coord)
- */
-GLE_API void glFogCoordd(GLdouble coord);
-
-/**
- * @brief void glFogCoorddv(const GLdouble *coord)
- */
-GLE_API void glFogCoorddv(const GLdouble *coord);
-
-/**
- * @brief void glFogCoordf(GLfloat coord)
- */
-GLE_API void glFogCoordf(GLfloat coord);
-
-/**
- * @brief void glFogCoordfv(const GLfloat *coord)
- */
-GLE_API void glFogCoordfv(const GLfloat *coord);
 
 /**
  * @brief void glSecondaryColor3b(GLbyte red, GLbyte green, GLbyte blue)
@@ -20651,26 +20589,6 @@ GLE_API GLvoid* glMapBuffer(GLenum target, GLenum access);
  * @brief GLboolean glUnmapBuffer(GLenum target)
  */
 GLE_API GLboolean glUnmapBuffer(GLenum target);
-
-//@}
-
-
-
-
-/**
- * @defgroup GL_VERSION_1_5_DEPRECATED GL_VERSION_1_5_DEPRECATED
- * Extension number in OpenGL registry : NA
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
- * @ingroup g_GL_VERSION g_extensions
- */
-//@{
-
-/**
- * @brief  Tests if \b GL_VERSION_1_5_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_1_5_DEPRECATED is supported, \c false otherwise.
- */
-GLE_API bool isGL_VERSION_1_5_DEPRECATED();
-
 
 //@}
 
@@ -21164,26 +21082,6 @@ GLE_API void glVertexAttribPointer(GLuint index, GLint size, GLenum type, GLbool
 
 
 /**
- * @defgroup GL_VERSION_2_0_DEPRECATED GL_VERSION_2_0_DEPRECATED
- * Extension number in OpenGL registry : NA
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
- * @ingroup g_GL_VERSION g_extensions
- */
-//@{
-
-/**
- * @brief  Tests if \b GL_VERSION_2_0_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_2_0_DEPRECATED is supported, \c false otherwise.
- */
-GLE_API bool isGL_VERSION_2_0_DEPRECATED();
-
-
-//@}
-
-
-
-
-/**
  * @defgroup GL_VERSION_2_1 GL_VERSION_2_1
  * Extension number in OpenGL registry : NA
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
@@ -21228,26 +21126,6 @@ GLE_API void glUniformMatrix4x2fv(GLint location, GLsizei count, GLboolean trans
  * @brief void glUniformMatrix4x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value)
  */
 GLE_API void glUniformMatrix4x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
-
-//@}
-
-
-
-
-/**
- * @defgroup GL_VERSION_2_1_DEPRECATED GL_VERSION_2_1_DEPRECATED
- * Extension number in OpenGL registry : NA
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
- * @ingroup g_GL_VERSION g_extensions
- */
-//@{
-
-/**
- * @brief  Tests if \b GL_VERSION_2_1_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_2_1_DEPRECATED is supported, \c false otherwise.
- */
-GLE_API bool isGL_VERSION_2_1_DEPRECATED();
-
 
 //@}
 
@@ -21559,26 +21437,6 @@ GLE_API void glVertexAttribI4usv(GLuint index, const GLushort *v);
  * @brief void glVertexAttribIPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer)
  */
 GLE_API void glVertexAttribIPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
-
-//@}
-
-
-
-
-/**
- * @defgroup GL_VERSION_3_0_DEPRECATED GL_VERSION_3_0_DEPRECATED
- * Extension number in OpenGL registry : NA
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
- * @ingroup g_GL_VERSION g_extensions
- */
-//@{
-
-/**
- * @brief  Tests if \b GL_VERSION_3_0_DEPRECATED is supported.
- * @return Returns \c true if \b GL_VERSION_3_0_DEPRECATED is supported, \c false otherwise.
- */
-GLE_API bool isGL_VERSION_3_0_DEPRECATED();
-
 
 //@}
 
