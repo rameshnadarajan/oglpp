@@ -1,4 +1,4 @@
-// This file was generated at Tue, 28 Aug 2012 11:31:44 +0000 with gle, please do not modify.
+// This file was generated at Fri, 21 Sep 2012 09:51:51 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,8 +6,8 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-08-13 16:18:01 -0700 (Mon, 13 Aug 2012) $ */
-// #define GL_GLEXT_VERSION 84
+// /* glext.h last updated $Date: 2012-09-19 19:02:24 -0700 (Wed, 19 Sep 2012) $ */
+// #define GL_GLEXT_VERSION 85
 // /* glxext.h last updated 2012/02/29 */
 // #define GLX_GLXEXT_VERSION 33
 // /* wglext.h last updated 2012/01/04 */
@@ -26,8 +26,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 567;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 2291;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 559;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 2295;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS )
@@ -524,6 +524,12 @@ void OpenGLExtensionsGen::clear()
 	// ****** GL_AMD_shader_stencil_export ******
 	isGL_AMD_shader_stencil_export = false;
 
+	// ****** GL_AMD_sparse_texture ******
+	isGL_AMD_sparse_texture = false;
+
+	glTexStorageSparseAMD = 0;
+	glTextureStorageSparseAMD = 0;
+
 	// ****** GL_AMD_stencil_operation_extended ******
 	isGL_AMD_stencil_operation_extended = false;
 
@@ -811,9 +817,6 @@ void OpenGLExtensionsGen::clear()
 	glRenderbufferStorage = 0;
 	glRenderbufferStorageMultisample = 0;
 
-	// ****** GL_ARB_framebuffer_object_DEPRECATED ******
-	isGL_ARB_framebuffer_object_DEPRECATED = false;
-
 	// ****** GL_ARB_framebuffer_sRGB ******
 	isGL_ARB_framebuffer_sRGB = false;
 
@@ -865,9 +868,6 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_ARB_imaging ******
 	isGL_ARB_imaging = false;
-
-	// ****** GL_ARB_imaging_DEPRECATED ******
-	isGL_ARB_imaging_DEPRECATED = false;
 
 	// ****** GL_ARB_instanced_arrays ******
 	isGL_ARB_instanced_arrays = false;
@@ -2284,6 +2284,8 @@ void OpenGLExtensionsGen::clear()
 	// ****** GL_EXT_pixel_transform ******
 	isGL_EXT_pixel_transform = false;
 
+	glGetPixelTransformParameterfvEXT = 0;
+	glGetPixelTransformParameterivEXT = 0;
 	glPixelTransformParameterfEXT = 0;
 	glPixelTransformParameterfvEXT = 0;
 	glPixelTransformParameteriEXT = 0;
@@ -3750,14 +3752,6 @@ void OpenGLExtensionsGen::clear()
 
 	glBlendColor = 0;
 	glBlendEquation = 0;
-	glCopyTexSubImage3D = 0;
-	glDrawRangeElements = 0;
-	glTexImage3D = 0;
-	glTexSubImage3D = 0;
-
-	// ****** GL_VERSION_1_2_DEPRECATED ******
-	isGL_VERSION_1_2_DEPRECATED = false;
-
 	glColorSubTable = 0;
 	glColorTable = 0;
 	glColorTableParameterfv = 0;
@@ -3772,6 +3766,8 @@ void OpenGLExtensionsGen::clear()
 	glCopyColorTable = 0;
 	glCopyConvolutionFilter1D = 0;
 	glCopyConvolutionFilter2D = 0;
+	glCopyTexSubImage3D = 0;
+	glDrawRangeElements = 0;
 	glGetColorTable = 0;
 	glGetColorTableParameterfv = 0;
 	glGetColorTableParameteriv = 0;
@@ -3790,11 +3786,14 @@ void OpenGLExtensionsGen::clear()
 	glResetHistogram = 0;
 	glResetMinmax = 0;
 	glSeparableFilter2D = 0;
+	glTexImage3D = 0;
+	glTexSubImage3D = 0;
 
 	// ****** GL_VERSION_1_3 ******
 	isGL_VERSION_1_3 = false;
 
 	glActiveTexture = 0;
+	glClientActiveTexture = 0;
 	glCompressedTexImage1D = 0;
 	glCompressedTexImage2D = 0;
 	glCompressedTexImage3D = 0;
@@ -3802,12 +3801,6 @@ void OpenGLExtensionsGen::clear()
 	glCompressedTexSubImage2D = 0;
 	glCompressedTexSubImage3D = 0;
 	glGetCompressedTexImage = 0;
-	glSampleCoverage = 0;
-
-	// ****** GL_VERSION_1_3_DEPRECATED ******
-	isGL_VERSION_1_3_DEPRECATED = false;
-
-	glClientActiveTexture = 0;
 	glLoadTransposeMatrixd = 0;
 	glLoadTransposeMatrixf = 0;
 	glMultTransposeMatrixd = 0;
@@ -3844,26 +3837,23 @@ void OpenGLExtensionsGen::clear()
 	glMultiTexCoord4iv = 0;
 	glMultiTexCoord4s = 0;
 	glMultiTexCoord4sv = 0;
+	glSampleCoverage = 0;
 
 	// ****** GL_VERSION_1_4 ******
 	isGL_VERSION_1_4 = false;
 
 	glBlendFuncSeparate = 0;
+	glFogCoordPointer = 0;
+	glFogCoordd = 0;
+	glFogCoorddv = 0;
+	glFogCoordf = 0;
+	glFogCoordfv = 0;
 	glMultiDrawArrays = 0;
 	glMultiDrawElements = 0;
 	glPointParameterf = 0;
 	glPointParameterfv = 0;
 	glPointParameteri = 0;
 	glPointParameteriv = 0;
-
-	// ****** GL_VERSION_1_4_DEPRECATED ******
-	isGL_VERSION_1_4_DEPRECATED = false;
-
-	glFogCoordPointer = 0;
-	glFogCoordd = 0;
-	glFogCoorddv = 0;
-	glFogCoordf = 0;
-	glFogCoordfv = 0;
 	glSecondaryColor3b = 0;
 	glSecondaryColor3bv = 0;
 	glSecondaryColor3d = 0;
@@ -3920,9 +3910,6 @@ void OpenGLExtensionsGen::clear()
 	glIsQuery = 0;
 	glMapBuffer = 0;
 	glUnmapBuffer = 0;
-
-	// ****** GL_VERSION_1_5_DEPRECATED ******
-	isGL_VERSION_1_5_DEPRECATED = false;
 
 	// ****** GL_VERSION_2_0 ******
 	isGL_VERSION_2_0 = false;
@@ -4021,9 +4008,6 @@ void OpenGLExtensionsGen::clear()
 	glVertexAttrib4usv = 0;
 	glVertexAttribPointer = 0;
 
-	// ****** GL_VERSION_2_0_DEPRECATED ******
-	isGL_VERSION_2_0_DEPRECATED = false;
-
 	// ****** GL_VERSION_2_1 ******
 	isGL_VERSION_2_1 = false;
 
@@ -4033,9 +4017,6 @@ void OpenGLExtensionsGen::clear()
 	glUniformMatrix3x4fv = 0;
 	glUniformMatrix4x2fv = 0;
 	glUniformMatrix4x3fv = 0;
-
-	// ****** GL_VERSION_2_1_DEPRECATED ******
-	isGL_VERSION_2_1_DEPRECATED = false;
 
 	// ****** GL_VERSION_3_0 ******
 	isGL_VERSION_3_0 = false;
@@ -4098,9 +4079,6 @@ void OpenGLExtensionsGen::clear()
 	glVertexAttribI4uiv = 0;
 	glVertexAttribI4usv = 0;
 	glVertexAttribIPointer = 0;
-
-	// ****** GL_VERSION_3_0_DEPRECATED ******
-	isGL_VERSION_3_0_DEPRECATED = false;
 
 	// ****** GL_VERSION_3_1 ******
 	isGL_VERSION_3_1 = false;
@@ -7788,6 +7766,47 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	}
 
 
+	isGL_AMD_sparse_texture = isExtensionSupported("GL_AMD_sparse_texture");
+
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_AMD_sparse_texture ) // || isSEDEnable()
+	{
+		glTexStorageSparseAMD = (PFNGLTEXSTORAGESPARSEAMDPROC) getExtensionPtr( "glTexStorageSparseAMD" );
+		if ( glTexStorageSparseAMD != 0 )	++localInitializedProcCount;
+
+		glTextureStorageSparseAMD = (PFNGLTEXTURESTORAGESPARSEAMDPROC) getExtensionPtr( "glTextureStorageSparseAMD" );
+		if ( glTextureStorageSparseAMD != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_AMD_sparse_texture )
+
+	if ( isGL_AMD_sparse_texture )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_sparse_texture                             : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_sparse_texture                             : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_sparse_texture") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_sparse_texture                             : not detected." );
+	}
+
+
 	isGL_AMD_stencil_operation_extended = isExtensionSupported("GL_AMD_stencil_operation_extended");
 
 	localSupportedProcCount		= 1;
@@ -9880,37 +9899,6 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	}
 
 
-	isGL_ARB_framebuffer_object_DEPRECATED = isExtensionSupported("GL_ARB_framebuffer_object_DEPRECATED");
-
-	localSupportedProcCount		= 0;
-	localInitializedProcCount	= 0;
-
-	if ( isGL_ARB_framebuffer_object_DEPRECATED )
-	{
-		std::stringstream strStream;
-		strStream << "GL_ARB_framebuffer_object_DEPRECATED              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
-		log( strStream.str() );
-
-		if ( localInitializedProcCount < localSupportedProcCount  )
-		{
-			std::stringstream strStream;
-			strStream << "GL_ARB_framebuffer_object_DEPRECATED              : " << localSupportedProcCount-localInitializedProcCount;
-			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
-			log( strStream.str() );
-		}
-		else
-		{
-			m_initializedExtensions.push_back( std::string("GL_ARB_framebuffer_object_DEPRECATED") );
-			++m_initializedExtensionCount;
-			m_initializedProcCount += localInitializedProcCount;
-		}
-	}
-	else
-	{
-		logEndl( "GL_ARB_framebuffer_object_DEPRECATED              : not detected." );
-	}
-
-
 	isGL_ARB_framebuffer_sRGB = isExtensionSupported("GL_ARB_framebuffer_sRGB");
 
 	localSupportedProcCount		= 0;
@@ -10243,37 +10231,6 @@ void OpenGLExtensionsGen::initializeGL_ARB()
 	else
 	{
 		logEndl( "GL_ARB_imaging                                    : not detected." );
-	}
-
-
-	isGL_ARB_imaging_DEPRECATED = isExtensionSupported("GL_ARB_imaging_DEPRECATED");
-
-	localSupportedProcCount		= 0;
-	localInitializedProcCount	= 0;
-
-	if ( isGL_ARB_imaging_DEPRECATED )
-	{
-		std::stringstream strStream;
-		strStream << "GL_ARB_imaging_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
-		log( strStream.str() );
-
-		if ( localInitializedProcCount < localSupportedProcCount  )
-		{
-			std::stringstream strStream;
-			strStream << "GL_ARB_imaging_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
-			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
-			log( strStream.str() );
-		}
-		else
-		{
-			m_initializedExtensions.push_back( std::string("GL_ARB_imaging_DEPRECATED") );
-			++m_initializedExtensionCount;
-			m_initializedProcCount += localInitializedProcCount;
-		}
-	}
-	else
-	{
-		logEndl( "GL_ARB_imaging_DEPRECATED                         : not detected." );
 	}
 
 
@@ -17897,11 +17854,17 @@ void OpenGLExtensionsGen::initializeGL_EXT()
 
 	isGL_EXT_pixel_transform = isExtensionSupported("GL_EXT_pixel_transform");
 
-	localSupportedProcCount		= 4;
+	localSupportedProcCount		= 6;
 	localInitializedProcCount	= 0;
 
 	if ( isGL_EXT_pixel_transform ) // || isSEDEnable()
 	{
+		glGetPixelTransformParameterfvEXT = (PFNGLGETPIXELTRANSFORMPARAMETERFVEXTPROC) getExtensionPtr( "glGetPixelTransformParameterfvEXT" );
+		if ( glGetPixelTransformParameterfvEXT != 0 )	++localInitializedProcCount;
+
+		glGetPixelTransformParameterivEXT = (PFNGLGETPIXELTRANSFORMPARAMETERIVEXTPROC) getExtensionPtr( "glGetPixelTransformParameterivEXT" );
+		if ( glGetPixelTransformParameterivEXT != 0 )	++localInitializedProcCount;
+
 		glPixelTransformParameterfEXT = (PFNGLPIXELTRANSFORMPARAMETERFEXTPROC) getExtensionPtr( "glPixelTransformParameterfEXT" );
 		if ( glPixelTransformParameterfEXT != 0 )	++localInitializedProcCount;
 
@@ -27216,7 +27179,7 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 
 	isGL_VERSION_1_2 = true;
 
-	localSupportedProcCount		= 6;
+	localSupportedProcCount		= 38;
 	localInitializedProcCount	= 0;
 
 	if ( isGL_VERSION_1_2 ) // || isSEDEnable()
@@ -27227,54 +27190,6 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 		glBlendEquation = (PFNGLBLENDEQUATIONPROC) getExtensionPtr( "glBlendEquation" );
 		if ( glBlendEquation != 0 )	++localInitializedProcCount;
 
-		glCopyTexSubImage3D = (PFNGLCOPYTEXSUBIMAGE3DPROC) getExtensionPtr( "glCopyTexSubImage3D" );
-		if ( glCopyTexSubImage3D != 0 )	++localInitializedProcCount;
-
-		glDrawRangeElements = (PFNGLDRAWRANGEELEMENTSPROC) getExtensionPtr( "glDrawRangeElements" );
-		if ( glDrawRangeElements != 0 )	++localInitializedProcCount;
-
-		glTexImage3D = (PFNGLTEXIMAGE3DPROC) getExtensionPtr( "glTexImage3D" );
-		if ( glTexImage3D != 0 )	++localInitializedProcCount;
-
-		glTexSubImage3D = (PFNGLTEXSUBIMAGE3DPROC) getExtensionPtr( "glTexSubImage3D" );
-		if ( glTexSubImage3D != 0 )	++localInitializedProcCount;
-
-		isGL_VERSION_1_2 = (localInitializedProcCount == localSupportedProcCount);
-	} // if ( isGL_VERSION_1_2 )
-
-	if ( isGL_VERSION_1_2 )
-	{
-		std::stringstream strStream;
-		strStream << "GL_VERSION_1_2                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
-		log( strStream.str() );
-
-		if ( localInitializedProcCount < localSupportedProcCount  )
-		{
-			std::stringstream strStream;
-			strStream << "GL_VERSION_1_2                                    : " << localSupportedProcCount-localInitializedProcCount;
-			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
-			log( strStream.str() );
-		}
-		else
-		{
-			m_initializedExtensions.push_back( std::string("GL_VERSION_1_2") );
-			++m_initializedExtensionCount;
-			m_initializedProcCount += localInitializedProcCount;
-		}
-	}
-	else
-	{
-		logEndl( "GL_VERSION_1_2                                    : not detected." );
-	}
-
-
-	isGL_VERSION_1_2_DEPRECATED = true;
-
-	localSupportedProcCount		= 32;
-	localInitializedProcCount	= 0;
-
-	if ( isGL_VERSION_1_2_DEPRECATED ) // || isSEDEnable()
-	{
 		glColorSubTable = (PFNGLCOLORSUBTABLEPROC) getExtensionPtr( "glColorSubTable" );
 		if ( glColorSubTable != 0 )	++localInitializedProcCount;
 
@@ -27316,6 +27231,12 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 
 		glCopyConvolutionFilter2D = (PFNGLCOPYCONVOLUTIONFILTER2DPROC) getExtensionPtr( "glCopyConvolutionFilter2D" );
 		if ( glCopyConvolutionFilter2D != 0 )	++localInitializedProcCount;
+
+		glCopyTexSubImage3D = (PFNGLCOPYTEXSUBIMAGE3DPROC) getExtensionPtr( "glCopyTexSubImage3D" );
+		if ( glCopyTexSubImage3D != 0 )	++localInitializedProcCount;
+
+		glDrawRangeElements = (PFNGLDRAWRANGEELEMENTSPROC) getExtensionPtr( "glDrawRangeElements" );
+		if ( glDrawRangeElements != 0 )	++localInitializedProcCount;
 
 		glGetColorTable = (PFNGLGETCOLORTABLEPROC) getExtensionPtr( "glGetColorTable" );
 		if ( glGetColorTable != 0 )	++localInitializedProcCount;
@@ -27371,44 +27292,53 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 		glSeparableFilter2D = (PFNGLSEPARABLEFILTER2DPROC) getExtensionPtr( "glSeparableFilter2D" );
 		if ( glSeparableFilter2D != 0 )	++localInitializedProcCount;
 
-		isGL_VERSION_1_2_DEPRECATED = (localInitializedProcCount == localSupportedProcCount);
-	} // if ( isGL_VERSION_1_2_DEPRECATED )
+		glTexImage3D = (PFNGLTEXIMAGE3DPROC) getExtensionPtr( "glTexImage3D" );
+		if ( glTexImage3D != 0 )	++localInitializedProcCount;
 
-	if ( isGL_VERSION_1_2_DEPRECATED )
+		glTexSubImage3D = (PFNGLTEXSUBIMAGE3DPROC) getExtensionPtr( "glTexSubImage3D" );
+		if ( glTexSubImage3D != 0 )	++localInitializedProcCount;
+
+		isGL_VERSION_1_2 = (localInitializedProcCount == localSupportedProcCount);
+	} // if ( isGL_VERSION_1_2 )
+
+	if ( isGL_VERSION_1_2 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_1_2_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_1_2                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_1_2_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_1_2                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
 		else
 		{
-			m_initializedExtensions.push_back( std::string("GL_VERSION_1_2_DEPRECATED") );
+			m_initializedExtensions.push_back( std::string("GL_VERSION_1_2") );
 			++m_initializedExtensionCount;
 			m_initializedProcCount += localInitializedProcCount;
 		}
 	}
 	else
 	{
-		logEndl( "GL_VERSION_1_2_DEPRECATED                         : not detected." );
+		logEndl( "GL_VERSION_1_2                                    : not detected." );
 	}
 
 
 	isGL_VERSION_1_3 = true;
 
-	localSupportedProcCount		= 9;
+	localSupportedProcCount		= 46;
 	localInitializedProcCount	= 0;
 
 	if ( isGL_VERSION_1_3 ) // || isSEDEnable()
 	{
 		glActiveTexture = (PFNGLACTIVETEXTUREPROC) getExtensionPtr( "glActiveTexture" );
 		if ( glActiveTexture != 0 )	++localInitializedProcCount;
+
+		glClientActiveTexture = (PFNGLCLIENTACTIVETEXTUREPROC) getExtensionPtr( "glClientActiveTexture" );
+		if ( glClientActiveTexture != 0 )	++localInitializedProcCount;
 
 		glCompressedTexImage1D = (PFNGLCOMPRESSEDTEXIMAGE1DPROC) getExtensionPtr( "glCompressedTexImage1D" );
 		if ( glCompressedTexImage1D != 0 )	++localInitializedProcCount;
@@ -27430,48 +27360,6 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 
 		glGetCompressedTexImage = (PFNGLGETCOMPRESSEDTEXIMAGEPROC) getExtensionPtr( "glGetCompressedTexImage" );
 		if ( glGetCompressedTexImage != 0 )	++localInitializedProcCount;
-
-		glSampleCoverage = (PFNGLSAMPLECOVERAGEPROC) getExtensionPtr( "glSampleCoverage" );
-		if ( glSampleCoverage != 0 )	++localInitializedProcCount;
-
-		isGL_VERSION_1_3 = (localInitializedProcCount == localSupportedProcCount);
-	} // if ( isGL_VERSION_1_3 )
-
-	if ( isGL_VERSION_1_3 )
-	{
-		std::stringstream strStream;
-		strStream << "GL_VERSION_1_3                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
-		log( strStream.str() );
-
-		if ( localInitializedProcCount < localSupportedProcCount  )
-		{
-			std::stringstream strStream;
-			strStream << "GL_VERSION_1_3                                    : " << localSupportedProcCount-localInitializedProcCount;
-			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
-			log( strStream.str() );
-		}
-		else
-		{
-			m_initializedExtensions.push_back( std::string("GL_VERSION_1_3") );
-			++m_initializedExtensionCount;
-			m_initializedProcCount += localInitializedProcCount;
-		}
-	}
-	else
-	{
-		logEndl( "GL_VERSION_1_3                                    : not detected." );
-	}
-
-
-	isGL_VERSION_1_3_DEPRECATED = true;
-
-	localSupportedProcCount		= 37;
-	localInitializedProcCount	= 0;
-
-	if ( isGL_VERSION_1_3_DEPRECATED ) // || isSEDEnable()
-	{
-		glClientActiveTexture = (PFNGLCLIENTACTIVETEXTUREPROC) getExtensionPtr( "glClientActiveTexture" );
-		if ( glClientActiveTexture != 0 )	++localInitializedProcCount;
 
 		glLoadTransposeMatrixd = (PFNGLLOADTRANSPOSEMATRIXDPROC) getExtensionPtr( "glLoadTransposeMatrixd" );
 		if ( glLoadTransposeMatrixd != 0 )	++localInitializedProcCount;
@@ -27581,44 +27469,62 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 		glMultiTexCoord4sv = (PFNGLMULTITEXCOORD4SVPROC) getExtensionPtr( "glMultiTexCoord4sv" );
 		if ( glMultiTexCoord4sv != 0 )	++localInitializedProcCount;
 
-		isGL_VERSION_1_3_DEPRECATED = (localInitializedProcCount == localSupportedProcCount);
-	} // if ( isGL_VERSION_1_3_DEPRECATED )
+		glSampleCoverage = (PFNGLSAMPLECOVERAGEPROC) getExtensionPtr( "glSampleCoverage" );
+		if ( glSampleCoverage != 0 )	++localInitializedProcCount;
 
-	if ( isGL_VERSION_1_3_DEPRECATED )
+		isGL_VERSION_1_3 = (localInitializedProcCount == localSupportedProcCount);
+	} // if ( isGL_VERSION_1_3 )
+
+	if ( isGL_VERSION_1_3 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_1_3_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_1_3                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_1_3_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_1_3                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
 		else
 		{
-			m_initializedExtensions.push_back( std::string("GL_VERSION_1_3_DEPRECATED") );
+			m_initializedExtensions.push_back( std::string("GL_VERSION_1_3") );
 			++m_initializedExtensionCount;
 			m_initializedProcCount += localInitializedProcCount;
 		}
 	}
 	else
 	{
-		logEndl( "GL_VERSION_1_3_DEPRECATED                         : not detected." );
+		logEndl( "GL_VERSION_1_3                                    : not detected." );
 	}
 
 
 	isGL_VERSION_1_4 = true;
 
-	localSupportedProcCount		= 7;
+	localSupportedProcCount		= 45;
 	localInitializedProcCount	= 0;
 
 	if ( isGL_VERSION_1_4 ) // || isSEDEnable()
 	{
 		glBlendFuncSeparate = (PFNGLBLENDFUNCSEPARATEPROC) getExtensionPtr( "glBlendFuncSeparate" );
 		if ( glBlendFuncSeparate != 0 )	++localInitializedProcCount;
+
+		glFogCoordPointer = (PFNGLFOGCOORDPOINTERPROC) getExtensionPtr( "glFogCoordPointer" );
+		if ( glFogCoordPointer != 0 )	++localInitializedProcCount;
+
+		glFogCoordd = (PFNGLFOGCOORDDPROC) getExtensionPtr( "glFogCoordd" );
+		if ( glFogCoordd != 0 )	++localInitializedProcCount;
+
+		glFogCoorddv = (PFNGLFOGCOORDDVPROC) getExtensionPtr( "glFogCoorddv" );
+		if ( glFogCoorddv != 0 )	++localInitializedProcCount;
+
+		glFogCoordf = (PFNGLFOGCOORDFPROC) getExtensionPtr( "glFogCoordf" );
+		if ( glFogCoordf != 0 )	++localInitializedProcCount;
+
+		glFogCoordfv = (PFNGLFOGCOORDFVPROC) getExtensionPtr( "glFogCoordfv" );
+		if ( glFogCoordfv != 0 )	++localInitializedProcCount;
 
 		glMultiDrawArrays = (PFNGLMULTIDRAWARRAYSPROC) getExtensionPtr( "glMultiDrawArrays" );
 		if ( glMultiDrawArrays != 0 )	++localInitializedProcCount;
@@ -27637,57 +27543,6 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 
 		glPointParameteriv = (PFNGLPOINTPARAMETERIVPROC) getExtensionPtr( "glPointParameteriv" );
 		if ( glPointParameteriv != 0 )	++localInitializedProcCount;
-
-		isGL_VERSION_1_4 = (localInitializedProcCount == localSupportedProcCount);
-	} // if ( isGL_VERSION_1_4 )
-
-	if ( isGL_VERSION_1_4 )
-	{
-		std::stringstream strStream;
-		strStream << "GL_VERSION_1_4                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
-		log( strStream.str() );
-
-		if ( localInitializedProcCount < localSupportedProcCount  )
-		{
-			std::stringstream strStream;
-			strStream << "GL_VERSION_1_4                                    : " << localSupportedProcCount-localInitializedProcCount;
-			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
-			log( strStream.str() );
-		}
-		else
-		{
-			m_initializedExtensions.push_back( std::string("GL_VERSION_1_4") );
-			++m_initializedExtensionCount;
-			m_initializedProcCount += localInitializedProcCount;
-		}
-	}
-	else
-	{
-		logEndl( "GL_VERSION_1_4                                    : not detected." );
-	}
-
-
-	isGL_VERSION_1_4_DEPRECATED = true;
-
-	localSupportedProcCount		= 38;
-	localInitializedProcCount	= 0;
-
-	if ( isGL_VERSION_1_4_DEPRECATED ) // || isSEDEnable()
-	{
-		glFogCoordPointer = (PFNGLFOGCOORDPOINTERPROC) getExtensionPtr( "glFogCoordPointer" );
-		if ( glFogCoordPointer != 0 )	++localInitializedProcCount;
-
-		glFogCoordd = (PFNGLFOGCOORDDPROC) getExtensionPtr( "glFogCoordd" );
-		if ( glFogCoordd != 0 )	++localInitializedProcCount;
-
-		glFogCoorddv = (PFNGLFOGCOORDDVPROC) getExtensionPtr( "glFogCoorddv" );
-		if ( glFogCoorddv != 0 )	++localInitializedProcCount;
-
-		glFogCoordf = (PFNGLFOGCOORDFPROC) getExtensionPtr( "glFogCoordf" );
-		if ( glFogCoordf != 0 )	++localInitializedProcCount;
-
-		glFogCoordfv = (PFNGLFOGCOORDFVPROC) getExtensionPtr( "glFogCoordfv" );
-		if ( glFogCoordfv != 0 )	++localInitializedProcCount;
 
 		glSecondaryColor3b = (PFNGLSECONDARYCOLOR3BPROC) getExtensionPtr( "glSecondaryColor3b" );
 		if ( glSecondaryColor3b != 0 )	++localInitializedProcCount;
@@ -27788,32 +27643,32 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 		glWindowPos3sv = (PFNGLWINDOWPOS3SVPROC) getExtensionPtr( "glWindowPos3sv" );
 		if ( glWindowPos3sv != 0 )	++localInitializedProcCount;
 
-		isGL_VERSION_1_4_DEPRECATED = (localInitializedProcCount == localSupportedProcCount);
-	} // if ( isGL_VERSION_1_4_DEPRECATED )
+		isGL_VERSION_1_4 = (localInitializedProcCount == localSupportedProcCount);
+	} // if ( isGL_VERSION_1_4 )
 
-	if ( isGL_VERSION_1_4_DEPRECATED )
+	if ( isGL_VERSION_1_4 )
 	{
 		std::stringstream strStream;
-		strStream << "GL_VERSION_1_4_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		strStream << "GL_VERSION_1_4                                    : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
 		log( strStream.str() );
 
 		if ( localInitializedProcCount < localSupportedProcCount  )
 		{
 			std::stringstream strStream;
-			strStream << "GL_VERSION_1_4_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << "GL_VERSION_1_4                                    : " << localSupportedProcCount-localInitializedProcCount;
 			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
 			log( strStream.str() );
 		}
 		else
 		{
-			m_initializedExtensions.push_back( std::string("GL_VERSION_1_4_DEPRECATED") );
+			m_initializedExtensions.push_back( std::string("GL_VERSION_1_4") );
 			++m_initializedExtensionCount;
 			m_initializedProcCount += localInitializedProcCount;
 		}
 	}
 	else
 	{
-		logEndl( "GL_VERSION_1_4_DEPRECATED                         : not detected." );
+		logEndl( "GL_VERSION_1_4                                    : not detected." );
 	}
 
 
@@ -27907,37 +27762,6 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	else
 	{
 		logEndl( "GL_VERSION_1_5                                    : not detected." );
-	}
-
-
-	isGL_VERSION_1_5_DEPRECATED = true;
-
-	localSupportedProcCount		= 0;
-	localInitializedProcCount	= 0;
-
-	if ( isGL_VERSION_1_5_DEPRECATED )
-	{
-		std::stringstream strStream;
-		strStream << "GL_VERSION_1_5_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
-		log( strStream.str() );
-
-		if ( localInitializedProcCount < localSupportedProcCount  )
-		{
-			std::stringstream strStream;
-			strStream << "GL_VERSION_1_5_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
-			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
-			log( strStream.str() );
-		}
-		else
-		{
-			m_initializedExtensions.push_back( std::string("GL_VERSION_1_5_DEPRECATED") );
-			++m_initializedExtensionCount;
-			m_initializedProcCount += localInitializedProcCount;
-		}
-	}
-	else
-	{
-		logEndl( "GL_VERSION_1_5_DEPRECATED                         : not detected." );
 	}
 
 
@@ -28256,37 +28080,6 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	}
 
 
-	isGL_VERSION_2_0_DEPRECATED = true;
-
-	localSupportedProcCount		= 0;
-	localInitializedProcCount	= 0;
-
-	if ( isGL_VERSION_2_0_DEPRECATED )
-	{
-		std::stringstream strStream;
-		strStream << "GL_VERSION_2_0_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
-		log( strStream.str() );
-
-		if ( localInitializedProcCount < localSupportedProcCount  )
-		{
-			std::stringstream strStream;
-			strStream << "GL_VERSION_2_0_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
-			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
-			log( strStream.str() );
-		}
-		else
-		{
-			m_initializedExtensions.push_back( std::string("GL_VERSION_2_0_DEPRECATED") );
-			++m_initializedExtensionCount;
-			m_initializedProcCount += localInitializedProcCount;
-		}
-	}
-	else
-	{
-		logEndl( "GL_VERSION_2_0_DEPRECATED                         : not detected." );
-	}
-
-
 	isGL_VERSION_2_1 = true;
 
 	localSupportedProcCount		= 6;
@@ -28338,37 +28131,6 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	else
 	{
 		logEndl( "GL_VERSION_2_1                                    : not detected." );
-	}
-
-
-	isGL_VERSION_2_1_DEPRECATED = true;
-
-	localSupportedProcCount		= 0;
-	localInitializedProcCount	= 0;
-
-	if ( isGL_VERSION_2_1_DEPRECATED )
-	{
-		std::stringstream strStream;
-		strStream << "GL_VERSION_2_1_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
-		log( strStream.str() );
-
-		if ( localInitializedProcCount < localSupportedProcCount  )
-		{
-			std::stringstream strStream;
-			strStream << "GL_VERSION_2_1_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
-			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
-			log( strStream.str() );
-		}
-		else
-		{
-			m_initializedExtensions.push_back( std::string("GL_VERSION_2_1_DEPRECATED") );
-			++m_initializedExtensionCount;
-			m_initializedProcCount += localInitializedProcCount;
-		}
-	}
-	else
-	{
-		logEndl( "GL_VERSION_2_1_DEPRECATED                         : not detected." );
 	}
 
 
@@ -28579,37 +28341,6 @@ void OpenGLExtensionsGen::initializeGL_VERSION()
 	else
 	{
 		logEndl( "GL_VERSION_3_0                                    : not detected." );
-	}
-
-
-	isGL_VERSION_3_0_DEPRECATED = true;
-
-	localSupportedProcCount		= 0;
-	localInitializedProcCount	= 0;
-
-	if ( isGL_VERSION_3_0_DEPRECATED )
-	{
-		std::stringstream strStream;
-		strStream << "GL_VERSION_3_0_DEPRECATED                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
-		log( strStream.str() );
-
-		if ( localInitializedProcCount < localSupportedProcCount  )
-		{
-			std::stringstream strStream;
-			strStream << "GL_VERSION_3_0_DEPRECATED                         : " << localSupportedProcCount-localInitializedProcCount;
-			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
-			log( strStream.str() );
-		}
-		else
-		{
-			m_initializedExtensions.push_back( std::string("GL_VERSION_3_0_DEPRECATED") );
-			++m_initializedExtensionCount;
-			m_initializedProcCount += localInitializedProcCount;
-		}
-	}
-	else
-	{
-		logEndl( "GL_VERSION_3_0_DEPRECATED                         : not detected." );
 	}
 
 
