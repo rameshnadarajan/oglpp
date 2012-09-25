@@ -242,7 +242,7 @@ void GLSLProgram::setUniform1i( const std::string & name, const GLint v1 )
 {
 	const GLint loc = getUniformLocation( name );
 
-	glUniform1i( loc, v1 );
+	if ( loc != -1 )	glUniform1i( loc, v1 );
 //	glUniform1iARB( loc, v1 );
 }
 
@@ -250,21 +250,21 @@ void GLSLProgram::setUniform2i( const std::string & name, const GLint v1, const 
 {
 	const GLint loc = getUniformLocation( name );
 
-	glUniform2i( loc, v1, v2 );
+	if ( loc != -1 )	glUniform2i( loc, v1, v2 );
 }
 
 void GLSLProgram::setUniform3i( const std::string & name, const GLint v1, const GLint v2, const GLint v3 )
 {
 	const GLint loc = getUniformLocation( name );
 
-	glUniform3i( loc, v1, v2, v3 );
+	if ( loc != -1 )	glUniform3i( loc, v1, v2, v3 );
 }
 
 void GLSLProgram::setUniform4i( const std::string & name, const GLint v1, const GLint v2, const GLint v3, const GLint v4 )
 {
 	const GLint loc = getUniformLocation( name );
 
-	glUniform4i( loc, v1, v2, v3, v4 );
+	if ( loc != -1 )	glUniform4i( loc, v1, v2, v3, v4 );
 }
 
 
@@ -273,28 +273,28 @@ void GLSLProgram::setUniform1f( const std::string & name, const GLfloat v1 )
 {
 	const GLint loc = getUniformLocation( name );
 
-	glUniform1f( loc, v1 );
+	if ( loc != -1 )	glUniform1f( loc, v1 );
 }
 
 void GLSLProgram::setUniform2f( const std::string & name, const GLfloat v1, const GLfloat v2 )
 {
 	const GLint loc = getUniformLocation( name );
 
-	glUniform2f( loc, v1, v2 );
+	if ( loc != -1 )	glUniform2f( loc, v1, v2 );
 }
 
 void GLSLProgram::setUniform3f( const std::string & name, const GLfloat v1, const GLfloat v2, const GLfloat v3 )
 {
 	const GLint loc = getUniformLocation( name );
 
-	glUniform3f( loc, v1, v2, v3 );
+	if ( loc != -1 )	glUniform3f( loc, v1, v2, v3 );
 }
 
 void GLSLProgram::setUniform4f( const std::string & name, const GLfloat v1, const GLfloat v2, const GLfloat v3, const GLfloat v4 )
 {
 	const GLint loc = getUniformLocation( name );
 
-	glUniform4f( loc, v1, v2, v3, v4 );
+	if ( loc != -1 )	glUniform4f( loc, v1, v2, v3, v4 );
 }
 
 
@@ -305,7 +305,7 @@ void GLSLProgram::setUniform1iv( const std::string & name, const GLint * value, 
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniform1iv( loc, count, value );
+	if ( loc != -1 )	glUniform1iv( loc, count, value );
 }
 
 void GLSLProgram::setUniform2iv( const std::string & name, const GLint * value, const GLsizei count )
@@ -314,7 +314,7 @@ void GLSLProgram::setUniform2iv( const std::string & name, const GLint * value, 
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniform2iv( loc, count, value );
+	if ( loc != -1 )	glUniform2iv( loc, count, value );
 }
 
 void GLSLProgram::setUniform3iv( const std::string & name, const GLint * value, const GLsizei count )
@@ -323,7 +323,7 @@ void GLSLProgram::setUniform3iv( const std::string & name, const GLint * value, 
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniform3iv( loc, count, value );
+	if ( loc != -1 )	glUniform3iv( loc, count, value );
 }
 
 void GLSLProgram::setUniform4iv( const std::string & name, const GLint * value, const GLsizei count )
@@ -332,7 +332,7 @@ void GLSLProgram::setUniform4iv( const std::string & name, const GLint * value, 
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniform4iv( loc, count, value );
+	if ( loc != -1 )	glUniform4iv( loc, count, value );
 }
 
 
@@ -343,7 +343,7 @@ void GLSLProgram::setUniform1fv( const std::string & name, const GLfloat * value
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniform1fv( loc, count, value );
+	if ( loc != -1 )	glUniform1fv( loc, count, value );
 }
 
 void GLSLProgram::setUniform2fv( const std::string & name, const GLfloat * value, const GLsizei count )
@@ -352,7 +352,7 @@ void GLSLProgram::setUniform2fv( const std::string & name, const GLfloat * value
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniform2fv( loc, count, value );
+	if ( loc != -1 )	glUniform2fv( loc, count, value );
 }
 
 void GLSLProgram::setUniform3fv( const std::string & name, const GLfloat * value, const GLsizei count )
@@ -361,7 +361,7 @@ void GLSLProgram::setUniform3fv( const std::string & name, const GLfloat * value
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniform3fv( loc, count, value );
+	if ( loc != -1 )	glUniform3fv( loc, count, value );
 }
 
 void GLSLProgram::setUniform4fv( const std::string & name, const GLfloat * value, const GLsizei count )
@@ -370,7 +370,7 @@ void GLSLProgram::setUniform4fv( const std::string & name, const GLfloat * value
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniform4fv( loc, count, value );
+	if ( loc != -1 )	glUniform4fv( loc, count, value );
 }
 
 
@@ -381,7 +381,7 @@ void GLSLProgram::setUniformMatrix2fv( const std::string & name, const GLfloat *
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniformMatrix2fv( loc, count, transpose, value );
+	if ( loc != -1 )	glUniformMatrix2fv( loc, count, transpose, value );
 }
 
 void GLSLProgram::setUniformMatrix3fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
@@ -390,7 +390,7 @@ void GLSLProgram::setUniformMatrix3fv( const std::string & name, const GLfloat *
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniformMatrix3fv( loc, count, transpose, value );
+	if ( loc != -1 )	glUniformMatrix3fv( loc, count, transpose, value );
 }
 
 void GLSLProgram::setUniformMatrix4fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
@@ -399,7 +399,7 @@ void GLSLProgram::setUniformMatrix4fv( const std::string & name, const GLfloat *
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniformMatrix4fv( loc, count, transpose, value );
+	if ( loc != -1 )	glUniformMatrix4fv( loc, count, transpose, value );
 }
 
 void GLSLProgram::setUniformMatrix2x3fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
@@ -408,7 +408,7 @@ void GLSLProgram::setUniformMatrix2x3fv( const std::string & name, const GLfloat
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniformMatrix2x3fv( loc, count, transpose, value );
+	if ( loc != -1 )	glUniformMatrix2x3fv( loc, count, transpose, value );
 }
 
 void GLSLProgram::setUniformMatrix3x2fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
@@ -417,7 +417,7 @@ void GLSLProgram::setUniformMatrix3x2fv( const std::string & name, const GLfloat
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniformMatrix3x2fv( loc, count, transpose, value );
+	if ( loc != -1 )	glUniformMatrix3x2fv( loc, count, transpose, value );
 }
 
 void GLSLProgram::setUniformMatrix2x4fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
@@ -426,7 +426,7 @@ void GLSLProgram::setUniformMatrix2x4fv( const std::string & name, const GLfloat
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniformMatrix2x4fv( loc, count, transpose, value );
+	if ( loc != -1 )	glUniformMatrix2x4fv( loc, count, transpose, value );
 }
 
 void GLSLProgram::setUniformMatrix4x2fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
@@ -435,7 +435,7 @@ void GLSLProgram::setUniformMatrix4x2fv( const std::string & name, const GLfloat
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniformMatrix4x2fv( loc, count, transpose, value );
+	if ( loc != -1 )	glUniformMatrix4x2fv( loc, count, transpose, value );
 }
 
 void GLSLProgram::setUniformMatrix3x4fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
@@ -444,7 +444,7 @@ void GLSLProgram::setUniformMatrix3x4fv( const std::string & name, const GLfloat
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniformMatrix3x4fv( loc, count, transpose, value );
+	if ( loc != -1 )	glUniformMatrix3x4fv( loc, count, transpose, value );
 }
 
 void GLSLProgram::setUniformMatrix4x3fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
@@ -453,7 +453,7 @@ void GLSLProgram::setUniformMatrix4x3fv( const std::string & name, const GLfloat
 	assert( value != 0 );
 	assert( count != 0 );
 
-	glUniformMatrix4x3fv( loc, count, transpose, value );
+	if ( loc != -1 )	glUniformMatrix4x3fv( loc, count, transpose, value );
 }
 
 
@@ -639,4 +639,3 @@ bool GLSLProgram::m_firstInstance = true;
 
 
 } // namespace glo
-
