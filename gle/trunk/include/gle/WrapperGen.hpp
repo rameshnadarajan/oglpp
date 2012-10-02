@@ -1,4 +1,4 @@
-// This file was generated at Fri, 21 Sep 2012 09:51:51 +0000 with gle, please do not modify.
+// This file was generated at Tue, 02 Oct 2012 07:11:47 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -2394,8 +2394,8 @@ GLE_API bool isGL_AMD_shader_stencil_export();
 
 /**
  * @defgroup GL_AMD_sparse_texture GL_AMD_sparse_texture
- * Extension number in OpenGL registry : NA
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * Extension number in OpenGL registry : 426
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/sparse_texture.txt
  * @ingroup g_GL_AMD g_extensions
  */
 //@{

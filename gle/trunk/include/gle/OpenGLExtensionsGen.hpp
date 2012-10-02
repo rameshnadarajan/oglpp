@@ -1,4 +1,4 @@
-// This file was generated at Fri, 21 Sep 2012 09:51:51 +0000 with gle, please do not modify.
+// This file was generated at Tue, 02 Oct 2012 07:11:47 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Fri, 21 Sep 2012 09:51:51 +0000
+ * - Stamp = Tue, 02 Oct 2012 07:11:47 +0000
  * - Number of tokens							= 0
  * - Number of functions						= 2295
  * - Number of extensions found(in headers)		= 559
- * - Number of extensions in OpenGL registry	= 541
+ * - Number of extensions in OpenGL registry	= 542
  */
 
 
