@@ -1,4 +1,4 @@
-// This file was generated at Tue, 02 Oct 2012 07:11:47 +0000 with gle, please do not modify.
+// This file was generated at Tue, 16 Oct 2012 08:09:43 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -25,11 +25,11 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Tue, 02 Oct 2012 07:11:47 +0000
+ * - Stamp = Tue, 16 Oct 2012 08:09:43 +0000
  * - Number of tokens							= 0
  * - Number of functions						= 2295
- * - Number of extensions found(in headers)		= 559
- * - Number of extensions in OpenGL registry	= 542
+ * - Number of extensions found(in headers)		= 560
+ * - Number of extensions in OpenGL registry	= 546
  */
 
 
@@ -447,6 +447,17 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GLX_ARB_vertex_buffer_object is supported, false otherwise.
 	 */
 	bool isGLX_ARB_vertex_buffer_object;
+#endif //POSIX
+
+
+
+#ifdef POSIX
+	// ****** GLX_EXT_buffer_age ******
+
+	/**
+	 * @brief Returns \c true if \b GLX_EXT_buffer_age is supported, false otherwise.
+	 */
+	bool isGLX_EXT_buffer_age;
 #endif //POSIX
 
 

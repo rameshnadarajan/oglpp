@@ -1,4 +1,4 @@
-// This file was generated at Tue, 02 Oct 2012 07:11:47 +0000 with gle, please do not modify.
+// This file was generated at Tue, 16 Oct 2012 08:09:43 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -145,6 +145,18 @@ bool isGLX_ARB_multisample()
 bool isGLX_ARB_vertex_buffer_object()
 {
 	const bool isSupported = gleGetCurrent()->isGLX_ARB_vertex_buffer_object;
+
+	return isSupported;
+}
+#endif //POSIX
+
+
+
+#ifdef POSIX
+// ********* GLX_EXT_buffer_age *********
+bool isGLX_EXT_buffer_age()
+{
+	const bool isSupported = gleGetCurrent()->isGLX_EXT_buffer_age;
 
 	return isSupported;
 }

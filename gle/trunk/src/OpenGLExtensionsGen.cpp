@@ -1,4 +1,4 @@
-// This file was generated at Tue, 02 Oct 2012 07:11:47 +0000 with gle, please do not modify.
+// This file was generated at Tue, 16 Oct 2012 08:09:43 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -26,7 +26,7 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 559;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 560;
 const int	OpenGLExtensionsGen::m_supportedProcCount		= 2295;
 
 
@@ -97,6 +97,11 @@ void OpenGLExtensionsGen::clear()
 #ifdef POSIX
 	// ****** GLX_ARB_vertex_buffer_object ******
 	isGLX_ARB_vertex_buffer_object = false;
+#endif //POSIX
+
+#ifdef POSIX
+	// ****** GLX_EXT_buffer_age ******
+	isGLX_EXT_buffer_age = false;
 #endif //POSIX
 
 #ifdef POSIX
@@ -5049,6 +5054,43 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 {
 	int	localSupportedProcCount 	= 0;
 	int	localInitializedProcCount	= 0;
+
+#ifdef POSIX
+
+	// ****** GLX_EXT_buffer_age ******
+
+	isGLX_EXT_buffer_age = isWExtensionSupported("GLX_EXT_buffer_age");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGLX_EXT_buffer_age )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_EXT_buffer_age                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_EXT_buffer_age                                : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_EXT_buffer_age") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_EXT_buffer_age                                : not detected." );
+	}
+
+
+#endif // ifdef POSIX
 
 #ifdef POSIX
 
