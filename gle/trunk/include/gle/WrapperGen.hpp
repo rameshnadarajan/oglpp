@@ -1,4 +1,4 @@
-// This file was generated at Tue, 02 Oct 2012 07:11:47 +0000 with gle, please do not modify.
+// This file was generated at Tue, 16 Oct 2012 08:09:43 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -53,7 +53,7 @@
  */
 
 /** 
- * @defgroup g_GLX_EXT			GLX_EXT (9 extensions found)
+ * @defgroup g_GLX_EXT			GLX_EXT (10 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -504,6 +504,27 @@ GLE_API bool isGLX_ARB_multisample();
  * @return Returns \c true if \b GLX_ARB_vertex_buffer_object is supported, \c false otherwise.
  */
 GLE_API bool isGLX_ARB_vertex_buffer_object();
+
+
+//@}
+#endif //POSIX
+
+
+
+#ifdef POSIX
+/**
+ * @defgroup GLX_EXT_buffer_age GLX_EXT_buffer_age
+ * Extension number in OpenGL registry : 427
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/glx_buffer_age.txt
+ * @ingroup g_GLX_EXT g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GLX_EXT_buffer_age is supported.
+ * @return Returns \c true if \b GLX_EXT_buffer_age is supported, \c false otherwise.
+ */
+GLE_API bool isGLX_EXT_buffer_age();
 
 
 //@}
