@@ -31,7 +31,7 @@ def reporthook_urlretrieve( blockCount, blockSize, totalSize ):
 
 def downloadOpenGLHeaderFiles():
 	urls = [	'http://www.opengl.org/registry/api/glext.h', 'http://www.opengl.org/registry/api/glxext.h', 'http://www.opengl.org/registry/api/wglext.h',
-				'http://www.opengl.org/registry/api/gl3.h' ]
+				'http://www.opengl.org/registry/api/glcorearb.h' ]
 	for url in urls:
 		filename = rsearchFilename( urlparse.urlparse(url).path )
 		print ( '* Retrieves %s from %s' % (filename, urlparse.urlparse(url).hostname ) )
