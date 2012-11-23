@@ -366,78 +366,87 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 
 	//
 	glGetIntegerv( GL_MAX_ELEMENTS_VERTICES, &glint );
-	strInfos << "GL_MAX_ELEMENTS_VERTICES		= " << glint << std::endl;
+	strInfos << "GL_MAX_ELEMENTS_VERTICES			= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_ELEMENTS_INDICES, &glint );
-	strInfos << "GL_MAX_ELEMENTS_INDICES			= " << glint << std::endl;
+	strInfos << "GL_MAX_ELEMENTS_INDICES				= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_VERTEX_ATTRIBS, &glint );
-	strInfos << "GL_MAX_VERTEX_ATTRIBS			= " << glint << std::endl << std::endl;
+	strInfos << "GL_MAX_VERTEX_ATTRIBS				= " << glint << std::endl << std::endl;
 
 
 	glGetIntegerv( GL_MAX_VERTEX_UNIFORM_COMPONENTS, &glint );
-	strInfos << "GL_MAX_VERTEX_UNIFORM_COMPONENTS	= " << glint << std::endl;
+	strInfos << "GL_MAX_VERTEX_UNIFORM_COMPONENTS		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_TESS_CONTROL_UNIFORM_COMPONENTS, &glint );
+	strInfos << "GL_MAX_TESS_CONTROL_UNIFORM_COMPONENTS		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_TESS_EVALUATION_UNIFORM_COMPONENTS, &glint );
+	strInfos << "GL_MAX_TESS_EVALUATION_UNIFORM_COMPONENTS	= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_GEOMETRY_UNIFORM_COMPONENTS, &glint );
-	strInfos << "GL_MAX_GEOMETRY_UNIFORM_COMPONENTS	= " << glint << std::endl;
+	strInfos << "GL_MAX_GEOMETRY_UNIFORM_COMPONENTS		= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_FRAGMENT_UNIFORM_COMPONENTS, &glint );
-	strInfos << "GL_MAX_FRAGMENT_UNIFORM_COMPONENTS	= " << glint << std::endl;
+	strInfos << "GL_MAX_FRAGMENT_UNIFORM_COMPONENTS		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_COMPUTE_UNIFORM_COMPONENTS, &glint );
+	strInfos << "GL_MAX_COMPUTE_UNIFORM_COMPONENTS		= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_UNIFORM_BUFFER_BINDINGS, &glint );
-	strInfos << "GL_MAX_UNIFORM_BUFFER_BINDINGS		= " << glint << std::endl << std::endl;
+	strInfos << "GL_MAX_UNIFORM_BUFFER_BINDINGS			= " << glint << std::endl << std::endl;
 
 	//
 	GLint viewportSize[2];
 	glGetIntegerv( GL_MAX_VIEWPORT_DIMS, &viewportSize[0] );
-	strInfos << "GL_MAX_VIEWPORT_DIMS			= " << viewportSize[0] << " x " << viewportSize[1] << std::endl << std::endl;
+	strInfos << "GL_MAX_VIEWPORT_DIMS				= " << viewportSize[0] << " x " << viewportSize[1] << std::endl << std::endl;
 
 	glGetIntegerv( GL_MAX_DRAW_BUFFERS, &glint );
-	strInfos << "GL_MAX_DRAW_BUFFERS			= " << glint << std::endl;
+	strInfos << "GL_MAX_DRAW_BUFFERS				= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_DUAL_SOURCE_DRAW_BUFFERS, &glint );
-	strInfos << "GL_MAX_DUAL_SOURCE_DRAW_BUFFERS		= " << glint << std::endl;
+	strInfos << "GL_MAX_DUAL_SOURCE_DRAW_BUFFERS			= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_COLOR_ATTACHMENTS, &glint );
-	strInfos << "GL_MAX_COLOR_ATTACHMENTS		= " << glint << std::endl;
+	strInfos << "GL_MAX_COLOR_ATTACHMENTS			= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_RENDERBUFFER_SIZE, &glint );
-	strInfos << "GL_MAX_RENDERBUFFER_SIZE		= " << glint << std::endl;
+	strInfos << "GL_MAX_RENDERBUFFER_SIZE			= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_SAMPLES, &glint );
-	strInfos << "GL_MAX_SAMPLES				= " << glint << std::endl << std::endl;
+	strInfos << "GL_MAX_SAMPLES					= " << glint << std::endl << std::endl;
 
 	//
 	glGetIntegerv(GL_MAX_LIGHTS, &glint );
-	strInfos << "GL_MAX_LIGHTS				= " << glint << std::endl << std::endl;
+	strInfos << "GL_MAX_LIGHTS					= " << glint << std::endl << std::endl;
 
 	//
 	glGetIntegerv( GL_MAX_TEXTURE_UNITS, &glint );
-	strInfos << "GL_MAX_TEXTURE_UNITS			= " << glint << std::endl;
+	strInfos << "GL_MAX_TEXTURE_UNITS				= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS, &glint );
-	strInfos << "GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS	= " << glint << std::endl;
+	strInfos << "GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS		= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS, &glint );
-	strInfos << "GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS	= " << glint << std::endl;
+	strInfos << "GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS		= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_TEXTURE_IMAGE_UNITS, &glint );
-	strInfos << "GL_MAX_TEXTURE_IMAGE_UNITS		= " << glint << std::endl;
+	strInfos << "GL_MAX_TEXTURE_IMAGE_UNITS			= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS_ARB, &glint );
-	strInfos << "GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS_ARB	= " << glint << std::endl;
+	strInfos << "GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS_ARB		= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_TEXTURE_SIZE, &glint );
-	strInfos << "GL_MAX_TEXTURE_SIZE			= " << glint << " x " << glint << std::endl;
+	strInfos << "GL_MAX_TEXTURE_SIZE				= " << glint << " x " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_3D_TEXTURE_SIZE, &glint );
-	strInfos << "GL_MAX_3D_TEXTURE_SIZE			= " << glint << " x " << glint << " x " << glint << std::endl;
+	strInfos << "GL_MAX_3D_TEXTURE_SIZE				= " << glint << " x " << glint << " x " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_CUBE_MAP_TEXTURE_SIZE, &glint );
-	strInfos << "GL_MAX_CUBE_MAP_TEXTURE_SIZE		= " << glint << " x " << glint << std::endl;
+	strInfos << "GL_MAX_CUBE_MAP_TEXTURE_SIZE			= " << glint << " x " << glint << std::endl;
 
 	glGetFloatv( GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, &glfloat );
-	strInfos << "GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT 		= " << glfloat << std::endl;
+	strInfos << "GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT		= " << glfloat << std::endl;
 
 	strInfos << std::endl;
 
