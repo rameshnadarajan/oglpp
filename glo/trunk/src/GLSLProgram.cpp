@@ -92,12 +92,12 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 
 	assert( shaderSource	!= 0	);
 
-	//@TODO uncomment
-	if ( !isGL_ARB_tessellation_shader() && ( shaderType == TESSELATION_CONTROL || shaderType == TESSELATION_EVALUATION ) )
+	// @todo test in another method
+	/*if ( !isGL_ARB_tessellation_shader() && ( shaderType == TESSELATION_CONTROL || shaderType == TESSELATION_EVALUATION ) )
 	{
 		std::cerr << "glo.GLSLProgram: Tessellation is not supported" << std::endl;
 		// FIXME logError("");
-	}
+	}*/
 
 	// BACKUP SHADER SOURCE
 	m_shaderInfo[shaderType].shaderCode = std::string(shaderSource);
@@ -140,13 +140,14 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 		//FIXME vgDebug::get().logError( "Shaders failed to compile...\n" );
 		//printInfoLog( object );
 		m_shaderInfo[shaderType].shaderLog = getInfoLog( object );
-		return false;
 	}
 	else
 	{
 		m_shaderInfo[shaderType].shaderLog.clear();
 	}
 
+
+	//
 	if ( m_shaderInfo[shaderType].shaderSaved )
 	{
 		glDetachShader( m_programObject,  m_shaderInfo[shaderType].shaderSaved );
@@ -162,6 +163,13 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 	// DELETE object, no longer needed
 	glDeleteShader( object );
 //	glDeleteObjectARB( object );
+
+
+	// COMPILE stage
+	if ( !compiled )
+	{
+		return false;
+	}
 
 	// LINK stage
 	if ( linkProgram )
@@ -626,8 +634,8 @@ GLenum GLSLProgram::m_GLEnumShaderType[] =
 std::string GLSLProgram::m_stringShaderType[] =
 {
 	"VERTEX",
-	"TESSELATION_CONTROL", 
-	"TESSELATION_EVALUATION",
+	"TESSELLATION_CONTROL", 
+	"TESSELLATION_EVALUATION",
 	"GEOMETRY",
 	"FRAGMENT"
 };
