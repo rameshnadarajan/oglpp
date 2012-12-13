@@ -397,6 +397,15 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 	strInfos << "GL_MAX_UNIFORM_BUFFER_BINDINGS			= " << glint << std::endl << std::endl;
 
 	//
+	glGetIntegerv( GL_MAX_VERTEX_OUTPUT_COMPONENTS, &glint );
+	strInfos << "GL_MAX_VERTEX_OUTPUT_COMPONENTS			= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_TESS_CONTROL_INPUT_COMPONENTS, &glint );
+	strInfos << "GL_MAX_TESS_CONTROL_INPUT_COMPONENTS		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_TESS_CONTROL_OUTPUT_COMPONENTS, &glint );
+	strInfos << "GL_MAX_TESS_CONTROL_OUTPUT_COMPONENTS		= " << glint << std::endl;
+	//
 	GLint viewportSize[2];
 	glGetIntegerv( GL_MAX_VIEWPORT_DIMS, &viewportSize[0] );
 	strInfos << "GL_MAX_VIEWPORT_DIMS				= " << viewportSize[0] << " x " << viewportSize[1] << std::endl << std::endl;
