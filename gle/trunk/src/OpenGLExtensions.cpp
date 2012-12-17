@@ -405,6 +405,15 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 
 	glGetIntegerv( GL_MAX_TESS_CONTROL_OUTPUT_COMPONENTS, &glint );
 	strInfos << "GL_MAX_TESS_CONTROL_OUTPUT_COMPONENTS		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_TESS_PATCH_COMPONENTS, &glint );
+	strInfos << "GL_MAX_TESS_PATCH_COMPONENTS			= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_TESS_CONTROL_TOTAL_OUTPUT_COMPONENTS, &glint );
+	strInfos << "GL_MAX_TESS_CONTROL_TOTAL_OUTPUT_COMPONENTS	= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_TESS_EVALUATION_INPUT_COMPONENTS, &glint );
+	strInfos << "GL_MAX_TESS_EVALUATION_INPUT_COMPONENTS		= " << glint << std::endl;
 	//
 	GLint viewportSize[2];
 	glGetIntegerv( GL_MAX_VIEWPORT_DIMS, &viewportSize[0] );
