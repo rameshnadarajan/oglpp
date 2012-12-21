@@ -27,8 +27,8 @@ struct GLO_API GLSLProgram : public IResource
 	enum ShaderType
 	{
 		VERTEX = 0,
-		TESSELATION_CONTROL,
-		TESSELATION_EVALUATION,
+		TESSELLATION_CONTROL,
+		TESSELLATION_EVALUATION,
 		GEOMETRY,
 		FRAGMENT,
 		PROGRAM,		///< not a real shader type (used by ShadersEditor)
