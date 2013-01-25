@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2011, Nicolas Papier.
+// OGLPP - Copyright (C) 2011, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -80,6 +80,11 @@ struct VertexArrayObject : public Object
 	//@}
 
 
+	/**
+	 * @brief Binds to the default VAO.
+	 */
+	static GLO_API void bindToDefault();
+
 
 	/**
 	 * @name Accessors
@@ -94,11 +99,8 @@ struct VertexArrayObject : public Object
 	 * @return true if the vertex array object is bounded, false otherwise.
 	 */
 	GLO_API const bool isBound() const;
+
 	//@}
-
-
-
-
 
 
 	/**
