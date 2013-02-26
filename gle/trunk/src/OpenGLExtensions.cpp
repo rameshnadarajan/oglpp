@@ -419,7 +419,7 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 	strInfos << "GL_MAX_TESS_EVALUATION_INPUT_COMPONENTS		= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_TESS_EVALUATION_OUTPUT_COMPONENTS, &glint );
-	strInfos << "GL_MAX_TESS_EVALUATION_OUTPUT_COMPONENTS		= " << glint << std::endl << std::endl;
+	strInfos << "GL_MAX_TESS_EVALUATION_OUTPUT_COMPONENTS	= " << glint << std::endl << std::endl;
 
 	//
 	glGetIntegerv( GL_MAX_TESS_GEN_LEVEL, &glint );
