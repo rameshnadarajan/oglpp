@@ -1,4 +1,4 @@
-// This file was generated at Tue, 16 Oct 2012 08:09:43 +0000 with gle, please do not modify.
+// This file was generated at Thu, 07 Mar 2013 07:22:02 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,10 +6,10 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-09-19 19:02:24 -0700 (Wed, 19 Sep 2012) $ */
-// #define GL_GLEXT_VERSION 85
-// /* glxext.h last updated 2012/02/29 */
-// #define GLX_GLXEXT_VERSION 33
+// /* glext.h last updated $Date: 2013-02-07 01:42:49 -0800 (Thu, 07 Feb 2013) $ */
+// #define GL_GLEXT_VERSION 86
+// /* glxext.h last updated 2013/01/02 */
+// #define GLX_GLXEXT_VERSION 34
 // /* wglext.h last updated 2012/01/04 */
 // #define WGL_WGLEXT_VERSION 24
 
@@ -169,6 +169,18 @@ bool isGLX_EXT_buffer_age()
 bool isGLX_EXT_create_context_es2_profile()
 {
 	const bool isSupported = gleGetCurrent()->isGLX_EXT_create_context_es2_profile;
+
+	return isSupported;
+}
+#endif //POSIX
+
+
+
+#ifdef POSIX
+// ********* GLX_EXT_create_context_es_profile *********
+bool isGLX_EXT_create_context_es_profile()
+{
+	const bool isSupported = gleGetCurrent()->isGLX_EXT_create_context_es_profile;
 
 	return isSupported;
 }
@@ -1498,6 +1510,17 @@ bool isGL_AMD_seamless_cubemap_per_texture()
 bool isGL_AMD_shader_stencil_export()
 {
 	const bool isSupported = gleGetCurrent()->isGL_AMD_shader_stencil_export;
+
+	return isSupported;
+}
+
+
+
+
+// ********* GL_AMD_shader_trinary_minmax *********
+bool isGL_AMD_shader_trinary_minmax()
+{
+	const bool isSupported = gleGetCurrent()->isGL_AMD_shader_trinary_minmax;
 
 	return isSupported;
 }
@@ -10406,6 +10429,33 @@ bool isGL_INGR_palette_buffer()
 
 
 
+// ********* GL_INTEL_map_texture *********
+bool isGL_INTEL_map_texture()
+{
+	const bool isSupported = gleGetCurrent()->isGL_INTEL_map_texture;
+
+	return isSupported;
+}
+
+
+GLvoid* glMapTexture2DINTEL(GLuint texture, GLint level, GLbitfield access, const GLint *stride, const GLenum *layout)
+{
+	return gleGetCurrent()->glMapTexture2DINTEL( texture, level, access, stride, layout );
+}
+
+void glSyncTextureINTEL(GLuint texture)
+{
+	gleGetCurrent()->glSyncTextureINTEL( texture );
+}
+
+void glUnmapTexture2DINTEL(GLuint texture, GLint level)
+{
+	gleGetCurrent()->glUnmapTexture2DINTEL( texture, level );
+}
+
+
+
+
 // ********* GL_INTEL_parallel_arrays *********
 bool isGL_INTEL_parallel_arrays()
 {
@@ -10704,6 +10754,28 @@ bool isGL_MESA_ycbcr_texture()
 
 
 
+// ********* GL_NVX_conditional_render *********
+bool isGL_NVX_conditional_render()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NVX_conditional_render;
+
+	return isSupported;
+}
+
+
+void glBeginConditionalRenderNVX(GLuint id)
+{
+	gleGetCurrent()->glBeginConditionalRenderNVX( id );
+}
+
+void glEndConditionalRenderNVX(void)
+{
+	gleGetCurrent()->glEndConditionalRenderNVX(  );
+}
+
+
+
+
 // ********* GL_NV_bindless_texture *********
 bool isGL_NV_bindless_texture()
 {
@@ -10792,6 +10864,17 @@ bool isGL_NV_blend_square()
 
 
 
+// ********* GL_NV_compute_program5 *********
+bool isGL_NV_compute_program5()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_compute_program5;
+
+	return isSupported;
+}
+
+
+
+
 // ********* GL_NV_conditional_render *********
 bool isGL_NV_conditional_render()
 {
@@ -10842,6 +10925,17 @@ void glCopyImageSubDataNV(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLin
 
 
 
+// ********* GL_NV_deep_texture3D *********
+bool isGL_NV_deep_texture3D()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_deep_texture3D;
+
+	return isSupported;
+}
+
+
+
+
 // ********* GL_NV_depth_buffer_float *********
 bool isGL_NV_depth_buffer_float()
 {
@@ -10875,6 +10969,23 @@ bool isGL_NV_depth_clamp()
 	const bool isSupported = gleGetCurrent()->isGL_NV_depth_clamp;
 
 	return isSupported;
+}
+
+
+
+
+// ********* GL_NV_draw_texture *********
+bool isGL_NV_draw_texture()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_draw_texture;
+
+	return isSupported;
+}
+
+
+void glDrawTextureNV(GLuint texture, GLuint sampler, GLfloat x0, GLfloat y0, GLfloat x1, GLfloat y1, GLfloat z, GLfloat s0, GLfloat t0, GLfloat s1, GLfloat t1)
+{
+	gleGetCurrent()->glDrawTextureNV( texture, sampler, x0, y0, x1, y1, z, s0, t0, s1, t1 );
 }
 
 
@@ -11801,19 +11912,19 @@ bool isGL_NV_parameter_buffer_object()
 }
 
 
-void glProgramBufferParametersIivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLint *params)
+void glProgramBufferParametersIivNV(GLenum target, GLuint bindingIndex, GLuint wordIndex, GLsizei count, const GLint *params)
 {
-	gleGetCurrent()->glProgramBufferParametersIivNV( target, buffer, index, count, params );
+	gleGetCurrent()->glProgramBufferParametersIivNV( target, bindingIndex, wordIndex, count, params );
 }
 
-void glProgramBufferParametersIuivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLuint *params)
+void glProgramBufferParametersIuivNV(GLenum target, GLuint bindingIndex, GLuint wordIndex, GLsizei count, const GLuint *params)
 {
-	gleGetCurrent()->glProgramBufferParametersIuivNV( target, buffer, index, count, params );
+	gleGetCurrent()->glProgramBufferParametersIuivNV( target, bindingIndex, wordIndex, count, params );
 }
 
-void glProgramBufferParametersfvNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLfloat *params)
+void glProgramBufferParametersfvNV(GLenum target, GLuint bindingIndex, GLuint wordIndex, GLsizei count, const GLfloat *params)
 {
-	gleGetCurrent()->glProgramBufferParametersfvNV( target, buffer, index, count, params );
+	gleGetCurrent()->glProgramBufferParametersfvNV( target, bindingIndex, wordIndex, count, params );
 }
 
 
@@ -12294,6 +12405,17 @@ void glGetCombinerStageParameterfvNV(GLenum stage, GLenum pname, GLfloat *params
 
 
 
+// ********* GL_NV_shader_atomic_counters *********
+bool isGL_NV_shader_atomic_counters()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_shader_atomic_counters;
+
+	return isSupported;
+}
+
+
+
+
 // ********* GL_NV_shader_atomic_float *********
 bool isGL_NV_shader_atomic_float()
 {
@@ -12391,6 +12513,17 @@ void glUniformui64vNV(GLint location, GLsizei count, const GLuint64EXT *value)
 bool isGL_NV_shader_buffer_store()
 {
 	const bool isSupported = gleGetCurrent()->isGL_NV_shader_buffer_store;
+
+	return isSupported;
+}
+
+
+
+
+// ********* GL_NV_shader_storage_buffer_object *********
+bool isGL_NV_shader_storage_buffer_object()
+{
+	const bool isSupported = gleGetCurrent()->isGL_NV_shader_storage_buffer_object;
 
 	return isSupported;
 }
@@ -13535,12 +13668,736 @@ void glVideoCaptureStreamParameterivNV(GLuint video_capture_slot, GLuint stream,
 
 
 
+// ********* GL_OES_byte_coordinates *********
+bool isGL_OES_byte_coordinates()
+{
+	const bool isSupported = gleGetCurrent()->isGL_OES_byte_coordinates;
+
+	return isSupported;
+}
+
+
+void glMultiTexCoord1bOES(GLenum texture, GLbyte s)
+{
+	gleGetCurrent()->glMultiTexCoord1bOES( texture, s );
+}
+
+void glMultiTexCoord1bvOES(GLenum texture, const GLbyte *coords)
+{
+	gleGetCurrent()->glMultiTexCoord1bvOES( texture, coords );
+}
+
+void glMultiTexCoord2bOES(GLenum texture, GLbyte s, GLbyte t)
+{
+	gleGetCurrent()->glMultiTexCoord2bOES( texture, s, t );
+}
+
+void glMultiTexCoord2bvOES(GLenum texture, const GLbyte *coords)
+{
+	gleGetCurrent()->glMultiTexCoord2bvOES( texture, coords );
+}
+
+void glMultiTexCoord3bOES(GLenum texture, GLbyte s, GLbyte t, GLbyte r)
+{
+	gleGetCurrent()->glMultiTexCoord3bOES( texture, s, t, r );
+}
+
+void glMultiTexCoord3bvOES(GLenum texture, const GLbyte *coords)
+{
+	gleGetCurrent()->glMultiTexCoord3bvOES( texture, coords );
+}
+
+void glMultiTexCoord4bOES(GLenum texture, GLbyte s, GLbyte t, GLbyte r, GLbyte q)
+{
+	gleGetCurrent()->glMultiTexCoord4bOES( texture, s, t, r, q );
+}
+
+void glMultiTexCoord4bvOES(GLenum texture, const GLbyte *coords)
+{
+	gleGetCurrent()->glMultiTexCoord4bvOES( texture, coords );
+}
+
+void glTexCoord1bOES(GLbyte s)
+{
+	gleGetCurrent()->glTexCoord1bOES( s );
+}
+
+void glTexCoord1bvOES(const GLbyte *coords)
+{
+	gleGetCurrent()->glTexCoord1bvOES( coords );
+}
+
+void glTexCoord2bOES(GLbyte s, GLbyte t)
+{
+	gleGetCurrent()->glTexCoord2bOES( s, t );
+}
+
+void glTexCoord2bvOES(const GLbyte *coords)
+{
+	gleGetCurrent()->glTexCoord2bvOES( coords );
+}
+
+void glTexCoord3bOES(GLbyte s, GLbyte t, GLbyte r)
+{
+	gleGetCurrent()->glTexCoord3bOES( s, t, r );
+}
+
+void glTexCoord3bvOES(const GLbyte *coords)
+{
+	gleGetCurrent()->glTexCoord3bvOES( coords );
+}
+
+void glTexCoord4bOES(GLbyte s, GLbyte t, GLbyte r, GLbyte q)
+{
+	gleGetCurrent()->glTexCoord4bOES( s, t, r, q );
+}
+
+void glTexCoord4bvOES(const GLbyte *coords)
+{
+	gleGetCurrent()->glTexCoord4bvOES( coords );
+}
+
+void glVertex2bOES(GLbyte x)
+{
+	gleGetCurrent()->glVertex2bOES( x );
+}
+
+void glVertex2bvOES(const GLbyte *coords)
+{
+	gleGetCurrent()->glVertex2bvOES( coords );
+}
+
+void glVertex3bOES(GLbyte x, GLbyte y)
+{
+	gleGetCurrent()->glVertex3bOES( x, y );
+}
+
+void glVertex3bvOES(const GLbyte *coords)
+{
+	gleGetCurrent()->glVertex3bvOES( coords );
+}
+
+void glVertex4bOES(GLbyte x, GLbyte y, GLbyte z)
+{
+	gleGetCurrent()->glVertex4bOES( x, y, z );
+}
+
+void glVertex4bvOES(const GLbyte *coords)
+{
+	gleGetCurrent()->glVertex4bvOES( coords );
+}
+
+
+
+
+// ********* GL_OES_compressed_paletted_texture *********
+bool isGL_OES_compressed_paletted_texture()
+{
+	const bool isSupported = gleGetCurrent()->isGL_OES_compressed_paletted_texture;
+
+	return isSupported;
+}
+
+
+
+
+// ********* GL_OES_fixed_point *********
+bool isGL_OES_fixed_point()
+{
+	const bool isSupported = gleGetCurrent()->isGL_OES_fixed_point;
+
+	return isSupported;
+}
+
+
+void glAccumxOES(GLenum op, GLfixed value)
+{
+	gleGetCurrent()->glAccumxOES( op, value );
+}
+
+void glAlphaFuncxOES(GLenum func, GLfixed ref)
+{
+	gleGetCurrent()->glAlphaFuncxOES( func, ref );
+}
+
+void glBitmapxOES(GLsizei width, GLsizei height, GLfixed xorig, GLfixed yorig, GLfixed xmove, GLfixed ymove, const GLubyte *bitmap)
+{
+	gleGetCurrent()->glBitmapxOES( width, height, xorig, yorig, xmove, ymove, bitmap );
+}
+
+void glBlendColorxOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha)
+{
+	gleGetCurrent()->glBlendColorxOES( red, green, blue, alpha );
+}
+
+void glClearAccumxOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha)
+{
+	gleGetCurrent()->glClearAccumxOES( red, green, blue, alpha );
+}
+
+void glClearColorxOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha)
+{
+	gleGetCurrent()->glClearColorxOES( red, green, blue, alpha );
+}
+
+void glClearDepthxOES(GLfixed depth)
+{
+	gleGetCurrent()->glClearDepthxOES( depth );
+}
+
+void glClipPlanexOES(GLenum plane, const GLfixed *equation)
+{
+	gleGetCurrent()->glClipPlanexOES( plane, equation );
+}
+
+void glColor3xOES(GLfixed red, GLfixed green, GLfixed blue)
+{
+	gleGetCurrent()->glColor3xOES( red, green, blue );
+}
+
+void glColor3xvOES(const GLfixed *components)
+{
+	gleGetCurrent()->glColor3xvOES( components );
+}
+
+void glColor4xOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha)
+{
+	gleGetCurrent()->glColor4xOES( red, green, blue, alpha );
+}
+
+void glColor4xvOES(const GLfixed *components)
+{
+	gleGetCurrent()->glColor4xvOES( components );
+}
+
+void glConvolutionParameterxOES(GLenum target, GLenum pname, GLfixed param)
+{
+	gleGetCurrent()->glConvolutionParameterxOES( target, pname, param );
+}
+
+void glConvolutionParameterxvOES(GLenum target, GLenum pname, const GLfixed *params)
+{
+	gleGetCurrent()->glConvolutionParameterxvOES( target, pname, params );
+}
+
+void glDepthRangexOES(GLfixed n, GLfixed f)
+{
+	gleGetCurrent()->glDepthRangexOES( n, f );
+}
+
+void glEvalCoord1xOES(GLfixed u)
+{
+	gleGetCurrent()->glEvalCoord1xOES( u );
+}
+
+void glEvalCoord1xvOES(const GLfixed *coords)
+{
+	gleGetCurrent()->glEvalCoord1xvOES( coords );
+}
+
+void glEvalCoord2xOES(GLfixed u, GLfixed v)
+{
+	gleGetCurrent()->glEvalCoord2xOES( u, v );
+}
+
+void glEvalCoord2xvOES(const GLfixed *coords)
+{
+	gleGetCurrent()->glEvalCoord2xvOES( coords );
+}
+
+void glFeedbackBufferxOES(GLsizei n, GLenum type, const GLfixed *buffer)
+{
+	gleGetCurrent()->glFeedbackBufferxOES( n, type, buffer );
+}
+
+void glFogxOES(GLenum pname, GLfixed param)
+{
+	gleGetCurrent()->glFogxOES( pname, param );
+}
+
+void glFogxvOES(GLenum pname, const GLfixed *param)
+{
+	gleGetCurrent()->glFogxvOES( pname, param );
+}
+
+void glFrustumxOES(GLfixed l, GLfixed r, GLfixed b, GLfixed t, GLfixed n, GLfixed f)
+{
+	gleGetCurrent()->glFrustumxOES( l, r, b, t, n, f );
+}
+
+void glGetClipPlanexOES(GLenum plane, GLfixed *equation)
+{
+	gleGetCurrent()->glGetClipPlanexOES( plane, equation );
+}
+
+void glGetConvolutionParameterxvOES(GLenum target, GLenum pname, GLfixed *params)
+{
+	gleGetCurrent()->glGetConvolutionParameterxvOES( target, pname, params );
+}
+
+void glGetFixedvOES(GLenum pname, GLfixed *params)
+{
+	gleGetCurrent()->glGetFixedvOES( pname, params );
+}
+
+void glGetHistogramParameterxvOES(GLenum target, GLenum pname, GLfixed *params)
+{
+	gleGetCurrent()->glGetHistogramParameterxvOES( target, pname, params );
+}
+
+void glGetLightxOES(GLenum light, GLenum pname, GLfixed *params)
+{
+	gleGetCurrent()->glGetLightxOES( light, pname, params );
+}
+
+void glGetMapxvOES(GLenum target, GLenum query, GLfixed *v)
+{
+	gleGetCurrent()->glGetMapxvOES( target, query, v );
+}
+
+void glGetMaterialxOES(GLenum face, GLenum pname, GLfixed param)
+{
+	gleGetCurrent()->glGetMaterialxOES( face, pname, param );
+}
+
+void glGetPixelMapxv(GLenum map, GLint size, GLfixed *values)
+{
+	gleGetCurrent()->glGetPixelMapxv( map, size, values );
+}
+
+void glGetTexEnvxvOES(GLenum target, GLenum pname, GLfixed *params)
+{
+	gleGetCurrent()->glGetTexEnvxvOES( target, pname, params );
+}
+
+void glGetTexGenxvOES(GLenum coord, GLenum pname, GLfixed *params)
+{
+	gleGetCurrent()->glGetTexGenxvOES( coord, pname, params );
+}
+
+void glGetTexLevelParameterxvOES(GLenum target, GLint level, GLenum pname, GLfixed *params)
+{
+	gleGetCurrent()->glGetTexLevelParameterxvOES( target, level, pname, params );
+}
+
+void glGetTexParameterxvOES(GLenum target, GLenum pname, GLfixed *params)
+{
+	gleGetCurrent()->glGetTexParameterxvOES( target, pname, params );
+}
+
+void glIndexxOES(GLfixed component)
+{
+	gleGetCurrent()->glIndexxOES( component );
+}
+
+void glIndexxvOES(const GLfixed *component)
+{
+	gleGetCurrent()->glIndexxvOES( component );
+}
+
+void glLightModelxOES(GLenum pname, GLfixed param)
+{
+	gleGetCurrent()->glLightModelxOES( pname, param );
+}
+
+void glLightModelxvOES(GLenum pname, const GLfixed *param)
+{
+	gleGetCurrent()->glLightModelxvOES( pname, param );
+}
+
+void glLightxOES(GLenum light, GLenum pname, GLfixed param)
+{
+	gleGetCurrent()->glLightxOES( light, pname, param );
+}
+
+void glLightxvOES(GLenum light, GLenum pname, const GLfixed *params)
+{
+	gleGetCurrent()->glLightxvOES( light, pname, params );
+}
+
+void glLineWidthxOES(GLfixed width)
+{
+	gleGetCurrent()->glLineWidthxOES( width );
+}
+
+void glLoadMatrixxOES(const GLfixed *m)
+{
+	gleGetCurrent()->glLoadMatrixxOES( m );
+}
+
+void glLoadTransposeMatrixxOES(const GLfixed *m)
+{
+	gleGetCurrent()->glLoadTransposeMatrixxOES( m );
+}
+
+void glMap1xOES(GLenum target, GLfixed u1, GLfixed u2, GLint stride, GLint order, GLfixed points)
+{
+	gleGetCurrent()->glMap1xOES( target, u1, u2, stride, order, points );
+}
+
+void glMap2xOES(GLenum target, GLfixed u1, GLfixed u2, GLint ustride, GLint uorder, GLfixed v1, GLfixed v2, GLint vstride, GLint vorder, GLfixed points)
+{
+	gleGetCurrent()->glMap2xOES( target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points );
+}
+
+void glMapGrid1xOES(GLint n, GLfixed u1, GLfixed u2)
+{
+	gleGetCurrent()->glMapGrid1xOES( n, u1, u2 );
+}
+
+void glMapGrid2xOES(GLint n, GLfixed u1, GLfixed u2, GLfixed v1, GLfixed v2)
+{
+	gleGetCurrent()->glMapGrid2xOES( n, u1, u2, v1, v2 );
+}
+
+void glMaterialxOES(GLenum face, GLenum pname, GLfixed param)
+{
+	gleGetCurrent()->glMaterialxOES( face, pname, param );
+}
+
+void glMaterialxvOES(GLenum face, GLenum pname, const GLfixed *param)
+{
+	gleGetCurrent()->glMaterialxvOES( face, pname, param );
+}
+
+void glMultMatrixxOES(const GLfixed *m)
+{
+	gleGetCurrent()->glMultMatrixxOES( m );
+}
+
+void glMultTransposeMatrixxOES(const GLfixed *m)
+{
+	gleGetCurrent()->glMultTransposeMatrixxOES( m );
+}
+
+void glMultiTexCoord1xOES(GLenum texture, GLfixed s)
+{
+	gleGetCurrent()->glMultiTexCoord1xOES( texture, s );
+}
+
+void glMultiTexCoord1xvOES(GLenum texture, const GLfixed *coords)
+{
+	gleGetCurrent()->glMultiTexCoord1xvOES( texture, coords );
+}
+
+void glMultiTexCoord2xOES(GLenum texture, GLfixed s, GLfixed t)
+{
+	gleGetCurrent()->glMultiTexCoord2xOES( texture, s, t );
+}
+
+void glMultiTexCoord2xvOES(GLenum texture, const GLfixed *coords)
+{
+	gleGetCurrent()->glMultiTexCoord2xvOES( texture, coords );
+}
+
+void glMultiTexCoord3xOES(GLenum texture, GLfixed s, GLfixed t, GLfixed r)
+{
+	gleGetCurrent()->glMultiTexCoord3xOES( texture, s, t, r );
+}
+
+void glMultiTexCoord3xvOES(GLenum texture, const GLfixed *coords)
+{
+	gleGetCurrent()->glMultiTexCoord3xvOES( texture, coords );
+}
+
+void glMultiTexCoord4xOES(GLenum texture, GLfixed s, GLfixed t, GLfixed r, GLfixed q)
+{
+	gleGetCurrent()->glMultiTexCoord4xOES( texture, s, t, r, q );
+}
+
+void glMultiTexCoord4xvOES(GLenum texture, const GLfixed *coords)
+{
+	gleGetCurrent()->glMultiTexCoord4xvOES( texture, coords );
+}
+
+void glNormal3xOES(GLfixed nx, GLfixed ny, GLfixed nz)
+{
+	gleGetCurrent()->glNormal3xOES( nx, ny, nz );
+}
+
+void glNormal3xvOES(const GLfixed *coords)
+{
+	gleGetCurrent()->glNormal3xvOES( coords );
+}
+
+void glOrthoxOES(GLfixed l, GLfixed r, GLfixed b, GLfixed t, GLfixed n, GLfixed f)
+{
+	gleGetCurrent()->glOrthoxOES( l, r, b, t, n, f );
+}
+
+void glPassThroughxOES(GLfixed token)
+{
+	gleGetCurrent()->glPassThroughxOES( token );
+}
+
+void glPixelMapx(GLenum map, GLint size, const GLfixed *values)
+{
+	gleGetCurrent()->glPixelMapx( map, size, values );
+}
+
+void glPixelStorex(GLenum pname, GLfixed param)
+{
+	gleGetCurrent()->glPixelStorex( pname, param );
+}
+
+void glPixelTransferxOES(GLenum pname, GLfixed param)
+{
+	gleGetCurrent()->glPixelTransferxOES( pname, param );
+}
+
+void glPixelZoomxOES(GLfixed xfactor, GLfixed yfactor)
+{
+	gleGetCurrent()->glPixelZoomxOES( xfactor, yfactor );
+}
+
+void glPointParameterxvOES(GLenum pname, const GLfixed *params)
+{
+	gleGetCurrent()->glPointParameterxvOES( pname, params );
+}
+
+void glPointSizexOES(GLfixed size)
+{
+	gleGetCurrent()->glPointSizexOES( size );
+}
+
+void glPolygonOffsetxOES(GLfixed factor, GLfixed units)
+{
+	gleGetCurrent()->glPolygonOffsetxOES( factor, units );
+}
+
+void glPrioritizeTexturesxOES(GLsizei n, const GLuint *textures, const GLfixed *priorities)
+{
+	gleGetCurrent()->glPrioritizeTexturesxOES( n, textures, priorities );
+}
+
+void glRasterPos2xOES(GLfixed x, GLfixed y)
+{
+	gleGetCurrent()->glRasterPos2xOES( x, y );
+}
+
+void glRasterPos2xvOES(const GLfixed *coords)
+{
+	gleGetCurrent()->glRasterPos2xvOES( coords );
+}
+
+void glRasterPos3xOES(GLfixed x, GLfixed y, GLfixed z)
+{
+	gleGetCurrent()->glRasterPos3xOES( x, y, z );
+}
+
+void glRasterPos3xvOES(const GLfixed *coords)
+{
+	gleGetCurrent()->glRasterPos3xvOES( coords );
+}
+
+void glRasterPos4xOES(GLfixed x, GLfixed y, GLfixed z, GLfixed w)
+{
+	gleGetCurrent()->glRasterPos4xOES( x, y, z, w );
+}
+
+void glRasterPos4xvOES(const GLfixed *coords)
+{
+	gleGetCurrent()->glRasterPos4xvOES( coords );
+}
+
+void glRectxOES(GLfixed x1, GLfixed y1, GLfixed x2, GLfixed y2)
+{
+	gleGetCurrent()->glRectxOES( x1, y1, x2, y2 );
+}
+
+void glRectxvOES(const GLfixed *v1, const GLfixed *v2)
+{
+	gleGetCurrent()->glRectxvOES( v1, v2 );
+}
+
+void glRotatexOES(GLfixed angle, GLfixed x, GLfixed y, GLfixed z)
+{
+	gleGetCurrent()->glRotatexOES( angle, x, y, z );
+}
+
+void glSampleCoverageOES(GLfixed value, GLboolean invert)
+{
+	gleGetCurrent()->glSampleCoverageOES( value, invert );
+}
+
+void glScalexOES(GLfixed x, GLfixed y, GLfixed z)
+{
+	gleGetCurrent()->glScalexOES( x, y, z );
+}
+
+void glTexCoord1xOES(GLfixed s)
+{
+	gleGetCurrent()->glTexCoord1xOES( s );
+}
+
+void glTexCoord1xvOES(const GLfixed *coords)
+{
+	gleGetCurrent()->glTexCoord1xvOES( coords );
+}
+
+void glTexCoord2xOES(GLfixed s, GLfixed t)
+{
+	gleGetCurrent()->glTexCoord2xOES( s, t );
+}
+
+void glTexCoord2xvOES(const GLfixed *coords)
+{
+	gleGetCurrent()->glTexCoord2xvOES( coords );
+}
+
+void glTexCoord3xOES(GLfixed s, GLfixed t, GLfixed r)
+{
+	gleGetCurrent()->glTexCoord3xOES( s, t, r );
+}
+
+void glTexCoord3xvOES(const GLfixed *coords)
+{
+	gleGetCurrent()->glTexCoord3xvOES( coords );
+}
+
+void glTexCoord4xOES(GLfixed s, GLfixed t, GLfixed r, GLfixed q)
+{
+	gleGetCurrent()->glTexCoord4xOES( s, t, r, q );
+}
+
+void glTexCoord4xvOES(const GLfixed *coords)
+{
+	gleGetCurrent()->glTexCoord4xvOES( coords );
+}
+
+void glTexEnvxOES(GLenum target, GLenum pname, GLfixed param)
+{
+	gleGetCurrent()->glTexEnvxOES( target, pname, param );
+}
+
+void glTexEnvxvOES(GLenum target, GLenum pname, const GLfixed *params)
+{
+	gleGetCurrent()->glTexEnvxvOES( target, pname, params );
+}
+
+void glTexGenxOES(GLenum coord, GLenum pname, GLfixed param)
+{
+	gleGetCurrent()->glTexGenxOES( coord, pname, param );
+}
+
+void glTexGenxvOES(GLenum coord, GLenum pname, const GLfixed *params)
+{
+	gleGetCurrent()->glTexGenxvOES( coord, pname, params );
+}
+
+void glTexParameterxOES(GLenum target, GLenum pname, GLfixed param)
+{
+	gleGetCurrent()->glTexParameterxOES( target, pname, param );
+}
+
+void glTexParameterxvOES(GLenum target, GLenum pname, const GLfixed *params)
+{
+	gleGetCurrent()->glTexParameterxvOES( target, pname, params );
+}
+
+void glTranslatexOES(GLfixed x, GLfixed y, GLfixed z)
+{
+	gleGetCurrent()->glTranslatexOES( x, y, z );
+}
+
+void glVertex2xOES(GLfixed x)
+{
+	gleGetCurrent()->glVertex2xOES( x );
+}
+
+void glVertex2xvOES(const GLfixed *coords)
+{
+	gleGetCurrent()->glVertex2xvOES( coords );
+}
+
+void glVertex3xOES(GLfixed x, GLfixed y)
+{
+	gleGetCurrent()->glVertex3xOES( x, y );
+}
+
+void glVertex3xvOES(const GLfixed *coords)
+{
+	gleGetCurrent()->glVertex3xvOES( coords );
+}
+
+void glVertex4xOES(GLfixed x, GLfixed y, GLfixed z)
+{
+	gleGetCurrent()->glVertex4xOES( x, y, z );
+}
+
+void glVertex4xvOES(const GLfixed *coords)
+{
+	gleGetCurrent()->glVertex4xvOES( coords );
+}
+
+
+
+
+// ********* GL_OES_query_matrix *********
+bool isGL_OES_query_matrix()
+{
+	const bool isSupported = gleGetCurrent()->isGL_OES_query_matrix;
+
+	return isSupported;
+}
+
+
+GLbitfield glQueryMatrixxOES(const GLfixed *mantissa, const GLint *exponent)
+{
+	return gleGetCurrent()->glQueryMatrixxOES( mantissa, exponent );
+}
+
+
+
+
 // ********* GL_OES_read_format *********
 bool isGL_OES_read_format()
 {
 	const bool isSupported = gleGetCurrent()->isGL_OES_read_format;
 
 	return isSupported;
+}
+
+
+
+
+// ********* GL_OES_single_precision *********
+bool isGL_OES_single_precision()
+{
+	const bool isSupported = gleGetCurrent()->isGL_OES_single_precision;
+
+	return isSupported;
+}
+
+
+void glClearDepthfOES(GLclampd depth)
+{
+	gleGetCurrent()->glClearDepthfOES( depth );
+}
+
+void glClipPlanefOES(GLenum plane, const GLfloat *equation)
+{
+	gleGetCurrent()->glClipPlanefOES( plane, equation );
+}
+
+void glDepthRangefOES(GLclampf n, GLclampf f)
+{
+	gleGetCurrent()->glDepthRangefOES( n, f );
+}
+
+void glFrustumfOES(GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloat n, GLfloat f)
+{
+	gleGetCurrent()->glFrustumfOES( l, r, b, t, n, f );
+}
+
+void glGetClipPlanefOES(GLenum plane, GLfloat *equation)
+{
+	gleGetCurrent()->glGetClipPlanefOES( plane, equation );
+}
+
+void glOrthofOES(GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloat n, GLfloat f)
+{
+	gleGetCurrent()->glOrthofOES( l, r, b, t, n, f );
 }
 
 

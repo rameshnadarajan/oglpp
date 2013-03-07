@@ -1,4 +1,4 @@
-// This file was generated at Tue, 16 Oct 2012 08:09:43 +0000 with gle, please do not modify.
+// This file was generated at Thu, 07 Mar 2013 07:22:02 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,10 +6,10 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-09-19 19:02:24 -0700 (Wed, 19 Sep 2012) $ */
-// #define GL_GLEXT_VERSION 85
-// /* glxext.h last updated 2012/02/29 */
-// #define GLX_GLXEXT_VERSION 33
+// /* glext.h last updated $Date: 2013-02-07 01:42:49 -0800 (Thu, 07 Feb 2013) $ */
+// #define GL_GLEXT_VERSION 86
+// /* glxext.h last updated 2013/01/02 */
+// #define GLX_GLXEXT_VERSION 34
 // /* wglext.h last updated 2012/01/04 */
 // #define WGL_WGLEXT_VERSION 24
 
@@ -25,10 +25,10 @@
  * @addtogroup g_gle
  *
  * Some statistics about supported extensions :
- * - Stamp = Tue, 16 Oct 2012 08:09:43 +0000
+ * - Stamp = Thu, 07 Mar 2013 07:22:02 +0000
  * - Number of tokens							= 0
- * - Number of functions						= 2295
- * - Number of extensions found(in headers)		= 560
+ * - Number of functions						= 2434
+ * - Number of extensions found(in headers)		= 574
  * - Number of extensions in OpenGL registry	= 546
  */
 
@@ -218,6 +218,11 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Initialize the GL_NV extension group.
 	 */
 	void initializeGL_NV();
+
+	/** 
+	 * @brief Initialize the GL_NVX extension group.
+	 */
+	void initializeGL_NVX();
 
 	/** 
 	 * @brief Initialize the GL_OES extension group.
@@ -469,6 +474,17 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GLX_EXT_create_context_es2_profile is supported, false otherwise.
 	 */
 	bool isGLX_EXT_create_context_es2_profile;
+#endif //POSIX
+
+
+
+#ifdef POSIX
+	// ****** GLX_EXT_create_context_es_profile ******
+
+	/**
+	 * @brief Returns \c true if \b GLX_EXT_create_context_es_profile is supported, false otherwise.
+	 */
+	bool isGLX_EXT_create_context_es_profile;
 #endif //POSIX
 
 
@@ -1739,6 +1755,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_AMD_shader_stencil_export is supported, false otherwise.
 	 */
 	bool isGL_AMD_shader_stencil_export;
+
+
+
+
+	// ****** GL_AMD_shader_trinary_minmax ******
+
+	/**
+	 * @brief Returns \c true if \b GL_AMD_shader_trinary_minmax is supported, false otherwise.
+	 */
+	bool isGL_AMD_shader_trinary_minmax;
 
 
 
@@ -10370,6 +10396,32 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_INTEL_map_texture ******
+
+	/**
+	 * @brief Returns \c true if \b GL_INTEL_map_texture is supported, false otherwise.
+	 */
+	bool isGL_INTEL_map_texture;
+
+
+	/**
+	 * @brief GLvoid* glMapTexture2DINTEL(GLuint texture, GLint level, GLbitfield access, const GLint *stride, const GLenum *layout)
+	 */
+	PFNGLMAPTEXTURE2DINTELPROC glMapTexture2DINTEL;
+
+	/**
+	 * @brief void glSyncTextureINTEL(GLuint texture)
+	 */
+	PFNGLSYNCTEXTUREINTELPROC glSyncTextureINTEL;
+
+	/**
+	 * @brief void glUnmapTexture2DINTEL(GLuint texture, GLint level)
+	 */
+	PFNGLUNMAPTEXTURE2DINTELPROC glUnmapTexture2DINTEL;
+
+
+
+
 	// ****** GL_INTEL_parallel_arrays ******
 
 	/**
@@ -10659,6 +10711,27 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_NVX_conditional_render ******
+
+	/**
+	 * @brief Returns \c true if \b GL_NVX_conditional_render is supported, false otherwise.
+	 */
+	bool isGL_NVX_conditional_render;
+
+
+	/**
+	 * @brief void glBeginConditionalRenderNVX(GLuint id)
+	 */
+	PFNGLBEGINCONDITIONALRENDERNVXPROC glBeginConditionalRenderNVX;
+
+	/**
+	 * @brief void glEndConditionalRenderNVX(void)
+	 */
+	PFNGLENDCONDITIONALRENDERNVXPROC glEndConditionalRenderNVX;
+
+
+
+
 	// ****** GL_NV_bindless_texture ******
 
 	/**
@@ -10745,6 +10818,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_NV_compute_program5 ******
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_compute_program5 is supported, false otherwise.
+	 */
+	bool isGL_NV_compute_program5;
+
+
+
+
 	// ****** GL_NV_conditional_render ******
 
 	/**
@@ -10792,6 +10875,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_NV_deep_texture3D ******
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_deep_texture3D is supported, false otherwise.
+	 */
+	bool isGL_NV_deep_texture3D;
+
+
+
+
 	// ****** GL_NV_depth_buffer_float ******
 
 	/**
@@ -10824,6 +10917,22 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_NV_depth_clamp is supported, false otherwise.
 	 */
 	bool isGL_NV_depth_clamp;
+
+
+
+
+	// ****** GL_NV_draw_texture ******
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_draw_texture is supported, false otherwise.
+	 */
+	bool isGL_NV_draw_texture;
+
+
+	/**
+	 * @brief void glDrawTextureNV(GLuint texture, GLuint sampler, GLfloat x0, GLfloat y0, GLfloat x1, GLfloat y1, GLfloat z, GLfloat s0, GLfloat t0, GLfloat s1, GLfloat t1)
+	 */
+	PFNGLDRAWTEXTURENVPROC glDrawTextureNV;
 
 
 
@@ -11728,17 +11837,17 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 	/**
-	 * @brief void glProgramBufferParametersIivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLint *params)
+	 * @brief void glProgramBufferParametersIivNV(GLenum target, GLuint bindingIndex, GLuint wordIndex, GLsizei count, const GLint *params)
 	 */
 	PFNGLPROGRAMBUFFERPARAMETERSIIVNVPROC glProgramBufferParametersIivNV;
 
 	/**
-	 * @brief void glProgramBufferParametersIuivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLuint *params)
+	 * @brief void glProgramBufferParametersIuivNV(GLenum target, GLuint bindingIndex, GLuint wordIndex, GLsizei count, const GLuint *params)
 	 */
 	PFNGLPROGRAMBUFFERPARAMETERSIUIVNVPROC glProgramBufferParametersIuivNV;
 
 	/**
-	 * @brief void glProgramBufferParametersfvNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLfloat *params)
+	 * @brief void glProgramBufferParametersfvNV(GLenum target, GLuint bindingIndex, GLuint wordIndex, GLsizei count, const GLfloat *params)
 	 */
 	PFNGLPROGRAMBUFFERPARAMETERSFVNVPROC glProgramBufferParametersfvNV;
 
@@ -12212,6 +12321,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_NV_shader_atomic_counters ******
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_shader_atomic_counters is supported, false otherwise.
+	 */
+	bool isGL_NV_shader_atomic_counters;
+
+
+
+
 	// ****** GL_NV_shader_atomic_float ******
 
 	/**
@@ -12309,6 +12428,16 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 	 * @brief Returns \c true if \b GL_NV_shader_buffer_store is supported, false otherwise.
 	 */
 	bool isGL_NV_shader_buffer_store;
+
+
+
+
+	// ****** GL_NV_shader_storage_buffer_object ******
+
+	/**
+	 * @brief Returns \c true if \b GL_NV_shader_storage_buffer_object is supported, false otherwise.
+	 */
+	bool isGL_NV_shader_storage_buffer_object;
 
 
 
@@ -13424,12 +13553,731 @@ struct GLE_API OpenGLExtensionsGen : public gle::OpenGLExtensions
 
 
 
+	// ****** GL_OES_byte_coordinates ******
+
+	/**
+	 * @brief Returns \c true if \b GL_OES_byte_coordinates is supported, false otherwise.
+	 */
+	bool isGL_OES_byte_coordinates;
+
+
+	/**
+	 * @brief void glMultiTexCoord1bOES(GLenum texture, GLbyte s)
+	 */
+	PFNGLMULTITEXCOORD1BOESPROC glMultiTexCoord1bOES;
+
+	/**
+	 * @brief void glMultiTexCoord1bvOES(GLenum texture, const GLbyte *coords)
+	 */
+	PFNGLMULTITEXCOORD1BVOESPROC glMultiTexCoord1bvOES;
+
+	/**
+	 * @brief void glMultiTexCoord2bOES(GLenum texture, GLbyte s, GLbyte t)
+	 */
+	PFNGLMULTITEXCOORD2BOESPROC glMultiTexCoord2bOES;
+
+	/**
+	 * @brief void glMultiTexCoord2bvOES(GLenum texture, const GLbyte *coords)
+	 */
+	PFNGLMULTITEXCOORD2BVOESPROC glMultiTexCoord2bvOES;
+
+	/**
+	 * @brief void glMultiTexCoord3bOES(GLenum texture, GLbyte s, GLbyte t, GLbyte r)
+	 */
+	PFNGLMULTITEXCOORD3BOESPROC glMultiTexCoord3bOES;
+
+	/**
+	 * @brief void glMultiTexCoord3bvOES(GLenum texture, const GLbyte *coords)
+	 */
+	PFNGLMULTITEXCOORD3BVOESPROC glMultiTexCoord3bvOES;
+
+	/**
+	 * @brief void glMultiTexCoord4bOES(GLenum texture, GLbyte s, GLbyte t, GLbyte r, GLbyte q)
+	 */
+	PFNGLMULTITEXCOORD4BOESPROC glMultiTexCoord4bOES;
+
+	/**
+	 * @brief void glMultiTexCoord4bvOES(GLenum texture, const GLbyte *coords)
+	 */
+	PFNGLMULTITEXCOORD4BVOESPROC glMultiTexCoord4bvOES;
+
+	/**
+	 * @brief void glTexCoord1bOES(GLbyte s)
+	 */
+	PFNGLTEXCOORD1BOESPROC glTexCoord1bOES;
+
+	/**
+	 * @brief void glTexCoord1bvOES(const GLbyte *coords)
+	 */
+	PFNGLTEXCOORD1BVOESPROC glTexCoord1bvOES;
+
+	/**
+	 * @brief void glTexCoord2bOES(GLbyte s, GLbyte t)
+	 */
+	PFNGLTEXCOORD2BOESPROC glTexCoord2bOES;
+
+	/**
+	 * @brief void glTexCoord2bvOES(const GLbyte *coords)
+	 */
+	PFNGLTEXCOORD2BVOESPROC glTexCoord2bvOES;
+
+	/**
+	 * @brief void glTexCoord3bOES(GLbyte s, GLbyte t, GLbyte r)
+	 */
+	PFNGLTEXCOORD3BOESPROC glTexCoord3bOES;
+
+	/**
+	 * @brief void glTexCoord3bvOES(const GLbyte *coords)
+	 */
+	PFNGLTEXCOORD3BVOESPROC glTexCoord3bvOES;
+
+	/**
+	 * @brief void glTexCoord4bOES(GLbyte s, GLbyte t, GLbyte r, GLbyte q)
+	 */
+	PFNGLTEXCOORD4BOESPROC glTexCoord4bOES;
+
+	/**
+	 * @brief void glTexCoord4bvOES(const GLbyte *coords)
+	 */
+	PFNGLTEXCOORD4BVOESPROC glTexCoord4bvOES;
+
+	/**
+	 * @brief void glVertex2bOES(GLbyte x)
+	 */
+	PFNGLVERTEX2BOESPROC glVertex2bOES;
+
+	/**
+	 * @brief void glVertex2bvOES(const GLbyte *coords)
+	 */
+	PFNGLVERTEX2BVOESPROC glVertex2bvOES;
+
+	/**
+	 * @brief void glVertex3bOES(GLbyte x, GLbyte y)
+	 */
+	PFNGLVERTEX3BOESPROC glVertex3bOES;
+
+	/**
+	 * @brief void glVertex3bvOES(const GLbyte *coords)
+	 */
+	PFNGLVERTEX3BVOESPROC glVertex3bvOES;
+
+	/**
+	 * @brief void glVertex4bOES(GLbyte x, GLbyte y, GLbyte z)
+	 */
+	PFNGLVERTEX4BOESPROC glVertex4bOES;
+
+	/**
+	 * @brief void glVertex4bvOES(const GLbyte *coords)
+	 */
+	PFNGLVERTEX4BVOESPROC glVertex4bvOES;
+
+
+
+
+	// ****** GL_OES_compressed_paletted_texture ******
+
+	/**
+	 * @brief Returns \c true if \b GL_OES_compressed_paletted_texture is supported, false otherwise.
+	 */
+	bool isGL_OES_compressed_paletted_texture;
+
+
+
+
+	// ****** GL_OES_fixed_point ******
+
+	/**
+	 * @brief Returns \c true if \b GL_OES_fixed_point is supported, false otherwise.
+	 */
+	bool isGL_OES_fixed_point;
+
+
+	/**
+	 * @brief void glAccumxOES(GLenum op, GLfixed value)
+	 */
+	PFNGLACCUMXOESPROC glAccumxOES;
+
+	/**
+	 * @brief void glAlphaFuncxOES(GLenum func, GLfixed ref)
+	 */
+	PFNGLALPHAFUNCXOESPROC glAlphaFuncxOES;
+
+	/**
+	 * @brief void glBitmapxOES(GLsizei width, GLsizei height, GLfixed xorig, GLfixed yorig, GLfixed xmove, GLfixed ymove, const GLubyte *bitmap)
+	 */
+	PFNGLBITMAPXOESPROC glBitmapxOES;
+
+	/**
+	 * @brief void glBlendColorxOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha)
+	 */
+	PFNGLBLENDCOLORXOESPROC glBlendColorxOES;
+
+	/**
+	 * @brief void glClearAccumxOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha)
+	 */
+	PFNGLCLEARACCUMXOESPROC glClearAccumxOES;
+
+	/**
+	 * @brief void glClearColorxOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha)
+	 */
+	PFNGLCLEARCOLORXOESPROC glClearColorxOES;
+
+	/**
+	 * @brief void glClearDepthxOES(GLfixed depth)
+	 */
+	PFNGLCLEARDEPTHXOESPROC glClearDepthxOES;
+
+	/**
+	 * @brief void glClipPlanexOES(GLenum plane, const GLfixed *equation)
+	 */
+	PFNGLCLIPPLANEXOESPROC glClipPlanexOES;
+
+	/**
+	 * @brief void glColor3xOES(GLfixed red, GLfixed green, GLfixed blue)
+	 */
+	PFNGLCOLOR3XOESPROC glColor3xOES;
+
+	/**
+	 * @brief void glColor3xvOES(const GLfixed *components)
+	 */
+	PFNGLCOLOR3XVOESPROC glColor3xvOES;
+
+	/**
+	 * @brief void glColor4xOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha)
+	 */
+	PFNGLCOLOR4XOESPROC glColor4xOES;
+
+	/**
+	 * @brief void glColor4xvOES(const GLfixed *components)
+	 */
+	PFNGLCOLOR4XVOESPROC glColor4xvOES;
+
+	/**
+	 * @brief void glConvolutionParameterxOES(GLenum target, GLenum pname, GLfixed param)
+	 */
+	PFNGLCONVOLUTIONPARAMETERXOESPROC glConvolutionParameterxOES;
+
+	/**
+	 * @brief void glConvolutionParameterxvOES(GLenum target, GLenum pname, const GLfixed *params)
+	 */
+	PFNGLCONVOLUTIONPARAMETERXVOESPROC glConvolutionParameterxvOES;
+
+	/**
+	 * @brief void glDepthRangexOES(GLfixed n, GLfixed f)
+	 */
+	PFNGLDEPTHRANGEXOESPROC glDepthRangexOES;
+
+	/**
+	 * @brief void glEvalCoord1xOES(GLfixed u)
+	 */
+	PFNGLEVALCOORD1XOESPROC glEvalCoord1xOES;
+
+	/**
+	 * @brief void glEvalCoord1xvOES(const GLfixed *coords)
+	 */
+	PFNGLEVALCOORD1XVOESPROC glEvalCoord1xvOES;
+
+	/**
+	 * @brief void glEvalCoord2xOES(GLfixed u, GLfixed v)
+	 */
+	PFNGLEVALCOORD2XOESPROC glEvalCoord2xOES;
+
+	/**
+	 * @brief void glEvalCoord2xvOES(const GLfixed *coords)
+	 */
+	PFNGLEVALCOORD2XVOESPROC glEvalCoord2xvOES;
+
+	/**
+	 * @brief void glFeedbackBufferxOES(GLsizei n, GLenum type, const GLfixed *buffer)
+	 */
+	PFNGLFEEDBACKBUFFERXOESPROC glFeedbackBufferxOES;
+
+	/**
+	 * @brief void glFogxOES(GLenum pname, GLfixed param)
+	 */
+	PFNGLFOGXOESPROC glFogxOES;
+
+	/**
+	 * @brief void glFogxvOES(GLenum pname, const GLfixed *param)
+	 */
+	PFNGLFOGXVOESPROC glFogxvOES;
+
+	/**
+	 * @brief void glFrustumxOES(GLfixed l, GLfixed r, GLfixed b, GLfixed t, GLfixed n, GLfixed f)
+	 */
+	PFNGLFRUSTUMXOESPROC glFrustumxOES;
+
+	/**
+	 * @brief void glGetClipPlanexOES(GLenum plane, GLfixed *equation)
+	 */
+	PFNGLGETCLIPPLANEXOESPROC glGetClipPlanexOES;
+
+	/**
+	 * @brief void glGetConvolutionParameterxvOES(GLenum target, GLenum pname, GLfixed *params)
+	 */
+	PFNGLGETCONVOLUTIONPARAMETERXVOESPROC glGetConvolutionParameterxvOES;
+
+	/**
+	 * @brief void glGetFixedvOES(GLenum pname, GLfixed *params)
+	 */
+	PFNGLGETFIXEDVOESPROC glGetFixedvOES;
+
+	/**
+	 * @brief void glGetHistogramParameterxvOES(GLenum target, GLenum pname, GLfixed *params)
+	 */
+	PFNGLGETHISTOGRAMPARAMETERXVOESPROC glGetHistogramParameterxvOES;
+
+	/**
+	 * @brief void glGetLightxOES(GLenum light, GLenum pname, GLfixed *params)
+	 */
+	PFNGLGETLIGHTXOESPROC glGetLightxOES;
+
+	/**
+	 * @brief void glGetMapxvOES(GLenum target, GLenum query, GLfixed *v)
+	 */
+	PFNGLGETMAPXVOESPROC glGetMapxvOES;
+
+	/**
+	 * @brief void glGetMaterialxOES(GLenum face, GLenum pname, GLfixed param)
+	 */
+	PFNGLGETMATERIALXOESPROC glGetMaterialxOES;
+
+	/**
+	 * @brief void glGetPixelMapxv(GLenum map, GLint size, GLfixed *values)
+	 */
+	PFNGLGETPIXELMAPXVPROC glGetPixelMapxv;
+
+	/**
+	 * @brief void glGetTexEnvxvOES(GLenum target, GLenum pname, GLfixed *params)
+	 */
+	PFNGLGETTEXENVXVOESPROC glGetTexEnvxvOES;
+
+	/**
+	 * @brief void glGetTexGenxvOES(GLenum coord, GLenum pname, GLfixed *params)
+	 */
+	PFNGLGETTEXGENXVOESPROC glGetTexGenxvOES;
+
+	/**
+	 * @brief void glGetTexLevelParameterxvOES(GLenum target, GLint level, GLenum pname, GLfixed *params)
+	 */
+	PFNGLGETTEXLEVELPARAMETERXVOESPROC glGetTexLevelParameterxvOES;
+
+	/**
+	 * @brief void glGetTexParameterxvOES(GLenum target, GLenum pname, GLfixed *params)
+	 */
+	PFNGLGETTEXPARAMETERXVOESPROC glGetTexParameterxvOES;
+
+	/**
+	 * @brief void glIndexxOES(GLfixed component)
+	 */
+	PFNGLINDEXXOESPROC glIndexxOES;
+
+	/**
+	 * @brief void glIndexxvOES(const GLfixed *component)
+	 */
+	PFNGLINDEXXVOESPROC glIndexxvOES;
+
+	/**
+	 * @brief void glLightModelxOES(GLenum pname, GLfixed param)
+	 */
+	PFNGLLIGHTMODELXOESPROC glLightModelxOES;
+
+	/**
+	 * @brief void glLightModelxvOES(GLenum pname, const GLfixed *param)
+	 */
+	PFNGLLIGHTMODELXVOESPROC glLightModelxvOES;
+
+	/**
+	 * @brief void glLightxOES(GLenum light, GLenum pname, GLfixed param)
+	 */
+	PFNGLLIGHTXOESPROC glLightxOES;
+
+	/**
+	 * @brief void glLightxvOES(GLenum light, GLenum pname, const GLfixed *params)
+	 */
+	PFNGLLIGHTXVOESPROC glLightxvOES;
+
+	/**
+	 * @brief void glLineWidthxOES(GLfixed width)
+	 */
+	PFNGLLINEWIDTHXOESPROC glLineWidthxOES;
+
+	/**
+	 * @brief void glLoadMatrixxOES(const GLfixed *m)
+	 */
+	PFNGLLOADMATRIXXOESPROC glLoadMatrixxOES;
+
+	/**
+	 * @brief void glLoadTransposeMatrixxOES(const GLfixed *m)
+	 */
+	PFNGLLOADTRANSPOSEMATRIXXOESPROC glLoadTransposeMatrixxOES;
+
+	/**
+	 * @brief void glMap1xOES(GLenum target, GLfixed u1, GLfixed u2, GLint stride, GLint order, GLfixed points)
+	 */
+	PFNGLMAP1XOESPROC glMap1xOES;
+
+	/**
+	 * @brief void glMap2xOES(GLenum target, GLfixed u1, GLfixed u2, GLint ustride, GLint uorder, GLfixed v1, GLfixed v2, GLint vstride, GLint vorder, GLfixed points)
+	 */
+	PFNGLMAP2XOESPROC glMap2xOES;
+
+	/**
+	 * @brief void glMapGrid1xOES(GLint n, GLfixed u1, GLfixed u2)
+	 */
+	PFNGLMAPGRID1XOESPROC glMapGrid1xOES;
+
+	/**
+	 * @brief void glMapGrid2xOES(GLint n, GLfixed u1, GLfixed u2, GLfixed v1, GLfixed v2)
+	 */
+	PFNGLMAPGRID2XOESPROC glMapGrid2xOES;
+
+	/**
+	 * @brief void glMaterialxOES(GLenum face, GLenum pname, GLfixed param)
+	 */
+	PFNGLMATERIALXOESPROC glMaterialxOES;
+
+	/**
+	 * @brief void glMaterialxvOES(GLenum face, GLenum pname, const GLfixed *param)
+	 */
+	PFNGLMATERIALXVOESPROC glMaterialxvOES;
+
+	/**
+	 * @brief void glMultMatrixxOES(const GLfixed *m)
+	 */
+	PFNGLMULTMATRIXXOESPROC glMultMatrixxOES;
+
+	/**
+	 * @brief void glMultTransposeMatrixxOES(const GLfixed *m)
+	 */
+	PFNGLMULTTRANSPOSEMATRIXXOESPROC glMultTransposeMatrixxOES;
+
+	/**
+	 * @brief void glMultiTexCoord1xOES(GLenum texture, GLfixed s)
+	 */
+	PFNGLMULTITEXCOORD1XOESPROC glMultiTexCoord1xOES;
+
+	/**
+	 * @brief void glMultiTexCoord1xvOES(GLenum texture, const GLfixed *coords)
+	 */
+	PFNGLMULTITEXCOORD1XVOESPROC glMultiTexCoord1xvOES;
+
+	/**
+	 * @brief void glMultiTexCoord2xOES(GLenum texture, GLfixed s, GLfixed t)
+	 */
+	PFNGLMULTITEXCOORD2XOESPROC glMultiTexCoord2xOES;
+
+	/**
+	 * @brief void glMultiTexCoord2xvOES(GLenum texture, const GLfixed *coords)
+	 */
+	PFNGLMULTITEXCOORD2XVOESPROC glMultiTexCoord2xvOES;
+
+	/**
+	 * @brief void glMultiTexCoord3xOES(GLenum texture, GLfixed s, GLfixed t, GLfixed r)
+	 */
+	PFNGLMULTITEXCOORD3XOESPROC glMultiTexCoord3xOES;
+
+	/**
+	 * @brief void glMultiTexCoord3xvOES(GLenum texture, const GLfixed *coords)
+	 */
+	PFNGLMULTITEXCOORD3XVOESPROC glMultiTexCoord3xvOES;
+
+	/**
+	 * @brief void glMultiTexCoord4xOES(GLenum texture, GLfixed s, GLfixed t, GLfixed r, GLfixed q)
+	 */
+	PFNGLMULTITEXCOORD4XOESPROC glMultiTexCoord4xOES;
+
+	/**
+	 * @brief void glMultiTexCoord4xvOES(GLenum texture, const GLfixed *coords)
+	 */
+	PFNGLMULTITEXCOORD4XVOESPROC glMultiTexCoord4xvOES;
+
+	/**
+	 * @brief void glNormal3xOES(GLfixed nx, GLfixed ny, GLfixed nz)
+	 */
+	PFNGLNORMAL3XOESPROC glNormal3xOES;
+
+	/**
+	 * @brief void glNormal3xvOES(const GLfixed *coords)
+	 */
+	PFNGLNORMAL3XVOESPROC glNormal3xvOES;
+
+	/**
+	 * @brief void glOrthoxOES(GLfixed l, GLfixed r, GLfixed b, GLfixed t, GLfixed n, GLfixed f)
+	 */
+	PFNGLORTHOXOESPROC glOrthoxOES;
+
+	/**
+	 * @brief void glPassThroughxOES(GLfixed token)
+	 */
+	PFNGLPASSTHROUGHXOESPROC glPassThroughxOES;
+
+	/**
+	 * @brief void glPixelMapx(GLenum map, GLint size, const GLfixed *values)
+	 */
+	PFNGLPIXELMAPXPROC glPixelMapx;
+
+	/**
+	 * @brief void glPixelStorex(GLenum pname, GLfixed param)
+	 */
+	PFNGLPIXELSTOREXPROC glPixelStorex;
+
+	/**
+	 * @brief void glPixelTransferxOES(GLenum pname, GLfixed param)
+	 */
+	PFNGLPIXELTRANSFERXOESPROC glPixelTransferxOES;
+
+	/**
+	 * @brief void glPixelZoomxOES(GLfixed xfactor, GLfixed yfactor)
+	 */
+	PFNGLPIXELZOOMXOESPROC glPixelZoomxOES;
+
+	/**
+	 * @brief void glPointParameterxvOES(GLenum pname, const GLfixed *params)
+	 */
+	PFNGLPOINTPARAMETERXVOESPROC glPointParameterxvOES;
+
+	/**
+	 * @brief void glPointSizexOES(GLfixed size)
+	 */
+	PFNGLPOINTSIZEXOESPROC glPointSizexOES;
+
+	/**
+	 * @brief void glPolygonOffsetxOES(GLfixed factor, GLfixed units)
+	 */
+	PFNGLPOLYGONOFFSETXOESPROC glPolygonOffsetxOES;
+
+	/**
+	 * @brief void glPrioritizeTexturesxOES(GLsizei n, const GLuint *textures, const GLfixed *priorities)
+	 */
+	PFNGLPRIORITIZETEXTURESXOESPROC glPrioritizeTexturesxOES;
+
+	/**
+	 * @brief void glRasterPos2xOES(GLfixed x, GLfixed y)
+	 */
+	PFNGLRASTERPOS2XOESPROC glRasterPos2xOES;
+
+	/**
+	 * @brief void glRasterPos2xvOES(const GLfixed *coords)
+	 */
+	PFNGLRASTERPOS2XVOESPROC glRasterPos2xvOES;
+
+	/**
+	 * @brief void glRasterPos3xOES(GLfixed x, GLfixed y, GLfixed z)
+	 */
+	PFNGLRASTERPOS3XOESPROC glRasterPos3xOES;
+
+	/**
+	 * @brief void glRasterPos3xvOES(const GLfixed *coords)
+	 */
+	PFNGLRASTERPOS3XVOESPROC glRasterPos3xvOES;
+
+	/**
+	 * @brief void glRasterPos4xOES(GLfixed x, GLfixed y, GLfixed z, GLfixed w)
+	 */
+	PFNGLRASTERPOS4XOESPROC glRasterPos4xOES;
+
+	/**
+	 * @brief void glRasterPos4xvOES(const GLfixed *coords)
+	 */
+	PFNGLRASTERPOS4XVOESPROC glRasterPos4xvOES;
+
+	/**
+	 * @brief void glRectxOES(GLfixed x1, GLfixed y1, GLfixed x2, GLfixed y2)
+	 */
+	PFNGLRECTXOESPROC glRectxOES;
+
+	/**
+	 * @brief void glRectxvOES(const GLfixed *v1, const GLfixed *v2)
+	 */
+	PFNGLRECTXVOESPROC glRectxvOES;
+
+	/**
+	 * @brief void glRotatexOES(GLfixed angle, GLfixed x, GLfixed y, GLfixed z)
+	 */
+	PFNGLROTATEXOESPROC glRotatexOES;
+
+	/**
+	 * @brief void glSampleCoverageOES(GLfixed value, GLboolean invert)
+	 */
+	PFNGLSAMPLECOVERAGEOESPROC glSampleCoverageOES;
+
+	/**
+	 * @brief void glScalexOES(GLfixed x, GLfixed y, GLfixed z)
+	 */
+	PFNGLSCALEXOESPROC glScalexOES;
+
+	/**
+	 * @brief void glTexCoord1xOES(GLfixed s)
+	 */
+	PFNGLTEXCOORD1XOESPROC glTexCoord1xOES;
+
+	/**
+	 * @brief void glTexCoord1xvOES(const GLfixed *coords)
+	 */
+	PFNGLTEXCOORD1XVOESPROC glTexCoord1xvOES;
+
+	/**
+	 * @brief void glTexCoord2xOES(GLfixed s, GLfixed t)
+	 */
+	PFNGLTEXCOORD2XOESPROC glTexCoord2xOES;
+
+	/**
+	 * @brief void glTexCoord2xvOES(const GLfixed *coords)
+	 */
+	PFNGLTEXCOORD2XVOESPROC glTexCoord2xvOES;
+
+	/**
+	 * @brief void glTexCoord3xOES(GLfixed s, GLfixed t, GLfixed r)
+	 */
+	PFNGLTEXCOORD3XOESPROC glTexCoord3xOES;
+
+	/**
+	 * @brief void glTexCoord3xvOES(const GLfixed *coords)
+	 */
+	PFNGLTEXCOORD3XVOESPROC glTexCoord3xvOES;
+
+	/**
+	 * @brief void glTexCoord4xOES(GLfixed s, GLfixed t, GLfixed r, GLfixed q)
+	 */
+	PFNGLTEXCOORD4XOESPROC glTexCoord4xOES;
+
+	/**
+	 * @brief void glTexCoord4xvOES(const GLfixed *coords)
+	 */
+	PFNGLTEXCOORD4XVOESPROC glTexCoord4xvOES;
+
+	/**
+	 * @brief void glTexEnvxOES(GLenum target, GLenum pname, GLfixed param)
+	 */
+	PFNGLTEXENVXOESPROC glTexEnvxOES;
+
+	/**
+	 * @brief void glTexEnvxvOES(GLenum target, GLenum pname, const GLfixed *params)
+	 */
+	PFNGLTEXENVXVOESPROC glTexEnvxvOES;
+
+	/**
+	 * @brief void glTexGenxOES(GLenum coord, GLenum pname, GLfixed param)
+	 */
+	PFNGLTEXGENXOESPROC glTexGenxOES;
+
+	/**
+	 * @brief void glTexGenxvOES(GLenum coord, GLenum pname, const GLfixed *params)
+	 */
+	PFNGLTEXGENXVOESPROC glTexGenxvOES;
+
+	/**
+	 * @brief void glTexParameterxOES(GLenum target, GLenum pname, GLfixed param)
+	 */
+	PFNGLTEXPARAMETERXOESPROC glTexParameterxOES;
+
+	/**
+	 * @brief void glTexParameterxvOES(GLenum target, GLenum pname, const GLfixed *params)
+	 */
+	PFNGLTEXPARAMETERXVOESPROC glTexParameterxvOES;
+
+	/**
+	 * @brief void glTranslatexOES(GLfixed x, GLfixed y, GLfixed z)
+	 */
+	PFNGLTRANSLATEXOESPROC glTranslatexOES;
+
+	/**
+	 * @brief void glVertex2xOES(GLfixed x)
+	 */
+	PFNGLVERTEX2XOESPROC glVertex2xOES;
+
+	/**
+	 * @brief void glVertex2xvOES(const GLfixed *coords)
+	 */
+	PFNGLVERTEX2XVOESPROC glVertex2xvOES;
+
+	/**
+	 * @brief void glVertex3xOES(GLfixed x, GLfixed y)
+	 */
+	PFNGLVERTEX3XOESPROC glVertex3xOES;
+
+	/**
+	 * @brief void glVertex3xvOES(const GLfixed *coords)
+	 */
+	PFNGLVERTEX3XVOESPROC glVertex3xvOES;
+
+	/**
+	 * @brief void glVertex4xOES(GLfixed x, GLfixed y, GLfixed z)
+	 */
+	PFNGLVERTEX4XOESPROC glVertex4xOES;
+
+	/**
+	 * @brief void glVertex4xvOES(const GLfixed *coords)
+	 */
+	PFNGLVERTEX4XVOESPROC glVertex4xvOES;
+
+
+
+
+	// ****** GL_OES_query_matrix ******
+
+	/**
+	 * @brief Returns \c true if \b GL_OES_query_matrix is supported, false otherwise.
+	 */
+	bool isGL_OES_query_matrix;
+
+
+	/**
+	 * @brief GLbitfield glQueryMatrixxOES(const GLfixed *mantissa, const GLint *exponent)
+	 */
+	PFNGLQUERYMATRIXXOESPROC glQueryMatrixxOES;
+
+
+
+
 	// ****** GL_OES_read_format ******
 
 	/**
 	 * @brief Returns \c true if \b GL_OES_read_format is supported, false otherwise.
 	 */
 	bool isGL_OES_read_format;
+
+
+
+
+	// ****** GL_OES_single_precision ******
+
+	/**
+	 * @brief Returns \c true if \b GL_OES_single_precision is supported, false otherwise.
+	 */
+	bool isGL_OES_single_precision;
+
+
+	/**
+	 * @brief void glClearDepthfOES(GLclampd depth)
+	 */
+	PFNGLCLEARDEPTHFOESPROC glClearDepthfOES;
+
+	/**
+	 * @brief void glClipPlanefOES(GLenum plane, const GLfloat *equation)
+	 */
+	PFNGLCLIPPLANEFOESPROC glClipPlanefOES;
+
+	/**
+	 * @brief void glDepthRangefOES(GLclampf n, GLclampf f)
+	 */
+	PFNGLDEPTHRANGEFOESPROC glDepthRangefOES;
+
+	/**
+	 * @brief void glFrustumfOES(GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloat n, GLfloat f)
+	 */
+	PFNGLFRUSTUMFOESPROC glFrustumfOES;
+
+	/**
+	 * @brief void glGetClipPlanefOES(GLenum plane, GLfloat *equation)
+	 */
+	PFNGLGETCLIPPLANEFOESPROC glGetClipPlanefOES;
+
+	/**
+	 * @brief void glOrthofOES(GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloat n, GLfloat f)
+	 */
+	PFNGLORTHOFOESPROC glOrthofOES;
 
 
 

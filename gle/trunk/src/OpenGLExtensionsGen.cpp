@@ -1,4 +1,4 @@
-// This file was generated at Tue, 16 Oct 2012 08:09:43 +0000 with gle, please do not modify.
+// This file was generated at Thu, 07 Mar 2013 07:22:02 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,10 +6,10 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-09-19 19:02:24 -0700 (Wed, 19 Sep 2012) $ */
-// #define GL_GLEXT_VERSION 85
-// /* glxext.h last updated 2012/02/29 */
-// #define GLX_GLXEXT_VERSION 33
+// /* glext.h last updated $Date: 2013-02-07 01:42:49 -0800 (Thu, 07 Feb 2013) $ */
+// #define GL_GLEXT_VERSION 86
+// /* glxext.h last updated 2013/01/02 */
+// #define GLX_GLXEXT_VERSION 34
 // /* wglext.h last updated 2012/01/04 */
 // #define WGL_WGLEXT_VERSION 24
 
@@ -26,8 +26,8 @@ namespace gle
 {
 
 
-const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 560;
-const int	OpenGLExtensionsGen::m_supportedProcCount		= 2295;
+const int	OpenGLExtensionsGen::m_supportedExtensionCount	= 574;
+const int	OpenGLExtensionsGen::m_supportedProcCount		= 2434;
 
 
 OpenGLExtensionsGen::OpenGLExtensionsGen( std::ostream* pOS )
@@ -107,6 +107,11 @@ void OpenGLExtensionsGen::clear()
 #ifdef POSIX
 	// ****** GLX_EXT_create_context_es2_profile ******
 	isGLX_EXT_create_context_es2_profile = false;
+#endif //POSIX
+
+#ifdef POSIX
+	// ****** GLX_EXT_create_context_es_profile ******
+	isGLX_EXT_create_context_es_profile = false;
 #endif //POSIX
 
 #ifdef POSIX
@@ -528,6 +533,9 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_AMD_shader_stencil_export ******
 	isGL_AMD_shader_stencil_export = false;
+
+	// ****** GL_AMD_shader_trinary_minmax ******
+	isGL_AMD_shader_trinary_minmax = false;
 
 	// ****** GL_AMD_sparse_texture ******
 	isGL_AMD_sparse_texture = false;
@@ -2646,6 +2654,13 @@ void OpenGLExtensionsGen::clear()
 	// ****** GL_INGR_palette_buffer ******
 	isGL_INGR_palette_buffer = false;
 
+	// ****** GL_INTEL_map_texture ******
+	isGL_INTEL_map_texture = false;
+
+	glMapTexture2DINTEL = 0;
+	glSyncTextureINTEL = 0;
+	glUnmapTexture2DINTEL = 0;
+
 	// ****** GL_INTEL_parallel_arrays ******
 	isGL_INTEL_parallel_arrays = false;
 
@@ -2716,6 +2731,12 @@ void OpenGLExtensionsGen::clear()
 	// ****** GL_MESA_ycbcr_texture ******
 	isGL_MESA_ycbcr_texture = false;
 
+	// ****** GL_NVX_conditional_render ******
+	isGL_NVX_conditional_render = false;
+
+	glBeginConditionalRenderNVX = 0;
+	glEndConditionalRenderNVX = 0;
+
 	// ****** GL_NV_bindless_texture ******
 	isGL_NV_bindless_texture = false;
 
@@ -2736,6 +2757,9 @@ void OpenGLExtensionsGen::clear()
 	// ****** GL_NV_blend_square ******
 	isGL_NV_blend_square = false;
 
+	// ****** GL_NV_compute_program5 ******
+	isGL_NV_compute_program5 = false;
+
 	// ****** GL_NV_conditional_render ******
 	isGL_NV_conditional_render = false;
 
@@ -2750,6 +2774,9 @@ void OpenGLExtensionsGen::clear()
 
 	glCopyImageSubDataNV = 0;
 
+	// ****** GL_NV_deep_texture3D ******
+	isGL_NV_deep_texture3D = false;
+
 	// ****** GL_NV_depth_buffer_float ******
 	isGL_NV_depth_buffer_float = false;
 
@@ -2759,6 +2786,11 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_NV_depth_clamp ******
 	isGL_NV_depth_clamp = false;
+
+	// ****** GL_NV_draw_texture ******
+	isGL_NV_draw_texture = false;
+
+	glDrawTextureNV = 0;
 
 	// ****** GL_NV_evaluators ******
 	isGL_NV_evaluators = false;
@@ -3082,6 +3114,9 @@ void OpenGLExtensionsGen::clear()
 	glCombinerStageParameterfvNV = 0;
 	glGetCombinerStageParameterfvNV = 0;
 
+	// ****** GL_NV_shader_atomic_counters ******
+	isGL_NV_shader_atomic_counters = false;
+
 	// ****** GL_NV_shader_atomic_float ******
 	isGL_NV_shader_atomic_float = false;
 
@@ -3105,6 +3140,9 @@ void OpenGLExtensionsGen::clear()
 
 	// ****** GL_NV_shader_buffer_store ******
 	isGL_NV_shader_buffer_store = false;
+
+	// ****** GL_NV_shader_storage_buffer_object ******
+	isGL_NV_shader_storage_buffer_object = false;
 
 	// ****** GL_NV_tessellation_program5 ******
 	isGL_NV_tessellation_program5 = false;
@@ -3363,8 +3401,160 @@ void OpenGLExtensionsGen::clear()
 	glVideoCaptureStreamParameterfvNV = 0;
 	glVideoCaptureStreamParameterivNV = 0;
 
+	// ****** GL_OES_byte_coordinates ******
+	isGL_OES_byte_coordinates = false;
+
+	glMultiTexCoord1bOES = 0;
+	glMultiTexCoord1bvOES = 0;
+	glMultiTexCoord2bOES = 0;
+	glMultiTexCoord2bvOES = 0;
+	glMultiTexCoord3bOES = 0;
+	glMultiTexCoord3bvOES = 0;
+	glMultiTexCoord4bOES = 0;
+	glMultiTexCoord4bvOES = 0;
+	glTexCoord1bOES = 0;
+	glTexCoord1bvOES = 0;
+	glTexCoord2bOES = 0;
+	glTexCoord2bvOES = 0;
+	glTexCoord3bOES = 0;
+	glTexCoord3bvOES = 0;
+	glTexCoord4bOES = 0;
+	glTexCoord4bvOES = 0;
+	glVertex2bOES = 0;
+	glVertex2bvOES = 0;
+	glVertex3bOES = 0;
+	glVertex3bvOES = 0;
+	glVertex4bOES = 0;
+	glVertex4bvOES = 0;
+
+	// ****** GL_OES_compressed_paletted_texture ******
+	isGL_OES_compressed_paletted_texture = false;
+
+	// ****** GL_OES_fixed_point ******
+	isGL_OES_fixed_point = false;
+
+	glAccumxOES = 0;
+	glAlphaFuncxOES = 0;
+	glBitmapxOES = 0;
+	glBlendColorxOES = 0;
+	glClearAccumxOES = 0;
+	glClearColorxOES = 0;
+	glClearDepthxOES = 0;
+	glClipPlanexOES = 0;
+	glColor3xOES = 0;
+	glColor3xvOES = 0;
+	glColor4xOES = 0;
+	glColor4xvOES = 0;
+	glConvolutionParameterxOES = 0;
+	glConvolutionParameterxvOES = 0;
+	glDepthRangexOES = 0;
+	glEvalCoord1xOES = 0;
+	glEvalCoord1xvOES = 0;
+	glEvalCoord2xOES = 0;
+	glEvalCoord2xvOES = 0;
+	glFeedbackBufferxOES = 0;
+	glFogxOES = 0;
+	glFogxvOES = 0;
+	glFrustumxOES = 0;
+	glGetClipPlanexOES = 0;
+	glGetConvolutionParameterxvOES = 0;
+	glGetFixedvOES = 0;
+	glGetHistogramParameterxvOES = 0;
+	glGetLightxOES = 0;
+	glGetMapxvOES = 0;
+	glGetMaterialxOES = 0;
+	glGetPixelMapxv = 0;
+	glGetTexEnvxvOES = 0;
+	glGetTexGenxvOES = 0;
+	glGetTexLevelParameterxvOES = 0;
+	glGetTexParameterxvOES = 0;
+	glIndexxOES = 0;
+	glIndexxvOES = 0;
+	glLightModelxOES = 0;
+	glLightModelxvOES = 0;
+	glLightxOES = 0;
+	glLightxvOES = 0;
+	glLineWidthxOES = 0;
+	glLoadMatrixxOES = 0;
+	glLoadTransposeMatrixxOES = 0;
+	glMap1xOES = 0;
+	glMap2xOES = 0;
+	glMapGrid1xOES = 0;
+	glMapGrid2xOES = 0;
+	glMaterialxOES = 0;
+	glMaterialxvOES = 0;
+	glMultMatrixxOES = 0;
+	glMultTransposeMatrixxOES = 0;
+	glMultiTexCoord1xOES = 0;
+	glMultiTexCoord1xvOES = 0;
+	glMultiTexCoord2xOES = 0;
+	glMultiTexCoord2xvOES = 0;
+	glMultiTexCoord3xOES = 0;
+	glMultiTexCoord3xvOES = 0;
+	glMultiTexCoord4xOES = 0;
+	glMultiTexCoord4xvOES = 0;
+	glNormal3xOES = 0;
+	glNormal3xvOES = 0;
+	glOrthoxOES = 0;
+	glPassThroughxOES = 0;
+	glPixelMapx = 0;
+	glPixelStorex = 0;
+	glPixelTransferxOES = 0;
+	glPixelZoomxOES = 0;
+	glPointParameterxvOES = 0;
+	glPointSizexOES = 0;
+	glPolygonOffsetxOES = 0;
+	glPrioritizeTexturesxOES = 0;
+	glRasterPos2xOES = 0;
+	glRasterPos2xvOES = 0;
+	glRasterPos3xOES = 0;
+	glRasterPos3xvOES = 0;
+	glRasterPos4xOES = 0;
+	glRasterPos4xvOES = 0;
+	glRectxOES = 0;
+	glRectxvOES = 0;
+	glRotatexOES = 0;
+	glSampleCoverageOES = 0;
+	glScalexOES = 0;
+	glTexCoord1xOES = 0;
+	glTexCoord1xvOES = 0;
+	glTexCoord2xOES = 0;
+	glTexCoord2xvOES = 0;
+	glTexCoord3xOES = 0;
+	glTexCoord3xvOES = 0;
+	glTexCoord4xOES = 0;
+	glTexCoord4xvOES = 0;
+	glTexEnvxOES = 0;
+	glTexEnvxvOES = 0;
+	glTexGenxOES = 0;
+	glTexGenxvOES = 0;
+	glTexParameterxOES = 0;
+	glTexParameterxvOES = 0;
+	glTranslatexOES = 0;
+	glVertex2xOES = 0;
+	glVertex2xvOES = 0;
+	glVertex3xOES = 0;
+	glVertex3xvOES = 0;
+	glVertex4xOES = 0;
+	glVertex4xvOES = 0;
+
+	// ****** GL_OES_query_matrix ******
+	isGL_OES_query_matrix = false;
+
+	glQueryMatrixxOES = 0;
+
 	// ****** GL_OES_read_format ******
 	isGL_OES_read_format = false;
+
+	// ****** GL_OES_single_precision ******
+	isGL_OES_single_precision = false;
+
+	glClearDepthfOES = 0;
+	glClipPlanefOES = 0;
+	glDepthRangefOES = 0;
+	glFrustumfOES = 0;
+	glGetClipPlanefOES = 0;
+	glOrthofOES = 0;
 
 	// ****** GL_OML_interlace ******
 	isGL_OML_interlace = false;
@@ -4573,6 +4763,7 @@ void OpenGLExtensionsGen::initialize()
 	initializeGL_MESA();
 	initializeGL_MESAX();
 	initializeGL_NV();
+	initializeGL_NVX();
 	initializeGL_OES();
 	initializeGL_OML();
 	initializeGL_PGI();
@@ -5124,6 +5315,43 @@ void OpenGLExtensionsGen::initializeGLX_EXT()
 	else
 	{
 		logEndl( "GLX_EXT_create_context_es2_profile                : not detected." );
+	}
+
+
+#endif // ifdef POSIX
+
+#ifdef POSIX
+
+	// ****** GLX_EXT_create_context_es_profile ******
+
+	isGLX_EXT_create_context_es_profile = isWExtensionSupported("GLX_EXT_create_context_es_profile");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGLX_EXT_create_context_es_profile )
+	{
+		std::stringstream strStream;
+		strStream << "GLX_EXT_create_context_es_profile                 : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GLX_EXT_create_context_es_profile                 : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GLX_EXT_create_context_es_profile") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GLX_EXT_create_context_es_profile                 : not detected." );
 	}
 
 
@@ -7805,6 +8033,37 @@ void OpenGLExtensionsGen::initializeGL_AMD()
 	else
 	{
 		logEndl( "GL_AMD_shader_stencil_export                      : not detected." );
+	}
+
+
+	isGL_AMD_shader_trinary_minmax = isExtensionSupported("GL_AMD_shader_trinary_minmax");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_AMD_shader_trinary_minmax )
+	{
+		std::stringstream strStream;
+		strStream << "GL_AMD_shader_trinary_minmax                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_AMD_shader_trinary_minmax                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_AMD_shader_trinary_minmax") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_AMD_shader_trinary_minmax                      : not detected." );
 	}
 
 
@@ -20414,6 +20673,50 @@ void OpenGLExtensionsGen::initializeGL_INTEL()
 	int	localSupportedProcCount 	= 0;
 	int	localInitializedProcCount	= 0;
 
+	isGL_INTEL_map_texture = isExtensionSupported("GL_INTEL_map_texture");
+
+	localSupportedProcCount		= 3;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_INTEL_map_texture ) // || isSEDEnable()
+	{
+		glMapTexture2DINTEL = (PFNGLMAPTEXTURE2DINTELPROC) getExtensionPtr( "glMapTexture2DINTEL" );
+		if ( glMapTexture2DINTEL != 0 )	++localInitializedProcCount;
+
+		glSyncTextureINTEL = (PFNGLSYNCTEXTUREINTELPROC) getExtensionPtr( "glSyncTextureINTEL" );
+		if ( glSyncTextureINTEL != 0 )	++localInitializedProcCount;
+
+		glUnmapTexture2DINTEL = (PFNGLUNMAPTEXTURE2DINTELPROC) getExtensionPtr( "glUnmapTexture2DINTEL" );
+		if ( glUnmapTexture2DINTEL != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_INTEL_map_texture )
+
+	if ( isGL_INTEL_map_texture )
+	{
+		std::stringstream strStream;
+		strStream << "GL_INTEL_map_texture                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_INTEL_map_texture                              : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_INTEL_map_texture") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_INTEL_map_texture                              : not detected." );
+	}
+
+
 	isGL_INTEL_parallel_arrays = isExtensionSupported("GL_INTEL_parallel_arrays");
 
 	localSupportedProcCount		= 4;
@@ -20963,6 +21266,37 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 
 
+	isGL_NV_compute_program5 = isExtensionSupported("GL_NV_compute_program5");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_NV_compute_program5 )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_compute_program5                            : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_compute_program5                            : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_compute_program5") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_compute_program5                            : not detected." );
+	}
+
+
 	isGL_NV_conditional_render = isExtensionSupported("GL_NV_conditional_render");
 
 	localSupportedProcCount		= 2;
@@ -21073,6 +21407,37 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 
 
+	isGL_NV_deep_texture3D = isExtensionSupported("GL_NV_deep_texture3D");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_NV_deep_texture3D )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_deep_texture3D                              : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_deep_texture3D                              : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_deep_texture3D") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_deep_texture3D                              : not detected." );
+	}
+
+
 	isGL_NV_depth_buffer_float = isExtensionSupported("GL_NV_depth_buffer_float");
 
 	localSupportedProcCount		= 3;
@@ -21145,6 +21510,44 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	else
 	{
 		logEndl( "GL_NV_depth_clamp                                 : not detected." );
+	}
+
+
+	isGL_NV_draw_texture = isExtensionSupported("GL_NV_draw_texture");
+
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_NV_draw_texture ) // || isSEDEnable()
+	{
+		glDrawTextureNV = (PFNGLDRAWTEXTURENVPROC) getExtensionPtr( "glDrawTextureNV" );
+		if ( glDrawTextureNV != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_NV_draw_texture )
+
+	if ( isGL_NV_draw_texture )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_draw_texture                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_draw_texture                                : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_draw_texture") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_draw_texture                                : not detected." );
 	}
 
 
@@ -22793,6 +23196,37 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	}
 
 
+	isGL_NV_shader_atomic_counters = isExtensionSupported("GL_NV_shader_atomic_counters");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_NV_shader_atomic_counters )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_shader_atomic_counters                      : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_shader_atomic_counters                      : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_shader_atomic_counters") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_shader_atomic_counters                      : not detected." );
+	}
+
+
 	isGL_NV_shader_atomic_float = isExtensionSupported("GL_NV_shader_atomic_float");
 
 	localSupportedProcCount		= 0;
@@ -22929,6 +23363,37 @@ void OpenGLExtensionsGen::initializeGL_NV()
 	else
 	{
 		logEndl( "GL_NV_shader_buffer_store                         : not detected." );
+	}
+
+
+	isGL_NV_shader_storage_buffer_object = isExtensionSupported("GL_NV_shader_storage_buffer_object");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_NV_shader_storage_buffer_object )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NV_shader_storage_buffer_object                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NV_shader_storage_buffer_object                : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NV_shader_storage_buffer_object") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NV_shader_storage_buffer_object                : not detected." );
 	}
 
 
@@ -24289,10 +24754,576 @@ void OpenGLExtensionsGen::initializeGL_NV()
 } // initializeGL_NV_video_capture()
 
 
+void OpenGLExtensionsGen::initializeGL_NVX()
+{
+	int	localSupportedProcCount 	= 0;
+	int	localInitializedProcCount	= 0;
+
+	isGL_NVX_conditional_render = isExtensionSupported("GL_NVX_conditional_render");
+
+	localSupportedProcCount		= 2;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_NVX_conditional_render ) // || isSEDEnable()
+	{
+		glBeginConditionalRenderNVX = (PFNGLBEGINCONDITIONALRENDERNVXPROC) getExtensionPtr( "glBeginConditionalRenderNVX" );
+		if ( glBeginConditionalRenderNVX != 0 )	++localInitializedProcCount;
+
+		glEndConditionalRenderNVX = (PFNGLENDCONDITIONALRENDERNVXPROC) getExtensionPtr( "glEndConditionalRenderNVX" );
+		if ( glEndConditionalRenderNVX != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_NVX_conditional_render )
+
+	if ( isGL_NVX_conditional_render )
+	{
+		std::stringstream strStream;
+		strStream << "GL_NVX_conditional_render                         : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_NVX_conditional_render                         : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_NVX_conditional_render") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_NVX_conditional_render                         : not detected." );
+	}
+
+
+} // initializeGL_NVX_conditional_render()
+
+
 void OpenGLExtensionsGen::initializeGL_OES()
 {
 	int	localSupportedProcCount 	= 0;
 	int	localInitializedProcCount	= 0;
+
+	isGL_OES_byte_coordinates = isExtensionSupported("GL_OES_byte_coordinates");
+
+	localSupportedProcCount		= 22;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_OES_byte_coordinates ) // || isSEDEnable()
+	{
+		glMultiTexCoord1bOES = (PFNGLMULTITEXCOORD1BOESPROC) getExtensionPtr( "glMultiTexCoord1bOES" );
+		if ( glMultiTexCoord1bOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord1bvOES = (PFNGLMULTITEXCOORD1BVOESPROC) getExtensionPtr( "glMultiTexCoord1bvOES" );
+		if ( glMultiTexCoord1bvOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord2bOES = (PFNGLMULTITEXCOORD2BOESPROC) getExtensionPtr( "glMultiTexCoord2bOES" );
+		if ( glMultiTexCoord2bOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord2bvOES = (PFNGLMULTITEXCOORD2BVOESPROC) getExtensionPtr( "glMultiTexCoord2bvOES" );
+		if ( glMultiTexCoord2bvOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord3bOES = (PFNGLMULTITEXCOORD3BOESPROC) getExtensionPtr( "glMultiTexCoord3bOES" );
+		if ( glMultiTexCoord3bOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord3bvOES = (PFNGLMULTITEXCOORD3BVOESPROC) getExtensionPtr( "glMultiTexCoord3bvOES" );
+		if ( glMultiTexCoord3bvOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord4bOES = (PFNGLMULTITEXCOORD4BOESPROC) getExtensionPtr( "glMultiTexCoord4bOES" );
+		if ( glMultiTexCoord4bOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord4bvOES = (PFNGLMULTITEXCOORD4BVOESPROC) getExtensionPtr( "glMultiTexCoord4bvOES" );
+		if ( glMultiTexCoord4bvOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord1bOES = (PFNGLTEXCOORD1BOESPROC) getExtensionPtr( "glTexCoord1bOES" );
+		if ( glTexCoord1bOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord1bvOES = (PFNGLTEXCOORD1BVOESPROC) getExtensionPtr( "glTexCoord1bvOES" );
+		if ( glTexCoord1bvOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord2bOES = (PFNGLTEXCOORD2BOESPROC) getExtensionPtr( "glTexCoord2bOES" );
+		if ( glTexCoord2bOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord2bvOES = (PFNGLTEXCOORD2BVOESPROC) getExtensionPtr( "glTexCoord2bvOES" );
+		if ( glTexCoord2bvOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord3bOES = (PFNGLTEXCOORD3BOESPROC) getExtensionPtr( "glTexCoord3bOES" );
+		if ( glTexCoord3bOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord3bvOES = (PFNGLTEXCOORD3BVOESPROC) getExtensionPtr( "glTexCoord3bvOES" );
+		if ( glTexCoord3bvOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord4bOES = (PFNGLTEXCOORD4BOESPROC) getExtensionPtr( "glTexCoord4bOES" );
+		if ( glTexCoord4bOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord4bvOES = (PFNGLTEXCOORD4BVOESPROC) getExtensionPtr( "glTexCoord4bvOES" );
+		if ( glTexCoord4bvOES != 0 )	++localInitializedProcCount;
+
+		glVertex2bOES = (PFNGLVERTEX2BOESPROC) getExtensionPtr( "glVertex2bOES" );
+		if ( glVertex2bOES != 0 )	++localInitializedProcCount;
+
+		glVertex2bvOES = (PFNGLVERTEX2BVOESPROC) getExtensionPtr( "glVertex2bvOES" );
+		if ( glVertex2bvOES != 0 )	++localInitializedProcCount;
+
+		glVertex3bOES = (PFNGLVERTEX3BOESPROC) getExtensionPtr( "glVertex3bOES" );
+		if ( glVertex3bOES != 0 )	++localInitializedProcCount;
+
+		glVertex3bvOES = (PFNGLVERTEX3BVOESPROC) getExtensionPtr( "glVertex3bvOES" );
+		if ( glVertex3bvOES != 0 )	++localInitializedProcCount;
+
+		glVertex4bOES = (PFNGLVERTEX4BOESPROC) getExtensionPtr( "glVertex4bOES" );
+		if ( glVertex4bOES != 0 )	++localInitializedProcCount;
+
+		glVertex4bvOES = (PFNGLVERTEX4BVOESPROC) getExtensionPtr( "glVertex4bvOES" );
+		if ( glVertex4bvOES != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_OES_byte_coordinates )
+
+	if ( isGL_OES_byte_coordinates )
+	{
+		std::stringstream strStream;
+		strStream << "GL_OES_byte_coordinates                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_OES_byte_coordinates                           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_OES_byte_coordinates") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_OES_byte_coordinates                           : not detected." );
+	}
+
+
+	isGL_OES_compressed_paletted_texture = isExtensionSupported("GL_OES_compressed_paletted_texture");
+
+	localSupportedProcCount		= 0;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_OES_compressed_paletted_texture )
+	{
+		std::stringstream strStream;
+		strStream << "GL_OES_compressed_paletted_texture                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_OES_compressed_paletted_texture                : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_OES_compressed_paletted_texture") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_OES_compressed_paletted_texture                : not detected." );
+	}
+
+
+	isGL_OES_fixed_point = isExtensionSupported("GL_OES_fixed_point");
+
+	localSupportedProcCount		= 104;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_OES_fixed_point ) // || isSEDEnable()
+	{
+		glAccumxOES = (PFNGLACCUMXOESPROC) getExtensionPtr( "glAccumxOES" );
+		if ( glAccumxOES != 0 )	++localInitializedProcCount;
+
+		glAlphaFuncxOES = (PFNGLALPHAFUNCXOESPROC) getExtensionPtr( "glAlphaFuncxOES" );
+		if ( glAlphaFuncxOES != 0 )	++localInitializedProcCount;
+
+		glBitmapxOES = (PFNGLBITMAPXOESPROC) getExtensionPtr( "glBitmapxOES" );
+		if ( glBitmapxOES != 0 )	++localInitializedProcCount;
+
+		glBlendColorxOES = (PFNGLBLENDCOLORXOESPROC) getExtensionPtr( "glBlendColorxOES" );
+		if ( glBlendColorxOES != 0 )	++localInitializedProcCount;
+
+		glClearAccumxOES = (PFNGLCLEARACCUMXOESPROC) getExtensionPtr( "glClearAccumxOES" );
+		if ( glClearAccumxOES != 0 )	++localInitializedProcCount;
+
+		glClearColorxOES = (PFNGLCLEARCOLORXOESPROC) getExtensionPtr( "glClearColorxOES" );
+		if ( glClearColorxOES != 0 )	++localInitializedProcCount;
+
+		glClearDepthxOES = (PFNGLCLEARDEPTHXOESPROC) getExtensionPtr( "glClearDepthxOES" );
+		if ( glClearDepthxOES != 0 )	++localInitializedProcCount;
+
+		glClipPlanexOES = (PFNGLCLIPPLANEXOESPROC) getExtensionPtr( "glClipPlanexOES" );
+		if ( glClipPlanexOES != 0 )	++localInitializedProcCount;
+
+		glColor3xOES = (PFNGLCOLOR3XOESPROC) getExtensionPtr( "glColor3xOES" );
+		if ( glColor3xOES != 0 )	++localInitializedProcCount;
+
+		glColor3xvOES = (PFNGLCOLOR3XVOESPROC) getExtensionPtr( "glColor3xvOES" );
+		if ( glColor3xvOES != 0 )	++localInitializedProcCount;
+
+		glColor4xOES = (PFNGLCOLOR4XOESPROC) getExtensionPtr( "glColor4xOES" );
+		if ( glColor4xOES != 0 )	++localInitializedProcCount;
+
+		glColor4xvOES = (PFNGLCOLOR4XVOESPROC) getExtensionPtr( "glColor4xvOES" );
+		if ( glColor4xvOES != 0 )	++localInitializedProcCount;
+
+		glConvolutionParameterxOES = (PFNGLCONVOLUTIONPARAMETERXOESPROC) getExtensionPtr( "glConvolutionParameterxOES" );
+		if ( glConvolutionParameterxOES != 0 )	++localInitializedProcCount;
+
+		glConvolutionParameterxvOES = (PFNGLCONVOLUTIONPARAMETERXVOESPROC) getExtensionPtr( "glConvolutionParameterxvOES" );
+		if ( glConvolutionParameterxvOES != 0 )	++localInitializedProcCount;
+
+		glDepthRangexOES = (PFNGLDEPTHRANGEXOESPROC) getExtensionPtr( "glDepthRangexOES" );
+		if ( glDepthRangexOES != 0 )	++localInitializedProcCount;
+
+		glEvalCoord1xOES = (PFNGLEVALCOORD1XOESPROC) getExtensionPtr( "glEvalCoord1xOES" );
+		if ( glEvalCoord1xOES != 0 )	++localInitializedProcCount;
+
+		glEvalCoord1xvOES = (PFNGLEVALCOORD1XVOESPROC) getExtensionPtr( "glEvalCoord1xvOES" );
+		if ( glEvalCoord1xvOES != 0 )	++localInitializedProcCount;
+
+		glEvalCoord2xOES = (PFNGLEVALCOORD2XOESPROC) getExtensionPtr( "glEvalCoord2xOES" );
+		if ( glEvalCoord2xOES != 0 )	++localInitializedProcCount;
+
+		glEvalCoord2xvOES = (PFNGLEVALCOORD2XVOESPROC) getExtensionPtr( "glEvalCoord2xvOES" );
+		if ( glEvalCoord2xvOES != 0 )	++localInitializedProcCount;
+
+		glFeedbackBufferxOES = (PFNGLFEEDBACKBUFFERXOESPROC) getExtensionPtr( "glFeedbackBufferxOES" );
+		if ( glFeedbackBufferxOES != 0 )	++localInitializedProcCount;
+
+		glFogxOES = (PFNGLFOGXOESPROC) getExtensionPtr( "glFogxOES" );
+		if ( glFogxOES != 0 )	++localInitializedProcCount;
+
+		glFogxvOES = (PFNGLFOGXVOESPROC) getExtensionPtr( "glFogxvOES" );
+		if ( glFogxvOES != 0 )	++localInitializedProcCount;
+
+		glFrustumxOES = (PFNGLFRUSTUMXOESPROC) getExtensionPtr( "glFrustumxOES" );
+		if ( glFrustumxOES != 0 )	++localInitializedProcCount;
+
+		glGetClipPlanexOES = (PFNGLGETCLIPPLANEXOESPROC) getExtensionPtr( "glGetClipPlanexOES" );
+		if ( glGetClipPlanexOES != 0 )	++localInitializedProcCount;
+
+		glGetConvolutionParameterxvOES = (PFNGLGETCONVOLUTIONPARAMETERXVOESPROC) getExtensionPtr( "glGetConvolutionParameterxvOES" );
+		if ( glGetConvolutionParameterxvOES != 0 )	++localInitializedProcCount;
+
+		glGetFixedvOES = (PFNGLGETFIXEDVOESPROC) getExtensionPtr( "glGetFixedvOES" );
+		if ( glGetFixedvOES != 0 )	++localInitializedProcCount;
+
+		glGetHistogramParameterxvOES = (PFNGLGETHISTOGRAMPARAMETERXVOESPROC) getExtensionPtr( "glGetHistogramParameterxvOES" );
+		if ( glGetHistogramParameterxvOES != 0 )	++localInitializedProcCount;
+
+		glGetLightxOES = (PFNGLGETLIGHTXOESPROC) getExtensionPtr( "glGetLightxOES" );
+		if ( glGetLightxOES != 0 )	++localInitializedProcCount;
+
+		glGetMapxvOES = (PFNGLGETMAPXVOESPROC) getExtensionPtr( "glGetMapxvOES" );
+		if ( glGetMapxvOES != 0 )	++localInitializedProcCount;
+
+		glGetMaterialxOES = (PFNGLGETMATERIALXOESPROC) getExtensionPtr( "glGetMaterialxOES" );
+		if ( glGetMaterialxOES != 0 )	++localInitializedProcCount;
+
+		glGetPixelMapxv = (PFNGLGETPIXELMAPXVPROC) getExtensionPtr( "glGetPixelMapxv" );
+		if ( glGetPixelMapxv != 0 )	++localInitializedProcCount;
+
+		glGetTexEnvxvOES = (PFNGLGETTEXENVXVOESPROC) getExtensionPtr( "glGetTexEnvxvOES" );
+		if ( glGetTexEnvxvOES != 0 )	++localInitializedProcCount;
+
+		glGetTexGenxvOES = (PFNGLGETTEXGENXVOESPROC) getExtensionPtr( "glGetTexGenxvOES" );
+		if ( glGetTexGenxvOES != 0 )	++localInitializedProcCount;
+
+		glGetTexLevelParameterxvOES = (PFNGLGETTEXLEVELPARAMETERXVOESPROC) getExtensionPtr( "glGetTexLevelParameterxvOES" );
+		if ( glGetTexLevelParameterxvOES != 0 )	++localInitializedProcCount;
+
+		glGetTexParameterxvOES = (PFNGLGETTEXPARAMETERXVOESPROC) getExtensionPtr( "glGetTexParameterxvOES" );
+		if ( glGetTexParameterxvOES != 0 )	++localInitializedProcCount;
+
+		glIndexxOES = (PFNGLINDEXXOESPROC) getExtensionPtr( "glIndexxOES" );
+		if ( glIndexxOES != 0 )	++localInitializedProcCount;
+
+		glIndexxvOES = (PFNGLINDEXXVOESPROC) getExtensionPtr( "glIndexxvOES" );
+		if ( glIndexxvOES != 0 )	++localInitializedProcCount;
+
+		glLightModelxOES = (PFNGLLIGHTMODELXOESPROC) getExtensionPtr( "glLightModelxOES" );
+		if ( glLightModelxOES != 0 )	++localInitializedProcCount;
+
+		glLightModelxvOES = (PFNGLLIGHTMODELXVOESPROC) getExtensionPtr( "glLightModelxvOES" );
+		if ( glLightModelxvOES != 0 )	++localInitializedProcCount;
+
+		glLightxOES = (PFNGLLIGHTXOESPROC) getExtensionPtr( "glLightxOES" );
+		if ( glLightxOES != 0 )	++localInitializedProcCount;
+
+		glLightxvOES = (PFNGLLIGHTXVOESPROC) getExtensionPtr( "glLightxvOES" );
+		if ( glLightxvOES != 0 )	++localInitializedProcCount;
+
+		glLineWidthxOES = (PFNGLLINEWIDTHXOESPROC) getExtensionPtr( "glLineWidthxOES" );
+		if ( glLineWidthxOES != 0 )	++localInitializedProcCount;
+
+		glLoadMatrixxOES = (PFNGLLOADMATRIXXOESPROC) getExtensionPtr( "glLoadMatrixxOES" );
+		if ( glLoadMatrixxOES != 0 )	++localInitializedProcCount;
+
+		glLoadTransposeMatrixxOES = (PFNGLLOADTRANSPOSEMATRIXXOESPROC) getExtensionPtr( "glLoadTransposeMatrixxOES" );
+		if ( glLoadTransposeMatrixxOES != 0 )	++localInitializedProcCount;
+
+		glMap1xOES = (PFNGLMAP1XOESPROC) getExtensionPtr( "glMap1xOES" );
+		if ( glMap1xOES != 0 )	++localInitializedProcCount;
+
+		glMap2xOES = (PFNGLMAP2XOESPROC) getExtensionPtr( "glMap2xOES" );
+		if ( glMap2xOES != 0 )	++localInitializedProcCount;
+
+		glMapGrid1xOES = (PFNGLMAPGRID1XOESPROC) getExtensionPtr( "glMapGrid1xOES" );
+		if ( glMapGrid1xOES != 0 )	++localInitializedProcCount;
+
+		glMapGrid2xOES = (PFNGLMAPGRID2XOESPROC) getExtensionPtr( "glMapGrid2xOES" );
+		if ( glMapGrid2xOES != 0 )	++localInitializedProcCount;
+
+		glMaterialxOES = (PFNGLMATERIALXOESPROC) getExtensionPtr( "glMaterialxOES" );
+		if ( glMaterialxOES != 0 )	++localInitializedProcCount;
+
+		glMaterialxvOES = (PFNGLMATERIALXVOESPROC) getExtensionPtr( "glMaterialxvOES" );
+		if ( glMaterialxvOES != 0 )	++localInitializedProcCount;
+
+		glMultMatrixxOES = (PFNGLMULTMATRIXXOESPROC) getExtensionPtr( "glMultMatrixxOES" );
+		if ( glMultMatrixxOES != 0 )	++localInitializedProcCount;
+
+		glMultTransposeMatrixxOES = (PFNGLMULTTRANSPOSEMATRIXXOESPROC) getExtensionPtr( "glMultTransposeMatrixxOES" );
+		if ( glMultTransposeMatrixxOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord1xOES = (PFNGLMULTITEXCOORD1XOESPROC) getExtensionPtr( "glMultiTexCoord1xOES" );
+		if ( glMultiTexCoord1xOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord1xvOES = (PFNGLMULTITEXCOORD1XVOESPROC) getExtensionPtr( "glMultiTexCoord1xvOES" );
+		if ( glMultiTexCoord1xvOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord2xOES = (PFNGLMULTITEXCOORD2XOESPROC) getExtensionPtr( "glMultiTexCoord2xOES" );
+		if ( glMultiTexCoord2xOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord2xvOES = (PFNGLMULTITEXCOORD2XVOESPROC) getExtensionPtr( "glMultiTexCoord2xvOES" );
+		if ( glMultiTexCoord2xvOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord3xOES = (PFNGLMULTITEXCOORD3XOESPROC) getExtensionPtr( "glMultiTexCoord3xOES" );
+		if ( glMultiTexCoord3xOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord3xvOES = (PFNGLMULTITEXCOORD3XVOESPROC) getExtensionPtr( "glMultiTexCoord3xvOES" );
+		if ( glMultiTexCoord3xvOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord4xOES = (PFNGLMULTITEXCOORD4XOESPROC) getExtensionPtr( "glMultiTexCoord4xOES" );
+		if ( glMultiTexCoord4xOES != 0 )	++localInitializedProcCount;
+
+		glMultiTexCoord4xvOES = (PFNGLMULTITEXCOORD4XVOESPROC) getExtensionPtr( "glMultiTexCoord4xvOES" );
+		if ( glMultiTexCoord4xvOES != 0 )	++localInitializedProcCount;
+
+		glNormal3xOES = (PFNGLNORMAL3XOESPROC) getExtensionPtr( "glNormal3xOES" );
+		if ( glNormal3xOES != 0 )	++localInitializedProcCount;
+
+		glNormal3xvOES = (PFNGLNORMAL3XVOESPROC) getExtensionPtr( "glNormal3xvOES" );
+		if ( glNormal3xvOES != 0 )	++localInitializedProcCount;
+
+		glOrthoxOES = (PFNGLORTHOXOESPROC) getExtensionPtr( "glOrthoxOES" );
+		if ( glOrthoxOES != 0 )	++localInitializedProcCount;
+
+		glPassThroughxOES = (PFNGLPASSTHROUGHXOESPROC) getExtensionPtr( "glPassThroughxOES" );
+		if ( glPassThroughxOES != 0 )	++localInitializedProcCount;
+
+		glPixelMapx = (PFNGLPIXELMAPXPROC) getExtensionPtr( "glPixelMapx" );
+		if ( glPixelMapx != 0 )	++localInitializedProcCount;
+
+		glPixelStorex = (PFNGLPIXELSTOREXPROC) getExtensionPtr( "glPixelStorex" );
+		if ( glPixelStorex != 0 )	++localInitializedProcCount;
+
+		glPixelTransferxOES = (PFNGLPIXELTRANSFERXOESPROC) getExtensionPtr( "glPixelTransferxOES" );
+		if ( glPixelTransferxOES != 0 )	++localInitializedProcCount;
+
+		glPixelZoomxOES = (PFNGLPIXELZOOMXOESPROC) getExtensionPtr( "glPixelZoomxOES" );
+		if ( glPixelZoomxOES != 0 )	++localInitializedProcCount;
+
+		glPointParameterxvOES = (PFNGLPOINTPARAMETERXVOESPROC) getExtensionPtr( "glPointParameterxvOES" );
+		if ( glPointParameterxvOES != 0 )	++localInitializedProcCount;
+
+		glPointSizexOES = (PFNGLPOINTSIZEXOESPROC) getExtensionPtr( "glPointSizexOES" );
+		if ( glPointSizexOES != 0 )	++localInitializedProcCount;
+
+		glPolygonOffsetxOES = (PFNGLPOLYGONOFFSETXOESPROC) getExtensionPtr( "glPolygonOffsetxOES" );
+		if ( glPolygonOffsetxOES != 0 )	++localInitializedProcCount;
+
+		glPrioritizeTexturesxOES = (PFNGLPRIORITIZETEXTURESXOESPROC) getExtensionPtr( "glPrioritizeTexturesxOES" );
+		if ( glPrioritizeTexturesxOES != 0 )	++localInitializedProcCount;
+
+		glRasterPos2xOES = (PFNGLRASTERPOS2XOESPROC) getExtensionPtr( "glRasterPos2xOES" );
+		if ( glRasterPos2xOES != 0 )	++localInitializedProcCount;
+
+		glRasterPos2xvOES = (PFNGLRASTERPOS2XVOESPROC) getExtensionPtr( "glRasterPos2xvOES" );
+		if ( glRasterPos2xvOES != 0 )	++localInitializedProcCount;
+
+		glRasterPos3xOES = (PFNGLRASTERPOS3XOESPROC) getExtensionPtr( "glRasterPos3xOES" );
+		if ( glRasterPos3xOES != 0 )	++localInitializedProcCount;
+
+		glRasterPos3xvOES = (PFNGLRASTERPOS3XVOESPROC) getExtensionPtr( "glRasterPos3xvOES" );
+		if ( glRasterPos3xvOES != 0 )	++localInitializedProcCount;
+
+		glRasterPos4xOES = (PFNGLRASTERPOS4XOESPROC) getExtensionPtr( "glRasterPos4xOES" );
+		if ( glRasterPos4xOES != 0 )	++localInitializedProcCount;
+
+		glRasterPos4xvOES = (PFNGLRASTERPOS4XVOESPROC) getExtensionPtr( "glRasterPos4xvOES" );
+		if ( glRasterPos4xvOES != 0 )	++localInitializedProcCount;
+
+		glRectxOES = (PFNGLRECTXOESPROC) getExtensionPtr( "glRectxOES" );
+		if ( glRectxOES != 0 )	++localInitializedProcCount;
+
+		glRectxvOES = (PFNGLRECTXVOESPROC) getExtensionPtr( "glRectxvOES" );
+		if ( glRectxvOES != 0 )	++localInitializedProcCount;
+
+		glRotatexOES = (PFNGLROTATEXOESPROC) getExtensionPtr( "glRotatexOES" );
+		if ( glRotatexOES != 0 )	++localInitializedProcCount;
+
+		glSampleCoverageOES = (PFNGLSAMPLECOVERAGEOESPROC) getExtensionPtr( "glSampleCoverageOES" );
+		if ( glSampleCoverageOES != 0 )	++localInitializedProcCount;
+
+		glScalexOES = (PFNGLSCALEXOESPROC) getExtensionPtr( "glScalexOES" );
+		if ( glScalexOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord1xOES = (PFNGLTEXCOORD1XOESPROC) getExtensionPtr( "glTexCoord1xOES" );
+		if ( glTexCoord1xOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord1xvOES = (PFNGLTEXCOORD1XVOESPROC) getExtensionPtr( "glTexCoord1xvOES" );
+		if ( glTexCoord1xvOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord2xOES = (PFNGLTEXCOORD2XOESPROC) getExtensionPtr( "glTexCoord2xOES" );
+		if ( glTexCoord2xOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord2xvOES = (PFNGLTEXCOORD2XVOESPROC) getExtensionPtr( "glTexCoord2xvOES" );
+		if ( glTexCoord2xvOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord3xOES = (PFNGLTEXCOORD3XOESPROC) getExtensionPtr( "glTexCoord3xOES" );
+		if ( glTexCoord3xOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord3xvOES = (PFNGLTEXCOORD3XVOESPROC) getExtensionPtr( "glTexCoord3xvOES" );
+		if ( glTexCoord3xvOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord4xOES = (PFNGLTEXCOORD4XOESPROC) getExtensionPtr( "glTexCoord4xOES" );
+		if ( glTexCoord4xOES != 0 )	++localInitializedProcCount;
+
+		glTexCoord4xvOES = (PFNGLTEXCOORD4XVOESPROC) getExtensionPtr( "glTexCoord4xvOES" );
+		if ( glTexCoord4xvOES != 0 )	++localInitializedProcCount;
+
+		glTexEnvxOES = (PFNGLTEXENVXOESPROC) getExtensionPtr( "glTexEnvxOES" );
+		if ( glTexEnvxOES != 0 )	++localInitializedProcCount;
+
+		glTexEnvxvOES = (PFNGLTEXENVXVOESPROC) getExtensionPtr( "glTexEnvxvOES" );
+		if ( glTexEnvxvOES != 0 )	++localInitializedProcCount;
+
+		glTexGenxOES = (PFNGLTEXGENXOESPROC) getExtensionPtr( "glTexGenxOES" );
+		if ( glTexGenxOES != 0 )	++localInitializedProcCount;
+
+		glTexGenxvOES = (PFNGLTEXGENXVOESPROC) getExtensionPtr( "glTexGenxvOES" );
+		if ( glTexGenxvOES != 0 )	++localInitializedProcCount;
+
+		glTexParameterxOES = (PFNGLTEXPARAMETERXOESPROC) getExtensionPtr( "glTexParameterxOES" );
+		if ( glTexParameterxOES != 0 )	++localInitializedProcCount;
+
+		glTexParameterxvOES = (PFNGLTEXPARAMETERXVOESPROC) getExtensionPtr( "glTexParameterxvOES" );
+		if ( glTexParameterxvOES != 0 )	++localInitializedProcCount;
+
+		glTranslatexOES = (PFNGLTRANSLATEXOESPROC) getExtensionPtr( "glTranslatexOES" );
+		if ( glTranslatexOES != 0 )	++localInitializedProcCount;
+
+		glVertex2xOES = (PFNGLVERTEX2XOESPROC) getExtensionPtr( "glVertex2xOES" );
+		if ( glVertex2xOES != 0 )	++localInitializedProcCount;
+
+		glVertex2xvOES = (PFNGLVERTEX2XVOESPROC) getExtensionPtr( "glVertex2xvOES" );
+		if ( glVertex2xvOES != 0 )	++localInitializedProcCount;
+
+		glVertex3xOES = (PFNGLVERTEX3XOESPROC) getExtensionPtr( "glVertex3xOES" );
+		if ( glVertex3xOES != 0 )	++localInitializedProcCount;
+
+		glVertex3xvOES = (PFNGLVERTEX3XVOESPROC) getExtensionPtr( "glVertex3xvOES" );
+		if ( glVertex3xvOES != 0 )	++localInitializedProcCount;
+
+		glVertex4xOES = (PFNGLVERTEX4XOESPROC) getExtensionPtr( "glVertex4xOES" );
+		if ( glVertex4xOES != 0 )	++localInitializedProcCount;
+
+		glVertex4xvOES = (PFNGLVERTEX4XVOESPROC) getExtensionPtr( "glVertex4xvOES" );
+		if ( glVertex4xvOES != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_OES_fixed_point )
+
+	if ( isGL_OES_fixed_point )
+	{
+		std::stringstream strStream;
+		strStream << "GL_OES_fixed_point                                : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_OES_fixed_point                                : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_OES_fixed_point") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_OES_fixed_point                                : not detected." );
+	}
+
+
+	isGL_OES_query_matrix = isExtensionSupported("GL_OES_query_matrix");
+
+	localSupportedProcCount		= 1;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_OES_query_matrix ) // || isSEDEnable()
+	{
+		glQueryMatrixxOES = (PFNGLQUERYMATRIXXOESPROC) getExtensionPtr( "glQueryMatrixxOES" );
+		if ( glQueryMatrixxOES != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_OES_query_matrix )
+
+	if ( isGL_OES_query_matrix )
+	{
+		std::stringstream strStream;
+		strStream << "GL_OES_query_matrix                               : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_OES_query_matrix                               : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_OES_query_matrix") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_OES_query_matrix                               : not detected." );
+	}
+
 
 	isGL_OES_read_format = isExtensionSupported("GL_OES_read_format");
 
@@ -24325,7 +25356,60 @@ void OpenGLExtensionsGen::initializeGL_OES()
 	}
 
 
-} // initializeGL_OES_read_format()
+	isGL_OES_single_precision = isExtensionSupported("GL_OES_single_precision");
+
+	localSupportedProcCount		= 6;
+	localInitializedProcCount	= 0;
+
+	if ( isGL_OES_single_precision ) // || isSEDEnable()
+	{
+		glClearDepthfOES = (PFNGLCLEARDEPTHFOESPROC) getExtensionPtr( "glClearDepthfOES" );
+		if ( glClearDepthfOES != 0 )	++localInitializedProcCount;
+
+		glClipPlanefOES = (PFNGLCLIPPLANEFOESPROC) getExtensionPtr( "glClipPlanefOES" );
+		if ( glClipPlanefOES != 0 )	++localInitializedProcCount;
+
+		glDepthRangefOES = (PFNGLDEPTHRANGEFOESPROC) getExtensionPtr( "glDepthRangefOES" );
+		if ( glDepthRangefOES != 0 )	++localInitializedProcCount;
+
+		glFrustumfOES = (PFNGLFRUSTUMFOESPROC) getExtensionPtr( "glFrustumfOES" );
+		if ( glFrustumfOES != 0 )	++localInitializedProcCount;
+
+		glGetClipPlanefOES = (PFNGLGETCLIPPLANEFOESPROC) getExtensionPtr( "glGetClipPlanefOES" );
+		if ( glGetClipPlanefOES != 0 )	++localInitializedProcCount;
+
+		glOrthofOES = (PFNGLORTHOFOESPROC) getExtensionPtr( "glOrthofOES" );
+		if ( glOrthofOES != 0 )	++localInitializedProcCount;
+
+	} // if ( isGL_OES_single_precision )
+
+	if ( isGL_OES_single_precision )
+	{
+		std::stringstream strStream;
+		strStream << "GL_OES_single_precision                           : detected, " << localInitializedProcCount << "/" << localSupportedProcCount << " procedures initialized." << std::ends << std::endl;
+		log( strStream.str() );
+
+		if ( localInitializedProcCount < localSupportedProcCount  )
+		{
+			std::stringstream strStream;
+			strStream << "GL_OES_single_precision                           : " << localSupportedProcCount-localInitializedProcCount;
+			strStream << " missing entry point(s), is there a bug in the driver !!!" << std::ends << std::endl;
+			log( strStream.str() );
+		}
+		else
+		{
+			m_initializedExtensions.push_back( std::string("GL_OES_single_precision") );
+			++m_initializedExtensionCount;
+			m_initializedProcCount += localInitializedProcCount;
+		}
+	}
+	else
+	{
+		logEndl( "GL_OES_single_precision                           : not detected." );
+	}
+
+
+} // initializeGL_OES_single_precision()
 
 
 void OpenGLExtensionsGen::initializeGL_OML()
