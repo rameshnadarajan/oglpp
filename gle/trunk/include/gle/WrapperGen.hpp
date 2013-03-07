@@ -1,4 +1,4 @@
-// This file was generated at Tue, 16 Oct 2012 08:09:43 +0000 with gle, please do not modify.
+// This file was generated at Thu, 07 Mar 2013 07:22:02 +0000 with gle, please do not modify.
 
 // GLE - Copyright (C) 2004, 2005, 2007, 2008, 2009, 2010, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
@@ -6,10 +6,10 @@
 // Author Nicolas Papier
 
 // This file was generated using :
-// /* glext.h last updated $Date: 2012-09-19 19:02:24 -0700 (Wed, 19 Sep 2012) $ */
-// #define GL_GLEXT_VERSION 85
-// /* glxext.h last updated 2012/02/29 */
-// #define GLX_GLXEXT_VERSION 33
+// /* glext.h last updated $Date: 2013-02-07 01:42:49 -0800 (Thu, 07 Feb 2013) $ */
+// #define GL_GLEXT_VERSION 86
+// /* glxext.h last updated 2013/01/02 */
+// #define GLX_GLXEXT_VERSION 34
 // /* wglext.h last updated 2012/01/04 */
 // #define WGL_WGLEXT_VERSION 24
 
@@ -53,7 +53,7 @@
  */
 
 /** 
- * @defgroup g_GLX_EXT			GLX_EXT (10 extensions found)
+ * @defgroup g_GLX_EXT			GLX_EXT (11 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -108,7 +108,7 @@
  */
 
 /** 
- * @defgroup g_GL_AMD			GL_AMD (20 extensions found)
+ * @defgroup g_GL_AMD			GL_AMD (21 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -158,7 +158,7 @@
  */
 
 /** 
- * @defgroup g_GL_INTEL			GL_INTEL (2 extensions found)
+ * @defgroup g_GL_INTEL			GL_INTEL (3 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -178,12 +178,17 @@
  */
 
 /** 
- * @defgroup g_GL_NV			GL_NV (66 extensions found)
+ * @defgroup g_GL_NV			GL_NV (71 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
 /** 
- * @defgroup g_GL_OES			GL_OES (1 extensions found)
+ * @defgroup g_GL_NVX			GL_NVX (1 extensions found)
+ * @ingroup g_extensionsByVendor
+ */
+
+/** 
+ * @defgroup g_GL_OES			GL_OES (6 extensions found)
  * @ingroup g_extensionsByVendor
  */
 
@@ -546,6 +551,27 @@ GLE_API bool isGLX_EXT_buffer_age();
  * @return Returns \c true if \b GLX_EXT_create_context_es2_profile is supported, \c false otherwise.
  */
 GLE_API bool isGLX_EXT_create_context_es2_profile();
+
+
+//@}
+#endif //POSIX
+
+
+
+#ifdef POSIX
+/**
+ * @defgroup GLX_EXT_create_context_es_profile GLX_EXT_create_context_es_profile
+ * Extension number in OpenGL registry : 399
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/EXT/glx_create_context_es2_profile.txt
+ * @ingroup g_GLX_EXT g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GLX_EXT_create_context_es_profile is supported.
+ * @return Returns \c true if \b GLX_EXT_create_context_es_profile is supported, \c false otherwise.
+ */
+GLE_API bool isGLX_EXT_create_context_es_profile();
 
 
 //@}
@@ -1145,7 +1171,7 @@ GLE_API bool isGLX_NV_video_out();
 /**
  * @defgroup GLX_NV_video_output GLX_NV_video_output
  * Extension number in OpenGL registry : 348
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/glx_video_out.txt
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/glx_video_output.txt
  * @ingroup g_GLX_NV g_extensions
  */
 //@{
@@ -2406,6 +2432,26 @@ GLE_API bool isGL_AMD_seamless_cubemap_per_texture();
  * @return Returns \c true if \b GL_AMD_shader_stencil_export is supported, \c false otherwise.
  */
 GLE_API bool isGL_AMD_shader_stencil_export();
+
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_AMD_shader_trinary_minmax GL_AMD_shader_trinary_minmax
+ * Extension number in OpenGL registry : 428
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/AMD/shader_trinary_minmax.txt
+ * @ingroup g_GL_AMD g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_AMD_shader_trinary_minmax is supported.
+ * @return Returns \c true if \b GL_AMD_shader_trinary_minmax is supported, \c false otherwise.
+ */
+GLE_API bool isGL_AMD_shader_trinary_minmax();
 
 
 //@}
@@ -13781,6 +13827,42 @@ GLE_API bool isGL_INGR_palette_buffer();
 
 
 /**
+ * @defgroup GL_INTEL_map_texture GL_INTEL_map_texture
+ * Extension number in OpenGL registry : 429
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/INTEL/map_texture.txt
+ * @ingroup g_GL_INTEL g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_INTEL_map_texture is supported.
+ * @return Returns \c true if \b GL_INTEL_map_texture is supported, \c false otherwise.
+ */
+GLE_API bool isGL_INTEL_map_texture();
+
+
+
+/**
+ * @brief GLvoid* glMapTexture2DINTEL(GLuint texture, GLint level, GLbitfield access, const GLint *stride, const GLenum *layout)
+ */
+GLE_API GLvoid* glMapTexture2DINTEL(GLuint texture, GLint level, GLbitfield access, const GLint *stride, const GLenum *layout);
+
+/**
+ * @brief void glSyncTextureINTEL(GLuint texture)
+ */
+GLE_API void glSyncTextureINTEL(GLuint texture);
+
+/**
+ * @brief void glUnmapTexture2DINTEL(GLuint texture, GLint level)
+ */
+GLE_API void glUnmapTexture2DINTEL(GLuint texture, GLint level);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_INTEL_parallel_arrays GL_INTEL_parallel_arrays
  * Extension number in OpenGL registry : 136
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/INTEL/parallel_arrays.txt
@@ -14160,6 +14242,37 @@ GLE_API bool isGL_MESA_ycbcr_texture();
 
 
 /**
+ * @defgroup GL_NVX_conditional_render GL_NVX_conditional_render
+ * Extension number in OpenGL registry : NA
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/#
+ * @ingroup g_GL_NVX g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_NVX_conditional_render is supported.
+ * @return Returns \c true if \b GL_NVX_conditional_render is supported, \c false otherwise.
+ */
+GLE_API bool isGL_NVX_conditional_render();
+
+
+
+/**
+ * @brief void glBeginConditionalRenderNVX(GLuint id)
+ */
+GLE_API void glBeginConditionalRenderNVX(GLuint id);
+
+/**
+ * @brief void glEndConditionalRenderNVX(void)
+ */
+GLE_API void glEndConditionalRenderNVX(void);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_NV_bindless_texture GL_NV_bindless_texture
  * Extension number in OpenGL registry : 418
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/bindless_texture.txt
@@ -14266,6 +14379,26 @@ GLE_API bool isGL_NV_blend_square();
 
 
 /**
+ * @defgroup GL_NV_compute_program5 GL_NV_compute_program5
+ * Extension number in OpenGL registry : 421
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/compute_program5.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_NV_compute_program5 is supported.
+ * @return Returns \c true if \b GL_NV_compute_program5 is supported, \c false otherwise.
+ */
+GLE_API bool isGL_NV_compute_program5();
+
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_NV_conditional_render GL_NV_conditional_render
  * Extension number in OpenGL registry : 346
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/conditional_render.txt
@@ -14343,6 +14476,26 @@ GLE_API void glCopyImageSubDataNV(GLuint srcName, GLenum srcTarget, GLint srcLev
 
 
 /**
+ * @defgroup GL_NV_deep_texture3D GL_NV_deep_texture3D
+ * Extension number in OpenGL registry : 424
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/deep_texture3D.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_NV_deep_texture3D is supported.
+ * @return Returns \c true if \b GL_NV_deep_texture3D is supported, \c false otherwise.
+ */
+GLE_API bool isGL_NV_deep_texture3D();
+
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_NV_depth_buffer_float GL_NV_depth_buffer_float
  * Extension number in OpenGL registry : 334
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/depth_buffer_float.txt
@@ -14392,6 +14545,32 @@ GLE_API void glDepthRangedNV(GLdouble zNear, GLdouble zFar);
  */
 GLE_API bool isGL_NV_depth_clamp();
 
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_NV_draw_texture GL_NV_draw_texture
+ * Extension number in OpenGL registry : 430
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/draw_texture.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_NV_draw_texture is supported.
+ * @return Returns \c true if \b GL_NV_draw_texture is supported, \c false otherwise.
+ */
+GLE_API bool isGL_NV_draw_texture();
+
+
+
+/**
+ * @brief void glDrawTextureNV(GLuint texture, GLuint sampler, GLfloat x0, GLfloat y0, GLfloat x1, GLfloat y1, GLfloat z, GLfloat s0, GLfloat t0, GLfloat s1, GLfloat t1)
+ */
+GLE_API void glDrawTextureNV(GLuint texture, GLuint sampler, GLfloat x0, GLfloat y0, GLfloat x1, GLfloat y1, GLfloat z, GLfloat s0, GLfloat t0, GLfloat s1, GLfloat t1);
 
 //@}
 
@@ -15516,19 +15695,19 @@ GLE_API bool isGL_NV_parameter_buffer_object();
 
 
 /**
- * @brief void glProgramBufferParametersIivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLint *params)
+ * @brief void glProgramBufferParametersIivNV(GLenum target, GLuint bindingIndex, GLuint wordIndex, GLsizei count, const GLint *params)
  */
-GLE_API void glProgramBufferParametersIivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLint *params);
+GLE_API void glProgramBufferParametersIivNV(GLenum target, GLuint bindingIndex, GLuint wordIndex, GLsizei count, const GLint *params);
 
 /**
- * @brief void glProgramBufferParametersIuivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLuint *params)
+ * @brief void glProgramBufferParametersIuivNV(GLenum target, GLuint bindingIndex, GLuint wordIndex, GLsizei count, const GLuint *params)
  */
-GLE_API void glProgramBufferParametersIuivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLuint *params);
+GLE_API void glProgramBufferParametersIuivNV(GLenum target, GLuint bindingIndex, GLuint wordIndex, GLsizei count, const GLuint *params);
 
 /**
- * @brief void glProgramBufferParametersfvNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLfloat *params)
+ * @brief void glProgramBufferParametersfvNV(GLenum target, GLuint bindingIndex, GLuint wordIndex, GLsizei count, const GLfloat *params)
  */
-GLE_API void glProgramBufferParametersfvNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLfloat *params);
+GLE_API void glProgramBufferParametersfvNV(GLenum target, GLuint bindingIndex, GLuint wordIndex, GLsizei count, const GLfloat *params);
 
 //@}
 
@@ -16083,6 +16262,26 @@ GLE_API void glGetCombinerStageParameterfvNV(GLenum stage, GLenum pname, GLfloat
 
 
 /**
+ * @defgroup GL_NV_shader_atomic_counters GL_NV_shader_atomic_counters
+ * Extension number in OpenGL registry : 423
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/shader_atomic_counters.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_NV_shader_atomic_counters is supported.
+ * @return Returns \c true if \b GL_NV_shader_atomic_counters is supported, \c false otherwise.
+ */
+GLE_API bool isGL_NV_shader_atomic_counters();
+
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_NV_shader_atomic_float GL_NV_shader_atomic_float
  * Extension number in OpenGL registry : 419
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/shader_atomic_float.txt
@@ -16206,6 +16405,26 @@ GLE_API void glUniformui64vNV(GLint location, GLsizei count, const GLuint64EXT *
  * @return Returns \c true if \b GL_NV_shader_buffer_store is supported, \c false otherwise.
  */
 GLE_API bool isGL_NV_shader_buffer_store();
+
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_NV_shader_storage_buffer_object GL_NV_shader_storage_buffer_object
+ * Extension number in OpenGL registry : 422
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/shader_storage_buffer_object.txt
+ * @ingroup g_GL_NV g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_NV_shader_storage_buffer_object is supported.
+ * @return Returns \c true if \b GL_NV_shader_storage_buffer_object is supported, \c false otherwise.
+ */
+GLE_API bool isGL_NV_shader_storage_buffer_object();
 
 
 //@}
@@ -17585,6 +17804,724 @@ GLE_API void glVideoCaptureStreamParameterivNV(GLuint video_capture_slot, GLuint
 
 
 /**
+ * @defgroup GL_OES_byte_coordinates GL_OES_byte_coordinates
+ * Extension number in OpenGL registry : 291
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/OES/OES_byte_coordinates.txt
+ * @ingroup g_GL_OES g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_OES_byte_coordinates is supported.
+ * @return Returns \c true if \b GL_OES_byte_coordinates is supported, \c false otherwise.
+ */
+GLE_API bool isGL_OES_byte_coordinates();
+
+
+
+/**
+ * @brief void glMultiTexCoord1bOES(GLenum texture, GLbyte s)
+ */
+GLE_API void glMultiTexCoord1bOES(GLenum texture, GLbyte s);
+
+/**
+ * @brief void glMultiTexCoord1bvOES(GLenum texture, const GLbyte *coords)
+ */
+GLE_API void glMultiTexCoord1bvOES(GLenum texture, const GLbyte *coords);
+
+/**
+ * @brief void glMultiTexCoord2bOES(GLenum texture, GLbyte s, GLbyte t)
+ */
+GLE_API void glMultiTexCoord2bOES(GLenum texture, GLbyte s, GLbyte t);
+
+/**
+ * @brief void glMultiTexCoord2bvOES(GLenum texture, const GLbyte *coords)
+ */
+GLE_API void glMultiTexCoord2bvOES(GLenum texture, const GLbyte *coords);
+
+/**
+ * @brief void glMultiTexCoord3bOES(GLenum texture, GLbyte s, GLbyte t, GLbyte r)
+ */
+GLE_API void glMultiTexCoord3bOES(GLenum texture, GLbyte s, GLbyte t, GLbyte r);
+
+/**
+ * @brief void glMultiTexCoord3bvOES(GLenum texture, const GLbyte *coords)
+ */
+GLE_API void glMultiTexCoord3bvOES(GLenum texture, const GLbyte *coords);
+
+/**
+ * @brief void glMultiTexCoord4bOES(GLenum texture, GLbyte s, GLbyte t, GLbyte r, GLbyte q)
+ */
+GLE_API void glMultiTexCoord4bOES(GLenum texture, GLbyte s, GLbyte t, GLbyte r, GLbyte q);
+
+/**
+ * @brief void glMultiTexCoord4bvOES(GLenum texture, const GLbyte *coords)
+ */
+GLE_API void glMultiTexCoord4bvOES(GLenum texture, const GLbyte *coords);
+
+/**
+ * @brief void glTexCoord1bOES(GLbyte s)
+ */
+GLE_API void glTexCoord1bOES(GLbyte s);
+
+/**
+ * @brief void glTexCoord1bvOES(const GLbyte *coords)
+ */
+GLE_API void glTexCoord1bvOES(const GLbyte *coords);
+
+/**
+ * @brief void glTexCoord2bOES(GLbyte s, GLbyte t)
+ */
+GLE_API void glTexCoord2bOES(GLbyte s, GLbyte t);
+
+/**
+ * @brief void glTexCoord2bvOES(const GLbyte *coords)
+ */
+GLE_API void glTexCoord2bvOES(const GLbyte *coords);
+
+/**
+ * @brief void glTexCoord3bOES(GLbyte s, GLbyte t, GLbyte r)
+ */
+GLE_API void glTexCoord3bOES(GLbyte s, GLbyte t, GLbyte r);
+
+/**
+ * @brief void glTexCoord3bvOES(const GLbyte *coords)
+ */
+GLE_API void glTexCoord3bvOES(const GLbyte *coords);
+
+/**
+ * @brief void glTexCoord4bOES(GLbyte s, GLbyte t, GLbyte r, GLbyte q)
+ */
+GLE_API void glTexCoord4bOES(GLbyte s, GLbyte t, GLbyte r, GLbyte q);
+
+/**
+ * @brief void glTexCoord4bvOES(const GLbyte *coords)
+ */
+GLE_API void glTexCoord4bvOES(const GLbyte *coords);
+
+/**
+ * @brief void glVertex2bOES(GLbyte x)
+ */
+GLE_API void glVertex2bOES(GLbyte x);
+
+/**
+ * @brief void glVertex2bvOES(const GLbyte *coords)
+ */
+GLE_API void glVertex2bvOES(const GLbyte *coords);
+
+/**
+ * @brief void glVertex3bOES(GLbyte x, GLbyte y)
+ */
+GLE_API void glVertex3bOES(GLbyte x, GLbyte y);
+
+/**
+ * @brief void glVertex3bvOES(const GLbyte *coords)
+ */
+GLE_API void glVertex3bvOES(const GLbyte *coords);
+
+/**
+ * @brief void glVertex4bOES(GLbyte x, GLbyte y, GLbyte z)
+ */
+GLE_API void glVertex4bOES(GLbyte x, GLbyte y, GLbyte z);
+
+/**
+ * @brief void glVertex4bvOES(const GLbyte *coords)
+ */
+GLE_API void glVertex4bvOES(const GLbyte *coords);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_OES_compressed_paletted_texture GL_OES_compressed_paletted_texture
+ * Extension number in OpenGL registry : 294
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/OES/OES_compressed_paletted_texture.txt
+ * @ingroup g_GL_OES g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_OES_compressed_paletted_texture is supported.
+ * @return Returns \c true if \b GL_OES_compressed_paletted_texture is supported, \c false otherwise.
+ */
+GLE_API bool isGL_OES_compressed_paletted_texture();
+
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_OES_fixed_point GL_OES_fixed_point
+ * Extension number in OpenGL registry : 292
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/OES/OES_fixed_point.txt
+ * @ingroup g_GL_OES g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_OES_fixed_point is supported.
+ * @return Returns \c true if \b GL_OES_fixed_point is supported, \c false otherwise.
+ */
+GLE_API bool isGL_OES_fixed_point();
+
+
+
+/**
+ * @brief void glAccumxOES(GLenum op, GLfixed value)
+ */
+GLE_API void glAccumxOES(GLenum op, GLfixed value);
+
+/**
+ * @brief void glAlphaFuncxOES(GLenum func, GLfixed ref)
+ */
+GLE_API void glAlphaFuncxOES(GLenum func, GLfixed ref);
+
+/**
+ * @brief void glBitmapxOES(GLsizei width, GLsizei height, GLfixed xorig, GLfixed yorig, GLfixed xmove, GLfixed ymove, const GLubyte *bitmap)
+ */
+GLE_API void glBitmapxOES(GLsizei width, GLsizei height, GLfixed xorig, GLfixed yorig, GLfixed xmove, GLfixed ymove, const GLubyte *bitmap);
+
+/**
+ * @brief void glBlendColorxOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha)
+ */
+GLE_API void glBlendColorxOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha);
+
+/**
+ * @brief void glClearAccumxOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha)
+ */
+GLE_API void glClearAccumxOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha);
+
+/**
+ * @brief void glClearColorxOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha)
+ */
+GLE_API void glClearColorxOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha);
+
+/**
+ * @brief void glClearDepthxOES(GLfixed depth)
+ */
+GLE_API void glClearDepthxOES(GLfixed depth);
+
+/**
+ * @brief void glClipPlanexOES(GLenum plane, const GLfixed *equation)
+ */
+GLE_API void glClipPlanexOES(GLenum plane, const GLfixed *equation);
+
+/**
+ * @brief void glColor3xOES(GLfixed red, GLfixed green, GLfixed blue)
+ */
+GLE_API void glColor3xOES(GLfixed red, GLfixed green, GLfixed blue);
+
+/**
+ * @brief void glColor3xvOES(const GLfixed *components)
+ */
+GLE_API void glColor3xvOES(const GLfixed *components);
+
+/**
+ * @brief void glColor4xOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha)
+ */
+GLE_API void glColor4xOES(GLfixed red, GLfixed green, GLfixed blue, GLfixed alpha);
+
+/**
+ * @brief void glColor4xvOES(const GLfixed *components)
+ */
+GLE_API void glColor4xvOES(const GLfixed *components);
+
+/**
+ * @brief void glConvolutionParameterxOES(GLenum target, GLenum pname, GLfixed param)
+ */
+GLE_API void glConvolutionParameterxOES(GLenum target, GLenum pname, GLfixed param);
+
+/**
+ * @brief void glConvolutionParameterxvOES(GLenum target, GLenum pname, const GLfixed *params)
+ */
+GLE_API void glConvolutionParameterxvOES(GLenum target, GLenum pname, const GLfixed *params);
+
+/**
+ * @brief void glDepthRangexOES(GLfixed n, GLfixed f)
+ */
+GLE_API void glDepthRangexOES(GLfixed n, GLfixed f);
+
+/**
+ * @brief void glEvalCoord1xOES(GLfixed u)
+ */
+GLE_API void glEvalCoord1xOES(GLfixed u);
+
+/**
+ * @brief void glEvalCoord1xvOES(const GLfixed *coords)
+ */
+GLE_API void glEvalCoord1xvOES(const GLfixed *coords);
+
+/**
+ * @brief void glEvalCoord2xOES(GLfixed u, GLfixed v)
+ */
+GLE_API void glEvalCoord2xOES(GLfixed u, GLfixed v);
+
+/**
+ * @brief void glEvalCoord2xvOES(const GLfixed *coords)
+ */
+GLE_API void glEvalCoord2xvOES(const GLfixed *coords);
+
+/**
+ * @brief void glFeedbackBufferxOES(GLsizei n, GLenum type, const GLfixed *buffer)
+ */
+GLE_API void glFeedbackBufferxOES(GLsizei n, GLenum type, const GLfixed *buffer);
+
+/**
+ * @brief void glFogxOES(GLenum pname, GLfixed param)
+ */
+GLE_API void glFogxOES(GLenum pname, GLfixed param);
+
+/**
+ * @brief void glFogxvOES(GLenum pname, const GLfixed *param)
+ */
+GLE_API void glFogxvOES(GLenum pname, const GLfixed *param);
+
+/**
+ * @brief void glFrustumxOES(GLfixed l, GLfixed r, GLfixed b, GLfixed t, GLfixed n, GLfixed f)
+ */
+GLE_API void glFrustumxOES(GLfixed l, GLfixed r, GLfixed b, GLfixed t, GLfixed n, GLfixed f);
+
+/**
+ * @brief void glGetClipPlanexOES(GLenum plane, GLfixed *equation)
+ */
+GLE_API void glGetClipPlanexOES(GLenum plane, GLfixed *equation);
+
+/**
+ * @brief void glGetConvolutionParameterxvOES(GLenum target, GLenum pname, GLfixed *params)
+ */
+GLE_API void glGetConvolutionParameterxvOES(GLenum target, GLenum pname, GLfixed *params);
+
+/**
+ * @brief void glGetFixedvOES(GLenum pname, GLfixed *params)
+ */
+GLE_API void glGetFixedvOES(GLenum pname, GLfixed *params);
+
+/**
+ * @brief void glGetHistogramParameterxvOES(GLenum target, GLenum pname, GLfixed *params)
+ */
+GLE_API void glGetHistogramParameterxvOES(GLenum target, GLenum pname, GLfixed *params);
+
+/**
+ * @brief void glGetLightxOES(GLenum light, GLenum pname, GLfixed *params)
+ */
+GLE_API void glGetLightxOES(GLenum light, GLenum pname, GLfixed *params);
+
+/**
+ * @brief void glGetMapxvOES(GLenum target, GLenum query, GLfixed *v)
+ */
+GLE_API void glGetMapxvOES(GLenum target, GLenum query, GLfixed *v);
+
+/**
+ * @brief void glGetMaterialxOES(GLenum face, GLenum pname, GLfixed param)
+ */
+GLE_API void glGetMaterialxOES(GLenum face, GLenum pname, GLfixed param);
+
+/**
+ * @brief void glGetPixelMapxv(GLenum map, GLint size, GLfixed *values)
+ */
+GLE_API void glGetPixelMapxv(GLenum map, GLint size, GLfixed *values);
+
+/**
+ * @brief void glGetTexEnvxvOES(GLenum target, GLenum pname, GLfixed *params)
+ */
+GLE_API void glGetTexEnvxvOES(GLenum target, GLenum pname, GLfixed *params);
+
+/**
+ * @brief void glGetTexGenxvOES(GLenum coord, GLenum pname, GLfixed *params)
+ */
+GLE_API void glGetTexGenxvOES(GLenum coord, GLenum pname, GLfixed *params);
+
+/**
+ * @brief void glGetTexLevelParameterxvOES(GLenum target, GLint level, GLenum pname, GLfixed *params)
+ */
+GLE_API void glGetTexLevelParameterxvOES(GLenum target, GLint level, GLenum pname, GLfixed *params);
+
+/**
+ * @brief void glGetTexParameterxvOES(GLenum target, GLenum pname, GLfixed *params)
+ */
+GLE_API void glGetTexParameterxvOES(GLenum target, GLenum pname, GLfixed *params);
+
+/**
+ * @brief void glIndexxOES(GLfixed component)
+ */
+GLE_API void glIndexxOES(GLfixed component);
+
+/**
+ * @brief void glIndexxvOES(const GLfixed *component)
+ */
+GLE_API void glIndexxvOES(const GLfixed *component);
+
+/**
+ * @brief void glLightModelxOES(GLenum pname, GLfixed param)
+ */
+GLE_API void glLightModelxOES(GLenum pname, GLfixed param);
+
+/**
+ * @brief void glLightModelxvOES(GLenum pname, const GLfixed *param)
+ */
+GLE_API void glLightModelxvOES(GLenum pname, const GLfixed *param);
+
+/**
+ * @brief void glLightxOES(GLenum light, GLenum pname, GLfixed param)
+ */
+GLE_API void glLightxOES(GLenum light, GLenum pname, GLfixed param);
+
+/**
+ * @brief void glLightxvOES(GLenum light, GLenum pname, const GLfixed *params)
+ */
+GLE_API void glLightxvOES(GLenum light, GLenum pname, const GLfixed *params);
+
+/**
+ * @brief void glLineWidthxOES(GLfixed width)
+ */
+GLE_API void glLineWidthxOES(GLfixed width);
+
+/**
+ * @brief void glLoadMatrixxOES(const GLfixed *m)
+ */
+GLE_API void glLoadMatrixxOES(const GLfixed *m);
+
+/**
+ * @brief void glLoadTransposeMatrixxOES(const GLfixed *m)
+ */
+GLE_API void glLoadTransposeMatrixxOES(const GLfixed *m);
+
+/**
+ * @brief void glMap1xOES(GLenum target, GLfixed u1, GLfixed u2, GLint stride, GLint order, GLfixed points)
+ */
+GLE_API void glMap1xOES(GLenum target, GLfixed u1, GLfixed u2, GLint stride, GLint order, GLfixed points);
+
+/**
+ * @brief void glMap2xOES(GLenum target, GLfixed u1, GLfixed u2, GLint ustride, GLint uorder, GLfixed v1, GLfixed v2, GLint vstride, GLint vorder, GLfixed points)
+ */
+GLE_API void glMap2xOES(GLenum target, GLfixed u1, GLfixed u2, GLint ustride, GLint uorder, GLfixed v1, GLfixed v2, GLint vstride, GLint vorder, GLfixed points);
+
+/**
+ * @brief void glMapGrid1xOES(GLint n, GLfixed u1, GLfixed u2)
+ */
+GLE_API void glMapGrid1xOES(GLint n, GLfixed u1, GLfixed u2);
+
+/**
+ * @brief void glMapGrid2xOES(GLint n, GLfixed u1, GLfixed u2, GLfixed v1, GLfixed v2)
+ */
+GLE_API void glMapGrid2xOES(GLint n, GLfixed u1, GLfixed u2, GLfixed v1, GLfixed v2);
+
+/**
+ * @brief void glMaterialxOES(GLenum face, GLenum pname, GLfixed param)
+ */
+GLE_API void glMaterialxOES(GLenum face, GLenum pname, GLfixed param);
+
+/**
+ * @brief void glMaterialxvOES(GLenum face, GLenum pname, const GLfixed *param)
+ */
+GLE_API void glMaterialxvOES(GLenum face, GLenum pname, const GLfixed *param);
+
+/**
+ * @brief void glMultMatrixxOES(const GLfixed *m)
+ */
+GLE_API void glMultMatrixxOES(const GLfixed *m);
+
+/**
+ * @brief void glMultTransposeMatrixxOES(const GLfixed *m)
+ */
+GLE_API void glMultTransposeMatrixxOES(const GLfixed *m);
+
+/**
+ * @brief void glMultiTexCoord1xOES(GLenum texture, GLfixed s)
+ */
+GLE_API void glMultiTexCoord1xOES(GLenum texture, GLfixed s);
+
+/**
+ * @brief void glMultiTexCoord1xvOES(GLenum texture, const GLfixed *coords)
+ */
+GLE_API void glMultiTexCoord1xvOES(GLenum texture, const GLfixed *coords);
+
+/**
+ * @brief void glMultiTexCoord2xOES(GLenum texture, GLfixed s, GLfixed t)
+ */
+GLE_API void glMultiTexCoord2xOES(GLenum texture, GLfixed s, GLfixed t);
+
+/**
+ * @brief void glMultiTexCoord2xvOES(GLenum texture, const GLfixed *coords)
+ */
+GLE_API void glMultiTexCoord2xvOES(GLenum texture, const GLfixed *coords);
+
+/**
+ * @brief void glMultiTexCoord3xOES(GLenum texture, GLfixed s, GLfixed t, GLfixed r)
+ */
+GLE_API void glMultiTexCoord3xOES(GLenum texture, GLfixed s, GLfixed t, GLfixed r);
+
+/**
+ * @brief void glMultiTexCoord3xvOES(GLenum texture, const GLfixed *coords)
+ */
+GLE_API void glMultiTexCoord3xvOES(GLenum texture, const GLfixed *coords);
+
+/**
+ * @brief void glMultiTexCoord4xOES(GLenum texture, GLfixed s, GLfixed t, GLfixed r, GLfixed q)
+ */
+GLE_API void glMultiTexCoord4xOES(GLenum texture, GLfixed s, GLfixed t, GLfixed r, GLfixed q);
+
+/**
+ * @brief void glMultiTexCoord4xvOES(GLenum texture, const GLfixed *coords)
+ */
+GLE_API void glMultiTexCoord4xvOES(GLenum texture, const GLfixed *coords);
+
+/**
+ * @brief void glNormal3xOES(GLfixed nx, GLfixed ny, GLfixed nz)
+ */
+GLE_API void glNormal3xOES(GLfixed nx, GLfixed ny, GLfixed nz);
+
+/**
+ * @brief void glNormal3xvOES(const GLfixed *coords)
+ */
+GLE_API void glNormal3xvOES(const GLfixed *coords);
+
+/**
+ * @brief void glOrthoxOES(GLfixed l, GLfixed r, GLfixed b, GLfixed t, GLfixed n, GLfixed f)
+ */
+GLE_API void glOrthoxOES(GLfixed l, GLfixed r, GLfixed b, GLfixed t, GLfixed n, GLfixed f);
+
+/**
+ * @brief void glPassThroughxOES(GLfixed token)
+ */
+GLE_API void glPassThroughxOES(GLfixed token);
+
+/**
+ * @brief void glPixelMapx(GLenum map, GLint size, const GLfixed *values)
+ */
+GLE_API void glPixelMapx(GLenum map, GLint size, const GLfixed *values);
+
+/**
+ * @brief void glPixelStorex(GLenum pname, GLfixed param)
+ */
+GLE_API void glPixelStorex(GLenum pname, GLfixed param);
+
+/**
+ * @brief void glPixelTransferxOES(GLenum pname, GLfixed param)
+ */
+GLE_API void glPixelTransferxOES(GLenum pname, GLfixed param);
+
+/**
+ * @brief void glPixelZoomxOES(GLfixed xfactor, GLfixed yfactor)
+ */
+GLE_API void glPixelZoomxOES(GLfixed xfactor, GLfixed yfactor);
+
+/**
+ * @brief void glPointParameterxvOES(GLenum pname, const GLfixed *params)
+ */
+GLE_API void glPointParameterxvOES(GLenum pname, const GLfixed *params);
+
+/**
+ * @brief void glPointSizexOES(GLfixed size)
+ */
+GLE_API void glPointSizexOES(GLfixed size);
+
+/**
+ * @brief void glPolygonOffsetxOES(GLfixed factor, GLfixed units)
+ */
+GLE_API void glPolygonOffsetxOES(GLfixed factor, GLfixed units);
+
+/**
+ * @brief void glPrioritizeTexturesxOES(GLsizei n, const GLuint *textures, const GLfixed *priorities)
+ */
+GLE_API void glPrioritizeTexturesxOES(GLsizei n, const GLuint *textures, const GLfixed *priorities);
+
+/**
+ * @brief void glRasterPos2xOES(GLfixed x, GLfixed y)
+ */
+GLE_API void glRasterPos2xOES(GLfixed x, GLfixed y);
+
+/**
+ * @brief void glRasterPos2xvOES(const GLfixed *coords)
+ */
+GLE_API void glRasterPos2xvOES(const GLfixed *coords);
+
+/**
+ * @brief void glRasterPos3xOES(GLfixed x, GLfixed y, GLfixed z)
+ */
+GLE_API void glRasterPos3xOES(GLfixed x, GLfixed y, GLfixed z);
+
+/**
+ * @brief void glRasterPos3xvOES(const GLfixed *coords)
+ */
+GLE_API void glRasterPos3xvOES(const GLfixed *coords);
+
+/**
+ * @brief void glRasterPos4xOES(GLfixed x, GLfixed y, GLfixed z, GLfixed w)
+ */
+GLE_API void glRasterPos4xOES(GLfixed x, GLfixed y, GLfixed z, GLfixed w);
+
+/**
+ * @brief void glRasterPos4xvOES(const GLfixed *coords)
+ */
+GLE_API void glRasterPos4xvOES(const GLfixed *coords);
+
+/**
+ * @brief void glRectxOES(GLfixed x1, GLfixed y1, GLfixed x2, GLfixed y2)
+ */
+GLE_API void glRectxOES(GLfixed x1, GLfixed y1, GLfixed x2, GLfixed y2);
+
+/**
+ * @brief void glRectxvOES(const GLfixed *v1, const GLfixed *v2)
+ */
+GLE_API void glRectxvOES(const GLfixed *v1, const GLfixed *v2);
+
+/**
+ * @brief void glRotatexOES(GLfixed angle, GLfixed x, GLfixed y, GLfixed z)
+ */
+GLE_API void glRotatexOES(GLfixed angle, GLfixed x, GLfixed y, GLfixed z);
+
+/**
+ * @brief void glSampleCoverageOES(GLfixed value, GLboolean invert)
+ */
+GLE_API void glSampleCoverageOES(GLfixed value, GLboolean invert);
+
+/**
+ * @brief void glScalexOES(GLfixed x, GLfixed y, GLfixed z)
+ */
+GLE_API void glScalexOES(GLfixed x, GLfixed y, GLfixed z);
+
+/**
+ * @brief void glTexCoord1xOES(GLfixed s)
+ */
+GLE_API void glTexCoord1xOES(GLfixed s);
+
+/**
+ * @brief void glTexCoord1xvOES(const GLfixed *coords)
+ */
+GLE_API void glTexCoord1xvOES(const GLfixed *coords);
+
+/**
+ * @brief void glTexCoord2xOES(GLfixed s, GLfixed t)
+ */
+GLE_API void glTexCoord2xOES(GLfixed s, GLfixed t);
+
+/**
+ * @brief void glTexCoord2xvOES(const GLfixed *coords)
+ */
+GLE_API void glTexCoord2xvOES(const GLfixed *coords);
+
+/**
+ * @brief void glTexCoord3xOES(GLfixed s, GLfixed t, GLfixed r)
+ */
+GLE_API void glTexCoord3xOES(GLfixed s, GLfixed t, GLfixed r);
+
+/**
+ * @brief void glTexCoord3xvOES(const GLfixed *coords)
+ */
+GLE_API void glTexCoord3xvOES(const GLfixed *coords);
+
+/**
+ * @brief void glTexCoord4xOES(GLfixed s, GLfixed t, GLfixed r, GLfixed q)
+ */
+GLE_API void glTexCoord4xOES(GLfixed s, GLfixed t, GLfixed r, GLfixed q);
+
+/**
+ * @brief void glTexCoord4xvOES(const GLfixed *coords)
+ */
+GLE_API void glTexCoord4xvOES(const GLfixed *coords);
+
+/**
+ * @brief void glTexEnvxOES(GLenum target, GLenum pname, GLfixed param)
+ */
+GLE_API void glTexEnvxOES(GLenum target, GLenum pname, GLfixed param);
+
+/**
+ * @brief void glTexEnvxvOES(GLenum target, GLenum pname, const GLfixed *params)
+ */
+GLE_API void glTexEnvxvOES(GLenum target, GLenum pname, const GLfixed *params);
+
+/**
+ * @brief void glTexGenxOES(GLenum coord, GLenum pname, GLfixed param)
+ */
+GLE_API void glTexGenxOES(GLenum coord, GLenum pname, GLfixed param);
+
+/**
+ * @brief void glTexGenxvOES(GLenum coord, GLenum pname, const GLfixed *params)
+ */
+GLE_API void glTexGenxvOES(GLenum coord, GLenum pname, const GLfixed *params);
+
+/**
+ * @brief void glTexParameterxOES(GLenum target, GLenum pname, GLfixed param)
+ */
+GLE_API void glTexParameterxOES(GLenum target, GLenum pname, GLfixed param);
+
+/**
+ * @brief void glTexParameterxvOES(GLenum target, GLenum pname, const GLfixed *params)
+ */
+GLE_API void glTexParameterxvOES(GLenum target, GLenum pname, const GLfixed *params);
+
+/**
+ * @brief void glTranslatexOES(GLfixed x, GLfixed y, GLfixed z)
+ */
+GLE_API void glTranslatexOES(GLfixed x, GLfixed y, GLfixed z);
+
+/**
+ * @brief void glVertex2xOES(GLfixed x)
+ */
+GLE_API void glVertex2xOES(GLfixed x);
+
+/**
+ * @brief void glVertex2xvOES(const GLfixed *coords)
+ */
+GLE_API void glVertex2xvOES(const GLfixed *coords);
+
+/**
+ * @brief void glVertex3xOES(GLfixed x, GLfixed y)
+ */
+GLE_API void glVertex3xOES(GLfixed x, GLfixed y);
+
+/**
+ * @brief void glVertex3xvOES(const GLfixed *coords)
+ */
+GLE_API void glVertex3xvOES(const GLfixed *coords);
+
+/**
+ * @brief void glVertex4xOES(GLfixed x, GLfixed y, GLfixed z)
+ */
+GLE_API void glVertex4xOES(GLfixed x, GLfixed y, GLfixed z);
+
+/**
+ * @brief void glVertex4xvOES(const GLfixed *coords)
+ */
+GLE_API void glVertex4xvOES(const GLfixed *coords);
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_OES_query_matrix GL_OES_query_matrix
+ * Extension number in OpenGL registry : 296
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/OES/OES_query_matrix.txt
+ * @ingroup g_GL_OES g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_OES_query_matrix is supported.
+ * @return Returns \c true if \b GL_OES_query_matrix is supported, \c false otherwise.
+ */
+GLE_API bool isGL_OES_query_matrix();
+
+
+
+/**
+ * @brief GLbitfield glQueryMatrixxOES(const GLfixed *mantissa, const GLint *exponent)
+ */
+GLE_API GLbitfield glQueryMatrixxOES(const GLfixed *mantissa, const GLint *exponent);
+
+//@}
+
+
+
+
+/**
  * @defgroup GL_OES_read_format GL_OES_read_format
  * Extension number in OpenGL registry : 295
  * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/OES/OES_read_format.txt
@@ -17598,6 +18535,57 @@ GLE_API void glVideoCaptureStreamParameterivNV(GLuint video_capture_slot, GLuint
  */
 GLE_API bool isGL_OES_read_format();
 
+
+//@}
+
+
+
+
+/**
+ * @defgroup GL_OES_single_precision GL_OES_single_precision
+ * Extension number in OpenGL registry : 293
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/OES/OES_single_precision.txt
+ * @ingroup g_GL_OES g_extensions
+ */
+//@{
+
+/**
+ * @brief  Tests if \b GL_OES_single_precision is supported.
+ * @return Returns \c true if \b GL_OES_single_precision is supported, \c false otherwise.
+ */
+GLE_API bool isGL_OES_single_precision();
+
+
+
+/**
+ * @brief void glClearDepthfOES(GLclampd depth)
+ */
+GLE_API void glClearDepthfOES(GLclampd depth);
+
+/**
+ * @brief void glClipPlanefOES(GLenum plane, const GLfloat *equation)
+ */
+GLE_API void glClipPlanefOES(GLenum plane, const GLfloat *equation);
+
+/**
+ * @brief void glDepthRangefOES(GLclampf n, GLclampf f)
+ */
+GLE_API void glDepthRangefOES(GLclampf n, GLclampf f);
+
+/**
+ * @brief void glFrustumfOES(GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloat n, GLfloat f)
+ */
+GLE_API void glFrustumfOES(GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloat n, GLfloat f);
+
+/**
+ * @brief void glGetClipPlanefOES(GLenum plane, GLfloat *equation)
+ */
+GLE_API void glGetClipPlanefOES(GLenum plane, GLfloat *equation);
+
+/**
+ * @brief void glOrthofOES(GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloat n, GLfloat f)
+ */
+GLE_API void glOrthofOES(GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloat n, GLfloat f);
 
 //@}
 
@@ -23261,7 +24249,7 @@ GLE_API bool isWGL_NV_video_out();
 /**
  * @defgroup WGL_NV_video_output WGL_NV_video_output
  * Extension number in OpenGL registry : 349
- * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/wgl_video_out.txt
+ * @sa OpenGL Extension Registry : http://www.opengl.org/registry/specs/NV/wgl_video_output.txt
  * @ingroup g_WGL_NV g_extensions
  */
 //@{
