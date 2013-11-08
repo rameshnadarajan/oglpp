@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2009, 2010, Nicolas Papier.
+// GLE - Copyright (C) 2009, 2010, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -18,7 +18,7 @@ namespace glo
  *
  * @todo Adds isSupported() to test support of GL_ARB_texture_rectangle
  */
-struct GLO_API Texture2DRect : public Texture2D
+struct Texture2DRect : public Texture2D
 {
 	/**
 	 * @name Constructor/Destructor
@@ -28,15 +28,24 @@ struct GLO_API Texture2DRect : public Texture2D
 	/**
 	 * @brief Default constructor
 	 */
-	Texture2DRect();
+	GLO_API Texture2DRect();
 
 	//@}
+
+
+
+	/**
+	 * @brief Binds to the default texture object
+	 */
+	GLO_API static void staticBindToDefault();
+
+
 
 	/**
 	 * @name Accessors
 	 */
 	//@{
-	const bool isBound() const;
+	GLO_API const bool isBound() const;
 	//@}
 };
 

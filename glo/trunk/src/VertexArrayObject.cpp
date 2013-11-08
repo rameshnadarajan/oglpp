@@ -79,7 +79,14 @@ void VertexArrayObject::unbind() const
 
 
 
-void VertexArrayObject::bindToDefault()
+void VertexArrayObject::bindToDefault() const
+{
+	glBindVertexArray( 0 );
+}
+
+
+
+void VertexArrayObject::staticBindToDefault()
 {
 	glBindVertexArray( 0 );
 }

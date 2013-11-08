@@ -14,7 +14,7 @@ namespace glo
 {
 
 /**
- * @brief Abstract class for any OpenGL resources.
+ * @brief Abstract class for any OpenGL resources
  */
 struct IResource
 {
