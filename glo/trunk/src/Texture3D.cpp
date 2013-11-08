@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2010, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2010, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -16,6 +16,13 @@ Texture3D::Texture3D()
 :	m_depth(0)
 {
 	m_target = GL_TEXTURE_3D;
+}
+
+
+
+void Texture3D::staticBindToDefault()
+{
+	glBindTexture( GL_TEXTURE_3D, 0 );
 }
 
 

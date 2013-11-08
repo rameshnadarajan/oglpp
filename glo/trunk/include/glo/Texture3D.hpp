@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2010, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2010, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -16,19 +16,26 @@ namespace glo
 /**
  * @brief Encapsulation of a texture 3D object.
  */
-struct GLO_API Texture3D : public Texture2D
+struct Texture3D : public Texture2D
 {
 	/**
 	 * @name Constructor/Destructor
 	 */
 	//@
-	
+
 	/**
 	 * @brief Constructor
 	 */
-	Texture3D();
-	
+	GLO_API Texture3D();
+
 	//@}
+
+
+
+	/**
+	 * @brief Binds to the default texture object
+	 */
+	GLO_API static void staticBindToDefault();
 
 
 
@@ -37,34 +44,34 @@ struct GLO_API Texture3D : public Texture2D
 	 */
 	//@{
 
-	const bool isBound() const;
+	GLO_API const bool isBound() const;
 
 	/**
 	 * @brief Returns the depth of the texture.
 	 *
 	 * @return the depth of the texture
 	 */
-	const GLint getDepth() const;
+	GLO_API const GLint getDepth() const;
 
 	// Overridden
-	const GLint getSize( int32& width, int32& height, int32& depth ) const;
+	GLO_API const GLint getSize( int32& width, int32& height, int32& depth ) const;
 	//@}
 
 
 
 	// Overridden
-	void texImage(	const GLint level, const GLint internalFormat,
-					const GLsizei width, const GLsizei height, const GLsizei depth,
-					const GLint border,
-					const GLenum format, const GLenum type,
-					const GLvoid *pixels = 0 ) const;
-
-	// Overridden
-	void texSubImage(	const GLint level,
-						const GLint xoffset, const GLint yoffset, const GLint zoffset,
+	GLO_API void texImage(	const GLint level, const GLint internalFormat,
 						const GLsizei width, const GLsizei height, const GLsizei depth,
+						const GLint border,
 						const GLenum format, const GLenum type,
 						const GLvoid *pixels = 0 ) const;
+
+	// Overridden
+	GLO_API void texSubImage(	const GLint level,
+								const GLint xoffset, const GLint yoffset, const GLint zoffset,
+								const GLsizei width, const GLsizei height, const GLsizei depth,
+								const GLenum format, const GLenum type,
+								const GLvoid *pixels = 0 ) const;
 
 protected:
 	/**
@@ -76,7 +83,7 @@ protected:
 };
 
 
-	
+
 } // namespace glo
 
 #endif //#ifndef _GLO_TEXTURE3D_HPP

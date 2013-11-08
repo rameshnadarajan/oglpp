@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2010, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2010, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -15,6 +15,13 @@ namespace glo
 Texture1D::Texture1D()
 {
 	m_target = GL_TEXTURE_1D;
+}
+
+
+
+void Texture1D::staticBindToDefault()
+{
+	glBindTexture( GL_TEXTURE_1D, 0 );
 }
 
 

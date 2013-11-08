@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2010, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2010, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -18,7 +18,7 @@ namespace glo
  *
  * This texture is a set of six 2D images representing the faces of a cube.
  */
-struct GLO_API TextureCubeMap : public Texture2D
+struct TextureCubeMap : public Texture2D
 {
 	/**
 	 * @name Constructor/Destructor
@@ -28,42 +28,49 @@ struct GLO_API TextureCubeMap : public Texture2D
 	/**
 	 * @brief Constructor
 	 */
-	TextureCubeMap();
-	
+	GLO_API TextureCubeMap();
+
 	//@}
 
 
 
-	// Overridden	
-	const bool isBound() const;
+	/**
+	 * @brief Binds to the default texture object
+	 */
+	GLO_API static void staticBindToDefault();
+
+
 
 	// Overridden
-	void texImage(	const GLint level, const GLint internalFormat,
-					const GLsizei width, const GLsizei height, const GLsizei depth,
-					const GLint border,
-					const GLenum format, const GLenum type,
-					const GLvoid *pixels = 0 ) const;
-
-	void texImage(	const GLuint targetIndex,
-					const GLint level, const GLint internalFormat,
-					const GLsizei width, const GLsizei height, const GLsizei depth,
-					const GLint border,
-					const GLenum format, const GLenum type,
-					const GLvoid *pixels = 0 ) const;
+	GLO_API const bool isBound() const;
 
 	// Overridden
-	void texSubImage(	const GLint level,
-						const GLint xoffset, const GLint yoffset, const GLint zoffset,
-						const GLsizei width, const GLsizei height, const GLsizei depth,
-						const GLenum format, const GLenum type,
-						const GLvoid *pixels = 0 ) const;
+	GLO_API void texImage(	const GLint level, const GLint internalFormat,
+							const GLsizei width, const GLsizei height, const GLsizei depth,
+							const GLint border,
+							const GLenum format, const GLenum type,
+							const GLvoid *pixels = 0 ) const;
 
-	void texSubImage(	const GLuint targetIndex,
-						const GLint level,
-						const GLint xoffset, const GLint yoffset, const GLint zoffset,
-						const GLsizei width, const GLsizei height, const GLsizei depth,
-						const GLenum format, const GLenum type,
-						const GLvoid *pixels = 0 ) const;
+	GLO_API void texImage(	const GLuint targetIndex,
+							const GLint level, const GLint internalFormat,
+							const GLsizei width, const GLsizei height, const GLsizei depth,
+							const GLint border,
+							const GLenum format, const GLenum type,
+							const GLvoid *pixels = 0 ) const;
+
+	// Overridden
+	GLO_API void texSubImage(	const GLint level,
+								const GLint xoffset, const GLint yoffset, const GLint zoffset,
+								const GLsizei width, const GLsizei height, const GLsizei depth,
+								const GLenum format, const GLenum type,
+								const GLvoid *pixels = 0 ) const;
+
+	GLO_API void texSubImage(	const GLuint targetIndex,
+								const GLint level,
+								const GLint xoffset, const GLint yoffset, const GLint zoffset,
+								const GLsizei width, const GLsizei height, const GLsizei depth,
+								const GLenum format, const GLenum type,
+								const GLvoid *pixels = 0 ) const;
 
 	/**
 	 * @brief Gets cube map targets
@@ -77,7 +84,7 @@ struct GLO_API TextureCubeMap : public Texture2D
 	 * TEXTURE_CUBE_MAP_POSITIVE_Y, TEXTURE_CUBE_MAP_NEGATIVE_Y, 
 	 * TEXTURE_CUBE_MAP_POSITIVE_Z and TEXTURE_CUBE_MAP_NEGATIVE_Z ).
 	 */
-	const GLenum getTarget( const int target ) const;
+	GLO_API const GLenum getTarget( const int target ) const;
 
 private:
 	/**

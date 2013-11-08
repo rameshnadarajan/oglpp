@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2008, 2010, 2012, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2008, 2010, 2012, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -82,11 +82,18 @@ void Texture::unbind() const
 
 
 
+void Texture::bindToDefault() const
+{
+	glBindTexture( m_target, 0 );
+}
+
+
+
 void Texture::active( const GLenum unit )
 {
 	assert( unit >= GL_TEXTURE0_ARB && "Unexpected value" );
 	assert( unit <= GL_TEXTURE31_ARB && "Unexpected value" );
-	glActiveTextureARB( unit );
+	glActiveTexture( unit );
 }
 
 

@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2010, 2012, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2010, 2012, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -58,6 +58,8 @@ public:
 	GLO_API void bind() const;
 
 	GLO_API void unbind() const;
+
+	GLO_API void bindToDefault() const;
 
 	//@}
 

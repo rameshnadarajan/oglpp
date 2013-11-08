@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2010, Nicolas Papier.
+// OGLPP - Copyright (C) 2010, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -79,6 +79,15 @@ struct RenderBuffer : public Object, public IFrameBufferAttachableImage
 	 */
 	GLO_API void unbind() const;
 
+	/**
+	 * @brief Binds to the default render buffer object
+	 */
+	GLO_API virtual void bindToDefault() const=0;
+
+	/**
+	 * @brief Binds to the default render buffer object
+	 */
+	GLO_API static void staticBindToDefault();
 	//@}
 
 

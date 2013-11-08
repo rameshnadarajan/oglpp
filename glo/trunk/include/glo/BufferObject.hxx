@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2011, Nicolas Papier.
+// OGLPP - Copyright (C) 2011, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -81,6 +81,22 @@ void BufferObject< TargetValue, BindingValue >::unbind() const
 	assert( !isEmpty() );
 	assert( isBound() );
 
+	glBindBuffer( TargetValue, 0 );
+}
+
+
+
+template< GLenum TargetValue, GLenum BindingValue >
+void BufferObject< TargetValue, BindingValue >::bindToDefault() const
+{
+	glBindBuffer( TargetValue, 0 );
+}
+
+
+
+template< GLenum TargetValue, GLenum BindingValue >
+void BufferObject< TargetValue, BindingValue >::staticBindToDefault()
+{
 	glBindBuffer( TargetValue, 0 );
 }
 

@@ -77,13 +77,17 @@ struct VertexArrayObject : public Object
 	 */
 	GLO_API void unbind() const;
 
-	//@}
-
+	/**
+	 * @brief Binds to the default vertex array object
+	 */
+	GLO_API void bindToDefault() const;
 
 	/**
-	 * @brief Binds to the default VAO.
+	 * @brief Binds to the default vertex array object
 	 */
-	static GLO_API void bindToDefault();
+	GLO_API static void staticBindToDefault();
+
+	//@}
 
 
 	/**

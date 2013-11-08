@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2007, 2008, 2012, Nicolas Papier, Alexandre Di Pino.
+// GLE - Copyright (C) 2005, 2007, 2008, 2012, 2013, Nicolas Papier, Alexandre Di Pino.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -9,6 +9,7 @@
 #include <cstring>
 #include <fstream>	// for file I/O
 #include <iostream>	// for I/O
+#include <sstream>
 
 
 namespace glo
@@ -39,7 +40,6 @@ GLSLProgram::GLSLProgram( bool initialized )
 			)
 		{
 			std::cerr << "glo.GLSLProgram: GLSL is not supported" << std::endl;
-			// FIXME logError("GLSL not supported.\n");
 			return;
 		}
 
@@ -49,7 +49,6 @@ GLSLProgram::GLSLProgram( bool initialized )
 	if ( initialized )
 	{
 		m_programObject = glCreateProgram();
-//		m_programObject = glCreateProgramObjectARB();
 	}
 	else
 	{
@@ -80,77 +79,60 @@ void GLSLProgram::release()
 	if ( m_programObject != 0 && gleGetCurrent() )
 	{
 		glDeleteProgram( m_programObject );
-//		glDeleteObjectARB( m_programObject );
+		// @todo glDetachShader, glDeleteShader ?
 	}
+}
+
+
+
+const bool GLSLProgram::addShader( const std::string shaderSource, const ShaderType shaderType, const bool linkProgram )
+{
+	const bool retVal = addShader( &shaderSource[0], shaderType, linkProgram );
+	return retVal;
 }
 
 
 
 const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType shaderType, const bool linkProgram )
 {
-	assert( m_programObject	!= 0	);
-
-	assert( shaderSource	!= 0	);
-
-	// @todo test in another method
-	/*if ( !isGL_ARB_tessellation_shader() && ( shaderType == TESSELATION_CONTROL || shaderType == TESSELATION_EVALUATION ) )
-	{
-		std::cerr << "glo.GLSLProgram: Tessellation is not supported" << std::endl;
-		// FIXME logError("");
-	}*/
+	// @todo assert on shaderType and opengl capability
+	assert( m_programObject	!= 0 );
+	assert( shaderSource	!= 0 );
 
 	// BACKUP SHADER SOURCE
 	m_shaderInfo[shaderType].shaderCode = std::string(shaderSource);
+	// @todo Creates a GLSLShader.[shaderSource, compile, compileStatus, infoLog, attachTo(GLSLProgram, deleteShader)]
 
 	// SET SOURCES
-	// @todo Creates a GLSLShader.[shaderSource, compile, compileStatus, infoLog, attachTo(GLSLProgram, deleteShader)]
-	// @todo exceptions
-	GLhandleARB object = glCreateShader( convertShaderType2GLEnum(shaderType) );
-//	GLhandleARB object = glCreateShaderObjectARB( convertShaderType2GLEnum(shaderType) );
+	GLuint object = glCreateShader( convertShaderType2GLEnum(shaderType) );
 	assert(object != 0);
 
 	const GLint length = static_cast<GLint>( std::strlen( shaderSource ) );
 	glShaderSource( object, 1, &shaderSource, &length );
-//	glShaderSourceARB( object, 1, &shaderSource, &length );
 
 	// COMPILE shader object
 	glCompileShader( object );
-//	glCompileShaderARB( object );
 
-	//CHECK if shader compiled
-	GLint compiled = 0;
-	glGetObjectParameterivARB( object, GL_OBJECT_COMPILE_STATUS_ARB, &compiled );
-	//glGetShaderiv( object, GL_COMPILE_STATUS, &compiled );
-/*#ifdef _DEBUG
-	if ( compiled )
-	{
-		std::cout << convertShaderType2String(shaderType) << " shader have been successfully compiled." << std::endl;
-	}
-	else
-	{
-		std::cout << convertShaderType2String(shaderType) << " shader failed to compile." << std::endl;
-	}
+	// CHECK if shader compiled
+	GLint compiled = GL_FALSE;
+	glGetShaderiv( object, GL_COMPILE_STATUS, &compiled );
 
-	std::cout << convertShaderType2String(shaderType) << " shader compilation log :" << std::endl;
-	printInfoLog( object ); // FIXME
-#endif*/
+	std::string strShaderLog = getShaderInfoLog( object );
+	m_shaderInfo[shaderType].shaderLog = strShaderLog;
 
-	if ( !compiled )
+	if ( !strShaderLog.empty() )
 	{
-		//FIXME vgDebug::get().logError( "Shaders failed to compile...\n" );
-		//printInfoLog( object );
-		m_shaderInfo[shaderType].shaderLog = getInfoLog( object );
+		std::cerr << " --" << std::endl;
+		std::cerr << "Shader " << object;
+		const std::string tmp = (compiled == GL_TRUE) ? " " : " not ";
+		std::cerr << tmp  << "compiled :" << std::endl;
+		std::cerr << strShaderLog << std::endl;
 	}
-	else
-	{
-		m_shaderInfo[shaderType].shaderLog.clear();
-	}
-
 
 	//
 	if ( m_shaderInfo[shaderType].shaderSaved )
 	{
-		glDetachShader( m_programObject,  m_shaderInfo[shaderType].shaderSaved );
+		glDetachShader( m_programObject, m_shaderInfo[shaderType].shaderSaved );
 	}
 
 	// BACKUP shader object
@@ -158,18 +140,13 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 
 	// ATTACH shader to program object
 	glAttachShader( m_programObject, object );
-//	glAttachObjectARB( m_programObject, object );
 
 	// DELETE object, no longer needed
 	glDeleteShader( object );
-//	glDeleteObjectARB( object );
 
-
-	// COMPILE stage
-	if ( !compiled )
-	{
-		return false;
-	}
+	// FINALIZE
+	// Compilation fails
+	if ( !compiled )	return false;
 
 	// LINK stage
 	if ( linkProgram )
@@ -181,50 +158,88 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 	{
 		return true;
 	}
-
-	// reportGLErrors(); FIXME
-
-	return true;
 }
 
 
 
-const bool GLSLProgram::link()
+const bool GLSLProgram::link( const bool doValidation )
 {
 	assert( getProgramObject() != 0 && "Empty glsl program" );
 
-	// Link program
-	glLinkProgram( getProgramObject() );
-//	glLinkProgramARB( getProgramObject() );
+// @todo glProgramParameter(program, GL_PROGRAM_SEPARABLE, GL_TRUE);
 
-	// Checks status
-	GLint linked;
-	glGetObjectParameterivARB( getProgramObject(), GL_OBJECT_LINK_STATUS_ARB, &linked );
-	//glGetShaderiv( getProgramObject(), GL_LINK_STATUS, &linked );
-	//if ( !linked )
-	//{
-		//std::cout << "PROGRAM failed to link..." << std::endl;
-		//std::cerr << "PROGRAM failed to link..." << std::endl;
-		//printInfoLog( getProgramObject() );
-	m_linkLog = getInfoLog( getProgramObject() );
-	//}
-	//else
-	//{
-	//	m_linkLog = "";
-		//std::cout << "PROGRAM have been successfully linked." << std::endl;
-		//printInfoLog( getProgramObject() );
-	//}
-	m_linkSuccess = linked;
-	return linked;
+	// LINK program
+	glLinkProgram( getProgramObject() );
+
+	// CHECK link status and log
+	GLint isLinked = GL_FALSE;
+	glGetProgramiv( getProgramObject(), GL_LINK_STATUS, &isLinked );
+
+	m_linkLog = getProgramInfoLog( getProgramObject() );
+
+	if ( !m_linkLog.empty() )
+	{
+		std::cerr << " --" << std::endl;
+		std::cerr << "Program " << getProgramObject();
+		const std::string tmp = (isLinked == GL_TRUE) ? " " : " not ";
+		std::cerr << tmp << "linked :" << std::endl;
+		std::cerr << m_linkLog << std::endl;
+	}
+
+	m_linkSuccess = (isLinked == GL_TRUE);
+
+	// FINALIZE
+	// Linking fails
+	if ( !isLinked )	return false;
+
+	// VALIDATION stage
+	if ( doValidation )
+	{
+		const bool isValidated = validate();
+		return isValidated;
+	}
+	else
+	{
+		return true;
+	}
 }
 
+
+
+const bool GLSLProgram::validate()
+{
+	assert( getProgramObject() != 0 && "Empty glsl program" );
+
+	// VALIDATE
+	glValidateProgram( getProgramObject() );
+
+	// CHECK if successfully validated
+	GLint result = GL_FALSE;
+	glGetProgramiv( getProgramObject(), GL_VALIDATE_STATUS, &result );
+
+	std::string strInfoLog = getProgramInfoLog( getProgramObject() );
+
+	if ( !strInfoLog.empty() )
+	{
+		std::cerr << " --" << std::endl;
+		std::cerr << "Program " << getProgramObject();
+		const std::string tmp = (result == GL_TRUE) ? " " : " not ";
+		std::cerr << tmp << "validated :" << std::endl;
+		std::cerr << strInfoLog << std::endl;
+
+		m_linkLog += "Validation log:\n";
+		m_linkLog += strInfoLog;
+	}
+
+	return result == GL_TRUE;
+}
 
 
 void GLSLProgram::use()
 {
 	assert( getProgramObject() != 0 && "Empty glsl program" );
-	glUseProgramObjectARB( getProgramObject() );
-	//glUseProgram( getProgramObject() );
+
+	glUseProgram( getProgramObject() );
 }
 
 
@@ -241,17 +256,55 @@ const bool GLSLProgram::isInUse() const
 
 void GLSLProgram::useFixedPaths()
 {
-	glUseProgramObjectARB( 0 );
+	glUseProgram( 0 );
 }
 
 
 
+const GLuint GLSLProgram::getName(const ShaderType shaderType) const
+{
+	return m_shaderInfo[shaderType].shaderSaved;
+}
+
+const std::string GLSLProgram::getShaderCode(const ShaderType shaderType) const
+{
+	return m_shaderInfo[shaderType].shaderCode;
+}
+
+void GLSLProgram::setShaderCode(const ShaderType shaderType, const std::string code)
+{
+	m_shaderInfo[shaderType].shaderCode = code;
+}
+
+const std::string GLSLProgram::getLogError(const ShaderType shaderType) const
+{
+	return m_shaderInfo[shaderType].shaderLog;
+}
+
+void GLSLProgram::setLogError(const ShaderType shaderType, const std::string error)
+{
+	m_shaderInfo[shaderType].shaderLog = error;
+}
+
+
+const bool GLSLProgram::getLinkSuccess() const
+{
+	return m_linkSuccess;
+}
+
+const std::string GLSLProgram::getLinkLog() const
+{
+	return m_linkLog;
+}
+
+
+
+// UNIFORM
 void GLSLProgram::setUniform1i( const std::string & name, const GLint v1 )
 {
 	const GLint loc = getUniformLocation( name );
 
 	if ( loc != -1 )	glUniform1i( loc, v1 );
-//	glUniform1iARB( loc, v1 );
 }
 
 void GLSLProgram::setUniform2i( const std::string & name, const GLint v1, const GLint v2 )
@@ -465,13 +518,122 @@ void GLSLProgram::setUniformMatrix4x3fv( const std::string & name, const GLfloat
 }
 
 
+// GL_ARB_separate_shader_objects : DSA style api
+void GLSLProgram::setProgramUniform1i( const std::string & name, const GLint v1 )
+{
+	const GLint loc = getUniformLocation( name );
+
+	if ( loc != -1 )	glProgramUniform1i( getProgramObject(), loc, v1 );
+}
+
+
+
+// QUERIES
+const std::string GLSLProgram::getActiveUniformsStr() const
+{
+	const std::vector< GLSLProgram::UniformInformations > uniforms = getActiveUniforms();
+	return toString( uniforms );
+}
+
+
+const std::vector< GLSLProgram::UniformInformations > GLSLProgram::getActiveUniforms() const
+{
+	if ( isInUse() )
+	{
+		// number of active uniforms
+		GLint numUniforms;
+		glGetProgramiv( getProgramObject(), GL_ACTIVE_UNIFORMS, &numUniforms );
+
+		GLint maxLength;
+		glGetProgramiv( getProgramObject(), GL_ACTIVE_UNIFORM_MAX_LENGTH, &maxLength );
+
+		std::vector< UniformInformations > uniforms(numUniforms, UniformInformations(maxLength) );
+
+		// for each uniform, do
+		for( GLint index = 0; index< numUniforms; ++index )
+		{
+			UniformInformations& uniform = uniforms[index];
+			glGetActiveUniform(	getProgramObject(), index,
+								uniform.name.size(), 0,
+								&uniform.size, &uniform.type, &uniform.name[0] );
+		}
+		return uniforms;
+	}
+	else
+	{
+		std::vector< UniformInformations > uniforms;
+		return uniforms;
+	}
+}
+
+
+const std::string GLSLProgram::toString( const GLenum type ) const
+{
+	switch ( type )
+	{
+		case GL_FLOAT:
+			return "float";
+		case GL_FLOAT_VEC2:
+			return "vec2";
+		case GL_FLOAT_VEC3:
+			return "vec3";
+		case GL_FLOAT_VEC4:
+			return "vec4";
+
+		case GL_FLOAT_MAT2:
+			return "mat2";
+		case GL_FLOAT_MAT3:
+			return "mat3";
+		case GL_FLOAT_MAT4:
+			return "mat4";
+
+		case GL_SAMPLER_1D:
+			return "sampler1D";
+		case GL_SAMPLER_2D:
+			return "sampler2D";
+		case GL_SAMPLER_3D:
+			return "sampler3D";
+		case GL_SAMPLER_CUBE:
+			return "samplerCube";
+
+		case GL_SAMPLER_2D_SHADOW:
+			return "sampler2DShadow";
+
+		// @todo support all types (http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniform.xml)
+
+		default:
+			return "Unknown type";
+	}
+}
+
+
+
+const std::string GLSLProgram::toString( const std::vector< UniformInformations >& uniforms ) const
+{
+	std::stringstream ss;
+	for( GLuint i = 0; i < uniforms.size(); ++i )
+	{
+		const UniformInformations& uniform = uniforms[i];
+		ss << toString(uniform.type) << " " << std::string(&uniform.name[0]);
+		if (uniform.size > 1 )
+		{
+			ss << "/[" << uniform.size << "]";
+		}
+
+		ss << std::endl;
+	}
+	return ss.str();
+}
+
+
+
 const std::string GLSLProgram::loadFile( const std::string pathfilename )
 {
 	std::string		retVal;
 	std::ifstream	file;
 
 	file.open( pathfilename.c_str() );
-	
+
 	if ( file.is_open() )
 	{
 		const unsigned int	bufferSize	( 1024*4 );
@@ -481,7 +643,7 @@ const std::string GLSLProgram::loadFile( const std::string pathfilename )
 		{
 			file.read( buffer, bufferSize );
 
-			unsigned int size( file.gcount() );
+			unsigned int size( static_cast<unsigned int>(file.gcount()) );
 			retVal.append( buffer, size );
 		}
 
@@ -496,68 +658,15 @@ const std::string GLSLProgram::loadFile( const std::string pathfilename )
 }
 
 
-
-const std::string GLSLProgram::getInfoLog()
-{
-	return getInfoLog( getProgramObject() );
-}
-
-
-
-const std::string GLSLProgram::getLogError(const ShaderType shaderType) const
-{
-	return m_shaderInfo[shaderType].shaderLog;
-}
-
-void GLSLProgram::setLogError(const ShaderType shaderType, const std::string error)
-{
-	m_shaderInfo[shaderType].shaderLog = error;
-}
-
-const GLhandleARB	GLSLProgram::getName(const ShaderType shaderType) const
-{
-	return m_shaderInfo[shaderType].shaderSaved;
-}
-
-void GLSLProgram::setName(const ShaderType shaderType, GLhandleARB name)
-{
-	m_shaderInfo[shaderType].shaderSaved = name;
-}
-
-GLhandleARB GLSLProgram::getProgramObject() const
+const GLuint GLSLProgram::getProgramObject() const
 {
 	return m_programObject;
 }
 
-void GLSLProgram::setProgramName( GLhandleARB name )
-{
-	m_programObject = name;
-}
 
-const bool GLSLProgram::getLinkSuccess() const
-{
-	return m_linkSuccess;
-}
-
-const std::string GLSLProgram::getShaderCode(const ShaderType shaderType) const
-{
-	return m_shaderInfo[shaderType].shaderCode;
-}
-
-void GLSLProgram::setShaderCode(const ShaderType shaderType, const std::string code)
-{
-	m_shaderInfo[shaderType].shaderCode = code;
-}
-
-const std::string GLSLProgram::getLinkLog() const
-{
-	return m_linkLog;
-}
-
-const GLint GLSLProgram::getUniformLocation( const std::string& name )
+const GLint GLSLProgram::getUniformLocation( const std::string& name ) const
 {
 	const GLint location = glGetUniformLocation( getProgramObject(), name.c_str() );
-//	const GLint location = glGetUniformLocationARB( getProgramObject(), name.c_str() );
 
 #ifdef OPENGL_DEBUG
 	if ( location == -1 )
@@ -570,53 +679,35 @@ const GLint GLSLProgram::getUniformLocation( const std::string& name )
 }
 
 
-
-const std::string GLSLProgram::getInfoLog( GLhandleARB object )
+const std::string GLSLProgram::getShaderInfoLog( GLuint object )
 {
 	std::string strInfoLog;
 
-	int maxLength = 0;
-	glGetObjectParameterivARB( object, GL_OBJECT_INFO_LOG_LENGTH_ARB, &maxLength );
-	//glGetShaderiv(object, GL_INFO_LOG_LENGTH, &maxLength);
-
-	if ( maxLength > 0 )
+	GLint logSize = 0;
+	glGetShaderiv( object, GL_INFO_LOG_LENGTH, &logSize);
+	if( logSize > 0 )
 	{
-		char *infoLog = new char[maxLength];
-
-		glGetInfoLogARB(object, maxLength, &maxLength, infoLog);
-		//glGetShaderInfoLog(object, maxLength, &maxLength, infoLog);
-
-		strInfoLog.assign( infoLog );
-
- 		delete[] infoLog;
+		strInfoLog.resize(logSize, 0);
+		glGetShaderInfoLog( object, logSize, 0, &strInfoLog[0] );
 	}
 
 	return strInfoLog;
 }
 
 
-
-void GLSLProgram::printInfoLog( GLhandleARB object )
+const std::string GLSLProgram::getProgramInfoLog( GLuint object )
 {
-	GLint maxLength = 0;
-	glGetObjectParameterivARB( object, GL_OBJECT_INFO_LOG_LENGTH_ARB, &maxLength );
-	//glGetShaderiv( object, GL_INFO_LOG_LENGTH, &maxLength );
+	std::string strInfoLog;
 
-	if ( maxLength > 0 )
+	GLint logSize = 0;
+	glGetProgramiv( object, GL_INFO_LOG_LENGTH, &logSize);
+	if( logSize > 0 )
 	{
-		char *infoLog = new char[maxLength];
-
-		glGetInfoLogARB(object, maxLength, &maxLength, infoLog);
-
-		if ( maxLength > 0 )
-		{
-			std::cout << "glo.GLSLProgram: info log :\n" << std::string(infoLog) << std::endl; 
-			std::cerr << "glo.GLSLProgram: info log :\n" << std::string(infoLog) << std::endl; 
-			// @todo FIXME logError( "%s\n", infoLog );
-		}
-
- 		delete[] infoLog;
+		strInfoLog.resize(logSize, 0);
+		glGetProgramInfoLog( object, logSize, 0, &strInfoLog[0] );
 	}
+
+	return strInfoLog;
 }
 
 

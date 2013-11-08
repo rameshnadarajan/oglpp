@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2005, 2010, 2011, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2010, 2011, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -112,6 +112,23 @@ void FrameBufferObject::unbind() const
 
 	m_currentDrawFramebuffer = 0;
 	m_currentReadFramebuffer = 0;
+}
+
+
+
+void FrameBufferObject::bindToDefault() const
+{
+	glBindFramebuffer( GL_FRAMEBUFFER, 0 );
+
+	m_currentDrawFramebuffer = 0;
+	m_currentReadFramebuffer = 0;
+}
+
+
+
+void FrameBufferObject::staticBindToDefault()
+{
+	glBindFramebuffer( GL_FRAMEBUFFER, 0 );
 }
 
 
@@ -417,15 +434,6 @@ void FrameBufferObject::setReadBuffer( const int index ) const
 	{
 		glReadBuffer( GL_COLOR_ATTACHMENT0 + index );
 	}
-}
-
-
-
-void FrameBufferObject::disableReadBuffer() const
-{
-	assert( isBoundToRead() && "FBO must be bound before calling FrameBufferObject::disableReadBuffer()");
-
-	glReadBuffer( GL_NONE );
 }
 
 

@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2010, Nicolas Papier.
+// OGLPP - Copyright (C) 2010, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -76,6 +76,20 @@ void RenderBuffer::unbind() const
 	assert( !isEmpty() );
 	assert( isBound() );
 	
+	glBindRenderbuffer( GL_RENDERBUFFER, 0 );
+}
+
+
+
+void RenderBuffer::bindToDefault() const
+{
+	glBindRenderbuffer( GL_RENDERBUFFER, 0 );
+}
+
+
+
+void RenderBuffer::staticBindToDefault()
+{
 	glBindRenderbuffer( GL_RENDERBUFFER, 0 );
 }
 

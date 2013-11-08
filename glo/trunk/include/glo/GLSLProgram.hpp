@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2007, 2008, 2012, Nicolas Papier, Alexandre Di Pino.
+// GLE - Copyright (C) 2005, 2007, 2008, 2012, 2013, Nicolas Papier, Alexandre Di Pino.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -17,7 +17,9 @@ namespace glo
 {
 
 /**
- * @todo add link().
+ * @brief Shader compilation, linking and validation.
+ *
+ * @todo method to enable/disable all outputs to cerr
  */
 struct GLO_API GLSLProgram : public IResource
 {
@@ -31,7 +33,7 @@ struct GLO_API GLSLProgram : public IResource
 		TESSELLATION_EVALUATION,
 		GEOMETRY,
 		FRAGMENT,
-		PROGRAM,		///< not a real shader type (used by ShadersEditor)
+		PROGRAM,		///< not a real shader type (used by ShadersEditor of vgSDK)
 		MAX_SHADER_INDEX
 	};
 
@@ -52,24 +54,36 @@ struct GLO_API GLSLProgram : public IResource
 	GLSLProgram( bool initialized = true );
 
 	/**
-	 * @brief Destructor.
+	 * @brief Destructor
 	 */
 	~GLSLProgram();
 
 	/**
-	 * @brief Releases OpenGL resource.
+	 * @brief Releases OpenGL resource
 	 */
 	void release();
 	//@}
 
 
-	const bool addShader( const GLcharARB *shaderSource, const ShaderType shaderType, const bool linkProgram );
+	/**
+	 * @brief Adds a new shader to the program
+	 * 
+	 * @todo doc
+	 */
+	const bool addShader( const std::string shaderSource, const ShaderType shaderType, const bool linkProgram = false );
+	const bool addShader( const GLcharARB *shaderSource, const ShaderType shaderType, const bool linkProgram = false );
 
 	/**
+	 * @brief Links the program
+	 *
 	 * @pre assert( getProgramObject() != 0 && "Empty glsl program" );
 	 */
-	const bool link();
-	// @todo Adds methods attachShader, compile, link()...
+	const bool link( const bool doValidation = true );
+
+	/**
+	 * @brief Validates the program
+	 */
+	const bool validate();
 
 
 
@@ -107,7 +121,7 @@ struct GLO_API GLSLProgram : public IResource
 	 *
 	 * @param shaderType	the type of the needed shader
 	 */
-	const GLhandleARB	 getName(const ShaderType shaderType) const;
+	const GLuint getName(const ShaderType shaderType) const;
 
 	/**
 	 * @brief Gets the shader code
@@ -129,30 +143,7 @@ struct GLO_API GLSLProgram : public IResource
 	 *
 	 * @param shaderType	the type of the needed shader
 	 */
-	const std::string getLogError(const ShaderType shaderType) const ;
-
-	//@}
-
-
-	/**
-	 * @name Program accessors
-	 */
-	//@{
-	
-	/**
-	 * @brief Gets the link log 
-	 */
-	const std::string getLinkLog() const;
-
-	/**
-	 * @brief Gets the program name
-	 */
-	const GLhandleARB getProgramName() const;
-
-	/**
-	 * @brief Gets if the current link has success
-	 */
-	const bool getLinkSuccess() const;
+	const std::string getLogError(const ShaderType shaderType) const;
 
 	/**
 	 * @brief Sets the shader log error
@@ -165,10 +156,29 @@ struct GLO_API GLSLProgram : public IResource
 	//@}
 
 
+
+	/**
+	 * @name Program accessors
+	 */
+	//@{
+
+	/**
+	 * @brief Gets if the current link has success
+	 */
+	const bool getLinkSuccess() const;
+
+	/**
+	 * @brief Gets the link log 
+	 */
+	const std::string getLinkLog() const;
+
+	//@}
+
+
+
 	/**
 	 * @name Uniform Variables accessors
 	 * 
-	 * @todo getUniformfv, getUniformiv and getUniformuiv
 	 * @todo static ?
 	 */
 	//@{
@@ -182,6 +192,8 @@ struct GLO_API GLSLProgram : public IResource
 	void setUniform3f( const std::string & name, const GLfloat v1, const GLfloat v2, const GLfloat v3 );
 	void setUniform4f( const std::string & name, const GLfloat v1, const GLfloat v2, const GLfloat v3, const GLfloat v4 );
 
+// @todo *ui
+
 	void setUniform1iv( const std::string & name, const GLint * value, const GLsizei count = 1 );
 	void setUniform2iv( const std::string & name, const GLint * value, const GLsizei count = 1 );
 	void setUniform3iv( const std::string & name, const GLint * value, const GLsizei count = 1 );
@@ -192,6 +204,8 @@ struct GLO_API GLSLProgram : public IResource
 	void setUniform3fv( const std::string & name, const GLfloat * value, const GLsizei count = 1 );
 	void setUniform4fv( const std::string & name, const GLfloat * value, const GLsizei count = 1 );
 
+// @todo *uiv
+
 	void setUniformMatrix2fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
 	void setUniformMatrix3fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
 	void setUniformMatrix4fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
@@ -201,19 +215,49 @@ struct GLO_API GLSLProgram : public IResource
 	void setUniformMatrix4x2fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
 	void setUniformMatrix3x4fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
 	void setUniformMatrix4x3fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
+
+// @todo dsa version
+	// GL_ARB_separate_shader_objects (OpenGL 4.1): DSA style api
+	void setProgramUniform1i( const std::string & name, const GLint v1 );
 	//@}
 
 
 
 	/**
-	 * @brief Load a file in a string.
+	 * @name Queries
+	 */
+	//@{
+
+	struct UniformInformations
+	{
+		UniformInformations( const int nameMaxLength = 512 ) :
+			type( 0 ),
+			name( nameMaxLength, 0 ),
+			size( 0)
+		{}
+
+		GLenum					type;
+		std::string				name;
+		GLint					size;
+		// @todo value ?
+	};
+
+	const std::string getActiveUniformsStr() const;
+	const std::vector< UniformInformations > getActiveUniforms() const;
+
+	const std::string toString( const GLenum type ) const;
+	const std::string toString( const std::vector< UniformInformations >& uniforms ) const;
+
+	//@}
+
+
+
+	/**
+	 * @brief Load a file in a string
 	 */
 	static const std::string loadFile( const std::string pathfilename );
 
-	const std::string getInfoLog();
-
-	GLhandleARB		getProgramObject() const;
-
+	const GLuint getProgramObject() const;
 
 
 protected:
@@ -224,33 +268,15 @@ protected:
 	 *
 	 * @return The value of -1 will be returned if name does not correspond to an active uniform or if name starts with the reserved prefix "gl_"
 	 */
-	const GLint getUniformLocation( const std::string & name );
+	const GLint getUniformLocation( const std::string & name ) const;
 
 
-
-public:
-protected:
-	void			printInfoLog( GLhandleARB object );
 
 private:
+	const std::string getShaderInfoLog( GLuint object );
+	const std::string getProgramInfoLog( GLuint object );
 
-	const std::string getInfoLog( GLhandleARB object );
-
-	/**
-	 * @brief Sets the program name
-	 *
-	 * @param name the name of the program
-	 */
-	void setProgramName( GLhandleARB name );
-
-	/**
-	 * @brief Sets the shader name
-	 *
-	 * @param shaderType	the type of the needed shader
-	 * @param name			the shader name
-	 */
-	void setName(const ShaderType shaderType, GLhandleARB name);
-
+	// SHADER INFORMATIONS
 	struct ShaderInformations
 	{
 		ShaderInformations()
@@ -259,21 +285,20 @@ private:
 			// shaderLog
 		{}
 
-		std::string shaderCode;
-		GLhandleARB	shaderSaved;
+		std::string	shaderCode;
+		GLuint		shaderSaved;
 		std::string	shaderLog;
-
 	};
 
 	std::vector<ShaderInformations> m_shaderInfo;
 
-	GLhandleARB m_programObject;
-	std::string m_linkLog;
+	// PROGRAM
+	GLuint		m_programObject;
+	std::string	m_linkLog;
 	bool		m_linkSuccess;
 
 	static GLenum		m_GLEnumShaderType[];
 	static std::string	m_stringShaderType[];
-
 
 	static bool		m_firstInstance;
 };
@@ -283,4 +308,3 @@ private:
 } // namespace glo
 
 #endif //#ifndef _GLO_GLSLPROGRAM_HPP
-

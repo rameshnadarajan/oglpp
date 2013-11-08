@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2005, 2010, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2010, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -45,8 +45,6 @@ struct Object : public IResource
 	
 	/**
 	 * @name Actions
-	 *
-	 * @todo unbind => reverts to default (fb 0, vbo 0, shader 0...)
 	 */
 	//@{
 	
@@ -79,6 +77,19 @@ struct Object : public IResource
 	 * @pre isBound() must return true
 	 */
 	GLO_API virtual void unbind() const=0;
+
+	/**
+	 * @brief Binds to the default underlying OpenGL object
+	 */
+	GLO_API virtual void bindToDefault() const=0;
+
+	/**
+	 * @brief Binds to the default underlying OpenGL object
+	 *
+	 * @remark Don't call this method, there is no underlying OpenGL object. See classes derived from Object.
+	 */
+	static void staticBindToDefault();
+
 	//@}
 
 

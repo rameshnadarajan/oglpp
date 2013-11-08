@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2011, Nicolas Papier.
+// OGLPP - Copyright (C) 2011, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -17,6 +17,8 @@ namespace glo
  * @brief OpenGL buffer object
  *
  * BufferObject provides api to allocate, desallocate, initialize and render from high-performance server memory.
+ *
+ * @todo bind( to another target ) for copying:Data can be copied from one buffer object to another. To do this, first bind the source and destination buffers to different targets. These could be any target, but GL_COPY_READ_BUFFER and GL_COPY_WRITE_BUFFER have no special semantics, so they make useful targets for this purpose.
  */
 template< GLenum TargetValue, GLenum BindingValue >
 struct BufferObject : public Object
@@ -56,6 +58,10 @@ struct BufferObject : public Object
 	void bind() const;
 
 	void unbind() const;
+
+	void bindToDefault() const;
+
+	static void staticBindToDefault();
 
 	//@}
 
