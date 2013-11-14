@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2010, 2011, 2012, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2010, 2011, 2012, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -15,8 +15,15 @@
 
 #ifdef WIN32
 	#include <GL/wglext.h>
+	#define STDCALL __stdcall
+
+	#include <DbgHelp.h>
+	#pragma comment(lib,"Dbghelp")
+
 #elif __MACOSX__
+	#define STDCALL
 #else // POSIX
+	#define STDCALL
 #endif
 
 // COMPILE TIME TEST ON OPENGL VERSION
@@ -32,6 +39,148 @@
 
 namespace gle
 {
+
+
+
+namespace
+{
+
+// Translate type to string
+std::string getStringForType( GLenum type )
+{
+	switch(type)
+	{
+		case GL_DEBUG_TYPE_ERROR_ARB: 
+			return("Error");
+		case GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR_ARB:
+			return("Deprecated behaviour");
+		case GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR_ARB:
+			return("Undefined behaviour");
+		case GL_DEBUG_TYPE_PORTABILITY_ARB:
+			return("Portability issue");
+		case GL_DEBUG_TYPE_PERFORMANCE_ARB:
+			return("Performance issue");
+		case GL_DEBUG_TYPE_OTHER_ARB:
+			return("Other");
+		default:
+			assert( false );
+			return("");
+	}
+}
+
+
+// Translate source to string
+std::string getStringForSource( GLenum source )
+{
+	switch(source) 
+	{
+		case GL_DEBUG_SOURCE_API_ARB: 
+			return("API");
+		case GL_DEBUG_SOURCE_WINDOW_SYSTEM_ARB:
+			return("Window system");
+		case GL_DEBUG_SOURCE_SHADER_COMPILER_ARB:
+			return("Shader compiler");
+		case GL_DEBUG_SOURCE_THIRD_PARTY_ARB:
+			return("Third party");
+		case GL_DEBUG_SOURCE_APPLICATION_ARB:
+			return("Application");
+		case GL_DEBUG_SOURCE_OTHER_ARB:
+			return("Other");
+		default:
+			assert( false );
+			return("");
+	}
+}
+
+// Translate severity to string
+std::string getStringForSeverity( GLenum severity )
+{
+	switch(severity)
+	{
+		case GL_DEBUG_SEVERITY_HIGH_ARB: 
+			return("High");
+		case GL_DEBUG_SEVERITY_MEDIUM_ARB:
+			return("Medium");
+		case GL_DEBUG_SEVERITY_LOW_ARB:
+			return("Low");
+		default:
+			assert( false );
+			return("");
+	}
+}
+
+
+#ifdef _WIN32
+void printStack( OpenGLExtensions * ogle )
+{
+	unsigned int   i;
+	void         * stack[ 100 ];
+	unsigned short frames;
+	SYMBOL_INFO  * symbol;
+	HANDLE         process;
+
+	process = GetCurrentProcess();
+
+ 	SymSetOptions(SYMOPT_LOAD_LINES);
+
+	SymInitialize( process, NULL, TRUE );
+
+	frames               = CaptureStackBackTrace( 0, 200, stack, NULL );
+	symbol               = ( SYMBOL_INFO * )calloc( sizeof( SYMBOL_INFO ) + 256 * sizeof( char ), 1 );
+	symbol->MaxNameLen   = 255;
+	symbol->SizeOfStruct = sizeof( SYMBOL_INFO );
+
+	for( i = 0; i < frames; i++ )
+	{
+		SymFromAddr( process, ( DWORD64 )( stack[ i ] ), 0, symbol );
+		DWORD  dwDisplacement;
+		IMAGEHLP_LINE64 line;
+
+		line.SizeOfStruct = sizeof(IMAGEHLP_LINE64);
+		if (	!strstr(symbol->Name,"VSDebugLib::") &&
+				SymGetLineFromAddr64(process, ( DWORD64 )( stack[ i ] ), &dwDisplacement, &line))
+		{
+				std::stringstream ss;
+				ss  << "function: " << symbol->Name << " - line: " << line.LineNumber << "\n";
+				ogle->log( ss.str() );
+				fprintf( stderr, "%s", ss.str().c_str() );
+		}
+		if (0 == strcmp(symbol->Name,"main")) break;
+	}
+
+	free( symbol );
+}
+#else
+	#pragma message( "printStack() not defined in non WIN32 platform." )
+#endif
+
+
+// GL_ARB_debug_output callback
+static void STDCALL debugLogCallback(	GLenum source, GLenum type, GLuint id,
+										GLenum severity, GLsizei length, const GLchar* message,
+										void* userParam )
+{
+	gle::OpenGLExtensions * ogle = reinterpret_cast<gle::OpenGLExtensions *>( userParam );
+
+	std::stringstream ss;
+	ss <<	" -- \n" << "Type: " << getStringForType(type).c_str() << "; Source: " << getStringForSource(source).c_str() <<"; ID: " << id <<
+			"; Severity: " << getStringForSeverity(severity).c_str() << "\n" <<
+			message << "\n";
+
+	fprintf(stderr, "%s", ss.str().c_str() );
+	ogle->logEndl( ss.str() );
+
+#if (defined _WIN32)
+//#if (defined _WIN32 || defined _LINUX)
+	printStack( ogle );
+#endif
+
+	fprintf(stderr, "\n" );
+	ogle->logEndl( std::string("") );
+}
+
+
+}
 
 
 
@@ -598,6 +747,41 @@ void OpenGLExtensions::reportGLErrors()
 	if ( bIsGLErrors )
 	{
 		logEndl("gle::OpenGLExtensions::reportGLErrors: " + strErrors );
+	}
+}
+
+
+
+void OpenGLExtensions::setDebugOutput( const DebugOutputMode mode )
+{
+	bool _isGL_ARB_debug_output = isExtensionSupported("GL_ARB_debug_output");
+	if ( _isGL_ARB_debug_output )
+	{
+		PFNGLDEBUGMESSAGECALLBACKARBPROC	_glDebugMessageCallbackARB;
+		PFNGLDEBUGMESSAGECONTROLARBPROC		_glDebugMessageControlARB;
+		PFNGLDEBUGMESSAGEINSERTARBPROC		_glDebugMessageInsertARB;
+		PFNGLGETDEBUGMESSAGELOGARBPROC		_glGetDebugMessageLogARB;
+		_glDebugMessageCallbackARB = (PFNGLDEBUGMESSAGECALLBACKARBPROC) getExtensionPtr( "glDebugMessageCallbackARB" );
+		_glDebugMessageControlARB = (PFNGLDEBUGMESSAGECONTROLARBPROC) getExtensionPtr( "glDebugMessageControlARB" );
+		_glDebugMessageInsertARB = (PFNGLDEBUGMESSAGEINSERTARBPROC) getExtensionPtr( "glDebugMessageInsertARB" );
+		_glGetDebugMessageLogARB = (PFNGLGETDEBUGMESSAGELOGARBPROC) getExtensionPtr( "glGetDebugMessageLogARB" );
+
+		if ( mode == DISABLED )
+		{
+			logEndl("gle::OpenGLExtensions: disable GL_ARB_debug_output");
+			glDisable( GL_DEBUG_OUTPUT_SYNCHRONOUS_ARB );
+			_glDebugMessageCallbackARB( 0, 0 );
+		}
+		else
+		{
+			logEndl("gle::OpenGLExtensions: enable synchronous GL_ARB_debug_output");
+			glEnable( GL_DEBUG_OUTPUT_SYNCHRONOUS_ARB );
+			_glDebugMessageCallbackARB( debugLogCallback, this );
+		}
+	}
+	else
+	{
+		logEndl("gle::OpenGLExtensions: GL_ARB_debug_output not supported.");
 	}
 }
 

@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2007, 2010, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2007, 2010, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -177,8 +177,8 @@ struct GLE_API OpenGLExtensions
 	 * 
 	 * @param str		the string.
 	 */
-	void logEndl( const std::string str );	
-	
+	void logEndl( const std::string str );
+
 	/**
 	 * @brief Adds each element of the vector to the log.
 	 * 
@@ -217,6 +217,29 @@ struct GLE_API OpenGLExtensions
 	 * @brief Report OpenGL errors (if there is one) on the log.
 	 */
 	void reportGLErrors();
+
+	//@}
+
+
+
+	/**
+	 * @name Advanced OpenGL errors management
+	 *
+	 * using GL_ARB_debug_output extension
+	 */
+	//@{
+
+	enum DebugOutputMode {
+		DISABLED,
+		SYNCHRONOUS
+	};
+
+	/**
+	 * @brief Sets the current debug output mode.
+	 *
+	 * @param mode	the desired mode
+	 */
+	void setDebugOutput( const DebugOutputMode mode );
 	//@}
 
 
