@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2008, 2010, 2011, Nicolas Papier.
+// OGLPP - Copyright (C) 2008, 2010, 2011, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -19,49 +19,30 @@
 #endif
 
 
-void _glc_drawable_destroy( glc_drawable_t * drawable )
-{
-	assert( drawable != 0 && "Calls glc_drawable_destroy() with an null drawable." );
-	assert( drawable->backend != 0 && "Calls glc_drawable_destroy() with an null backend." );
-	// @todo drawable_status()
 
-	drawable->backend->destroy( drawable );
-}
-
-
-
-void _glc_drawable_initialize( glc_drawable_t * drawable )
-{
-	assert( drawable != 0 && "Calls glc_drawable_destroy() with an null drawable." );
-
-	drawable->colorSize		= 32;
-	drawable->depthSize		= 24;
-	drawable->stencilSize	= 0;
-
-	drawable->stereo		= 0;
-
-	drawable->isFullscreen	= 0;
-}
-
-
-
-glc_t *glc_create( glc_drawable_t *drawable )
-{
-	glc_t * retVal = glc_create_shared( drawable, 0 );
-	return retVal;
-}
-
-
-
-glc_t * glc_create_shared( glc_drawable_t * drawable, glc_t * contextSharing )
+// PRIVATE FUNCTION
+/**
+ * @brief Creates a new glc context for the given drawable and sharing object with the given glc context.
+ *
+ * @param drawable			the drawing surface used by glc context
+ * @param contextSharing	specifies the context with which to share objects
+ *
+ * @return a new glc context associated with the given drawable and sharing objects with the given context
+ *
+ * @remarks If the new glc context status is GLC_STATUS_SUCCESS (i.e. glc_status(retVal) == GLC_STATUS_SUCCESS), 
+ * then the ownership of the given drawable is transfered to the glc context.
+ */
+ glc_t * _glc_create_( glc_drawable_t * drawable, glc_t * contextSharing )
 {
 	assert( drawable != 0 && "Calls glc_create() with an null drawable." );
 	// @todo drawable_status()
 
 	// Initializes the glc context with default values
 	glc_t * retVal = (glc_t*)malloc( sizeof(glc_t) );
-	retVal->context		= 0;
-	retVal->drawable	= drawable;
+	retVal->context				= 0;
+	retVal->contextRefCount		= new int;
+	(*retVal->contextRefCount)	= 1;
+	retVal->drawable			= drawable;
 
 #ifdef WIN32
 	// Initializes the pixel format descriptor with the desired format.
@@ -72,8 +53,6 @@ glc_t * glc_create_shared( glc_drawable_t * drawable, glc_t * contextSharing )
 	pfd.nSize			= sizeof( PIXELFORMATDESCRIPTOR );
 	pfd.nVersion		= 1;
 	pfd.dwFlags			= PFD_SUPPORT_COMPOSITION | PFD_SUPPORT_OPENGL | PFD_DRAW_TO_WINDOW | PFD_DOUBLEBUFFER;
-	// PFD_DRAW_TO_WINDOW ?
-	// PFD_GENERIC_ACCELERATED ?
 	pfd.iPixelType		= PFD_TYPE_RGBA;
 	pfd.cColorBits		= drawable->colorSize;
 	pfd.cDepthBits		= drawable->depthSize;
@@ -84,8 +63,6 @@ glc_t * glc_create_shared( glc_drawable_t * drawable, glc_t * contextSharing )
 	{
 		pfd.dwFlags |= PFD_STEREO;
 	}
-
-	// @todo Initializes WGL_ARB_pixel_format attributes with the desired format.
 
 #elif __MACOSX__
 	#error "Non win32 platform not yet supported."
@@ -138,6 +115,7 @@ glc_t * glc_create_shared( glc_drawable_t * drawable, glc_t * contextSharing )
 	if ( context == NULL )
 	{
 		fprintf( stderr, "In glc_create(), wglCreateContext() fails." );
+		return retVal;
 	}
 	else
 	{
@@ -154,7 +132,6 @@ glc_t * glc_create_shared( glc_drawable_t * drawable, glc_t * contextSharing )
 		}
 		// else nothing to do
 	} // else nothing to do
-
 #else
 	// Checks for supports the GLX extension
 	if ( !glXQueryExtension( drawable->display, 0, 0 ) )
@@ -203,6 +180,78 @@ glc_t * glc_create_shared( glc_drawable_t * drawable, glc_t * contextSharing )
 }
 
 
+
+void _glc_drawable_destroy( glc_drawable_t * drawable )
+{
+	assert( drawable != 0 && "Calls glc_drawable_destroy() with an null drawable." );
+	assert( drawable->backend != 0 && "Calls glc_drawable_destroy() with an null backend." );
+	// @todo drawable_status()
+
+	drawable->backend->destroy( drawable );
+}
+
+
+
+void _glc_drawable_initialize( glc_drawable_t * drawable )
+{
+	assert( drawable != 0 && "Calls glc_drawable_destroy() with an null drawable." );
+
+	drawable->colorSize		= 32;
+	drawable->depthSize		= 24;
+	drawable->stencilSize	= 0;
+
+	drawable->stereo		= 0;
+
+	drawable->isFullscreen	= 0;
+}
+
+
+
+glc_t *glc_create( glc_drawable_t *drawable, glc_t * contextShared )
+{
+	if ( contextShared )
+	{
+		// Initializes the glc context with default values
+		glc_t * retVal = (glc_t*)malloc( sizeof(glc_t) );
+		retVal->context				= contextShared->context;
+		retVal->contextRefCount		= contextShared->contextRefCount;
+		*(retVal->contextRefCount)	= *(retVal->contextRefCount) + 1;
+		retVal->drawable			= 0;
+
+#ifdef WIN32
+		// Get the current pixel format index  
+		const int iPixelFormat = GetPixelFormat(contextShared->drawable->dc);
+
+		// Obtain a detailed description of that pixel format
+		PIXELFORMATDESCRIPTOR pfd;
+		DescribePixelFormat(contextShared->drawable->dc, iPixelFormat, sizeof(PIXELFORMATDESCRIPTOR), &pfd);
+
+		// Set the pixel format for the given drawable to be usable with OpenGL rendering context.
+		const BOOL bResult = SetPixelFormat( drawable->dc, iPixelFormat, &pfd );
+		if ( bResult == FALSE )
+		{
+			fprintf( stderr, "In glc_create(), SetPixelFormat() fails." );
+			return retVal;
+		}
+		else
+		{
+			retVal->drawable = drawable;
+		}
+#else
+		#error "Non win32 platform not yet supported."
+#endif
+
+		return retVal;
+	}
+	else
+	{
+		glc_t * retVal = _glc_create_( drawable, 0 );
+		return retVal;
+	}
+}
+
+
+
 void glc_destroy( glc_t * context )
 {
 	assert( context != 0 && "Calls glc_destroy() on a null glc context.");
@@ -210,15 +259,23 @@ void glc_destroy( glc_t * context )
 
 	if ( context->context != 0 )
 	{
-#ifdef GLC_USE_WGL
-		// Deletes the OpenGL rendering context.
-		wglDeleteContext( context->context );
-		context->context = 0;
-#else
-		// Deletes the OpenGL rendering context.
-		glXDestroyContext( context->drawable->display, context->context );
-		context->context = 0;
-#endif
+		if ( (*context->contextRefCount) == 1 )
+		{
+	#ifdef GLC_USE_WGL
+			// Deletes the OpenGL rendering context.
+			wglDeleteContext( context->context );
+	#else
+			// Deletes the OpenGL rendering context.
+			glXDestroyContext( context->drawable->display, context->context );
+	#endif
+			context->context = 0;
+			free( context->contextRefCount );
+		}
+		else
+		{
+			// nothing to do with OpenGL rendering context
+			--(*context->contextRefCount);
+		}
 	}
 
 	if ( context->drawable != 0 )
@@ -269,7 +326,6 @@ glc_bool_t glc_set_current( glc_t * context )
 	// @todo drawable_status()
 #ifdef GLC_USE_WGL
 	BOOL success = wglMakeCurrent( context->drawable->dc, context->context );
-
 	return success == TRUE ? 1 : 0;
 #elif GLC_USE_GLX
 	Bool success = glXMakeCurrent(

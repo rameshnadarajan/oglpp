@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2008, 2009, 2010, 2011, Nicolas Papier.
+// OGLPP - Copyright (C) 2008, 2009, 2010, 2011, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -119,9 +119,10 @@ typedef struct _glc_drawable_t
  */
 typedef struct _glc_t
 {
-	GLC_GLRC_HANDLE		context;		///< the OpenGL rendering context
-	glc_drawable_t *	drawable;		///< the drawable used to create the OpenGL rendering context
-	//@todo Uses a context with a different drawable (glc_switch_drawable()).
+	GLC_GLRC_HANDLE		context;			///< the OpenGL rendering context
+	int *				contextRefCount;	///< a reference count for the OpenGL rendering context (two glc contexts could have the same OpenGL context, but with different drawables. Use case: 2 windows and one OpenGL rendering context).
+
+	glc_drawable_t *	drawable;			///< the drawable used to create the OpenGL rendering context
 	//@todo Adds backend for wgl/glx/agl/egl
 } glc_t;
 
@@ -173,27 +174,16 @@ GLC_API void _glc_drawable_destroy( glc_drawable_t * drawable );
 /**
  * @brief Creates a new glc context for the given drawable.
  *
- * @param drawable		the drawing surface used by glc context
+ * @param drawable			the drawing surface used by glc context
+ * @param contextShared		if not 0, then the new glc context returned would use the OpenGL context from the given contextShared but with the given drawable.
  *
  * @return a new glc context associated with the given drawable.
  *
  * @remarks If the new glc context status is GLC_STATUS_SUCCESS (i.e. glc_status(retVal) == GLC_STATUS_SUCCESS), 
  * then the ownership of the given drawable is transfered to the glc context.
  */
-GLC_API glc_t *		glc_create( glc_drawable_t * drawable );
+GLC_API glc_t *		glc_create( glc_drawable_t * drawable, glc_t * contextShared = 0 );
 
-/**
- * @brief Creates a new glc context for the given drawable and sharing object with the given glc context.
- *
- * @param drawable			the drawing surface used by glc context
- * @param contextSharing	specifies the context with which to share objects
- *
- * @return a new glc context associated with the given drawable and sharing objects with the given context
- *
- * @remarks If the new glc context status is GLC_STATUS_SUCCESS (i.e. glc_status(retVal) == GLC_STATUS_SUCCESS), 
- * then the ownership of the given drawable is transfered to the glc context.
- */
-GLC_API glc_t *		glc_create_shared( glc_drawable_t * drawable, glc_t * contextSharing );
 
 /**
  * @brief Deletes the given context.
