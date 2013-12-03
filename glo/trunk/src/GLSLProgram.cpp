@@ -221,14 +221,17 @@ const bool GLSLProgram::validate()
 
 	if ( !strInfoLog.empty() )
 	{
-		std::cerr << " --" << std::endl;
-		std::cerr << "Program " << getProgramObject();
-		const std::string tmp = (result == GL_TRUE) ? " " : " not ";
-		std::cerr << tmp << "validated :" << std::endl;
-		std::cerr << strInfoLog << std::endl;
-
+		// There is a log
 		m_linkLog += "Validation log:\n";
 		m_linkLog += strInfoLog;
+
+		if ( result == GL_FALSE )
+		{
+			// Message in cerr only if validation fails
+			std::cerr << " --" << std::endl;
+			std::cerr << "Program " << getProgramObject() << "not validated :" << std::endl;
+			std::cerr << strInfoLog << std::endl;
+		}
 	}
 
 	return result == GL_TRUE;
