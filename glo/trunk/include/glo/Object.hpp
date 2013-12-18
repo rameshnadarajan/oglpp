@@ -67,6 +67,8 @@ struct Object : public IResource
 	 * @brief Binds the underlying OpenGL object
 	 * 
 	 * @pre isEmpty() must return false
+	 *
+	 * @remark if isDSAEnabled(), then nothing is done.
 	 */
 	GLO_API virtual void bind() const=0;
 
@@ -75,11 +77,15 @@ struct Object : public IResource
 	 * 
 	 * @pre isEmpty() must return false
 	 * @pre isBound() must return true
+	 *
+	 * @remark if isDSAEnabled(), then nothing is done.
 	 */
 	GLO_API virtual void unbind() const=0;
 
 	/**
 	 * @brief Binds to the default underlying OpenGL object
+	 *
+	 * @remark Independent of DSA activation.
 	 */
 	GLO_API virtual void bindToDefault() const=0;
 
@@ -87,6 +93,8 @@ struct Object : public IResource
 	 * @brief Binds to the default underlying OpenGL object
 	 *
 	 * @remark Don't call this method, there is no underlying OpenGL object. See classes derived from Object.
+	 *
+	 * @remark Independent of DSA activation.
 	 */
 	static void staticBindToDefault();
 
@@ -112,6 +120,8 @@ struct Object : public IResource
 	 * @pre isEmpty() must return false
 	 * 
 	 * @return true if the underlying OpenGL object is bound, false otherwise.
+	 *
+	 * @remark if isDSAEnabled(), then nothing is done and true is returned.
 	 */
 	GLO_API virtual const bool isBound() const=0;
 
@@ -121,6 +131,27 @@ struct Object : public IResource
 	GLO_API const GLuint getName() const;
 	//@}
 
+
+	/**
+	 * @name Helpers
+	 */
+	//@{
+
+	/**
+	 * @brief Determines whether DSA api usage is enabled or not.
+	 *
+	 * @return true if the DSA api usage is enabled, false otherwise.
+	 */
+	GLO_API const bool isDSAEnabled();
+
+	/**
+	 * @brief Determines whether DSA api usage is enabled or not.
+	 *
+	 * @return false if the DSA api usage is enabled, true otherwise.
+	 */
+	GLO_API const bool isDSADisabled();
+
+	//@}
 
 
 protected:
