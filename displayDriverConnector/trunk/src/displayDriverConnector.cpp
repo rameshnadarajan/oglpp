@@ -1,4 +1,4 @@
-// DisplayDriverConnector - Copyright (C) 2010, 2011, Nicolas Papier.
+// DisplayDriverConnector - Copyright (C) 2010, 2011, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -6,8 +6,9 @@
 #include "displayDriverConnector/displayDriverConnector.hpp"
 
 #include <cassert>
-#include <iostream>
 #include <cstring>
+#include <iostream>
+#include <sstream>
 #include <vector>
 
 #if defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__)
@@ -153,42 +154,53 @@ ddc_bool_t ddc_get_primary_display_device_informations( ddc_display_device_info_
 
 
 
-void ddc_print_display_device_info( ddc_display_device_info_t * informations )
+const std::string ddc_get_display_device_info( ddc_display_device_info_t * informations )
 {
+	std::ostringstream ssStr;
+
 	if ( informations->found )
 	{
-		std::cout << "Found primary display device" << std::endl;
+		ssStr << "Found primary display device" << std::endl;
 
 		//
-		std::cout << " Device vendor: " << ddc_get_vendor_string(informations->vendor) << std::endl;
+		ssStr << " Device vendor: " << ddc_get_vendor_string(informations->vendor) << std::endl;
 
-		std::cout << " Device ID: " << informations->deviceID << std::endl;
-		std::cout << " Full device ID: " << informations->fullDeviceID << std::endl;
+		ssStr << " Device ID: " << informations->deviceID << std::endl;
+		ssStr << " Full device ID: " << informations->fullDeviceID << std::endl;
 
-		std::cout << " Monitor name: " << informations->monitorName << std::endl;
-		std::cout << " Device name: " << informations->displayAdapterName << std::endl;
+		ssStr << " Monitor name: " << informations->monitorName << std::endl;
+		ssStr << " Device name: " << informations->displayAdapterName << std::endl;
 
 		// Versioning
-		std::cout << " Driver version: " << informations->driverVersion << std::endl;
-		std::cout << " Driver date: " << informations->driverDate << std::endl;
+		ssStr << " Driver version: " << informations->driverVersion << std::endl;
+		ssStr << " Driver date: " << informations->driverDate << std::endl;
 
 		if (	(informations->vendor == DDC_VENDOR_AMD) &&
 				(strlen(informations->catalystVersion) > 0) )
 		{
-			std::cout << " Catalyst version: " << informations->catalystVersion << std::endl;
+			ssStr << " Catalyst version: " << informations->catalystVersion << std::endl;
 		}
 
 		// OpenGL
-		std::cout << " OpenGL: " << informations->openglDriverName << std::endl;
+		ssStr << " OpenGL: " << informations->openglDriverName << std::endl;
 
 		// Display device
-		std::cout << "Graphics mode : " << informations->width << "x" << informations->height;
-		std::cout << "x" << informations->bpp << " " << informations->frequency << " Hz" << std::endl;
+		ssStr << "Graphics mode : " << informations->width << "x" << informations->height;
+		ssStr << "x" << informations->bpp << " " << informations->frequency << " Hz" << std::endl;
 	}
 	else
 	{
-		std::cout << "Primary display device NOT FOUND" << std::endl;
+		ssStr << "Primary display device NOT FOUND" << std::endl;
 	}
+
+	return ssStr.str();
+}
+
+
+
+void ddc_print_display_device_info( ddc_display_device_info_t * informations )
+{
+	std::cout << ddc_get_display_device_info(informations) << std::endl;
 }
 
 
