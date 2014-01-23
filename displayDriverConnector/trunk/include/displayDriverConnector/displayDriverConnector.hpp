@@ -1,4 +1,4 @@
-// DisplayDriverConnector - Copyright (C) 2010, 2011, Nicolas Papier.
+// DisplayDriverConnector - Copyright (C) 2010, 2011, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -6,6 +6,7 @@
 #ifndef _DISPLAYDRIVERCONNECTOR_DISPLAYDRIVERCONNECTOR_HPP
 #define _DISPLAYDRIVERCONNECTOR_DISPLAYDRIVERCONNECTOR_HPP
 
+#include <string>
 #include "displayDriverConnector/config.hpp"
 
 /** 
@@ -112,6 +113,11 @@ typedef struct _ddc_display_device_info_t
  * @return A non-zero value if the function is successful, or zero if the function is unsuccessful.
  */
 DDC_API ddc_bool_t ddc_get_primary_display_device_informations( ddc_display_device_info_t * informations );
+
+/**
+ * @brief Retrieves a string containing the data stored in informations structure
+ */
+DDC_API const std::string ddc_get_display_device_info( ddc_display_device_info_t * informations );
 
 /**
  * @brief Prints to standard output the data stored in informations structure
