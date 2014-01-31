@@ -692,6 +692,10 @@ const std::string GLSLProgram::getShaderInfoLog( GLuint object )
 	{
 		strInfoLog.resize(logSize, 0);
 		glGetShaderInfoLog( object, logSize, 0, &strInfoLog[0] );
+		if ( strInfoLog[strInfoLog.size()-1] == '\0' )
+		{
+			strInfoLog.resize( strInfoLog.size()-1 );
+		}
 	}
 
 	return strInfoLog;
