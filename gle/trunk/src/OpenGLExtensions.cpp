@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2010, 2011, 2012, 2013, Nicolas Papier.
+// GLE - Copyright (C) 2004, 2006, 2007, 2008, 2010, 2011, 2012, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -11,6 +11,7 @@
 
 #include <algorithm>
 #include <cstring>
+#include <iostream>
 #include <sstream>
 
 #ifdef WIN32
@@ -527,20 +528,38 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 	glGetIntegerv( GL_MAX_VERTEX_UNIFORM_COMPONENTS, &glint );
 	strInfos << "GL_MAX_VERTEX_UNIFORM_COMPONENTS		= " << glint << std::endl;
 
+	glGetIntegerv( GL_MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS, &glint );
+	strInfos << "GL_MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS		= " << glint << std::endl;
+
 	glGetIntegerv( GL_MAX_TESS_CONTROL_UNIFORM_COMPONENTS, &glint );
 	strInfos << "GL_MAX_TESS_CONTROL_UNIFORM_COMPONENTS		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_COMBINED_TESS_CONTROL_UNIFORM_COMPONENTS, &glint );
+	strInfos << "GL_MAX_COMBINED_TESS_CONTROL_UNIFORM_COMPONENTS		= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_TESS_EVALUATION_UNIFORM_COMPONENTS, &glint );
 	strInfos << "GL_MAX_TESS_EVALUATION_UNIFORM_COMPONENTS	= " << glint << std::endl;
 
+	glGetIntegerv( GL_MAX_COMBINED_TESS_EVALUATION_UNIFORM_COMPONENTS, &glint );
+	strInfos << "GL_MAX_COMBINED_TESS_EVALUATION_UNIFORM_COMPONENTS	= " << glint << std::endl;
+
 	glGetIntegerv( GL_MAX_GEOMETRY_UNIFORM_COMPONENTS, &glint );
 	strInfos << "GL_MAX_GEOMETRY_UNIFORM_COMPONENTS		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_COMBINED_GEOMETRY_UNIFORM_COMPONENTS, &glint );
+	strInfos << "GL_MAX_COMBINED_GEOMETRY_UNIFORM_COMPONENTS		= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_FRAGMENT_UNIFORM_COMPONENTS, &glint );
 	strInfos << "GL_MAX_FRAGMENT_UNIFORM_COMPONENTS		= " << glint << std::endl;
 
-	glGetIntegerv( GL_MAX_COMPUTE_UNIFORM_COMPONENTS, &glint );
+	glGetIntegerv( GL_MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS, &glint );
+	strInfos << "GL_MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS		= " << glint << std::endl;
+
+		glGetIntegerv( GL_MAX_COMPUTE_UNIFORM_COMPONENTS, &glint );
 	strInfos << "GL_MAX_COMPUTE_UNIFORM_COMPONENTS		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_COMBINED_COMPUTE_UNIFORM_COMPONENTS, &glint );
+	strInfos << "GL_MAX_COMBINED_COMPUTE_UNIFORM_COMPONENTS		= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_UNIFORM_BUFFER_BINDINGS, &glint );
 	strInfos << "GL_MAX_UNIFORM_BUFFER_BINDINGS			= " << glint << std::endl << std::endl;
@@ -602,11 +621,14 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 	glGetIntegerv( GL_MAX_TEXTURE_UNITS, &glint );
 	strInfos << "GL_MAX_TEXTURE_UNITS				= " << glint << std::endl;
 
-	glGetIntegerv( GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS, &glint );
-	strInfos << "GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS		= " << glint << std::endl;
+	glGetIntegerv( GL_MAX_TEXTURE_COORDS, &glint );
+	strInfos << "GL_MAX_TEXTURE_COORDS				= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS, &glint );
 	strInfos << "GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS		= " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS, &glint );
+	strInfos << "GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS		= " << glint << std::endl;
 
 	glGetIntegerv( GL_MAX_TEXTURE_IMAGE_UNITS, &glint );
 	strInfos << "GL_MAX_TEXTURE_IMAGE_UNITS			= " << glint << std::endl;
@@ -622,6 +644,9 @@ std::string OpenGLExtensions::getInformations( const int numElementInExtensionsG
 
 	glGetIntegerv( GL_MAX_CUBE_MAP_TEXTURE_SIZE, &glint );
 	strInfos << "GL_MAX_CUBE_MAP_TEXTURE_SIZE			= " << glint << " x " << glint << std::endl;
+
+	glGetIntegerv( GL_MAX_TEXTURE_BUFFER_SIZE, &glint );
+	strInfos << "GL_MAX_TEXTURE_BUFFER_SIZE			= " << glint << std::endl;
 
 	glGetFloatv( GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, &glfloat );
 	strInfos << "GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT		= " << glfloat << std::endl;
@@ -768,12 +793,14 @@ void OpenGLExtensions::setDebugOutput( const DebugOutputMode mode )
 
 		if ( mode == DISABLED )
 		{
+			std::cout << "gle::OpenGLExtensions: disable GL_ARB_debug_output" << std::endl;
 			logEndl("gle::OpenGLExtensions: disable GL_ARB_debug_output");
 			glDisable( GL_DEBUG_OUTPUT_SYNCHRONOUS_ARB );
 			_glDebugMessageCallbackARB( 0, 0 );
 		}
 		else
 		{
+			std::cout << "gle::OpenGLExtensions: enable synchronous GL_ARB_debug_output" << std::endl;
 			logEndl("gle::OpenGLExtensions: enable synchronous GL_ARB_debug_output");
 			glEnable( GL_DEBUG_OUTPUT_SYNCHRONOUS_ARB );
 			_glDebugMessageCallbackARB( debugLogCallback, this );
@@ -781,6 +808,7 @@ void OpenGLExtensions::setDebugOutput( const DebugOutputMode mode )
 	}
 	else
 	{
+		std::cout << "gle::OpenGLExtensions: GL_ARB_debug_output not supported." << std::endl;
 		logEndl("gle::OpenGLExtensions: GL_ARB_debug_output not supported.");
 	}
 }
