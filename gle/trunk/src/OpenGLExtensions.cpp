@@ -25,6 +25,7 @@
 	#define STDCALL
 #else // POSIX
 	#define STDCALL
+	#include <stdio.h>
 #endif
 
 // COMPILE TIME TEST ON OPENGL VERSION

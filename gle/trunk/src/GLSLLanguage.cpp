@@ -14,7 +14,7 @@
 
 #include "gle/GLSLLanguage.hpp"
 #include "gle/glHelpers.hpp"
-#include "GLSLdictionnary.cpp"
+#include "GLSLDictionnary.cpp"
 
 
 namespace gle
@@ -97,7 +97,7 @@ const std::string getGLSLVariables(gle::GLSL_VERSION_LANGUAGE version)
 
 const std::string getAllKeywords(gle::GLSL_VERSION_LANGUAGE version)
 {
-	return (const std::string(gle::getGLSLKeywords(version) + " " 
+	return (std::string(gle::getGLSLKeywords(version) + " " 
 			+ gle::getGLSLFunctions(version) + " " 
 			+ gle::getGLSLVariables(version)));
 }

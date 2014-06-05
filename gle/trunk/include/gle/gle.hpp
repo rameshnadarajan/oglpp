@@ -40,10 +40,15 @@
 #else // POSIX
 
 	#define __STDC_VERSION__	199901L
+	
+	#define GL_GLEXT_LEGACY
 	#include <GL/gl.h>
-	#include <GL/glext.h>
-	#include <GL/gleext.h>
-	//#include <GL/glx.h>
+	#undef GL_VERSION_1_2
+	#undef GL_VERSION_1_3
+
+	#include "GL/glext.h"
+	#include "GL/gleext.h"
+	#include <GL/glx.h>
 	//#include <GL/glxext.h>
 	//#include <GL/glu.h>
 
