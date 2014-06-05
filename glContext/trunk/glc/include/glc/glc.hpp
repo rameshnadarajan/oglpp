@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2008, 2009, 2010, 2011, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2008, 2009, 2010, 2011, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -54,11 +54,14 @@ HDC hDC = GetDC( hwnd );
 	typedef GLXContext GLC_GLRC_HANDLE;
 
 #else // POSIX
-///
 	#define GLC_USE_GLX
-//	@todo typedef HWND		GLC_WINDOW_HANDLE;
-//	@todo typedef HDC			GLC_DC_HANDLE;
-//glXSwapBuffers(	Display * dpy,  GLXDrawable drawable);
+
+	#define GL_GLEXT_LEGACY
+	#include <GL/glx.h>
+
+	typedef unsigned long	GLC_WINDOW_HANDLE;
+	typedef GLXDrawable		GLC_DC_HANDLE;
+
 	typedef GLXContext	GLC_GLRC_HANDLE;
 #endif
 
@@ -94,6 +97,10 @@ typedef struct _drawable_backend_t
  */
 typedef struct _glc_drawable_t
 {
+#ifdef GLC_USE_GLX
+	Display *	display;
+	int		screen;
+#endif
 	GLC_WINDOW_HANDLE	window;
 	GLC_DC_HANDLE		dc;
 
