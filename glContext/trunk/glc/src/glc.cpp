@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2008, 2010, 2011, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2008, 2010, 2011, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -68,27 +68,24 @@
 	#error "Non win32 platform not yet supported."
 #else // POSIX
 	int attributes[64];
-	int *iAttributes = &attributes[0];
+	int index = 0;
 
-	iAttributes++ = GLX_RGBA;
-
+	attributes[index++] = GLX_RGBA;
 	assert( drawable->colorSize == 32 );
-	iAttributes++ = GLX_RED_SIZE;
-	iAttributes++ = 8;
-	iAttributes++ = GLX_GREEN_SIZE;
-	iAttributes++ = 8;
-	iAttributes++ = GLX_BLUE_SIZE;
-	iAttributes++ = 8;
-	iAttributes++ = GLX_ALPHA_SIZE;
-	iAttributes++ = 8;
-
-	iAttributes++ = GLX_DOUBLEBUFFER;
-
-	iAttributes++ = GLX_DEPTH_SIZE;
-	iAttributes++ = drawable->depthSize;
-
-	iAttributes++ = GLX_STENCIL_SIZE;
-	iAttributes++ = drawable->stencilSize;
+	attributes[index++] = GLX_RED_SIZE;
+	attributes[index++] = 8;
+	attributes[index++] = GLX_GREEN_SIZE;
+	attributes[index++] = 8;
+	attributes[index++] = GLX_BLUE_SIZE;
+	attributes[index++] = 8;
+	attributes[index++] = GLX_ALPHA_SIZE;
+	attributes[index++] = 8;
+	attributes[index++] = GLX_DOUBLEBUFFER;
+	attributes[index++] = GLX_DEPTH_SIZE;
+	attributes[index++] = drawable->depthSize;
+	attributes[index++] = GLX_STENCIL_SIZE;
+	attributes[index++] = drawable->stencilSize;
+	attributes[index++] = None;
 #endif
 
 #ifdef WIN32
@@ -149,21 +146,17 @@
 		fprintf( stderr, "In glc_create, Unable to choose a visual.\n" );
 		return retVal;
 	}
-	else
-	{
-		retVal->visual = visual;
-	}
 
 	// Creates the OpenGL rendering context and
 	// shares OpenGL objects (if requested).
 	GLC_GLRC_HANDLE context;
 	if ( contextSharing )
 	{
-		context = glxCreateContext( drawable->display, visual, contextSharing->context, GL_TRUE );
+		context = glXCreateContext( drawable->display, visual, contextSharing->context, GL_TRUE );
 	}
 	else
 	{
-		context = glxCreateContext( drawable->display, visual, None, GL_TRUE );
+		context = glXCreateContext( drawable->display, visual, None, GL_TRUE );
 	}
 
 	if ( context == NULL )
@@ -238,7 +231,8 @@ glc_t *glc_create( glc_drawable_t *drawable, glc_t * contextShared )
 			retVal->drawable = drawable;
 		}
 #else
-		#error "Non win32 platform not yet supported."
+		#warning "glc_create() with shared context is not yet supported on non win32 platform"
+		assert( false );
 #endif
 
 		return retVal;
@@ -327,10 +321,10 @@ glc_bool_t glc_set_current( glc_t * context )
 #ifdef GLC_USE_WGL
 	BOOL success = wglMakeCurrent( context->drawable->dc, context->context );
 	return success == TRUE ? 1 : 0;
-#elif GLC_USE_GLX
+#elif defined(GLC_USE_GLX)
 	Bool success = glXMakeCurrent(
 		context->drawable->display,
-		context->drawable-> window or drawable,
+		context->drawable->dc,
 		context->context );
 
 	return success == True ? 1 : 0;
@@ -352,7 +346,7 @@ glc_bool_t glc_unset_current( glc_t * context )
 	BOOL success = wglMakeCurrent( 0/*context->drawable->dc*/, NULL );
 
 	return success == TRUE ? 1 : 0;
-#elif GLC_USE_GLX
+#elif defined(GLC_USE_GLX)
 	Bool success = glXMakeCurrent(
 		context->drawable->display,
 		None,
@@ -381,8 +375,8 @@ glc_bool_t glc_is_current( glc_t * context )
 			(	(glrc == context->context) &&					// is current
 				(wglGetCurrentDC() == context->drawable->dc) )	// and for the good drawable/dc
 			&& "The context is current, but not for its associated drawable/graphical context !" );*/
-#elif GLC_USE_GLX
-	#error "Platform not yet supported."
+#elif defined(GLC_USE_GLX)
+	GLC_GLRC_HANDLE glrc = glXGetCurrentContext();
 #else
 	#error "Platform not yet supported."
 #endif
@@ -402,7 +396,8 @@ glc_bool_t glc_swap( glc_t * context )
 #ifdef GLC_USE_WGL
 	retVal = SwapBuffers( context->drawable->dc ) == TRUE ? 1 : 0;
 #else
-	#error "Platform not yet supported."
+	glXSwapBuffers( context->drawable->display, context->drawable );
+	retVal = true;
 #endif
 
 	return retVal;
@@ -491,7 +486,9 @@ glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscre
 #elif __MACOSX__
 	#error "Platform not yet supported."
 #else // POSIX
-	#error "Platform not yet supported."
+	#warning "glc_drawable_set_fullscreen() not yet supported."
+	assert(false);
+	return false;
 #endif
 }
 

@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2012, Nicolas Papier.
+// OGLPP - Copyright (C) 2012, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Bryan Schuller
@@ -10,7 +10,8 @@
 #include <QWidget>
 
 #ifdef WIN32
-
+#elif defined(POSIX)
+	#include <QX11Info>
 #else
 	#error "Non win32 platform not yet supported."
 #endif
@@ -26,10 +27,13 @@ glc_drawable_t * glc_qt_drawable_create( QWidget * widget )
 
 	// Initializes the drawable
 #ifdef WIN32
-    drawable->window	= (GLC_WINDOW_HANDLE) widget->winId();
-    drawable->dc		= GetDC( drawable->window );
+	drawable->window	= (GLC_WINDOW_HANDLE) widget->winId();
+	drawable->dc		= GetDC( drawable->window );
+#elif defined(POSIX)
+	drawable->display = QX11Info::display();
+	drawable->screen  = QX11Info::appScreen();
 #else
-	#error "Non win32 platform not yet supported."
+	#error "Platform not yet supported."
 #endif
 	drawable->backend			= (drawable_backend_t*) malloc( sizeof(drawable_backend_t) );
 	drawable->backend->destroy	= &glc_qt_drawable_destroy;
