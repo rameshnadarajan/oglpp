@@ -294,7 +294,7 @@
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_3DFX_multisample GLX_3DFX_multisample
  * Extension number in OpenGL registry : NA
@@ -311,11 +311,11 @@ GLE_API bool isGLX_3DFX_multisample();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_AMD_gpu_association GLX_AMD_gpu_association
  * Extension number in OpenGL registry : 398
@@ -332,11 +332,11 @@ GLE_API bool isGLX_AMD_gpu_association();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_ARB_create_context GLX_ARB_create_context
  * Extension number in OpenGL registry : 56
@@ -359,11 +359,11 @@ GLE_API bool isGLX_ARB_create_context();
 GLE_API GLXContext glXCreateContextAttribsARB(Display *dpy, GLXFBConfig config, GLXContext share_context, Bool direct, const int *attrib_list);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_ARB_create_context_profile GLX_ARB_create_context_profile
  * Extension number in OpenGL registry : 75
@@ -380,11 +380,11 @@ GLE_API bool isGLX_ARB_create_context_profile();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_ARB_create_context_robustness GLX_ARB_create_context_robustness
  * Extension number in OpenGL registry : 101
@@ -401,11 +401,11 @@ GLE_API bool isGLX_ARB_create_context_robustness();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_ARB_fbconfig_float GLX_ARB_fbconfig_float
  * Extension number in OpenGL registry : 39
@@ -422,11 +422,11 @@ GLE_API bool isGLX_ARB_fbconfig_float();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_ARB_framebuffer_sRGB GLX_ARB_framebuffer_sRGB
  * Extension number in OpenGL registry : 46
@@ -443,11 +443,11 @@ GLE_API bool isGLX_ARB_framebuffer_sRGB();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_ARB_get_proc_address GLX_ARB_get_proc_address
  * Extension number in OpenGL registry : 2
@@ -470,11 +470,11 @@ GLE_API bool isGLX_ARB_get_proc_address();
 GLE_API __GLXextFuncPtr glXGetProcAddressARB(const GLubyte *procName);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_ARB_multisample GLX_ARB_multisample
  * Extension number in OpenGL registry : 5
@@ -491,11 +491,11 @@ GLE_API bool isGLX_ARB_multisample();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_ARB_vertex_buffer_object GLX_ARB_vertex_buffer_object
  * Extension number in OpenGL registry : NA
@@ -512,11 +512,11 @@ GLE_API bool isGLX_ARB_vertex_buffer_object();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_EXT_buffer_age GLX_EXT_buffer_age
  * Extension number in OpenGL registry : 427
@@ -533,11 +533,11 @@ GLE_API bool isGLX_EXT_buffer_age();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es2_profile
  * Extension number in OpenGL registry : 399
@@ -554,11 +554,11 @@ GLE_API bool isGLX_EXT_create_context_es2_profile();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_EXT_create_context_es_profile GLX_EXT_create_context_es_profile
  * Extension number in OpenGL registry : 399
@@ -575,11 +575,11 @@ GLE_API bool isGLX_EXT_create_context_es_profile();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_EXT_fbconfig_packed_float GLX_EXT_fbconfig_packed_float
  * Extension number in OpenGL registry : 328
@@ -596,11 +596,11 @@ GLE_API bool isGLX_EXT_fbconfig_packed_float();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_EXT_framebuffer_sRGB GLX_EXT_framebuffer_sRGB
  * Extension number in OpenGL registry : 337
@@ -617,11 +617,11 @@ GLE_API bool isGLX_EXT_framebuffer_sRGB();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_EXT_import_context GLX_EXT_import_context
  * Extension number in OpenGL registry : 47
@@ -664,11 +664,11 @@ GLE_API GLXContext glXImportContextEXT(Display *dpy, GLXContextID contextID);
 GLE_API int glXQueryContextInfoEXT(Display *dpy, GLXContext context, int attribute, int *value);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_EXT_swap_control GLX_EXT_swap_control
  * Extension number in OpenGL registry : NA
@@ -691,11 +691,11 @@ GLE_API bool isGLX_EXT_swap_control();
 GLE_API void glXSwapIntervalEXT(Display *dpy, GLXDrawable drawable, int interval);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_EXT_swap_control_tear GLX_EXT_swap_control_tear
  * Extension number in OpenGL registry : 414
@@ -712,11 +712,11 @@ GLE_API bool isGLX_EXT_swap_control_tear();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_EXT_texture_from_pixmap GLX_EXT_texture_from_pixmap
  * Extension number in OpenGL registry : 344
@@ -744,11 +744,11 @@ GLE_API void glXBindTexImageEXT(Display *dpy, GLXDrawable drawable, int buffer, 
 GLE_API void glXReleaseTexImageEXT(Display *dpy, GLXDrawable drawable, int buffer);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_EXT_visual_info GLX_EXT_visual_info
  * Extension number in OpenGL registry : 28
@@ -765,11 +765,11 @@ GLE_API bool isGLX_EXT_visual_info();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_EXT_visual_rating GLX_EXT_visual_rating
  * Extension number in OpenGL registry : 44
@@ -786,11 +786,11 @@ GLE_API bool isGLX_EXT_visual_rating();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_INTEL_swap_event GLX_INTEL_swap_event
  * Extension number in OpenGL registry : 384
@@ -807,11 +807,11 @@ GLE_API bool isGLX_INTEL_swap_event();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_MESA_agp_offset GLX_MESA_agp_offset
  * Extension number in OpenGL registry : 308
@@ -834,11 +834,11 @@ GLE_API bool isGLX_MESA_agp_offset();
 GLE_API unsigned int glXGetAGPOffsetMESA(const void *pointer);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_MESA_copy_sub_buffer GLX_MESA_copy_sub_buffer
  * Extension number in OpenGL registry : 215
@@ -861,11 +861,11 @@ GLE_API bool isGLX_MESA_copy_sub_buffer();
 GLE_API void glXCopySubBufferMESA(Display *dpy, GLXDrawable drawable, int x, int y, int width, int height);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_MESA_pixmap_colormap GLX_MESA_pixmap_colormap
  * Extension number in OpenGL registry : 216
@@ -888,11 +888,11 @@ GLE_API bool isGLX_MESA_pixmap_colormap();
 GLE_API GLXPixmap glXCreateGLXPixmapMESA(Display *dpy, XVisualInfo *visual, Pixmap pixmap, Colormap cmap);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_MESA_release_buffers GLX_MESA_release_buffers
  * Extension number in OpenGL registry : 217
@@ -915,11 +915,11 @@ GLE_API bool isGLX_MESA_release_buffers();
 GLE_API Bool glXReleaseBuffersMESA(Display *dpy, GLXDrawable drawable);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_MESA_set_3dfx_mode GLX_MESA_set_3dfx_mode
  * Extension number in OpenGL registry : 218
@@ -942,11 +942,11 @@ GLE_API bool isGLX_MESA_set_3dfx_mode();
 GLE_API Bool glXSet3DfxModeMESA(int mode);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_NV_copy_image GLX_NV_copy_image
  * Extension number in OpenGL registry : 376
@@ -969,11 +969,11 @@ GLE_API bool isGLX_NV_copy_image();
 GLE_API void glXCopyImageSubDataNV(Display *dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_NV_float_buffer GLX_NV_float_buffer
  * Extension number in OpenGL registry : NA
@@ -990,11 +990,11 @@ GLE_API bool isGLX_NV_float_buffer();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_NV_multisample_coverage GLX_NV_multisample_coverage
  * Extension number in OpenGL registry : NA
@@ -1011,11 +1011,11 @@ GLE_API bool isGLX_NV_multisample_coverage();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_NV_present_video GLX_NV_present_video
  * Extension number in OpenGL registry : 347
@@ -1043,11 +1043,11 @@ GLE_API int glXBindVideoDeviceNV(Display *dpy, unsigned int video_slot, unsigned
 GLE_API unsigned int * glXEnumerateVideoDevicesNV(Display *dpy, int screen, int *nelements);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_NV_swap_group GLX_NV_swap_group
  * Extension number in OpenGL registry : 350
@@ -1095,11 +1095,11 @@ GLE_API Bool glXQuerySwapGroupNV(Display *dpy, GLXDrawable drawable, GLuint *gro
 GLE_API Bool glXResetFrameCountNV(Display *dpy, int screen);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_NV_video_capture GLX_NV_video_capture
  * Extension number in OpenGL registry : 374
@@ -1142,11 +1142,11 @@ GLE_API int glXQueryVideoCaptureDeviceNV(Display *dpy, GLXVideoCaptureDeviceNV d
 GLE_API void glXReleaseVideoCaptureDeviceNV(Display *dpy, GLXVideoCaptureDeviceNV device);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_NV_video_out GLX_NV_video_out
  * Extension number in OpenGL registry : NA
@@ -1163,11 +1163,11 @@ GLE_API bool isGLX_NV_video_out();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_NV_video_output GLX_NV_video_output
  * Extension number in OpenGL registry : 348
@@ -1215,11 +1215,11 @@ GLE_API int glXReleaseVideoImageNV(Display *dpy, GLXPbuffer pbuf);
 GLE_API int glXSendPbufferToVideoNV(Display *dpy, GLXPbuffer pbuf, int iBufferType, unsigned long *pulCounterPbuffer, GLboolean bBlock);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_OML_swap_method GLX_OML_swap_method
  * Extension number in OpenGL registry : 237
@@ -1236,11 +1236,11 @@ GLE_API bool isGLX_OML_swap_method();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_OML_sync_control GLX_OML_sync_control
  * Extension number in OpenGL registry : 238
@@ -1283,11 +1283,11 @@ GLE_API Bool glXWaitForMscOML(Display *dpy, GLXDrawable drawable, int64_t target
 GLE_API Bool glXWaitForSbcOML(Display *dpy, GLXDrawable drawable, int64_t target_sbc, int64_t *ust, int64_t *msc, int64_t *sbc);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGIS_blended_overlay GLX_SGIS_blended_overlay
  * Extension number in OpenGL registry : 142
@@ -1304,11 +1304,11 @@ GLE_API bool isGLX_SGIS_blended_overlay();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGIS_multisample GLX_SGIS_multisample
  * Extension number in OpenGL registry : 25
@@ -1325,11 +1325,11 @@ GLE_API bool isGLX_SGIS_multisample();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGIS_shared_multisample GLX_SGIS_shared_multisample
  * Extension number in OpenGL registry : NA
@@ -1346,7 +1346,7 @@ GLE_API bool isGLX_SGIS_shared_multisample();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
@@ -1377,7 +1377,7 @@ GLE_API Bool glXAssociateDMPbufferSGIX(Display *dpy, GLXPbufferSGIX pbuffer, DMp
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGIX_fbconfig GLX_SGIX_fbconfig
  * Extension number in OpenGL registry : 49
@@ -1425,11 +1425,11 @@ GLE_API GLXFBConfigSGIX glXGetFBConfigFromVisualSGIX(Display *dpy, XVisualInfo *
 GLE_API XVisualInfo * glXGetVisualFromFBConfigSGIX(Display *dpy, GLXFBConfigSGIX config);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGIX_hyperpipe GLX_SGIX_hyperpipe
  * Extension number in OpenGL registry : 307
@@ -1487,11 +1487,11 @@ GLE_API GLXHyperpipeConfigSGIX * glXQueryHyperpipeConfigSGIX(Display *dpy, int h
 GLE_API GLXHyperpipeNetworkSGIX * glXQueryHyperpipeNetworkSGIX(Display *dpy, int *npipes);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGIX_pbuffer GLX_SGIX_pbuffer
  * Extension number in OpenGL registry : 50
@@ -1534,11 +1534,11 @@ GLE_API int glXQueryGLXPbufferSGIX(Display *dpy, GLXPbufferSGIX pbuf, int attrib
 GLE_API void glXSelectEventSGIX(Display *dpy, GLXDrawable drawable, unsigned long mask);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGIX_swap_barrier GLX_SGIX_swap_barrier
  * Extension number in OpenGL registry : 92
@@ -1566,11 +1566,11 @@ GLE_API void glXBindSwapBarrierSGIX(Display *dpy, GLXDrawable drawable, int barr
 GLE_API Bool glXQueryMaxSwapBarriersSGIX(Display *dpy, int screen, int *max);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGIX_swap_group GLX_SGIX_swap_group
  * Extension number in OpenGL registry : 91
@@ -1593,11 +1593,11 @@ GLE_API bool isGLX_SGIX_swap_group();
 GLE_API void glXJoinSwapGroupSGIX(Display *dpy, GLXDrawable drawable, GLXDrawable member);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGIX_video_resize GLX_SGIX_video_resize
  * Extension number in OpenGL registry : 83
@@ -1640,7 +1640,7 @@ GLE_API int glXQueryChannelDeltasSGIX(Display *display, int screen, int channel,
 GLE_API int glXQueryChannelRectSGIX(Display *display, int screen, int channel, int *dx, int *dy, int *dw, int *dh);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
@@ -1676,7 +1676,7 @@ GLE_API void glXDestroyGLXVideoSourceSGIX(Display *dpy, GLXVideoSourceSGIX glxvi
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGIX_visual_select_group GLX_SGIX_visual_select_group
  * Extension number in OpenGL registry : 234
@@ -1693,11 +1693,11 @@ GLE_API bool isGLX_SGIX_visual_select_group();
 
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGI_cushion GLX_SGI_cushion
  * Extension number in OpenGL registry : 62
@@ -1720,11 +1720,11 @@ GLE_API bool isGLX_SGI_cushion();
 GLE_API void glXCushionSGI(Display *dpy, Window window, float cushion);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGI_make_current_read GLX_SGI_make_current_read
  * Extension number in OpenGL registry : 42
@@ -1752,11 +1752,11 @@ GLE_API GLXDrawable glXGetCurrentReadDrawableSGI(void);
 GLE_API Bool glXMakeCurrentReadSGI(Display *dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGI_swap_control GLX_SGI_swap_control
  * Extension number in OpenGL registry : 40
@@ -1779,11 +1779,11 @@ GLE_API bool isGLX_SGI_swap_control();
 GLE_API int glXSwapIntervalSGI(int interval);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SGI_video_sync GLX_SGI_video_sync
  * Extension number in OpenGL registry : 41
@@ -1811,11 +1811,11 @@ GLE_API int glXGetVideoSyncSGI(unsigned int *count);
 GLE_API int glXWaitVideoSyncSGI(int divisor, int remainder, unsigned int *count);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_SUN_get_transparent_index GLX_SUN_get_transparent_index
  * Extension number in OpenGL registry : 183
@@ -1838,11 +1838,11 @@ GLE_API bool isGLX_SUN_get_transparent_index();
 GLE_API Status glXGetTransparentIndexSUN(Display *dpy, Window overlay, Window underlay, long *pTransparentIndex);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_VERSION_1_3 GLX_VERSION_1_3
  * Extension number in OpenGL registry : NA
@@ -1950,11 +1950,11 @@ GLE_API void glXQueryDrawable(Display *dpy, GLXDrawable draw, int attribute, uns
 GLE_API void glXSelectEvent(Display *dpy, GLXDrawable draw, unsigned long event_mask);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
-#ifdef POSIX
+#ifdef __linux
 /**
  * @defgroup GLX_VERSION_1_4 GLX_VERSION_1_4
  * Extension number in OpenGL registry : NA
@@ -1977,7 +1977,7 @@ GLE_API bool isGLX_VERSION_1_4();
 GLE_API __GLXextFuncPtr glXGetProcAddress(const GLubyte *procName);
 
 //@}
-#endif //POSIX
+#endif //__linux
 
 
 
