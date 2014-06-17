@@ -305,7 +305,7 @@ void OpenGLExtensionsGen::clear()
 	// ****** GLX_SGIX_dmbuffer ******
 	isGLX_SGIX_dmbuffer = false;
 
-	glXAssociateDMPbufferSGIX = 0;
+//	glXAssociateDMPbufferSGIX = 0;
 #endif //POSIX
 
 #ifdef POSIX
@@ -375,8 +375,8 @@ void OpenGLExtensionsGen::clear()
 	// ****** GLX_SGIX_video_source ******
 	isGLX_SGIX_video_source = false;
 
-	glXCreateGLXVideoSourceSGIX = 0;
-	glXDestroyGLXVideoSourceSGIX = 0;
+//	glXCreateGLXVideoSourceSGIX = 0;
+//	glXDestroyGLXVideoSourceSGIX = 0;
 #endif //POSIX
 
 #ifdef POSIX
@@ -6642,7 +6642,7 @@ void OpenGLExtensionsGen::initializeGLX_SGI()
 
 void OpenGLExtensionsGen::initializeGLX_SGIS()
 {
-	int	localSupportedProcCount 	= 0;
+/*	int	localSupportedProcCount 	= 0;
 	int	localInitializedProcCount	= 0;
 
 #ifdef POSIX
@@ -6755,13 +6755,13 @@ void OpenGLExtensionsGen::initializeGLX_SGIS()
 
 
 #endif // ifdef POSIX
-
+*/
 } // initializeGLX_SGIS_shared_multisample()
 
 
 void OpenGLExtensionsGen::initializeGLX_SGIX()
 {
-	int	localSupportedProcCount 	= 0;
+/*	int	localSupportedProcCount 	= 0;
 	int	localInitializedProcCount	= 0;
 
 #ifdef POSIX
@@ -7218,7 +7218,7 @@ void OpenGLExtensionsGen::initializeGLX_SGIX()
 
 
 #endif // ifdef POSIX
-
+*/
 } // initializeGLX_SGIX_visual_select_group()
 
 
