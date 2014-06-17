@@ -5,9 +5,11 @@
 // Author Guillaume Brocker
 
 #include <glc_qt/glc_qt.hpp>
-
 #include <assert.h>
 #include <QWidget>
+
+#include <glc/types.hpp>
+
 
 #ifdef WIN32
 #elif defined(POSIX)
@@ -30,8 +32,11 @@ glc_drawable_t * glc_qt_drawable_create( QWidget * widget )
 	drawable->window	= (GLC_WINDOW_HANDLE) widget->winId();
 	drawable->dc		= GetDC( drawable->window );
 #elif defined(POSIX)
-	drawable->display = QX11Info::display();
-	drawable->screen  = QX11Info::appScreen();
+	drawable->window	= (GLC_WINDOW_HANDLE) widget->winId();
+	drawable->dc		= 0;	// @todo ?
+
+	drawable->display	= QX11Info::display();
+	drawable->screen	= QX11Info::appScreen();
 #else
 	#error "Platform not yet supported."
 #endif
@@ -62,7 +67,8 @@ void glc_qt_drawable_destroy( glc_drawable_t * drawable )
 #ifdef WIN32
 			int retVal = ReleaseDC( drawable->window, drawable->dc );
 #else
-			#error "Non win32 platform not yet supported."
+			// Nothing to do ?
+			//#error "Non win32 platform not yet supported."
 #endif
 			// assert( retVal == 1 && "The device context was not released." );
 			drawable->window	= 0;
