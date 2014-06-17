@@ -48,8 +48,14 @@
 
 	#include "GL/glext.h"
 	#include "GL/gleext.h"
-	#include <GL/glx.h>
-	//#include <GL/glxext.h>
+	
+	/**
+	 * Avoids to include glx, that include XLib headers, causing conflincts with Qt.
+	 */
+	#ifndef GLE_SKIP_GLX_INCLUDE
+		#include "GL/glx.h"
+		#include "GL/glxext.h"
+	#endif
 	//#include <GL/glu.h>
 
 #endif
