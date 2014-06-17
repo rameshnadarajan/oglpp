@@ -31,39 +31,6 @@ HDC hDC = GetDC( hwnd );
 // Definition of an handle to a device context
 // Definition of an handle to an OpenGL rendering context
 
-#ifdef WIN32
-	#define GLC_USE_WGL
-
-	#if defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__)
-	#define WIN32_LEAN_AND_MEAN 1
-	#include <windows.h>			// Contains all wgl functions.
-	#endif
-
-	typedef HWND	GLC_WINDOW_HANDLE;
-	typedef HDC		GLC_DC_HANDLE;
-
-	typedef HGLRC	GLC_GLRC_HANDLE;
-
-#elif __MACOSX__
-
-	#error "MacOSX not yet supported."
-
-//	typedef ?	GLC_WINDOW_HANDLE;
-//	typedef ?	GLC_DC_HANDLE;
-
-	typedef GLXContext GLC_GLRC_HANDLE;
-
-#else // POSIX
-	#define GLC_USE_GLX
-
-	#define GL_GLEXT_LEGACY
-	#include <GL/glx.h>
-
-	typedef unsigned long	GLC_WINDOW_HANDLE;
-	typedef GLXDrawable		GLC_DC_HANDLE;
-
-	typedef GLXContext	GLC_GLRC_HANDLE;
-#endif
 
 extern "C" {
 
@@ -82,56 +49,8 @@ extern "C" {
 typedef int glc_bool_t;
 
 // Internal declaration
-struct _glc_drawable_t;
-
-// Internal declaration
-typedef struct _drawable_backend_t 
-{
-	void (*destroy)( _glc_drawable_t * drawable ); ///< See glc_*_drawable_destroy()
-} drawable_backend_t;
-
-/**
- * @brief A glc_drawable_t contains informations about an object that can be drawn onto (a window or an offscreen buffer).
- *
- * @todo offscreen rendering
- */
-typedef struct _glc_drawable_t
-{
-#ifdef GLC_USE_GLX
-	Display *	display;
-	int		screen;
-#endif
-	GLC_WINDOW_HANDLE	window;
-	GLC_DC_HANDLE		dc;
-
-	drawable_backend_t *backend;
-
-	// @todo api for capabilities customization
-	int			colorSize;		///< default value is 32
-	int			depthSize;		///< default value is 24
-	int			stencilSize;	///< default value is 0
-
-	glc_bool_t	stereo;			///< default value is false. true to request a stereoscopic buffer
-
-	//
-	int isFullscreen;			///< non zero if in fullscreen, zero otherwise
-} glc_drawable_t;
-
-
-
-/**
- * @brief A glc context, as glc_t objects are named, are central to this library.
- *
- * A glc_t contains informations about an OpenGL context and its associated drawable.
- */
-typedef struct _glc_t
-{
-	GLC_GLRC_HANDLE		context;			///< the OpenGL rendering context
-	int *				contextRefCount;	///< a reference count for the OpenGL rendering context (two glc contexts could have the same OpenGL context, but with different drawables. Use case: 2 windows and one OpenGL rendering context).
-
-	glc_drawable_t *	drawable;			///< the drawable used to create the OpenGL rendering context
-	//@todo Adds backend for wgl/glx/agl/egl
-} glc_t;
+struct glc_drawable_t;
+struct glc_t;
 
 
 /**
@@ -282,6 +201,13 @@ GLC_API glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t want
  * @todo renames glc_drawable_is_fullscreen => glc_is_fullscreen
  */
 GLC_API glc_bool_t glc_drawable_is_fullscreen( glc_t * context );
+
+
+
+/**
+ * @brief Enables/disables the stereo buffer of the given drawable.
+ */
+GLC_API void glc_drawable_set_stereo( glc_drawable_t * drawable, glc_bool_t stereo );
 
 
 

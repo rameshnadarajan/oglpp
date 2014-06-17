@@ -19,6 +19,8 @@
 #endif
 
 
+#include "glc/types.hpp"
+
 
 // PRIVATE FUNCTION
 /**
@@ -500,4 +502,10 @@ glc_bool_t glc_drawable_is_fullscreen( glc_t * context )
 	// @todo glc_status()
 
 	return context->drawable->isFullscreen;
+}
+
+
+void glc_drawable_set_stereo( glc_drawable_t * drawable, glc_bool_t stereo )
+{
+	drawable->stereo = stereo;
 }
