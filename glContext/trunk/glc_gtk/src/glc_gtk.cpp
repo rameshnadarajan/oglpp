@@ -6,6 +6,7 @@
 #include "glc_gtk/glc_gtk.hpp"
 
 #include <assert.h>
+#include <glc/types.hpp>
 
 #ifdef WIN32
 	#include <gdk/gdkwin32.h>		// for GDK_WINDOW_HWND()
