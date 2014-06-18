@@ -6,7 +6,7 @@
 #include "glc_gtkmm/glc_gtkmm.hpp"
 
 #include <assert.h>
-
+#include <glc/types.hpp>
 
 
 glc_drawable_t * glc_gtkmm_drawable_create( Gtk::DrawingArea * drawingArea )

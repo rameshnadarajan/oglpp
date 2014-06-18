@@ -11,6 +11,10 @@
 #include <glc_gtk/glc_gtk.hpp>
 #include <gtkmm/drawingarea.h>
 
+
+struct glc_drawable_t;
+
+
 extern "C"
 {
 

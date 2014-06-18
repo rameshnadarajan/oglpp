@@ -11,6 +11,10 @@
 #include <glc/glc.hpp>
 #include <gtk/gtk.h>
 
+
+struct glc_drawable_t;
+
+
 extern "C"
 {
 

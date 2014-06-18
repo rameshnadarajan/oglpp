@@ -5,11 +5,14 @@
 
 #include "glc_gtkmm/GLDrawingArea.hpp"
 
+#ifdef WIN32
+	#include <windows.h>
+#endif
+#include <GL/gl.h>
 #include <cassert>
 #include <iostream>
-#include "glc_gtkmm/glc_gtkmm.hpp"
-#include <GL/gl.h>
 
+#include "glc_gtkmm/glc_gtkmm.hpp"
 
 
 namespace
