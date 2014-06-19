@@ -80,8 +80,8 @@
 	attributes[index++] = 8;
 	attributes[index++] = GLX_BLUE_SIZE;
 	attributes[index++] = 8;
-	attributes[index++] = GLX_ALPHA_SIZE;
-	attributes[index++] = 8;
+	/*attributes[index++] = GLX_ALPHA_SIZE;
+	attributes[index++] = 8;*/
 	attributes[index++] = GLX_DOUBLEBUFFER;
 	attributes[index++] = GLX_DEPTH_SIZE;
 	attributes[index++] = drawable->depthSize;
@@ -326,7 +326,7 @@ glc_bool_t glc_set_current( glc_t * context )
 #elif defined(GLC_USE_GLX)
 	Bool success = glXMakeCurrent(
 		context->drawable->display,
-		context->drawable->dc,
+        context->drawable->window,
 		context->context );
 
 	return success == True ? 1 : 0;
@@ -398,7 +398,7 @@ glc_bool_t glc_swap( glc_t * context )
 #ifdef GLC_USE_WGL
 	retVal = SwapBuffers( context->drawable->dc ) == TRUE ? 1 : 0;
 #else
-	glXSwapBuffers( context->drawable->display, context->drawable );
+    glXSwapBuffers( context->drawable->display, context->drawable->window );
 	retVal = true;
 #endif
 

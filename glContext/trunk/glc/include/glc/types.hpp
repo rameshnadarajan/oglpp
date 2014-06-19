@@ -36,8 +36,7 @@ extern "C" {
 	#define GL_GLEXT_LEGACY
 	#include <GL/glx.h>
 
-	typedef unsigned long	GLC_WINDOW_HANDLE;
-	typedef GLXDrawable		GLC_DC_HANDLE;
+    typedef GLXDrawable	GLC_WINDOW_HANDLE;
 
 	typedef GLXContext	GLC_GLRC_HANDLE;
 #endif
@@ -59,11 +58,13 @@ struct drawable_backend_t
 struct glc_drawable_t
 {
 #ifdef GLC_USE_GLX
-	Display *	display;
-	int		screen;
+    Display *           display;
+    int                 screen;
 #endif
 	GLC_WINDOW_HANDLE	window;
+#ifdef WIN32
 	GLC_DC_HANDLE		dc;
+#endif
 
 	drawable_backend_t *backend;
 
