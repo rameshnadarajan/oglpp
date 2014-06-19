@@ -33,7 +33,6 @@ glc_drawable_t * glc_qt_drawable_create( QWidget * widget )
 	drawable->dc		= GetDC( drawable->window );
 #elif defined(POSIX)
 	drawable->window	= (GLC_WINDOW_HANDLE) widget->winId();
-	drawable->dc		= 0;	// @todo ?
 
 	drawable->display	= QX11Info::display();
 	drawable->screen	= QX11Info::appScreen();
@@ -47,7 +46,9 @@ glc_drawable_t * glc_qt_drawable_create( QWidget * widget )
 
 	// @todo glc_qt_drawable_status()
 	assert( drawable->window != 0 );
-	assert( drawable->dc != 0 );
+#ifdef WIN32
+    assert( drawable->dc != 0 );
+#endif
 	assert( drawable->backend != 0 );
 
 	return drawable;
@@ -61,19 +62,27 @@ void glc_qt_drawable_destroy( glc_drawable_t * drawable )
 
 	if ( drawable != 0)
 	{
-		if (	(drawable->window != 0)	&&
+#ifdef WIN32
+        if (	(drawable->window != 0)	&&
 				(drawable->dc != 0)	)
 		{
-#ifdef WIN32
 			int retVal = ReleaseDC( drawable->window, drawable->dc );
+
+            // assert( retVal == 1 && "The device context was not released." );
+            drawable->window	= 0;
+            drawable->dc		= 0;
+        }
+#elif defined(POSIX)
+        if ( drawable->window != 0 )
+        {
+            drawable->window	= 0;
+            drawable->display   = 0;
+            drawable->screen    = 0;
+        }
 #else
 			// Nothing to do ?
-			//#error "Non win32 platform not yet supported."
+            #error "Platform not yet supported."
 #endif
-			// assert( retVal == 1 && "The device context was not released." );
-			drawable->window	= 0;
-			drawable->dc		= 0;
-		}
 		else
 		{
 			assert( false && "Internal error." );
