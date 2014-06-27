@@ -9,7 +9,7 @@ from SCons.Script.SConscript import SConsEnvironment
 sbf			= SConsEnvironment.sbf
 platform	= sbf.myPlatform
 
-if platform == 'win32' :
+if platform == 'win' :
 	stdlibs = [ 'User32' ] # for GetDC and ReleaseDC
 
 deps		= [ '../glc' ]
