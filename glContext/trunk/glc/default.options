@@ -6,5 +6,5 @@ uses		= ['opengl']
 
 from SCons.Script.SConscript import SConsEnvironment
 platform = SConsEnvironment.sbf.myPlatform
-if platform == 'win32':
+if platform == 'win':
 	stdlibs = ['kernel32']	# for LoadLibrary()
