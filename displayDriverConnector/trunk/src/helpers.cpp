@@ -20,7 +20,7 @@ std::vector< std::string > split_string( const std::string inputString, const ch
 	std::vector< std::string > retVal;
 
 	std::string str(inputString);
-	unsigned int position;
+	std::size_t position;
 	while (	(position=str.find(separator)) != std::string::npos )
 	{
 		retVal.push_back( str.substr(0, position) );
