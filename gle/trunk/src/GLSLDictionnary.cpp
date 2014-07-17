@@ -130,7 +130,23 @@ static std::string glsldictionnaryKeywords[] =
 	"uperp switch template this true typedef uimage1D uimage1DArray uimage2D uimage2DArray uimage2DMS uimage2DMSArray uimage2"
 	"DRect uimage3D uimageBuffer uimageCube uimageCubeArray uint uniform union unsigned usampler1D usampler1DArray usampler2D"
 	" usampler2DArray usampler2DMS usampler2DMSArray usampler2DRect usampler3D usamplerBuffer usamplerCube usamplerCubeArray "
-	"using uvec2 uvec3 uvec4 varying vec2 vec3 vec4 void volatile while writeonly"
+	"using uvec2 uvec3 uvec4 varying vec2 vec3 vec4 void volatile while writeonly",
+	"active asm atomic_uint attribute bool break buffer bvec2 bvec3 bvec4 case cast centroid class coherent common const cont"
+	"inue default discard dmat2 dmat2x2 dmat2x3 dmat2x4 dmat3 dmat3x2 dmat3x3 dmat3x4 dmat4 dmat4x2 dmat4x3 dmat4x4 do double"
+	" dvec2 dvec3 dvec4 else enum extern external false filter fixed flat float for fvec2 fvec3 fvec4 goto half highp hvec2 h"
+	"vec3 hvec4 if iimage1D iimage1DArray iimage2D iimage2DArray iimage2DMS iimage2DMSArray iimage2DRect iimage3D iimageBuffe"
+	"r iimageCube iimageCubeArray image1D image1DArray image2D image2DArray image2DMS image2DMSArray image2DRect image3D imag"
+	"eBuffer imageCube imageCubeArray in inline inout input int interface invariant isampler1D isampler1DArray isampler2D isa"
+	"mpler2DArray isampler2DMS isampler2DMSArray isampler2DRect isampler3D isamplerBuffer isamplerCube isamplerCubeArray ivec"
+	"2 ivec3 ivec4 layout long lowp mat2 mat2x2 mat2x3 mat2x4 mat3 mat3x2 mat3x3 mat3x4 mat4 mat4x2 mat4x3 mat4x4 mediump nam"
+	"espace noinline noperspective out output partition patch precise precision public readonly resource restrict return samp"
+	"le sampler1D sampler1DArray sampler1DArrayShadow sampler1DShadow sampler2D sampler2DArray sampler2DArrayShadow sampler2D"
+	"MS sampler2DMSArray sampler2DRect sampler2DRectShadow sampler2DShadow sampler3D sampler3DRect samplerBuffer samplerCube "
+	"samplerCubeArray samplerCubeArrayShadow samplerCubeShadow shared short sizeof smooth static struct subroutine superp swi"
+	"tch template this true typedef uimage1D uimage1DArray uimage2D uimage2DArray uimage2DMS uimage2DMSArray uimage2DRect uim"
+	"age3D uimageBuffer uimageCube uimageCubeArray uint uniform union unsigned usampler1D usampler1DArray usampler2D usampler"
+	"2DArray usampler2DMS usampler2DMSArray usampler2DRect usampler3D usamplerBuffer usamplerCube usamplerCubeArray using uve"
+	"c2 uvec3 uvec4 varying vec2 vec3 vec4 void volatile while writeonly"
 };
 
 static std::string glsldictionnaryVariable[] = 
@@ -273,7 +289,25 @@ static std::string glsldictionnaryVariable[] =
 	"_SecondaryColor gl_TessCoord gl_TessLevelInner[2] gl_TessLevelOuter[4] gl_TexCoord[3] gl_TexCoord[4] gl_TexCoord[] gl_Te"
 	"xtureEnvColor[gl_MaxTextureUnits] gl_TextureMatrix[gl_MaxTextureCoords] gl_TextureMatrixInverse[gl_MaxTextureCoords] gl_"
 	"TextureMatrixInverseTranspose[gl_MaxTextureCoords] gl_TextureMatrixTranspose[gl_MaxTextureCoords] gl_Vertex gl_VertexID "
-	"gl_ViewportIndex gl_WorkGroupID gl_WorkGroupSize"
+	"gl_ViewportIndex gl_WorkGroupID gl_WorkGroupSize",
+	"gl_BackColor gl_BackLightModelProduct gl_BackLightProduct[gl_MaxLights] gl_BackMaterial gl_BackSecondaryColor gl_ClipDis"
+	"tance[4] gl_ClipDistance[] gl_ClipPlane[gl_MaxClipPlanes] gl_ClipVertex gl_Color gl_DepthRange gl_EyePlaneQ[gl_MaxTextur"
+	"eCoords] gl_EyePlaneR[gl_MaxTextureCoords] gl_EyePlaneS[gl_MaxTextureCoords] gl_EyePlaneT[gl_MaxTextureCoords] gl_Fog gl"
+	"_FogCoord gl_FogFragCoord gl_FragColor gl_FragCoord gl_FragData[gl_MaxDrawBuffers] gl_FragDepth gl_FrontColor gl_FrontFa"
+	"cing gl_FrontLightModelProduct gl_FrontLightProduct[gl_MaxLights] gl_FrontMaterial gl_FrontSecondaryColor gl_GlobalInvoc"
+	"ationID gl_in[] gl_in[gl_MaxPatchVertices] gl_InstanceID gl_InvocationID gl_Layer gl_LightModel gl_LightSource[gl_MaxLig"
+	"hts] gl_LocalInvocationID gl_LocalInvocationID.x gl_LocalInvocationIndex gl_ModelViewMatrix gl_ModelViewMatrixInverse gl"
+	"_ModelViewMatrixInverseTranspose gl_ModelViewMatrixTranspose gl_ModelViewProjectionMatrix gl_ModelViewProjectionMatrixIn"
+	"verse gl_ModelViewProjectionMatrixInverseTranspose gl_ModelViewProjectionMatrixTranspose gl_MultiTexCoord0 gl_MultiTexCo"
+	"ord1 gl_MultiTexCoord2 gl_MultiTexCoord3 gl_MultiTexCoord4 gl_MultiTexCoord5 gl_MultiTexCoord6 gl_MultiTexCoord7 gl_Norm"
+	"al gl_NormalMatrix gl_NormalScale gl_NumSamples gl_NumWorkGroups gl_ObjectPlaneQ[gl_MaxTextureCoords] gl_ObjectPlaneR[gl"
+	"_MaxTextureCoords] gl_ObjectPlaneS[gl_MaxTextureCoords] gl_ObjectPlaneT[gl_MaxTextureCoords] gl_out[] gl_PatchVerticesIn"
+	" gl_Point gl_PointCoord gl_PointSize gl_Position gl_PrimitiveID gl_PrimitiveIDIn gl_ProjectionMatrix gl_ProjectionMatrix"
+	"Inverse gl_ProjectionMatrixInverseTranspose gl_ProjectionMatrixTranspose gl_SampleID gl_SampleMask[] gl_SampleMaskIn[] g"
+	"l_SamplePosition gl_SecondaryColor gl_TessCoord gl_TessLevelInner[2] gl_TessLevelOuter[4] gl_TexCoord[3] gl_TexCoord[4] "
+	"gl_TexCoord[] gl_TextureEnvColor[gl_MaxTextureUnits] gl_TextureMatrix[gl_MaxTextureCoords] gl_TextureMatrixInverse[gl_Ma"
+	"xTextureCoords] gl_TextureMatrixInverseTranspose[gl_MaxTextureCoords] gl_TextureMatrixTranspose[gl_MaxTextureCoords] gl_"
+	"Vertex gl_VertexID gl_ViewportIndex gl_WorkGroupID gl_WorkGroupSize"
 };
 
 static std::string glsldictionnaryFunctions[] = 
@@ -364,7 +398,22 @@ static std::string glsldictionnaryFunctions[] =
 	"sets textureGrad textureGradOffset textureLod textureLodOffset textureOffset textureProj textureProjGrad textureProjGrad"
 	"Offset textureProjLod textureProjLodOffset textureProjOffset textureQueryLevels textureQueryLod textureSize transpose tr"
 	"unc uaddCarry uintBitsToFloat umulExtended unpackDouble2x32 unpackHalf2x16 unpackSnorm2x16 unpackSnorm4x8 unpackUnorm2x1"
-	"6 unpackUnorm4x8 usubBorrow"
+	"6 unpackUnorm4x8 usubBorrow",
+	"abs acos acosh all any asin asinh atan atanh atomicAdd atomicAnd atomicCompSwap atomicCounter atomicCounterDecrement ato"
+	"micCounterIncrement atomicExchange atomicMax atomicMin atomicOr atomicXor barrier bitCount bitfieldExtract bitfieldInser"
+	"t bitfieldReverse ceil clamp cos cosh cross degrees determinant dFdx dFdy distance dot EmitStreamVertex EmitVertex EndPr"
+	"imitive EndStreamPrimitive equal exp exp2 faceforward findLSB findMSB flat floatBitsToInt floatBitsToUint floor fma frac"
+	"t frexp ftransform fwidth greaterThan greaterThanEqual groupMemoryBarrier imageAtomicAdd imageAtomicAnd imageAtomicExcha"
+	"nge imageAtomicMax imageAtomicMin imageAtomicOr imageAtomicXor imageLoad imageSize imageStore imulExtended intBitsToFloa"
+	"t interpolateAtCentroid interpolateAtOffset interpolateAtSample inverse inversesqrt isinf isnan ldexp length lessThan le"
+	"ssThanEqual log log2 matrixCompMult max memoryBarrier memoryBarrierAtomicCounter memoryBarrierBuffer memoryBarrierImage "
+	"memoryBarrierShared min mix mod modf noise1 noise2 noise3 noise4 normalize not notEqual outerProduct packDouble2x32 pack"
+	"Half2x16 packSnorm2x16 packSnorm4x8 packUnorm2x16 packUnorm4x8 pow precise radians reflect refract round roundEven sign "
+	"sin sinh smoothstep sqrt step tan tanh texelFetch texelFetchOffset texture textureGather textureGatherOffset textureGath"
+	"erOffsets textureGrad textureGradOffset textureLod textureLodOffset textureOffset textureProj textureProjGrad texturePro"
+	"jGradOffset textureProjLod textureProjLodOffset textureProjOffset textureQueryLevels textureQueryLod textureSize transpo"
+	"se trunc uaddCarry uintBitsToFloat umulExtended unpackDouble2x32 unpackHalf2x16 unpackSnorm2x16 unpackSnorm4x8 unpackUno"
+	"rm2x16 unpackUnorm4x8 usubBorrow"
 };
 
 
