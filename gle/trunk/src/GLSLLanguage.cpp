@@ -1,7 +1,8 @@
-// GLSLLanguage - Copyright (C) 2012, Alexandre Di Pino.
+// GLSLLanguage - Copyright (C) 2012, 2014, Alexandre Di Pino, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Alexandre Di Pino
+// Author Nicolas Papier
 
 #include <algorithm>
 #include <ctype.h>
@@ -14,7 +15,7 @@
 
 #include "gle/GLSLLanguage.hpp"
 #include "gle/glHelpers.hpp"
-#include "GLSLDictionnary.cpp"
+#include "GLSLDictionary.cpp"
 
 
 namespace gle
