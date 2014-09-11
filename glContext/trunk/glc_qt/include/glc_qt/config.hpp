@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2012, Nicolas Papier.
+// OGLPP - Copyright (C) 2012, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Bryan Schuller
@@ -13,7 +13,7 @@
  *
  * This library provides the needed cross-platform API to add OpenGL capabilities to Qt.
  *
- * @sa http://qt.nokia.com/
+ * @sa http://qt-project.org/
  *
  * \b glc_qt is open source (LGPL).
  */
