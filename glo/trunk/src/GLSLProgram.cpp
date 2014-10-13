@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2007, 2008, 2012, 2013, Nicolas Papier, Alexandre Di Pino.
+// GLE - Copyright (C) 2005, 2007, 2008, 2012, 2013, 2014, Nicolas Papier, Alexandre Di Pino.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -14,6 +14,18 @@
 
 namespace glo
 {
+
+
+
+/**
+ * @brief Returns true if the given log is 'interesting', false otherwise.
+ *
+ * @remark NVidia drivers on Windows returns always non empty log (containing one /0). So short logs (i.e equal or less that 2 characters) are removed.
+*/
+const bool isLogInteresting( const std::string& log )
+{
+	return log.size() > 2;
+}
 
 
 
@@ -120,7 +132,7 @@ const bool GLSLProgram::addShader( const GLchar *shaderSource, const ShaderType 
 	std::string strShaderLog = getShaderInfoLog( object );
 	m_shaderInfo[shaderType].shaderLog = strShaderLog;
 
-	if ( !strShaderLog.empty() )
+	if ( isLogInteresting(strShaderLog) )
 	{
 		std::cerr << " --" << std::endl;
 		std::cerr << "Shader " << object;
@@ -177,7 +189,7 @@ const bool GLSLProgram::link( const bool doValidation )
 
 	m_linkLog = getProgramInfoLog( getProgramObject() );
 
-	if ( !m_linkLog.empty() )
+	if ( isLogInteresting(m_linkLog) )
 	{
 		std::cerr << " --" << std::endl;
 		std::cerr << "Program " << getProgramObject();
@@ -219,7 +231,7 @@ const bool GLSLProgram::validate()
 
 	std::string strInfoLog = getProgramInfoLog( getProgramObject() );
 
-	if ( !strInfoLog.empty() )
+	if ( isLogInteresting(strInfoLog) )
 	{
 		// There is a log
 		m_linkLog += "Validation log:\n";
