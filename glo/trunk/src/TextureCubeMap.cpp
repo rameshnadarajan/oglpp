@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2010, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2010, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -65,7 +65,7 @@ void TextureCubeMap::texImage(	const GLuint targetIndex,
 		m_width		= width;
 		m_height	= height;
 
-		m_internalFormat = internalFormat;		
+		m_internalFormat = internalFormat;
 	}
 }
 
@@ -105,12 +105,12 @@ const GLenum TextureCubeMap::getTarget( const int target ) const
 
 
 GLenum TextureCubeMap::m_cubeMapTarget[] = {
-	GL_TEXTURE_CUBE_MAP_POSITIVE_X_ARB,
-	GL_TEXTURE_CUBE_MAP_NEGATIVE_X_ARB,
-	GL_TEXTURE_CUBE_MAP_POSITIVE_Y_ARB,
-	GL_TEXTURE_CUBE_MAP_NEGATIVE_Y_ARB,
-	GL_TEXTURE_CUBE_MAP_POSITIVE_Z_ARB,
-	GL_TEXTURE_CUBE_MAP_NEGATIVE_Z_ARB
+	GL_TEXTURE_CUBE_MAP_POSITIVE_X,
+	GL_TEXTURE_CUBE_MAP_NEGATIVE_X,
+	GL_TEXTURE_CUBE_MAP_POSITIVE_Y,
+	GL_TEXTURE_CUBE_MAP_NEGATIVE_Y,
+	GL_TEXTURE_CUBE_MAP_POSITIVE_Z,
+	GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
 };
 
 

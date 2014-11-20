@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2013, Nicolas Papier.
+// GLE - Copyright (C) 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -16,6 +16,8 @@ namespace glo
  * @name OpenGL API usage
  *
  * DSA usage is DISABLED by default.
+ *
+ * @remark DSA, a shortcut for (D)irect (S)tate (A)ccess api, is not available in OpenGL ES 2, so it has no effect on OpenGL state and usage.
  */
 //@{
 
@@ -45,6 +47,10 @@ GLO_API const bool setDSAEnabled( const bool enabled = true );
 
 
 
+#ifdef __OPENGLES2__
+	// No Matrix manipulation commands
+#else
+
 /**
  * @name Matrix manipulation commands
  */
@@ -61,6 +67,8 @@ GLO_API void ortho( GLenum mode, GLdouble left, GLdouble right, GLdouble bottom,
 GLO_API void frustum( GLenum mode, GLdouble left, GLdouble right, GLdouble bottom, GLdouble top, GLdouble zNear, GLdouble zFar );
 
 //@}
+
+#endif	// #ifdef __OPENGLES2__
 
 }
 

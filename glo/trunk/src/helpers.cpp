@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2013, Nicolas Papier.
+// GLE - Copyright (C) 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -39,6 +39,10 @@ const bool setDSAEnabled( const bool enabled )
 {
 	bool retVal = g_isDSAEnabled;
 
+#ifdef __OPENGLES2__
+
+#else
+
 	if ( enabled )
 	{
 		if (isGL_EXT_direct_state_access())
@@ -59,10 +63,15 @@ const bool setDSAEnabled( const bool enabled )
 		g_isDSAEnabled = false;
 	}
 
+#endif	// #ifdef __OPENGLES2__
+
 	return retVal;
 }
 
 
+#ifdef __OPENGLES2__
+	// No Matrix manipulation commands
+#else
 // Matrix manipulation commands
 void loadIdentity( GLenum mode )
 {
@@ -160,6 +169,7 @@ void frustum( GLenum mode, GLdouble left, GLdouble right, GLdouble bottom, GLdou
 		glFrustum( left, right, bottom, top, zNear, zFar );
 	}
 }
+#endif	// #ifdef __OPENGLES2__
 
 
 } // namespace glo

@@ -17,6 +17,10 @@ namespace glo
 
 
 
+namespace
+{
+
+
 /**
  * @brief Returns true if the given log is 'interesting', false otherwise.
  *
@@ -28,36 +32,57 @@ const bool isLogInteresting( const std::string& log )
 }
 
 
+GLenum m_GLEnumShaderType[] = 
+#ifdef __OPENGLES2__
+{
+	GL_VERTEX_SHADER,
+	GL_FRAGMENT_SHADER
+};
+#else	// #ifdef __OPENGLES2__
+{
+	GL_VERTEX_SHADER,
+	GL_TESS_CONTROL_SHADER, 
+	GL_TESS_EVALUATION_SHADER,
+	GL_GEOMETRY_SHADER,
+	GL_FRAGMENT_SHADER
+};
+#endif	// #ifdef __OPENGLES2__ #else
 
-const GLenum GLSLProgram::convertShaderType2GLEnum( const ShaderType shaderType )
+
+std::string m_stringShaderType[] =
+#ifdef __OPENGLES2__
+{
+	"VERTEX",
+	"FRAGMENT"
+};
+#else	// #ifdef __OPENGLES2__
+{
+	"VERTEX",
+	"TESSELLATION_CONTROL", 
+	"TESSELLATION_EVALUATION",
+	"GEOMETRY",
+	"FRAGMENT"
+};
+#endif	// #ifdef __OPENGLES2__ #else
+
+
+const GLenum convertShaderType2GLEnum( const GLSLProgram::ShaderType shaderType )
 {
 	return m_GLEnumShaderType[shaderType];
 }
 
-
-const std::string& GLSLProgram::convertShaderType2String( const ShaderType shaderType )
+const std::string& convertShaderType2String( const GLSLProgram::ShaderType shaderType )
 {
 	return m_stringShaderType[shaderType];
 }
 
 
+}
 
-GLSLProgram::GLSLProgram( bool initialized )
+
+
+GLSLProgram::GLSLProgram( const bool initialized )
 {
-	if ( m_firstInstance )
-	{
-		if (	!isGL_ARB_shader_objects()	||
-				!isGL_ARB_vertex_shader()	||
-				!isGL_ARB_fragment_shader()
-			)
-		{
-			std::cerr << "glo.GLSLProgram: GLSL is not supported" << std::endl;
-			return;
-		}
-
-		m_firstInstance = false;
-	}
-
 	if ( initialized )
 	{
 		m_programObject = glCreateProgram();
@@ -74,6 +99,9 @@ GLSLProgram::GLSLProgram( bool initialized )
 
 GLSLProgram::~GLSLProgram()
 {
+#ifdef __OPENGLES2__
+	release();
+#else
 	if ( gleGetCurrent() )
 	{
 		release();
@@ -82,16 +110,24 @@ GLSLProgram::~GLSLProgram()
 	{
 		std::cerr << "Unable to release program object " << m_programObject << "." << std::endl;
 	}
+#endif	// #ifdef __OPENGLES2__
 }
 
 
 
 void GLSLProgram::release()
 {
-	if ( m_programObject != 0 && gleGetCurrent() )
+	if ( m_programObject != 0  )
 	{
+#ifdef __OPENGLES2__
 		glDeleteProgram( m_programObject );
-		// @todo glDetachShader, glDeleteShader ?
+#else	// #ifdef __OPENGLES2__
+		if ( gleGetCurrent() )
+		{
+			glDeleteProgram( m_programObject );
+			// @todo glDetachShader, glDeleteShader ?
+		}
+#endif	// #ifdef __OPENGLES2__
 	}
 }
 
@@ -480,67 +516,102 @@ void GLSLProgram::setUniformMatrix4fv( const std::string & name, const GLfloat *
 
 void GLSLProgram::setUniformMatrix2x3fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
 {
+#ifdef __OPENGLES2__
+
+	#pragma message("GLSLProgram::setUniformMatrix2x3fv(): not implemented in ES2")
+	assert( false );
+
+#else
+
 	const GLint loc = getUniformLocation( name );
 	assert( value != 0 );
 	assert( count != 0 );
 
 	if ( loc != -1 )	glUniformMatrix2x3fv( loc, count, transpose, value );
+
+#endif	// #ifdef __OPENGLES2__
 }
 
 void GLSLProgram::setUniformMatrix3x2fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
 {
+#ifdef __OPENGLES2__
+
+	#pragma message("GLSLProgram::setUniformMatrix3x2fv(): not implemented in ES2")
+	assert( false );
+
+#else
 	const GLint loc = getUniformLocation( name );
 	assert( value != 0 );
 	assert( count != 0 );
 
 	if ( loc != -1 )	glUniformMatrix3x2fv( loc, count, transpose, value );
+
+#endif	// #ifdef __OPENGLES2__
 }
 
 void GLSLProgram::setUniformMatrix2x4fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
 {
+#ifdef __OPENGLES2__
+
+	#pragma message("GLSLProgram::setUniformMatrix3x2fv(): not implemented in ES2")
+	assert( false );
+
+#else
 	const GLint loc = getUniformLocation( name );
 	assert( value != 0 );
 	assert( count != 0 );
 
 	if ( loc != -1 )	glUniformMatrix2x4fv( loc, count, transpose, value );
+#endif	// #ifdef __OPENGLES2__
 }
 
 void GLSLProgram::setUniformMatrix4x2fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
 {
+#ifdef __OPENGLES2__
+
+	#pragma message("GLSLProgram::setUniformMatrix3x2fv(): not implemented in ES2")
+	assert( false );
+
+#else
 	const GLint loc = getUniformLocation( name );
 	assert( value != 0 );
 	assert( count != 0 );
 
 	if ( loc != -1 )	glUniformMatrix4x2fv( loc, count, transpose, value );
+#endif	// #ifdef __OPENGLES2__
 }
 
 void GLSLProgram::setUniformMatrix3x4fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
 {
+#ifdef __OPENGLES2__
+
+	#pragma message("GLSLProgram::setUniformMatrix3x2fv(): not implemented in ES2")
+	assert( false );
+
+#else
 	const GLint loc = getUniformLocation( name );
 	assert( value != 0 );
 	assert( count != 0 );
 
 	if ( loc != -1 )	glUniformMatrix3x4fv( loc, count, transpose, value );
+#endif	// #ifdef __OPENGLES2__
 }
 
 void GLSLProgram::setUniformMatrix4x3fv( const std::string & name, const GLfloat * value, const GLboolean transpose, const GLsizei count )
 {
+#ifdef __OPENGLES2__
+
+	#pragma message("GLSLProgram::setUniformMatrix3x2fv(): not implemented in ES2")
+	assert( false );
+
+#else
 	const GLint loc = getUniformLocation( name );
 	assert( value != 0 );
 	assert( count != 0 );
 
 	if ( loc != -1 )	glUniformMatrix4x3fv( loc, count, transpose, value );
+#endif	// #ifdef __OPENGLES2__
 }
-
-
-// GL_ARB_separate_shader_objects : DSA style api
-void GLSLProgram::setProgramUniform1i( const std::string & name, const GLint v1 )
-{
-	const GLint loc = getUniformLocation( name );
-
-	if ( loc != -1 )	glProgramUniform1i( getProgramObject(), loc, v1 );
-}
-
 
 
 // QUERIES
@@ -595,6 +666,24 @@ const std::string GLSLProgram::toString( const GLenum type ) const
 		case GL_FLOAT_VEC4:
 			return "vec4";
 
+		case GL_INT:
+			return "int";
+		case GL_INT_VEC2:
+			return "ivec2";
+		case GL_INT_VEC3:
+			return "ivec3";
+		case GL_INT_VEC4:
+			return "ivec4";
+
+		case GL_BOOL:
+			return "bool";
+		case GL_BOOL_VEC2:
+			return "bvec2";
+		case GL_BOOL_VEC3:
+			return "bvec3";
+		case GL_BOOL_VEC4:
+			return "bvec4";
+
 		case GL_FLOAT_MAT2:
 			return "mat2";
 		case GL_FLOAT_MAT3:
@@ -602,17 +691,19 @@ const std::string GLSLProgram::toString( const GLenum type ) const
 		case GL_FLOAT_MAT4:
 			return "mat4";
 
-		case GL_SAMPLER_1D:
-			return "sampler1D";
 		case GL_SAMPLER_2D:
 			return "sampler2D";
-		case GL_SAMPLER_3D:
-			return "sampler3D";
 		case GL_SAMPLER_CUBE:
 			return "samplerCube";
+#ifndef __OPENGLES2__
+		case GL_SAMPLER_1D:
+			return "sampler1D";
+		case GL_SAMPLER_3D:
+			return "sampler3D";
 
 		case GL_SAMPLER_2D_SHADOW:
 			return "sampler2DShadow";
+#endif // #ifndef __OPENGLES2__
 
 		// @todo support all types (http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniform.xml)
 
@@ -728,31 +819,6 @@ const std::string GLSLProgram::getProgramInfoLog( GLuint object )
 
 	return strInfoLog;
 }
-
-
-
-GLenum GLSLProgram::m_GLEnumShaderType[] = 
-{
-	GL_VERTEX_SHADER,
-	GL_TESS_CONTROL_SHADER, 
-	GL_TESS_EVALUATION_SHADER,
-	GL_GEOMETRY_SHADER,
-	GL_FRAGMENT_SHADER
-};
-
-
-std::string GLSLProgram::m_stringShaderType[] =
-{
-	"VERTEX",
-	"TESSELLATION_CONTROL", 
-	"TESSELLATION_EVALUATION",
-	"GEOMETRY",
-	"FRAGMENT"
-};
-
-
-
-bool GLSLProgram::m_firstInstance = true;
 
 
 

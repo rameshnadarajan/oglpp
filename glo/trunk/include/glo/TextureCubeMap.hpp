@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2010, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2010, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -14,7 +14,7 @@ namespace glo
 {
 
 /**
- * @brief Encapsulation of a cube map texture object.
+ * @brief Encapsulation of a cube map texture object
  *
  * This texture is a set of six 2D images representing the faces of a cube.
  */

@@ -6,6 +6,10 @@
 #include "glo/Texture2DRect.hpp"
 
 
+#ifdef __OPENGLES2__
+	// No 2D rectangular Texture in GLES 2
+	#pragma message("No 2D rectangular Texture in GLES 2")
+#else
 
 namespace glo
 {
@@ -39,3 +43,5 @@ const bool Texture2DRect::isBound() const
 
 
 } // namespace glo
+
+#endif // #ifdef __OPENGLES2__

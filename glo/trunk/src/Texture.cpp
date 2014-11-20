@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2008, 2010, 2012, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2008, 2010, 2012, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -28,6 +28,9 @@ Texture::Texture()
 
 Texture::~Texture()
 {
+#ifdef __OPENGLES2__
+	release();
+#else
 	if ( gleGetCurrent() )
 	{
 		release();
@@ -36,6 +39,7 @@ Texture::~Texture()
 	{
 		std::cerr << "Unable to release texture object " << m_object << "." << std::endl;
 	}
+#endif	// #ifdef __OPENGLES2__
 }
 
 
@@ -91,8 +95,8 @@ void Texture::bindToDefault() const
 
 void Texture::active( const GLenum unit )
 {
-	assert( unit >= GL_TEXTURE0_ARB && "Unexpected value" );
-	assert( unit <= GL_TEXTURE31_ARB && "Unexpected value" );
+	assert( unit >= GL_TEXTURE0 && "Unexpected value" );
+	assert( unit <= GL_TEXTURE31 && "Unexpected value" );
 	glActiveTexture( unit );
 }
 
@@ -128,46 +132,66 @@ void Texture::parameter( const GLenum pname, GLfloat * fp )
 
 void Texture::setAutomaticMipmapGenerationEnabled( const bool isEnabled )
 {
+#ifdef __OPENGLES2__
+#else
 	parameter( GL_GENERATE_MIPMAP, isEnabled );
+#endif	// #ifdef __OPENGLES2__
 }
 
 
 
 void Texture::generateMipmap()
 {
+#ifdef __OPENGLES2__
+#else
 	glGenerateMipmap( m_target );
+#endif	// #ifdef __OPENGLES2__
 }
 
 
 
 void Texture::setMaxAnisotropy( const float value )
 {
+#ifdef __OPENGLES2__
+#else
 	assert( value >= 1.f );
 	assert( value <= getMaxAllowedMaxAnisotropy() );
 
 	parameter( GL_TEXTURE_MAX_ANISOTROPY_EXT, value );
+#endif	// #ifdef __OPENGLES2__
+
 }
 
 
 
 const float Texture::getMaxAnisotropy() const
 {
+#ifdef __OPENGLES2__
+	return 1.f;
+#else
 	GLfloat glfloat;
 	glGetFloatv( GL_TEXTURE_MAX_ANISOTROPY_EXT, &glfloat );
 	return glfloat;
+#endif	// #ifdef __OPENGLES2__
 }
 
 
 
 const float Texture::getMaxAllowedMaxAnisotropy() const
 {
+#ifdef __OPENGLES2__
+	return 1.f;
+#else
 	GLfloat glfloat;
 	glGetFloatv( GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, &glfloat );
 	return glfloat;
+#endif	// #ifdef __OPENGLES2__
 }
 
 
 
+#ifdef __OPENGLES2__
+#else
 void Texture::env( const GLenum pname, const GLfloat f )
 {
 	glTexEnvf( GL_TEXTURE_ENV, pname, f );
@@ -221,6 +245,7 @@ void Texture::disable()
 {
 	glDisable( m_target );
 }
+#endif	// #ifdef __OPENGLES2__
 
 
 

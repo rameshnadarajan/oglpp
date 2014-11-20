@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2006, 2007, 2009, 2013, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2006, 2007, 2009, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -17,7 +17,17 @@
  * \b glo is open source (LGPL).
  */
 
-#include <gle/gl.h>
+// See vgeGL/vgeGL.hpp
+#if defined(__OPENGLES2__) || defined(__EMSCRIPTEN__)
+	// emscripten => WebGL 1.0 (i.e. almost OpenGLES2.0)
+	#include <GLES2/gl2.h>
+	#include <GLES2/gl2ext.h>
+#else
+	// Desktop OpenGL (3.x and 4.x)
+	#include <gle/gl.h>
+#endif
+
+#include <cassert>
 
 // @todo remove me
 #include <boost/cstdint.hpp>

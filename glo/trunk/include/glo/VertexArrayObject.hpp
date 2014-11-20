@@ -1,10 +1,16 @@
-// OGLPP - Copyright (C) 2011, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2011, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
 #ifndef _GLO_VERTEXARRAYOBJECT_HPP
 #define _GLO_VERTEXARRAYOBJECT_HPP
+
+#ifdef __OPENGLES2__
+	// No VAO in GLES 2
+	// @todo emulation of VAO (https://github.com/p3/regal/blob/master/src/regal/RegalVao.h)
+	// @todo use extension GL_OES_vertex_array_object
+#else
 
 #include "glo/Object.hpp"
 
@@ -117,5 +123,7 @@ struct VertexArrayObject : public Object
 
 
 } // namespace glo
+
+#endif //#ifdef __OPENGLES2__
 
 #endif //#ifndef _GLO_VERTEXARRAYOBJECT_HPP

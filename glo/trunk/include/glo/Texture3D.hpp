@@ -1,10 +1,14 @@
-// GLE - Copyright (C) 2005, 2010, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2010, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
 #ifndef _GLO_TEXTURE3D_HPP
 #define _GLO_TEXTURE3D_HPP
+
+#ifdef __OPENGLES2__
+	// No 3D Texture in GLES 2
+#else
 
 #include "glo/Texture2D.hpp"
 
@@ -14,7 +18,7 @@ namespace glo
 {
 
 /**
- * @brief Encapsulation of a texture 3D object.
+ * @brief Encapsulation of a texture 3D object
  */
 struct Texture3D : public Texture2D
 {
@@ -85,5 +89,7 @@ protected:
 
 
 } // namespace glo
+
+#endif //#ifdef __OPENGLES2__
 
 #endif //#ifndef _GLO_TEXTURE3D_HPP

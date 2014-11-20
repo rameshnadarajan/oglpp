@@ -1,9 +1,14 @@
-// OGLPP - Copyright (C) 2011, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2011, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
 #include "glo/VertexArrayObject.hpp"
+
+#ifdef __OPENGLES2__
+	// No VAO in GLES 2
+	#pragma message("No VertexArrayObject in GLES 2")
+#else
 
 #include <iostream>
 
@@ -106,3 +111,5 @@ const bool VertexArrayObject::isBound() const
 
 
 } // namespace glo
+
+#endif // #ifdef __OPENGLES2__

@@ -1,10 +1,14 @@
-// GLE - Copyright (C) 2005, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
 #ifndef _GLO_DISPLAYLIST_HPP
 #define _GLO_DISPLAYLIST_HPP
+
+#ifdef __OPENGLES2__
+
+#else
 
 #include "glo/IResource.hpp"
 
@@ -113,5 +117,7 @@ private:
 
 
 } // namespace glo
+
+#endif	// #ifdef __OPENGLES2
 
 #endif //#ifndef _GLO_DISPLAYLIST_HPP

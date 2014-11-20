@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2010, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2010, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -121,6 +121,7 @@ struct RenderBuffer : public Object, public IFrameBufferAttachableImage
 
 	/**
 	 * @brief Sets the render buffer storage
+	 * @remark Do nothing on ES2
 	 */
 	GLO_API void setStorageMultiSample( const int samples, const GLenum internalFormat, const int width, const int height );
 

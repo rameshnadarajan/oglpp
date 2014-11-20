@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, Nicolas Papier.
+// GLE - Copyright (C) 2005, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -16,12 +16,12 @@ namespace glo
 /**
  * @brief Abstract class for any OpenGL resources
  */
-struct IResource
+struct GLO_API IResource
 {
 	/**
 	 * @brief Virtual destructor.
 	 */
-	GLO_API virtual ~IResource() {}
+	virtual ~IResource() {}
 };
 
 

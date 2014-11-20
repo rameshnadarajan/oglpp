@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2010, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2010, 2013, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -7,7 +7,7 @@
 #define _GLO_TEXTURE2D_HPP
 
 #include "glo/IFrameBufferAttachableImage.hpp"
-#include "glo/Texture1D.hpp"
+#include "glo/Texture.hpp"
 
 
 
@@ -15,9 +15,9 @@ namespace glo
 {
 
 /**
- * @brief Encapsulation of a 2D texture object.
+ * @brief Encapsulation of a 2D texture object
  */
-struct Texture2D : public Texture1D, public IFrameBufferAttachableImage
+struct Texture2D : public Texture, public IFrameBufferAttachableImage
 {
 	/**
 	 * @name Constructor/Destructor
