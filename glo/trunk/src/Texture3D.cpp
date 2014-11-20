@@ -5,7 +5,10 @@
 
 #include "glo/Texture3D.hpp"
 
-
+#ifdef __OPENGLES2__
+	// No 3D Texture in GLES 2
+	#pragma message("No 3D Texture in GLES 2")
+#else
 
 namespace glo
 {
@@ -96,3 +99,4 @@ void Texture3D::texSubImage(	const GLint level,
 
 } // namespace glo
 
+#endif // #ifdef __OPENGLES2__

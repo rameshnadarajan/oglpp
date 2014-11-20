@@ -23,6 +23,9 @@ BufferObject< TargetValue, BindingValue >::BufferObject()
 template< GLenum TargetValue, GLenum BindingValue >
 BufferObject< TargetValue, BindingValue >::~BufferObject()
 {
+#ifdef __OPENGLES2__
+	release();
+#else
 	if ( gleGetCurrent() )
 	{
 		release();
@@ -31,6 +34,7 @@ BufferObject< TargetValue, BindingValue >::~BufferObject()
 	{
 		std::cerr << "Unable to release buffer object " << m_object << "." << std::endl;
 	}
+#endif
 }
 
 

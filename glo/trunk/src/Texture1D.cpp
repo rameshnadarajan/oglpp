@@ -1,11 +1,14 @@
-// GLE - Copyright (C) 2005, 2010, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2010, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
 
 #include "glo/Texture1D.hpp"
 
-
+#ifdef __OPENGLES2__
+	// No 1D Texture in GLES 2
+	#pragma message("No 1D Texture in GLES 2")
+#else
 
 namespace glo
 {
@@ -60,7 +63,7 @@ void Texture1D::texImage(	const GLint level, const GLint internalFormat,
 	glTexImage1D( m_target, level, internalFormat, width, border, format, type, pixels );
 	
 	// Updates cache
-	m_border	= border;	
+	m_border	= border;
 	m_width		= width;
 
 	m_internalFormat = internalFormat;
@@ -80,3 +83,5 @@ void Texture1D::texSubImage(	const GLint level,
 
 
 } // namespace glo
+
+#endif	// #ifdef __OPENGLES2__

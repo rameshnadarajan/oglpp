@@ -1,7 +1,11 @@
-// GLE - Copyright (C) 2005, 2008, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2008, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
+
+#ifdef __OPENGLES2__
+	#pragma message("glo::DisplayList: No display list in GLES 2")
+#else
 
 #include "glo/DisplayList.hpp"
 
@@ -135,5 +139,6 @@ bool DisplayList::isEmpty() const
 }
 
 
-
 } // namespace glo
+
+#endif	// #ifdef __OPENGLES2__

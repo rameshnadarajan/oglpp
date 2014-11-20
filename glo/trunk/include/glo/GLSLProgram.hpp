@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2007, 2008, 2012, 2013, Nicolas Papier, Alexandre Di Pino.
+// GLE - Copyright (C) 2005, 2007, 2008, 2012, 2013, 2014, Nicolas Papier, Alexandre Di Pino.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -17,7 +17,9 @@ namespace glo
 {
 
 /**
- * @brief Shader compilation, linking and validation.
+ * @brief Program using GLSL
+ *
+ * Shader compilation, linking and validation.
  *
  * @todo method to enable/disable all outputs to cerr
  */
@@ -37,10 +39,6 @@ struct GLO_API GLSLProgram : public IResource
 		MAX_SHADER_INDEX
 	};
 
-	static const GLenum convertShaderType2GLEnum( const ShaderType shaderType );
-
-	static const std::string& convertShaderType2String( const ShaderType shaderType );
-
 	/**
 	 * @name Constructor and destructor
 	 */
@@ -51,7 +49,7 @@ struct GLO_API GLSLProgram : public IResource
 	 * 
 	 * @param initialized	true to create a program object, false to don't do that.
 	 */
-	GLSLProgram( bool initialized = true );
+	GLSLProgram( const bool initialized = true );
 
 	/**
 	 * @brief Destructor
@@ -71,7 +69,7 @@ struct GLO_API GLSLProgram : public IResource
 	 * @todo doc
 	 */
 	const bool addShader( const std::string shaderSource, const ShaderType shaderType, const bool linkProgram = false );
-	const bool addShader( const GLcharARB *shaderSource, const ShaderType shaderType, const bool linkProgram = false );
+	const bool addShader( const GLchar *shaderSource, const ShaderType shaderType, const bool linkProgram = false );
 
 	/**
 	 * @brief Links the program
@@ -113,6 +111,8 @@ struct GLO_API GLSLProgram : public IResource
 
 	/**
 	 * @name Shader accessors
+	 *
+	 * @remark Useful for a shader editor
 	 */
 	//@{
 
@@ -159,6 +159,8 @@ struct GLO_API GLSLProgram : public IResource
 
 	/**
 	 * @name Program accessors
+	 *
+	 * @remark Useful for a shader editor
 	 */
 	//@{
 
@@ -178,8 +180,6 @@ struct GLO_API GLSLProgram : public IResource
 
 	/**
 	 * @name Uniform Variables accessors
-	 * 
-	 * @todo static ?
 	 */
 	//@{
 	void setUniform1i( const std::string & name, const GLint v1 );
@@ -209,16 +209,20 @@ struct GLO_API GLSLProgram : public IResource
 	void setUniformMatrix2fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
 	void setUniformMatrix3fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
 	void setUniformMatrix4fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
+
+	// Not available in ES2. An assertion violation occurred.
 	void setUniformMatrix2x3fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
+	// Not available in ES2. An assertion violation occurred.
 	void setUniformMatrix3x2fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
+	// Not available in ES2. An assertion violation occurred.
 	void setUniformMatrix2x4fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
+	// Not available in ES2. An assertion violation occurred.
 	void setUniformMatrix4x2fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
+	// Not available in ES2. An assertion violation occurred.
 	void setUniformMatrix3x4fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
+	// Not available in ES2. An assertion violation occurred.
 	void setUniformMatrix4x3fv( const std::string & name, const GLfloat * value, const GLboolean transpose = GL_FALSE, const GLsizei count = 1 );
 
-// @todo dsa version
-	// GL_ARB_separate_shader_objects (OpenGL 4.1): DSA style api
-	void setProgramUniform1i( const std::string & name, const GLint v1 );
 	//@}
 
 
@@ -253,10 +257,14 @@ struct GLO_API GLSLProgram : public IResource
 
 
 	/**
-	 * @brief Load a file in a string
+	 * @brief Helper to load a file in a string
 	 */
 	static const std::string loadFile( const std::string pathfilename );
 
+	/**
+	 * @brief Low-level accessor
+	 * @todo remove me ?
+	 */
 	const GLuint getProgramObject() const;
 
 
@@ -296,11 +304,6 @@ private:
 	GLuint		m_programObject;
 	std::string	m_linkLog;
 	bool		m_linkSuccess;
-
-	static GLenum		m_GLEnumShaderType[];
-	static std::string	m_stringShaderType[];
-
-	static bool		m_firstInstance;
 };
 
 

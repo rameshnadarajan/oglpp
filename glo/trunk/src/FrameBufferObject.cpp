@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2005, 2010, 2011, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2010, 2011, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -28,6 +28,9 @@ FrameBufferObject::FrameBufferObject()
 
 FrameBufferObject::~FrameBufferObject()
 {
+#ifdef __OPENGLES2__
+	release();
+#else
 	if ( gleGetCurrent() )
 	{
 		release();
@@ -36,6 +39,7 @@ FrameBufferObject::~FrameBufferObject()
 	{
 		std::cerr << "Unable to release frame buffer object " << m_object << "." << std::endl;
 	}
+#endif	// #ifdef __OPENGLES2__
 }
 
 
@@ -86,9 +90,13 @@ void FrameBufferObject::bindToDraw() const
 {
 	assert( !isEmpty() );
 
+#ifdef __OPENGLES2__
+	bind();
+#else
 	glBindFramebuffer( GL_DRAW_FRAMEBUFFER, m_object );
 
 	m_currentDrawFramebuffer = m_object;
+#endif	// #ifdef __OPENGLES2__
 }
 
 
@@ -96,9 +104,13 @@ void FrameBufferObject::bindToRead() const
 {
 	assert( !isEmpty() );
 
+#ifdef __OPENGLES2__
+	bind();
+#else
 	glBindFramebuffer( GL_READ_FRAMEBUFFER, m_object );
 
 	m_currentReadFramebuffer = m_object;
+#endif	// #ifdef __OPENGLES2__
 }
 
 
@@ -137,20 +149,28 @@ const bool FrameBufferObject::isBound() const
 {
 	assert( !isEmpty() );
 
-#ifdef _DEBUG
-	GLint currentDrawBinding;
-	glGetIntegerv( GL_DRAW_FRAMEBUFFER_BINDING, &currentDrawBinding );
+#ifdef __OPENGLES2__
 
-	GLint currentReadBinding;
-	glGetIntegerv( GL_READ_FRAMEBUFFER_BINDING, &currentReadBinding );
+	//assert( m_currentDrawFramebuffer == m_currentReadFramebuffer );
 
-	assert( currentDrawBinding == currentReadBinding );
-	assert( m_currentDrawFramebuffer == m_currentReadFramebuffer );
-
-	assert( currentDrawBinding == m_currentDrawFramebuffer );
 #else
-	assert( m_currentDrawFramebuffer == m_currentReadFramebuffer );
-#endif
+
+	#ifdef _DEBUG
+		GLint currentDrawBinding;
+		glGetIntegerv( GL_DRAW_FRAMEBUFFER_BINDING, &currentDrawBinding );
+
+		GLint currentReadBinding;
+		glGetIntegerv( GL_READ_FRAMEBUFFER_BINDING, &currentReadBinding );
+
+		assert( currentDrawBinding == currentReadBinding );
+		assert( m_currentDrawFramebuffer == m_currentReadFramebuffer );
+
+		assert( currentDrawBinding == m_currentDrawFramebuffer );
+	#else
+		assert( m_currentDrawFramebuffer == m_currentReadFramebuffer );
+	#endif
+
+#endif	// #ifdef __OPENGLES2__
 
 	return ( static_cast<GLuint>(m_currentDrawFramebuffer) == m_object );
 }
@@ -158,33 +178,41 @@ const bool FrameBufferObject::isBound() const
 
 const bool FrameBufferObject::isBoundToDraw() const
 {
+#ifdef __OPENGLES2__
+	return isBound();
+#else
 	assert( !isEmpty() );
 
-#ifdef _DEBUG
-	GLint currentDrawBinding;
-	glGetIntegerv( GL_DRAW_FRAMEBUFFER_BINDING, &currentDrawBinding );
+	#ifdef _DEBUG
+		GLint currentDrawBinding;
+		glGetIntegerv( GL_DRAW_FRAMEBUFFER_BINDING, &currentDrawBinding );
 
-	assert( currentDrawBinding == m_currentDrawFramebuffer );
-#else
-#endif
+		assert( currentDrawBinding == m_currentDrawFramebuffer );
+	#else
+	#endif
 
 	return ( static_cast<GLuint>(m_currentDrawFramebuffer) == m_object );
+#endif	// #ifdef __OPENGLES2__
 }
 
 
 const bool FrameBufferObject::isBoundToRead() const
 {
+#ifdef __OPENGLES2__
+	return isBound();
+#else
 	assert( !isEmpty() );
 
-#ifdef _DEBUG
-	GLint currentReadBinding;
-	glGetIntegerv( GL_READ_FRAMEBUFFER_BINDING, &currentReadBinding );
+	#ifdef _DEBUG
+		GLint currentReadBinding;
+		glGetIntegerv( GL_READ_FRAMEBUFFER_BINDING, &currentReadBinding );
 
-	assert( currentReadBinding == m_currentReadFramebuffer );
-#else
-#endif
+		assert( currentReadBinding == m_currentReadFramebuffer );
+	#else
+	#endif
 
 	return ( static_cast<GLuint>(m_currentReadFramebuffer) == m_object );
+#endif	// #ifdef __OPENGLES2__
 }
 
 
@@ -207,16 +235,21 @@ const std::string FrameBufferObject::getStatusString() const
 			retVal = "Framebuffer incomplete, missing attachment";
 			break;
 
+		case GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS:
+			retVal = "Framebuffer incomplete dimensions";
+			break;
+
+		case GL_FRAMEBUFFER_UNSUPPORTED:
+			retVal = "Unsupported framebuffer format";
+			break;
+
+#ifndef __OPENGLES2__
 		case GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER:
 			retVal = "Framebuffer incomplete, missing draw buffer";
 			break;
 
 		case GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER:
 			retVal = "Framebuffer incomplete, missing read buffer";
-			break;
-
-		case GL_FRAMEBUFFER_UNSUPPORTED:
-			retVal = "Unsupported framebuffer format";
 			break;
 
 		case GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE:
@@ -226,6 +259,7 @@ const std::string FrameBufferObject::getStatusString() const
 		case GL_FRAMEBUFFER_UNDEFINED:
 			retVal = "Framebuffer undefined";
 			break;
+#endif	// #ifndef __OPENGLES2__
 
 		default:
 			retVal = "Unknown framebuffer error (FBO).";
@@ -418,13 +452,21 @@ boost::shared_ptr< glo::Texture2D > FrameBufferObject::getStencilAsTexture2D() c
 
 void FrameBufferObject::setReadToDefaultFrameBuffer()
 {
+#ifdef __OPENGLES2__
+	staticBindToDefault();
+#else
 	glBindFramebuffer( GL_READ_FRAMEBUFFER, 0 );
+#endif	// #ifdef __OPENGLES2__
 }
 
 
 
 void FrameBufferObject::setReadBuffer( const int index ) const
 {
+#ifdef __OPENGLES2__
+	assert( index == 0 );
+#else
+
 	assert( index >= 0 && "Invalid index" );
 	assert( index < getMaxColorAttachements() && "Invalid index" );
 	assert( getColor(index) != 0 && "Select an empty buffer for reading" );
@@ -434,13 +476,24 @@ void FrameBufferObject::setReadBuffer( const int index ) const
 	{
 		glReadBuffer( GL_COLOR_ATTACHMENT0 + index );
 	}
+
+#endif	// #ifdef __OPENGLES2__
+
 }
 
 
 
 void FrameBufferObject::setDrawToDefaultFrameBuffer()
 {
+#ifdef __OPENGLES2__
+
+	staticBindToDefault();
+
+#else
+
 	glBindFramebuffer( GL_DRAW_FRAMEBUFFER, 0 );
+
+#endif	// #ifdef __OPENGLES2__
 }
 
 
@@ -552,7 +605,11 @@ void FrameBufferObject::disableDrawBuffers() const
 	m_fullDrawBuffers.clear();
 	m_drawBuffers.clear();
 
+#ifdef __OPENGLES2__
+	bindToDefault();
+#else
 	glDrawBuffer( GL_NONE );
+#endif	// #ifdef __OPENGLES2__
 }
 
 
@@ -575,7 +632,11 @@ void FrameBufferObject::renderDepthOnly( const bool depthOnly )
 
 const int FrameBufferObject::getMaxColorAttachements() const
 {
+#ifdef __OPENGLES2__
+	return 1;
+#else
 	gloGetIntegerv( m_maxColorAttachments, GL_MAX_COLOR_ATTACHMENTS );
+#endif	// #ifdef __OPENGLES2__
 }
 
 
@@ -589,16 +650,26 @@ const int FrameBufferObject::getMaxRenderBufferSize() const
 
 const int FrameBufferObject::getMaxSamples() const
 {
+#ifdef __OPENGLES2__
+	return 0;
+#else
 	gloGetIntegerv( m_maxSamples, GL_MAX_SAMPLES );
+#endif	// #ifdef __OPENGLES2__
 }
 
 
 
 /**
  * @todo tests duplicate
+ * @todo improves documentation and/or interface for fullDrawBuffers vs DrawBuffers.
  */
 void FrameBufferObject::setDrawBuffers() const
 {
+#ifdef __OPENGLES2__
+	#pragma message("FrameBufferObject::setDrawBuffers(): not implemented.")
+	assert( false );
+#else
+
 	// By default, all drawing operations into color buffers are disabled
 	std::vector<GLenum> drawBuffers( getMaxColorAttachements(), GL_NONE );
 
@@ -637,6 +708,8 @@ void FrameBufferObject::setDrawBuffers() const
 	assert( drawBuffers.size() >= 1 && "setDrawBuffers() must be called to enable at least one draw buffer." );
 	assert( drawBuffers.size() == static_cast< unsigned int >(getMaxColorAttachements()) && "The entire mapping table is not defined" );
 	glDrawBuffersARB( drawBuffers.size(), &drawBuffers[0] );
+
+#endif	// #ifdef __OPENGLES2__
 }
 
 

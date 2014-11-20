@@ -1,4 +1,4 @@
-// OGLPP - Copyright (C) 2010, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2010, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -23,6 +23,9 @@ RenderBuffer::RenderBuffer()
 
 RenderBuffer::~RenderBuffer()
 {
+#ifdef __OPENGLES2__
+	release();
+#else
 	if ( gleGetCurrent() )
 	{
 		release();
@@ -31,6 +34,7 @@ RenderBuffer::~RenderBuffer()
 	{
 		std::cerr << "Unable to release render buffer object " << m_object << "." << std::endl;
 	}
+#endif	// #ifdef __OPENGLES2__
 }
 
 
@@ -38,7 +42,7 @@ RenderBuffer::~RenderBuffer()
 void RenderBuffer::generate()
 {
 	assert( isEmpty() );
-	
+
 	glGenRenderbuffers(1, &m_object);
 
 	assert( !isEmpty() );
@@ -50,8 +54,6 @@ void RenderBuffer::release()
 {
 	if ( !isEmpty() )
 	{
-		bind();
-
 		glDeleteRenderbuffers(1, &m_object);
 
 		m_object = 0;
@@ -65,7 +67,7 @@ void RenderBuffer::release()
 void RenderBuffer::bind() const
 {
 	assert( !isEmpty() );
-	
+
 	glBindRenderbuffer( GL_RENDERBUFFER, m_object );
 }
 
@@ -120,7 +122,12 @@ void RenderBuffer::setStorageMultiSample( const int samples, const GLenum intern
 {
 	assert( isBound() && "Must call RenderBuffer:bind() before setStorageMultisample()" );
 
+#ifdef __OPENGLES2__
+
+#else
 	glRenderbufferStorageMultisample( GL_RENDERBUFFER, samples, internalFormat, width, height );
+#endif	// #ifdef __OPENGLES2__
+
 }
 
 

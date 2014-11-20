@@ -1,4 +1,4 @@
-// GLE - Copyright (C) 2005, 2010, 2012, 2013, Nicolas Papier.
+// OGLPP - Copyright (C) 2005, 2010, 2012, 2013, 2014, Nicolas Papier.
 // Distributed under the terms of the GNU Library General Public License (LGPL)
 // as published by the Free Software Foundation.
 // Author Nicolas Papier
@@ -73,7 +73,8 @@ public:
 	/**
 	 * @brief Activates the desired texture unit.
 	 *
-	 * @param unit		texture unit selector. Its value ranges from GL_TEXTURE0_ARB to GL_TEXTURE31_ARB
+	 * @param unit		texture unit selector. Its value ranges from GL_TEXTURE0 to GL_TEXTURE31
+	 * @todo Remove usage of GL_TEXTURE0 => const uint unit 0 to 31
 	 */
 	GLO_API static void active( const GLenum unit );
 
@@ -156,11 +157,15 @@ public:
 	 *
 	 * When enabled, this method introduces a side effect to any modification of the levelbase of a mipmap array, wherein all higher levels of
 	 * the mipmap pyramid are recomputed automatically by successive filtering of the base level array.
+	 *
+	 * @remark Do nothing on ES2
 	 */
 	GLO_API void setAutomaticMipmapGenerationEnabled( const bool isEnabled = true );
 
 	/**
 	 * @brief Generates a complete set of mipmaps for a texture object.
+	 *
+	 * @remark Do nothing on ES2
 	 */
 	GLO_API void generateMipmap();
 	//@}
@@ -179,6 +184,8 @@ public:
 	 *
 	 * @pre 1 <= value and value <= getMaxAllowedMaxAnisotropy()
 	 * @param value		a floating-point that can be set between 1.0f and getMaxAllowedMaxAnisotropy()
+	 *
+	 * @remark Do nothing on ES2
 	 */
 	GLO_API void setMaxAnisotropy( const float value );
 
@@ -194,6 +201,9 @@ public:
 	//@}
 
 
+#ifdef __OPENGLES2__
+	// No texture environments and texture functions in GLES 2
+#else
 	/**
 	 * @name Texture environments and texture functions
 	 */
@@ -206,11 +216,14 @@ public:
 
 	GLO_API void env( const GLenum pname, GLint *i );
 	//@}
+#endif	// #ifdef __OPENGLES2__
 
 
-
+#ifdef __OPENGLES2__
+	// No texture application control in GLES 2
+#else
 	/**
-	 * @name Texture application
+	 * @name Texture application control
 	 */
 	//@{
 
@@ -231,7 +244,7 @@ public:
 	 */	
 	GLO_API void disable();
 	//@}
-
+#endif	// #ifdef __OPENGLES2__
 
 
 	/**

@@ -1,6 +1,17 @@
 description	= 'Open(GL) (O)bject'
 type		= 'shared'
 version		= '0-3'
-deps		= ['../gle']
-uses		= ['boost', 'opengl']
-libs		= ['gle 0-3']
+uses		= ['boost']
+
+from SCons.Script.SConscript import SConsEnvironment
+env = SConsEnvironment.sbf.myEnv
+
+emscriptenInStages = 'emscripten' in env['stages']
+# OpenGL related stuff
+if	'OPENGLES2' in env['configFlags'] or emscriptenInStages:
+	defines = ['__OPENGLES2__']
+	if not emscriptenInStages:	uses.append( 'angle' )
+else:
+	uses.append( 'opengl' )
+	deps		= ['../gle']
+	libs		= ['gle 0-3']
