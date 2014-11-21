@@ -1,4 +1,13 @@
 description	= 'Open(GL) (E)xtensions'
 type		= 'shared'
 version		= '0-3'
-uses		= ['opengl']
+
+from SCons.Script.SConscript import SConsEnvironment
+env = SConsEnvironment.sbf.myEnv
+
+emscriptenInStages = 'emscripten' in env['stages']
+# OpenGL related stuff
+if	'OPENGLES2' in env['configFlags'] or emscriptenInStages:
+	defines = ['__OPENGLES2__']
+else:
+	uses = ['opengl']
