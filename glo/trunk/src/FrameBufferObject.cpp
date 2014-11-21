@@ -224,6 +224,7 @@ const std::string FrameBufferObject::getStatusString() const
 
 	switch (status)
 	{
+
 		case GL_FRAMEBUFFER_COMPLETE:
 			break;
 
@@ -235,15 +236,11 @@ const std::string FrameBufferObject::getStatusString() const
 			retVal = "Framebuffer incomplete, missing attachment";
 			break;
 
+#ifdef __OPENGLES2__
 		case GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS:
 			retVal = "Framebuffer incomplete dimensions";
 			break;
-
-		case GL_FRAMEBUFFER_UNSUPPORTED:
-			retVal = "Unsupported framebuffer format";
-			break;
-
-#ifndef __OPENGLES2__
+#else
 		case GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER:
 			retVal = "Framebuffer incomplete, missing draw buffer";
 			break;
@@ -259,7 +256,10 @@ const std::string FrameBufferObject::getStatusString() const
 		case GL_FRAMEBUFFER_UNDEFINED:
 			retVal = "Framebuffer undefined";
 			break;
-#endif	// #ifndef __OPENGLES2__
+#endif
+		case GL_FRAMEBUFFER_UNSUPPORTED:
+			retVal = "Unsupported framebuffer format";
+			break;
 
 		default:
 			retVal = "Unknown framebuffer error (FBO).";
