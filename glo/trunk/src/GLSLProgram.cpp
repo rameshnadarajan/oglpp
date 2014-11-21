@@ -71,12 +71,6 @@ const GLenum convertShaderType2GLEnum( const GLSLProgram::ShaderType shaderType 
 	return m_GLEnumShaderType[shaderType];
 }
 
-const std::string& convertShaderType2String( const GLSLProgram::ShaderType shaderType )
-{
-	return m_stringShaderType[shaderType];
-}
-
-
 }
 
 
@@ -337,6 +331,10 @@ void GLSLProgram::setLogError(const ShaderType shaderType, const std::string err
 	m_shaderInfo[shaderType].shaderLog = error;
 }
 
+const std::string& GLSLProgram::convertShaderType2String( const GLSLProgram::ShaderType shaderType )
+{
+	return m_stringShaderType[shaderType];
+}
 
 const bool GLSLProgram::getLinkSuccess() const
 {

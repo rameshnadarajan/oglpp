@@ -153,6 +153,11 @@ struct GLO_API GLSLProgram : public IResource
 	 */
 	void setLogError(const ShaderType shaderType, const std::string error);
 
+	/**
+	 * @brief Converts the shader type into a descriptive string
+	 * convertShaderType2String(VERTEX) returns "VERTEX"
+	 */
+	const std::string& convertShaderType2String( const GLSLProgram::ShaderType shaderType );
 	//@}
 
 
