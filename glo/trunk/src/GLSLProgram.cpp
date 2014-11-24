@@ -36,7 +36,10 @@ GLenum m_GLEnumShaderType[] =
 #ifdef __OPENGLES2__
 {
 	GL_VERTEX_SHADER,
-	GL_FRAGMENT_SHADER
+	0,
+	0,
+	0,
+	GL_FRAGMENT_SHADER,
 };
 #else	// #ifdef __OPENGLES2__
 {
@@ -344,6 +347,14 @@ const bool GLSLProgram::getLinkSuccess() const
 const std::string GLSLProgram::getLinkLog() const
 {
 	return m_linkLog;
+}
+
+
+
+// GENERIC VERTEX ATTRIBUTE
+void GLSLProgram::bindAttribLocation( const std::string & name, const GLuint index )
+{
+	glBindAttribLocation( getProgramObject(), index, name.c_str() );
 }
 
 

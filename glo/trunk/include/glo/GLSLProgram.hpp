@@ -184,6 +184,20 @@ struct GLO_API GLSLProgram : public IResource
 
 
 	/**
+	 * @name Generic vertex attribute accessor(s)
+	 */
+	//@{
+
+	/**
+	 * @brief Associate a generic vertex attribute index with a named attribute variable
+	 */
+	void bindAttribLocation( const std::string & name, const GLuint index );
+
+	//@}
+
+
+
+	/**
 	 * @name Uniform Variables accessors
 	 */
 	//@{
