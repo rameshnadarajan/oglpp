@@ -5,7 +5,7 @@ version		= '0-3'
 from SCons.Script.SConscript import SConsEnvironment
 env = SConsEnvironment.sbf.myEnv
 
-emscriptenInStages = 'emscripten' in env['stages']
+emscriptenInStages = 'emcc' in env['stages']
 # OpenGL related stuff
 if	'OPENGLES2' in env['configFlags'] or emscriptenInStages:
 	defines = ['__OPENGLES2__']
