@@ -31,10 +31,13 @@ struct GLO_API GLSLProgram : public IResource
 	enum ShaderType
 	{
 		VERTEX = 0,
+#ifndef __OPENGLES2__
 		TESSELLATION_CONTROL,
 		TESSELLATION_EVALUATION,
 		GEOMETRY,
+#endif
 		FRAGMENT,
+
 		PROGRAM,		///< not a real shader type (used by ShadersEditor of vgSDK)
 		MAX_SHADER_INDEX
 	};

@@ -36,9 +36,6 @@ GLenum m_GLEnumShaderType[] =
 #ifdef __OPENGLES2__
 {
 	GL_VERTEX_SHADER,
-	0,
-	0,
-	0,
 	GL_FRAGMENT_SHADER,
 };
 #else	// #ifdef __OPENGLES2__

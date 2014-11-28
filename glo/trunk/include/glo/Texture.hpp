@@ -279,7 +279,7 @@ public:
 	 *
 	 * @todo adds isBinded() and uses it
 	 */
-	GLO_API virtual const GLint getSize( int32& width, int32& height, int32& depth ) const = 0;
+	GLO_API virtual const GLint getSize( int& width, int& height, int& depth ) const = 0;
 
 	/**
 	 * @brief Returns the internal format of the texture.

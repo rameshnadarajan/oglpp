@@ -53,7 +53,7 @@ struct Texture2D : public Texture, public IFrameBufferAttachableImage
 	GLO_API const GLint getHeight() const;
 
 	// Overridden
-	GLO_API const GLint getSize( int32& width, int32& height, int32& depth ) const;
+	GLO_API const GLint getSize( int& width, int& height, int& depth ) const;
 	//@}
 
 

@@ -51,7 +51,7 @@ struct Texture1D : public Texture
 	GLO_API const bool isBound() const;
 
 	// Overridden
-	GLO_API const GLint getSize( int32& width, int32& height, int32& depth ) const;
+	GLO_API const GLint getSize( int& width, int& height, int& depth ) const;
 
 	//@}
 
