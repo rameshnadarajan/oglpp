@@ -29,12 +29,6 @@
 
 #include <cassert>
 
-// @todo remove me
-#include <boost/cstdint.hpp>
-typedef boost::int32_t		int32;
-typedef boost::uint32_t		uint32;
-
-
 #ifdef _WIN32
 
 	#ifdef GLO_EXPORTS

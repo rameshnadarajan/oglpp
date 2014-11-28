@@ -103,8 +103,8 @@ void DisplayList::call() const
 	assert( m_index != 0 );
 	assert( m_count >= 1 );
 
-	int32 ie = m_index + m_count;
-	for(	int32 i = m_index;
+	int ie = m_index + m_count;
+	for(	int i = m_index;
 			i < ie;
 			i++)
 	{

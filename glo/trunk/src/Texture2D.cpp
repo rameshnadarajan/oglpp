@@ -49,7 +49,7 @@ const GLint Texture2D::getHeight() const
 
 
 
-const GLint Texture2D::getSize( int32& width, int32& height, int32& depth ) const
+const GLint Texture2D::getSize( int& width, int& height, int& depth ) const
 {
 	const GLint glborder	= getBorderWidth();
 	const GLint glwidth		= getWidth();
