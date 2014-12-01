@@ -6,9 +6,16 @@
 #ifndef _GLC_TYPES_HPP
 #define _GLC_TYPES_HPP
 
+#ifdef __SDL2__
+#include <SDL2/SDL.h>
+#endif
+
 extern "C" {
 
-#ifdef WIN32
+#ifdef __SDL2__
+	typedef SDL_Window		*GLC_WINDOW_HANDLE;
+	typedef SDL_GLContext	GLC_GLRC_HANDLE;
+#elif WIN32
 	#define GLC_USE_WGL
 
 	#if defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__)
@@ -62,8 +69,11 @@ struct glc_drawable_t
     int                 screen;
 #endif
 	GLC_WINDOW_HANDLE	window;
-#ifdef WIN32
-	GLC_DC_HANDLE		dc;
+#if defined(WIN32)
+	#ifndef __SDL2__
+		GLC_DC_HANDLE		dc;
+	#endif
+
 #endif
 
 	drawable_backend_t *backend;
