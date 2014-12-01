@@ -46,7 +46,9 @@
 	(*retVal->contextRefCount)	= 1;
 	retVal->drawable			= drawable;
 
-#ifdef WIN32
+#ifdef __SDL2__
+	SDL_GL_SetAttribute(SDL_GL_STEREO, drawable->stereo);
+#elif WIN32
 	// Initializes the pixel format descriptor with the desired format.
 	PIXELFORMATDESCRIPTOR pfd;
 
@@ -90,7 +92,27 @@
 	attributes[index++] = None;
 #endif
 
-#ifdef WIN32
+#ifdef __SDL2__
+	// Shares OpenGL objects
+	if (contextSharing)
+	{
+		SDL_GL_SetAttribute(SDL_GL_SHARE_WITH_CURRENT_CONTEXT, (int)(contextSharing->context));
+
+	} // else nothing to do
+
+	// Create an OpenGL context associated with the window.
+	SDL_GLContext context = SDL_GL_CreateContext(drawable->window);
+	if ( context == NULL )
+	{
+		fprintf( stderr, "In glc_create(), SDL_GL_CreateContext() fails (%s).", SDL_GetError() );
+		return retVal;
+	}
+	else
+	{
+		retVal->context = context;
+	}
+
+#elif WIN32
 	// Chooses and sets the closest available pixel format.
 	int		iPixelFormat;
 	BOOL	bResult;
@@ -213,7 +235,9 @@ glc_t *glc_create( glc_drawable_t *drawable, glc_t * contextShared )
 		*(retVal->contextRefCount)	= *(retVal->contextRefCount) + 1;
 		retVal->drawable			= 0;
 
-#ifdef WIN32
+#ifdef __SDL2__
+		retVal->drawable = drawable;
+#elif WIN32
 		// Get the current pixel format index  
 		const int iPixelFormat = GetPixelFormat(contextShared->drawable->dc);
 
@@ -257,7 +281,10 @@ void glc_destroy( glc_t * context )
 	{
 		if ( (*context->contextRefCount) == 1 )
 		{
-	#ifdef GLC_USE_WGL
+	#ifdef __SDL2__
+			// Deletes the OpenGL rendering context.
+			SDL_GL_DeleteContext( context->context );
+	#elif GLC_USE_WGL
 			// Deletes the OpenGL rendering context.
 			wglDeleteContext( context->context );
 	#else
@@ -320,7 +347,16 @@ glc_bool_t glc_set_current( glc_t * context )
 
 	assert( context->drawable != 0 && "Calls glc_set_current() with a context associated with a null drawable." );
 	// @todo drawable_status()
-#ifdef GLC_USE_WGL
+#ifdef __SDL2__
+	const int retVal = SDL_GL_MakeCurrent(context->drawable->window, context->context);
+	if (retVal != 0)
+	{
+		printf("In glc_set_current(), SDL_GL_MakeCurrent() fails (%s).", SDL_GetError());
+		return 0;
+	}
+	return 1;
+
+#elif GLC_USE_WGL
 	BOOL success = wglMakeCurrent( context->drawable->dc, context->context );
 	return success == TRUE ? 1 : 0;
 #elif defined(GLC_USE_GLX)
@@ -344,7 +380,15 @@ glc_bool_t glc_unset_current( glc_t * context )
 	assert( context->drawable != 0 && "Calls glc_unset_current() with a context associated with a null drawable." );
 	// @todo drawable_status()
 
-#ifdef GLC_USE_WGL
+#ifdef __SDL2__
+	const int retVal = SDL_GL_MakeCurrent(context->drawable->window, 0);
+	if (retVal != 0)
+	{
+		printf("In glc_unset_current(), SDL_GL_MakeCurrent() fails (%s).", SDL_GetError());
+		return 0;
+	}
+	return 1;
+#elif GLC_USE_WGL
 	BOOL success = wglMakeCurrent( 0/*context->drawable->dc*/, NULL );
 
 	return success == TRUE ? 1 : 0;
@@ -369,7 +413,9 @@ glc_bool_t glc_is_current( glc_t * context )
 	assert( context->drawable != 0 && "Calls glc_is_current() with a context associated with a null drawable." );
 	// @todo drawable_status()
 
-#ifdef GLC_USE_WGL
+#ifdef __SDL2__
+	GLC_GLRC_HANDLE glrc = SDL_GL_GetCurrentContext();
+#elif GLC_USE_WGL
 	GLC_GLRC_HANDLE glrc = wglGetCurrentContext();
 
 	/*assert(	( glrc == 0 )					||					// no current context		=> is not current 
@@ -395,7 +441,10 @@ glc_bool_t glc_swap( glc_t * context )
 	// @todo drawable_status()
 
 	glc_bool_t retVal;
-#ifdef GLC_USE_WGL
+#ifdef __SDL2__
+	SDL_GL_SwapWindow(context->drawable->window);
+	retVal = true;
+#elif GLC_USE_WGL
 	retVal = SwapBuffers( context->drawable->dc ) == TRUE ? 1 : 0;
 #else
     glXSwapBuffers( context->drawable->display, context->drawable->window );
@@ -409,7 +458,23 @@ glc_bool_t glc_swap( glc_t * context )
 
 glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscreen, glc_bool_t influenceCompositingManager )
 {
-#ifdef _WIN32
+#ifdef __SDL2__
+
+	Uint32 flags = wantFullscreen ? SDL_WINDOW_FULLSCREEN : 0;
+
+	const int retVal = SDL_SetWindowFullscreen(context->drawable->window, flags);
+
+	if (wantFullscreen)
+	{
+		context->drawable->isFullscreen = (retVal == 0);
+	}
+	else
+	{
+		context->drawable->isFullscreen = !(retVal == 0);
+	}
+
+	return context->drawable->isFullscreen;
+#elif _WIN32
 	// Find drawable window and top level window
 	HWND current	= context->drawable->window;
 	HWND topLevel	= GetAncestor( current, GA_ROOT );
