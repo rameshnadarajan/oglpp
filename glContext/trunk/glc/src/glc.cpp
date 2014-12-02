@@ -284,7 +284,7 @@ void glc_destroy( glc_t * context )
 	#ifdef __SDL2__
 			// Deletes the OpenGL rendering context.
 			SDL_GL_DeleteContext( context->context );
-	#elif GLC_USE_WGL
+	#elif defined(GLC_USE_WGL)
 			// Deletes the OpenGL rendering context.
 			wglDeleteContext( context->context );
 	#else
@@ -356,7 +356,7 @@ glc_bool_t glc_set_current( glc_t * context )
 	}
 	return 1;
 
-#elif GLC_USE_WGL
+#elif defined(GLC_USE_WGL)
 	BOOL success = wglMakeCurrent( context->drawable->dc, context->context );
 	return success == TRUE ? 1 : 0;
 #elif defined(GLC_USE_GLX)
@@ -388,7 +388,7 @@ glc_bool_t glc_unset_current( glc_t * context )
 		return 0;
 	}
 	return 1;
-#elif GLC_USE_WGL
+#elif defined(GLC_USE_WGL)
 	BOOL success = wglMakeCurrent( 0/*context->drawable->dc*/, NULL );
 
 	return success == TRUE ? 1 : 0;
@@ -415,7 +415,7 @@ glc_bool_t glc_is_current( glc_t * context )
 
 #ifdef __SDL2__
 	GLC_GLRC_HANDLE glrc = SDL_GL_GetCurrentContext();
-#elif GLC_USE_WGL
+#elif defined(GLC_USE_WGL)
 	GLC_GLRC_HANDLE glrc = wglGetCurrentContext();
 
 	/*assert(	( glrc == 0 )					||					// no current context		=> is not current 
@@ -444,7 +444,7 @@ glc_bool_t glc_swap( glc_t * context )
 #ifdef __SDL2__
 	SDL_GL_SwapWindow(context->drawable->window);
 	retVal = true;
-#elif GLC_USE_WGL
+#elif defined(GLC_USE_WGL)
 	retVal = SwapBuffers( context->drawable->dc ) == TRUE ? 1 : 0;
 #else
     glXSwapBuffers( context->drawable->display, context->drawable->window );
@@ -474,7 +474,7 @@ glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscre
 	}
 
 	return context->drawable->isFullscreen;
-#elif _WIN32
+#elif defined(_WIN32)
 	// Find drawable window and top level window
 	HWND current	= context->drawable->window;
 	HWND topLevel	= GetAncestor( current, GA_ROOT );
@@ -550,7 +550,7 @@ glc_bool_t glc_drawable_set_fullscreen( glc_t * context, glc_bool_t wantFullscre
 	}
 
 	return context->drawable->isFullscreen;
-#elif __MACOSX__
+#elif defined(__MACOSX__)
 	#error "Platform not yet supported."
 #else // POSIX
 	#warning "glc_drawable_set_fullscreen() not yet supported."
