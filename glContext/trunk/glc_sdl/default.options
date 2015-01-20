@@ -12,5 +12,4 @@ emscriptenInStages = 'emscripten' in env['stages']
 
 if 'SDL2' in env['configFlags'] or emscriptenInStages:
 	defines = ['__SDL2__']
-	uses.append('sdl')
 #else nothing to do
