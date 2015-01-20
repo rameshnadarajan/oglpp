@@ -2,17 +2,18 @@ description	= 'Open(GL) (C)context management'
 vcsUse		= 'no'
 type		= 'shared'
 version		= '0-0'
-uses		= ['opengl']
+uses		= []
 
 from SCons.Script.SConscript import SConsEnvironment
-platform = SConsEnvironment.sbf.myPlatform
+cc = SConsEnvironment.sbf.myCC
 env = SConsEnvironment.sbf.myEnv
 emscriptenInStages = 'emscripten' in env['stages']
 
 if 'SDL2' in env['configFlags'] or emscriptenInStages:
 	defines = ['__SDL2__']
 	uses.append('sdl')
-#else nothing to do
+else:
+	uses.append( 'opengl' )
 
-if platform == 'win':
+if cc == 'cl':
 	stdlibs = ['kernel32']	# for LoadLibrary()
